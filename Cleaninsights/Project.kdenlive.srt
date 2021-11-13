@@ -1,0 +1,3824 @@
+1
+00:00:05,566 --> 00:00:09,734
+hello everyone thank you for joining this
+
+2
+00:00:09,733 --> 00:00:13,005
+session and sorry for the technical issues
+
+3
+00:00:14,400 --> 00:00:17,340
+now we will welcome Nathan who is
+
+4
+00:00:17,333 --> 00:00:19,313
+the founder and director of the guardian
+
+5
+00:00:19,300 --> 00:00:22,330
+project an award winning open source mobile
+
+6
+00:00:22,400 --> 00:00:26,780
+security collaborative in this talk using a
+
+7
+00:00:26,766 --> 00:00:30,606
+clean insides neither the survey analytics based
+
+8
+00:00:30,733 --> 00:00:33,463
+on matomo you will learn how to
+
+9
+00:00:33,466 --> 00:00:34,276
+use the cleaning
+
+10
+00:00:34,333 --> 00:00:38,023
+sides sdk from the guardian project to
+
+11
+00:00:38,100 --> 00:00:41,820
+maximize maximum privacy for your users lets
+
+12
+00:00:41,800 --> 00:00:43,539
+your nathan stock for more
+
+13
+00:00:44,600 --> 00:00:46,640
+great thank you silver thank you lucas
+
+14
+00:00:46,633 --> 00:00:49,123
+and everyone who's organized mahama camp really
+
+15
+00:00:49,133 --> 00:00:49,913
+excited to
+
+16
+00:00:51,200 --> 00:00:52,880
+be here with you and to start
+
+17
+00:00:53,466 --> 00:00:55,116
+you have more collaboration and just to
+
+18
+00:00:55,100 --> 00:00:57,140
+learn from all of you how you
+
+19
+00:00:57,133 --> 00:01:00,523
+are using a moto mo to achieve
+
+20
+00:01:00,700 --> 00:01:03,370
+better privacy and control of of measurement
+
+21
+00:01:03,500 --> 00:01:05,720
+and analytics this is
+
+22
+00:01:07,000 --> 00:01:08,830
+kind of near and dear to our
+
+23
+00:01:08,833 --> 00:01:11,173
+heart at guardian project which is
+
+24
+00:01:12,300 --> 00:01:13,919
+an effort that i started
+
+25
+00:01:15,066 --> 00:01:19,386
+almost twelve years ago when smartphones were
+
+26
+00:01:19,400 --> 00:01:22,310
+becoming very interesting and possible but i
+
+27
+00:01:22,300 --> 00:01:25,390
+also quickly realized that while
+
+28
+00:01:26,766 --> 00:01:28,746
+these devices that we carry around in
+
+29
+00:01:28,766 --> 00:01:31,494
+our pockets are quite powerful they are
+
+30
+00:01:31,500 --> 00:01:34,892
+also clearly you know tracking devices as
+
+31
+00:01:34,866 --> 00:01:38,016
+well as you know the potential of
+
+32
+00:01:38,033 --> 00:01:39,533
+apps which you know i've been working
+
+33
+00:01:39,533 --> 00:01:41,873
+in mobile since for twenty years plus
+
+34
+00:01:41,866 --> 00:01:43,666
+back to the palm pilot and apple
+
+35
+00:01:43,666 --> 00:01:46,036
+newton that the fact of you know
+
+36
+00:01:46,033 --> 00:01:46,753
+all of this by
+
+37
+00:01:46,766 --> 00:01:50,006
+binary code running on these little devices
+
+38
+00:01:50,000 --> 00:01:51,620
+and these little super computers in our
+
+39
+00:01:51,633 --> 00:01:53,103
+pockets was going to cause a lot
+
+40
+00:01:53,100 --> 00:01:53,579
+of trouble
+
+41
+00:01:55,533 --> 00:01:58,623
+so at guardian project our focus has
+
+42
+00:01:58,600 --> 00:01:59,800
+been initially
+
+43
+00:02:01,300 --> 00:02:02,770
+from the beginning was saying how can
+
+44
+00:02:02,766 --> 00:02:05,346
+we bring great privacy technologies that exist
+
+45
+00:02:05,366 --> 00:02:09,116
+in open source and and desktop computing
+
+46
+00:02:09,199 --> 00:02:11,179
+to mobile devices that we didn't even
+
+47
+00:02:11,166 --> 00:02:12,666
+know if that was possible so if
+
+48
+00:02:12,666 --> 00:02:15,995
+something like tor or pgp or au
+
+49
+00:02:16,000 --> 00:02:19,901
+tr encryption for chat could you run
+
+50
+00:02:19,900 --> 00:02:21,070
+that on a phone and people did
+
+51
+00:02:21,066 --> 00:02:22,506
+i believe that you could and i
+
+52
+00:02:22,533 --> 00:02:25,083
+thought he could so one of the
+
+53
+00:02:25,066 --> 00:02:27,226
+things were best known for his bringing
+
+54
+00:02:27,233 --> 00:02:31,343
+tour to android and more recently ios
+
+55
+00:02:32,366 --> 00:02:36,326
+with orbit the version of tor that
+
+56
+00:02:36,333 --> 00:02:38,283
+runs on your phone that can provide
+
+57
+00:02:38,266 --> 00:02:40,576
+a vpn and through the tor anonymity
+
+58
+00:02:40,566 --> 00:02:42,183
+network so there's a case where a
+
+59
+00:02:42,200 --> 00:02:46,283
+very clearly connected to confidentiality and privacy
+
+60
+00:02:46,266 --> 00:02:47,706
+concerns and work with one of the
+
+61
+00:02:47,733 --> 00:02:50,823
+leading projects in the world and on
+
+62
+00:02:50,866 --> 00:02:52,516
+on that effort another
+
+63
+00:02:52,533 --> 00:02:54,483
+other piece of the puzzle that we
+
+64
+00:02:54,566 --> 00:02:56,366
+quickly realized in the mobile space was
+
+65
+00:02:56,366 --> 00:03:00,776
+needed was appetizer attribution beyond what you
+
+66
+00:03:00,766 --> 00:03:02,926
+know the the gatekeepers of say google
+
+67
+00:03:02,933 --> 00:03:05,633
+or apple or others provide and that
+
+68
+00:03:06,300 --> 00:03:10,230
+much like debbie and i really is
+
+69
+00:03:10,233 --> 00:03:12,003
+the debian system is really built upon
+
+70
+00:03:12,700 --> 00:03:15,369
+the process of a community building and
+
+71
+00:03:15,366 --> 00:03:17,886
+curating packages and distributing those and ensuring
+
+72
+00:03:17,900 --> 00:03:19,940
+that you have good quality free and
+
+73
+00:03:19,933 --> 00:03:22,693
+open source software we needed that for
+
+74
+00:03:22,700 --> 00:03:25,430
+android and the after a project had
+
+75
+00:03:25,433 --> 00:03:27,143
+already existed to be clear we did
+
+76
+00:03:27,133 --> 00:03:28,693
+not found it but it was something
+
+77
+00:03:28,700 --> 00:03:30,620
+that we really appreciated and wanted to
+
+78
+00:03:30,633 --> 00:03:32,853
+support and have become a big part
+
+79
+00:03:32,833 --> 00:03:34,573
+live through my one of my main
+
+80
+00:03:34,566 --> 00:03:38,106
+collaborators collaborators hans christoph steiner
+
+81
+00:03:39,400 --> 00:03:40,570
+so we're really proud of the work
+
+82
+00:03:40,566 --> 00:03:43,266
+we've done and supporting that effort for
+
+83
+00:03:43,666 --> 00:03:45,256
+a privacy you know an app store
+
+84
+00:03:45,266 --> 00:03:46,946
+that actually tells you hey this app
+
+85
+00:03:46,933 --> 00:03:49,213
+is tracking you you may not want
+
+86
+00:03:49,233 --> 00:03:52,593
+to install it as an example and
+
+87
+00:03:52,566 --> 00:03:54,486
+that also itself doesn't track
+
+88
+00:03:56,200 --> 00:03:58,540
+the it another piece of work we've
+
+89
+00:03:58,566 --> 00:04:00,186
+done in the middle there the icon
+
+90
+00:04:00,166 --> 00:04:00,496
+is called
+
+91
+00:04:01,900 --> 00:04:03,550
+proof mode and this is work we've
+
+92
+00:04:03,633 --> 00:04:05,223
+done with witness which is a human
+
+93
+00:04:05,200 --> 00:04:09,399
+rights organization focused on gathering eyewitness reports
+
+94
+00:04:09,400 --> 00:04:11,740
+through video and photos and media captured
+
+95
+00:04:11,766 --> 00:04:13,266
+on phones and they had the the
+
+96
+00:04:13,266 --> 00:04:15,872
+vision that now there's cameras everywhere in
+
+97
+00:04:15,866 --> 00:04:17,430
+every pocket and what can we do
+
+98
+00:04:17,433 --> 00:04:19,683
+about that and of course many people
+
+99
+00:04:19,666 --> 00:04:20,986
+there might think oh we need more
+
+100
+00:04:21,533 --> 00:04:21,804
+time
+
+101
+00:04:21,800 --> 00:04:23,930
+tracking and analytics and surveillance of every
+
+102
+00:04:23,933 --> 00:04:26,272
+photo and every picture because we need
+
+103
+00:04:26,266 --> 00:04:28,397
+to use this as evidence for justice
+
+104
+00:04:29,300 --> 00:04:32,240
+but that's tricky you know we don't
+
+105
+00:04:32,233 --> 00:04:33,703
+we yes maybe we want some of
+
+106
+00:04:33,700 --> 00:04:35,170
+our the things we capture on our
+
+107
+00:04:35,166 --> 00:04:36,846
+phones to be used to help people
+
+108
+00:04:37,466 --> 00:04:38,906
+but we don't want ourselves would be
+
+109
+00:04:38,900 --> 00:04:41,150
+part of the sort of panopticon surveillance
+
+110
+00:04:41,166 --> 00:04:41,886
+state of
+
+111
+00:04:42,033 --> 00:04:44,643
+of surveillance infrastructure in all times
+
+112
+00:04:46,500 --> 00:04:48,570
+building on that we built an app
+
+113
+00:04:48,566 --> 00:04:53,246
+called haven with the well known privacy
+
+114
+00:04:53,233 --> 00:04:54,553
+activists edward snowden
+
+115
+00:04:55,666 --> 00:04:58,546
+who again had this kind of interesting
+
+116
+00:04:58,566 --> 00:05:00,096
+idea of like could you use your
+
+117
+00:05:00,066 --> 00:05:03,456
+phone as a personal security device to
+
+118
+00:05:03,866 --> 00:05:06,716
+monitor physical spaces like if you're a
+
+119
+00:05:06,700 --> 00:05:09,130
+reporter a journalist and activist to monitor
+
+120
+00:05:09,133 --> 00:05:10,333
+a place like a home or an
+
+121
+00:05:10,333 --> 00:05:12,313
+office when you're not there could it
+
+122
+00:05:12,333 --> 00:05:13,733
+be a kind of a watchdog or
+
+123
+00:05:13,733 --> 00:05:15,813
+a you know i often think lie
+
+124
+00:05:15,800 --> 00:05:18,290
+like a small robot like a r
+
+125
+00:05:18,300 --> 00:05:19,530
+two d two that is on your
+
+126
+00:05:19,533 --> 00:05:21,663
+side and helps monitor and protect you
+
+127
+00:05:21,666 --> 00:05:24,366
+as opposed to a skynet type but
+
+128
+00:05:24,666 --> 00:05:26,856
+anyway snowden ed snowden had this idea
+
+129
+00:05:26,833 --> 00:05:29,293
+and we've worked through it and built
+
+130
+00:05:29,300 --> 00:05:31,040
+something called haven which is quite interesting
+
+131
+00:05:31,700 --> 00:05:33,860
+and lastly we've been in recent years
+
+132
+00:05:33,866 --> 00:05:35,966
+working with trade unions and all
+
+133
+00:05:35,966 --> 00:05:38,846
+organized labor and in many countries around
+
+134
+00:05:38,833 --> 00:05:40,663
+a project called weep lock where workers
+
+135
+00:05:40,666 --> 00:05:43,666
+are saying i want my data about
+
+136
+00:05:43,666 --> 00:05:45,796
+my work day i don't want my
+
+137
+00:05:46,033 --> 00:05:49,273
+the corporation or the you know on-demand
+
+138
+00:05:49,266 --> 00:05:50,646
+platform to be the only one who's
+
+139
+00:05:50,666 --> 00:05:54,446
+tracking me like there's value in me
+
+140
+00:05:54,433 --> 00:05:55,993
+knowing about my own day
+
+141
+00:05:56,133 --> 00:05:58,173
+and then i having the i should
+
+142
+00:05:58,166 --> 00:05:59,696
+have the power to share that data
+
+143
+00:05:59,700 --> 00:06:02,670
+with others to collectively organize and use
+
+144
+00:06:02,666 --> 00:06:05,636
+the power of that data so these
+
+145
+00:06:05,633 --> 00:06:07,193
+are all the kind of dances and
+
+146
+00:06:07,200 --> 00:06:09,690
+investigations and things we've been doing around
+
+147
+00:06:09,800 --> 00:06:12,740
+who should measure who should have analytics
+
+148
+00:06:12,733 --> 00:06:14,443
+who should have this data and why
+
+149
+00:06:14,466 --> 00:06:16,296
+and where and how when
+
+150
+00:06:16,266 --> 00:06:18,726
+and you get this very either precious
+
+151
+00:06:18,766 --> 00:06:21,796
+asset of gold or toxic asset of
+
+152
+00:06:22,266 --> 00:06:25,386
+you know oil or how do you
+
+153
+00:06:25,533 --> 00:06:26,913
+take care of it appropriately
+
+154
+00:06:28,200 --> 00:06:30,300
+and yeah we're very proud of that
+
+155
+00:06:30,300 --> 00:06:32,130
+work and we have a great eye
+
+156
+00:06:32,933 --> 00:06:34,373
+a lot of great relationships in the
+
+157
+00:06:34,366 --> 00:06:39,166
+space around privacy security open source software
+
+158
+00:06:39,600 --> 00:06:39,930
+and
+
+159
+00:06:41,000 --> 00:06:42,200
+this is some of some of the
+
+160
+00:06:42,200 --> 00:06:47,360
+team and benjamin earhart and the top
+
+161
+00:06:47,366 --> 00:06:48,806
+middle there is based in
+
+162
+00:06:49,900 --> 00:06:52,840
+austria is been real lead on the
+
+163
+00:06:52,866 --> 00:06:54,396
+clean insights project as well as a
+
+164
+00:06:54,366 --> 00:06:55,566
+lot of our work with tour so
+
+165
+00:06:55,566 --> 00:06:56,646
+i want to give him a shout
+
+166
+00:06:56,666 --> 00:06:58,766
+out we also have kerry winfrey whose
+
+167
+00:06:59,266 --> 00:07:02,446
+thinks about consent and the user experience
+
+168
+00:07:02,466 --> 00:07:05,076
+around consent and how we engage users
+
+169
+00:07:05,066 --> 00:07:06,686
+with more than just a pop-up box
+
+170
+00:07:06,666 --> 00:07:08,226
+so we'll be talking about that today
+
+171
+00:07:08,966 --> 00:07:10,046
+i mentioned han
+
+172
+00:07:10,066 --> 00:07:11,926
+steiner who works a lot with f
+
+173
+00:07:11,933 --> 00:07:15,113
+droid and debbie in and reproducible builds
+
+174
+00:07:15,666 --> 00:07:18,756
+and dr gina helfrich has been a
+
+175
+00:07:18,966 --> 00:07:22,566
+supporter funder mentor organizer and really thinks
+
+176
+00:07:22,566 --> 00:07:25,896
+about equity and again the sustainability of
+
+177
+00:07:25,866 --> 00:07:28,236
+open source and how measurement is part
+
+178
+00:07:28,266 --> 00:07:28,626
+of that
+
+179
+00:07:29,733 --> 00:07:31,893
+and then in learmonth who has worked
+
+180
+00:07:31,866 --> 00:07:35,256
+at tour on measurement works in debian
+
+181
+00:07:35,266 --> 00:07:38,206
+and works is just great on infrastructure
+
+182
+00:07:38,266 --> 00:07:41,386
+devops and a lot of other really
+
+183
+00:07:41,400 --> 00:07:43,080
+important pieces to this solution
+
+184
+00:07:46,533 --> 00:07:48,903
+so a little while ago i got
+
+185
+00:07:48,900 --> 00:07:51,990
+inspired and wrote a manifesto around clean
+
+186
+00:07:51,966 --> 00:07:55,176
+insights that was inspired by the soap
+
+187
+00:07:55,233 --> 00:07:57,783
+this brand of soap we have called
+
+188
+00:07:57,766 --> 00:08:00,976
+dr bronner's soap which is kind of
+
+189
+00:08:00,966 --> 00:08:04,266
+you know quite old maybe over nearly
+
+190
+00:08:04,700 --> 00:08:06,770
+what eighty years or something and on
+
+191
+00:08:06,766 --> 00:08:10,096
+the soap bottle there's always this slightly
+
+192
+00:08:10,200 --> 00:08:10,590
+do
+
+193
+00:08:11,966 --> 00:08:14,846
+you know creative and separate words around
+
+194
+00:08:14,833 --> 00:08:16,213
+what the soap is about and i
+
+195
+00:08:16,233 --> 00:08:18,093
+thought well if he can write such
+
+196
+00:08:18,066 --> 00:08:21,696
+great lyrical prose about soap maybe i
+
+197
+00:08:21,700 --> 00:08:23,080
+could write something around
+
+198
+00:08:24,200 --> 00:08:27,460
+our work and put it on an
+
+199
+00:08:27,466 --> 00:08:29,796
+interesting product that people can read every
+
+200
+00:08:29,800 --> 00:08:34,030
+morning and and i did and we
+
+201
+00:08:34,033 --> 00:08:38,383
+actually make coffee that is part of
+
+202
+00:08:38,400 --> 00:08:41,490
+our our sort of instigation are are
+
+203
+00:08:41,466 --> 00:08:43,266
+are hoped to be a catalyst and
+
+204
+00:08:44,100 --> 00:08:44,370
+you can
+
+205
+00:08:44,400 --> 00:08:47,416
+read this manifesto and more at the
+
+206
+00:08:47,800 --> 00:08:47,891
+end
+
+207
+00:08:50,666 --> 00:08:52,316
+on the link they are clean inside
+
+208
+00:08:52,300 --> 00:08:53,770
+cetera it's less beans which gives you
+
+209
+00:08:53,766 --> 00:08:54,816
+a sense of yeah this is a
+
+210
+00:08:54,833 --> 00:08:55,853
+little bit crazy
+
+211
+00:08:57,166 --> 00:08:59,086
+but it's also you know we really
+
+212
+00:08:59,100 --> 00:09:01,170
+do on a change beyond just our
+
+213
+00:09:01,166 --> 00:09:03,716
+software we want to change some ideas
+
+214
+00:09:03,700 --> 00:09:06,940
+and thinking about measurement and analytics and
+
+215
+00:09:06,966 --> 00:09:09,696
+privacy and and how it's done and
+
+216
+00:09:09,666 --> 00:09:11,286
+we need a manifesto to do this
+
+217
+00:09:11,300 --> 00:09:12,800
+and also we need lots of coffee
+
+218
+00:09:13,466 --> 00:09:15,686
+so if you want to join us
+
+219
+00:09:15,666 --> 00:09:16,806
+you'll see and you go to that
+
+220
+00:09:16,833 --> 00:09:17,253
+link
+
+221
+00:09:17,566 --> 00:09:19,486
+that you can actually get free coffee
+
+222
+00:09:19,600 --> 00:09:23,500
+we have a distribution network nearly global
+
+223
+00:09:23,766 --> 00:09:26,826
+of our insightful beans and we hope
+
+224
+00:09:26,833 --> 00:09:28,603
+that every morning when you're making coffee
+
+225
+00:09:28,600 --> 00:09:30,970
+he'll read our manifesto and think a
+
+226
+00:09:30,966 --> 00:09:34,416
+little bit more about this and it's
+
+227
+00:09:34,433 --> 00:09:36,623
+important this is really important have an
+
+228
+00:09:36,633 --> 00:09:37,405
+and i'll go
+
+229
+00:09:37,433 --> 00:09:38,813
+through this more in my talk about
+
+230
+00:09:38,900 --> 00:09:40,790
+about why and how it impacts our
+
+231
+00:09:40,800 --> 00:09:43,050
+whole lives so but free coffee if
+
+232
+00:09:43,033 --> 00:09:44,953
+you sign up for a meeting as
+
+233
+00:09:44,966 --> 00:09:46,496
+a follow up to this talk so
+
+234
+00:09:46,900 --> 00:09:48,280
+that's the enticement
+
+235
+00:09:49,866 --> 00:09:52,566
+to do this work for me and
+
+236
+00:09:52,566 --> 00:09:54,546
+us as a team began a project
+
+237
+00:09:54,566 --> 00:09:56,337
+i was in at harvard university am
+
+238
+00:09:56,366 --> 00:09:59,368
+based in boston so it's nearby and
+
+239
+00:09:59,466 --> 00:10:00,336
+i'm a fellow
+
+240
+00:10:01,400 --> 00:10:04,100
+affiliate fellow now at the berkman klein
+
+241
+00:10:04,100 --> 00:10:06,230
+center for internet and society there
+
+242
+00:10:07,866 --> 00:10:09,906
+as sort of a twelve week workshop
+
+243
+00:10:09,966 --> 00:10:11,616
+called assembly where we are meant to
+
+244
+00:10:11,633 --> 00:10:13,583
+take some ideas and and put them
+
+245
+00:10:13,566 --> 00:10:16,776
+into code and my colleagues on my
+
+246
+00:10:16,800 --> 00:10:19,140
+team they're on my cohort were from
+
+247
+00:10:19,133 --> 00:10:25,493
+apple google square and the un and
+
+248
+00:10:25,500 --> 00:10:28,050
+then myself and we brainstormed
+
+249
+00:10:28,066 --> 00:10:29,806
+a lot of use cases unfortunately my
+
+250
+00:10:29,800 --> 00:10:32,463
+need emerged which was i have all
+
+251
+00:10:32,466 --> 00:10:34,536
+of these apps and technologies and solutions
+
+252
+00:10:34,633 --> 00:10:36,433
+and communities that i'm trying to help
+
+253
+00:10:36,800 --> 00:10:38,990
+but i'm afraid to measure them because
+
+254
+00:10:39,233 --> 00:10:41,063
+i feel like there isn't a solution
+
+255
+00:10:41,066 --> 00:10:44,126
+out there yet that can and with
+
+256
+00:10:44,133 --> 00:10:46,593
+uphold the privacy kind of compact we've
+
+257
+00:10:46,600 --> 00:10:48,190
+made with them and that
+
+258
+00:10:48,233 --> 00:10:49,703
+i i want to know more about
+
+259
+00:10:49,700 --> 00:10:51,860
+what's working what's not working but i'm
+
+260
+00:10:51,900 --> 00:10:54,420
+i don't want to do anything that
+
+261
+00:10:54,433 --> 00:10:57,613
+would harm them and so this team
+
+262
+00:10:57,600 --> 00:10:58,980
+took it seriously and it was really
+
+263
+00:10:59,000 --> 00:11:00,620
+a brilliant group and kind of we
+
+264
+00:11:01,166 --> 00:11:03,506
+we kickstarted so to speak the first
+
+265
+00:11:03,500 --> 00:11:07,640
+implementation of cleaning sites and we also
+
+266
+00:11:07,633 --> 00:11:08,353
+started by look
+
+267
+00:11:08,366 --> 00:11:09,596
+looking at what was happening in the
+
+268
+00:11:09,600 --> 00:11:13,949
+market and and we saw that often
+
+269
+00:11:14,333 --> 00:11:16,073
+not just in apps and websites but
+
+270
+00:11:16,066 --> 00:11:18,916
+you have things like the emergence of
+
+271
+00:11:18,900 --> 00:11:21,840
+smart cars of you know machine learning
+
+272
+00:11:21,866 --> 00:11:24,416
+based platforms where there's so much measurement
+
+273
+00:11:24,400 --> 00:11:26,920
+and analytics going in order to make
+
+274
+00:11:26,933 --> 00:11:28,403
+the self driving better to make the
+
+275
+00:11:28,400 --> 00:11:28,520
+key
+
+276
+00:11:28,500 --> 00:11:30,420
+car better to make the product better
+
+277
+00:11:30,466 --> 00:11:34,096
+whatever but then so often that same
+
+278
+00:11:34,100 --> 00:11:37,340
+data was being used against customers journalists
+
+279
+00:11:37,333 --> 00:11:39,881
+people inquiring about the product right and
+
+280
+00:11:39,900 --> 00:11:43,050
+so this was a case where a
+
+281
+00:11:43,800 --> 00:11:46,919
+journalist had written an article critical of
+
+282
+00:11:46,933 --> 00:11:48,103
+tesla and then
+
+283
+00:11:48,700 --> 00:11:50,710
+they elon musk went and pulled out
+
+284
+00:11:50,700 --> 00:11:52,380
+all of the data from that journalist
+
+285
+00:11:52,400 --> 00:11:54,480
+drive and said well this is what
+
+286
+00:11:54,500 --> 00:11:55,610
+you did here and this is your
+
+287
+00:11:55,600 --> 00:11:57,100
+turn here and you went too fast
+
+288
+00:11:57,100 --> 00:11:59,320
+here and this is how how you
+
+289
+00:11:59,333 --> 00:12:01,043
+drove wrong right that was kind of
+
+290
+00:12:02,100 --> 00:12:03,360
+i know there's lots of details in
+
+291
+00:12:03,366 --> 00:12:04,656
+there but it's pretty shocking to me
+
+292
+00:12:04,666 --> 00:12:07,816
+that the corporation could do that take
+
+293
+00:12:07,800 --> 00:12:09,329
+that data and use it back against
+
+294
+00:12:09,333 --> 00:12:11,823
+their critic so easily in real time
+
+295
+00:12:12,000 --> 00:12:13,110
+and that's something that was meant to
+
+296
+00:12:13,133 --> 00:12:16,433
+be beneficial to the customer was being
+
+297
+00:12:16,433 --> 00:12:19,583
+used to harm them or to counter
+
+298
+00:12:19,566 --> 00:12:21,726
+their claims and this has happened in
+
+299
+00:12:21,733 --> 00:12:22,273
+a number of key
+
+300
+00:12:22,266 --> 00:12:26,196
+bases around driving and accidents and other
+
+301
+00:12:26,200 --> 00:12:28,690
+court cases with some of the tech
+
+302
+00:12:28,933 --> 00:12:29,593
+in tesla
+
+303
+00:12:31,900 --> 00:12:33,880
+there are also other cases where you
+
+304
+00:12:33,900 --> 00:12:37,800
+know someone was a criminal and in
+
+305
+00:12:37,800 --> 00:12:40,439
+this case there was a homeowner said
+
+306
+00:12:40,433 --> 00:12:42,443
+his house burnt down but in fact
+
+307
+00:12:42,666 --> 00:12:44,586
+turned out to be arson and the
+
+308
+00:12:44,600 --> 00:12:46,850
+way they discovered it was arson was
+
+309
+00:12:47,233 --> 00:12:50,023
+they found out he had a pacemaker
+
+310
+00:12:50,500 --> 00:12:50,830
+and they
+
+311
+00:12:50,833 --> 00:12:53,473
+they extracted data from his pacemaker that
+
+312
+00:12:53,466 --> 00:12:54,996
+maybe he didn't even know was there
+
+313
+00:12:55,666 --> 00:12:59,506
+that and to show that history wasn't
+
+314
+00:12:59,500 --> 00:13:01,090
+right about was he when he was
+
+315
+00:13:01,100 --> 00:13:03,890
+sleeping and this i mean this is
+
+316
+00:13:03,900 --> 00:13:07,380
+like the most to stopping dystopia like
+
+317
+00:13:07,933 --> 00:13:09,853
+like your you're the thing keeping you
+
+318
+00:13:09,866 --> 00:13:11,006
+alive in your body
+
+319
+00:13:11,033 --> 00:13:14,153
+your cybernetic implant the police are jacking
+
+320
+00:13:14,133 --> 00:13:16,323
+into it and sucking out data in
+
+321
+00:13:16,333 --> 00:13:19,033
+order to like you know convict you
+
+322
+00:13:19,066 --> 00:13:21,286
+now he's a criminal sure but you
+
+323
+00:13:21,300 --> 00:13:24,030
+know obviously there's a slippery slope and
+
+324
+00:13:24,433 --> 00:13:25,693
+the more and more that we have
+
+325
+00:13:25,700 --> 00:13:29,030
+technology in our bodies how and when
+
+326
+00:13:29,033 --> 00:13:30,533
+can it be used against you you
+
+327
+00:13:30,533 --> 00:13:31,163
+know and i know
+
+328
+00:13:31,166 --> 00:13:33,176
+no as a small aspect of this
+
+329
+00:13:33,233 --> 00:13:35,843
+many in the u s at least
+
+330
+00:13:36,100 --> 00:13:38,800
+there's programs called wellness programs that where
+
+331
+00:13:38,800 --> 00:13:41,680
+you get to a free fitbit and
+
+332
+00:13:41,700 --> 00:13:43,710
+then it taps into your company's systems
+
+333
+00:13:43,700 --> 00:13:44,780
+and if you wear it you get
+
+334
+00:13:44,766 --> 00:13:47,616
+some coupon or credit or bonus or
+
+335
+00:13:47,633 --> 00:13:50,213
+something because you're proving you're healthy right
+
+336
+00:13:50,833 --> 00:13:51,313
+or
+
+337
+00:13:51,300 --> 00:13:53,909
+or and yeah and so
+
+338
+00:13:55,300 --> 00:13:57,220
+what next you know after that in
+
+339
+00:13:57,233 --> 00:13:59,153
+the workplace and and you know we
+
+340
+00:13:59,133 --> 00:14:01,143
+know already know that amazon and others
+
+341
+00:14:01,166 --> 00:14:03,476
+are using kind of again things that
+
+342
+00:14:03,466 --> 00:14:05,236
+are supposed to benefit you to improve
+
+343
+00:14:05,233 --> 00:14:06,553
+your life to improve the service are
+
+344
+00:14:06,566 --> 00:14:07,916
+being used and too often
+
+345
+00:14:09,933 --> 00:14:12,243
+i know there are some highlights and
+
+346
+00:14:12,266 --> 00:14:13,946
+i we had the chance you know
+
+347
+00:14:13,933 --> 00:14:16,333
+through this the program at harvard to
+
+348
+00:14:16,366 --> 00:14:18,976
+work with professor cynthia dork and those
+
+349
+00:14:18,966 --> 00:14:21,576
+people thinking about really you know new
+
+350
+00:14:21,600 --> 00:14:23,490
+kinds of maths in the order of
+
+351
+00:14:24,000 --> 00:14:25,860
+do you know what end to end
+
+352
+00:14:25,833 --> 00:14:27,603
+encryption and kind of the work there
+
+353
+00:14:27,600 --> 00:14:29,220
+has produced and there's similar
+
+354
+00:14:29,233 --> 00:14:30,133
+or work around
+
+355
+00:14:31,166 --> 00:14:34,436
+statistical privacy and computing data that were
+
+356
+00:14:34,433 --> 00:14:36,203
+inspired by and that we're hoping to
+
+357
+00:14:36,200 --> 00:14:38,780
+work towards and we have dabbled in
+
+358
+00:14:38,766 --> 00:14:40,116
+but this is sort of like you
+
+359
+00:14:40,133 --> 00:14:42,473
+know there is something on the horizon
+
+360
+00:14:42,466 --> 00:14:44,716
+here there's many things on the horizon
+
+361
+00:14:45,066 --> 00:14:46,536
+and we were kind of able to
+
+362
+00:14:46,833 --> 00:14:49,053
+tap into some of that thinking we
+
+363
+00:14:49,066 --> 00:14:50,626
+are also you know solve it
+
+364
+00:14:51,300 --> 00:14:53,219
+what we were doing isn't just a
+
+365
+00:14:53,500 --> 00:14:54,250
+activist
+
+366
+00:14:55,633 --> 00:14:59,563
+cyberpunk cypher punk you know a dream
+
+367
+00:14:59,600 --> 00:15:01,340
+this is something that apple was actually
+
+368
+00:15:01,333 --> 00:15:04,063
+already implementing as an example because they
+
+369
+00:15:04,066 --> 00:15:06,346
+wanted to know what images were popular
+
+370
+00:15:06,333 --> 00:15:08,463
+but they didn't want to log every
+
+371
+00:15:08,466 --> 00:15:10,356
+single thing you were typing because they
+
+372
+00:15:10,366 --> 00:15:12,586
+understood that that was a toxic asset
+
+373
+00:15:13,266 --> 00:15:14,616
+and not something they wanted to hold
+
+374
+00:15:14,633 --> 00:15:15,563
+onto but
+
+375
+00:15:15,566 --> 00:15:17,756
+they needed to know you know just
+
+376
+00:15:17,733 --> 00:15:20,073
+how popular the poop emoji was so
+
+377
+00:15:20,100 --> 00:15:21,990
+they could decide where where to put
+
+378
+00:15:21,966 --> 00:15:25,176
+it in the order of moses but
+
+379
+00:15:25,200 --> 00:15:27,420
+that actually had a benefit without harm
+
+380
+00:15:27,600 --> 00:15:29,310
+so it could work
+
+381
+00:15:31,800 --> 00:15:34,020
+so you know we have we have
+
+382
+00:15:34,033 --> 00:15:36,793
+we knew that the problem was monumental
+
+383
+00:15:36,833 --> 00:15:38,783
+we knew that like there is some
+
+384
+00:15:38,766 --> 00:15:40,956
+possibilities and i should i should also
+
+385
+00:15:40,966 --> 00:15:43,456
+say you know back then with you
+
+386
+00:15:43,466 --> 00:15:45,416
+know p wc and and matomo like
+
+387
+00:15:45,400 --> 00:15:47,620
+we were always inspired by this work
+
+388
+00:15:47,633 --> 00:15:50,393
+in this community building open source self
+
+389
+00:15:50,400 --> 00:15:50,610
+hosts
+
+390
+00:15:50,633 --> 00:15:53,705
+it analytics that you know kind of
+
+391
+00:15:53,700 --> 00:15:55,230
+fit in the world of the web
+
+392
+00:15:55,233 --> 00:15:57,723
+that we believe in and in terms
+
+393
+00:15:57,733 --> 00:16:00,343
+of decentralized technologies and self hosting and
+
+394
+00:16:00,333 --> 00:16:01,923
+we always like look these these guys
+
+395
+00:16:01,933 --> 00:16:03,253
+are doing it this this team is
+
+396
+00:16:03,800 --> 00:16:05,660
+producing products that people are starting to
+
+397
+00:16:05,666 --> 00:16:07,346
+adopt you know and and could we
+
+398
+00:16:07,333 --> 00:16:09,283
+build something like that or build on
+
+399
+00:16:09,300 --> 00:16:10,680
+it right into the seeds or already
+
+400
+00:16:10,666 --> 00:16:10,756
+have
+
+401
+00:16:10,766 --> 00:16:13,196
+they're for connecting the work we're doing
+
+402
+00:16:13,200 --> 00:16:14,880
+with with the matomo community
+
+403
+00:16:16,066 --> 00:16:16,546
+now
+
+404
+00:16:17,900 --> 00:16:19,550
+most recently you know in the last
+
+405
+00:16:19,533 --> 00:16:22,023
+year we've also seen that there's continued
+
+406
+00:16:22,033 --> 00:16:24,283
+to be kind of big gaffes and
+
+407
+00:16:24,866 --> 00:16:28,256
+missteps and problems with even beloved software
+
+408
+00:16:28,233 --> 00:16:31,053
+and open source community i love audacity
+
+409
+00:16:31,066 --> 00:16:32,266
+i'm a huge fan of use it
+
+410
+00:16:32,266 --> 00:16:34,786
+for a long time and you know
+
+411
+00:16:34,800 --> 00:16:35,490
+we saw
+
+412
+00:16:37,033 --> 00:16:39,463
+a real misstep by this new parent
+
+413
+00:16:39,466 --> 00:16:43,006
+company that acquired the code or the
+
+414
+00:16:43,000 --> 00:16:45,100
+team and and all the details but
+
+415
+00:16:45,100 --> 00:16:47,680
+the point is that there's still a
+
+416
+00:16:47,700 --> 00:16:49,470
+lot of lack of awareness around like
+
+417
+00:16:49,466 --> 00:16:50,846
+why would it be bad to just
+
+418
+00:16:50,833 --> 00:16:53,233
+drop in you know perma cookies in
+
+419
+00:16:53,233 --> 00:16:55,483
+your new ids and commercial toolkits into
+
+420
+00:16:55,500 --> 00:16:56,850
+this product like that's what we do
+
+421
+00:16:56,833 --> 00:16:59,323
+dude that's what everybody does right there
+
+422
+00:16:59,333 --> 00:17:00,216
+still a basic
+
+423
+00:17:01,433 --> 00:17:05,633
+huge actually chaz and across around what
+
+424
+00:17:05,666 --> 00:17:07,406
+what is what is ok what is
+
+425
+00:17:07,400 --> 00:17:09,290
+okay to do you know why shouldn't
+
+426
+00:17:09,300 --> 00:17:10,530
+we and even in the human rights
+
+427
+00:17:10,500 --> 00:17:13,139
+community and even in you know the
+
+428
+00:17:13,166 --> 00:17:14,995
+harbor community but people just drop in
+
+429
+00:17:15,000 --> 00:17:16,441
+google analytics and i know that's a
+
+430
+00:17:16,433 --> 00:17:18,113
+thing that you all are working on
+
+431
+00:17:18,099 --> 00:17:19,478
+and probably have a lot more experience
+
+432
+00:17:19,500 --> 00:17:21,510
+and how to get people to understand
+
+433
+00:17:21,500 --> 00:17:21,561
+the
+
+434
+00:17:21,566 --> 00:17:23,426
+the other possibilities and and what can
+
+435
+00:17:23,400 --> 00:17:25,380
+be done there and that's part of
+
+436
+00:17:25,400 --> 00:17:27,709
+our work especially in open source community
+
+437
+00:17:29,066 --> 00:17:32,725
+and we also see this continued kind
+
+438
+00:17:32,700 --> 00:17:36,751
+of an attack on users around conflating
+
+439
+00:17:36,800 --> 00:17:41,330
+usability improvements with advertiser tracking for advertising
+
+440
+00:17:41,333 --> 00:17:42,353
+and i think that is a big
+
+441
+00:17:42,366 --> 00:17:44,196
+thing that gets still combined quite a
+
+442
+00:17:44,200 --> 00:17:46,060
+bit where you said oh we need
+
+443
+00:17:46,066 --> 00:17:47,746
+your help to do x y and
+
+444
+00:17:47,733 --> 00:17:48,903
+z and make this better
+
+445
+00:17:49,233 --> 00:17:50,613
+but then that data is you know
+
+446
+00:17:50,633 --> 00:17:54,383
+combined for other purposes and again if
+
+447
+00:17:54,366 --> 00:17:56,706
+we are building software for human rights
+
+448
+00:17:56,700 --> 00:17:59,850
+humanitarian purposes and then this kind of
+
+449
+00:18:00,466 --> 00:18:02,536
+gets introduced in the process where we
+
+450
+00:18:02,533 --> 00:18:04,243
+say oh you have to use this
+
+451
+00:18:04,700 --> 00:18:06,080
+other tool and then it's going to
+
+452
+00:18:06,066 --> 00:18:09,066
+track you it's it overwhelming kind of
+
+453
+00:18:09,133 --> 00:18:13,093
+number of datapoints start being collected on
+
+454
+00:18:13,100 --> 00:18:15,320
+people we're trying to help and you
+
+455
+00:18:15,300 --> 00:18:17,490
+know i don't i kudos to apple
+
+456
+00:18:17,500 --> 00:18:19,270
+for what they've been you know some
+
+457
+00:18:19,266 --> 00:18:20,316
+of the moves they've made have been
+
+458
+00:18:20,333 --> 00:18:23,903
+really interesting with injecting into the user
+
+459
+00:18:23,900 --> 00:18:26,780
+experience around consent a new model you
+
+460
+00:18:26,766 --> 00:18:28,626
+know i think people are starting to
+
+461
+00:18:28,633 --> 00:18:29,233
+respond
+
+462
+00:18:29,700 --> 00:18:31,230
+and it's interesting to see how it's
+
+463
+00:18:31,233 --> 00:18:33,753
+impacted companies like facebook
+
+464
+00:18:37,133 --> 00:18:39,203
+and and then you know with with
+
+465
+00:18:39,200 --> 00:18:41,990
+the pandemic you know we saw a
+
+466
+00:18:42,000 --> 00:18:44,536
+lot of emerge and in recent years
+
+467
+00:18:44,833 --> 00:18:47,083
+emergence of smart kind of civic and
+
+468
+00:18:47,100 --> 00:18:50,129
+health technology you know be it and
+
+469
+00:18:50,700 --> 00:18:54,840
+measuring people in cities measuring people around
+
+470
+00:18:54,866 --> 00:18:55,166
+each
+
+471
+00:18:55,166 --> 00:18:58,496
+other you know having more data about
+
+472
+00:18:58,533 --> 00:19:02,223
+you know covert and testing and having
+
+473
+00:19:03,066 --> 00:19:05,436
+more public infrastructure like in new york
+
+474
+00:19:05,433 --> 00:19:07,563
+city these wifi hotspots that are meant
+
+475
+00:19:07,566 --> 00:19:10,386
+to provide people without access to the
+
+476
+00:19:10,400 --> 00:19:13,490
+internet free wifi and chromebooks and all
+
+477
+00:19:13,500 --> 00:19:15,330
+of this stuff and you know
+
+478
+00:19:15,333 --> 00:19:17,103
+we we've been through a lot and
+
+479
+00:19:17,133 --> 00:19:18,213
+you know i hope all of you
+
+480
+00:19:18,733 --> 00:19:20,001
+you know are are doing well and
+
+481
+00:19:20,000 --> 00:19:21,410
+your families are are well and that
+
+482
+00:19:21,533 --> 00:19:22,673
+you know we're all on the road
+
+483
+00:19:22,666 --> 00:19:24,946
+to a better brighter day but there's
+
+484
+00:19:24,933 --> 00:19:27,243
+been a lot of kind of changes
+
+485
+00:19:27,300 --> 00:19:31,080
+and again what what is happening in
+
+486
+00:19:31,066 --> 00:19:34,336
+our society around infrastructure and you know
+
+487
+00:19:34,333 --> 00:19:35,473
+on the one hand there's there's
+
+488
+00:19:35,466 --> 00:19:38,016
+as horrific security which different topic for
+
+489
+00:19:38,033 --> 00:19:39,713
+most of these things but on the
+
+490
+00:19:39,700 --> 00:19:42,760
+other hand you know again what is
+
+491
+00:19:42,766 --> 00:19:44,656
+what are you collecting and why and
+
+492
+00:19:44,666 --> 00:19:46,646
+when what data is collected how long
+
+493
+00:19:46,633 --> 00:19:47,682
+do you retain it and all of
+
+494
+00:19:47,700 --> 00:19:49,741
+this that i think is is very
+
+495
+00:19:49,733 --> 00:19:51,413
+different country to country as well so
+
+496
+00:19:51,400 --> 00:19:52,720
+i want to recognize that based on
+
+497
+00:19:52,733 --> 00:19:55,643
+different regulations but there's
+
+498
+00:19:56,033 --> 00:19:57,653
+still that vision like if we just
+
+499
+00:19:57,633 --> 00:20:00,123
+knew everything everything would be okay so
+
+500
+00:20:02,200 --> 00:20:04,570
+so you know back to arc our
+
+501
+00:20:04,566 --> 00:20:06,816
+core story and we have a lot
+
+502
+00:20:06,833 --> 00:20:09,233
+of these users that we want to
+
+503
+00:20:09,233 --> 00:20:11,663
+help authentically to make our software that
+
+504
+00:20:11,666 --> 00:20:13,136
+doesn't track them it doesn't harm the
+
+505
+00:20:13,133 --> 00:20:15,443
+better but we don't and we haven't
+
+506
+00:20:15,433 --> 00:20:16,723
+been in and we needed to figure
+
+507
+00:20:16,733 --> 00:20:18,353
+out a way to do that and
+
+508
+00:20:18,333 --> 00:20:20,763
+so there's a lot of others that
+
+509
+00:20:20,766 --> 00:20:21,306
+are in the same
+
+510
+00:20:22,200 --> 00:20:25,200
+quandary and that we work with and
+
+511
+00:20:25,200 --> 00:20:26,460
+that we've been trying to provide a
+
+512
+00:20:26,466 --> 00:20:28,296
+solution for in our space and i'm
+
+513
+00:20:28,300 --> 00:20:29,560
+here today to kind of share that
+
+514
+00:20:29,566 --> 00:20:31,846
+work and see maybe there's broader adoption
+
+515
+00:20:31,833 --> 00:20:32,553
+possibility
+
+516
+00:20:33,900 --> 00:20:36,600
+so as i said the tor project
+
+517
+00:20:37,366 --> 00:20:39,046
+has actually done a lot of thinking
+
+518
+00:20:39,066 --> 00:20:41,976
+about this and they are a big
+
+519
+00:20:41,966 --> 00:20:44,816
+inspiration with their metrics portal which is
+
+520
+00:20:44,833 --> 00:20:47,713
+completely public and it's so interesting that
+
+521
+00:20:47,700 --> 00:20:50,250
+an anonymity system actually has the best
+
+522
+00:20:50,433 --> 00:20:52,533
+measurement and analytics system as part of
+
+523
+00:20:52,533 --> 00:20:53,913
+it but they fee
+
+524
+00:20:53,900 --> 00:20:55,040
+figured out how to do it they
+
+525
+00:20:55,066 --> 00:20:57,256
+found that compromise and that way to
+
+526
+00:20:57,500 --> 00:21:01,040
+do it without cock their users and
+
+527
+00:21:01,066 --> 00:21:02,746
+they've communicate and it's a kind of
+
+528
+00:21:02,733 --> 00:21:05,313
+a key very transparent piece of their
+
+529
+00:21:05,300 --> 00:21:08,360
+system to say his tour working how
+
+530
+00:21:08,366 --> 00:21:10,136
+many people are using it what's the
+
+531
+00:21:10,133 --> 00:21:12,533
+throughput in a where is our infrastructure
+
+532
+00:21:12,533 --> 00:21:14,063
+located so all of these things
+
+533
+00:21:14,100 --> 00:21:20,250
+r and r there and i know
+
+534
+00:21:20,266 --> 00:21:21,736
+they continue to do this and really
+
+535
+00:21:21,733 --> 00:21:23,623
+have been excellent there's others like the
+
+536
+00:21:23,600 --> 00:21:27,800
+open observatory of network interference and other
+
+537
+00:21:27,800 --> 00:21:31,010
+groups doing measurement that we take inspiration
+
+538
+00:21:31,033 --> 00:21:33,913
+from we also did an outreach in
+
+539
+00:21:33,900 --> 00:21:34,230
+a row
+
+540
+00:21:34,233 --> 00:21:36,483
+a research project with that is published
+
+541
+00:21:36,466 --> 00:21:38,146
+on clean insights dot org and through
+
+542
+00:21:38,166 --> 00:21:42,396
+partner sites with groups like keepass cubes
+
+543
+00:21:42,700 --> 00:21:46,960
+tunnelbear least authority siphon umbrella a bunch
+
+544
+00:21:46,966 --> 00:21:48,766
+of different projects to say hey how
+
+545
+00:21:48,766 --> 00:21:50,176
+do you feel what are you doing
+
+546
+00:21:50,166 --> 00:21:54,366
+with measurement and how are you do
+
+547
+00:21:56,500 --> 00:21:58,600
+so if we could offer more what
+
+548
+00:21:58,666 --> 00:22:00,166
+you know would you take it and
+
+549
+00:22:00,466 --> 00:22:02,086
+this is the big question really and
+
+550
+00:22:02,066 --> 00:22:03,746
+how they interact with their users and
+
+551
+00:22:03,766 --> 00:22:06,196
+what they expect and so we were
+
+552
+00:22:06,166 --> 00:22:07,846
+excited to collaborate and there's a lot
+
+553
+00:22:07,866 --> 00:22:09,786
+to learn from that report and and
+
+554
+00:22:09,766 --> 00:22:12,436
+part of it was also that fed
+
+555
+00:22:12,466 --> 00:22:14,566
+into a symposium we held last year
+
+556
+00:22:14,566 --> 00:22:14,686
+your
+
+557
+00:22:16,366 --> 00:22:18,706
+and we have told another one next
+
+558
+00:22:18,733 --> 00:22:21,073
+year that really brought us together into
+
+559
+00:22:21,066 --> 00:22:22,866
+a lot of the the questions around
+
+560
+00:22:23,533 --> 00:22:27,343
+consent and kind of what should they
+
+561
+00:22:27,333 --> 00:22:29,133
+know and what should you know and
+
+562
+00:22:29,133 --> 00:22:32,013
+how should you measure it so out
+
+563
+00:22:32,000 --> 00:22:33,770
+of all of this finally getting to
+
+564
+00:22:33,766 --> 00:22:35,866
+the point here do we
+
+565
+00:22:35,900 --> 00:22:38,630
+decided to build some software and i
+
+566
+00:22:39,133 --> 00:22:41,863
+you know i mentioned my collaborators earlier
+
+567
+00:22:42,166 --> 00:22:44,176
+and we said look can we actually
+
+568
+00:22:44,166 --> 00:22:46,206
+build something that you know and when
+
+569
+00:22:46,200 --> 00:22:48,360
+we had tinkered since twenty seventeen on
+
+570
+00:22:48,366 --> 00:22:50,616
+different little pieces and trying things but
+
+571
+00:22:50,900 --> 00:22:52,400
+i think we struck get a much
+
+572
+00:22:52,400 --> 00:22:54,830
+clearer idea in a specification of what
+
+573
+00:22:55,366 --> 00:22:56,086
+we would use
+
+574
+00:22:56,066 --> 00:22:59,096
+use in in a toolkit for measurements
+
+575
+00:22:59,166 --> 00:23:01,956
+and how what we would need as
+
+576
+00:23:01,966 --> 00:23:04,126
+part of that and a big part
+
+577
+00:23:04,100 --> 00:23:05,360
+of it was just this idea again
+
+578
+00:23:05,366 --> 00:23:07,316
+i mentioned the idea of toxic assets
+
+579
+00:23:07,333 --> 00:23:09,613
+and liability and how do we separate
+
+580
+00:23:09,633 --> 00:23:12,213
+that risk from the actual thing we
+
+581
+00:23:12,200 --> 00:23:14,510
+want to know and so our model
+
+582
+00:23:14,533 --> 00:23:16,243
+is not to log as
+
+583
+00:23:16,233 --> 00:23:17,943
+everything and then figure it out later
+
+584
+00:23:17,933 --> 00:23:19,913
+but it's to ask specific questions and
+
+585
+00:23:19,933 --> 00:23:24,253
+measure specific things and do edge client
+
+586
+00:23:24,233 --> 00:23:27,353
+side processing in browsers in mobile apps
+
+587
+00:23:27,500 --> 00:23:29,570
+and then submit the data in a
+
+588
+00:23:29,566 --> 00:23:32,806
+way that is as clean as possible
+
+589
+00:23:33,733 --> 00:23:34,243
+so
+
+590
+00:23:35,466 --> 00:23:37,446
+do you know some of the basic
+
+591
+00:23:37,433 --> 00:23:40,324
+kind of guiding principles is around that
+
+592
+00:23:40,333 --> 00:23:43,322
+but we have are displayed here and
+
+593
+00:23:43,766 --> 00:23:46,946
+and we work through a variety of
+
+594
+00:23:46,966 --> 00:23:49,636
+mechanisms to achieve these things about aggregating
+
+595
+00:23:49,633 --> 00:23:53,443
+and averaging and pointed focus data collection
+
+596
+00:23:53,866 --> 00:23:55,606
+and measurement wind
+
+597
+00:23:55,600 --> 00:23:57,820
+does wear of time so you don't
+
+598
+00:23:57,800 --> 00:23:59,540
+get specific timestamps
+
+599
+00:24:00,666 --> 00:24:02,766
+getting consent to opt in and how
+
+600
+00:24:02,766 --> 00:24:04,476
+we fish explain what's going to be
+
+601
+00:24:04,466 --> 00:24:06,086
+measured this is all part of what
+
+602
+00:24:06,166 --> 00:24:07,606
+insights is designed to do
+
+603
+00:24:08,933 --> 00:24:09,412
+i
+
+604
+00:24:10,666 --> 00:24:12,136
+and a bit of a different view
+
+605
+00:24:12,166 --> 00:24:14,206
+of this i should mention at this
+
+606
+00:24:14,200 --> 00:24:15,879
+point we decided very early we don't
+
+607
+00:24:15,866 --> 00:24:17,066
+want to build our own back end
+
+608
+00:24:17,066 --> 00:24:18,536
+system we want to focus on our
+
+609
+00:24:18,533 --> 00:24:21,893
+client side st ks and so we
+
+610
+00:24:21,900 --> 00:24:24,780
+chose moto mo as the sort of
+
+611
+00:24:24,766 --> 00:24:27,226
+infrastructure we wanted to do
+
+612
+00:24:28,500 --> 00:24:31,230
+integrate with the analytics and visualization and
+
+613
+00:24:31,233 --> 00:24:33,333
+kind of long term or short term
+
+614
+00:24:33,333 --> 00:24:37,113
+storage of data and it's been great
+
+615
+00:24:37,100 --> 00:24:40,520
+and it's also interesting because many organizations
+
+616
+00:24:40,566 --> 00:24:42,636
+want to use moto mo for their
+
+617
+00:24:42,700 --> 00:24:44,740
+their basic web analytics for their webpage
+
+618
+00:24:44,733 --> 00:24:46,443
+for their marketing still and that's fine
+
+619
+00:24:46,800 --> 00:24:48,630
+what we're talking about our application
+
+620
+00:24:48,633 --> 00:24:51,663
+ns and infrastructure specific interactions and so
+
+621
+00:24:51,666 --> 00:24:53,856
+it actually works well together to say
+
+622
+00:24:53,866 --> 00:24:55,756
+lt i set up a tomo will
+
+623
+00:24:55,733 --> 00:24:58,073
+run it for you dropping the you
+
+624
+00:24:58,066 --> 00:24:59,896
+know the javascript in your website let's
+
+625
+00:24:59,933 --> 00:25:01,583
+tune it for privacy there's a lot
+
+626
+00:25:01,600 --> 00:25:03,280
+of great settings hematoma we love for
+
+627
+00:25:03,266 --> 00:25:05,246
+that and then for your app for
+
+628
+00:25:05,266 --> 00:25:07,426
+your other things we'll use clean insights
+
+629
+00:25:07,433 --> 00:25:08,783
+on top of that and they
+
+630
+00:25:08,833 --> 00:25:10,813
+get this really great combined view of
+
+631
+00:25:11,033 --> 00:25:12,330
+kind of what they're used to with
+
+632
+00:25:12,333 --> 00:25:14,133
+something new and we've been really you
+
+633
+00:25:14,133 --> 00:25:16,863
+know happy about that and so do
+
+634
+00:25:17,700 --> 00:25:18,870
+a lot of that back and i'll
+
+635
+00:25:18,866 --> 00:25:20,336
+talk about the privacy proxy in a
+
+636
+00:25:20,333 --> 00:25:23,963
+moment but we have this client side
+
+637
+00:25:23,966 --> 00:25:26,996
+st ks that are configured and have
+
+638
+00:25:27,066 --> 00:25:28,956
+measurements of events and views
+
+639
+00:25:29,000 --> 00:25:30,440
+that have a bit of processing in
+
+640
+00:25:30,466 --> 00:25:32,416
+the storage queue and then are sent
+
+641
+00:25:32,400 --> 00:25:35,580
+at a certain period back to this
+
+642
+00:25:35,566 --> 00:25:37,396
+privacy proxy we built and then that
+
+643
+00:25:37,466 --> 00:25:38,516
+goes into matomo
+
+644
+00:25:42,233 --> 00:25:44,243
+so as of today on git lab
+
+645
+00:25:44,266 --> 00:25:46,366
+and unclean insights dot org we have
+
+646
+00:25:46,800 --> 00:25:50,460
+actual st ks that have shipped and
+
+647
+00:25:51,100 --> 00:25:55,030
+are very exciting to to proud that
+
+648
+00:25:55,033 --> 00:25:57,193
+they're there and we're integrating in applications
+
+649
+00:25:57,166 --> 00:25:59,896
+kenneth as we speak for
+
+650
+00:25:59,933 --> 00:26:01,883
+lots of languages and i think we
+
+651
+00:26:01,900 --> 00:26:04,960
+actually also have the rust sdk is
+
+652
+00:26:04,966 --> 00:26:06,136
+our newest one you know and i
+
+653
+00:26:06,133 --> 00:26:09,463
+know rust is emerging in many environments
+
+654
+00:26:09,466 --> 00:26:11,056
+is like the most secure way you
+
+655
+00:26:11,033 --> 00:26:13,883
+can build something that is you know
+
+656
+00:26:14,066 --> 00:26:16,706
+a binary kind of application but we
+
+657
+00:26:16,700 --> 00:26:19,670
+support server applications through python we support
+
+658
+00:26:19,700 --> 00:26:20,060
+apple
+
+659
+00:26:20,066 --> 00:26:22,706
+full android javascript so there's lots of
+
+660
+00:26:22,700 --> 00:26:26,450
+ways to start dabbling in it and
+
+661
+00:26:26,466 --> 00:26:29,136
+using our code in different environments and
+
+662
+00:26:29,133 --> 00:26:30,504
+then i'll talk a bit more about
+
+663
+00:26:30,566 --> 00:26:32,246
+potomac proxy so this is all on
+
+664
+00:26:32,266 --> 00:26:35,146
+our website everything's to get lab published
+
+665
+00:26:35,133 --> 00:26:37,683
+in the places you'd expect for dependencies
+
+666
+00:26:38,100 --> 00:26:39,990
+and so on so she very easy
+
+667
+00:26:40,000 --> 00:26:40,240
+to end
+
+668
+00:26:40,333 --> 00:26:40,781
+great
+
+669
+00:26:42,000 --> 00:26:44,100
+and a piece early on that we
+
+670
+00:26:44,100 --> 00:26:46,170
+realized we needed to achieve some of
+
+671
+00:26:46,166 --> 00:26:48,596
+our goals was a privacy proxy in
+
+672
+00:26:48,600 --> 00:26:51,780
+front of mahama and this is what
+
+673
+00:26:51,766 --> 00:26:55,366
+our sdk speaks to in order to
+
+674
+00:26:55,633 --> 00:26:55,963
+do
+
+675
+00:26:57,966 --> 00:26:59,616
+interact with the data in the way
+
+676
+00:26:59,600 --> 00:27:01,424
+we collected and then put that into
+
+677
+00:27:01,500 --> 00:27:03,990
+matomo in the appropriate way so this
+
+678
+00:27:04,000 --> 00:27:06,850
+is this isn't a great slide but
+
+679
+00:27:07,066 --> 00:27:09,256
+this is really the information from the
+
+680
+00:27:09,333 --> 00:27:10,683
+the the git lab in the read
+
+681
+00:27:10,666 --> 00:27:13,516
+me and a benjamin earhart who's here
+
+682
+00:27:14,300 --> 00:27:16,490
+design most of this and but we
+
+683
+00:27:16,500 --> 00:27:17,190
+had certain requests
+
+684
+00:27:17,200 --> 00:27:19,240
+garments and the idea was we would
+
+685
+00:27:20,033 --> 00:27:21,713
+you know we we kind of aggregate
+
+686
+00:27:21,766 --> 00:27:23,566
+records together so they're not always being
+
+687
+00:27:23,566 --> 00:27:25,876
+logged in real time as an example
+
+688
+00:27:26,733 --> 00:27:28,533
+we also wanted to filter some of
+
+689
+00:27:28,533 --> 00:27:30,963
+the headers from mobile devices and things
+
+690
+00:27:30,966 --> 00:27:32,616
+and so that we could really control
+
+691
+00:27:32,600 --> 00:27:33,860
+some of those things before they ever
+
+692
+00:27:33,866 --> 00:27:37,346
+went into matomo and and recognizing
+
+693
+00:27:37,366 --> 00:27:39,406
+that in some case the number one
+
+694
+00:27:39,466 --> 00:27:42,076
+with all the materials went maybe as
+
+695
+00:27:42,100 --> 00:27:45,700
+precisely as they wanted and yeah and
+
+696
+00:27:45,700 --> 00:27:48,310
+it's a pretty simple layer but it
+
+697
+00:27:48,300 --> 00:27:50,160
+was great that we had them tomorrow
+
+698
+00:27:50,166 --> 00:27:51,726
+a poi to work with them that
+
+699
+00:27:51,733 --> 00:27:52,993
+we could build this layer that we
+
+700
+00:27:52,966 --> 00:27:56,446
+needed so again it's about flexibility control
+
+701
+00:27:56,800 --> 00:27:57,520
+and it was awesome
+
+702
+00:27:57,566 --> 00:28:00,116
+that that this was possible and
+
+703
+00:28:02,000 --> 00:28:03,140
+been working out very well
+
+704
+00:28:06,466 --> 00:28:09,106
+so when you work with and clean
+
+705
+00:28:09,133 --> 00:28:12,463
+insights the steps are that first you
+
+706
+00:28:13,266 --> 00:28:15,126
+set up a campaign and this is
+
+707
+00:28:15,133 --> 00:28:18,913
+through coups de son or configuration file
+
+708
+00:28:18,933 --> 00:28:21,363
+that defines kind of the measurement period
+
+709
+00:28:21,933 --> 00:28:23,613
+and some
+
+710
+00:28:25,866 --> 00:28:28,236
+local persistence how often to measure when
+
+711
+00:28:28,233 --> 00:28:30,783
+to start and when to end and
+
+712
+00:28:31,000 --> 00:28:32,530
+this can be set very broad or
+
+713
+00:28:32,533 --> 00:28:34,423
+can be set very narrow and so
+
+714
+00:28:34,400 --> 00:28:35,570
+one of the ideas as you might
+
+715
+00:28:35,566 --> 00:28:37,156
+say to users i'm just going to
+
+716
+00:28:37,166 --> 00:28:39,716
+measure you for two weeks we're doing
+
+717
+00:28:39,733 --> 00:28:41,863
+a study for two weeks do you
+
+718
+00:28:41,866 --> 00:28:43,186
+want to join it's going to be
+
+719
+00:28:43,166 --> 00:28:44,546
+focused on improve
+
+720
+00:28:44,566 --> 00:28:46,756
+seeing this feature and you can join
+
+721
+00:28:46,733 --> 00:28:49,583
+and participate in this study that's a
+
+722
+00:28:49,600 --> 00:28:51,879
+big key concept here which is not
+
+723
+00:28:51,866 --> 00:28:54,566
+sort of endless measurement and we think
+
+724
+00:28:54,566 --> 00:28:57,296
+people are more likely to opt in
+
+725
+00:28:57,300 --> 00:28:59,130
+and say sure i'm excited about that
+
+726
+00:28:59,133 --> 00:29:01,293
+if they have that ability so then
+
+727
+00:29:01,300 --> 00:29:02,860
+we get consent and we have some
+
+728
+00:29:02,866 --> 00:29:04,006
+various you x i'm going to get
+
+729
+00:29:04,000 --> 00:29:04,360
+to
+
+730
+00:29:04,733 --> 00:29:06,053
+quickly cause i'm running out of time
+
+731
+00:29:06,733 --> 00:29:08,863
+and then you choose to measure specific
+
+732
+00:29:08,866 --> 00:29:11,926
+events with custom data or specific views
+
+733
+00:29:12,333 --> 00:29:13,653
+some of this relates to what you
+
+734
+00:29:13,666 --> 00:29:14,656
+might be used to in them and
+
+735
+00:29:14,633 --> 00:29:17,603
+tomo st ks around events abused because
+
+736
+00:29:17,700 --> 00:29:19,050
+we knew the data was ending up
+
+737
+00:29:19,066 --> 00:29:20,236
+there in the end so we wanted
+
+738
+00:29:20,233 --> 00:29:21,553
+to be able to map it into
+
+739
+00:29:22,066 --> 00:29:23,686
+some of what you would see in
+
+740
+00:29:23,833 --> 00:29:24,883
+the image
+
+741
+00:29:24,866 --> 00:29:26,606
+item on the backend right so where
+
+742
+00:29:27,133 --> 00:29:28,993
+it's you know there there is that
+
+743
+00:29:28,966 --> 00:29:31,366
+heritage there and thinking about the data
+
+744
+00:29:31,400 --> 00:29:33,380
+but how we process it and it
+
+745
+00:29:33,400 --> 00:29:35,770
+gets there over time so you might
+
+746
+00:29:35,766 --> 00:29:38,076
+do a bunch of measurements of someone
+
+747
+00:29:38,066 --> 00:29:41,036
+clicking on a button or interacting with
+
+748
+00:29:41,033 --> 00:29:42,563
+something and then once a week that
+
+749
+00:29:42,566 --> 00:29:45,026
+data is aggregated as account couch
+
+750
+00:29:45,033 --> 00:29:46,413
+sent and sent to the server as
+
+751
+00:29:46,400 --> 00:29:48,950
+opposed to off you know going constantly
+
+752
+00:29:48,966 --> 00:29:49,686
+to the back end
+
+753
+00:29:51,233 --> 00:29:52,943
+so clean insights dot org has a
+
+754
+00:29:52,966 --> 00:29:54,796
+lot more information on this and we
+
+755
+00:29:54,766 --> 00:29:57,196
+are also doing a workshop tomorrow morning
+
+756
+00:29:57,233 --> 00:29:59,723
+that do you know if you really
+
+757
+00:29:59,733 --> 00:30:00,723
+want to implement we're going to be
+
+758
+00:30:00,733 --> 00:30:02,023
+ready to talk to you about your
+
+759
+00:30:02,000 --> 00:30:04,400
+specific needs so and and i'm always
+
+760
+00:30:04,400 --> 00:30:04,850
+available
+
+761
+00:30:06,000 --> 00:30:07,860
+a big part of this in our
+
+762
+00:30:07,866 --> 00:30:09,816
+apps was also this idea of consent
+
+763
+00:30:09,900 --> 00:30:11,910
+and we've spent a lot in consent
+
+764
+00:30:11,900 --> 00:30:13,970
+user experience design a lot of energy
+
+765
+00:30:14,466 --> 00:30:17,316
+around the messaging contribute for the number
+
+766
+00:30:17,300 --> 00:30:19,310
+of time you know we'll be doing
+
+767
+00:30:19,333 --> 00:30:21,283
+these things to gather these pieces of
+
+768
+00:30:21,266 --> 00:30:23,126
+data and here's how you'll benefit and
+
+769
+00:30:23,133 --> 00:30:24,843
+we'll reach back to you and so
+
+770
+00:30:24,833 --> 00:30:26,063
+really make it a pi
+
+771
+00:30:26,600 --> 00:30:29,960
+tory co-design process to improve your software
+
+772
+00:30:29,966 --> 00:30:32,276
+or your site in a way that's
+
+773
+00:30:32,266 --> 00:30:34,936
+transparent and collaborative this is key for
+
+774
+00:30:34,933 --> 00:30:36,823
+us and we think it's an important
+
+775
+00:30:37,133 --> 00:30:39,923
+model moving forward you know you again
+
+776
+00:30:39,900 --> 00:30:40,950
+you could say we're going to measure
+
+777
+00:30:40,966 --> 00:30:42,496
+you for a year or for a
+
+778
+00:30:42,500 --> 00:30:45,230
+month or longer time periods but i
+
+779
+00:30:45,500 --> 00:30:46,671
+do want to kind of have it
+
+780
+00:30:46,666 --> 00:30:48,076
+an experience where they you know it's
+
+781
+00:30:48,066 --> 00:30:48,216
+like
+
+782
+00:30:50,000 --> 00:30:51,470
+people in the u s there's a
+
+783
+00:30:51,533 --> 00:30:53,213
+thing called nielsen ratings where it used
+
+784
+00:30:53,200 --> 00:30:54,820
+to be super excited in the old
+
+785
+00:30:54,833 --> 00:30:56,453
+days of television to be a nielsen
+
+786
+00:30:56,433 --> 00:30:58,893
+family because they wanted to know what
+
+787
+00:30:58,900 --> 00:31:00,880
+you cared about and which tv shows
+
+788
+00:31:00,866 --> 00:31:02,126
+were good and you had a box
+
+789
+00:31:02,133 --> 00:31:03,483
+in your house and it felt like
+
+790
+00:31:04,200 --> 00:31:06,330
+everyone wanted to be that family and
+
+791
+00:31:06,333 --> 00:31:07,743
+i think we're trying to recapture some
+
+792
+00:31:07,766 --> 00:31:09,296
+of that positivity around
+
+793
+00:31:09,833 --> 00:31:12,293
+and providing feedback to services
+
+794
+00:31:14,166 --> 00:31:17,915
+and yeah ultimately there's an idea of
+
+795
+00:31:17,933 --> 00:31:21,354
+why what you're gathering and why and
+
+796
+00:31:21,333 --> 00:31:22,773
+that we want to tap into so
+
+797
+00:31:22,866 --> 00:31:24,306
+i'm going to keep going so we
+
+798
+00:31:24,300 --> 00:31:26,700
+have a bunch of designs figma files
+
+799
+00:31:27,366 --> 00:31:29,814
+blog posts through our partner okay thanks
+
+800
+00:31:30,133 --> 00:31:32,383
+carry on our team is that's her
+
+801
+00:31:32,366 --> 00:31:33,446
+design studio and
+
+802
+00:31:33,533 --> 00:31:36,053
+really has done outstanding work here and
+
+803
+00:31:36,033 --> 00:31:37,563
+we're actually building all of this into
+
+804
+00:31:37,600 --> 00:31:40,180
+multiple applications like this i mentioned earlier
+
+805
+00:31:40,833 --> 00:31:45,363
+and f droid themselves have already implemented
+
+806
+00:31:46,766 --> 00:31:48,326
+a piece of this though we haven't
+
+807
+00:31:48,333 --> 00:31:50,553
+fully done the consent you user experience
+
+808
+00:31:51,466 --> 00:31:52,452
+but if you go to the after
+
+809
+00:31:52,466 --> 00:31:53,996
+a blog there's a post on clean
+
+810
+00:31:53,966 --> 00:31:56,396
+insights and that the ideas was we
+
+811
+00:31:56,400 --> 00:31:59,130
+wanted to understand the insight was how
+
+812
+00:31:59,133 --> 00:32:00,963
+often do people fail to install an
+
+813
+00:32:00,966 --> 00:32:02,766
+app they choose and then one of
+
+814
+00:32:02,766 --> 00:32:05,166
+the most popular apps this week across
+
+815
+00:32:05,166 --> 00:32:06,276
+all repositories
+
+816
+00:32:06,633 --> 00:32:08,043
+and that felt like something that they
+
+817
+00:32:08,066 --> 00:32:10,616
+were comfortable using clean insights to measure
+
+818
+00:32:10,900 --> 00:32:12,700
+as people opted in and that would
+
+819
+00:32:12,700 --> 00:32:14,410
+be that people would be excited maybe
+
+820
+00:32:14,400 --> 00:32:16,350
+to share that right and so those
+
+821
+00:32:16,366 --> 00:32:17,836
+are the idea of insights that we
+
+822
+00:32:17,833 --> 00:32:19,723
+feel are clean that we are able
+
+823
+00:32:19,733 --> 00:32:20,633
+to generate there
+
+824
+00:32:22,366 --> 00:32:24,856
+so you know in the future there's
+
+825
+00:32:24,866 --> 00:32:26,186
+a lot more we want to do
+
+826
+00:32:26,166 --> 00:32:29,106
+with more advanced kind of solutions and
+
+827
+00:32:29,100 --> 00:32:31,800
+more filters and how to to batch
+
+828
+00:32:31,800 --> 00:32:35,400
+data we're also looking at secure multiparty
+
+829
+00:32:35,400 --> 00:32:37,890
+computation and some of the interesting work
+
+830
+00:32:37,900 --> 00:32:40,540
+there with kind of you know how
+
+831
+00:32:40,533 --> 00:32:41,853
+to headaches expert
+
+832
+00:32:41,866 --> 00:32:45,076
+and what we're doing into larger datasets
+
+833
+00:32:45,566 --> 00:32:48,026
+and have solutions for a broader market
+
+834
+00:32:49,200 --> 00:32:51,960
+and again free coffee
+
+835
+00:32:54,200 --> 00:32:56,720
+so good so delicious so if you
+
+836
+00:32:56,700 --> 00:32:59,670
+come to our workshop tomorrow i think
+
+837
+00:32:59,666 --> 00:33:02,096
+you got free coffee sent to you
+
+838
+00:33:02,366 --> 00:33:05,366
+and then so good and
+
+839
+00:33:07,033 --> 00:33:08,443
+you know but this is also if
+
+840
+00:33:08,433 --> 00:33:09,663
+you please if you go there you'll
+
+841
+00:33:09,666 --> 00:33:10,776
+see you know it's a chance for
+
+842
+00:33:10,766 --> 00:33:12,386
+us to connect and we really wanted
+
+843
+00:33:12,433 --> 00:33:14,023
+to we have so much to learn
+
+844
+00:33:14,033 --> 00:33:17,633
+from you and from people that i
+
+845
+00:33:18,033 --> 00:33:19,983
+have already been doing measurement are already
+
+846
+00:33:20,000 --> 00:33:21,830
+implementing things like madame i've been through
+
+847
+00:33:21,833 --> 00:33:23,633
+this or who have other thoughts or
+
+848
+00:33:23,633 --> 00:33:25,613
+other ways that they've solve the issues
+
+849
+00:33:25,600 --> 00:33:26,380
+we have brought up
+
+850
+00:33:26,866 --> 00:33:28,876
+so we're really wanting to get that
+
+851
+00:33:28,933 --> 00:33:31,592
+that feedback for sure and and
+
+852
+00:33:32,866 --> 00:33:34,066
+hope my slight is a little messed
+
+853
+00:33:34,066 --> 00:33:35,926
+up but i'm you know and eight
+
+854
+00:33:35,933 --> 00:33:37,403
+fr eight nate freight
+
+855
+00:33:38,500 --> 00:33:41,680
+in many places on matrix nathan a
+
+856
+00:33:41,666 --> 00:33:43,946
+garden project at info and clean insights
+
+857
+00:33:43,966 --> 00:33:48,068
+dot org and benjamin earhart is tl
+
+858
+00:33:48,066 --> 00:33:50,856
+a he's often around in various rooms
+
+859
+00:33:51,366 --> 00:33:53,466
+and yeah so i think that's my
+
+860
+00:33:53,466 --> 00:33:58,656
+talk for today and and we have
+
+861
+00:33:58,666 --> 00:34:00,796
+have time for questions i think because
+
+862
+00:34:00,800 --> 00:34:02,420
+we did start a little bit late
+
+863
+00:34:03,366 --> 00:34:04,926
+but i also want to know
+
+864
+00:34:07,100 --> 00:34:08,629
+respect all of your time so i
+
+865
+00:34:08,633 --> 00:34:10,463
+love ending early and i have more
+
+866
+00:34:10,466 --> 00:34:12,386
+time tomorrow so if you have deep
+
+867
+00:34:12,366 --> 00:34:14,195
+questions and want to work on this
+
+868
+00:34:14,199 --> 00:34:16,841
+more with us tomorrow is a good
+
+869
+00:34:16,866 --> 00:34:17,496
+time as well
+
+870
+00:34:19,433 --> 00:34:20,543
+never said the coffee
+
+871
+00:34:32,766 --> 00:34:33,299
+i
+
+872
+00:34:37,433 --> 00:34:38,694
+yeah i think we're also i mean
+
+873
+00:34:39,033 --> 00:34:41,300
+in an area that while i'm waiting
+
+874
+00:34:41,300 --> 00:34:44,060
+for questions please ask away and we
+
+875
+00:34:44,066 --> 00:34:45,386
+do want to talk to we know
+
+876
+00:34:45,366 --> 00:34:46,806
+a lot of people use matomo with
+
+877
+00:34:46,800 --> 00:34:48,870
+web analytics but we are really interested
+
+878
+00:34:48,866 --> 00:34:50,306
+in people that are using them a
+
+879
+00:34:50,333 --> 00:34:53,752
+tomo as mobile st case and and
+
+880
+00:34:53,800 --> 00:34:54,594
+and how you've been
+
+881
+00:34:54,566 --> 00:34:56,546
+degraded into native apps would be great
+
+882
+00:34:56,566 --> 00:34:59,506
+to hear from you either now or
+
+883
+00:34:59,500 --> 00:35:01,150
+tomorrow or through the chat rooms
+
+884
+00:35:02,666 --> 00:35:04,616
+and to kind of talk about how
+
+885
+00:35:05,366 --> 00:35:06,626
+you we might you know you can
+
+886
+00:35:06,633 --> 00:35:09,453
+migrate to using clean insights the sdk
+
+887
+00:35:09,466 --> 00:35:10,486
+instead perhaps
+
+888
+00:35:11,733 --> 00:35:12,903
+or why you wouldn't
+
+889
+00:35:36,200 --> 00:35:38,839
+thanks beyond our hey appreciate that
+
+890
+00:35:40,100 --> 00:35:42,379
+goodness this easy softball i will say
+
+891
+00:35:42,366 --> 00:35:45,756
+and boy are hans just posted something
+
+892
+00:35:45,766 --> 00:35:48,196
+in our our feet about how android
+
+893
+00:35:48,200 --> 00:35:49,879
+apps can track users based on their
+
+894
+00:35:49,866 --> 00:35:54,606
+wallpapers and and it's you know there's
+
+895
+00:35:54,600 --> 00:35:56,430
+so many problems on mobile devices in
+
+896
+00:35:56,433 --> 00:35:57,483
+this area with
+
+897
+00:35:58,733 --> 00:36:01,883
+you know perma cookies are essentially fingerprinting
+
+898
+00:36:01,866 --> 00:36:03,066
+a device as a way to get
+
+899
+00:36:03,066 --> 00:36:06,786
+a perma cookie and i guess wallpapers
+
+900
+00:36:06,800 --> 00:36:09,200
+the latest so i i was
+
+901
+00:36:10,433 --> 00:36:13,218
+you know i often set custom wallpapers
+
+902
+00:36:13,233 --> 00:36:14,918
+so i'm you know that's a problem
+
+903
+00:36:14,933 --> 00:36:18,563
+i have and yeah okay well thank
+
+904
+00:36:18,566 --> 00:36:21,296
+you for all the kind words and
+
+905
+00:36:22,433 --> 00:36:24,923
+i will be attending other presentations today
+
+906
+00:36:24,933 --> 00:36:26,643
+as well so hope to hear all
+
+907
+00:36:26,666 --> 00:36:29,276
+of your other work there and seeing
+
+908
+00:36:29,300 --> 00:36:30,260
+i know there's a lot of other
+
+909
+00:36:30,266 --> 00:36:33,146
+relevant topics so but again please come
+
+910
+00:36:33,133 --> 00:36:34,693
+tomorrow morning if you want to talk
+
+911
+00:36:34,700 --> 00:36:37,669
+through your own implementation or sign up
+
+912
+00:36:37,666 --> 00:36:39,976
+at clean insights dot org slash beans
+
+913
+00:36:40,266 --> 00:36:42,576
+for a private consultation with caf
+
+914
+00:36:42,566 --> 00:36:45,446
+lee and stickers to get stickers there
+
+915
+00:36:45,466 --> 00:36:45,796
+we go
+
+916
+00:36:48,200 --> 00:36:49,490
+i think we're done then if there's
+
+917
+00:36:49,466 --> 00:36:50,306
+no questions
+
+918
+00:36:54,866 --> 00:36:57,506
+many thanks nita i think people are
+
+919
+00:36:57,500 --> 00:36:59,570
+a little bit shy for the moment
+
+920
+00:36:59,800 --> 00:37:02,500
+but it can also continue the conversation
+
+921
+00:37:02,500 --> 00:37:04,720
+in the chant sure i'll be there
+
+922
+00:37:04,733 --> 00:37:06,113
+and in the cafe as well
+
+923
+00:37:08,266 --> 00:37:09,796
+thank you thank you
+
+924
+00:37:25,466 --> 00:37:27,056
+you should i have my ukulele or
+
+925
+00:37:27,033 --> 00:37:28,203
+guitar here and i can play a
+
+926
+00:37:28,200 --> 00:37:29,669
+song but i can't find it at
+
+927
+00:37:29,666 --> 00:37:30,116
+the moment
+
+928
+00:37:33,033 --> 00:37:33,453
+hm
+
+929
+00:37:34,766 --> 00:37:38,486
+won't be found though no next time
+
+930
+00:37:39,900 --> 00:37:42,930
+know where it went children took it
+
+931
+00:37:47,133 --> 00:37:49,533
+i have been home from a date
+
+932
+00:37:49,833 --> 00:37:51,543
+the
+
+933
+00:37:58,200 --> 00:37:59,640
+alright this is an
+
+934
+00:38:01,433 --> 00:38:04,283
+this instrument is a i'm nathan by
+
+935
+00:38:04,266 --> 00:38:05,526
+the way if everyone's wanted this is
+
+936
+00:38:05,533 --> 00:38:08,203
+called a drum yen or tibetan banjo
+
+937
+00:38:09,133 --> 00:38:11,173
+and it has double strings
+
+938
+00:38:14,166 --> 00:38:16,086
+and the interesting thing is the bottom
+
+939
+00:38:16,100 --> 00:38:17,330
+string is kind of a drone
+
+940
+00:38:18,366 --> 00:38:19,086
+like a bass
+
+941
+00:38:21,333 --> 00:38:22,653
+and it's not tuned up because this
+
+942
+00:38:22,666 --> 00:38:25,126
+is more of an instrumental ornamental instrument
+
+943
+00:38:25,133 --> 00:38:27,203
+but yeah it's a really beautiful instrument
+
+944
+00:38:27,266 --> 00:38:28,946
+and er
+
+945
+00:38:38,666 --> 00:38:40,706
+this is just waiting music or figuring
+
+946
+00:38:40,700 --> 00:38:42,890
+out the technical difficulties anyway
+
+947
+00:38:43,666 --> 00:38:45,136
+it's a pretty fun instrument it's got
+
+948
+00:38:45,133 --> 00:38:47,353
+this cool like bass drone like like
+
+949
+00:38:47,366 --> 00:38:49,436
+i'm kind of tibetan mongolian you know
+
+950
+00:38:49,433 --> 00:38:51,351
+that throat singing sound that was a
+
+951
+00:38:51,333 --> 00:38:52,685
+real low base and then you play
+
+952
+00:38:52,700 --> 00:38:55,249
+the melody on the top strings and
+
+953
+00:38:55,266 --> 00:38:57,456
+yeah i brought this back from tibet
+
+954
+00:38:57,466 --> 00:38:59,416
+many years ago this beautiful skin there
+
+955
+00:38:59,900 --> 00:39:00,740
+okay we're going to go with the
+
+956
+00:39:00,733 --> 00:39:01,633
+pdf file
+

@@ -1,0 +1,4160 @@
+1
+00:00:03,830 --> 00:00:07,699
+the hello
+
+2
+00:00:09,830 --> 00:00:13,610
+so i started the recording so since
+
+3
+00:00:13,610 --> 00:00:15,440
+it's ten a m we're about to
+
+4
+00:00:15,440 --> 00:00:18,890
+start with a session today we have
+
+5
+00:00:19,009 --> 00:00:21,020
+a richard stark who is a
+
+6
+00:00:21,020 --> 00:00:24,380
+Matomo support member and Matomo analytics expert
+
+7
+00:00:24,860 --> 00:00:26,509
+in his talk Matomo tips and
+
+8
+00:00:26,540 --> 00:00:28,520
+tricks he will tell us more about
+
+9
+00:00:28,549 --> 00:00:30,619
+a collection of Matomo features which
+
+10
+00:00:30,619 --> 00:00:32,870
+you might not know about so let's
+
+11
+00:00:32,870 --> 00:00:34,250
+hear richard for more
+
+12
+00:00:36,860 --> 00:00:39,710
+good evening from new zealand thank you
+
+13
+00:00:39,710 --> 00:00:41,840
+everybody for joining this MatomoCamp
+
+14
+00:00:41,840 --> 00:00:45,140
+session for tips and tricks alright so
+
+15
+00:00:45,140 --> 00:00:46,910
+for those of you who have never
+
+16
+00:00:46,910 --> 00:00:49,610
+heard of me before hi i'm richard
+
+17
+00:00:50,000 --> 00:00:51,530
+i am part of the mid-term a
+
+18
+00:00:51,530 --> 00:00:53,510
+support team based here in new zealand
+
+19
+00:00:54,050 --> 00:00:55,410
+and for those of you who may
+
+20
+00:00:55,520 --> 00:00:55,640
+have
+
+21
+00:00:55,661 --> 00:00:57,020
+said to some emails over the past
+
+22
+00:00:57,020 --> 00:00:58,400
+couple of months maybe you are so
+
+23
+00:00:58,700 --> 00:01:00,470
+you might have seen my name pop
+
+24
+00:01:00,470 --> 00:01:02,360
+up i in your email inbox maybe
+
+25
+00:01:02,360 --> 00:01:04,700
+now and then so if this is
+
+26
+00:01:04,700 --> 00:01:05,900
+not the first time thank you so
+
+27
+00:01:05,900 --> 00:01:07,220
+much for joining us if it is
+
+28
+00:01:07,225 --> 00:01:09,830
+first time hearing about me it's great
+
+29
+00:01:09,830 --> 00:01:11,930
+to meet you will all rights as
+
+30
+00:01:11,930 --> 00:01:14,120
+you saw in the previous slide my
+
+31
+00:01:14,120 --> 00:01:15,530
+session for today's titled
+
+32
+00:01:15,920 --> 00:01:18,800
+mattel mode tips and tricks i've really
+
+33
+00:01:18,800 --> 00:01:21,140
+tried to include a bunch of different
+
+34
+00:01:21,140 --> 00:01:24,110
+tips and tricks for everybody kinda from
+
+35
+00:01:24,110 --> 00:01:27,020
+the everyday users of moto mo as
+
+36
+00:01:27,020 --> 00:01:28,640
+well as tips and tricks for those
+
+37
+00:01:28,640 --> 00:01:31,910
+responsible for managing the summer setup or
+
+38
+00:01:31,910 --> 00:01:35,390
+four meter mo administrators alright so i've
+
+39
+00:01:35,390 --> 00:01:35,960
+broken down
+
+40
+00:01:35,960 --> 00:01:38,330
+down the tips and tricks into four
+
+41
+00:01:38,360 --> 00:01:41,810
+different categories they are number one you
+
+42
+00:01:41,810 --> 00:01:42,560
+eye tips
+
+43
+00:01:43,970 --> 00:01:48,950
+number two performance tips number three useful
+
+44
+00:01:48,950 --> 00:01:51,830
+cla or command line interface commands and
+
+45
+00:01:51,830 --> 00:01:53,630
+how to figure out what options to
+
+46
+00:01:53,630 --> 00:01:57,740
+use and number for useful free plugins
+
+47
+00:01:57,740 --> 00:02:00,290
+that are not installed by default in
+
+48
+00:02:00,290 --> 00:02:00,830
+moto mo
+
+49
+00:02:01,910 --> 00:02:02,750
+and then at the end of the
+
+50
+00:02:02,750 --> 00:02:04,610
+session i will have a short q
+
+51
+00:02:04,610 --> 00:02:06,410
+and a session so please feel free
+
+52
+00:02:06,410 --> 00:02:08,120
+to pop any questions he might have
+
+53
+00:02:08,509 --> 00:02:09,979
+in a chat room during the session
+
+54
+00:02:09,979 --> 00:02:11,510
+we do have a dedicated chat room
+
+55
+00:02:11,510 --> 00:02:14,120
+available for this live session on chat
+
+56
+00:02:14,180 --> 00:02:16,970
+dot matua camp dot org i have
+
+57
+00:02:16,970 --> 00:02:18,920
+asked the moderator to grab a few
+
+58
+00:02:18,920 --> 00:02:20,750
+of the more interesting questions to answer
+
+59
+00:02:20,750 --> 00:02:21,621
+at the end just to make sure
+
+60
+00:02:21,621 --> 00:02:22,010
+that we don't
+
+61
+00:02:22,040 --> 00:02:24,470
+miss any of those bureaus are more
+
+62
+00:02:24,470 --> 00:02:25,880
+than welcome to be a questions at
+
+63
+00:02:25,880 --> 00:02:27,350
+the end if they do get missed
+
+64
+00:02:27,920 --> 00:02:29,600
+if we do have enough time we'll
+
+65
+00:02:29,600 --> 00:02:31,220
+also be opening up the floor to
+
+66
+00:02:31,220 --> 00:02:32,630
+any questions at that time that you
+
+67
+00:02:32,630 --> 00:02:35,690
+may have just randomly so let's get
+
+68
+00:02:35,690 --> 00:02:37,550
+started number one we've got some ewi
+
+69
+00:02:37,557 --> 00:02:39,590
+tips so the first tip of gut
+
+70
+00:02:39,590 --> 00:02:42,200
+fee today is called zenmate
+
+71
+00:02:42,200 --> 00:02:43,790
+note so for those of you who
+
+72
+00:02:43,790 --> 00:02:46,160
+have never used zen mode before what
+
+73
+00:02:46,160 --> 00:02:47,810
+it basically does is it provides you
+
+74
+00:02:47,810 --> 00:02:50,900
+with an uninterrupted view of your mature
+
+75
+00:02:50,900 --> 00:02:53,540
+reports or your mattel dashboard and it
+
+76
+00:02:53,540 --> 00:02:55,880
+can be really really useful for situations
+
+77
+00:02:55,880 --> 00:02:58,070
+where you want to have a dashboard
+
+78
+00:02:58,100 --> 00:03:01,160
+on a dedicated screen or a dedicated
+
+79
+00:03:01,160 --> 00:03:02,360
+vice if forced
+
+80
+00:03:02,360 --> 00:03:04,160
+showing reports for example she might have
+
+81
+00:03:04,160 --> 00:03:06,140
+a dedicated screen in your office for
+
+82
+00:03:06,140 --> 00:03:07,880
+looking at dashboards are pretty numbers and
+
+83
+00:03:07,880 --> 00:03:10,100
+charts that is the perfect thing to
+
+84
+00:03:10,100 --> 00:03:12,320
+use for this it can also be
+
+85
+00:03:12,320 --> 00:03:14,450
+quite useful if you wanted to embed
+
+86
+00:03:14,510 --> 00:03:16,640
+for example the entire matua you i
+
+87
+00:03:17,180 --> 00:03:21,020
+into an i frame so toggling zen
+
+88
+00:03:21,020 --> 00:03:22,520
+mode on and off can then add
+
+89
+00:03:22,520 --> 00:03:25,580
+allow you to quite easily navigate between
+
+90
+00:03:25,580 --> 00:03:27,290
+the different reports within the i frame
+
+91
+00:03:27,620 --> 00:03:28,910
+and then when you want to bring
+
+92
+00:03:28,910 --> 00:03:30,890
+that into so full screen mode you
+
+93
+00:03:30,890 --> 00:03:32,330
+can quickly toggle the zen mode and
+
+94
+00:03:32,330 --> 00:03:35,720
+you have that awesome uninterrupted view of
+
+95
+00:03:35,720 --> 00:03:38,690
+your dashboard or for your reports so
+
+96
+00:03:38,690 --> 00:03:40,580
+if you've never seen what zemo looks
+
+97
+00:03:40,580 --> 00:03:42,680
+like before and i'll go
+
+98
+00:03:42,680 --> 00:03:44,000
+to show a screen which hopefully a
+
+99
+00:03:44,000 --> 00:03:45,650
+lot of you are familiar with this
+
+100
+00:03:45,650 --> 00:03:48,260
+is what the standard you i in
+
+101
+00:03:48,260 --> 00:03:50,300
+matomo looks like i'm pretty sure this
+
+102
+00:03:50,300 --> 00:03:51,140
+is something that a lot of you
+
+103
+00:03:51,140 --> 00:03:53,420
+see probably on a daily basis maybe
+
+104
+00:03:53,420 --> 00:03:56,180
+less often for other people but what
+
+105
+00:03:56,180 --> 00:03:58,940
+zen mode basically does is this it
+
+106
+00:03:58,940 --> 00:04:00,380
+gets rid of the the top menu
+
+107
+00:04:00,380 --> 00:04:01,608
+bar gets rid of the menus on
+
+108
+00:04:01,608 --> 00:04:02,450
+the left hand side
+
+109
+00:04:02,870 --> 00:04:06,140
+and in the screenshot here i've kind
+
+110
+00:04:06,140 --> 00:04:09,050
+of added the screenshot including the ural
+
+111
+00:04:09,050 --> 00:04:10,605
+bar at the top but if he
+
+112
+00:04:10,605 --> 00:04:12,590
+did once have this nice big screen
+
+113
+00:04:12,860 --> 00:04:14,030
+you can go to full screen and
+
+114
+00:04:14,030 --> 00:04:16,190
+you can have that really awesome uninterrupted
+
+115
+00:04:16,190 --> 00:04:18,469
+view of your mature reports
+
+116
+00:04:19,910 --> 00:04:21,320
+see if you've never used it before
+
+117
+00:04:21,350 --> 00:04:23,120
+there's actually two different ways we can
+
+118
+00:04:23,120 --> 00:04:25,040
+get to zen mode how he can
+
+119
+00:04:25,040 --> 00:04:27,199
+toggle it on and off said the
+
+120
+00:04:27,199 --> 00:04:28,580
+one option of course is to just
+
+121
+00:04:28,580 --> 00:04:31,550
+click on a small little toggle button
+
+122
+00:04:31,550 --> 00:04:32,690
+at the top of the page over
+
+123
+00:04:32,690 --> 00:04:35,060
+here the other option which is my
+
+124
+00:04:35,060 --> 00:04:36,500
+preferred option is just to hit the
+
+125
+00:04:36,500 --> 00:04:38,360
+z key on your keyboard that allows
+
+126
+00:04:38,360 --> 00:04:39,800
+you to quickly switch between
+
+127
+00:04:39,800 --> 00:04:41,570
+when zen mode on and off
+
+128
+00:04:43,160 --> 00:04:44,450
+i to my next tip for you
+
+129
+00:04:44,476 --> 00:04:47,598
+today is the search function shortcut so
+
+130
+00:04:47,598 --> 00:04:50,210
+the first search function shortcut helps you
+
+131
+00:04:50,210 --> 00:04:52,640
+can quickly navigate within the midsummer you
+
+132
+00:04:52,640 --> 00:04:56,540
+i using your keyboard and keyboard arrows
+
+133
+00:04:56,660 --> 00:04:58,160
+so what it does is it allows
+
+134
+00:04:58,160 --> 00:05:00,770
+you to search for and switch between
+
+135
+00:05:00,770 --> 00:05:02,840
+websites and segments quite quickly
+
+136
+00:05:02,840 --> 00:05:04,820
+ie without having to touch your mouse
+
+137
+00:05:05,210 --> 00:05:07,370
+it also doubles as a search tool
+
+138
+00:05:07,670 --> 00:05:09,590
+to look for more information on the
+
+139
+00:05:09,590 --> 00:05:11,960
+matua dot org site for example you
+
+140
+00:05:11,960 --> 00:05:13,940
+can quickly search up for user guides
+
+141
+00:05:14,180 --> 00:05:15,470
+or maybe you have a question or
+
+142
+00:05:15,500 --> 00:05:17,660
+two that hopefully is answered in an
+
+143
+00:05:17,660 --> 00:05:20,000
+f a q so most of you
+
+144
+00:05:20,000 --> 00:05:21,440
+have probably seen the search bar up
+
+145
+00:05:21,440 --> 00:05:23,000
+in the top left hand side of
+
+146
+00:05:23,090 --> 00:05:25,670
+the matua ewi before but if you
+
+147
+00:05:25,670 --> 00:05:28,250
+wanted to quickly access this search feature
+
+148
+00:05:28,598 --> 00:05:29,660
+just hit the f key on your
+
+149
+00:05:29,660 --> 00:05:30,110
+keyboard
+
+150
+00:05:31,910 --> 00:05:33,380
+i the next you i tip for
+
+151
+00:05:33,380 --> 00:05:35,660
+today is themed so for those of
+
+152
+00:05:35,660 --> 00:05:37,370
+you who've who've kind of use matua
+
+153
+00:05:37,370 --> 00:05:39,470
+for a long time and have never
+
+154
+00:05:39,560 --> 00:05:42,170
+never really tried themes before it's really
+
+155
+00:05:42,170 --> 00:05:44,000
+something that you can use to kind
+
+156
+00:05:44,000 --> 00:05:48,038
+of customize the look the feel and
+
+157
+00:05:48,080 --> 00:05:50,270
+layout of the midsummer you i there
+
+158
+00:05:50,270 --> 00:05:51,320
+are actually several
+
+159
+00:05:51,320 --> 00:05:54,500
+all different themes available pretty much for
+
+160
+00:05:54,500 --> 00:05:56,840
+every midsummer you user in the world
+
+161
+00:05:57,620 --> 00:05:59,630
+that you can quickly install and activate
+
+162
+00:05:59,630 --> 00:06:01,550
+on your moto mo to get a
+
+163
+00:06:01,550 --> 00:06:03,920
+really customer that can field so some
+
+164
+00:06:03,920 --> 00:06:05,030
+of the default ones you can see
+
+165
+00:06:05,030 --> 00:06:06,770
+up in the screen now for example
+
+166
+00:06:06,770 --> 00:06:08,540
+we've got modern we've got the minimalist
+
+167
+00:06:08,540 --> 00:06:11,150
+themes we've got the dark themes but
+
+168
+00:06:11,150 --> 00:06:11,480
+then we have
+
+169
+00:06:11,600 --> 00:06:12,830
+have some of the themes that are
+
+170
+00:06:12,890 --> 00:06:16,310
+specific gst customizing fonts some that give
+
+171
+00:06:16,310 --> 00:06:18,770
+you really cool visualizations of us and
+
+172
+00:06:18,770 --> 00:06:20,120
+spock lines things like that
+
+173
+00:06:21,560 --> 00:06:23,930
+the really great thing about themes though
+
+174
+00:06:23,930 --> 00:06:26,480
+is that you're really not just limited
+
+175
+00:06:27,020 --> 00:06:29,060
+to these few themes that are available
+
+176
+00:06:29,300 --> 00:06:33,890
+themes are completely customizable you can customize
+
+177
+00:06:33,890 --> 00:06:37,070
+them to your heart's content and it
+
+178
+00:06:37,070 --> 00:06:39,020
+really requires very little skill if you
+
+179
+00:06:39,020 --> 00:06:41,420
+have a basic understanding of css
+
+180
+00:06:41,510 --> 00:06:42,740
+or maybe a little bit of less
+
+181
+00:06:43,100 --> 00:06:45,170
+you can customize as much as you
+
+182
+00:06:45,170 --> 00:06:47,420
+want and then upload those themes directly
+
+183
+00:06:47,420 --> 00:06:50,150
+to your midterm are you i say
+
+184
+00:06:50,150 --> 00:06:52,610
+if you've never installed or activated themes
+
+185
+00:06:52,610 --> 00:06:54,590
+before you probably wondering how do i
+
+186
+00:06:54,590 --> 00:06:57,080
+download and install themes now we see
+
+187
+00:06:57,080 --> 00:06:58,130
+we can have a look on the
+
+188
+00:06:58,130 --> 00:07:00,860
+website directly at themes dot moto mo
+
+189
+00:07:00,867 --> 00:07:01,550
+dot org
+
+190
+00:07:02,150 --> 00:07:04,130
+but you can also directly have a
+
+191
+00:07:04,130 --> 00:07:05,630
+look at the themes from within your
+
+192
+00:07:05,630 --> 00:07:08,060
+matua you are so to do that
+
+193
+00:07:08,060 --> 00:07:10,340
+we just go to the administration icon
+
+194
+00:07:10,430 --> 00:07:13,339
+we go to platform and marketplace and
+
+195
+00:07:13,340 --> 00:07:14,540
+we click on the drop down menu
+
+196
+00:07:14,570 --> 00:07:17,120
+and we select themes from here you
+
+197
+00:07:17,120 --> 00:07:18,470
+can select any of the themes that
+
+198
+00:07:18,470 --> 00:07:20,780
+are available to download but you'll also
+
+199
+00:07:20,780 --> 00:07:21,731
+have a nice little button
+
+200
+00:07:21,830 --> 00:07:23,480
+but the top of the screen that
+
+201
+00:07:23,480 --> 00:07:26,660
+lets you upload your custom themes in
+
+202
+00:07:26,660 --> 00:07:28,490
+a zip file format that you can
+
+203
+00:07:28,490 --> 00:07:31,100
+then install and activate on your midterm
+
+204
+00:07:31,100 --> 00:07:31,760
+or instance
+
+205
+00:07:33,740 --> 00:07:37,010
+alright the next section is performance tips
+
+206
+00:07:37,040 --> 00:07:41,030
+so one of the biggest performance improvements
+
+207
+00:07:41,030 --> 00:07:42,890
+that you can make to your maternal
+
+208
+00:07:42,920 --> 00:07:47,000
+instance is to disable browser archiving and
+
+209
+00:07:47,000 --> 00:07:50,000
+then set up a crontab for archiving
+
+210
+00:07:50,670 --> 00:07:53,000
+you might be wondering why do we
+
+211
+00:07:53,000 --> 00:07:56,240
+we recommend disabling browser archiving now for
+
+212
+00:07:56,240 --> 00:07:58,280
+the majority of users out there that
+
+213
+00:07:58,280 --> 00:08:01,010
+have very small websites or websites that
+
+214
+00:08:01,010 --> 00:08:02,510
+might have only a few hundred visits
+
+215
+00:08:02,510 --> 00:08:04,640
+a day it's definitely not worth the
+
+216
+00:08:04,640 --> 00:08:07,310
+effort going ahead and setting up those
+
+217
+00:08:07,610 --> 00:08:11,120
+cron tabs and disabling browser archiving but
+
+218
+00:08:11,120 --> 00:08:12,290
+for those of you that are tracking
+
+219
+00:08:12,290 --> 00:08:13,160
+a little bit more
+
+220
+00:08:13,160 --> 00:08:14,990
+or you know maybe a few thousand
+
+221
+00:08:14,990 --> 00:08:16,850
+hits a day or maybe tens of
+
+222
+00:08:16,850 --> 00:08:18,770
+thousands of hits a day this is
+
+223
+00:08:18,770 --> 00:08:20,684
+probably one of the biggest improvements ie
+
+224
+00:08:20,684 --> 00:08:23,000
+you can make to the performance of
+
+225
+00:08:23,000 --> 00:08:25,100
+moto mo that you can see very
+
+226
+00:08:25,100 --> 00:08:28,940
+quick and tangible results so when we
+
+227
+00:08:28,940 --> 00:08:33,079
+have browser archiving enabled almost every time
+
+228
+00:08:33,079 --> 00:08:33,314
+a
+
+229
+00:08:33,319 --> 00:08:35,839
+user views a report matua needs to
+
+230
+00:08:35,839 --> 00:08:39,140
+process the the report that they're trying
+
+231
+00:08:39,140 --> 00:08:40,489
+to request their needs it needs to
+
+232
+00:08:40,489 --> 00:08:42,679
+go fetch all that raw data nisi
+
+233
+00:08:42,679 --> 00:08:43,939
+crunched the numbers and he should put
+
+234
+00:08:43,939 --> 00:08:46,099
+everything into pretty charts and numbers and
+
+235
+00:08:46,099 --> 00:08:49,339
+lines and presented onto the screen and
+
+236
+00:08:49,430 --> 00:08:51,739
+it does this on the fly or
+
+237
+00:08:51,739 --> 00:08:53,180
+basically in real time
+
+238
+00:08:53,630 --> 00:08:55,160
+so you can imagine if you're loading
+
+239
+00:08:55,160 --> 00:08:56,780
+a report that has a load of
+
+240
+00:08:56,780 --> 00:08:59,689
+data or reports that cover a long
+
+241
+00:08:59,689 --> 00:09:02,630
+period of time this can sometimes really
+
+242
+00:09:02,630 --> 00:09:05,660
+slow down and your experience in potomac
+
+243
+00:09:05,689 --> 00:09:07,550
+can sometimes could take quite a long
+
+244
+00:09:07,550 --> 00:09:08,930
+time for those reports to load
+
+245
+00:09:10,189 --> 00:09:12,770
+this sort of effect can really be
+
+246
+00:09:12,770 --> 00:09:16,069
+compounded when users are not aware of
+
+247
+00:09:16,069 --> 00:09:18,140
+this and it you know they might
+
+248
+00:09:18,140 --> 00:09:20,540
+be going around jumping through a bunch
+
+249
+00:09:20,540 --> 00:09:22,069
+of different reports wondering why the heck
+
+250
+00:09:22,069 --> 00:09:24,170
+is this thing taking so long what
+
+251
+00:09:24,170 --> 00:09:26,270
+i mean thereby compounding is if a
+
+252
+00:09:26,270 --> 00:09:28,160
+user clicks a one report it takes
+
+253
+00:09:28,160 --> 00:09:29,689
+three or four seconds to load and
+
+254
+00:09:29,689 --> 00:09:30,199
+they don't see
+
+255
+00:09:30,199 --> 00:09:31,670
+anything on the screen they decide hey
+
+256
+00:09:31,670 --> 00:09:32,390
+i'm going to have a look at
+
+257
+00:09:32,390 --> 00:09:34,670
+this report that report does the same
+
+258
+00:09:34,969 --> 00:09:36,319
+they can go through five or six
+
+259
+00:09:36,319 --> 00:09:38,000
+or seven different reports in a matter
+
+260
+00:09:38,000 --> 00:09:40,130
+of seconds and every single one of
+
+261
+00:09:40,130 --> 00:09:42,229
+those reports once you start loading them
+
+262
+00:09:42,500 --> 00:09:45,079
+in the user interface those requests have
+
+263
+00:09:45,079 --> 00:09:46,699
+already been sent them to my server
+
+264
+00:09:46,699 --> 00:09:48,140
+is working on them in the background
+
+265
+00:09:48,739 --> 00:09:50,359
+to try and process all that data
+
+266
+00:09:51,229 --> 00:09:52,910
+now the good thing is is when
+
+267
+00:09:52,910 --> 00:09:54,589
+they go back to those other reports
+
+268
+00:09:54,589 --> 00:09:56,599
+that they've already requested the data for
+
+269
+00:09:56,900 --> 00:09:59,420
+it should load relatively quickly the problem
+
+270
+00:09:59,420 --> 00:10:00,530
+is if they come back and do
+
+271
+00:10:00,530 --> 00:10:02,209
+that again in one or two hours
+
+272
+00:10:02,209 --> 00:10:04,339
+later it's going to need to do
+
+273
+00:10:04,339 --> 00:10:07,369
+that whole process over again so by
+
+274
+00:10:07,369 --> 00:10:10,489
+pre processing all of those reports using
+
+275
+00:10:10,935 --> 00:10:12,854
+we call a crontab for the core
+
+276
+00:10:12,854 --> 00:10:16,395
+archive command and setting up a schedule
+
+277
+00:10:17,025 --> 00:10:19,724
+and disabling that browser archiving we can
+
+278
+00:10:19,724 --> 00:10:21,555
+be one hundred per cent certain that
+
+279
+00:10:21,555 --> 00:10:23,685
+all of those reports can load really
+
+280
+00:10:23,685 --> 00:10:26,204
+really quickly and your matua users can
+
+281
+00:10:26,204 --> 00:10:29,295
+have a great experience so this setting
+
+282
+00:10:29,295 --> 00:10:31,094
+can actually be changed directly
+
+283
+00:10:31,094 --> 00:10:33,104
+within the general settings of your maternal
+
+284
+00:10:33,135 --> 00:10:36,045
+instance but it can also be set
+
+285
+00:10:36,045 --> 00:10:39,015
+up by setting the specific config setting
+
+286
+00:10:39,375 --> 00:10:41,594
+in your config that any to ph
+
+287
+00:10:41,594 --> 00:10:43,125
+pi but of course if you're not
+
+288
+00:10:43,125 --> 00:10:45,375
+familiar with messing around with the files
+
+289
+00:10:45,375 --> 00:10:48,074
+directly on the potomac server disabling this
+
+290
+00:10:48,104 --> 00:10:50,864
+within the u i is just perfect
+
+291
+00:10:51,915 --> 00:10:54,314
+alright it is still important however to
+
+292
+00:10:54,314 --> 00:10:56,175
+understand that there are going to be
+
+293
+00:10:56,175 --> 00:10:59,594
+some cases where mahama will still need
+
+294
+00:10:59,625 --> 00:11:02,864
+to to kind of process reports when
+
+295
+00:11:02,864 --> 00:11:05,145
+they're requested from the browser this is
+
+296
+00:11:05,145 --> 00:11:08,324
+specifically important when you're requesting for example
+
+297
+00:11:08,744 --> 00:11:10,694
+a date range report because a date
+
+298
+00:11:10,694 --> 00:11:11,415
+range report
+
+299
+00:11:11,535 --> 00:11:14,295
+cannot be pre processed and the other
+
+300
+00:11:14,295 --> 00:11:15,944
+thing as well if you have users
+
+301
+00:11:15,944 --> 00:11:18,194
+who have created segments in those segments
+
+302
+00:11:18,194 --> 00:11:22,155
+have been configured to be processed from
+
+303
+00:11:22,604 --> 00:11:24,255
+in real time or on the fly
+
+304
+00:11:24,645 --> 00:11:26,984
+those segments will also be triggering some
+
+305
+00:11:26,984 --> 00:11:31,545
+browser archiving requests alright the next
+
+306
+00:11:31,694 --> 00:11:33,555
+that we got for you has to
+
+307
+00:11:33,555 --> 00:11:35,505
+do with segments so what we talk
+
+308
+00:11:35,505 --> 00:11:37,125
+about with segments where it comes to
+
+309
+00:11:37,125 --> 00:11:40,064
+performance is we're talking about how far
+
+310
+00:11:40,064 --> 00:11:44,175
+back segments are processed by default on
+
+311
+00:11:44,175 --> 00:11:46,515
+your meter the server so when you
+
+312
+00:11:46,515 --> 00:11:48,045
+have a segment in the terminal you're
+
+313
+00:11:48,045 --> 00:11:50,385
+creating a segment or editing a segment
+
+314
+00:11:50,805 --> 00:11:51,689
+the default
+
+315
+00:11:52,005 --> 00:11:53,655
+the tumor is going to process that
+
+316
+00:11:53,655 --> 00:11:56,204
+root segment for is what we call
+
+317
+00:11:56,295 --> 00:11:59,025
+the beginning of time and that basically
+
+318
+00:11:59,025 --> 00:12:00,765
+means that the tumor is going to
+
+319
+00:12:00,765 --> 00:12:03,645
+process that segment from the very first
+
+320
+00:12:03,645 --> 00:12:06,734
+day that you have raw data now
+
+321
+00:12:06,734 --> 00:12:09,464
+for a lot of people this can
+
+322
+00:12:09,464 --> 00:12:11,895
+mean that you know there have
+
+323
+00:12:11,895 --> 00:12:13,935
+owing to process segment data going back
+
+324
+00:12:13,935 --> 00:12:15,584
+two or three or even more years
+
+325
+00:12:15,584 --> 00:12:17,234
+five or six years into the past
+
+326
+00:12:17,834 --> 00:12:20,084
+and so this can have a really
+
+327
+00:12:20,084 --> 00:12:22,935
+big impact on performance especially for those
+
+328
+00:12:22,935 --> 00:12:25,094
+people who have a lot of historical
+
+329
+00:12:25,094 --> 00:12:26,444
+or a lot of raw data
+
+330
+00:12:27,555 --> 00:12:28,005
+so
+
+331
+00:12:29,444 --> 00:12:31,755
+by changing this to a different times
+
+332
+00:12:31,814 --> 00:12:33,555
+frame for example you can change it
+
+333
+00:12:33,555 --> 00:12:36,015
+to automatically process on a back thirty
+
+334
+00:12:36,015 --> 00:12:37,515
+days or you can do it for
+
+335
+00:12:37,515 --> 00:12:40,035
+sixty days or three months or six
+
+336
+00:12:40,035 --> 00:12:41,864
+months or even a year you can
+
+337
+00:12:41,864 --> 00:12:44,714
+really customize and prevent your thomas server
+
+338
+00:12:44,954 --> 00:12:47,324
+from working too much and reports that
+
+339
+00:12:47,324 --> 00:12:49,035
+you might not need to use
+
+340
+00:12:50,474 --> 00:12:53,655
+so to change this setting we basically
+
+341
+00:12:53,655 --> 00:12:55,484
+need to add the following to our
+
+342
+00:12:55,484 --> 00:12:58,094
+config file now if you're wondering how
+
+343
+00:12:58,094 --> 00:12:59,145
+the heck are you going to remember
+
+344
+00:12:59,145 --> 00:13:01,334
+this all of this information is available
+
+345
+00:13:01,334 --> 00:13:02,324
+you can have a look in your
+
+346
+00:13:02,324 --> 00:13:03,885
+config file you can have a search
+
+347
+00:13:03,885 --> 00:13:05,984
+for it on the tumor a website
+
+348
+00:13:05,984 --> 00:13:07,604
+you can hopefully find some more information
+
+349
+00:13:07,604 --> 00:13:09,494
+about how to set this config file
+
+350
+00:13:09,494 --> 00:13:11,954
+well otherwise if you wanted to look
+
+351
+00:13:11,954 --> 00:13:13,484
+for this specific one you could maybe
+
+352
+00:13:13,484 --> 00:13:14,834
+take a screenshot have a look at
+
+353
+00:13:14,834 --> 00:13:16,935
+this recording afterwards and then you can
+
+354
+00:13:16,935 --> 00:13:19,125
+implement this into your config file settings
+
+355
+00:13:19,425 --> 00:13:20,925
+and of course like you can see
+
+356
+00:13:20,925 --> 00:13:23,025
+in the slide it's on the screen
+
+357
+00:13:23,385 --> 00:13:25,125
+there's a few different ways we can
+
+358
+00:13:25,155 --> 00:13:26,805
+set this up for example the one
+
+359
+00:13:26,805 --> 00:13:28,905
+at the top is the segment creation
+
+360
+00:13:28,905 --> 00:13:29,655
+time so
+
+361
+00:13:29,685 --> 00:13:32,895
+basically that means that no historical data
+
+362
+00:13:33,135 --> 00:13:34,755
+for that segment is going to be
+
+363
+00:13:34,755 --> 00:13:37,484
+processed from before the date was created
+
+364
+00:13:38,265 --> 00:13:39,285
+so for a lot of people that
+
+365
+00:13:39,285 --> 00:13:40,875
+are tracking may be tens of thousands
+
+366
+00:13:40,875 --> 00:13:43,094
+or even millions of hits every single
+
+367
+00:13:43,094 --> 00:13:45,525
+month this might be the most beneficial
+
+368
+00:13:45,525 --> 00:13:47,685
+one you can also have a smaller
+
+369
+00:13:47,685 --> 00:13:49,814
+time frame for the example
+
+370
+00:13:49,814 --> 00:13:51,104
+the one at the bottom is the
+
+371
+00:13:51,104 --> 00:13:53,744
+last ninety three so that's roughly about
+
+372
+00:13:53,744 --> 00:13:55,305
+three months historical data
+
+373
+00:13:56,564 --> 00:13:58,214
+so now that i've told you how
+
+374
+00:13:58,214 --> 00:14:01,425
+to disable browser archiving and that to
+
+375
+00:14:01,425 --> 00:14:04,155
+change how far back potomac goes back
+
+376
+00:14:04,395 --> 00:14:06,854
+to process all of the segment data
+
+377
+00:14:07,125 --> 00:14:10,545
+you're probably wondering how do i get
+
+378
+00:14:10,545 --> 00:14:13,785
+historical data when i've configured this setting
+
+379
+00:14:14,114 --> 00:14:16,334
+in the tema and that brings us
+
+380
+00:14:16,334 --> 00:14:16,694
+really nice
+
+381
+00:14:16,694 --> 00:14:18,435
+nicely into our next segment and that
+
+382
+00:14:18,435 --> 00:14:21,525
+is useful see ally commands now cla
+
+383
+00:14:21,525 --> 00:14:24,104
+is a acronym for a command line
+
+384
+00:14:24,104 --> 00:14:26,655
+interface and that might sound really scary
+
+385
+00:14:27,015 --> 00:14:28,814
+obama tomo when you install it onto
+
+386
+00:14:28,814 --> 00:14:31,425
+your server has a really cool what
+
+387
+00:14:31,425 --> 00:14:33,255
+we call the console script and the
+
+388
+00:14:33,255 --> 00:14:36,045
+console script allows you to run some
+
+389
+00:14:36,045 --> 00:14:36,854
+really specific
+
+390
+00:14:36,854 --> 00:14:40,005
+quick commands directly on your thomas server
+
+391
+00:14:40,244 --> 00:14:41,954
+that allow you to do things or
+
+392
+00:14:41,954 --> 00:14:43,545
+accomplish tasks that you want to do
+
+393
+00:14:44,564 --> 00:14:45,915
+so we've got a couple of different
+
+394
+00:14:46,244 --> 00:14:47,535
+seal ai commands that we're going to
+
+395
+00:14:47,564 --> 00:14:49,454
+talk about today we're going to talk
+
+396
+00:14:49,454 --> 00:14:51,944
+about how to invalidate specific date ranges
+
+397
+00:14:52,244 --> 00:14:55,155
+so this is very useful for archiving
+
+398
+00:14:55,155 --> 00:14:57,015
+specific segments further back
+
+399
+00:14:57,015 --> 00:14:59,444
+then what we've just recently changed in
+
+400
+00:14:59,444 --> 00:15:02,055
+our settings we're also going to have
+
+401
+00:15:02,055 --> 00:15:05,625
+a look at invalidating specific segments and
+
+402
+00:15:05,625 --> 00:15:07,064
+then number three which is something that
+
+403
+00:15:07,064 --> 00:15:08,444
+you might not have been aware of
+
+404
+00:15:08,864 --> 00:15:13,185
+his invalidating specific plugins so if you
+
+405
+00:15:13,185 --> 00:15:15,494
+don't know matua four actually ships with
+
+406
+00:15:15,494 --> 00:15:17,161
+a new feature that
+
+407
+00:15:17,175 --> 00:15:19,635
+allows plugins that support that new feature
+
+408
+00:15:20,025 --> 00:15:23,834
+to automatically archive reports going back a
+
+409
+00:15:23,834 --> 00:15:25,454
+certain number of months or for example
+
+410
+00:15:25,454 --> 00:15:27,584
+if you've just installed a brand new
+
+411
+00:15:27,584 --> 00:15:29,385
+plugin or you've just purchased a premium
+
+412
+00:15:29,385 --> 00:15:31,094
+plugin and you go ahead and install
+
+413
+00:15:31,094 --> 00:15:33,824
+that onto your midterm a server the
+
+414
+00:15:33,824 --> 00:15:35,175
+great thing is that moto mo is
+
+415
+00:15:35,175 --> 00:15:37,334
+going to go back and on
+
+416
+00:15:37,334 --> 00:15:40,484
+automatically archive the last six months of
+
+417
+00:15:40,484 --> 00:15:43,305
+data for that new plugin so that
+
+418
+00:15:43,305 --> 00:15:46,125
+means that you have instant access to
+
+419
+00:15:46,214 --> 00:15:49,814
+a great wealth of historical report data
+
+420
+00:15:49,964 --> 00:15:51,045
+for that new plugin
+
+421
+00:15:52,454 --> 00:15:54,525
+however sometimes it's still going to be
+
+422
+00:15:54,525 --> 00:15:58,125
+necessary to archive reports going further back
+
+423
+00:15:58,395 --> 00:15:59,747
+than what we've just set up in
+
+424
+00:15:59,747 --> 00:16:02,354
+our settings this is especially useful when
+
+425
+00:16:02,354 --> 00:16:03,584
+you just install the plugin you want
+
+426
+00:16:03,584 --> 00:16:05,204
+to have a look at we know
+
+427
+00:16:05,204 --> 00:16:07,484
+what was the data for this plugin
+
+428
+00:16:07,515 --> 00:16:09,255
+a year ago or two years ago
+
+429
+00:16:09,255 --> 00:16:10,994
+or even further back than that as
+
+430
+00:16:10,994 --> 00:16:12,375
+far back as what you have
+
+431
+00:16:12,375 --> 00:16:13,334
+of raw data
+
+432
+00:16:14,564 --> 00:16:18,165
+so that is when the core invalidate
+
+433
+00:16:18,165 --> 00:16:20,834
+report data console command it comes in
+
+434
+00:16:20,864 --> 00:16:22,334
+so as you can see an example
+
+435
+00:16:22,334 --> 00:16:24,614
+on the screen in this example we're
+
+436
+00:16:24,614 --> 00:16:28,214
+running the invalidate report data console command
+
+437
+00:16:28,305 --> 00:16:31,454
+so this command always requires a dates
+
+438
+00:16:31,484 --> 00:16:33,675
+option as you can see in the
+
+439
+00:16:33,675 --> 00:16:34,484
+example
+
+440
+00:16:34,755 --> 00:16:36,675
+we have guts for example from the
+
+441
+00:16:36,675 --> 00:16:38,925
+first of june up until today so
+
+442
+00:16:38,925 --> 00:16:41,385
+that will basically invalidate all repeat were
+
+443
+00:16:41,415 --> 00:16:44,505
+all report data for your entire matua
+
+444
+00:16:44,505 --> 00:16:46,454
+instance going from the first of june
+
+445
+00:16:46,724 --> 00:16:49,305
+till today you can also use other
+
+446
+00:16:49,305 --> 00:16:51,824
+types of date format such as the
+
+447
+00:16:51,824 --> 00:16:54,645
+last thirty or last seven or last
+
+448
+00:16:54,645 --> 00:16:54,854
+night
+
+449
+00:16:54,854 --> 00:16:56,385
+ninety you know things like that to
+
+450
+00:16:56,385 --> 00:16:58,035
+kind of just get a general date
+
+451
+00:16:58,035 --> 00:16:59,145
+range invalidated
+
+452
+00:17:00,824 --> 00:17:02,354
+and so some of you if you're
+
+453
+00:17:02,354 --> 00:17:04,605
+having a look at this might be
+
+454
+00:17:05,055 --> 00:17:06,855
+remembering that we do have what we
+
+455
+00:17:06,855 --> 00:17:10,484
+call the invalidate reports plugin that also
+
+456
+00:17:10,484 --> 00:17:11,865
+allows you as you can see in
+
+457
+00:17:11,865 --> 00:17:15,675
+this example to invalidate segments the biggest
+
+458
+00:17:15,675 --> 00:17:18,194
+difference of course between the plugin and
+
+459
+00:17:18,194 --> 00:17:19,994
+the console command is that the plugin
+
+460
+00:17:20,325 --> 00:17:20,534
+is
+
+461
+00:17:20,565 --> 00:17:22,784
+kind of like what we would consider
+
+462
+00:17:22,784 --> 00:17:25,724
+a sledgehammer when you're trying to invalidate
+
+463
+00:17:25,724 --> 00:17:29,625
+report data it it doesn't necessarily differentiate
+
+464
+00:17:29,625 --> 00:17:32,774
+between different specific dates or specific plugins
+
+465
+00:17:33,075 --> 00:17:34,485
+it's kind of an all or nothing
+
+466
+00:17:34,485 --> 00:17:37,065
+deal and that's where it really comes
+
+467
+00:17:37,065 --> 00:17:39,554
+in handy knowing how to work with
+
+468
+00:17:39,554 --> 00:17:40,695
+the cla command
+
+469
+00:17:40,695 --> 00:17:42,435
+ns and you can combine a lot
+
+470
+00:17:42,435 --> 00:17:44,804
+of these different options together to get
+
+471
+00:17:44,804 --> 00:17:48,075
+some really specific date ranges or specific
+
+472
+00:17:48,075 --> 00:17:50,804
+report data that you're looking for so
+
+473
+00:17:50,804 --> 00:17:52,605
+as you can see in the example
+
+474
+00:17:52,605 --> 00:17:55,155
+over here we've just put the plain
+
+475
+00:17:55,155 --> 00:17:58,995
+text name of our segment and in
+
+476
+00:17:58,995 --> 00:18:00,735
+the next one you'll see that we
+
+477
+00:18:00,735 --> 00:18:00,855
+can
+
+478
+00:18:00,885 --> 00:18:04,845
+now also invalidate some very specific plugins
+
+479
+00:18:05,175 --> 00:18:07,095
+so this is really where the seal
+
+480
+00:18:07,095 --> 00:18:09,975
+ai commands are a lot more useful
+
+481
+00:18:09,975 --> 00:18:13,725
+than just invalidating report data in the
+
+482
+00:18:13,725 --> 00:18:16,245
+us so when we combine all of
+
+483
+00:18:16,245 --> 00:18:18,465
+these together we get the ability to
+
+484
+00:18:18,465 --> 00:18:20,925
+not only invalidate reports for a specific
+
+485
+00:18:20,925 --> 00:18:21,014
+day
+
+486
+00:18:21,014 --> 00:18:23,715
+date range and for a specific segment
+
+487
+00:18:24,014 --> 00:18:26,715
+but also for a very specific plugin
+
+488
+00:18:29,235 --> 00:18:31,973
+so this is really really useful and
+
+489
+00:18:31,973 --> 00:18:33,885
+that once you've done all this of
+
+490
+00:18:33,885 --> 00:18:36,315
+course it then becomes necessary to re
+
+491
+00:18:36,315 --> 00:18:38,534
+process that data and that brings us
+
+492
+00:18:38,534 --> 00:18:39,945
+to the very last step in this
+
+493
+00:18:39,945 --> 00:18:43,635
+specific section and that is reprocessing the
+
+494
+00:18:43,635 --> 00:18:46,754
+report data that we've just invalidated using
+
+495
+00:18:46,754 --> 00:18:47,895
+the force
+
+496
+00:18:47,955 --> 00:18:51,225
+date range option so in this example
+
+497
+00:18:51,764 --> 00:18:53,115
+we're looking at the last one that
+
+498
+00:18:53,115 --> 00:18:55,965
+we use the core invalidate report data
+
+499
+00:18:56,294 --> 00:18:57,855
+where we set the dates as the
+
+500
+00:18:57,855 --> 00:18:59,745
+first of june to the last of
+
+501
+00:18:59,745 --> 00:19:01,815
+june and when we run this last
+
+502
+00:19:01,815 --> 00:19:04,754
+core archive command with the force date
+
+503
+00:19:04,754 --> 00:19:07,935
+range similar to or exactly matching where
+
+504
+00:19:07,935 --> 00:19:08,043
+we
+
+505
+00:19:08,085 --> 00:19:11,205
+just invalidated metamora is going to only
+
+506
+00:19:11,205 --> 00:19:14,085
+go ahead and process that specific date
+
+507
+00:19:14,085 --> 00:19:16,754
+range for that specific plugin
+
+508
+00:19:17,925 --> 00:19:21,705
+so some plugins do actually have their
+
+509
+00:19:21,705 --> 00:19:25,095
+own console commands that can be used
+
+510
+00:19:25,095 --> 00:19:26,685
+for archiving which we'll talk about in
+
+511
+00:19:26,685 --> 00:19:28,754
+a minute but what a load of
+
+512
+00:19:28,754 --> 00:19:30,105
+you may be wondering is like ooh
+
+513
+00:19:30,128 --> 00:19:31,425
+do i have to take a screenshot
+
+514
+00:19:31,425 --> 00:19:32,804
+of this page do i have to
+
+515
+00:19:33,165 --> 00:19:35,145
+memorize all of this information that's in
+
+516
+00:19:35,145 --> 00:19:36,225
+front of me right now so that
+
+517
+00:19:36,225 --> 00:19:37,695
+i know how to use it and
+
+518
+00:19:37,695 --> 00:19:38,024
+the great
+
+519
+00:19:38,054 --> 00:19:40,304
+news is no you don't have to
+
+520
+00:19:40,304 --> 00:19:43,245
+memorize or take a screenshot of any
+
+521
+00:19:43,245 --> 00:19:44,955
+of this data because all of this
+
+522
+00:19:44,985 --> 00:19:47,565
+is directly available when you run the
+
+523
+00:19:47,565 --> 00:19:50,355
+console commands directly on your potomac server
+
+524
+00:19:50,804 --> 00:19:52,695
+and we can find this information by
+
+525
+00:19:52,695 --> 00:19:55,965
+using the dash dash help option that
+
+526
+00:19:55,965 --> 00:19:57,524
+the dash dash help option
+
+527
+00:19:58,245 --> 00:20:00,524
+when you're working the cla commands is
+
+528
+00:20:00,524 --> 00:20:02,985
+your absolute best friend if you've ever
+
+529
+00:20:02,985 --> 00:20:05,534
+forgotten what the specific command is or
+
+530
+00:20:05,774 --> 00:20:07,995
+what type of input you need to
+
+531
+00:20:07,995 --> 00:20:10,274
+give for a specific option the dash
+
+532
+00:20:10,274 --> 00:20:11,804
+dash help option is going to show
+
+533
+00:20:11,804 --> 00:20:14,145
+that so here for example in this
+
+534
+00:20:14,145 --> 00:20:17,534
+slide we've got with the help output
+
+535
+00:20:17,534 --> 00:20:18,375
+for the core
+
+536
+00:20:18,870 --> 00:20:20,702
+archive command so as you can see
+
+537
+00:20:20,702 --> 00:20:22,800
+in the screen hopefully the text isn't
+
+538
+00:20:22,800 --> 00:20:24,480
+too small we can see all of
+
+539
+00:20:24,480 --> 00:20:26,940
+the potential options that we could add
+
+540
+00:20:26,940 --> 00:20:29,370
+to this kind of really narrow down
+
+541
+00:20:29,730 --> 00:20:32,159
+and get some very specific commands that
+
+542
+00:20:32,159 --> 00:20:34,020
+we can use for our server
+
+543
+00:20:35,580 --> 00:20:36,870
+so as i mentioned earlier we do
+
+544
+00:20:36,870 --> 00:20:38,520
+have some plugins that might have some
+
+545
+00:20:38,520 --> 00:20:41,490
+very specific commands a good example of
+
+546
+00:20:41,520 --> 00:20:44,340
+a plugin that has it's own archiving
+
+547
+00:20:44,340 --> 00:20:47,429
+command is the customer reports plugin so
+
+548
+00:20:47,429 --> 00:20:49,889
+where the customer ports a console command
+
+549
+00:20:50,190 --> 00:20:52,080
+it allows you to actually go in
+
+550
+00:20:52,080 --> 00:20:55,290
+and specifically just archive the customer
+
+551
+00:20:55,290 --> 00:20:57,870
+ports for a specific date range without
+
+552
+00:20:57,870 --> 00:21:00,510
+needing to first invalidate that data
+
+553
+00:21:01,800 --> 00:21:02,909
+now a lot of you might be
+
+554
+00:21:02,909 --> 00:21:04,530
+wondering you know do i need to
+
+555
+00:21:04,530 --> 00:21:05,520
+have a look at that do i
+
+556
+00:21:05,520 --> 00:21:06,629
+need to go look at a guide
+
+557
+00:21:06,629 --> 00:21:09,120
+for that sort of information and here's
+
+558
+00:21:09,120 --> 00:21:10,740
+the next really great tip is that
+
+559
+00:21:10,740 --> 00:21:12,570
+no you really don't have to know
+
+560
+00:21:12,570 --> 00:21:15,570
+that information beforehand the console command if
+
+561
+00:21:15,570 --> 00:21:18,300
+you just type in console on an
+
+562
+00:21:18,300 --> 00:21:21,179
+ssh or in a terminal window in
+
+563
+00:21:21,179 --> 00:21:21,690
+the midterm
+
+564
+00:21:21,750 --> 00:21:24,149
+root directory and you add the dash
+
+565
+00:21:24,149 --> 00:21:26,550
+dash list option it's going to give
+
+566
+00:21:26,550 --> 00:21:28,649
+you a full list of all of
+
+567
+00:21:28,649 --> 00:21:30,810
+the console commands that you can run
+
+568
+00:21:30,840 --> 00:21:33,990
+directly on your matua server and now
+
+569
+00:21:33,990 --> 00:21:35,460
+that you've got this great list of
+
+570
+00:21:35,460 --> 00:21:37,980
+console commands you can then run those
+
+571
+00:21:37,980 --> 00:21:40,560
+specific commands each with their own dash
+
+572
+00:21:40,560 --> 00:21:41,850
+dash help or dash
+
+573
+00:21:41,850 --> 00:21:43,919
+ash help option to get a list
+
+574
+00:21:43,919 --> 00:21:45,985
+of all the optional parameters or required
+
+575
+00:21:45,985 --> 00:21:49,409
+parameters that that specific plugin requires
+
+576
+00:21:50,730 --> 00:21:51,360
+so
+
+577
+00:21:52,980 --> 00:21:55,379
+the important thing to remember whenever you're
+
+578
+00:21:55,383 --> 00:21:57,120
+working on this thing is that just
+
+579
+00:21:57,120 --> 00:21:59,250
+because a command works on one meter
+
+580
+00:21:59,250 --> 00:22:01,800
+amr server doesn't necessarily mean that it
+
+581
+00:22:01,800 --> 00:22:04,260
+works on every other tomato server and
+
+582
+00:22:04,260 --> 00:22:06,149
+the reason for this is that every
+
+583
+00:22:06,149 --> 00:22:08,669
+plugin that you install has the ability
+
+584
+00:22:08,940 --> 00:22:11,250
+to add options to that list so
+
+585
+00:22:11,250 --> 00:22:12,389
+in other words wait
+
+586
+00:22:12,629 --> 00:22:14,790
+we're talking about all of these console
+
+587
+00:22:14,790 --> 00:22:16,980
+commands can be or are in a
+
+588
+00:22:16,980 --> 00:22:19,379
+lot of cases server specific sir if
+
+589
+00:22:19,379 --> 00:22:21,899
+you're ever curious about how to run
+
+590
+00:22:21,899 --> 00:22:24,149
+these console commands how do i figure
+
+591
+00:22:24,149 --> 00:22:25,139
+out how to use all of this
+
+592
+00:22:25,139 --> 00:22:27,540
+stuff use the list command use the
+
+593
+00:22:27,540 --> 00:22:29,879
+help command and build your command from
+
+594
+00:22:29,879 --> 00:22:30,120
+there
+
+595
+00:22:31,860 --> 00:22:34,350
+alright so our next section is going
+
+596
+00:22:34,350 --> 00:22:37,110
+to be useful free plugins and these
+
+597
+00:22:37,110 --> 00:22:39,750
+are specifically plugins that are not installed
+
+598
+00:22:39,780 --> 00:22:42,960
+in moto mo by default but are
+
+599
+00:22:42,960 --> 00:22:46,320
+available to be downloaded and installed directly
+
+600
+00:22:46,320 --> 00:22:48,960
+from within your maternal instance without requiring
+
+601
+00:22:48,990 --> 00:22:51,450
+any additional information all you basic
+
+602
+00:22:51,480 --> 00:22:53,669
+we have to do is click download
+
+603
+00:22:53,669 --> 00:22:57,057
+and install from your meter maintenance and
+
+604
+00:22:57,120 --> 00:22:58,800
+we're going to start with the first
+
+605
+00:22:58,800 --> 00:23:00,380
+one on my list at least and
+
+606
+00:23:00,380 --> 00:23:02,940
+in my opinion one of the best
+
+607
+00:23:02,940 --> 00:23:06,389
+free plugins that you can install called
+
+608
+00:23:06,389 --> 00:23:07,800
+the cute tracking plugin
+
+609
+00:23:09,210 --> 00:23:12,090
+so the queue tracking plugin it improves
+
+610
+00:23:12,090 --> 00:23:14,790
+the performance and the stability of your
+
+611
+00:23:14,790 --> 00:23:17,700
+motto my server by reducing the load
+
+612
+00:23:17,909 --> 00:23:20,970
+on the potomac database during tracking it
+
+613
+00:23:20,970 --> 00:23:23,760
+also at the same time really greatly
+
+614
+00:23:23,760 --> 00:23:27,120
+improves the speed of tracking requests sent
+
+615
+00:23:27,179 --> 00:23:28,500
+to your maternal server
+
+616
+00:23:29,159 --> 00:23:30,840
+so how this works does take a
+
+617
+00:23:30,840 --> 00:23:33,419
+little bit of an explanation so we're
+
+618
+00:23:33,425 --> 00:23:35,520
+going to do that now so hopefully
+
+619
+00:23:35,520 --> 00:23:37,110
+you'll see a graphic on your screen
+
+620
+00:23:37,110 --> 00:23:38,730
+and what we're looking at here is
+
+621
+00:23:38,730 --> 00:23:41,310
+what we would consider a normal tracking
+
+622
+00:23:41,310 --> 00:23:42,553
+requests so you can see it with
+
+623
+00:23:42,553 --> 00:23:44,669
+the top there the browser sends that
+
+624
+00:23:44,669 --> 00:23:48,300
+http tracking request that tracking request then
+
+625
+00:23:48,300 --> 00:23:49,290
+gets received by the
+
+626
+00:23:49,409 --> 00:23:52,020
+toma server and needs to be processed
+
+627
+00:23:52,379 --> 00:23:55,080
+it's then inserted directly into the potomac
+
+628
+00:23:55,100 --> 00:23:58,649
+database into that role visit slug and
+
+629
+00:23:58,649 --> 00:24:00,360
+then once it's inserted we send that
+
+630
+00:24:00,360 --> 00:24:01,889
+response to the browser
+
+631
+00:24:03,120 --> 00:24:06,960
+now the queue tracking plugin this behavior
+
+632
+00:24:06,990 --> 00:24:10,200
+changes in a few key ways says
+
+633
+00:24:10,200 --> 00:24:11,490
+you can see in the next graphic
+
+634
+00:24:12,210 --> 00:24:14,159
+as soon as the moto mod server
+
+635
+00:24:14,190 --> 00:24:15,480
+so here at the top again we
+
+636
+00:24:15,480 --> 00:24:18,629
+can see the http tracking request as
+
+637
+00:24:18,629 --> 00:24:20,730
+soon as that is received by the
+
+638
+00:24:20,730 --> 00:24:22,620
+server it's put into a queue
+
+639
+00:24:23,129 --> 00:24:25,320
+and then immediately the matua server responds
+
+640
+00:24:25,320 --> 00:24:27,687
+to that browser or to that device
+
+641
+00:24:27,690 --> 00:24:29,760
+or that application to say great i've
+
+642
+00:24:29,760 --> 00:24:31,560
+got that tracking request you can carry
+
+643
+00:24:31,560 --> 00:24:34,320
+on once that tracking request is then
+
+644
+00:24:34,350 --> 00:24:36,270
+placed into the queue there's a few
+
+645
+00:24:36,270 --> 00:24:38,820
+different things that can happen now number
+
+646
+00:24:38,820 --> 00:24:40,260
+one you can either set up your
+
+647
+00:24:40,260 --> 00:24:43,290
+moto instance to automatically process
+
+648
+00:24:43,290 --> 00:24:44,820
+is all of the requests that are
+
+649
+00:24:44,820 --> 00:24:47,310
+in the queue when the queue reaches
+
+650
+00:24:47,310 --> 00:24:49,770
+a certain threshold but it can also
+
+651
+00:24:49,770 --> 00:24:51,270
+be set up to be run on
+
+652
+00:24:51,270 --> 00:24:53,100
+a schedule so for example you can
+
+653
+00:24:53,100 --> 00:24:55,169
+process all of the requests in the
+
+654
+00:24:55,169 --> 00:24:57,149
+queue once every minute or once every
+
+655
+00:24:57,149 --> 00:25:00,149
+two or three minutes and what this
+
+656
+00:25:00,149 --> 00:25:01,409
+really does is that
+
+657
+00:25:02,639 --> 00:25:04,080
+like you saw in the beginning it
+
+658
+00:25:04,080 --> 00:25:06,810
+not only improves the tracker performance but
+
+659
+00:25:06,810 --> 00:25:09,090
+it also enables your mid toma server
+
+660
+00:25:09,360 --> 00:25:13,169
+to handle very large traffic peaks without
+
+661
+00:25:13,169 --> 00:25:15,030
+bringing down your database server and the
+
+662
+00:25:15,030 --> 00:25:16,350
+way that it does this is that
+
+663
+00:25:16,679 --> 00:25:18,960
+instead of sending you know small little
+
+664
+00:25:18,960 --> 00:25:22,350
+individual single tracking requests every single time
+
+665
+00:25:22,500 --> 00:25:22,649
+one
+
+666
+00:25:22,740 --> 00:25:25,020
+this tracking request is received to the
+
+667
+00:25:25,020 --> 00:25:27,750
+database server it can process all of
+
+668
+00:25:27,750 --> 00:25:30,090
+the tracking requests in that queue as
+
+669
+00:25:30,090 --> 00:25:32,730
+a batch tracking requests so it really
+
+670
+00:25:32,730 --> 00:25:35,370
+helps your matua server and it really
+
+671
+00:25:35,370 --> 00:25:37,169
+makes it a lot more stable and
+
+672
+00:25:37,169 --> 00:25:40,290
+capable of handling those very large tracking
+
+673
+00:25:40,290 --> 00:25:40,830
+peaks
+
+674
+00:25:42,510 --> 00:25:43,800
+i the next one on the list
+
+675
+00:25:43,830 --> 00:25:47,190
+is the tracking spam prevention plugin so
+
+676
+00:25:47,190 --> 00:25:49,710
+the tracking spam prevention plugin gives you
+
+677
+00:25:49,710 --> 00:25:52,020
+some really good options that you can
+
+678
+00:25:52,020 --> 00:25:55,649
+enable to prevent spam tracking requests being
+
+679
+00:25:55,649 --> 00:25:58,379
+sent or logged in your matua server
+
+680
+00:25:59,010 --> 00:26:00,780
+so it does this by giving you
+
+681
+00:26:00,810 --> 00:26:02,010
+a couple of options for
+
+682
+00:26:02,010 --> 00:26:04,200
+first option gives you is blocking requests
+
+683
+00:26:04,260 --> 00:26:07,470
+from cloud providers so this is really
+
+684
+00:26:07,470 --> 00:26:09,480
+useful for example if you have a
+
+685
+00:26:09,480 --> 00:26:11,790
+malicious or a bad actor that's sending
+
+686
+00:26:11,790 --> 00:26:13,770
+you a lot of tracking requests from
+
+687
+00:26:13,800 --> 00:26:16,050
+a server somewhere specifically in the world
+
+688
+00:26:16,620 --> 00:26:18,510
+and the problem might be that they're
+
+689
+00:26:18,510 --> 00:26:19,950
+using a lot of different servers you
+
+690
+00:26:19,950 --> 00:26:22,020
+can't block all of those ip ranges
+
+691
+00:26:22,290 --> 00:26:23,850
+will the great news is the spec
+
+692
+00:26:23,879 --> 00:26:27,450
+tracking spam prevention plugin is going to
+
+693
+00:26:27,450 --> 00:26:28,590
+really help you in that
+
+694
+00:26:29,639 --> 00:26:31,950
+number two is that it can automatically
+
+695
+00:26:31,950 --> 00:26:35,159
+block requests from headless browsers headless browsers
+
+696
+00:26:35,490 --> 00:26:37,470
+are notorious for people that tried to
+
+697
+00:26:37,470 --> 00:26:40,080
+send these sorts of requests because the
+
+698
+00:26:40,290 --> 00:26:41,550
+load that it puts in the device
+
+699
+00:26:41,550 --> 00:26:43,710
+sending those requests is a lot lower
+
+700
+00:26:43,889 --> 00:26:45,270
+than a fully fledged browser
+
+701
+00:26:46,679 --> 00:26:49,290
+number three it can restrict the number
+
+702
+00:26:49,290 --> 00:26:52,110
+of actions in a single visit or
+
+703
+00:26:52,110 --> 00:26:54,389
+the maximum number of actions that matua
+
+704
+00:26:54,389 --> 00:26:57,419
+will track in a single visit this
+
+705
+00:26:57,419 --> 00:27:00,450
+is especially useful to prevent spam visits
+
+706
+00:27:00,450 --> 00:27:03,030
+that might spoil that can sometimes track
+
+707
+00:27:03,030 --> 00:27:05,760
+hundreds or even thousands of actions in
+
+708
+00:27:05,760 --> 00:27:06,510
+a single visit
+
+709
+00:27:07,169 --> 00:27:09,179
+we've seen some examples with people that
+
+710
+00:27:09,179 --> 00:27:10,980
+we've provided support to in the past
+
+711
+00:27:10,980 --> 00:27:12,690
+from the potomac team where they have
+
+712
+00:27:12,690 --> 00:27:16,830
+had individual visits tracked over ten thousand
+
+713
+00:27:16,950 --> 00:27:19,169
+actions in a single visit in a
+
+714
+00:27:19,169 --> 00:27:21,570
+matter of minutes or even hours and
+
+715
+00:27:21,570 --> 00:27:23,100
+the great way is that you can
+
+716
+00:27:23,100 --> 00:27:26,730
+automatically block this or cap the number
+
+717
+00:27:26,730 --> 00:27:28,889
+for tracking requests that can be tracked
+
+718
+00:27:29,280 --> 00:27:32,460
+in a single instance and number for
+
+719
+00:27:32,460 --> 00:27:36,389
+it kings exclude specific countries or it
+
+720
+00:27:36,389 --> 00:27:39,810
+can allow you to only include specific
+
+721
+00:27:39,840 --> 00:27:42,899
+countries so this is really useful for
+
+722
+00:27:42,899 --> 00:27:44,550
+example if you have a website that
+
+723
+00:27:44,550 --> 00:27:46,889
+is specifically targeting or spin
+
+724
+00:27:46,919 --> 00:27:49,409
+civically only working in a single country
+
+725
+00:27:49,409 --> 00:27:51,780
+or in a single group of countries
+
+726
+00:27:51,780 --> 00:27:54,750
+to automatically exclude any tracking requests from
+
+727
+00:27:54,750 --> 00:27:56,909
+countries outside of that but it can
+
+728
+00:27:56,909 --> 00:27:58,620
+also be useful to very quickly and
+
+729
+00:27:58,620 --> 00:28:01,830
+easily exclude specific countries if you notice
+
+730
+00:28:01,830 --> 00:28:03,330
+that you're getting a lot of spam
+
+731
+00:28:03,929 --> 00:28:06,629
+or non legitimate tracking requests from those
+
+732
+00:28:06,629 --> 00:28:07,050
+countries
+
+733
+00:28:07,050 --> 00:28:07,200
+nice
+
+734
+00:28:08,639 --> 00:28:10,649
+alright the next plugin on the list
+
+735
+00:28:10,649 --> 00:28:12,629
+which is an absolute must have is
+
+736
+00:28:12,629 --> 00:28:17,190
+the marketing campaigns reporting so by default
+
+737
+00:28:17,280 --> 00:28:19,679
+matomo will give you the option or
+
+738
+00:28:19,679 --> 00:28:22,050
+we'll give you the ability to track
+
+739
+00:28:22,080 --> 00:28:23,790
+campaigns and it comes with a really
+
+740
+00:28:23,790 --> 00:28:27,300
+useful campaign your l builder directly in
+
+741
+00:28:27,300 --> 00:28:28,169
+the matter where you are
+
+742
+00:28:28,440 --> 00:28:30,659
+however a lot of people or let
+
+743
+00:28:30,659 --> 00:28:33,330
+me rather say most people probably already
+
+744
+00:28:33,330 --> 00:28:36,450
+have campaigns set up that they're using
+
+745
+00:28:36,450 --> 00:28:38,909
+to drive traffic to their site using
+
+746
+00:28:38,909 --> 00:28:41,010
+campaign needs that are oftentimes set up
+
+747
+00:28:41,010 --> 00:28:43,139
+in their ad networks or with specific
+
+748
+00:28:43,320 --> 00:28:46,500
+social networks and the marketing campaigns reporting
+
+749
+00:28:46,500 --> 00:28:48,570
+plugin extends that do
+
+750
+00:28:48,570 --> 00:28:52,200
+default capability that default campaigns reporting to
+
+751
+00:28:52,200 --> 00:28:54,210
+give you access to all of the
+
+752
+00:28:54,210 --> 00:28:58,950
+possible campaign parameters used by these platforms
+
+753
+00:28:59,280 --> 00:29:01,379
+as well as providing support for some
+
+754
+00:29:01,379 --> 00:29:05,010
+of these campaign tracking parameters without needing
+
+755
+00:29:05,010 --> 00:29:06,720
+to use any of the mid to
+
+756
+00:29:06,720 --> 00:29:08,730
+most specific campaign
+
+757
+00:29:08,760 --> 00:29:10,950
+parameters we have a really great blog
+
+758
+00:29:10,950 --> 00:29:13,409
+post available on our blog that you
+
+759
+00:29:13,409 --> 00:29:14,580
+can go and read up about the
+
+760
+00:29:14,580 --> 00:29:17,190
+marketing campaigns reporting and i would definitely
+
+761
+00:29:17,190 --> 00:29:19,379
+recommend installing it on your meter missouri
+
+762
+00:29:20,700 --> 00:29:22,379
+alright that extra one on the list
+
+763
+00:29:22,379 --> 00:29:23,909
+is probably a little bit more for
+
+764
+00:29:23,909 --> 00:29:26,940
+the moto mo administrators out there sir
+
+765
+00:29:26,948 --> 00:29:28,830
+that's called the log viewer so the
+
+766
+00:29:28,830 --> 00:29:30,810
+log viewer is kind of more just
+
+767
+00:29:30,810 --> 00:29:32,909
+a quality of life or convenience plugin
+
+768
+00:29:33,210 --> 00:29:34,950
+that you can install to have a
+
+769
+00:29:34,950 --> 00:29:37,679
+quick look at the moto mo application
+
+770
+00:29:37,679 --> 00:29:39,570
+logs so this can really save you
+
+771
+00:29:39,570 --> 00:29:40,649
+some time and effort
+
+772
+00:29:40,980 --> 00:29:43,230
+i instead of having to ssh into
+
+773
+00:29:43,230 --> 00:29:45,629
+your server and grip some logs or
+
+774
+00:29:45,629 --> 00:29:47,850
+download your logs from your syslog server
+
+775
+00:29:48,030 --> 00:29:50,040
+you just log into me tomo go
+
+776
+00:29:50,040 --> 00:29:52,620
+to administration you i and have a
+
+777
+00:29:52,620 --> 00:29:54,060
+look at the logs directly
+
+778
+00:29:55,830 --> 00:29:57,810
+alright and the next one on our
+
+779
+00:29:57,810 --> 00:30:01,440
+list is the custom alerts plugin so
+
+780
+00:30:01,770 --> 00:30:03,629
+the customer alerts plug in is really
+
+781
+00:30:03,629 --> 00:30:05,310
+great especially if you're not somebody who's
+
+782
+00:30:05,310 --> 00:30:07,440
+looking at the reports every single day
+
+783
+00:30:07,800 --> 00:30:11,010
+or the customer alerts plugin law allows
+
+784
+00:30:11,010 --> 00:30:13,679
+you to do is to get notified
+
+785
+00:30:13,800 --> 00:30:15,450
+when something change
+
+786
+00:30:15,450 --> 00:30:18,659
+changes or something happens something specific happens
+
+787
+00:30:19,200 --> 00:30:20,760
+in your midterm or instance or on
+
+788
+00:30:20,760 --> 00:30:23,550
+the websites that you're tracking for example
+
+789
+00:30:23,550 --> 00:30:25,230
+you can set up an alert when
+
+790
+00:30:25,230 --> 00:30:27,360
+your website gets more than three hundred
+
+791
+00:30:27,360 --> 00:30:29,730
+views in a day you can have
+
+792
+00:30:29,760 --> 00:30:31,620
+another alert set up for example if
+
+793
+00:30:31,620 --> 00:30:33,629
+a specific product sells less than one
+
+794
+00:30:33,629 --> 00:30:35,610
+hundred items in a specific
+
+795
+00:30:37,110 --> 00:30:38,760
+but alerts can be set up in
+
+796
+00:30:39,060 --> 00:30:41,250
+other ways as well for example you
+
+797
+00:30:41,250 --> 00:30:43,860
+can set up alerts as percentages so
+
+798
+00:30:43,860 --> 00:30:45,659
+you can set up alert for example
+
+799
+00:30:45,659 --> 00:30:48,510
+that notifies you if the traffic to
+
+800
+00:30:48,510 --> 00:30:51,690
+your website drops by more than fifty
+
+801
+00:30:51,690 --> 00:30:54,600
+percent in a given timeframe and obviously
+
+802
+00:30:54,600 --> 00:30:55,889
+if a fifty percent drop
+
+803
+00:30:56,250 --> 00:30:58,440
+over a given time frame probably indicates
+
+804
+00:30:58,440 --> 00:31:00,810
+that something big has changed or something
+
+805
+00:31:00,810 --> 00:31:02,669
+has happened you can also set it
+
+806
+00:31:02,669 --> 00:31:05,040
+up for if you have zero visits
+
+807
+00:31:05,040 --> 00:31:06,720
+now we see sera visits would be
+
+808
+00:31:07,139 --> 00:31:10,409
+a pretty bad outcome for you you
+
+809
+00:31:10,409 --> 00:31:12,510
+want to be sure that you're getting
+
+810
+00:31:12,510 --> 00:31:13,800
+all of the tracking data and that
+
+811
+00:31:13,800 --> 00:31:15,540
+nothing is wrong with that tracking data
+
+812
+00:31:16,409 --> 00:31:18,090
+so for those types of alerts you
+
+813
+00:31:18,090 --> 00:31:20,159
+can actually set them up not only
+
+814
+00:31:20,159 --> 00:31:22,530
+as an email alert but also as
+
+815
+00:31:22,530 --> 00:31:25,020
+an sms alert so if you're setting
+
+816
+00:31:25,020 --> 00:31:26,580
+up an sms alert you'll need to
+
+817
+00:31:26,580 --> 00:31:27,870
+make sure that you also set up
+
+818
+00:31:27,870 --> 00:31:30,690
+the mobile messaging plugin now the mobile
+
+819
+00:31:30,690 --> 00:31:33,570
+messaging plugin is included in potomac core
+
+820
+00:31:33,870 --> 00:31:36,149
+but it might not be activated on
+
+821
+00:31:36,149 --> 00:31:36,540
+your motto
+
+822
+00:31:36,540 --> 00:31:37,530
+i'm a server so if you want
+
+823
+00:31:37,530 --> 00:31:39,149
+to set up sms alerts with a
+
+824
+00:31:39,149 --> 00:31:41,310
+custom alerts plugin you'll need to go
+
+825
+00:31:41,310 --> 00:31:43,530
+ahead and activate that plugin as well
+
+826
+00:31:44,909 --> 00:31:46,440
+and the last plugin on our list
+
+827
+00:31:46,440 --> 00:31:49,080
+for today is the ip to company
+
+828
+00:31:49,080 --> 00:31:52,379
+plugin this one kind of explains itself
+
+829
+00:31:52,440 --> 00:31:54,570
+and what it does is it adds
+
+830
+00:31:54,570 --> 00:31:57,510
+the functionality to your motto my server
+
+831
+00:31:57,840 --> 00:32:00,750
+to easily see if visits to your
+
+832
+00:32:00,750 --> 00:32:03,389
+website or app or connecting from any
+
+833
+00:32:03,510 --> 00:32:04,860
+known ip array
+
+834
+00:32:04,860 --> 00:32:08,429
+wages for specific companies so this is
+
+835
+00:32:08,429 --> 00:32:11,340
+really useful especially for if your website
+
+836
+00:32:11,340 --> 00:32:14,040
+or even your marketing campaigns are specifically
+
+837
+00:32:14,040 --> 00:32:16,800
+targeting a certain market segment or even
+
+838
+00:32:16,800 --> 00:32:20,220
+a very specific company it also provide
+
+839
+00:32:20,220 --> 00:32:21,899
+you some reports for these as well
+
+840
+00:32:21,899 --> 00:32:23,460
+as you can see which companies are
+
+841
+00:32:23,460 --> 00:32:24,690
+visiting your website
+
+842
+00:32:25,050 --> 00:32:27,360
+or using your application more than others
+
+843
+00:32:28,290 --> 00:32:30,210
+and at all of these plugins can
+
+844
+00:32:30,210 --> 00:32:33,120
+be found on the midterm or plugins
+
+845
+00:32:33,120 --> 00:32:35,850
+website at plug ins that mattel dot
+
+846
+00:32:35,850 --> 00:32:37,980
+org there is a massive list of
+
+847
+00:32:37,980 --> 00:32:40,530
+plugins that didn't make the cut unfortunately
+
+848
+00:32:40,530 --> 00:32:42,840
+for this session today see if you're
+
+849
+00:32:42,840 --> 00:32:44,399
+ever curious if you wanted to know
+
+850
+00:32:44,399 --> 00:32:45,179
+how you can ex
+
+851
+00:32:45,179 --> 00:32:47,940
+attend the capability of your matua server
+
+852
+00:32:48,179 --> 00:32:49,169
+have a look at the list of
+
+853
+00:32:49,169 --> 00:32:50,310
+plugins available there
+
+854
+00:32:51,450 --> 00:32:54,480
+and that alternatively you can also find
+
+855
+00:32:54,480 --> 00:32:56,909
+them in the marketplace section of your
+
+856
+00:32:56,909 --> 00:32:59,790
+matua server from there you can directly
+
+857
+00:32:59,790 --> 00:33:02,429
+install and activate and start using these
+
+858
+00:33:02,429 --> 00:33:03,360
+awesome plugins
+
+859
+00:33:04,679 --> 00:33:06,810
+alright and that brings us to the
+
+860
+00:33:06,810 --> 00:33:08,820
+end of the last segment for this
+
+861
+00:33:08,879 --> 00:33:11,129
+matter my camp session so we're going
+
+862
+00:33:11,129 --> 00:33:12,659
+to move on to some question and
+
+863
+00:33:12,659 --> 00:33:15,270
+answers now so if you haven't yet
+
+864
+00:33:15,270 --> 00:33:17,460
+had an opportunity to send some questions
+
+865
+00:33:17,460 --> 00:33:19,830
+through to the chat just gonna take
+
+866
+00:33:19,860 --> 00:33:22,800
+minutes the moderator has sent some questions
+
+867
+00:33:22,800 --> 00:33:24,540
+through to us on the show
+
+868
+00:33:24,540 --> 00:33:25,679
+that on the side as well so
+
+869
+00:33:25,679 --> 00:33:27,360
+we'll just have a quick look through
+
+870
+00:33:27,360 --> 00:33:28,710
+those questions and see if we can
+
+871
+00:33:28,710 --> 00:33:29,460
+answer some of them
+
+872
+00:33:32,790 --> 00:33:34,379
+how is it liked to work for
+
+873
+00:33:34,379 --> 00:33:36,899
+the miss tomoe or inner craft team
+
+874
+00:33:36,960 --> 00:33:39,780
+this is a question from ronan and
+
+875
+00:33:39,840 --> 00:33:41,760
+honestly it's been probably one of the
+
+876
+00:33:41,760 --> 00:33:44,129
+best work experiences that i've ever had
+
+877
+00:33:44,129 --> 00:33:46,050
+in my life the team is amazing
+
+878
+00:33:46,320 --> 00:33:48,210
+it's awesome to work in a group
+
+879
+00:33:48,210 --> 00:33:50,550
+of people that are us
+
+880
+00:33:50,730 --> 00:33:54,000
+conscious about open source mit software conscious
+
+881
+00:33:54,000 --> 00:33:56,429
+about being open and sharing and it's
+
+882
+00:33:56,429 --> 00:33:58,620
+it's really just a great company culture
+
+883
+00:33:58,620 --> 00:34:02,070
+overall what are the next big features
+
+884
+00:34:02,070 --> 00:34:05,370
+the team is working on and so
+
+885
+00:34:05,370 --> 00:34:06,629
+yeah there's not a lot of big
+
+886
+00:34:06,629 --> 00:34:09,600
+secrets when it comes to how you
+
+887
+00:34:09,600 --> 00:34:10,860
+know what sort of features
+
+888
+00:34:10,889 --> 00:34:12,480
+we're working on if you want to
+
+889
+00:34:12,480 --> 00:34:14,520
+know what features we're working on next
+
+890
+00:34:14,549 --> 00:34:15,870
+you can probably have a look at
+
+891
+00:34:15,870 --> 00:34:18,210
+the git hub issues page and you
+
+892
+00:34:18,210 --> 00:34:20,340
+can kind of see kind of looking
+
+893
+00:34:20,340 --> 00:34:21,900
+at those milestones and they get how
+
+894
+00:34:21,900 --> 00:34:22,949
+page you can kind of get a
+
+895
+00:34:22,949 --> 00:34:24,750
+feeling of what features are going to
+
+896
+00:34:24,750 --> 00:34:26,219
+be worked on next what is the
+
+897
+00:34:26,219 --> 00:34:27,989
+priority for those sorts of things
+
+898
+00:34:29,699 --> 00:34:32,850
+can we add new shortcuts with moto
+
+899
+00:34:32,850 --> 00:34:34,620
+mo this is actually something i'm not
+
+900
+00:34:34,620 --> 00:34:35,759
+one hundred per cent sure and i
+
+901
+00:34:35,759 --> 00:34:38,159
+don't think we have the option to
+
+902
+00:34:38,159 --> 00:34:40,679
+have keyboard shortcuts but that's definitely something
+
+903
+00:34:40,679 --> 00:34:42,239
+that i'll have a look at and
+
+904
+00:34:42,239 --> 00:34:43,590
+asked the team about as well
+
+905
+00:34:46,389 --> 00:34:48,719
+do we have any plans to develop
+
+906
+00:34:48,719 --> 00:34:52,139
+more documentation about how to make more
+
+907
+00:34:52,139 --> 00:34:54,779
+attractive teams so i'm not sure who
+
+908
+00:34:54,779 --> 00:34:57,630
+asked that question specifically but we do
+
+909
+00:34:57,630 --> 00:35:00,690
+actually have a developer's guide available on
+
+910
+00:35:00,690 --> 00:35:04,110
+our developer documentation on how to create
+
+911
+00:35:04,110 --> 00:35:04,560
+themes
+
+912
+00:35:05,100 --> 00:35:08,038
+obviously there are no there's not necessarily
+
+913
+00:35:08,040 --> 00:35:11,670
+very specific examples of what you can
+
+914
+00:35:11,670 --> 00:35:14,250
+do the main reason for that is
+
+915
+00:35:14,250 --> 00:35:15,900
+that it's it's kind of really open
+
+916
+00:35:15,990 --> 00:35:17,520
+if you know a little bit about
+
+917
+00:35:17,520 --> 00:35:19,170
+css you know a little bit about
+
+918
+00:35:19,170 --> 00:35:21,660
+less you can go happy and hack
+
+919
+00:35:21,660 --> 00:35:24,029
+away all day every day and create
+
+920
+00:35:24,060 --> 00:35:25,020
+really cool custom
+
+921
+00:35:25,020 --> 00:35:27,210
+my steams something that i may not
+
+922
+00:35:27,210 --> 00:35:29,460
+have mentioned earlier is that you're not
+
+923
+00:35:29,460 --> 00:35:33,000
+just limited to using css or less
+
+924
+00:35:33,270 --> 00:35:36,570
+you can also include javascript files in
+
+925
+00:35:36,570 --> 00:35:39,570
+your plugins to kind of extended even
+
+926
+00:35:39,570 --> 00:35:42,540
+further than what css or less would
+
+927
+00:35:42,540 --> 00:35:43,290
+allow you to do
+
+928
+00:35:47,100 --> 00:35:49,620
+alright linaro asks in the chatroom does
+
+929
+00:35:49,620 --> 00:35:53,730
+the spam prevention work retroactive to filter
+
+930
+00:35:53,730 --> 00:35:57,090
+out already made spam visits no so
+
+931
+00:35:57,090 --> 00:35:59,850
+that the the tracking spam prevention plugin
+
+932
+00:35:59,880 --> 00:36:02,670
+doesn't work retroactively said this is something
+
+933
+00:36:02,670 --> 00:36:04,620
+that you would need to install too
+
+934
+00:36:04,620 --> 00:36:08,130
+prevent future spam tracking requests if you
+
+935
+00:36:08,130 --> 00:36:10,830
+do have a very specific spam tracking
+
+936
+00:36:10,830 --> 00:36:13,500
+requests the best way to get rid
+
+937
+00:36:13,529 --> 00:36:16,470
+of that data those spam tracking requests
+
+938
+00:36:16,500 --> 00:36:18,960
+is to use the gdp are tools
+
+939
+00:36:19,350 --> 00:36:22,380
+available within moto mo and that can
+
+940
+00:36:22,380 --> 00:36:24,240
+be kind of useful especially if they've
+
+941
+00:36:24,960 --> 00:36:26,730
+for example all of the tracking requests
+
+942
+00:36:26,730 --> 00:36:28,740
+came from a certain ip address or
+
+943
+00:36:28,740 --> 00:36:31,230
+if they came from a certain country
+
+944
+00:36:31,230 --> 00:36:34,590
+or they track certain specific things to
+
+945
+00:36:34,590 --> 00:36:36,210
+your meter or instance you can use
+
+946
+00:36:36,210 --> 00:36:38,759
+those gdp are tools to very quickly
+
+947
+00:36:38,759 --> 00:36:40,860
+and easily delete all of that data
+
+948
+00:36:43,110 --> 00:36:45,120
+alright that's all the some of the
+
+949
+00:36:45,120 --> 00:36:48,420
+questions that we've got on the are
+
+950
+00:36:48,420 --> 00:36:50,250
+we having any plans to make the
+
+951
+00:36:50,250 --> 00:36:52,200
+config that he need a ph p
+
+952
+00:36:52,200 --> 00:36:56,040
+file accessible from the eu i know
+
+953
+00:36:56,040 --> 00:36:57,779
+i don't think we've got any plans
+
+954
+00:36:57,810 --> 00:37:01,170
+to make that config file editable from
+
+955
+00:37:01,170 --> 00:37:02,220
+within the eu i but
+
+956
+00:37:02,220 --> 00:37:04,980
+it is possible to view the config
+
+957
+00:37:04,980 --> 00:37:07,440
+file from the eu i do not
+
+958
+00:37:07,500 --> 00:37:10,830
+necessarily just limited to the config does
+
+959
+00:37:10,830 --> 00:37:12,420
+he need a ph be but there
+
+960
+00:37:12,420 --> 00:37:15,090
+is a section under the diagnostics tab
+
+961
+00:37:15,390 --> 00:37:16,529
+that you can actually go and have
+
+962
+00:37:16,529 --> 00:37:18,180
+a look at all of the settings
+
+963
+00:37:18,180 --> 00:37:20,549
+that are currently set either in the
+
+964
+00:37:20,549 --> 00:37:22,020
+global config file or the
+
+965
+00:37:22,980 --> 00:37:24,660
+config does he need a page p
+
+966
+00:37:24,870 --> 00:37:27,360
+within your matua instance the reason why
+
+967
+00:37:27,360 --> 00:37:29,640
+we wouldn't necessarily make it directly edit
+
+968
+00:37:29,730 --> 00:37:32,370
+editable from the u i is because
+
+969
+00:37:32,370 --> 00:37:34,049
+a lot of the settings that you
+
+970
+00:37:34,049 --> 00:37:35,700
+set in the config that you need
+
+971
+00:37:35,703 --> 00:37:38,520
+a ph pi can override some of
+
+972
+00:37:38,520 --> 00:37:40,440
+the settings that you might set in
+
+973
+00:37:40,620 --> 00:37:42,540
+your user inter
+
+974
+00:37:42,542 --> 00:37:42,930
+face
+
+975
+00:37:47,370 --> 00:37:48,540
+i just having a look for a
+
+976
+00:37:48,779 --> 00:37:52,080
+couple more questions do you have any
+
+977
+00:37:52,080 --> 00:37:54,840
+tips for solving upgrade issues sometimes the
+
+978
+00:37:54,840 --> 00:37:57,210
+upgrade fails and the database and core
+
+979
+00:37:57,509 --> 00:37:59,700
+are not the same version there have
+
+980
+00:37:59,700 --> 00:38:01,440
+been several questions on this in the
+
+981
+00:38:01,440 --> 00:38:03,779
+forum but there isn't a good solution
+
+982
+00:38:04,140 --> 00:38:05,730
+that's a really great question and it's
+
+983
+00:38:05,730 --> 00:38:07,620
+actually something that i helped one or
+
+984
+00:38:07,620 --> 00:38:09,390
+two customers within the last couple of
+
+985
+00:38:09,390 --> 00:38:11,700
+weeks as well it might be really
+
+986
+00:38:11,700 --> 00:38:13,230
+useful from our end just to put
+
+987
+00:38:13,230 --> 00:38:14,549
+that into an f a q it's
+
+988
+00:38:14,549 --> 00:38:16,470
+something that i've kind of been planning
+
+989
+00:38:16,470 --> 00:38:18,660
+to do as well but yes there
+
+990
+00:38:18,660 --> 00:38:20,850
+is actually a way that you can
+
+991
+00:38:20,850 --> 00:38:23,130
+roll back the version that is stored
+
+992
+00:38:23,130 --> 00:38:24,299
+in the database so
+
+993
+00:38:24,360 --> 00:38:26,790
+that matua can re rerun all of
+
+994
+00:38:26,790 --> 00:38:30,450
+those database upgrade commands so stay tuned
+
+995
+00:38:30,450 --> 00:38:32,580
+i dunno if you have it any
+
+996
+00:38:32,580 --> 00:38:33,570
+way that you can kind of keep
+
+997
+00:38:33,570 --> 00:38:34,529
+an eye on some of the f
+
+998
+00:38:34,529 --> 00:38:37,860
+a q's otherwise feel free to shoot
+
+999
+00:38:37,860 --> 00:38:40,470
+us an email at support admitted org
+
+1000
+00:38:40,830 --> 00:38:43,830
+just asking about that information about those
+
+1001
+00:38:43,830 --> 00:38:44,460
+specific step
+
+1002
+00:38:44,460 --> 00:38:46,020
+oops and if we don't yet have
+
+1003
+00:38:46,020 --> 00:38:47,340
+that effect you out there will be
+
+1004
+00:38:47,340 --> 00:38:48,960
+more than happy to send that information
+
+1005
+00:38:48,960 --> 00:38:49,380
+on to you
+
+1006
+00:38:51,540 --> 00:38:53,759
+could you give a general definition of
+
+1007
+00:38:53,759 --> 00:38:57,029
+what archiving means yet so archiving is
+
+1008
+00:38:57,029 --> 00:39:01,230
+basically the process that matua uses to
+
+1009
+00:39:01,950 --> 00:39:04,890
+kind of process all of that raw
+
+1010
+00:39:04,890 --> 00:39:06,390
+data so as you can imagine if
+
+1011
+00:39:06,390 --> 00:39:09,060
+you're sending hundreds of thousands of tracking
+
+1012
+00:39:09,060 --> 00:39:10,620
+requests or hits to your
+
+1013
+00:39:10,620 --> 00:39:13,830
+matua interface that data on it's own
+
+1014
+00:39:14,220 --> 00:39:16,920
+isn't really useful other than just to
+
+1015
+00:39:16,920 --> 00:39:19,560
+kind of look at in reality so
+
+1016
+00:39:19,560 --> 00:39:21,690
+what archiving does is it takes that
+
+1017
+00:39:21,690 --> 00:39:24,810
+raw data and it parses through every
+
+1018
+00:39:24,810 --> 00:39:26,790
+single piece of that raw data and
+
+1019
+00:39:26,790 --> 00:39:28,920
+that is used to then generate the
+
+1020
+00:39:28,920 --> 00:39:30,330
+reports that you view
+
+1021
+00:39:30,810 --> 00:39:32,190
+in your maternal instance
+
+1022
+00:39:37,230 --> 00:39:39,120
+alright anyone else got a couple more
+
+1023
+00:39:39,120 --> 00:39:40,080
+questions for us
+
+1024
+00:39:50,130 --> 00:39:52,440
+alright that looks like all the questions
+
+1025
+00:39:52,440 --> 00:39:56,400
+for today and so that means that
+
+1026
+00:39:56,400 --> 00:39:58,620
+we're actually almost out of time i
+
+1027
+00:39:58,620 --> 00:39:59,970
+really just wanted to say thank you
+
+1028
+00:39:59,970 --> 00:40:01,830
+everyone for joining thank you so much
+
+1029
+00:40:01,830 --> 00:40:03,779
+for the awesome questions that you that
+
+1030
+00:40:03,779 --> 00:40:05,820
+you asked i hope that everybody learned
+
+1031
+00:40:05,820 --> 00:40:06,299
+something new
+
+1032
+00:40:06,299 --> 00:40:07,890
+you today that will help give you
+
+1033
+00:40:07,890 --> 00:40:10,380
+success with me tomo and i'd also
+
+1034
+00:40:10,380 --> 00:40:12,690
+like to give a massive thank you
+
+1035
+00:40:12,690 --> 00:40:15,390
+to the volunteers that have made matua
+
+1036
+00:40:15,390 --> 00:40:19,290
+camp possible this really is a community
+
+1037
+00:40:19,290 --> 00:40:20,790
+driven event and none of this will
+
+1038
+00:40:20,790 --> 00:40:23,520
+be possible without the awesome contribution of
+
+1039
+00:40:24,029 --> 00:40:26,040
+the volunteers as well as the sponsors
+
+1040
+00:40:28,680 --> 00:40:30,750
+have a great day everyone buy anything
+
