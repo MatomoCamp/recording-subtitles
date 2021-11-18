@@ -1,0 +1,4168 @@
+1
+00:00:06,930 --> 00:00:10,980
+genau da geht es los am herzlich
+
+2
+00:00:10,980 --> 00:00:15,720
+willkommen eben zur matomo kompakt workshop am
+
+3
+00:00:15,780 --> 00:00:18,330
+vielleicht mal ganz kurz was erwartet euch
+
+4
+00:00:18,330 --> 00:00:20,777
+heute hebt sich vielleicht talente description gelesen
+
+5
+00:00:20,790 --> 00:00:22,530
+esse ich mache sie einfach mal kurz
+
+6
+00:00:22,530 --> 00:00:25,096
+die matomo berichte näher bringen einfach
+
+7
+00:00:25,260 --> 00:00:28,500
+cis grundverständnis wofür in den einzelnen metriken
+
+8
+00:00:28,500 --> 00:00:30,660
+was findet man wo wie kann ich
+
+9
+00:00:30,660 --> 00:00:33,030
+was denn auswerten wir schauen uns besucher
+
+10
+00:00:33,030 --> 00:00:35,850
+locker die feindlich bericht er und die
+
+11
+00:00:36,000 --> 00:00:39,780
+acquisitions berichte an vielleicht nur kurze sache
+
+12
+00:00:39,780 --> 00:00:43,200
+noch zu mir selber bin thomas yannick
+
+13
+00:00:43,230 --> 00:00:45,360
+bin senior seo und webanalyse
+
+14
+00:00:45,450 --> 00:00:47,820
+am bayern agentur in salzburg und auch
+
+15
+00:00:47,820 --> 00:00:52,942
+selbstständig am gleichzeitig im matomo universum habe
+
+16
+00:00:52,942 --> 00:00:55,650
+ich mal versucht mit webanalyse mit kopf
+
+17
+00:00:55,650 --> 00:00:58,290
+ein paar youtube videos zum thema matomo
+
+18
+00:00:58,290 --> 00:00:59,400
+in deutsch zu machen
+
+19
+00:01:00,000 --> 00:01:01,500
+oh und falls ihr fragen habt dann
+
+20
+00:01:01,530 --> 00:01:03,540
+gerne auch in den big blue button
+
+21
+00:01:03,600 --> 00:01:07,320
+chat doch die fragen gerne an sie
+
+22
+00:01:07,320 --> 00:01:09,630
+könnte hier gerne anmuten falls sie irgendwas
+
+23
+00:01:09,630 --> 00:01:12,810
+ezri award irgendwo aktuell in dem bericht
+
+24
+00:01:12,810 --> 00:01:15,870
+irgendwas rein fragen also wir können anschluß
+
+25
+00:01:15,870 --> 00:01:18,630
+dann noch kurze kevin a session machen
+
+26
+00:01:19,080 --> 00:01:20,160
+haben oder flop sein
+
+27
+00:01:20,190 --> 00:01:23,667
+doch an einfach so rein oder ihr
+
+28
+00:01:23,667 --> 00:01:26,520
+schreibt einfach später entweder hier rein oder
+
+29
+00:01:26,520 --> 00:01:29,040
+einfach über linked in des geht auch
+
+30
+00:01:29,070 --> 00:01:31,410
+ganz gut dann startnummer los
+
+31
+00:01:32,940 --> 00:01:35,400
+genaus haben wie wir der sitz heute
+
+32
+00:01:35,400 --> 00:01:37,677
+machen es an wir schauen uns jetzt
+
+33
+00:01:37,677 --> 00:01:40,620
+hierbei die matomo die imo seite an
+
+34
+00:01:40,620 --> 00:01:43,830
+also unter demo punkt matomo cloud kann
+
+35
+00:01:43,830 --> 00:01:46,980
+man sich die matomo am cloud version
+
+36
+00:01:46,980 --> 00:01:49,080
+also die demo mal anschauen sind demo
+
+37
+00:01:49,080 --> 00:01:52,080
+daten drinnen von einer fiktiven seite
+
+38
+00:01:52,440 --> 00:01:54,780
+vielleicht falls ihr jetzt on premise software
+
+39
+00:01:54,780 --> 00:01:56,970
+soll man prämissen ihr habt es selber
+
+40
+00:01:56,970 --> 00:01:59,310
+bei euch installiert dann wirds wahrscheinlich nur
+
+41
+00:01:59,310 --> 00:02:01,980
+so ausschauen wenn ihr nur die gängigsten
+
+42
+00:02:02,070 --> 00:02:05,094
+plugins installiert habt oder einfach dies ist
+
+43
+00:02:05,094 --> 00:02:08,130
+die grundinstallation ich schau euch oder wir
+
+44
+00:02:08,130 --> 00:02:09,509
+schauen uns jetzt einfach mal das auf
+
+45
+00:02:09,509 --> 00:02:11,340
+der demo seite an es hier sind
+
+46
+00:02:11,340 --> 00:02:12,240
+auch meistens mm
+
+47
+00:02:12,240 --> 00:02:14,880
+mehr plugins installiert vielleicht der eine oder
+
+48
+00:02:14,910 --> 00:02:18,000
+andere an nicht drauf word arbeitet ist
+
+49
+00:02:18,000 --> 00:02:19,440
+die version die hauptmann wenn man zum
+
+50
+00:02:19,440 --> 00:02:22,680
+beispiel matomo cloud benutzt als wir steigen
+
+51
+00:02:22,680 --> 00:02:25,080
+ein und was man zuerst sie dass
+
+52
+00:02:25,080 --> 00:02:27,720
+ich hier oben ist die ganz normale
+
+53
+00:02:27,720 --> 00:02:31,140
+website auswahl ist wir haben verschiedene seiten
+
+54
+00:02:31,440 --> 00:02:32,400
+haben die man hier auch
+
+55
+00:02:32,400 --> 00:02:34,440
+auswählen können je nachdem ändert sich eben
+
+56
+00:02:34,440 --> 00:02:37,255
+das komplette hier ist es ähnlich sage
+
+57
+00:02:37,255 --> 00:02:38,457
+ich jetzt mal vielleicht kommt der eile
+
+58
+00:02:38,457 --> 00:02:40,410
+aus google analytics ist es ähnlich eben
+
+59
+00:02:40,410 --> 00:02:44,850
+zu den haben analytics an daten ansichten
+
+60
+00:02:44,850 --> 00:02:47,400
+beziehungsweise properties die mir hier auswählen kann
+
+61
+00:02:48,000 --> 00:02:50,430
+zweites eben hier der date picker jetzt
+
+62
+00:02:50,430 --> 00:02:52,860
+hab ich heute den aktuellen tag ausgewählt
+
+63
+00:02:53,160 --> 00:02:55,830
+ich kann aber auch hier genauso wochenweise
+
+64
+00:02:55,860 --> 00:02:59,010
+gehendes merken schon kommt siehe komplette zeile
+
+65
+00:02:59,010 --> 00:03:01,020
+wird hier markiert oder wir schauen selbst
+
+66
+00:03:01,022 --> 00:03:03,450
+einfach mal den monat oktober an
+
+67
+00:03:04,860 --> 00:03:07,680
+hier oben gibt's die segment der simba
+
+68
+00:03:07,680 --> 00:03:11,430
+kann segmentieren in matomo genauso wie man
+
+69
+00:03:11,790 --> 00:03:14,880
+auch segmente in analytics hat es gibt
+
+70
+00:03:14,880 --> 00:03:18,630
+schon ein paar vorgefertigte segmente ganz am
+
+71
+00:03:18,630 --> 00:03:20,640
+anfang hat man im die alle benutzer
+
+72
+00:03:20,640 --> 00:03:24,600
+dieses einfach ungefiltert an die segmente selbst
+
+73
+00:03:25,050 --> 00:03:26,760
+zeige ich jetzt mal ganz kurz auf
+
+74
+00:03:26,760 --> 00:03:30,240
+den anderen haben hier mal die möglichkeit
+
+75
+00:03:30,270 --> 00:03:31,969
+zum beispiel wie ich es hier organics
+
+76
+00:03:31,969 --> 00:03:35,040
+search schon eingestellt heißt der kanal typ
+
+77
+00:03:35,070 --> 00:03:38,340
+entspricht zum beispiel search am o und
+
+78
+00:03:38,460 --> 00:03:41,250
+komme dann einfach auf speichern und übernehmen
+
+79
+00:03:41,280 --> 00:03:43,290
+klicken des ganze so dass es bei
+
+80
+00:03:43,290 --> 00:03:44,880
+matomo cloud hin und wieder bissel
+
+81
+00:03:44,910 --> 00:03:46,260
+dauert bis es durch
+
+82
+00:03:47,490 --> 00:03:49,500
+bist es einfach alles komplett verarbeitet wird
+
+83
+00:03:49,500 --> 00:03:51,630
+bis es dann angezeigt werden kann
+
+84
+00:03:52,320 --> 00:03:55,560
+hier haben wir zum beispiel schon etwas
+
+85
+00:03:55,560 --> 00:03:57,900
+defekt in z visitors de sind eben
+
+86
+00:03:57,930 --> 00:04:02,181
+an hier aus neuseeland besucher die conny
+
+87
+00:04:02,181 --> 00:04:05,160
+jetzt einfach hier zum beispiel selektieren wenn
+
+88
+00:04:05,160 --> 00:04:06,510
+ich hier einfach kauf geht dann ist
+
+89
+00:04:06,510 --> 00:04:09,090
+es komplett selektierten sieht schon die besucher
+
+90
+00:04:09,090 --> 00:04:11,550
+karte ändert sich jetzt hier mal ab
+
+91
+00:04:11,580 --> 00:04:12,480
+auf neuvoo
+
+92
+00:04:12,480 --> 00:04:15,720
+seeland wenn man beim mord auch die
+
+93
+00:04:15,720 --> 00:04:18,750
+möglichkeit nur durch die ganzen segmente untereinander
+
+94
+00:04:18,750 --> 00:04:21,000
+zu vergleichen da dazu geht man nicht
+
+95
+00:04:21,000 --> 00:04:23,910
+auf direkt den segment titel sondern geht
+
+96
+00:04:23,910 --> 00:04:27,090
+hier auf dieses vergleichen symbol und so
+
+97
+00:04:27,090 --> 00:04:30,420
+hat man die alle besucher gegenüber gestellt
+
+98
+00:04:30,420 --> 00:04:32,640
+eben zu den besuchern vor neuseeland
+
+99
+00:04:33,060 --> 00:04:35,790
+hier sieht man leider wenig weib die
+
+100
+00:04:35,850 --> 00:04:37,650
+besucher machen mit net zu viel aus
+
+101
+00:04:37,650 --> 00:04:41,880
+von den gesamt besuchern dieses dashboards kaum
+
+102
+00:04:41,880 --> 00:04:44,609
+aber natürlich auch kaste meisen es heißt
+
+103
+00:04:44,610 --> 00:04:46,680
+es ist nicht fix ich hab die
+
+104
+00:04:46,680 --> 00:04:48,750
+möglichkeit dass ich einfach hier auch an
+
+105
+00:04:48,780 --> 00:04:52,800
+jedes budget des in einzelne widgets hier
+
+106
+00:04:52,890 --> 00:04:55,620
+auch woanders platzieren kann zum beispiel jetzt
+
+107
+00:04:55,650 --> 00:04:57,960
+rechts und dann sieht man schon mal
+
+108
+00:04:57,960 --> 00:05:01,080
+was was man auf jedem blanco dashboard
+
+109
+00:05:01,080 --> 00:05:03,930
+heute hat immer so netten willkommen screen
+
+110
+00:05:03,930 --> 00:05:07,500
+wo mer begrüßt wird der score sie
+
+111
+00:05:07,500 --> 00:05:09,780
+einmal anschauen das ist immer das erste
+
+112
+00:05:09,780 --> 00:05:11,910
+eigentlich muss ich dann später mal an
+
+113
+00:05:12,120 --> 00:05:12,930
+schließe
+
+114
+00:05:13,110 --> 00:05:14,580
+wer eigentlich braucht muss dann auch nicht
+
+115
+00:05:14,580 --> 00:05:17,190
+mehr bekommen es einfach hier wegklicken kurz
+
+116
+00:05:17,220 --> 00:05:19,290
+bestätigen das muss sie zeig mir haben
+
+117
+00:05:19,290 --> 00:05:23,615
+will und dann wär's alles wenn ihr
+
+118
+00:05:23,615 --> 00:05:25,590
+jetzt dazu kämen mir geht es hier
+
+119
+00:05:25,590 --> 00:05:27,900
+bricht ab dies ist kein problem man
+
+120
+00:05:27,900 --> 00:05:30,330
+hat hier wenn man drauf geht an
+
+121
+00:05:30,390 --> 00:05:32,610
+die möglichkeit widgets hinzuzufügen
+
+122
+00:05:33,390 --> 00:05:35,760
+verschiedene widgets und das ganze ist ebenso
+
+123
+00:05:35,760 --> 00:05:38,580
+untergliedert wie genau der linke baum also
+
+124
+00:05:38,610 --> 00:05:41,550
+jabs hier haben diese linke menü baum
+
+125
+00:05:41,580 --> 00:05:44,220
+genauso hier habt ihr auch die verschiedenen
+
+126
+00:05:44,250 --> 00:05:47,280
+werte am neo mal on ich hätte
+
+127
+00:05:47,370 --> 00:05:51,930
+interesse und möchte gerne wissen schau mal
+
+128
+00:05:51,930 --> 00:05:53,280
+kurz an
+
+129
+00:05:53,340 --> 00:05:58,380
+über welche über welche website kommen denn
+
+130
+00:05:58,380 --> 00:06:00,030
+die nutzer auf meine seite dann hab
+
+131
+00:06:00,030 --> 00:06:01,860
+ich hier eben die möglichkeit dass das
+
+132
+00:06:01,864 --> 00:06:04,530
+widget gleich reingezogen haben sie im heer
+
+133
+00:06:04,770 --> 00:06:06,630
+des dai fed weißer punkt com
+
+134
+00:06:07,230 --> 00:06:10,650
+an zum beispiel die meisten besuche bringt
+
+135
+00:06:11,953 --> 00:06:14,400
+hier alles schön kaste meisen jetzt noch
+
+136
+00:06:14,400 --> 00:06:17,400
+die möglichkeit dieses dashboard oder mehrwert dashboard
+
+137
+00:06:17,430 --> 00:06:20,220
+anzulegen das findet man dann einfach auch
+
+138
+00:06:20,550 --> 00:06:22,830
+hier unten zu messen mit dashboard layout
+
+139
+00:06:22,830 --> 00:06:25,860
+verändern oder man kann auch ein neues
+
+140
+00:06:25,920 --> 00:06:26,940
+dashboard anlegen
+
+141
+00:06:27,390 --> 00:06:29,820
+muss jetzt leider wieder auf die auen
+
+142
+00:06:29,850 --> 00:06:32,190
+auf dich an tritt demo dashboard gehen
+
+143
+00:06:32,250 --> 00:06:34,140
+weil es in der demo muss man
+
+144
+00:06:34,140 --> 00:06:36,330
+wissen kann man sich vieles anschauen will
+
+145
+00:06:36,420 --> 00:06:39,540
+meira da ich sowieso zugriff aber polaroids
+
+146
+00:06:39,540 --> 00:06:42,418
+nicht viel zum beispiel eher ändern in
+
+147
+00:06:42,418 --> 00:06:44,310
+den demo days bodyflirt nur zum ansehen
+
+148
+00:06:44,310 --> 00:06:46,380
+da am und hier könnte man zum
+
+149
+00:06:46,380 --> 00:06:47,520
+beispiel auch ein neu
+
+150
+00:06:47,520 --> 00:06:50,610
+neues dashboard erstellen den namen einfach angeben
+
+151
+00:06:51,150 --> 00:06:53,220
+oh und man hat dann die möglichkeit
+
+152
+00:06:53,220 --> 00:06:55,290
+zum beispiel auch die spalten layout
+
+153
+00:06:56,850 --> 00:07:00,450
+hm genau widgets schnell hinzufügen und dann
+
+154
+00:07:00,450 --> 00:07:01,680
+hat man die möglichkeit
+
+155
+00:07:03,060 --> 00:07:04,830
+mails mal kurz zu
+
+156
+00:07:06,090 --> 00:07:08,910
+na genau war da natürlich auch noch
+
+157
+00:07:08,910 --> 00:07:11,760
+die möglichkeit amtes spalten layout zu ändern
+
+158
+00:07:11,760 --> 00:07:14,749
+es ist umsorgt okay this layout disease
+
+159
+00:07:14,749 --> 00:07:17,460
+sitzt mir zu an komisch drei spalten
+
+160
+00:07:17,460 --> 00:07:19,890
+nicht milizen einspart diesmal haben war ich
+
+161
+00:07:19,890 --> 00:07:22,530
+einfach nur ganz wenig widgets hab dann
+
+162
+00:07:22,590 --> 00:07:24,870
+kann ich es hier auch ganz einfach
+
+163
+00:07:24,870 --> 00:07:25,620
+machen
+
+164
+00:07:26,370 --> 00:07:28,350
+des werse zumal hier in dem bereich
+
+165
+00:07:28,350 --> 00:07:32,190
+von den ganzen als von den dashboards
+
+166
+00:07:32,190 --> 00:07:33,420
+was wir hier haben es immer kann
+
+167
+00:07:33,420 --> 00:07:35,280
+hier verschiedene dashboards anlegen
+
+168
+00:07:36,060 --> 00:07:38,010
+wir schauen dann einfach mal ein bericht
+
+169
+00:07:38,010 --> 00:07:40,950
+weiter des werds mal der besucher tipp
+
+170
+00:07:41,040 --> 00:07:44,059
+boss immer ganz nett ist bei matomo
+
+171
+00:07:44,100 --> 00:07:45,540
+ist es ja auch echt sumpf und
+
+172
+00:07:45,540 --> 00:07:47,760
+auch google analytics so der fall drei
+
+173
+00:07:47,857 --> 00:07:50,430
+die wichtigsten metriken die man unter den
+
+174
+00:07:50,430 --> 00:07:53,430
+berichten zum beispiel die besucher so haben
+
+175
+00:07:53,550 --> 00:07:55,230
+die eigenschaften der besuche dass mir die
+
+176
+00:07:55,230 --> 00:07:56,160
+jetzt einfach hier mal zu
+
+177
+00:07:56,190 --> 00:07:58,800
+sammeln hat und die wichtigsten metriken sind
+
+178
+00:07:58,800 --> 00:08:01,530
+einfach hier mal aufgelistet und dann komme
+
+179
+00:08:01,560 --> 00:08:04,740
+später ins detail tiefer einsteigen
+
+180
+00:08:05,280 --> 00:08:08,310
+hier haben wir mal den grafen der
+
+181
+00:08:08,310 --> 00:08:11,306
+letzten besuche auf der webseite selbst man
+
+182
+00:08:11,306 --> 00:08:12,930
+hat auch die möglichkeit bei so einem
+
+183
+00:08:12,930 --> 00:08:16,200
+line chart zusätzlich noch eben an die
+
+184
+00:08:16,200 --> 00:08:18,240
+metrik zu ändern ist wenn es okay
+
+185
+00:08:18,270 --> 00:08:20,910
+die besuch reb interessiert mich gerade nicht
+
+186
+00:08:20,910 --> 00:08:22,740
+ich hätt gern die seiten alles tippen
+
+187
+00:08:23,100 --> 00:08:24,810
+da will ich die einfach noch mit
+
+188
+00:08:24,810 --> 00:08:25,290
+aus
+
+189
+00:08:25,560 --> 00:08:27,060
+dann wären die zum beispiel mit rein
+
+190
+00:08:27,060 --> 00:08:29,370
+verglichen oder ich hacke zum beispiel die
+
+191
+00:08:29,370 --> 00:08:31,770
+besucher ab dann sieht man einfach hier
+
+192
+00:08:31,800 --> 00:08:34,980
+den vergleich von den ganzen daten was
+
+193
+00:08:34,980 --> 00:08:37,440
+mir hier hat haben orkan eben die
+
+194
+00:08:37,440 --> 00:08:40,860
+ganzen daten auch am exportieren hier gibt's
+
+195
+00:08:40,890 --> 00:08:43,440
+unten nochmal so ein button wo es
+
+196
+00:08:43,440 --> 00:08:45,240
+heißt okay möchte die daten in ein
+
+197
+00:08:45,240 --> 00:08:45,600
+anderes
+
+198
+00:08:45,690 --> 00:08:46,950
+format exportieren
+
+199
+00:08:47,520 --> 00:08:49,200
+hier ist es immer ganz gut dass
+
+200
+00:08:49,200 --> 00:08:52,380
+wenn man reports machts an oder dergleichen
+
+201
+00:08:53,190 --> 00:08:55,920
+dem mich meistens tsv also auch an
+
+202
+00:08:55,950 --> 00:08:58,920
+in excel ein gutes format haben und
+
+203
+00:08:58,920 --> 00:09:01,260
+wohl mehr als zeichen levent meistens alle
+
+204
+00:09:02,040 --> 00:09:04,170
+das kann man dann exportieren wenn man
+
+205
+00:09:04,170 --> 00:09:06,690
+das theoretisch weise öfter braucht oder ich
+
+206
+00:09:06,690 --> 00:09:09,570
+möchte zum beispiel arm ist in ein
+
+207
+00:09:09,690 --> 00:09:12,840
+google data studio importieren das geht vielleicht
+
+208
+00:09:12,840 --> 00:09:13,110
+auch
+
+209
+00:09:13,230 --> 00:09:15,540
+mittels einer a p ei arm oder
+
+210
+00:09:15,540 --> 00:09:17,550
+eine schnittstelle dann hat man verschiedene andere
+
+211
+00:09:17,550 --> 00:09:19,980
+formate wie zum beispiel jason und kann
+
+212
+00:09:19,980 --> 00:09:22,560
+sich eine export uhr elf anzeigen seist
+
+213
+00:09:22,560 --> 00:09:25,560
+jedes mal wenn die aufgerufen wird an
+
+214
+00:09:25,620 --> 00:09:29,130
+komme genau diesen reporting exportieren was sie
+
+215
+00:09:29,130 --> 00:09:31,745
+dafür braucht noch ist eine a p
+
+216
+00:09:31,745 --> 00:09:33,270
+ei token dem er sich
+
+217
+00:09:33,390 --> 00:09:35,490
+stellen kann zu damit man die daten
+
+218
+00:09:35,490 --> 00:09:36,150
+lesen kann
+
+219
+00:09:36,810 --> 00:09:39,210
+home musik machen her damit nicht einfach
+
+220
+00:09:39,210 --> 00:09:41,130
+jeder der die uhr l aufruft einfach
+
+221
+00:09:41,130 --> 00:09:43,769
+gleichzeitig meine daten lesen kann sondern man
+
+222
+00:09:43,769 --> 00:09:46,020
+braucht einfach ein schlüssel dafür
+
+223
+00:09:47,040 --> 00:09:50,040
+sie haben die möglichkeit wenn man das
+
+224
+00:09:50,040 --> 00:09:52,230
+jetzt noch grafisch schön machen kann
+
+225
+00:09:53,010 --> 00:09:55,080
+komme einerseits den screenshot machen oder über
+
+226
+00:09:55,080 --> 00:09:56,790
+die möglichkeit bei matomo hier noch ein
+
+227
+00:09:56,820 --> 00:09:59,400
+export bilds er sich zu ziehen und
+
+228
+00:09:59,400 --> 00:10:02,340
+damit der rechten maustaste einfach abzuspeichern ist
+
+229
+00:10:02,340 --> 00:10:05,160
+auch ein nettes feature was man hier
+
+230
+00:10:05,160 --> 00:10:07,500
+hat vielleicht sind dem ein oder anderem
+
+231
+00:10:07,500 --> 00:10:10,350
+jetzt schon mal diese ganzen an textboxen
+
+232
+00:10:10,350 --> 00:10:12,930
+aufgefallen das sind die ganzen anmerk
+
+233
+00:10:13,375 --> 00:10:15,685
+hier hat also wenn man zum beispiel
+
+234
+00:10:15,685 --> 00:10:17,275
+sehr genau sagte ich habe für mich
+
+235
+00:10:17,275 --> 00:10:19,435
+ein website relaunch dann kann ich einfach
+
+236
+00:10:19,795 --> 00:10:22,915
+amt der anmerkung hinterlegen dann habe ich
+
+237
+00:10:22,915 --> 00:10:25,705
+vielleicht einfach auch und sorge kämen was
+
+238
+00:10:25,705 --> 00:10:28,045
+ist denn da passiert die sustain teenager
+
+239
+00:10:28,045 --> 00:10:31,075
+weil sie hier einfachen richtig großer drop
+
+240
+00:10:31,315 --> 00:10:33,505
+an den seitenansichten forst bis zur
+
+241
+00:10:33,535 --> 00:10:36,535
+hälfte herunter bekomme ich mir das einfach
+
+242
+00:10:36,535 --> 00:10:38,515
+mal ansehen wenn ich dich möchte
+
+243
+00:10:42,685 --> 00:10:44,395
+genau das sind die ganzen daten und
+
+244
+00:10:44,425 --> 00:10:46,315
+hier sind die wichtigsten metriken um die
+
+245
+00:10:46,315 --> 00:10:48,955
+schauma das sieht man nochmal an am
+
+246
+00:10:51,025 --> 00:10:54,895
+was der chip sehr cooles in matomo
+
+247
+00:10:54,895 --> 00:10:56,965
+um was dir echt durch matomo zieht
+
+248
+00:10:56,965 --> 00:11:00,115
+ist dieser herr besucher log also ich
+
+249
+00:11:00,115 --> 00:11:03,235
+kann mir theoretisch weise jeden nutzer einfach
+
+250
+00:11:03,235 --> 00:11:07,465
+rausziehen und im detail anschauen also dieser
+
+251
+00:11:07,915 --> 00:11:10,105
+ber besucher log ist sie kinderleicht sehr
+
+252
+00:11:10,105 --> 00:11:10,255
+sehr
+
+253
+00:11:10,285 --> 00:11:13,885
+gut weil ich einfach detaillierte informationen über
+
+254
+00:11:13,885 --> 00:11:17,695
+den nutzer hab hier drinnen oh ich
+
+255
+00:11:17,695 --> 00:11:19,765
+kann auch schauen was er genau macht
+
+256
+00:11:19,975 --> 00:11:21,955
+was er genau macht des zeichens jetzt
+
+257
+00:11:21,955 --> 00:11:25,645
+wirklich mal auf der ham anderen seite
+
+258
+00:11:25,645 --> 00:11:28,437
+hier in dem bereich an ich habe
+
+259
+00:11:28,437 --> 00:11:30,415
+jetzt die möglichkeit selbst jetzt einerseits
+
+260
+00:11:30,505 --> 00:11:34,255
+woher kommt der nutzer hier die ip-adresse
+
+261
+00:11:34,255 --> 00:11:37,675
+anonymisiert je nachdem was sie für einstellungen
+
+262
+00:11:37,675 --> 00:11:40,735
+hier gegeben habt und sehe einfach auch
+
+263
+00:11:40,735 --> 00:11:44,485
+des gerätes betriebssystem und wie er auf
+
+264
+00:11:44,485 --> 00:11:46,555
+meine webseite kommen es hier sieht man
+
+265
+00:11:46,555 --> 00:11:49,435
+die kampagne sap p p c pay
+
+266
+00:11:49,435 --> 00:11:50,095
+per click
+
+267
+00:11:50,575 --> 00:11:52,645
+abend wie ist es passiert oder wie
+
+268
+00:11:52,645 --> 00:11:54,595
+kann man das machen das ist mein
+
+269
+00:11:54,607 --> 00:11:56,187
+matomo ich auch ganz gut es gibt
+
+270
+00:11:56,187 --> 00:11:58,225
+doch in google analytics zum beispiel den
+
+271
+00:11:58,255 --> 00:12:00,355
+u l bilder so dass ich der
+
+272
+00:12:00,355 --> 00:12:02,875
+diverse sachen wie die quelle des medium
+
+273
+00:12:02,876 --> 00:12:04,495
+einfach überschreiben kann er sie hier ist
+
+274
+00:12:04,495 --> 00:12:07,165
+zum beispiel einfach haben die quelle google
+
+275
+00:12:07,165 --> 00:12:10,405
+earth überschrieben worden o und des medium
+
+276
+00:12:10,405 --> 00:12:10,735
+sc
+
+277
+00:12:10,765 --> 00:12:14,545
+pc hatte er post per click und
+
+278
+00:12:14,545 --> 00:12:16,795
+diese einfache google ads anzeige über die
+
+279
+00:12:16,975 --> 00:12:19,825
+der der nutzer ihr gekommenes zum verstehe
+
+280
+00:12:19,825 --> 00:12:22,615
+dies eventuell playing cards ist einfach der
+
+281
+00:12:22,615 --> 00:12:25,555
+erste einstiegspunkt sind sieht man wo ganz
+
+282
+00:12:25,555 --> 00:12:27,265
+gut er hat sich einfach mal durch
+
+283
+00:12:27,265 --> 00:12:30,475
+die konzern an die ganzen seiten durchgeklickt
+
+284
+00:12:30,475 --> 00:12:30,825
+ist dann
+
+285
+00:12:30,985 --> 00:12:33,655
+bei einem produkt hängengeblieben und ist dann
+
+286
+00:12:33,655 --> 00:12:38,155
+einfach auch wieder ausgestiegen haben es gibt
+
+287
+00:12:38,155 --> 00:12:40,945
+dann auch noch zum abschied direkte zugriffe
+
+288
+00:12:40,945 --> 00:12:43,495
+hier in dem bereich oder vielleicht auch
+
+289
+00:12:43,495 --> 00:12:47,312
+zugriff über andere suchmaschinen wie ecosia oh
+
+290
+00:12:47,312 --> 00:12:50,275
+und dieses feature ist ich finds einfach
+
+291
+00:12:50,275 --> 00:12:50,995
+wirklich sehr
+
+292
+00:12:51,055 --> 00:12:52,495
+gut weil man sich das alles im
+
+293
+00:12:52,495 --> 00:12:54,871
+detail sehr gut ansehen kann wenn man
+
+294
+00:12:54,871 --> 00:12:57,055
+letzt auch noch auf werben besucher profil
+
+295
+00:12:57,055 --> 00:12:59,455
+ansehen klickt hat man noch die möglichkeit
+
+296
+00:12:59,455 --> 00:13:02,095
+zu schauen an deutsche sitzen nicht der
+
+297
+00:13:02,095 --> 00:13:05,035
+fall haben wenn der nutzer zum beispiel
+
+298
+00:13:05,335 --> 00:13:08,035
+öfter auf die seite gekommen es schon
+
+299
+00:13:08,065 --> 00:13:11,095
+mal ganz kurz hammer hier jemanden
+
+300
+00:13:13,135 --> 00:13:14,725
+hiermit keine aktionen
+
+301
+00:13:15,925 --> 00:13:19,705
+dort leider nicht an was jetzt vor
+
+302
+00:13:19,705 --> 00:13:21,835
+allem gesehen haben m fach der nutzer
+
+303
+00:13:21,835 --> 00:13:23,965
+steigt auf die seite ein und wenn
+
+304
+00:13:23,965 --> 00:13:27,415
+ein seitenaufruf stattgefunden hat sieht man des
+
+305
+00:13:27,415 --> 00:13:29,605
+abends zum beispiel an diesen ordner symbol
+
+306
+00:13:29,605 --> 00:13:32,515
+es gibt doch verschiedene andere haptik kategorien
+
+307
+00:13:32,515 --> 00:13:35,125
+von events die einfach durchgeführt werden können
+
+308
+00:13:35,695 --> 00:13:38,935
+zum beispiel eine interne suche beschert der
+
+309
+00:13:38,995 --> 00:13:43,345
+nutzer einfach finds oben eingegeben oder zum
+
+310
+00:13:43,345 --> 00:13:46,015
+beispiel checkout forum also wenn jemandem form
+
+311
+00:13:46,165 --> 00:13:48,745
+due stattgefunden hat dann wird es hier
+
+312
+00:13:48,745 --> 00:13:52,255
+einfacher mit ausgegeben haben die ganze e-commerce
+
+313
+00:13:52,255 --> 00:13:54,835
+tracking also wenn ein warenkorb wirbt der
+
+314
+00:13:54,835 --> 00:13:55,855
+vorher gefüllt wurde
+
+315
+00:13:55,885 --> 00:14:00,205
+der einfach abgebrochen wurde und die band
+
+316
+00:14:00,295 --> 00:14:02,725
+the band ist eigentlich fast dasselbe pandora
+
+317
+00:14:02,725 --> 00:14:05,935
+wie bei google analytics bekommt zusätzliche daten
+
+318
+00:14:06,265 --> 00:14:09,235
+haben noch mit zehnten an matomo selbst
+
+319
+00:14:09,475 --> 00:14:11,275
+die man dann später auch alle aus
+
+320
+00:14:11,365 --> 00:14:12,085
+merken kann
+
+321
+00:14:14,005 --> 00:14:14,515
+so
+
+322
+00:14:16,855 --> 00:14:18,805
+dann schau mal einfach mal weiter gut
+
+323
+00:14:18,805 --> 00:14:20,905
+die echtzeit echtzeit berichte sind immer ganz
+
+324
+00:14:20,905 --> 00:14:22,375
+nett sieht man mal wenn oben was
+
+325
+00:14:22,375 --> 00:14:26,545
+reinkommt elisabeth findet detaillierte analyse eventuell nicht
+
+326
+00:14:26,545 --> 00:14:31,045
+so zielführend die besucher karte in echtzeit
+
+327
+00:14:31,045 --> 00:14:32,575
+ist auch ein nettes feature wo man
+
+328
+00:14:32,575 --> 00:14:34,735
+einfach mal vize woher kommen denn die
+
+329
+00:14:34,735 --> 00:14:35,665
+ganzen nutzer
+
+330
+00:14:35,965 --> 00:14:39,835
+auf meiner webseite interessanter wird's dann wirklich
+
+331
+00:14:39,835 --> 00:14:42,265
+mit dem orte bericht hier sieht man
+
+332
+00:14:42,265 --> 00:14:46,495
+verschiedene an widgets zum beispiel kann ich
+
+333
+00:14:46,525 --> 00:14:48,535
+sie auch direkt reingehen in die vereinigten
+
+334
+00:14:48,535 --> 00:14:51,415
+staaten und mit der mouse over sehe
+
+335
+00:14:51,415 --> 00:14:53,875
+ich dann einfach auch an wie besucher
+
+336
+00:14:53,905 --> 00:14:55,855
+wirklich aus den vereinigten staaten kam
+
+337
+00:14:55,855 --> 00:14:58,615
+man steckt sich dann eh mit diesen
+
+338
+00:14:59,035 --> 00:15:01,945
+hahn bereich hier rechts o und ich
+
+339
+00:15:01,945 --> 00:15:04,375
+zeige euch nochmal was an hier sieht
+
+340
+00:15:04,375 --> 00:15:06,625
+man jeweils immer noch bei den ganzen
+
+341
+00:15:06,625 --> 00:15:10,975
+metriken immer ein segmentierte besucher log öffnen
+
+342
+00:15:10,975 --> 00:15:13,135
+es heißt ihre besucher log wie ich
+
+343
+00:15:13,135 --> 00:15:14,875
+vorhin schon erzählt habe der zieht sich
+
+344
+00:15:14,875 --> 00:15:16,015
+durch ganz matomo
+
+345
+00:15:16,015 --> 00:15:17,785
+jetzt habe ich hier einfach den besucher
+
+346
+00:15:17,785 --> 00:15:20,965
+log wirklich gefiltert auf die vereinigten staaten
+
+347
+00:15:20,965 --> 00:15:25,015
+von amerika am und kommentiert dir detailliert
+
+348
+00:15:25,015 --> 00:15:27,505
+ganz gut aus werten somit muss jetzt
+
+349
+00:15:27,505 --> 00:15:30,025
+nicht vorher irgendwie was er im detail
+
+350
+00:15:30,025 --> 00:15:33,925
+segmentieren sondern nimm einfach schon die vorgefertigten
+
+351
+00:15:34,075 --> 00:15:36,175
+pigmente jetzt mal von matomo zum beispiel
+
+352
+00:15:36,175 --> 00:15:37,435
+dass der der sitzt auf dem land
+
+353
+00:15:37,435 --> 00:15:41,095
+fehlt nimmt er rund contest komplett dann
+
+354
+00:15:41,095 --> 00:15:42,175
+auch auswerten
+
+355
+00:15:43,135 --> 00:15:46,225
+direct gerät laptop der es auch sehr
+
+356
+00:15:46,225 --> 00:15:49,075
+umfangreich umfangreiche sorge jetzt mal so wie
+
+357
+00:15:49,075 --> 00:15:51,415
+in analytik für sie wir haben hier
+
+358
+00:15:51,445 --> 00:15:55,585
+neben desktop tablet und smartphone haben wir
+
+359
+00:15:55,585 --> 00:15:58,555
+noch verschiedene andre amt geräte zum beispiel
+
+360
+00:15:58,555 --> 00:16:01,435
+spielekonsolen haben die zum beispiel auf die
+
+361
+00:16:01,435 --> 00:16:02,785
+webseite kommen
+
+362
+00:16:03,115 --> 00:16:05,845
+hier als verweis trafik zum beispiel von
+
+363
+00:16:05,875 --> 00:16:09,505
+rettet direkt drauf auf die webseite an
+
+364
+00:16:09,685 --> 00:16:13,255
+weil spielekonsole es ist auch ein interessantes
+
+365
+00:16:13,255 --> 00:16:16,345
+feature erdmann und auch noch mehr informationen
+
+366
+00:16:16,345 --> 00:16:20,605
+natürlich geräte modelle an kommen hier auch
+
+367
+00:16:20,635 --> 00:16:23,215
+komplett auswerten die marken ja
+
+368
+00:16:23,215 --> 00:16:24,805
+je nachdem ob er es schafft oder
+
+369
+00:16:24,805 --> 00:16:27,505
+nicht wenn unbekanntesten gibt sie einfach doch
+
+370
+00:16:27,530 --> 00:16:30,655
+keine zuordnung in matomo in dem bereich
+
+371
+00:16:30,955 --> 00:16:33,025
+was auch ganz gut ist für aben
+
+372
+00:16:33,745 --> 00:16:36,595
+für response design aber man kann sich
+
+373
+00:16:36,595 --> 00:16:38,785
+auch schon mal hier anschauen wieviel nutzer
+
+374
+00:16:38,785 --> 00:16:42,055
+greifenden mit welcher auflösung zu gleich auch
+
+375
+00:16:42,295 --> 00:16:43,375
+eine ganz gute
+
+376
+00:16:43,405 --> 00:16:44,215
+metrik
+
+377
+00:16:45,595 --> 00:16:48,685
+software die wahrscheinlich jetzt nur dafür da
+
+378
+00:16:48,685 --> 00:16:50,515
+das netz aber mal schauen kann einfach
+
+379
+00:16:50,545 --> 00:16:52,195
+im browser support muss ich denn als
+
+380
+00:16:52,195 --> 00:16:55,945
+webseitenbetreiber anbieten noch muss ich dennoch hergehen
+
+381
+00:16:55,945 --> 00:16:58,915
+und sorgen kärcher b den internet-explorer muss
+
+382
+00:16:58,915 --> 00:17:02,155
+ich da eventuell noch eine uralt version
+
+383
+00:17:02,335 --> 00:17:05,454
+mit anbieten haben ist ein nettes feature
+
+384
+00:17:07,675 --> 00:17:10,013
+die zeiten da gibt's über zwei sachen
+
+385
+00:17:10,015 --> 00:17:11,395
+arm es gibt aber auch den besuch
+
+386
+00:17:11,395 --> 00:17:13,375
+nach lokaler zeit es heißt nehme an
+
+387
+00:17:13,375 --> 00:17:14,994
+mein server steht jetzt in new york
+
+388
+00:17:14,994 --> 00:17:18,474
+und nicht greifen um acht uhr mitteleuropäische
+
+389
+00:17:18,474 --> 00:17:20,994
+sommerzeit dorf zu dann wär ich wahrscheinlich
+
+390
+00:17:20,994 --> 00:17:23,875
+hier reingeht trackt an ich server zeit
+
+391
+00:17:23,875 --> 00:17:25,615
+kann dabei eine ganz andere sein
+
+392
+00:17:26,005 --> 00:17:28,968
+zum beispiel hier es ich sehr nutzt
+
+393
+00:17:28,975 --> 00:17:30,805
+er nützlich wenn man sorgt okay man
+
+394
+00:17:30,816 --> 00:17:33,655
+hat auch hohe serverlast für mehrere zeitzonen
+
+395
+00:17:33,655 --> 00:17:35,575
+vielleicht dann über eins das heißt du
+
+396
+00:17:35,575 --> 00:17:38,125
+kim morgen habe ich viel traffic und
+
+397
+00:17:38,155 --> 00:17:40,615
+abends habe ich viel traffic für den
+
+398
+00:17:40,615 --> 00:17:42,775
+server in verschiedenen zeitzone ist es zum
+
+399
+00:17:42,775 --> 00:17:45,775
+beispiel dann geballter traffic auf server zu
+
+400
+00:17:45,775 --> 00:17:47,935
+zeit das wirst es immer die zeit
+
+401
+00:17:47,935 --> 00:17:49,615
+wo der nutzer auf die seite schaut
+
+402
+00:17:49,615 --> 00:17:51,565
+und dessous weiß wo der server den
+
+403
+00:17:51,565 --> 00:17:53,785
+standort hat und wo da eben der
+
+404
+00:17:53,785 --> 00:17:55,555
+aufruf dann auch generiert wird
+
+405
+00:17:57,625 --> 00:18:02,035
+falls ihr zum beispiel am webseitenbetreiber seitz
+
+406
+00:18:02,309 --> 00:18:04,915
+und ihr obliegenden onlineshop muss ich nütze
+
+407
+00:18:04,945 --> 00:18:08,065
+registrieren können gibt es die möglichkeit dem
+
+408
+00:18:08,125 --> 00:18:11,125
+die benutzer all dies direkt mitzugeben
+
+409
+00:18:11,695 --> 00:18:13,525
+ob süß d g v o technisch
+
+410
+00:18:13,525 --> 00:18:15,265
+in ordnung ist oder nicht es kann
+
+411
+00:18:15,265 --> 00:18:17,395
+euch jetzt leider hier nicht beantworten aber
+
+412
+00:18:17,845 --> 00:18:19,645
+es ist möglich dass man mich per
+
+413
+00:18:19,645 --> 00:18:22,495
+e-mail adressen oder abend user stream hier
+
+414
+00:18:22,525 --> 00:18:24,712
+noch mitgibt erlaubt mir die möglichkeit und
+
+415
+00:18:24,712 --> 00:18:27,535
+kann sich zum beispiel anschauen an was
+
+416
+00:18:27,655 --> 00:18:31,465
+hat denn big tank hier für besuche
+
+417
+00:18:31,465 --> 00:18:31,855
+profi
+
+418
+00:18:31,855 --> 00:18:33,865
+viel zu besteht schon sehr oft hier
+
+419
+00:18:33,865 --> 00:18:37,075
+draufgekommen arm auf die webseite oh unser
+
+420
+00:18:37,075 --> 00:18:40,555
+sonnensegel er sich überhaupt angesehen es echt
+
+421
+00:18:40,705 --> 00:18:42,925
+sehr gut was man da einfach mit
+
+422
+00:18:42,925 --> 00:18:44,845
+dabei hat falls er den shop pott
+
+423
+00:18:44,845 --> 00:18:46,705
+komma des gebündelt mitgeben
+
+424
+00:18:47,845 --> 00:18:50,395
+man kann auch noch verschiedene andere variablen
+
+425
+00:18:50,395 --> 00:18:51,175
+mitgeben
+
+426
+00:18:51,775 --> 00:18:54,595
+ähm lebemann mache den blog und hat
+
+427
+00:18:54,595 --> 00:18:58,465
+verschiedene autoren und begonnen auf per dass
+
+428
+00:18:58,465 --> 00:19:00,085
+man könnte cs jetzt auch noch per
+
+429
+00:19:00,115 --> 00:19:02,095
+indem man des trackings schritt von matomo
+
+430
+00:19:02,095 --> 00:19:03,415
+noch etwas anpasst
+
+431
+00:19:04,015 --> 00:19:06,535
+ahm wie das geht findet man meistens
+
+432
+00:19:06,535 --> 00:19:08,845
+immer hier unter den hilfe artikel es
+
+433
+00:19:08,845 --> 00:19:10,495
+ist immer sehr gut wenn mama nicht
+
+434
+00:19:10,495 --> 00:19:13,135
+weiß welche was soll das für metrik
+
+435
+00:19:13,147 --> 00:19:15,565
+sein um was geht's da hat man
+
+436
+00:19:15,565 --> 00:19:17,905
+die möglichkeit sich das immer hier entweder
+
+437
+00:19:17,905 --> 00:19:21,085
+durch mouse over arm anzuzeigen oder sich
+
+438
+00:19:21,085 --> 00:19:24,175
+die dokumentation oder eine anleitung anzuschauen
+
+439
+00:19:24,655 --> 00:19:27,235
+es muss meinen trackingcode mitgeben heißt wenn
+
+440
+00:19:27,235 --> 00:19:30,445
+ich im blogpost aufruf und deshalb ein
+
+441
+00:19:30,445 --> 00:19:33,265
+gewisser autor geschrieben zum beispiel der charles
+
+442
+00:19:33,565 --> 00:19:35,455
+arm dann wird es neben der uhr
+
+443
+00:19:35,455 --> 00:19:37,765
+l den taipeh und und und einfach
+
+444
+00:19:37,765 --> 00:19:41,695
+noch mitgegeben als benutzerdefinierte variable ist aicha
+
+445
+00:19:41,721 --> 00:19:43,645
+sehr gut der a
+
+446
+00:19:43,855 --> 00:19:45,805
+tauche wie man zum beispiel seine daten
+
+447
+00:19:45,835 --> 00:19:50,665
+mit noch anreichern könnte an genau das
+
+448
+00:19:50,665 --> 00:19:52,585
+wär's jetzt mal hier zu dem teil
+
+449
+00:19:52,585 --> 00:19:55,309
+zu dem besucher teil am ob dir
+
+450
+00:19:55,435 --> 00:19:58,825
+vielleicht irgendwie schon fragen in dem bereich
+
+451
+00:19:59,335 --> 00:20:02,065
+hessens schaue ich einfach mal weiter es
+
+452
+00:20:02,065 --> 00:20:03,565
+ist uns fragen immer gern
+
+453
+00:20:04,135 --> 00:20:07,315
+stellen sonst käme einfach mal weiter und
+
+454
+00:20:07,315 --> 00:20:08,965
+schauen es noch die zwei anderen berichte
+
+455
+00:20:08,965 --> 00:20:12,535
+an nämlich mal das verhalten beim verhalten
+
+456
+00:20:12,535 --> 00:20:14,785
+geht's wirklich darum um die seite selbst
+
+457
+00:20:15,355 --> 00:20:18,445
+an hier haben wir einfach die wichtigsten
+
+458
+00:20:18,445 --> 00:20:24,025
+metriken seitenansichten eindeutige seitenansichten zwei metriken
+
+459
+00:20:24,625 --> 00:20:26,845
+so verschieden näher natürlicher kann in einer
+
+460
+00:20:26,845 --> 00:20:29,245
+sitzung zum beispiel eine seite über fünf
+
+461
+00:20:29,245 --> 00:20:32,875
+mal aufrufen dann habe ich eine seitenansichten
+
+462
+00:20:32,905 --> 00:20:35,875
+vom fünf und eindeutig eins welcher des
+
+463
+00:20:35,875 --> 00:20:38,545
+einfach in der sechshundert einmal aufgerufen habe
+
+464
+00:20:39,025 --> 00:20:41,725
+und die ganzen armen metriken wie absprungrate
+
+465
+00:20:41,725 --> 00:20:43,975
+und wie lang bleibt man den durchschnittlich
+
+466
+00:20:44,215 --> 00:20:44,785
+auf die
+
+467
+00:20:44,785 --> 00:20:45,565
+zur seite
+
+468
+00:20:47,095 --> 00:20:49,345
+hier sieht man einfach die gebündelt anhand
+
+469
+00:20:49,345 --> 00:20:51,773
+von der ordnerstruktur des heiß dann wenn
+
+470
+00:20:51,773 --> 00:20:53,635
+ich jetzt hier einfach mal drauf schau
+
+471
+00:20:53,635 --> 00:20:56,275
+dann ist es einfach slash timing flash
+
+472
+00:20:56,275 --> 00:20:58,898
+und alles was dahinter passiert das ist
+
+473
+00:20:58,939 --> 00:21:01,585
+eigentlich so wie der bericht in analytics
+
+474
+00:21:01,585 --> 00:21:05,365
+noch content zeiten bentley einem jetzt nicht
+
+475
+00:21:05,365 --> 00:21:06,775
+gefällt kann man
+
+476
+00:21:06,865 --> 00:21:09,505
+ganz nach unten gehen und sagen okay
+
+477
+00:21:09,565 --> 00:21:14,485
+an ich möchte gerne diesen nicht hierarchisch
+
+478
+00:21:14,485 --> 00:21:16,705
+strukturiert nicht mit ist einfach gerne flach
+
+479
+00:21:16,705 --> 00:21:18,683
+angezeigt haben so flach heißt dann noch
+
+480
+00:21:18,683 --> 00:21:21,655
+die erste ebene haben oder jede seite
+
+481
+00:21:21,656 --> 00:21:24,355
+duell wird dann im detail einfach angezeigt
+
+482
+00:21:25,015 --> 00:21:26,845
+und jetzt hab ich doch hier die
+
+483
+00:21:26,845 --> 00:21:30,115
+einzelnen seiten konsumieren natürlich auch mal aufrufen
+
+484
+00:21:30,115 --> 00:21:33,985
+wenn ich hier drauf geh am boden
+
+485
+00:21:33,985 --> 00:21:36,595
+top dann auch gleich meine seite parat
+
+486
+00:21:37,315 --> 00:21:39,385
+die eins schick seiten sind die landing
+
+487
+00:21:39,415 --> 00:21:42,535
+pages dies ist einfach so aber ihr
+
+488
+00:21:42,535 --> 00:21:44,095
+geht es einfach darum wie kommt der
+
+489
+00:21:44,095 --> 00:21:45,505
+nutzer auf die seite was ist die
+
+490
+00:21:45,505 --> 00:21:48,265
+erste seite an opf wenn auf eure
+
+491
+00:21:48,265 --> 00:21:50,695
+seite kommt und genau das sind dann
+
+492
+00:21:50,695 --> 00:21:53,845
+die seiten die unter einstieg seiten aufgelistet
+
+493
+00:21:53,845 --> 00:21:57,085
+werden anders wiederum ausstieg seiten
+
+494
+00:21:57,745 --> 00:22:00,655
+wahrscheinlich kann man sich schon denken sind
+
+495
+00:22:00,655 --> 00:22:02,755
+die seiten wo einfach noch wenn es
+
+496
+00:22:02,755 --> 00:22:04,435
+die konfig sitzung zum durchriss um wo
+
+497
+00:22:04,435 --> 00:22:06,745
+man dann einfach aufgehört das heißt brause
+
+498
+00:22:06,745 --> 00:22:09,385
+schließen ist dann die ausstieg seite
+
+499
+00:22:10,495 --> 00:22:13,945
+wenn man sicher mit den us your
+
+500
+00:22:14,005 --> 00:22:17,211
+limits mit doctor who elf möchte ich
+
+501
+00:22:17,211 --> 00:22:18,775
+jetzt nicht mehr anschauen ich möchte ein
+
+502
+00:22:18,775 --> 00:22:20,275
+wunder den titel sehen dann ob mir
+
+503
+00:22:20,275 --> 00:22:22,135
+hier den titel da ist aber hält
+
+504
+00:22:22,135 --> 00:22:24,235
+immer ganz wichtig mir ob ich am
+
+505
+00:22:24,265 --> 00:22:26,755
+ende den titel einmal dann euch hier
+
+506
+00:22:26,760 --> 00:22:29,635
+zum beispiel zweimal cart a und den
+
+507
+00:22:29,635 --> 00:22:30,625
+online titel müsst
+
+508
+00:22:30,715 --> 00:22:32,005
+die dann wieder kombinieren
+
+509
+00:22:32,785 --> 00:22:34,795
+deswegen ist die uhr l zum auswerten
+
+510
+00:22:34,795 --> 00:22:37,675
+eigentlich am sehr gut und sehr wichtig
+
+511
+00:22:37,675 --> 00:22:39,865
+das modell einfach wirklich ur l passiert
+
+512
+00:22:39,895 --> 00:22:40,495
+macht
+
+513
+00:22:41,695 --> 00:22:43,949
+die ideale ufer des comer auch indem
+
+514
+00:22:43,949 --> 00:22:47,605
+man zum beispiel des anpasst einerseits des
+
+515
+00:22:47,605 --> 00:22:49,915
+trackings gibt andererseits kann ich in den
+
+516
+00:22:49,915 --> 00:22:52,165
+einstellungen reingehen und sagen ich möchte so
+
+517
+00:22:52,525 --> 00:22:55,015
+gängige parameter in wordpress ist es glaube
+
+518
+00:22:55,015 --> 00:22:58,375
+ich s oder q an die anhängen
+
+519
+00:22:58,885 --> 00:23:01,225
+und dann wird einfach bis dahinter dessen
+
+520
+00:23:01,405 --> 00:23:01,825
+was wenn man
+
+521
+00:23:02,035 --> 00:23:05,155
+wordpress sucht irgendwo server zum beispiel hier
+
+522
+00:23:05,545 --> 00:23:08,665
+flowers am und dann enter drück dann
+
+523
+00:23:08,665 --> 00:23:10,945
+ist es wirklich im an in der
+
+524
+00:23:10,945 --> 00:23:12,505
+ur l einfach dies ist ein es
+
+525
+00:23:12,505 --> 00:23:14,695
+ist gleich flowers und des nach dem
+
+526
+00:23:14,695 --> 00:23:16,945
+ist gleich wird dann hier direkt kommt
+
+527
+00:23:16,945 --> 00:23:17,665
+es dann rein
+
+528
+00:23:18,805 --> 00:23:22,315
+abende sind die suchbegriffe und wenn man
+
+529
+00:23:22,315 --> 00:23:24,145
+zum beispiel sucht wird dann einfach auch
+
+530
+00:23:24,145 --> 00:23:27,865
+geschaut was passiert denn danach ist ganz
+
+531
+00:23:27,865 --> 00:23:29,695
+gut vielleicht als kleiner s c o
+
+532
+00:23:29,695 --> 00:23:32,335
+tipp am leben lässt wird sehr oft
+
+533
+00:23:32,335 --> 00:23:34,045
+was gesucht und jetzt es nicht im
+
+534
+00:23:34,045 --> 00:23:36,355
+menü drin lohnt es sich vielleicht diese
+
+535
+00:23:36,355 --> 00:23:38,305
+seite prominente hervorzuheben
+
+536
+00:23:38,695 --> 00:23:42,265
+bekommt eventuell auch auf neue keyboards was
+
+537
+00:23:42,265 --> 00:23:44,185
+man vielleicht noch nicht bedacht hat was
+
+538
+00:23:44,185 --> 00:23:46,975
+man vielleicht in gewissen unterseiten dann integrieren
+
+539
+00:23:47,095 --> 00:23:47,605
+kann
+
+540
+00:23:48,685 --> 00:23:51,145
+was auch sehr cooles feature ist dafür
+
+541
+00:23:51,145 --> 00:23:53,665
+müsst ihr aber auch an die technik
+
+542
+00:23:53,665 --> 00:23:56,215
+fragen ob es implementiert wird es ist
+
+543
+00:23:56,215 --> 00:23:59,155
+einfach für ein zusätzliches kohl was passiert
+
+544
+00:23:59,185 --> 00:24:01,675
+wenn der nutzer muss sucht und es
+
+545
+00:24:01,675 --> 00:24:04,675
+kommen einfach null ergebnisse wenn es auch
+
+546
+00:24:04,675 --> 00:24:07,075
+zu oft vorkommt um einfach dafür neue
+
+547
+00:24:07,075 --> 00:24:08,485
+seite anlegen
+
+548
+00:24:09,055 --> 00:24:10,945
+dieses motto mache ich sehr gut bekomme
+
+549
+00:24:10,945 --> 00:24:12,955
+auch mal reingehen und sich das komplette
+
+550
+00:24:12,955 --> 00:24:13,825
+mal anschauen
+
+551
+00:24:15,025 --> 00:24:17,695
+in dem bereich wenn man es her
+
+552
+00:24:17,695 --> 00:24:20,273
+geht's ab in den settings einfach seine
+
+553
+00:24:20,275 --> 00:24:22,675
+am domain hinterlegt dann ob man die
+
+554
+00:24:22,675 --> 00:24:25,675
+möglichkeit auch zu schauen wo gehen die
+
+555
+00:24:25,675 --> 00:24:27,835
+nutzer denn danach hin das was es
+
+556
+00:24:27,847 --> 00:24:29,905
+der nächste klick dieses gibt der click
+
+557
+00:24:29,905 --> 00:24:33,295
+tracking auf externe domains hier ist zum
+
+558
+00:24:33,295 --> 00:24:34,705
+beispiel live board
+
+559
+00:24:35,755 --> 00:24:36,985
+oh und ich aber eben auch die
+
+560
+00:24:36,985 --> 00:24:40,552
+möglichkeit jedes mal auszuklappen wende ist es
+
+561
+00:24:40,555 --> 00:24:42,835
+jetzt wieder domain passiert wenn es zum
+
+562
+00:24:42,835 --> 00:24:43,975
+beispiel öfter
+
+563
+00:24:45,025 --> 00:24:47,665
+da also verschiedene uelzen einer domain sind
+
+564
+00:24:47,725 --> 00:24:49,495
+wieder gruppiert ich konnte es natürlich auch
+
+565
+00:24:49,495 --> 00:24:52,105
+wieder flach und zeigen lassen nicht hierarchisch
+
+566
+00:24:52,585 --> 00:24:54,265
+am oh und ich arbeite einfach dann
+
+567
+00:24:54,265 --> 00:24:58,315
+auch die möglichkeit zu schauen hier jetzt
+
+568
+00:24:58,315 --> 00:25:01,013
+im detail an wo wurde denn dieser
+
+569
+00:25:01,013 --> 00:25:02,575
+link geklickt dass es hier immer ein
+
+570
+00:25:02,575 --> 00:25:05,185
+link klick an uns
+
+571
+00:25:05,305 --> 00:25:07,495
+es wurde gleichzeitig auch noch als ziel
+
+572
+00:25:07,495 --> 00:25:10,255
+hinterlegt das habe ich auch eine tolle
+
+573
+00:25:10,255 --> 00:25:10,765
+sache
+
+574
+00:25:11,815 --> 00:25:13,705
+ist vielleicht auch ganz gut levan motzt
+
+575
+00:25:13,705 --> 00:25:16,465
+gewisse partner und sorgte kevin du konstant
+
+576
+00:25:16,495 --> 00:25:19,675
+banner bei uns einbinden nochmal gleichzeitig eine
+
+577
+00:25:19,675 --> 00:25:21,655
+statistik wie oft wurde zum beispiel ein
+
+578
+00:25:21,655 --> 00:25:24,925
+banner zum externen partner geklickt falls man
+
+579
+00:25:24,925 --> 00:25:25,825
+es benötigt
+
+580
+00:25:27,085 --> 00:25:30,085
+download tracking gibt's auch on the fly
+
+581
+00:25:30,175 --> 00:25:33,505
+an es heißt es wird einfach geschaut
+
+582
+00:25:33,505 --> 00:25:36,085
+an ist es r pdf
+
+583
+00:25:36,625 --> 00:25:39,265
+doc x auch j pax je nachdem
+
+584
+00:25:39,325 --> 00:25:42,715
+kann auch weitere hinzufügen im tracking codes
+
+585
+00:25:42,745 --> 00:25:44,755
+o und dann werden einfach die downloads
+
+586
+00:25:44,755 --> 00:25:47,005
+getrackt da ist es wichtig zu wissen
+
+587
+00:25:47,005 --> 00:25:50,665
+dass ein download tracking an das ist
+
+588
+00:25:50,665 --> 00:25:51,685
+jetzt nicht so was ist wenn ich
+
+589
+00:25:51,685 --> 00:25:54,775
+diese uhr l direkt aufrufen würde damit
+
+590
+00:25:54,775 --> 00:25:56,485
+es eben nicht getrackt gecrackte warum wirds
+
+591
+00:25:56,485 --> 00:25:56,725
+nicht
+
+592
+00:25:56,845 --> 00:26:01,045
+trakt am weil kein javascript-code in einem
+
+593
+00:26:01,555 --> 00:26:04,105
+inneren bild zum beispiel ausgeführt werden kann
+
+594
+00:26:04,106 --> 00:26:06,895
+oder in einem pdf eigentlich auch nicht
+
+595
+00:26:07,195 --> 00:26:09,295
+und deswegen wird nicht der aufruf gedrechselt
+
+596
+00:26:09,475 --> 00:26:11,845
+nur der klick zu dem dokument auf
+
+597
+00:26:11,845 --> 00:26:14,785
+der webseite ist ich auch ganz gut
+
+598
+00:26:14,785 --> 00:26:16,015
+oder wichtig zu wissen
+
+599
+00:26:16,945 --> 00:26:18,565
+in dem bereich vorhin hat man die
+
+600
+00:26:18,595 --> 00:26:21,115
+ereignisse des heißen hat events was er
+
+601
+00:26:21,170 --> 00:26:24,775
+zusätzlich noch mitsenden kann in dem bereich
+
+602
+00:26:24,775 --> 00:26:27,385
+an hier wurde zum beispiel click tracking
+
+603
+00:26:27,385 --> 00:26:30,655
+noch mit integriert als event kategorie so
+
+604
+00:26:31,015 --> 00:26:32,515
+dass back to top man kann sich
+
+605
+00:26:32,515 --> 00:26:35,125
+das wieder mit dem segment a mit
+
+606
+00:26:35,125 --> 00:26:37,105
+dem segmentierten besuchern
+
+607
+00:26:37,105 --> 00:26:40,162
+log anschauen wo ist denn das ungefähre
+
+608
+00:26:40,225 --> 00:26:42,895
+zum beispiel auf diese register seite gibt's
+
+609
+00:26:42,895 --> 00:26:45,505
+einfach anscheinend ein back to top button
+
+610
+00:26:45,955 --> 00:26:48,955
+dem man tracken kann zur click tracking
+
+611
+00:26:48,985 --> 00:26:50,965
+lässt sich dann meistens immer ganz gut
+
+612
+00:26:50,965 --> 00:26:52,945
+mit dem matomo tag manager machen wenn
+
+613
+00:26:52,945 --> 00:26:56,185
+der integriert ist gibson auch schon gute
+
+614
+00:26:56,185 --> 00:26:57,265
+vorlagen wie man
+
+615
+00:26:57,295 --> 00:26:58,705
+es auch machen kann
+
+616
+00:27:00,145 --> 00:27:02,965
+an wir schauen uns genau die inhalte
+
+617
+00:27:02,965 --> 00:27:06,325
+anlass inhalte dann auch nochmal inhalts bereiche
+
+618
+00:27:06,745 --> 00:27:08,755
+die man hier mit angeben kann ist
+
+619
+00:27:08,815 --> 00:27:10,855
+auch ein gutes feature muss man aber
+
+620
+00:27:10,885 --> 00:27:13,525
+auch vorher definieren
+
+621
+00:27:14,815 --> 00:27:17,575
+ganz gut schauen ist es noch n
+
+622
+00:27:17,575 --> 00:27:19,615
+k a comment on definiert alles um
+
+623
+00:27:19,615 --> 00:27:24,175
+metriken durchschnittliche verweildauer a wie wir aktionen
+
+624
+00:27:24,175 --> 00:27:27,085
+wurden denn überhaupt durchgeführt ja wie oft
+
+625
+00:27:27,085 --> 00:27:29,485
+kommt ein gewisser nutzer wieder auf die
+
+626
+00:27:29,485 --> 00:27:32,245
+seite an die die seiten werden nicht
+
+627
+00:27:32,336 --> 00:27:34,165
+im schnitt angesehen das sind alles so
+
+628
+00:27:34,255 --> 00:27:37,135
+metriken die muss ich doch gerne gebündelt
+
+629
+00:27:37,135 --> 00:27:38,035
+anschauen kann
+
+630
+00:27:39,475 --> 00:27:42,265
+oh und wir schauen uns jetzt mal
+
+631
+00:27:43,405 --> 00:27:46,195
+den zugriff lutz an ist auch ein
+
+632
+00:27:46,255 --> 00:27:48,325
+sehr guter chart sie sieht man einfach
+
+633
+00:27:48,475 --> 00:27:49,885
+kann man sich das mal anschauen okay
+
+634
+00:27:49,885 --> 00:27:51,715
+wenn jetzt jemand auf die job seite
+
+635
+00:27:51,715 --> 00:27:55,525
+geht am gibt's zum beispiel neunundfünfzig prozent
+
+636
+00:27:55,525 --> 00:27:58,315
+ausstiege aber wo gehen denn die ganzen
+
+637
+00:27:58,345 --> 00:28:01,224
+anderen ausstiege am damm wirklich hin also
+
+638
+00:28:01,224 --> 00:28:03,448
+wo geht der nutzer denn wirklich
+
+639
+00:28:03,775 --> 00:28:07,315
+späterhin auf welche seiten visualisiert gleich ganz
+
+640
+00:28:07,315 --> 00:28:09,565
+gut an das ist zum beispiel zocher
+
+641
+00:28:09,579 --> 00:28:12,355
+featurettes gibt sets nur entweder cloud hostet
+
+642
+00:28:12,369 --> 00:28:15,895
+oder es eben ein premium plugin von
+
+643
+00:28:15,895 --> 00:28:16,615
+matomo
+
+644
+00:28:17,725 --> 00:28:19,765
+disney möchte deutsch auch gerne so weiter
+
+645
+00:28:19,765 --> 00:28:21,355
+reingehen bei weiß nicht ob es jeder
+
+646
+00:28:21,355 --> 00:28:25,075
+von euch eben hat dieses feature hier
+
+647
+00:28:25,075 --> 00:28:28,135
+unten hat man nochmal benutzerdefinierten variablen wie
+
+648
+00:28:28,135 --> 00:28:30,025
+man es allem eben schon gesehen haben
+
+649
+00:28:30,025 --> 00:28:31,315
+ist es jetzt zum beispiel die page
+
+650
+00:28:31,345 --> 00:28:34,015
+autors haben die sind dann eben dann
+
+651
+00:28:34,015 --> 00:28:35,905
+hier unten aufgelistet
+
+652
+00:28:37,165 --> 00:28:40,855
+acquisitions berichts wie kommen denn die nutzer
+
+653
+00:28:40,855 --> 00:28:43,285
+auf unsere seite sie hiermit nochmal in
+
+654
+00:28:43,285 --> 00:28:45,475
+der übersicht wie auch überall
+
+655
+00:28:46,705 --> 00:28:50,575
+nochmal aufgelistet die verschiedenen kanal typen direkt
+
+656
+00:28:50,575 --> 00:28:55,105
+suchmaschinen soziale netzwerke am webseiten und kampagnen
+
+657
+00:28:56,875 --> 00:29:00,505
+das ganze nochmal aufgedröselt loch kanal typ
+
+658
+00:29:01,075 --> 00:29:03,145
+bei der kanal typ zum beispiel suchmaschinen
+
+659
+00:29:03,655 --> 00:29:07,975
+dann werden hier eventuell die suchbegriffe angezeigt
+
+660
+00:29:08,605 --> 00:29:10,405
+da würde mir jetzt aber net hundertprozentig
+
+661
+00:29:10,405 --> 00:29:12,085
+immer drauf verlassen bei google gibt es
+
+662
+00:29:12,085 --> 00:29:14,995
+zum beispiel kaum mehr das cinema not
+
+663
+00:29:14,995 --> 00:29:17,935
+pro weidetiere sind euch fünfundneunzig prozent der
+
+664
+00:29:17,995 --> 00:29:21,565
+klicks aus suchmaschinen am geben keine keywords
+
+665
+00:29:21,565 --> 00:29:22,915
+mit der sie nicht dass jetzt irgendjemand
+
+666
+00:29:22,915 --> 00:29:26,725
+anderem sorgt okay sind a dreiundfünfzig tausend
+
+667
+00:29:27,055 --> 00:29:28,585
+besucher heute
+
+668
+00:29:28,915 --> 00:29:32,635
+dreihundert neunzehn mal ist es der suchbegriff
+
+669
+00:29:32,635 --> 00:29:34,765
+vielleicht ist es dann der arm der
+
+670
+00:29:34,765 --> 00:29:37,585
+am häufigsten gesucht wird dort er einfach
+
+671
+00:29:37,585 --> 00:29:39,115
+nur immer die search console einfach mal
+
+672
+00:29:39,115 --> 00:29:42,475
+reinzuschauen da gibt's wirklich die echten server
+
+673
+00:29:42,505 --> 00:29:43,255
+starten
+
+674
+00:29:44,755 --> 00:29:47,515
+dann schau mal nochmal genau alle kanäle
+
+675
+00:29:48,445 --> 00:29:51,145
+hiermit auch nochmal die verschiedenen kanäle einfach
+
+676
+00:29:51,145 --> 00:29:55,375
+aufgedröselt zum euch auch die verweise suchmaschinen
+
+677
+00:29:55,375 --> 00:29:58,585
+und suchbegriffe jeweils das alles komplett im
+
+678
+00:29:58,585 --> 00:30:00,385
+detail was man vorher kurz xin um
+
+679
+00:30:00,389 --> 00:30:03,145
+aufgeteilt auch ganz gut finde ich hier
+
+680
+00:30:03,145 --> 00:30:03,985
+diese suchmaschine
+
+681
+00:30:03,985 --> 00:30:06,595
+elend verteilung und bei matomo auch ein
+
+682
+00:30:06,618 --> 00:30:09,325
+großes pro feature ist es ist halt
+
+683
+00:30:09,325 --> 00:30:11,395
+überall auch icons gibt es über conrad
+
+684
+00:30:11,395 --> 00:30:12,955
+auch die möglichkeit bis mal gut zu
+
+685
+00:30:12,955 --> 00:30:16,075
+exportieren ist sich auch dann komplett auch
+
+686
+00:30:16,135 --> 00:30:19,885
+schön anzusehen daran zu zeigen in dem
+
+687
+00:30:20,665 --> 00:30:24,145
+diagramm an wir gehen
+
+688
+00:30:24,145 --> 00:30:26,425
+nochmal kurz genau das sind die verschiedenen
+
+689
+00:30:26,425 --> 00:30:29,605
+suchbegriffe bei den zu verschiedenen suchmaschinen
+
+690
+00:30:31,180 --> 00:30:31,750
+ios
+
+691
+00:30:33,400 --> 00:30:37,210
+bei den webseites da geht's nur darum
+
+692
+00:30:37,480 --> 00:30:39,520
+wer verweist denn überhaupt auf mich oder
+
+693
+00:30:39,520 --> 00:30:41,380
+wie viele nutzer kommen denn vom gewissen
+
+694
+00:30:41,380 --> 00:30:44,740
+webseiten auf meine seite dazu genauso wie
+
+695
+00:30:45,010 --> 00:30:48,640
+social media netzwerke welche gibt's denn überhaupt
+
+696
+00:30:49,000 --> 00:30:51,820
+haben und wie kommen denn die verschiedenen
+
+697
+00:30:51,820 --> 00:30:53,080
+nutzer drauf ist zum beispiel
+
+698
+00:30:53,080 --> 00:30:56,710
+reddit sie sehr gefragt und falls ich
+
+699
+00:30:56,710 --> 00:30:59,644
+selbst kampagnen ab bei den kampagnen ist
+
+700
+00:30:59,650 --> 00:31:01,900
+die sitzt so arm es gibt einerseits
+
+701
+00:31:02,230 --> 00:31:06,880
+hier diesen kampagnen namen therese ist schlüsselwort
+
+702
+00:31:06,880 --> 00:31:09,040
+und und und und hier unten gibt's
+
+703
+00:31:09,040 --> 00:31:11,620
+eine kampagne newell erzeuger wenn ich deutsch
+
+704
+00:31:11,650 --> 00:31:12,490
+drauf geh
+
+705
+00:31:15,040 --> 00:31:16,690
+kann ich mir des was dann später
+
+706
+00:31:16,690 --> 00:31:19,210
+in den kampagnen ist selbst zusammenbauen heißt
+
+707
+00:31:19,210 --> 00:31:21,280
+ich brauche ja einfach meine uhr mal
+
+708
+00:31:21,280 --> 00:31:21,850
+mit rein
+
+709
+00:31:22,360 --> 00:31:24,700
+abends sorgt der lokal neben meinen kampagnen
+
+710
+00:31:24,700 --> 00:31:27,760
+nachwelt sorgst an geht zum beispiel her
+
+711
+00:31:27,760 --> 00:31:30,919
+unsere cookie quelle medium also woher kommt
+
+712
+00:31:30,940 --> 00:31:32,800
+es komplett wieso bin ich so kokett
+
+713
+00:31:32,800 --> 00:31:35,110
+ist es zum beispiel an einen newsletter
+
+714
+00:31:35,110 --> 00:31:38,350
+des mediums email weil es hier eintragen
+
+715
+00:31:38,380 --> 00:31:41,710
+der norris dich später hier in meinem
+
+716
+00:31:41,710 --> 00:31:42,430
+kampagnen
+
+717
+00:31:42,520 --> 00:31:46,120
+reports suchbegriffe oh und gut da gibt's
+
+718
+00:31:46,120 --> 00:31:49,180
+leider keine daten mehr innen sind diese
+
+719
+00:31:49,182 --> 00:31:50,890
+demo aber dann habe ich hätte ich
+
+720
+00:31:50,890 --> 00:31:53,650
+hier alles zusammen kompakt dauer deswegen auch
+
+721
+00:31:53,650 --> 00:31:56,620
+mein appell an es gibt nämlich sehr
+
+722
+00:31:56,620 --> 00:32:00,760
+viele kanäle wo es heißt dass direct
+
+723
+00:32:00,820 --> 00:32:02,680
+traffic david nahm k
+
+724
+00:32:02,740 --> 00:32:04,090
+vielleicht noch der ein oder andere von
+
+725
+00:32:04,090 --> 00:32:07,210
+analytics dies ist meistens reicht dieses auffangbecken
+
+726
+00:32:07,450 --> 00:32:09,670
+von dem traffic der nicht zuordenbar ist
+
+727
+00:32:09,730 --> 00:32:12,040
+sie teilweise sind dessert nutzer die oben
+
+728
+00:32:12,040 --> 00:32:14,530
+was eingeben teilweise eben aber auch nutze
+
+729
+00:32:14,530 --> 00:32:17,020
+die aus an linkes im e-mail-programm klicken
+
+730
+00:32:17,650 --> 00:32:19,330
+da ist es immer sehr wichtig dass
+
+731
+00:32:19,330 --> 00:32:21,610
+man wenn man zum beispiel signatur oder
+
+732
+00:32:21,610 --> 00:32:22,810
+newsletter aussendet
+
+733
+00:32:23,260 --> 00:32:26,530
+leuchtende kampagne newell set zeugte dann die
+
+734
+00:32:26,530 --> 00:32:28,120
+uhr l und dahinter sind dann die
+
+735
+00:32:28,120 --> 00:32:29,949
+ganzen zum beispiel was ist es jetzt
+
+736
+00:32:29,949 --> 00:32:31,900
+wirklich für eine quelle was der für
+
+737
+00:32:31,901 --> 00:32:34,330
+medium und dann kommt es zum beispiel
+
+738
+00:32:34,330 --> 00:32:36,850
+auch hier mit woanders rein und nicht
+
+739
+00:32:36,850 --> 00:32:39,430
+nur der direct traffic mit der ich
+
+740
+00:32:39,439 --> 00:32:41,230
+sehr wichtig weil sonst ist man dort
+
+741
+00:32:42,100 --> 00:32:43,000
+aufgeschmissen
+
+742
+00:32:44,440 --> 00:32:46,720
+es gibt verschiedene szenarien therese auch q
+
+743
+00:32:46,720 --> 00:32:48,550
+a code while you a code mal
+
+744
+00:32:48,550 --> 00:32:51,760
+auswerten will muss ich auch unbedingt kampagne
+
+745
+00:32:51,760 --> 00:32:54,250
+newell erzeugen weil man sonst nix das
+
+746
+00:32:54,266 --> 00:32:55,120
+überbleibt
+
+747
+00:32:56,230 --> 00:32:59,110
+wie sehr es bleibt euch keinen was
+
+748
+00:32:59,110 --> 00:33:01,390
+anders überweist vorne nicht weiß wie die
+
+749
+00:33:01,390 --> 00:33:03,280
+nutzer auf die seite kommen und es
+
+750
+00:33:03,280 --> 00:33:04,595
+kann ich eben nur machen indem ich
+
+751
+00:33:04,630 --> 00:33:07,510
+deine kampagnen u l erzeuge
+
+752
+00:33:08,770 --> 00:33:11,916
+falls ihr einen job habt habt ihr
+
+753
+00:33:11,916 --> 00:33:14,650
+auch die möglichkeit mit dem e-commerce tracking
+
+754
+00:33:14,650 --> 00:33:17,140
+einfach auf die kompletten verkäufe zu tracken
+
+755
+00:33:17,560 --> 00:33:19,780
+an hier nochmal eben der verlauf der
+
+756
+00:33:19,780 --> 00:33:22,660
+bestellungen oh und musik hat einfach auf
+
+757
+00:33:22,660 --> 00:33:25,450
+anhieb pearl die ganzen konversion wer etwas
+
+758
+00:33:25,540 --> 00:33:28,840
+sehr wichtiges am uns mal configs zug
+
+759
+00:33:28,840 --> 00:33:31,540
+setze auch noch mit dem erweiterten e-commerce
+
+760
+00:33:31,570 --> 00:33:34,420
+tracking anschauen wo werden denn überhaupt warenkörbe
+
+761
+00:33:34,420 --> 00:33:37,000
+verlassen seist du kehrte nutze zum schweben
+
+762
+00:33:37,000 --> 00:33:40,059
+muss hinzugefügt sauber nie gekauft dann kommt
+
+763
+00:33:40,059 --> 00:33:41,830
+es alles hier kompliziert rein
+
+764
+00:33:42,580 --> 00:33:44,350
+was ganz gut ist er hat jetzt
+
+765
+00:33:44,350 --> 00:33:46,630
+nochmal jedes e commerce protokoll es ist
+
+766
+00:33:46,630 --> 00:33:48,790
+sowas wie ist bis der besucher log
+
+767
+00:33:49,360 --> 00:33:52,630
+book auf ra e komm wers aktivitäten
+
+768
+00:33:53,170 --> 00:33:55,630
+gefiltert kommen sie automatisch sondern hier sieht
+
+769
+00:33:55,630 --> 00:33:58,060
+man nochmal alle kompletten daten wie sap
+
+770
+00:33:58,120 --> 00:34:01,210
+e-commerce trackings wieder andere liga des busses
+
+771
+00:34:01,210 --> 00:34:02,680
+sie dann auf von
+
+772
+00:34:02,710 --> 00:34:06,700
+a development abteilung auch umsetzen lassen testen
+
+773
+00:34:06,700 --> 00:34:09,429
+lassen haben aber es ist euch auch
+
+774
+00:34:09,429 --> 00:34:11,770
+ein sehr gutes feature das mir hier
+
+775
+00:34:11,800 --> 00:34:14,199
+nochmal die ganzen wichtigsten infos auch hot
+
+776
+00:34:14,469 --> 00:34:17,290
+was bringt denn überhaupt mein shop an
+
+777
+00:34:18,219 --> 00:34:20,590
+aber genau bekannt sieht es dann nochmal
+
+778
+00:34:20,590 --> 00:34:22,840
+die sind eben die produktdaten genau
+
+779
+00:34:22,840 --> 00:34:24,850
+au sowie den umsatz für den umsatz
+
+780
+00:34:24,969 --> 00:34:26,920
+ist es nochmal so das man hier
+
+781
+00:34:27,159 --> 00:34:29,830
+mal wirklich tief vergeht im matomo und
+
+782
+00:34:29,830 --> 00:34:31,540
+die möglichkeit heute käme konnte ich den
+
+783
+00:34:31,540 --> 00:34:33,460
+umsatz nach kanal typen anschauen
+
+784
+00:34:34,270 --> 00:34:36,010
+da hab ich einfach die möglichkeit okay
+
+785
+00:34:36,070 --> 00:34:39,219
+zu sorgen wo investiere ich mehr hier
+
+786
+00:34:39,219 --> 00:34:41,500
+zum beispiel so schien er social network
+
+787
+00:34:41,500 --> 00:34:43,659
+shirt am fach den meisten traffic gemacht
+
+788
+00:34:43,659 --> 00:34:47,320
+im seo er am wenigsten helm kann
+
+789
+00:34:47,320 --> 00:34:48,940
+sein dass sie zum beispiel hier in
+
+790
+00:34:49,000 --> 00:34:51,909
+social etwa teising noch bissel was reinsteckt
+
+791
+00:34:52,300 --> 00:34:54,040
+und lautes sächlich sachen die mir dann
+
+792
+00:34:54,040 --> 00:34:54,280
+hier
+
+793
+00:34:54,280 --> 00:34:57,430
+hier direkt mal auswerten können auch wenn
+
+794
+00:34:57,430 --> 00:35:00,550
+ich hier mische gewisse kampagnen hab hab
+
+795
+00:35:00,550 --> 00:35:04,299
+ich jetzt leider nicht am doch kampagnen
+
+796
+00:35:04,299 --> 00:35:06,880
+namen wahrscheinlich hab ich auch die möglichkeit
+
+797
+00:35:07,090 --> 00:35:09,010
+okay sind kampagnen die am olle keine
+
+798
+00:35:09,400 --> 00:35:11,560
+einnahmen erzielt könnt ihr mir vielleicht überlegen
+
+799
+00:35:11,560 --> 00:35:13,360
+ob die eventuell abschaltet
+
+800
+00:35:14,230 --> 00:35:15,250
+in dem bereich
+
+801
+00:35:16,810 --> 00:35:18,640
+was ist eine webseite ohne ziele
+
+802
+00:35:19,720 --> 00:35:22,870
+ähm eigentlich ja ohne ziele soll deiche
+
+803
+00:35:22,870 --> 00:35:25,030
+webseite nie irgendwie online gehen weil ich
+
+804
+00:35:25,061 --> 00:35:28,120
+jede webseite verfolgte ziel o und hier
+
+805
+00:35:28,120 --> 00:35:31,990
+kann man verschiedene ziele eben auch eingeben
+
+806
+00:35:32,020 --> 00:35:34,270
+und eben auch verfolgen das motto nimmer
+
+807
+00:35:34,270 --> 00:35:37,390
+conversion rates und eine anzahl von den
+
+808
+00:35:37,390 --> 00:35:39,190
+conversions was mir hier zum beispiel hot
+
+809
+00:35:39,193 --> 00:35:39,880
+in dem bereich
+
+810
+00:35:39,880 --> 00:35:43,030
+ich oh und des ist eicher wichtige
+
+811
+00:35:43,030 --> 00:35:46,030
+sache was man hat die ziele verwalten
+
+812
+00:35:46,390 --> 00:35:48,880
+schaum neunzehn nummer kürzlich ans ziel kommt
+
+813
+00:35:48,880 --> 00:35:51,850
+leider nur verwalten wenn ich selbst
+
+814
+00:35:53,770 --> 00:35:56,950
+genau ziele verwalten kann einfach ganz normales
+
+815
+00:35:56,950 --> 00:35:59,620
+neues ziel definieren kann eine uhr l
+
+816
+00:35:59,620 --> 00:36:02,020
+sein es kann zum beispiel auch eine
+
+817
+00:36:02,020 --> 00:36:04,450
+seite mit dem bestimmten titel sein arm
+
+818
+00:36:04,480 --> 00:36:07,630
+icons per event machen kann eine gewisse
+
+819
+00:36:07,660 --> 00:36:09,610
+datei zum beispiel runterladen
+
+820
+00:36:10,150 --> 00:36:12,670
+wechsel okay ich möchte sein ziel haben
+
+821
+00:36:13,720 --> 00:36:16,210
+eine gewissen klick auf link eine externen
+
+822
+00:36:16,210 --> 00:36:18,190
+seite ist es wie vorhin das beispiel
+
+823
+00:36:18,190 --> 00:36:21,010
+ich hab an einen ich biete zum
+
+824
+00:36:21,010 --> 00:36:22,750
+beispiel banner plätze an und zur rückkehr
+
+825
+00:36:22,750 --> 00:36:25,330
+der banner plots x y wenn der
+
+826
+00:36:25,450 --> 00:36:27,220
+nicht will ich einfach mal gerne anschauen
+
+827
+00:36:27,220 --> 00:36:28,990
+wie oft der zum beispiel geklickt worden
+
+828
+00:36:28,990 --> 00:36:31,000
+ist was für conversion rate er an
+
+829
+00:36:31,000 --> 00:36:33,706
+reichardt collector ziel einfach
+
+830
+00:36:33,880 --> 00:36:38,050
+beim einrichten genauso wie zwei dauer hohen
+
+831
+00:36:38,050 --> 00:36:40,750
+top dann jede möglichkeit einfach dist noch
+
+832
+00:36:41,140 --> 00:36:44,500
+mit anzugeben ist eigentlich ganz gute sache
+
+833
+00:36:44,890 --> 00:36:47,230
+herum was mir je hot jetzt in
+
+834
+00:36:47,230 --> 00:36:49,540
+den normalen matomo wärst es noch in
+
+835
+00:36:49,540 --> 00:36:51,940
+dem bereich an der mittwoch fünf minuten
+
+836
+00:36:51,940 --> 00:36:54,040
+ich zeig mal kurz noch die h
+
+837
+00:36:54,040 --> 00:36:56,590
+ein premium plugin solle die plugins die
+
+838
+00:36:56,590 --> 00:36:59,560
+man bei matomo cloud hat an es
+
+839
+00:36:59,560 --> 00:37:01,450
+gibt die fahne die fahne ist bauen
+
+840
+00:37:01,450 --> 00:37:04,060
+eigentlich auf den zielen auf ich kann
+
+841
+00:37:04,060 --> 00:37:05,800
+eben hier bei jedem ziel noch ein
+
+842
+00:37:05,800 --> 00:37:08,110
+fandel definieren des heißt ich hab hier
+
+843
+00:37:08,110 --> 00:37:11,620
+die möglichkeit genau neben ihr job application
+
+844
+00:37:11,620 --> 00:37:14,200
+form verschiedene schritte zu definieren
+
+845
+00:37:14,380 --> 00:37:16,840
+das sieht einfach so kämen woher kommen
+
+846
+00:37:16,840 --> 00:37:19,360
+den die nutzer auf das job board
+
+847
+00:37:19,690 --> 00:37:22,780
+wieviel gehen denn weiter am herd mal
+
+848
+00:37:22,785 --> 00:37:26,590
+zum beispiel etwas wenig springen hier weiter
+
+849
+00:37:27,010 --> 00:37:29,890
+arm dann wird einfacher job sich arg
+
+850
+00:37:29,890 --> 00:37:32,950
+schaut's und an wird sich wirklich auf
+
+851
+00:37:32,950 --> 00:37:34,360
+diesen job baby
+
+852
+00:37:34,360 --> 00:37:36,760
+robben es heißt ja mehr conversion rate
+
+853
+00:37:36,790 --> 00:37:38,530
+von null komma acht warum ist es
+
+854
+00:37:38,530 --> 00:37:40,390
+so hell gut ich hab hier oben
+
+855
+00:37:40,420 --> 00:37:45,370
+sechshundert fünf sechshundert sechstausend fünfhundert einstiege ungefähr
+
+856
+00:37:45,550 --> 00:37:48,100
+und hier unten zweiundfünfzig conversions wenn man
+
+857
+00:37:48,100 --> 00:37:50,680
+es gegengerechnet ist ist null komma acht
+
+858
+00:37:51,580 --> 00:37:54,220
+internet is a plugin was mir eben
+
+859
+00:37:54,220 --> 00:37:54,413
+noch
+
+860
+00:37:54,640 --> 00:37:57,550
+entweder den cloud hostet plaudern oder man
+
+861
+00:37:57,580 --> 00:38:00,130
+kann sich das eben auch im an
+
+862
+00:38:00,610 --> 00:38:04,870
+matomo marketplace mal am anschauen und dann
+
+863
+00:38:04,870 --> 00:38:07,270
+auch therese kaufen wo sie schauen o
+
+864
+00:38:07,270 --> 00:38:10,060
+k für vier user koste es das
+
+865
+00:38:10,060 --> 00:38:11,650
+gäbe ja zumeist tipp mit bis zu
+
+866
+00:38:11,710 --> 00:38:14,380
+einhundert neun und siebzig euro pro jahr
+
+867
+00:38:15,190 --> 00:38:18,700
+a lever braucht mehrere plugins dann reicht
+
+868
+00:38:18,700 --> 00:38:22,540
+meistens aber auch schon zur matomo cloud
+
+869
+00:38:22,780 --> 00:38:24,460
+version muss ich ehrlich so als wenn
+
+870
+00:38:24,460 --> 00:38:26,110
+bedeutet einfach mit hergeht und sich das
+
+871
+00:38:26,500 --> 00:38:29,800
+dann komplett anschaut mal auf matomo ram
+
+872
+00:38:29,860 --> 00:38:34,360
+und dann tumor ort genau mir hier
+
+873
+00:38:34,360 --> 00:38:34,840
+noch weiter
+
+874
+00:38:34,870 --> 00:38:36,190
+aufgeht und sich dann des
+
+875
+00:38:37,900 --> 00:38:39,610
+reise nach diesem woanders
+
+876
+00:38:41,050 --> 00:38:43,501
+prise swing hier anschauen krypto camper bitte
+
+877
+00:38:43,501 --> 00:38:46,120
+mit kleinerem seite oh und der die
+
+878
+00:38:46,120 --> 00:38:49,270
+wehrmann therese mit dem cloud hosting neunzehn
+
+879
+00:38:49,270 --> 00:38:51,310
+euro schon mal ganz gut dabei je
+
+880
+00:38:51,310 --> 00:38:54,610
+nachdem wie groß die seite ist arten
+
+881
+00:38:54,760 --> 00:38:56,230
+kann man hier zwischen fünf und dreißig
+
+882
+00:38:56,230 --> 00:38:58,300
+euro wenn man den sitz gegen rechnen
+
+883
+00:38:58,300 --> 00:39:00,970
+so käme hat hunderttausend fünfunddreißig
+
+884
+00:39:01,000 --> 00:39:03,670
+euro werden zumal vierhundert euro im jahr
+
+885
+00:39:03,700 --> 00:39:06,070
+vier fünfhundert euro im jahr ist es
+
+886
+00:39:06,160 --> 00:39:08,320
+eins schon mal der preis für drei
+
+887
+00:39:08,500 --> 00:39:10,930
+plugins die man hat um auf sehr
+
+888
+00:39:10,930 --> 00:39:13,390
+viele plugins eigentlichen dabei
+
+889
+00:39:14,800 --> 00:39:17,593
+ist der activity log zum beispiel auf
+
+890
+00:39:17,593 --> 00:39:20,078
+wandels was man dabei hat kann es
+
+891
+00:39:20,078 --> 00:39:22,660
+komplette white labeling moch und diese kaste
+
+892
+00:39:22,690 --> 00:39:25,810
+reports genau wie diese form vom tracking
+
+893
+00:39:26,170 --> 00:39:28,420
+sich auch sehr gut das kann ich
+
+894
+00:39:28,420 --> 00:39:30,725
+nur jedem empfehlen glaube ich es formt
+
+895
+00:39:30,725 --> 00:39:34,300
+tracking sa gewähren einfach jedes form submit
+
+896
+00:39:34,300 --> 00:39:34,570
+mit
+
+897
+00:39:34,630 --> 00:39:38,230
+automatisch vom matomo gemessen und eben hier
+
+898
+00:39:38,230 --> 00:39:39,970
+als formular mit ausgegeben
+
+899
+00:39:41,140 --> 00:39:42,250
+und da kommt man dann einfach sich
+
+900
+00:39:42,250 --> 00:39:45,580
+den anschauen im appleid job format ja
+
+901
+00:39:45,580 --> 00:39:47,980
+was ist die state rat des datenblattes
+
+902
+00:39:47,980 --> 00:39:50,818
+einfach deswegen einfach was angeklickt wird er
+
+903
+00:39:50,925 --> 00:39:52,690
+also wenn der fokus in der formular
+
+904
+00:39:52,690 --> 00:39:54,580
+gesetzt wird das erste mal mit dem
+
+905
+00:39:54,580 --> 00:39:57,670
+formular interagiert wird um hot sauce mischen
+
+906
+00:39:57,700 --> 00:40:00,310
+reid ich ich auch ein sehr gutes
+
+907
+00:40:00,310 --> 00:40:00,700
+an
+
+908
+00:40:01,270 --> 00:40:03,010
+plugin was man hier noch mit dabei
+
+909
+00:40:03,010 --> 00:40:06,250
+hat medien wenn man zum beispiel video
+
+910
+00:40:06,250 --> 00:40:09,520
+audio player youtube vimeo oder safe faustet
+
+911
+00:40:09,520 --> 00:40:11,471
+sich analysieren will dann hat man es
+
+912
+00:40:11,471 --> 00:40:13,660
+hier euch auch gut mit dabei mit
+
+913
+00:40:13,660 --> 00:40:15,670
+dem titel sie noch mehr die video
+
+914
+00:40:15,670 --> 00:40:20,230
+resources am super feature a b testing
+
+915
+00:40:20,230 --> 00:40:20,920
+natürlich zwei
+
+916
+00:40:20,980 --> 00:40:25,150
+versionen gegeneinander testen an heat maps wie
+
+917
+00:40:25,150 --> 00:40:27,580
+man sie eben ganz normal auch kennt
+
+918
+00:40:27,670 --> 00:40:31,960
+faith to lots turniers gehört nicht an
+
+919
+00:40:32,375 --> 00:40:33,125
+meistens schon
+
+920
+00:40:34,295 --> 00:40:35,915
+es ist jetzt da was mit genau
+
+921
+00:40:35,915 --> 00:40:37,325
+was mir dann noch die möglichkeit das
+
+922
+00:40:37,355 --> 00:40:39,965
+sind diese session recording hier wird wirklich
+
+923
+00:40:39,965 --> 00:40:42,815
+der echte klick aufs gezeichnet schauen uns
+
+924
+00:40:42,815 --> 00:40:45,222
+jetzt mal hier ganz kurz an assessor
+
+925
+00:40:45,245 --> 00:40:47,673
+wir haben hier noch etwas das nur
+
+926
+00:40:47,673 --> 00:40:48,215
+normal
+
+927
+00:40:48,935 --> 00:40:52,505
+deaktivieren verfolgte er an zu kommentieren wird
+
+928
+00:40:52,505 --> 00:40:54,725
+es bei anschauen wie klickten der nutzer
+
+929
+00:40:54,725 --> 00:40:57,515
+was ist die maus interaktion herr und
+
+930
+00:40:57,515 --> 00:40:59,975
+und und dies auch tolle feature wenn
+
+931
+00:40:59,975 --> 00:41:02,195
+man wirklich mal sachen ausprobieren will oder
+
+932
+00:41:02,195 --> 00:41:05,315
+messen will wie irgendwas es dynamisch aufploppt
+
+933
+00:41:05,315 --> 00:41:07,895
+oder zugeht komme ich euch nur empfehlen
+
+934
+00:41:08,495 --> 00:41:09,095
+benutze de
+
+935
+00:41:09,095 --> 00:41:12,035
+definierte berichte wenn euch irgendein bericht abgeht
+
+936
+00:41:12,065 --> 00:41:14,525
+könnt ihr den hier selbst nachbauen er
+
+937
+00:41:14,525 --> 00:41:17,465
+wird dann einfach auch berechnet und ihr
+
+938
+00:41:17,465 --> 00:41:20,855
+könnt dann verschiedene metriken gegeneinander anzeigen lassen
+
+939
+00:41:21,095 --> 00:41:24,275
+ist auch ein sehr sehr guter reports
+
+940
+00:41:25,475 --> 00:41:29,375
+an genau jetzt ist es so dass
+
+941
+00:41:29,375 --> 00:41:31,925
+wir jetzt eigentlich mal so am ende
+
+942
+00:41:31,925 --> 00:41:34,805
+wären in dem bereich an ihr könnt
+
+943
+00:41:34,805 --> 00:41:36,725
+jetzt gerne auch noch fragen stellen also
+
+944
+00:41:36,755 --> 00:41:39,155
+sei's eben in den chat oder auch
+
+945
+00:41:39,155 --> 00:41:41,105
+hier könnt ihr auch anmuten wenn ihr
+
+946
+00:41:41,105 --> 00:41:43,775
+das wollt arm und dann einfach direkt
+
+947
+00:41:44,555 --> 00:41:45,575
+fragen wenn sie
+
+948
+00:41:45,605 --> 00:41:48,695
+fragen haupts an aber ich schau mal
+
+949
+00:41:48,695 --> 00:41:50,795
+kurz amis
+
+950
+00:41:55,685 --> 00:41:57,635
+mit schauer kurz genommen melanie ich um
+
+951
+00:41:57,635 --> 00:41:59,765
+eine frau zu den zeitraum berichten für
+
+952
+00:41:59,765 --> 00:42:04,355
+suchbegriffe ohne ergebnis der internetsuche genau die
+
+953
+00:42:04,355 --> 00:42:07,445
+monatlichen berichte liefern weniger treffer als die
+
+954
+00:42:07,445 --> 00:42:10,205
+täglichen berichte im jeweiligen monat wie kann
+
+955
+00:42:10,205 --> 00:42:11,975
+es sein funktioniert die aktion
+
+956
+00:42:12,005 --> 00:42:14,705
+nicht oder verstehe ich den bericht nur
+
+957
+00:42:14,705 --> 00:42:15,425
+falsch
+
+958
+00:42:17,195 --> 00:42:19,355
+abend müsst ihr jetzt nochmal anschauliche besitzen
+
+959
+00:42:19,355 --> 00:42:22,235
+lädt am konkreten beispiel heißt
+
+960
+00:42:23,315 --> 00:42:23,855
+am
+
+961
+00:42:25,745 --> 00:42:27,605
+schaun ist es mal ganz kurz an
+
+962
+00:42:29,975 --> 00:42:33,185
+hm ich hoffe ich kann hier eigentlich
+
+963
+00:42:33,185 --> 00:42:36,395
+nachstellen zeiss denn du meinst eigentlich für
+
+964
+00:42:36,395 --> 00:42:41,585
+den oktober die besuche für internen suchanfragen
+
+965
+00:42:44,285 --> 00:42:46,325
+an ich weiß es nicht ob du
+
+966
+00:42:46,325 --> 00:42:48,485
+das meinst also bändern du kannst mal
+
+967
+00:42:48,485 --> 00:42:52,355
+auch in ihm schau mal kurz
+
+968
+00:42:53,915 --> 00:42:56,825
+bericht darunter sind schau mal das mal
+
+969
+00:42:56,885 --> 00:42:57,725
+kurz rein
+
+970
+00:42:59,615 --> 00:43:02,525
+kittel und den bericht suche ohne also
+
+971
+00:43:02,525 --> 00:43:04,565
+das hier eigentlich wenn ich die täglichen
+
+972
+00:43:04,565 --> 00:43:07,385
+zahm nehme und die dann eigentlich aggregiert
+
+973
+00:43:07,385 --> 00:43:08,945
+im monat so unterschiedlich sind
+
+974
+00:43:09,575 --> 00:43:11,705
+normalerweise sollte sich nicht der feuerte den
+
+975
+00:43:11,705 --> 00:43:13,625
+müsste man wahrscheinlich plädiert mein detail lauten
+
+976
+00:43:13,625 --> 00:43:15,215
+schauen warum sie so der fall ist
+
+977
+00:43:15,875 --> 00:43:20,195
+hm eigentlich dürfte das normalerweise nicht der
+
+978
+00:43:20,195 --> 00:43:22,805
+fall sein indem aber du kannst mir
+
+979
+00:43:22,805 --> 00:43:25,415
+gerne schauen bekannten scannern dennoch mal eine
+
+980
+00:43:25,955 --> 00:43:28,265
+video session ausmachen die schauer der severin
+
+981
+00:43:28,265 --> 00:43:29,075
+detail an
+
+982
+00:43:29,735 --> 00:43:32,135
+hm wo das vielleicht das problem liegt
+
+983
+00:43:32,135 --> 00:43:33,485
+wenn es ok für dich
+
+984
+00:43:37,205 --> 00:43:39,425
+genau da machen wir deshalb auch so
+
+985
+00:43:39,425 --> 00:43:42,065
+mails hier noch bei mir genaues her
+
+986
+00:43:44,615 --> 00:43:45,725
+sonst
+
+987
+00:43:47,975 --> 00:43:50,585
+treyarch hof am tanzt ist es so
+
+988
+00:43:50,585 --> 00:43:52,355
+jungs ich hoffe ich konnte euch schon
+
+989
+00:43:52,355 --> 00:43:54,695
+einen guten überblick geben mal über die
+
+990
+00:43:54,695 --> 00:43:58,895
+fragen über die fragen wie die verschiedenen
+
+991
+00:43:58,895 --> 00:44:01,235
+berichte falls ihr fragen habt dann gerne
+
+992
+00:44:01,235 --> 00:44:01,955
+hier rein
+
+993
+00:44:03,185 --> 00:44:05,195
+es ist auch zu fragen also falls
+
+994
+00:44:05,195 --> 00:44:06,873
+ihr fragen habt ich komme ich muss
+
+995
+00:44:06,875 --> 00:44:08,435
+aber wie's damals gemacht habe gibt es
+
+996
+00:44:08,435 --> 00:44:10,325
+matomo forum da war eben der lucas
+
+997
+00:44:10,325 --> 00:44:13,415
+auch gut drinnen der noch sehr viel
+
+998
+00:44:13,415 --> 00:44:16,745
+dann weitergeholfen am fest ist matomo forum
+
+999
+00:44:16,745 --> 00:44:18,245
+ist es auch gezockt sogar im deutschen
+
+1000
+00:44:18,245 --> 00:44:20,285
+bereich der komme auch immer sehr gut
+
+1001
+00:44:20,285 --> 00:44:21,695
+was rein posten
+
+1002
+00:44:22,295 --> 00:44:24,155
+oh und wieder ist auch gut geholfen
+
+1003
+00:44:24,155 --> 00:44:26,435
+wenn man die cloud version hat dann
+
+1004
+00:44:26,525 --> 00:44:30,035
+gibt sogar impact homo support an es
+
+1005
+00:44:30,035 --> 00:44:32,675
+gibt videos es gibt englische videos ich
+
+1006
+00:44:32,675 --> 00:44:35,345
+im urlaub paar videos an was sie
+
+1007
+00:44:35,345 --> 00:44:37,805
+sitzt auch noch gibt genaues lucas schreibt
+
+1008
+00:44:37,805 --> 00:44:40,175
+noch im anschluss um sechzehn rama akku
+
+1009
+00:44:40,175 --> 00:44:42,425
+in a session an
+
+1010
+00:44:42,935 --> 00:44:44,765
+don melanie genau dass es auf englisch
+
+1011
+00:44:44,765 --> 00:44:48,011
+wäre könntest du eventuell nochmal mitnehmen ob
+
+1012
+00:44:48,011 --> 00:44:51,815
+das vielleicht vom verarbeiten an reizwäsche problem
+
+1013
+00:44:51,815 --> 00:44:53,615
+is da kommen auch nochmal gute die
+
+1014
+00:44:53,615 --> 00:44:56,525
+fragen stellen allgemein zu matomo tag manager
+
+1015
+00:44:56,555 --> 00:45:00,218
+integration sell faustet und und und das
+
+1016
+00:45:00,218 --> 00:45:02,615
+sind dann um die fünf experten damit
+
+1017
+00:45:02,675 --> 00:45:05,121
+dabei wir sehen uns glaube ich dann
+
+1018
+00:45:05,132 --> 00:45:07,085
+mal in zehn minuten könnt ihr gern
+
+1019
+00:45:07,085 --> 00:45:08,765
+mal rein wechseln die kuh in a
+
+1020
+00:45:08,765 --> 00:45:11,615
+session vielleicht postet der lukas nur mal
+
+1021
+00:45:11,615 --> 00:45:13,715
+kurz den link rein damit man teenager
+
+1022
+00:45:13,869 --> 00:45:17,675
+gleich weg hupfen kann in dem bereich
+
+1023
+00:45:17,705 --> 00:45:22,565
+und dios uns sonst sag ihr mal
+
+1024
+00:45:22,565 --> 00:45:22,775
+viel
+
+1025
+00:45:22,835 --> 00:45:25,265
+dank vielen dank für eure zeit vielen
+
+1026
+00:45:25,265 --> 00:45:28,085
+dank einfach mal fürs zuhören fürs dranbleiben
+
+1027
+00:45:28,505 --> 00:45:31,385
+haben sind doch genaus fast zwanzig leute
+
+1028
+00:45:31,385 --> 00:45:33,215
+es hat mich sehr gefreut falls es
+
+1029
+00:45:33,215 --> 00:45:36,545
+noch was gibt's einfach anschreiben es gibt
+
+1030
+00:45:36,545 --> 00:45:40,085
+keine dummen fragen an einfach nicht scheuen
+
+1031
+00:45:40,085 --> 00:45:42,755
+anschreiben und wir können es gemeinsam uns
+
+1032
+00:45:42,755 --> 00:45:42,935
+on
+
+1033
+00:45:42,935 --> 00:45:45,215
+anschauen um klus wir können das alles
+
+1034
+00:45:45,215 --> 00:45:46,835
+gemeinsam lösen
+
+1035
+00:45:47,945 --> 00:45:49,925
+ich wünsche euch noch einen sehr schönen
+
+1036
+00:45:49,955 --> 00:45:52,775
+tag an noch ne schöne zeit hier
+
+1037
+00:45:53,795 --> 00:45:56,075
+im matomo camp heute morgen ist auch
+
+1038
+00:45:56,075 --> 00:45:57,425
+noch osten und morgen ist auch noch
+
+1039
+00:45:57,425 --> 00:45:59,285
+ein tag schaut sich auch an sehr
+
+1040
+00:45:59,285 --> 00:46:03,245
+viele interessante vorträge macht sich gut und
+
+1041
+00:46:03,245 --> 00:46:04,265
+bleibt gesund
+
+1042
+00:46:05,405 --> 00:46:05,945
+tschüss
+
