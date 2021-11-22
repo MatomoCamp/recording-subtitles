@@ -1,0 +1,2988 @@
+1
+00:00:00,270 --> 00:00:06,270
+today I will go through the
+
+2
+00:00:06,270 --> 00:00:09,750
+basics over the Matomo tag manager
+
+3
+00:00:09,810 --> 00:00:12,780
+and also the basics of all they're
+
+4
+00:00:12,810 --> 00:00:15,810
+getting consent management to work together with
+
+5
+00:00:15,810 --> 00:00:18,300
+the matomo tag manager air for those
+
+6
+00:00:18,300 --> 00:00:20,160
+interesting in the tracking
+
+7
+00:00:20,160 --> 00:00:22,260
+of s p a applications i will
+
+8
+00:00:22,260 --> 00:00:25,290
+do that tomorrow ah alright so
+
+9
+00:00:26,820 --> 00:00:29,610
+let's look into what this is but
+
+10
+00:00:29,610 --> 00:00:31,470
+let's first talk a little bit of
+
+11
+00:00:31,470 --> 00:00:34,350
+on me as the introduction said i've
+
+12
+00:00:34,350 --> 00:00:36,390
+been working week a analytics since two
+
+13
+00:00:36,390 --> 00:00:39,120
+thousand and ten each and i usually
+
+14
+00:00:39,120 --> 00:00:41,135
+refer to myself as some kind of
+
+15
+00:00:41,135 --> 00:00:43,320
+a generalists and when it comes to
+
+16
+00:00:43,320 --> 00:00:46,320
+web development i started working within the
+
+17
+00:00:46,320 --> 00:00:46,560
+web
+
+18
+00:00:46,560 --> 00:00:49,140
+the industry around two thousand and has
+
+19
+00:00:49,170 --> 00:00:52,110
+had a mix of roles or i'd
+
+20
+00:00:52,260 --> 00:00:53,850
+have started off as a friend front
+
+21
+00:00:53,850 --> 00:00:54,810
+end developer but
+
+22
+00:00:56,040 --> 00:00:57,840
+today i'm more of a business developer
+
+23
+00:00:57,900 --> 00:01:00,180
+but i still love the coding so
+
+24
+00:01:00,180 --> 00:01:02,070
+i can't get my fingers away from
+
+25
+00:01:02,400 --> 00:01:05,670
+from the commit messages so to speak
+
+26
+00:01:06,390 --> 00:01:10,620
+and so what i usually do on
+
+27
+00:01:10,620 --> 00:01:13,890
+my daily job is to help our
+
+28
+00:01:13,890 --> 00:01:16,080
+clients at the littlest with employ
+
+29
+00:01:16,080 --> 00:01:19,530
+lamenting hematoma in their organizations and that
+
+30
+00:01:19,530 --> 00:01:21,658
+can be everything from helping out with
+
+31
+00:01:21,750 --> 00:01:26,280
+tag management issues or a more technical
+
+32
+00:01:26,370 --> 00:01:29,089
+deep dives or educating or training developers
+
+33
+00:01:29,100 --> 00:01:31,170
+or whatever that needs to learn about
+
+34
+00:01:31,170 --> 00:01:35,100
+moto mod soul who are digitally well
+
+35
+00:01:35,100 --> 00:01:36,240
+where digital practice
+
+36
+00:01:36,240 --> 00:01:38,670
+agency that loves open source i think
+
+37
+00:01:38,670 --> 00:01:40,920
+we've been contributing to different open source
+
+38
+00:01:40,920 --> 00:01:43,290
+projects since two thousand and five
+
+39
+00:01:44,580 --> 00:01:47,730
+under our main project to contribute to
+
+40
+00:01:47,730 --> 00:01:49,530
+has been drupal where we are pretty
+
+41
+00:01:49,530 --> 00:01:51,900
+well known within the drupal community the
+
+42
+00:01:51,900 --> 00:01:55,260
+seamus but the three four last years
+
+43
+00:01:55,260 --> 00:01:57,360
+we've been starting to contribute more and
+
+44
+00:01:57,360 --> 00:01:59,070
+more to matter more and we hope
+
+45
+00:01:59,070 --> 00:02:01,500
+to do much more of that as
+
+46
+00:02:01,500 --> 00:02:04,560
+well as what we offer as a
+
+47
+00:02:04,560 --> 00:02:07,290
+the company is of course a sauce
+
+48
+00:02:07,350 --> 00:02:09,810
+solution for matomo and
+
+49
+00:02:11,117 --> 00:02:13,590
+professional consulting to help people with that
+
+50
+00:02:13,740 --> 00:02:16,500
+and we're also building and selling premium
+
+51
+00:02:16,530 --> 00:02:19,650
+plugins to matomo so that's something we
+
+52
+00:02:19,650 --> 00:02:23,190
+will hopefully share more news about soon
+
+53
+00:02:23,280 --> 00:02:25,230
+i have a presentation about one of
+
+54
+00:02:25,230 --> 00:02:28,140
+them tomorrow called the use of feedback
+
+55
+00:02:28,140 --> 00:02:31,020
+planet but that's for tomorrow so let's
+
+56
+00:02:31,110 --> 00:02:31,200
+go
+
+57
+00:02:31,200 --> 00:02:34,710
+get into today's topic and that is
+
+58
+00:02:34,770 --> 00:02:39,840
+tag management tag management isn't super new
+
+59
+00:02:39,900 --> 00:02:42,450
+in the matomo world it is but
+
+60
+00:02:42,450 --> 00:02:45,960
+basically tag management's the attack manager is
+
+61
+00:02:45,960 --> 00:02:48,570
+a tool that help us structure the
+
+62
+00:02:48,660 --> 00:02:50,550
+tracking code that we can add to
+
+63
+00:02:50,550 --> 00:02:51,360
+a websites
+
+64
+00:02:52,110 --> 00:02:55,140
+at once we have it installed it
+
+65
+00:02:55,140 --> 00:02:57,960
+means that we can implement tracking without
+
+66
+00:02:57,990 --> 00:03:01,920
+actually changing code in our cms system
+
+67
+00:03:01,920 --> 00:03:04,200
+or or on the production servers we
+
+68
+00:03:04,200 --> 00:03:06,000
+can do that through the tool type
+
+69
+00:03:06,000 --> 00:03:07,440
+an id tag manager
+
+70
+00:03:09,600 --> 00:03:12,210
+why should we use a tag manager
+
+71
+00:03:12,210 --> 00:03:14,670
+well first of all the gifts of
+
+72
+00:03:14,730 --> 00:03:16,890
+autonomy and we don't have to depend
+
+73
+00:03:16,890 --> 00:03:19,440
+on developers or ops team to actually
+
+74
+00:03:19,440 --> 00:03:21,540
+implement new tracking and this is actually
+
+75
+00:03:21,540 --> 00:03:24,360
+a great thing because if you're working
+
+76
+00:03:24,360 --> 00:03:26,550
+with tracking it's usually a lot of
+
+77
+00:03:26,640 --> 00:03:28,440
+fasts or
+
+78
+00:03:29,160 --> 00:03:32,700
+short term jobs we need to apply
+
+79
+00:03:32,700 --> 00:03:35,070
+we need to maybe meet a campaign
+
+80
+00:03:35,700 --> 00:03:38,672
+that has a tight deadline or start
+
+81
+00:03:38,672 --> 00:03:41,730
+to track things and continuously improve what
+
+82
+00:03:41,730 --> 00:03:45,270
+we're doing fatigue management is rate from
+
+83
+00:03:45,270 --> 00:03:48,960
+that perspective and tag management all again
+
+84
+00:03:48,960 --> 00:03:51,630
+gives us a better visual strict structure
+
+85
+00:03:51,630 --> 00:03:53,970
+of what we're doing on our site
+
+86
+00:03:54,480 --> 00:03:56,790
+so by using it we can actually
+
+87
+00:03:57,210 --> 00:04:00,330
+jump between websites and learn pretty well
+
+88
+00:04:01,290 --> 00:04:04,731
+and understand how things has been in
+
+89
+00:04:04,731 --> 00:04:07,710
+in done and we don't have to
+
+90
+00:04:07,710 --> 00:04:09,120
+reinvent the wheel over and over
+
+91
+00:04:09,120 --> 00:04:12,480
+again so that means that the air
+
+92
+00:04:13,980 --> 00:04:15,390
+the quantity will actually be better
+
+93
+00:04:17,940 --> 00:04:19,920
+and this of course leads to better
+
+94
+00:04:19,920 --> 00:04:23,250
+security and quality and less loading time
+
+95
+00:04:23,310 --> 00:04:25,050
+often since we don't even have the
+
+96
+00:04:25,050 --> 00:04:27,960
+meal there the code that is implemented
+
+97
+00:04:27,960 --> 00:04:30,360
+through the documentaries fast and consistent
+
+98
+00:04:31,470 --> 00:04:34,020
+and of course we can be faster
+
+99
+00:04:34,020 --> 00:04:38,190
+with our development and applying youth changes
+
+100
+00:04:38,190 --> 00:04:39,090
+to our websites
+
+101
+00:04:40,830 --> 00:04:44,847
+at the concepts of tag management tag
+
+102
+00:04:44,847 --> 00:04:49,650
+management has three components basically we talk
+
+103
+00:04:49,650 --> 00:04:53,100
+about tags triggers and variables and together
+
+104
+00:04:53,160 --> 00:04:56,100
+with these three components we can build
+
+105
+00:04:56,160 --> 00:04:59,130
+pretty much anything once we start to
+
+106
+00:04:59,130 --> 00:05:00,150
+learn how it works
+
+107
+00:05:01,740 --> 00:05:04,290
+first of all triggers are actually connected
+
+108
+00:05:04,290 --> 00:05:07,410
+to events in browsers so events can
+
+109
+00:05:07,410 --> 00:05:09,840
+be such a thing as reloading a
+
+110
+00:05:09,840 --> 00:05:12,720
+page clicking on something or if he
+
+111
+00:05:12,720 --> 00:05:15,990
+uses scrolls or submits a forum or
+
+112
+00:05:16,050 --> 00:05:18,300
+basically anything that has to be with
+
+113
+00:05:18,300 --> 00:05:20,220
+interaction on a page or in a
+
+114
+00:05:20,220 --> 00:05:20,640
+browser
+
+115
+00:05:20,640 --> 00:05:25,920
+her tags are the actual code that
+
+116
+00:05:25,920 --> 00:05:27,900
+we are executing and this can also
+
+117
+00:05:27,900 --> 00:05:30,390
+be pretty much anything we have predefined
+
+118
+00:05:31,650 --> 00:05:34,950
+code snippets within the tag manager that
+
+119
+00:05:34,950 --> 00:05:36,960
+help us for instance to do that
+
+120
+00:05:36,960 --> 00:05:40,500
+matomo tracking but at as my example
+
+121
+00:05:40,500 --> 00:05:40,800
+here in
+
+122
+00:05:40,860 --> 00:05:43,650
+presentation shows we can basically execute any
+
+123
+00:05:43,650 --> 00:05:45,690
+type of code like the alert hello
+
+124
+00:05:45,690 --> 00:05:46,080
+world
+
+125
+00:05:47,430 --> 00:05:51,750
+finally we can use variables to fetch
+
+126
+00:05:51,750 --> 00:05:54,840
+data from the page or the browser
+
+127
+00:05:55,500 --> 00:05:59,400
+and use that data within our tags
+
+128
+00:05:59,430 --> 00:06:03,030
+or the triggers to create logic altogether
+
+129
+00:06:03,030 --> 00:06:05,280
+they create a really really nice way
+
+130
+00:06:05,280 --> 00:06:07,320
+to to structure our tracking
+
+131
+00:06:09,600 --> 00:06:10,170
+so
+
+132
+00:06:11,370 --> 00:06:13,590
+let's look at the next example
+
+133
+00:06:14,700 --> 00:06:16,020
+i'm actually gonna demo
+
+134
+00:06:17,820 --> 00:06:19,740
+how to set up
+
+135
+00:06:20,910 --> 00:06:23,400
+tracking in motto so i'm going to
+
+136
+00:06:23,400 --> 00:06:25,950
+go to bhutan was tag manager and
+
+137
+00:06:26,430 --> 00:06:27,840
+what we're going to look at here
+
+138
+00:06:27,840 --> 00:06:31,320
+is the defaults setup or form
+
+139
+00:06:32,430 --> 00:06:35,310
+a page view tracking so to do
+
+140
+00:06:35,310 --> 00:06:38,040
+that you basically have to click here
+
+141
+00:06:38,040 --> 00:06:41,460
+to create a new tag you select
+
+142
+00:06:41,760 --> 00:06:45,720
+at the tag type called matomo analytics
+
+143
+00:06:46,140 --> 00:06:49,440
+and as i explained before this actually
+
+144
+00:06:49,440 --> 00:06:51,420
+means that when you click on any
+
+145
+00:06:51,420 --> 00:06:52,020
+of these
+
+146
+00:06:52,710 --> 00:06:57,180
+you're getting a pre-written code and if
+
+147
+00:06:57,180 --> 00:06:59,670
+you click on this tag motto wanna
+
+148
+00:06:59,670 --> 00:07:01,800
+lyrics i'm actually gonna go back and
+
+149
+00:07:01,800 --> 00:07:03,570
+click on the one i already created
+
+150
+00:07:04,380 --> 00:07:08,430
+or you're getting a set of predefined
+
+151
+00:07:08,430 --> 00:07:11,130
+configurations from this case i'm going to
+
+152
+00:07:11,490 --> 00:07:12,720
+track it up too
+
+153
+00:07:12,750 --> 00:07:15,000
+matomo and i'm going to attract page
+
+154
+00:07:15,000 --> 00:07:18,060
+views the thing we normally start with
+
+155
+00:07:18,060 --> 00:07:19,860
+when we we implement a new website
+
+156
+00:07:21,780 --> 00:07:23,190
+as you can see here i have
+
+157
+00:07:23,190 --> 00:07:26,850
+been different fetus and i can change
+
+158
+00:07:26,880 --> 00:07:29,190
+and configure but in this case we're
+
+159
+00:07:29,190 --> 00:07:31,620
+doing it really easy and that the
+
+160
+00:07:32,010 --> 00:07:33,480
+second thing i need to do here
+
+161
+00:07:33,480 --> 00:07:34,410
+is to tell
+
+162
+00:07:35,970 --> 00:07:37,680
+the matomo tag when you're when to
+
+163
+00:07:37,680 --> 00:07:39,540
+execute this code and as you see
+
+164
+00:07:39,540 --> 00:07:41,970
+here i already selected page view and
+
+165
+00:07:41,970 --> 00:07:43,380
+if i click on this still about
+
+166
+00:07:43,380 --> 00:07:45,300
+and i can actually start edit it
+
+167
+00:07:45,960 --> 00:07:47,520
+and this is a
+
+168
+00:07:48,930 --> 00:07:51,330
+of course when a bow user reloads
+
+169
+00:07:51,330 --> 00:07:53,400
+the page i want to send a
+
+170
+00:07:53,400 --> 00:07:55,650
+new page view to matomo so that
+
+171
+00:07:55,650 --> 00:07:57,750
+we can track track that we didn't
+
+172
+00:07:57,750 --> 00:07:58,380
+our website
+
+173
+00:07:59,970 --> 00:08:01,680
+so it it's pretty simple actually
+
+174
+00:08:03,960 --> 00:08:06,992
+yeah let's see do we have any
+
+175
+00:08:06,992 --> 00:08:09,900
+variables yes in moto when we also
+
+176
+00:08:09,900 --> 00:08:12,600
+have a variable that helps us to
+
+177
+00:08:12,720 --> 00:08:14,190
+to get the standard data
+
+178
+00:08:16,560 --> 00:08:19,290
+and add to that that decides what
+
+179
+00:08:19,290 --> 00:08:21,540
+to send so in this example for
+
+180
+00:08:21,540 --> 00:08:23,730
+instance we can add
+
+181
+00:08:25,530 --> 00:08:27,240
+set up things like if i want
+
+182
+00:08:27,272 --> 00:08:29,580
+to disable cookies or if i want
+
+183
+00:08:29,580 --> 00:08:30,120
+to
+
+184
+00:08:31,950 --> 00:08:34,919
+sand the beacons are witches are quite
+
+185
+00:08:34,919 --> 00:08:37,830
+techy and set up but we can
+
+186
+00:08:37,830 --> 00:08:40,230
+also force requiring a consent here
+
+187
+00:08:41,520 --> 00:08:43,200
+so this is a pretty nice way
+
+188
+00:08:43,200 --> 00:08:45,750
+to to start off with so i'm
+
+189
+00:08:45,750 --> 00:08:47,490
+going to go back to my presentation
+
+190
+00:08:47,550 --> 00:08:49,770
+and i'm going to talk a little
+
+191
+00:08:49,770 --> 00:08:51,450
+bit about a more
+
+192
+00:08:53,430 --> 00:08:56,610
+detailed case which is tracking uses without
+
+193
+00:08:56,610 --> 00:09:00,570
+asking for consent and the background to
+
+194
+00:09:00,570 --> 00:09:03,000
+this task which is pretty common is
+
+195
+00:09:03,000 --> 00:09:06,390
+that gdp r requires us to ask
+
+196
+00:09:06,390 --> 00:09:07,410
+for consent
+
+197
+00:09:09,150 --> 00:09:11,490
+from useless before we start to track
+
+198
+00:09:11,490 --> 00:09:11,700
+them
+
+199
+00:09:12,840 --> 00:09:16,080
+and that this relates to that gdp
+
+200
+00:09:16,080 --> 00:09:17,880
+earth is
+
+201
+00:09:19,800 --> 00:09:23,310
+describing that if you're restoring personal data
+
+202
+00:09:24,120 --> 00:09:26,100
+or if you do profiling you need
+
+203
+00:09:26,100 --> 00:09:28,590
+to ask for consent we're looking a
+
+204
+00:09:28,590 --> 00:09:32,730
+bit too what that really means and
+
+205
+00:09:32,940 --> 00:09:33,330
+but
+
+206
+00:09:34,590 --> 00:09:37,290
+yup so so personal data is of
+
+207
+00:09:37,290 --> 00:09:39,240
+course the ip address in many cases
+
+208
+00:09:42,960 --> 00:09:45,510
+but but the the reason why when
+
+209
+00:09:45,570 --> 00:09:48,268
+going to do tracking without consent is
+
+210
+00:09:48,270 --> 00:09:49,980
+that of course if we stopped to
+
+211
+00:09:49,980 --> 00:09:53,460
+ask consent from all the users we
+
+212
+00:09:53,460 --> 00:09:54,720
+will loose a lot of data
+
+213
+00:09:56,160 --> 00:09:58,080
+depending on where your how your website
+
+214
+00:09:58,080 --> 00:09:58,650
+is set up
+
+215
+00:10:00,120 --> 00:10:00,660
+so
+
+216
+00:10:02,125 --> 00:10:04,765
+interesting interpretation of gdp aren't that many
+
+217
+00:10:04,765 --> 00:10:09,115
+organizations do is that if we implement
+
+218
+00:10:09,175 --> 00:10:11,635
+cookie free tracking we can actually
+
+219
+00:10:14,425 --> 00:10:16,945
+track users without having the consent
+
+220
+00:10:18,205 --> 00:10:20,305
+which is of course nice if you
+
+221
+00:10:20,305 --> 00:10:22,165
+if you want to have correct data
+
+222
+00:10:22,165 --> 00:10:24,895
+on your website so what is actually
+
+223
+00:10:24,895 --> 00:10:27,475
+profiling in moto mobile when a user
+
+224
+00:10:27,475 --> 00:10:29,335
+visits your website for the first time
+
+225
+00:10:30,355 --> 00:10:33,505
+we set a cookie and that cookie
+
+226
+00:10:33,505 --> 00:10:35,365
+contains a digital number
+
+227
+00:10:36,475 --> 00:10:38,035
+which is the visitor id
+
+228
+00:10:39,325 --> 00:10:40,105
+and that
+
+229
+00:10:41,275 --> 00:10:44,065
+id is stored in moto more together
+
+230
+00:10:44,065 --> 00:10:46,195
+with the data we collect though the
+
+231
+00:10:46,195 --> 00:10:48,445
+next time a user visits your site
+
+232
+00:10:48,685 --> 00:10:52,195
+a matomo script can find that cookie
+
+233
+00:10:52,285 --> 00:10:55,465
+and it will actually start adding data
+
+234
+00:10:55,465 --> 00:10:58,135
+to the already created profile in matomo
+
+235
+00:10:58,225 --> 00:11:01,138
+so that we're building a profile in
+
+236
+00:11:01,138 --> 00:11:01,405
+in
+
+237
+00:11:01,855 --> 00:11:04,495
+in matomo it looks like this if
+
+238
+00:11:04,495 --> 00:11:05,725
+you if you look into it in
+
+239
+00:11:05,742 --> 00:11:07,315
+the interface so you can see here
+
+240
+00:11:07,375 --> 00:11:09,625
+like there's the visit number one and
+
+241
+00:11:09,625 --> 00:11:12,715
+basic number two and the data collected
+
+242
+00:11:12,715 --> 00:11:15,955
+from that user is stored to the
+
+243
+00:11:15,955 --> 00:11:19,020
+same profile and this is what gdp
+
+244
+00:11:19,020 --> 00:11:21,145
+year talks about that your it requires
+
+245
+00:11:21,145 --> 00:11:21,565
+a console
+
+246
+00:11:21,565 --> 00:11:23,545
+sent if you started to do that
+
+247
+00:11:24,385 --> 00:11:27,085
+so the solution is of course to
+
+248
+00:11:28,315 --> 00:11:30,775
+not do profiling and that means that
+
+249
+00:11:30,835 --> 00:11:33,385
+whenever use envisages the first time we're
+
+250
+00:11:33,385 --> 00:11:36,745
+not setting persistent cookies meaning the data
+
+251
+00:11:36,745 --> 00:11:40,225
+stored in matomo is connected to efficient
+
+252
+00:11:40,255 --> 00:11:41,725
+cooking only so the next
+
+253
+00:11:41,725 --> 00:11:43,795
+time to use it gets there we
+
+254
+00:11:43,795 --> 00:11:46,045
+don't have any persistent cookie that can
+
+255
+00:11:46,045 --> 00:11:48,475
+connect that id add to any previous
+
+256
+00:11:48,475 --> 00:11:51,565
+visits so we create a new profile
+
+257
+00:11:51,595 --> 00:11:54,595
+in matomo and this is actually the
+
+258
+00:11:54,595 --> 00:11:56,545
+definition of of profiling
+
+259
+00:11:57,745 --> 00:12:00,415
+so we can avoid that through having
+
+260
+00:12:00,565 --> 00:12:04,618
+a matomo to not set these cookies
+
+261
+00:12:04,618 --> 00:12:07,345
+so let's look into how to do
+
+262
+00:12:07,345 --> 00:12:07,885
+this
+
+263
+00:12:09,205 --> 00:12:11,455
+step by step you need to basically
+
+264
+00:12:11,455 --> 00:12:13,105
+disable cookies by default
+
+265
+00:12:14,485 --> 00:12:18,145
+you need to identify the consent and
+
+266
+00:12:18,145 --> 00:12:20,965
+this is usually happening through the cms
+
+267
+00:12:21,505 --> 00:12:23,245
+so we need to know if someone
+
+268
+00:12:23,245 --> 00:12:25,045
+clicked the consent
+
+269
+00:12:26,215 --> 00:12:28,495
+dialog button or button was similar
+
+270
+00:12:29,725 --> 00:12:31,255
+and then we need to have some
+
+271
+00:12:31,255 --> 00:12:33,475
+kind of logic to execute
+
+272
+00:12:35,845 --> 00:12:37,975
+some particular function similar to my will
+
+273
+00:12:37,975 --> 00:12:39,355
+always show you pretty soon
+
+274
+00:12:41,365 --> 00:12:44,425
+that will if the user has
+
+275
+00:12:45,925 --> 00:12:47,875
+even a consent we will actually start
+
+276
+00:12:47,905 --> 00:12:50,065
+setting cookies and and the reason we
+
+277
+00:12:50,065 --> 00:12:51,805
+want to set cookies is that
+
+278
+00:12:53,005 --> 00:12:54,475
+that is because
+
+279
+00:12:56,455 --> 00:12:59,455
+it's sometimes nice to have that extreme
+
+280
+00:12:59,455 --> 00:13:02,035
+for medicine we get from cookies to
+
+281
+00:13:02,035 --> 00:13:04,585
+be able to see recurring visits
+
+282
+00:13:05,815 --> 00:13:07,855
+because if you're using my told me
+
+283
+00:13:07,855 --> 00:13:12,505
+without cookies or persistent cookies basically every
+
+284
+00:13:12,505 --> 00:13:15,715
+user will be reported as a new
+
+285
+00:13:15,715 --> 00:13:19,165
+visitor and when you're starting to analyze
+
+286
+00:13:19,165 --> 00:13:21,835
+your your your application it's often nice
+
+287
+00:13:21,835 --> 00:13:25,496
+to know and perhaps create segments of
+
+288
+00:13:25,496 --> 00:13:25,885
+a recall
+
+289
+00:13:25,885 --> 00:13:28,465
+foreign visitors or beast visitors that has
+
+290
+00:13:28,465 --> 00:13:29,905
+been to the site more than ten
+
+291
+00:13:29,935 --> 00:13:32,215
+times etc so this is of course
+
+292
+00:13:32,215 --> 00:13:34,405
+nice to do if we have the
+
+293
+00:13:34,405 --> 00:13:36,595
+consent so that's the background to to
+
+294
+00:13:36,595 --> 00:13:38,065
+why we usually want to do this
+
+295
+00:13:38,065 --> 00:13:38,395
+as well
+
+296
+00:13:39,655 --> 00:13:40,885
+so first of all you go to
+
+297
+00:13:40,885 --> 00:13:44,455
+your matomo configuration variable we looked at
+
+298
+00:13:44,455 --> 00:13:46,825
+it here before it's basically
+
+299
+00:13:48,595 --> 00:13:50,935
+this little checkbox so we can click
+
+300
+00:13:50,935 --> 00:13:51,985
+disable cookies
+
+301
+00:13:53,005 --> 00:13:54,715
+and we can also
+
+302
+00:13:55,945 --> 00:13:59,365
+and check another checkbox further down now
+
+303
+00:13:59,365 --> 00:14:02,815
+it's a bit up where we're forcing
+
+304
+00:14:04,795 --> 00:14:05,545
+let's see
+
+305
+00:14:16,975 --> 00:14:20,065
+okay now i missed that but this
+
+306
+00:14:20,065 --> 00:14:20,335
+one
+
+307
+00:14:22,315 --> 00:14:24,115
+are actually going to do money sorry
+
+308
+00:14:24,745 --> 00:14:27,175
+for being confusing but we will by
+
+309
+00:14:27,175 --> 00:14:31,075
+disabling cookies like it's the second step
+
+310
+00:14:31,135 --> 00:14:35,305
+is to identify the cookie consent from
+
+311
+00:14:35,305 --> 00:14:38,305
+our cms now i'm looking at the
+
+312
+00:14:38,305 --> 00:14:41,725
+european commission sites and know
+
+313
+00:14:41,725 --> 00:14:44,215
+normally we have a button like this
+
+314
+00:14:44,305 --> 00:14:47,905
+access accept all cookies and that's the
+
+315
+00:14:47,905 --> 00:14:50,755
+behavior we want to start looking into
+
+316
+00:14:50,815 --> 00:14:51,265
+so
+
+317
+00:14:52,285 --> 00:14:55,345
+when that happens we want to identify
+
+318
+00:14:55,345 --> 00:14:57,835
+this somehow and to do so i
+
+319
+00:14:57,835 --> 00:15:00,595
+usually create a variable that reads that
+
+320
+00:15:00,595 --> 00:15:05,995
+cookie information from the browser and by
+
+321
+00:15:05,995 --> 00:15:09,925
+doing looking create a new logic so
+
+322
+00:15:09,925 --> 00:15:11,935
+that if the cookie is set to
+
+323
+00:15:11,935 --> 00:15:12,445
+basically
+
+324
+00:15:12,565 --> 00:15:13,195
+i can
+
+325
+00:15:15,625 --> 00:15:18,145
+execute that we have a consent given
+
+326
+00:15:18,145 --> 00:15:21,145
+to matomo which is the yes option
+
+327
+00:15:21,145 --> 00:15:22,675
+down here and when we are doing
+
+328
+00:15:22,675 --> 00:15:25,645
+so not only will start setting cookies
+
+329
+00:15:26,305 --> 00:15:26,785
+and
+
+330
+00:15:28,195 --> 00:15:29,785
+if we don't have the consent or
+
+331
+00:15:29,785 --> 00:15:31,165
+actually on every
+
+332
+00:15:32,755 --> 00:15:35,305
+other patriots will run the code above
+
+333
+00:15:35,545 --> 00:15:38,605
+that requires us to get a cookie
+
+334
+00:15:38,605 --> 00:15:39,115
+consent
+
+335
+00:15:40,645 --> 00:15:44,274
+so that in combination with the attract
+
+336
+00:15:44,274 --> 00:15:47,065
+without cookies will give us the wanted
+
+337
+00:15:47,065 --> 00:15:47,545
+behavior
+
+338
+00:15:50,335 --> 00:15:50,875
+so
+
+339
+00:15:52,075 --> 00:15:54,295
+let's jump to the next the the
+
+340
+00:15:54,295 --> 00:15:55,135
+final
+
+341
+00:15:56,695 --> 00:15:59,035
+step is to do a trigger as
+
+342
+00:15:59,035 --> 00:16:00,895
+i said that if we have a
+
+343
+00:16:00,895 --> 00:16:05,605
+cookie consent we will execute this little
+
+344
+00:16:05,605 --> 00:16:09,205
+code and let's look at how that
+
+345
+00:16:10,675 --> 00:16:12,595
+that looks in that
+
+346
+00:16:16,885 --> 00:16:18,235
+so what i have done here is
+
+347
+00:16:18,235 --> 00:16:18,985
+that i ever
+
+348
+00:16:20,335 --> 00:16:23,125
+matomo configuration variable as we looked into
+
+349
+00:16:23,125 --> 00:16:26,095
+before where i have disabled cookies
+
+350
+00:16:28,525 --> 00:16:30,925
+i also created a tag
+
+351
+00:16:32,665 --> 00:16:35,665
+for several tags the first one is
+
+352
+00:16:35,665 --> 00:16:39,715
+require consent this one will always be
+
+353
+00:16:39,745 --> 00:16:43,765
+executed and the only thing it does
+
+354
+00:16:43,795 --> 00:16:46,345
+is to run accustomed javascript saying require
+
+355
+00:16:46,345 --> 00:16:47,005
+consent
+
+356
+00:16:48,835 --> 00:16:50,695
+the second logic if that
+
+357
+00:16:52,855 --> 00:16:53,335
+if
+
+358
+00:16:54,775 --> 00:16:58,315
+consent is given which might trigger i
+
+359
+00:16:58,765 --> 00:17:01,405
+talked about is here i'm going to
+
+360
+00:17:01,465 --> 00:17:06,175
+execute this code remember cookie consent given
+
+361
+00:17:07,704 --> 00:17:09,865
+and the trigger i configured in this
+
+362
+00:17:09,865 --> 00:17:10,435
+case
+
+363
+00:17:12,204 --> 00:17:14,905
+if that we're looking at their value
+
+364
+00:17:14,935 --> 00:17:18,655
+from the cookie and this one is
+
+365
+00:17:18,655 --> 00:17:21,204
+actually configured to work with the european
+
+366
+00:17:21,204 --> 00:17:22,584
+commission site and i will show you
+
+367
+00:17:22,584 --> 00:17:22,915
+that
+
+368
+00:17:23,964 --> 00:17:26,515
+in a while it's actually a bit
+
+369
+00:17:27,025 --> 00:17:30,115
+advanced so looking at this site
+
+370
+00:17:31,855 --> 00:17:33,895
+and i had to go to code
+
+371
+00:17:33,895 --> 00:17:34,615
+inspection
+
+372
+00:17:35,755 --> 00:17:37,765
+and go to our cookies
+
+373
+00:17:38,935 --> 00:17:41,665
+and there is actually a cookie called
+
+374
+00:17:41,755 --> 00:17:42,385
+c
+
+375
+00:17:43,615 --> 00:17:47,875
+c k one and they have an
+
+376
+00:17:47,875 --> 00:17:49,525
+array of data in this one so
+
+377
+00:17:49,525 --> 00:17:52,195
+c m equals true means that we
+
+378
+00:17:52,195 --> 00:17:54,055
+have a consent so if i remove
+
+379
+00:17:54,056 --> 00:17:56,095
+this one and reload the page would
+
+380
+00:17:56,095 --> 00:17:59,185
+probably see the cookie consent again so
+
+381
+00:17:59,185 --> 00:18:00,625
+reading this one now
+
+382
+00:18:01,735 --> 00:18:04,915
+we have cm force so as long
+
+383
+00:18:04,915 --> 00:18:06,445
+as step one is false i will
+
+384
+00:18:06,445 --> 00:18:10,885
+not execute the script cookie consent given
+
+385
+00:18:11,425 --> 00:18:13,525
+as if the hematoma all are distort
+
+386
+00:18:13,951 --> 00:18:15,775
+stored this i can i can remove
+
+387
+00:18:15,775 --> 00:18:18,505
+that cookie and hopefully if i reload
+
+388
+00:18:18,505 --> 00:18:20,965
+the page we can see that we
+
+389
+00:18:20,965 --> 00:18:21,805
+don't get them
+
+390
+00:18:21,865 --> 00:18:24,385
+tormo cookies but as soon as i
+
+391
+00:18:24,385 --> 00:18:24,985
+do that
+
+392
+00:18:26,215 --> 00:18:27,925
+and reload the page
+
+393
+00:18:29,095 --> 00:18:30,595
+we're going to get the matomo cookie
+
+394
+00:18:30,595 --> 00:18:33,565
+consent stored and we're also setting
+
+395
+00:18:34,825 --> 00:18:36,295
+the persistent cookies
+
+396
+00:18:37,585 --> 00:18:40,915
+from all on this way we're able
+
+397
+00:18:40,915 --> 00:18:42,025
+to to track
+
+398
+00:18:43,820 --> 00:18:46,645
+the consent and and handle the
+
+399
+00:18:47,965 --> 00:18:50,605
+the cookie cookie less tracking for uses
+
+400
+00:18:50,616 --> 00:18:52,735
+that hasn't been giving a consent
+
+401
+00:18:58,160 --> 00:18:58,975
+let's see
+
+402
+00:19:01,405 --> 00:19:04,135
+so one thing that i can share
+
+403
+00:19:04,135 --> 00:19:06,535
+as well is that i'm not working
+
+404
+00:19:06,535 --> 00:19:10,045
+with the european commission and hopefully helping
+
+405
+00:19:10,045 --> 00:19:13,435
+them with potomac but instead i'm using
+
+406
+00:19:13,435 --> 00:19:17,125
+a dental plugin in my chrome browser
+
+407
+00:19:17,125 --> 00:19:19,795
+that helped me to simulate tracking on
+
+408
+00:19:19,795 --> 00:19:20,305
+basically
+
+409
+00:19:20,365 --> 00:19:22,045
+any site i would like to play
+
+410
+00:19:22,045 --> 00:19:24,595
+with and the lily plugin is called
+
+411
+00:19:24,595 --> 00:19:28,015
+you sir and your user javascript and
+
+412
+00:19:28,015 --> 00:19:30,565
+css and if i click this one
+
+413
+00:19:31,645 --> 00:19:34,195
+i will be i can add and
+
+414
+00:19:34,195 --> 00:19:37,345
+both javascript and css that will be
+
+415
+00:19:37,375 --> 00:19:39,745
+running in my browser on basically any
+
+416
+00:19:39,745 --> 00:19:41,215
+site so you can see it connect
+
+417
+00:19:41,215 --> 00:19:43,345
+it's connected to this domain so what
+
+418
+00:19:43,345 --> 00:19:44,905
+i usually do here is that i
+
+419
+00:19:44,905 --> 00:19:47,245
+go to the tag manager i go
+
+420
+00:19:47,245 --> 00:19:50,156
+to the install code section i grabbed
+
+421
+00:19:50,156 --> 00:19:51,325
+this javascript
+
+422
+00:19:52,105 --> 00:19:55,135
+i added to the site and then
+
+423
+00:19:55,135 --> 00:19:58,555
+basically press save and by doing so
+
+424
+00:19:58,555 --> 00:20:00,025
+i can also make sure that it's
+
+425
+00:20:00,025 --> 00:20:01,945
+green up here i know that i
+
+426
+00:20:01,945 --> 00:20:05,665
+will always execute this script on this
+
+427
+00:20:05,665 --> 00:20:07,705
+site so that's a great great way
+
+428
+00:20:07,705 --> 00:20:09,895
+to assimilate
+
+429
+00:20:11,560 --> 00:20:11,950
+tracking
+
+430
+00:20:15,610 --> 00:20:16,390
+let's see
+
+431
+00:20:20,080 --> 00:20:21,820
+so let's go back to the presentation
+
+432
+00:20:23,290 --> 00:20:25,510
+yet we looked up the demo and
+
+433
+00:20:26,500 --> 00:20:28,720
+actually exposed to a pretty quick
+
+434
+00:20:30,070 --> 00:20:32,590
+demonstration i will do a bit more
+
+435
+00:20:32,590 --> 00:20:33,340
+advanced
+
+436
+00:20:35,260 --> 00:20:36,760
+it's a bit more more of an
+
+437
+00:20:36,781 --> 00:20:41,410
+efficient tomorrow displaying how to track single
+
+438
+00:20:41,440 --> 00:20:44,050
+page application saw right now i'm going
+
+439
+00:20:44,050 --> 00:20:47,440
+to open up for questions and details
+
+440
+00:20:47,440 --> 00:20:49,600
+about this i hope to be able
+
+441
+00:20:49,600 --> 00:20:52,120
+to share the presentation with you guys
+
+442
+00:20:52,150 --> 00:20:52,870
+afterwards
+
+443
+00:20:54,190 --> 00:20:55,180
+so let sir
+
+444
+00:20:56,680 --> 00:20:58,120
+let's go ahead with questions
+
+445
+00:21:02,050 --> 00:21:04,060
+yeah thank you if any questions please
+
+446
+00:21:04,060 --> 00:21:04,900
+let them know
+
+447
+00:21:06,010 --> 00:21:07,932
+so that they glossed over because of
+
+448
+00:21:07,932 --> 00:21:08,080
+them
+
+449
+00:21:43,990 --> 00:21:48,880
+okay seems to be quite quiet no
+
+450
+00:21:48,880 --> 00:21:50,260
+get one question maybe
+
+451
+00:22:06,400 --> 00:22:08,890
+okay where to disable cookies good
+
+452
+00:22:11,350 --> 00:22:13,480
+so when you go into the tag
+
+453
+00:22:13,480 --> 00:22:17,680
+manager you usually have a variable called
+
+454
+00:22:18,280 --> 00:22:21,250
+the moto m all a conflagration
+
+455
+00:22:22,780 --> 00:22:25,360
+and when you edit that one i
+
+456
+00:22:25,630 --> 00:22:29,380
+scroll down and you will find this
+
+457
+00:22:29,380 --> 00:22:31,540
+little checkbox disable cookies
+
+458
+00:22:34,360 --> 00:22:35,920
+well maybe i should do this actually
+
+459
+00:22:35,920 --> 00:22:39,280
+from scratch that's actually i'm actually going
+
+460
+00:22:39,280 --> 00:22:41,470
+to create a new tag manager container
+
+461
+00:22:41,530 --> 00:22:44,050
+and just do it from an empty
+
+462
+00:22:44,080 --> 00:22:44,740
+container
+
+463
+00:22:46,330 --> 00:22:47,770
+so you can follow it step by
+
+464
+00:22:47,770 --> 00:22:48,130
+step
+
+465
+00:22:49,330 --> 00:22:51,820
+so now i have a totally empty
+
+466
+00:22:52,060 --> 00:22:54,970
+tag manager so what i usually start
+
+467
+00:22:54,970 --> 00:22:58,270
+with is to create a tomo tracking
+
+468
+00:22:58,270 --> 00:23:00,880
+tag so i want to crap track
+
+469
+00:23:01,030 --> 00:23:01,810
+page views
+
+470
+00:23:03,250 --> 00:23:04,536
+i'm not going to do much more
+
+471
+00:23:04,540 --> 00:23:08,200
+not now but before normally hear you
+
+472
+00:23:08,200 --> 00:23:11,980
+select that the atomic confirmation variable solid
+
+473
+00:23:12,096 --> 00:23:12,880
+click on this one
+
+474
+00:23:14,230 --> 00:23:16,150
+this will actually bring up a new
+
+475
+00:23:16,150 --> 00:23:21,070
+variable and pretty much everything prefilled i
+
+476
+00:23:21,070 --> 00:23:22,900
+would check the disabled cookies
+
+477
+00:23:24,220 --> 00:23:25,930
+and i will scroll down and just
+
+478
+00:23:25,930 --> 00:23:29,110
+creates a variable so now my page
+
+479
+00:23:29,110 --> 00:23:31,840
+view tag is connected to the atomic
+
+480
+00:23:31,840 --> 00:23:32,950
+configuration variable
+
+481
+00:23:34,540 --> 00:23:35,620
+the last thing i need to do
+
+482
+00:23:35,620 --> 00:23:37,360
+is to create the trigger
+
+483
+00:23:38,470 --> 00:23:40,720
+i will click on page view because
+
+484
+00:23:40,720 --> 00:23:43,270
+that's when i want to fire and
+
+485
+00:23:43,270 --> 00:23:46,360
+created so basically
+
+486
+00:23:48,160 --> 00:23:49,750
+and i need to create a tag
+
+487
+00:23:50,230 --> 00:23:54,130
+so if i published if i can
+
+488
+00:23:54,130 --> 00:23:55,810
+keep it to version of one
+
+489
+00:23:57,760 --> 00:24:00,640
+i basically have patriots running so we
+
+490
+00:24:00,670 --> 00:24:01,510
+have a tag
+
+491
+00:24:02,710 --> 00:24:06,040
+executing that i have a trigger or
+
+492
+00:24:06,040 --> 00:24:08,703
+page use and in this case i
+
+493
+00:24:08,703 --> 00:24:11,554
+only have one variable containing the moto
+
+494
+00:24:11,651 --> 00:24:14,680
+configuration so if i install this code
+
+495
+00:24:14,680 --> 00:24:14,980
+now
+
+496
+00:24:16,600 --> 00:24:19,270
+and go back to my european commission
+
+497
+00:24:19,300 --> 00:24:21,644
+page and with the change to javascript
+
+498
+00:24:21,670 --> 00:24:24,610
+or use up to remove the script
+
+499
+00:24:24,640 --> 00:24:25,210
+tags
+
+500
+00:24:26,590 --> 00:24:28,210
+and we can save it
+
+501
+00:24:29,530 --> 00:24:31,630
+so to see that it really works
+
+502
+00:24:31,630 --> 00:24:34,180
+now i need to go to my
+
+503
+00:24:34,180 --> 00:24:37,030
+network tired and i usually shelter my
+
+504
+00:24:37,030 --> 00:24:39,820
+ip address and when i reload this
+
+505
+00:24:39,820 --> 00:24:41,440
+one i can see that we have
+
+506
+00:24:41,440 --> 00:24:44,110
+a moto mod pizza pie called and
+
+507
+00:24:44,110 --> 00:24:45,760
+an action name so i can actually
+
+508
+00:24:45,760 --> 00:24:47,801
+see that this one is sending data
+
+509
+00:24:47,801 --> 00:24:48,370
+to matomo
+
+510
+00:24:50,205 --> 00:24:52,630
+but a cookie store links i need
+
+511
+00:24:52,630 --> 00:24:55,000
+to remove this one time reloaded again
+
+512
+00:24:55,960 --> 00:24:59,440
+yes so right now we disabled cookies
+
+513
+00:24:59,440 --> 00:25:00,550
+for all users
+
+514
+00:25:02,140 --> 00:25:04,450
+and the next step would be to
+
+515
+00:25:05,500 --> 00:25:05,680
+yeah
+
+516
+00:25:10,900 --> 00:25:12,280
+the seat
+
+517
+00:25:19,992 --> 00:25:22,750
+just lost my screener okay the next
+
+518
+00:25:22,750 --> 00:25:24,340
+step would be to
+
+519
+00:25:25,900 --> 00:25:27,790
+create a variable that looks at this
+
+520
+00:25:27,790 --> 00:25:28,210
+cookie
+
+521
+00:25:29,770 --> 00:25:32,770
+so let's create that variable we create
+
+522
+00:25:32,770 --> 00:25:34,510
+the variable of the type
+
+523
+00:25:36,160 --> 00:25:38,620
+or are we the first party cookie
+
+524
+00:25:39,730 --> 00:25:40,990
+i'm going to go back to my
+
+525
+00:25:40,990 --> 00:25:42,640
+site and the cook i want to
+
+526
+00:25:42,640 --> 00:25:45,580
+look for is this one cck one
+
+527
+00:25:47,500 --> 00:25:48,760
+you're just going to name it like
+
+528
+00:25:48,760 --> 00:25:51,160
+that and this is where we're actually
+
+529
+00:25:51,160 --> 00:25:54,280
+name of the the cookie i'm going
+
+530
+00:25:54,280 --> 00:25:55,030
+to look into
+
+531
+00:25:56,170 --> 00:25:58,330
+and this cookie in this case it
+
+532
+00:25:58,330 --> 00:26:01,090
+always exists if you had a simple
+
+533
+00:26:01,090 --> 00:26:01,990
+solution that
+
+534
+00:26:03,100 --> 00:26:05,350
+a lot of sites have cookies that
+
+535
+00:26:05,410 --> 00:26:08,860
+either they exist or not and if
+
+536
+00:26:08,860 --> 00:26:11,110
+that's the solution you have you can
+
+537
+00:26:11,110 --> 00:26:14,380
+actually set a default value here to
+
+538
+00:26:14,380 --> 00:26:17,440
+not set at won't matter right now
+
+539
+00:26:17,440 --> 00:26:19,630
+because these cookies always but if you
+
+540
+00:26:19,630 --> 00:26:21,670
+do that you can use that in
+
+541
+00:26:21,670 --> 00:26:23,260
+your logic for the cheddar later
+
+542
+00:26:23,260 --> 00:26:25,510
+m and some will actually write it
+
+543
+00:26:25,510 --> 00:26:28,420
+like that so first of all now
+
+544
+00:26:28,480 --> 00:26:30,250
+we will read that cookie on the
+
+545
+00:26:30,250 --> 00:26:30,790
+page
+
+546
+00:26:33,430 --> 00:26:35,050
+the next thing i need to do
+
+547
+00:26:35,050 --> 00:26:38,740
+is to require the cookie consent so
+
+548
+00:26:38,740 --> 00:26:41,200
+that said java scripts and i'm going
+
+549
+00:26:41,200 --> 00:26:41,440
+to
+
+550
+00:26:42,520 --> 00:26:44,500
+shall i copy this code from my
+
+551
+00:26:44,530 --> 00:26:46,750
+other tag mentor instance just now
+
+552
+00:26:52,210 --> 00:26:54,610
+welcome to the swamp the scammer copied
+
+553
+00:26:54,670 --> 00:26:55,780
+culture sorry
+
+554
+00:26:57,850 --> 00:27:00,940
+back so it is the current tag
+
+555
+00:27:00,940 --> 00:27:02,710
+matter i'm going to create a new
+
+556
+00:27:02,710 --> 00:27:05,320
+tag of the type custom html
+
+557
+00:27:07,090 --> 00:27:11,530
+red wire called sam i'm going to
+
+558
+00:27:11,530 --> 00:27:12,220
+paste
+
+559
+00:27:13,613 --> 00:27:17,620
+the script here required consent i can
+
+560
+00:27:17,890 --> 00:27:19,120
+then create a trigger
+
+561
+00:27:20,170 --> 00:27:21,580
+and the trigger i want to use
+
+562
+00:27:21,580 --> 00:27:25,150
+her is doom ready that's actually bit
+
+563
+00:27:25,150 --> 00:27:25,870
+before
+
+564
+00:27:28,570 --> 00:27:30,640
+our page series is triggered to make
+
+565
+00:27:30,640 --> 00:27:34,870
+sure that we're requiring it before the
+
+566
+00:27:34,900 --> 00:27:37,480
+patriots sent so creating this tag
+
+567
+00:27:39,070 --> 00:27:44,470
+now we're requiring consent and the last
+
+568
+00:27:44,470 --> 00:27:45,700
+thing would be to
+
+569
+00:27:47,770 --> 00:27:52,840
+set the logic for the consent given
+
+570
+00:27:53,166 --> 00:27:54,520
+i would show you how that works
+
+571
+00:27:54,520 --> 00:27:55,600
+and you're just going to copy the
+
+572
+00:27:55,600 --> 00:27:56,380
+code handwritten
+
+573
+00:27:57,670 --> 00:27:59,350
+though going back to creating a new
+
+574
+00:27:59,380 --> 00:27:59,830
+tag
+
+575
+00:28:00,940 --> 00:28:03,430
+while the type custom html
+
+576
+00:28:04,780 --> 00:28:06,490
+read ma'am there
+
+577
+00:28:08,890 --> 00:28:09,310
+even
+
+578
+00:28:12,010 --> 00:28:13,120
+now replaced it here
+
+579
+00:28:14,890 --> 00:28:17,590
+and now to the perhaps more tricky
+
+580
+00:28:17,620 --> 00:28:19,930
+part now need to create this custom
+
+581
+00:28:19,960 --> 00:28:20,440
+trigger
+
+582
+00:28:23,080 --> 00:28:24,160
+we're going to do it until i'm
+
+583
+00:28:24,160 --> 00:28:26,680
+ready and in this case i want
+
+584
+00:28:26,680 --> 00:28:30,280
+to look at my previously created variables
+
+585
+00:28:30,280 --> 00:28:32,740
+i'm going can go to custom and
+
+586
+00:28:32,770 --> 00:28:34,150
+here you find my
+
+587
+00:28:35,380 --> 00:28:38,590
+a variable called cct one which was
+
+588
+00:28:38,590 --> 00:28:40,450
+the cookie consent or cookie
+
+589
+00:28:41,650 --> 00:28:43,360
+so now to the logic
+
+590
+00:28:44,500 --> 00:28:50,740
+corn sunk given that nice solution is
+
+591
+00:28:50,740 --> 00:28:51,760
+normally too
+
+592
+00:28:55,090 --> 00:28:57,760
+make it like this if your solution
+
+593
+00:28:57,760 --> 00:28:59,620
+is that the cookies
+
+594
+00:29:00,702 --> 00:29:02,770
+doesn't exist until you have a consent
+
+595
+00:29:03,820 --> 00:29:06,250
+he remembered i gave this variable a
+
+596
+00:29:06,250 --> 00:29:07,870
+default value for if you do it
+
+597
+00:29:07,870 --> 00:29:09,820
+like this knocked said
+
+598
+00:29:13,660 --> 00:29:15,730
+so you're actually going to do a
+
+599
+00:29:15,730 --> 00:29:18,340
+negative logic here so if it doesn't
+
+600
+00:29:18,340 --> 00:29:20,080
+equal not set we know that we
+
+601
+00:29:20,080 --> 00:29:23,200
+have a consent but in our example
+
+602
+00:29:23,200 --> 00:29:25,750
+here they actually the cook crooked always
+
+603
+00:29:25,750 --> 00:29:27,730
+existed for her to create that a
+
+604
+00:29:27,730 --> 00:29:29,980
+little bit more advanced
+
+605
+00:29:30,460 --> 00:29:33,010
+regular expression to do that matching and
+
+606
+00:29:33,018 --> 00:29:34,840
+so i had to do a regular
+
+607
+00:29:34,840 --> 00:29:35,560
+expression
+
+608
+00:29:36,970 --> 00:29:39,670
+and with not matches to make it
+
+609
+00:29:39,670 --> 00:29:42,340
+work so that would be
+
+610
+00:29:45,580 --> 00:29:46,420
+where do we have it
+
+611
+00:29:47,530 --> 00:29:49,390
+not much just regular expression
+
+612
+00:29:51,070 --> 00:29:55,960
+so it can't face cm or false
+
+613
+00:29:56,020 --> 00:29:56,530
+basically
+
+614
+00:29:58,930 --> 00:29:59,590
+may trigger
+
+615
+00:30:02,590 --> 00:30:04,540
+i could actually write it the equal
+
+616
+00:30:04,540 --> 00:30:07,390
+see him too as well so creating
+
+617
+00:30:07,390 --> 00:30:08,020
+this tag
+
+618
+00:30:09,430 --> 00:30:13,270
+should be what we need and if
+
+619
+00:30:13,270 --> 00:30:15,280
+i do this i publish it
+
+620
+00:30:17,020 --> 00:30:20,860
+the if we go back to the
+
+621
+00:30:20,894 --> 00:30:21,460
+site
+
+622
+00:30:24,910 --> 00:30:26,530
+delete this and reload
+
+623
+00:30:27,880 --> 00:30:33,190
+the remembered as well
+
+624
+00:30:36,730 --> 00:30:39,010
+okay so now i'm looking and it
+
+625
+00:30:39,010 --> 00:30:43,360
+seems like we're not having their matomo
+
+626
+00:30:43,660 --> 00:30:46,270
+cookies set and we can see that
+
+627
+00:30:46,270 --> 00:30:48,850
+see him false and if i click
+
+628
+00:30:48,850 --> 00:30:50,830
+accept on this one we'd see that
+
+629
+00:30:50,830 --> 00:30:53,290
+the value changes to see him true
+
+630
+00:30:53,800 --> 00:30:54,430
+if i reload
+
+631
+00:30:55,060 --> 00:30:56,740
+now we can also see that we
+
+632
+00:30:56,740 --> 00:30:58,780
+get the limit on the cookie consent
+
+633
+00:30:59,980 --> 00:31:03,670
+so that's how it works basically
+
+634
+00:31:04,810 --> 00:31:06,520
+let's see if we have more questions
+
+635
+00:31:16,780 --> 00:31:18,970
+so while another question is if it
+
+636
+00:31:18,970 --> 00:31:21,641
+is possible with this setup to separate
+
+637
+00:31:21,670 --> 00:31:23,110
+or look into users who didn't give
+
+638
+00:31:23,110 --> 00:31:23,560
+consent
+
+639
+00:31:25,180 --> 00:31:26,020
+or
+
+640
+00:31:28,060 --> 00:31:30,520
+well no not really nah you can
+
+641
+00:31:30,520 --> 00:31:33,160
+only a fee
+
+642
+00:31:34,300 --> 00:31:36,910
+you says that are new but that
+
+643
+00:31:37,000 --> 00:31:38,890
+if not necessarily the same thing as
+
+644
+00:31:38,890 --> 00:31:41,710
+keeping your consent and what you could
+
+645
+00:31:41,710 --> 00:31:44,140
+do is prohibitive to the store create
+
+646
+00:31:44,140 --> 00:31:45,580
+the dimensioning matomo
+
+647
+00:31:46,750 --> 00:31:50,050
+and the store the consent given by
+
+648
+00:31:50,050 --> 00:31:50,320
+you
+
+649
+00:31:52,570 --> 00:31:53,770
+and do it that way
+
+650
+00:31:57,730 --> 00:31:58,540
+cave thank you
+
+651
+00:32:01,750 --> 00:32:04,210
+another question or sup it has been
+
+652
+00:32:04,210 --> 00:32:06,940
+discussed in the ted is if there's
+
+653
+00:32:06,940 --> 00:32:08,470
+a way not to write a personal
+
+654
+00:32:08,477 --> 00:32:10,510
+name for a published burst version of
+
+655
+00:32:10,510 --> 00:32:11,050
+the text
+
+656
+00:32:12,610 --> 00:32:13,180
+yeah
+
+657
+00:32:14,920 --> 00:32:18,400
+so i think i might i showed
+
+658
+00:32:18,400 --> 00:32:20,410
+you so when i do i'm gonna
+
+659
+00:32:20,422 --> 00:32:23,320
+publish something new if you add a
+
+660
+00:32:23,320 --> 00:32:25,060
+number here too much more it will
+
+661
+00:32:25,060 --> 00:32:29,230
+actually start counting up automatically though if
+
+662
+00:32:29,230 --> 00:32:31,810
+i publish now i always thought by
+
+663
+00:32:31,990 --> 00:32:34,510
+just writing one now so ever
+
+664
+00:32:34,510 --> 00:32:36,430
+the time i create a new version
+
+665
+00:32:36,430 --> 00:32:39,370
+of promise publish a new release it
+
+666
+00:32:39,370 --> 00:32:42,760
+will actually be an added automatically so
+
+667
+00:32:42,760 --> 00:32:45,040
+now i created a new version properly
+
+668
+00:32:45,370 --> 00:32:46,570
+if you see it in the version
+
+669
+00:32:46,810 --> 00:32:48,790
+number it's number three and if i
+
+670
+00:32:48,790 --> 00:32:51,400
+click create new version it will automatically
+
+671
+00:32:51,400 --> 00:32:53,890
+be four so that's actually a pretty
+
+672
+00:32:53,890 --> 00:32:54,490
+nice one
+
+673
+00:32:54,670 --> 00:32:55,917
+and then you don't have to write
+
+674
+00:32:55,933 --> 00:32:56,770
+in the descriptions
+
+675
+00:33:01,120 --> 00:33:01,720
+thank you
+
+676
+00:33:02,830 --> 00:33:04,510
+another one if i go back to
+
+677
+00:33:04,510 --> 00:33:06,760
+the earlier published version above the tags
+
+678
+00:33:06,790 --> 00:33:09,100
+triggers and variables back to the earlier
+
+679
+00:33:09,100 --> 00:33:09,580
+versions
+
+680
+00:33:11,050 --> 00:33:14,800
+yeah so you can actually have a
+
+681
+00:33:15,010 --> 00:33:17,470
+if you go to diversion history you
+
+682
+00:33:17,470 --> 00:33:20,440
+can actually see which version that is
+
+683
+00:33:20,440 --> 00:33:22,930
+published live than i should probably read
+
+684
+00:33:23,190 --> 00:33:25,300
+this one oh yeah now i'm looking
+
+685
+00:33:25,300 --> 00:33:28,660
+at different segment or accounts i think
+
+686
+00:33:29,710 --> 00:33:31,480
+this is a bit but yeah so
+
+687
+00:33:31,480 --> 00:33:33,010
+here you have marked more for version
+
+688
+00:33:33,025 --> 00:33:35,170
+so basically you can go down here
+
+689
+00:33:35,200 --> 00:33:37,630
+and just kick on this little icon
+
+690
+00:33:37,750 --> 00:33:41,020
+and publish the old version like this
+
+691
+00:33:41,380 --> 00:33:43,690
+so now this version will be running
+
+692
+00:33:45,370 --> 00:33:47,590
+in your light production so that that's
+
+693
+00:33:47,590 --> 00:33:49,600
+pretty easy there what i would like
+
+694
+00:33:49,600 --> 00:33:52,371
+to see is a better way to
+
+695
+00:33:52,870 --> 00:33:55,480
+do a diff between versions to do
+
+696
+00:33:55,480 --> 00:33:57,280
+that right now at least as far
+
+697
+00:33:57,400 --> 00:33:58,870
+as i know you basically have to
+
+698
+00:33:58,870 --> 00:34:02,920
+export the configuration so that's also nice
+
+699
+00:34:02,920 --> 00:34:04,120
+thing you can click on this little
+
+700
+00:34:04,120 --> 00:34:04,570
+icon
+
+701
+00:34:05,230 --> 00:34:07,060
+and that will actually give you a
+
+702
+00:34:07,090 --> 00:34:10,659
+jason file containing the current version but
+
+703
+00:34:10,659 --> 00:34:11,739
+it would be nice to have an
+
+704
+00:34:11,739 --> 00:34:14,409
+interface that really telling us what's happening
+
+705
+00:34:17,199 --> 00:34:18,699
+alright anything else
+
+706
+00:34:20,920 --> 00:34:23,230
+cape another thing that has been discussed
+
+707
+00:34:23,560 --> 00:34:25,389
+in the in the thread before the
+
+708
+00:34:25,389 --> 00:34:27,880
+notice that the answer is curse is
+
+709
+00:34:28,360 --> 00:34:30,550
+enough yet it would be worth regulation
+
+710
+00:34:30,550 --> 00:34:32,590
+in sweden regarding the use of adobo
+
+711
+00:34:33,850 --> 00:34:36,639
+and there is no regulation in sweden
+
+712
+00:34:37,090 --> 00:34:39,159
+in terms of of matomo there is
+
+713
+00:34:39,159 --> 00:34:41,679
+t de pr and there is some
+
+714
+00:34:41,679 --> 00:34:44,860
+other laws are in regards to privacy
+
+715
+00:34:46,150 --> 00:34:48,100
+so right now it's a lot of
+
+716
+00:34:48,340 --> 00:34:51,190
+discussions on how to interpret them
+
+717
+00:34:52,303 --> 00:34:55,030
+i thought what was the judgment to
+
+718
+00:34:55,030 --> 00:34:57,610
+do as i think that most of
+
+719
+00:34:57,610 --> 00:35:01,510
+the european union is discussing there are
+
+720
+00:35:01,510 --> 00:35:04,780
+no reading lamp statements about matomo but
+
+721
+00:35:04,840 --> 00:35:06,880
+what we see is that basically the
+
+722
+00:35:06,880 --> 00:35:09,580
+whole public sector in sweden if leaving
+
+723
+00:35:09,580 --> 00:35:12,010
+google analytics and most of them are
+
+724
+00:35:12,040 --> 00:35:12,430
+moving
+
+725
+00:35:12,460 --> 00:35:13,210
+two matomo
+
+726
+00:35:14,380 --> 00:35:16,060
+the discussion i had with a lot
+
+727
+00:35:16,060 --> 00:35:17,950
+of them right now is whether the
+
+728
+00:35:17,950 --> 00:35:19,540
+solution i showed you today
+
+729
+00:35:20,456 --> 00:35:24,880
+is legally ok or not to to
+
+730
+00:35:25,090 --> 00:35:27,254
+actually track users without the consent
+
+731
+00:35:28,780 --> 00:35:29,260
+or not
+
+732
+00:35:31,420 --> 00:35:32,980
+and that refers more to the cookie
+
+733
+00:35:32,980 --> 00:35:34,210
+law than gdp are
+
+734
+00:35:37,780 --> 00:35:39,970
+thank you for that and i think
+
+735
+00:35:40,210 --> 00:35:41,680
+that's all the questions that have been
+
+736
+00:35:41,680 --> 00:35:43,480
+asked until now i'm going to wait
+
+737
+00:35:43,480 --> 00:35:44,890
+a few more seconds just to see
+
+738
+00:35:44,890 --> 00:35:47,260
+if if another one comes up but
+
+739
+00:35:54,700 --> 00:35:55,690
+it would seem that is not the
+
+740
+00:35:55,690 --> 00:35:59,470
+case and so once again thank you
+
+741
+00:35:59,470 --> 00:36:00,100
+for a thought
+
+742
+00:36:01,360 --> 00:36:02,770
+if the any item requested the ted
+
+743
+00:36:02,770 --> 00:36:04,510
+stays openness as with yellow ducks
+
+744
+00:36:05,710 --> 00:36:07,690
+i will be available for ten more
+
+745
+00:36:07,690 --> 00:36:10,180
+minutes to answer questions or have a
+
+746
+00:36:10,180 --> 00:36:12,700
+dialogue in the chat is on then
+
+747
+00:36:13,810 --> 00:36:17,350
+ticket and have a good edit youtube
+
