@@ -1,0 +1,3072 @@
+1
+00:00:00,270 --> 00:00:07,920
+the cape and with this i would
+
+2
+00:00:07,920 --> 00:00:10,290
+like to start the next thought it
+
+3
+00:00:10,290 --> 00:00:13,012
+is once again bottomless person or like
+
+4
+00:00:13,020 --> 00:00:15,240
+said before purchase recording see the business
+
+5
+00:00:15,240 --> 00:00:18,009
+developer at visually sweden and he has
+
+6
+00:00:18,009 --> 00:00:19,950
+rubbed with tracking digital analytics since two
+
+7
+00:00:19,950 --> 00:00:20,160
+posts
+
+8
+00:00:20,225 --> 00:00:23,130
+intent and has been a contributor to
+
+9
+00:00:23,130 --> 00:00:25,260
+open source since two thousand and seven
+
+10
+00:00:26,280 --> 00:00:28,530
+and in this talk outbreak matter mo
+
+11
+00:00:28,530 --> 00:00:30,060
+and author input how to fix it
+
+12
+00:00:30,750 --> 00:00:32,850
+thomas will share his experience with us
+
+13
+00:00:33,630 --> 00:00:35,910
+refund a federal large matter were instances
+
+14
+00:00:36,270 --> 00:00:37,860
+as most people know matomo can be
+
+15
+00:00:37,860 --> 00:00:39,390
+pretty slow when the tablet gross
+
+16
+00:00:40,110 --> 00:00:42,180
+and thomas will share some of the
+
+17
+00:00:42,180 --> 00:00:43,980
+biggest mistakes and also talk about how
+
+18
+00:00:43,980 --> 00:00:47,130
+they managed him and think it does
+
+19
+00:00:47,190 --> 00:00:52,710
+take away thank you for sharing sharing
+
+20
+00:00:52,710 --> 00:00:55,380
+paying a fairer you should a good
+
+21
+00:00:55,380 --> 00:00:57,390
+learning pan but i hope you guys
+
+22
+00:00:57,390 --> 00:00:58,020
+can
+
+23
+00:00:59,040 --> 00:01:01,470
+i asked a lot of questions founder
+
+24
+00:01:02,010 --> 00:01:04,319
+we will hopefully get some some interaction
+
+25
+00:01:04,319 --> 00:01:06,990
+going on as well so this is
+
+26
+00:01:06,990 --> 00:01:10,380
+actually based all my learnings through and
+
+27
+00:01:10,380 --> 00:01:12,570
+or our learned or should fight because
+
+28
+00:01:12,570 --> 00:01:13,770
+it's not only me up to to
+
+29
+00:01:13,770 --> 00:01:15,330
+tell is working with a number of
+
+30
+00:01:15,330 --> 00:01:17,820
+course but something we learned during the
+
+31
+00:01:17,850 --> 00:01:19,080
+last four
+
+32
+00:01:19,230 --> 00:01:20,760
+yes when we
+
+33
+00:01:21,900 --> 00:01:24,930
+progressed pretty intense on on the mouth
+
+34
+00:01:26,400 --> 00:01:28,800
+maintaining matomo for a lot of clients
+
+35
+00:01:29,790 --> 00:01:35,040
+so let's start off by doing the
+
+36
+00:01:35,040 --> 00:01:36,330
+short interrupt her
+
+37
+00:01:37,440 --> 00:01:39,630
+i'm a generalist but in this case
+
+38
+00:01:40,170 --> 00:01:42,690
+i've kind of had a background in
+
+39
+00:01:42,690 --> 00:01:45,300
+the nineties were actually worked with hosting
+
+40
+00:01:45,390 --> 00:01:49,290
+and they're maintaining the servers that were
+
+41
+00:01:49,290 --> 00:01:51,480
+really physical heavy and large at that
+
+42
+00:01:51,480 --> 00:01:54,270
+time so that knowledge i've kind of
+
+43
+00:01:54,900 --> 00:01:56,730
+brought with me doing it during the
+
+44
+00:01:56,730 --> 00:01:57,600
+years actually
+
+45
+00:01:57,600 --> 00:02:00,600
+the air got to use pretty intensively
+
+46
+00:02:00,690 --> 00:02:04,260
+while learning and managing matomo have for
+
+47
+00:02:04,260 --> 00:02:05,430
+our large clients
+
+48
+00:02:06,780 --> 00:02:09,870
+maybe you listened to my colleague concrete
+
+49
+00:02:09,870 --> 00:02:13,590
+yesterday that talked about how we technically
+
+50
+00:02:13,590 --> 00:02:16,680
+maintained very large installations of metal and
+
+51
+00:02:16,680 --> 00:02:19,170
+we're just to get an idea of
+
+52
+00:02:19,710 --> 00:02:23,190
+the size i think we have databases
+
+53
+00:02:23,190 --> 00:02:25,830
+that go above a beat than a
+
+54
+00:02:25,830 --> 00:02:26,640
+terabyte of
+
+55
+00:02:26,640 --> 00:02:29,430
+data that we collect
+
+56
+00:02:30,720 --> 00:02:33,210
+up to between fifty one and one
+
+57
+00:02:33,210 --> 00:02:36,840
+hundred million actions per month are stored
+
+58
+00:02:36,840 --> 00:02:39,090
+in these databases somewhere they're quite quite
+
+59
+00:02:39,090 --> 00:02:41,190
+big and we maintain them in a
+
+60
+00:02:41,196 --> 00:02:44,370
+setup using two burnett is where we
+
+61
+00:02:44,370 --> 00:02:47,070
+can scale things up and do obviously
+
+62
+00:02:47,070 --> 00:02:49,380
+not the most standard set up but
+
+63
+00:02:49,530 --> 00:02:50,640
+i will not talk so
+
+64
+00:02:50,640 --> 00:02:52,980
+much about cabinets today more about the
+
+65
+00:02:52,980 --> 00:02:55,920
+practical issues and their configurations that we
+
+66
+00:02:55,920 --> 00:02:58,080
+can can share with you guys
+
+67
+00:02:59,580 --> 00:03:00,060
+full
+
+68
+00:03:01,500 --> 00:03:02,640
+this is fair
+
+69
+00:03:03,900 --> 00:03:05,610
+the scenario that we're proud from any
+
+70
+00:03:05,610 --> 00:03:08,010
+of you have seen we get different
+
+71
+00:03:08,010 --> 00:03:11,490
+types of over error messages or reports
+
+72
+00:03:11,490 --> 00:03:14,460
+that are slowly matomo and obviously our
+
+73
+00:03:14,460 --> 00:03:17,520
+users can be pretty sad when that
+
+74
+00:03:17,520 --> 00:03:18,120
+happens
+
+75
+00:03:19,380 --> 00:03:21,180
+if you've been working with tomo you
+
+76
+00:03:21,189 --> 00:03:25,410
+probably and had these experiences over time
+
+77
+00:03:26,550 --> 00:03:29,130
+so that my pro tips if you
+
+78
+00:03:29,130 --> 00:03:30,510
+want to have this scenario
+
+79
+00:03:31,680 --> 00:03:35,070
+if i have three main principle guidelines
+
+80
+00:03:35,070 --> 00:03:36,510
+that you can follow if you want
+
+81
+00:03:36,510 --> 00:03:39,030
+to have this province the first pro
+
+82
+00:03:39,030 --> 00:03:41,700
+tips is to give your using matomo
+
+83
+00:03:41,850 --> 00:03:44,130
+a lot of permissions from stock without
+
+84
+00:03:44,130 --> 00:03:44,760
+training them
+
+85
+00:03:46,050 --> 00:03:47,880
+this i can guarantee you you will
+
+86
+00:03:47,880 --> 00:03:50,250
+run into a lot of nice issues
+
+87
+00:03:50,250 --> 00:03:53,310
+and province my second pro tips is
+
+88
+00:03:53,310 --> 00:03:57,000
+to write bad applications and stop tracking
+
+89
+00:03:57,000 --> 00:03:58,770
+them e matomo and then of course
+
+90
+00:03:58,770 --> 00:04:00,540
+blame at all for the problems that
+
+91
+00:04:00,540 --> 00:04:02,130
+you end up having
+
+92
+00:04:03,600 --> 00:04:05,550
+we're looking a bit more to this
+
+93
+00:04:05,847 --> 00:04:09,060
+a wrong and my number three pro
+
+94
+00:04:09,060 --> 00:04:10,800
+tips is to let your i t
+
+95
+00:04:10,800 --> 00:04:13,140
+department hosts matter more without the appropriate
+
+96
+00:04:13,680 --> 00:04:16,560
+training i will also discuss it a
+
+97
+00:04:16,594 --> 00:04:18,930
+bit in detail what this might lead
+
+98
+00:04:18,930 --> 00:04:19,170
+to
+
+99
+00:04:20,430 --> 00:04:22,944
+of course i'm a bit today and
+
+100
+00:04:23,310 --> 00:04:26,160
+joking mode here but i'll try to
+
+101
+00:04:26,160 --> 00:04:29,077
+give you some examples of why i
+
+102
+00:04:29,100 --> 00:04:31,950
+gave you these projects so the first
+
+103
+00:04:31,950 --> 00:04:35,130
+one about giving matomo uses too many
+
+104
+00:04:35,190 --> 00:04:39,330
+permissions at bottom is quite complex too
+
+105
+00:04:39,930 --> 00:04:40,560
+of course said
+
+106
+00:04:40,560 --> 00:04:42,750
+adding up tracking he said is something
+
+107
+00:04:42,750 --> 00:04:45,780
+that requires quite a lot of all
+
+108
+00:04:45,780 --> 00:04:49,050
+their skills in web development and also
+
+109
+00:04:49,050 --> 00:04:51,090
+you ask it and you also need
+
+110
+00:04:51,090 --> 00:04:54,330
+to know how the product works to
+
+111
+00:04:54,330 --> 00:04:56,700
+do this properly otherwise you will have
+
+112
+00:04:56,760 --> 00:05:00,390
+bad data in your database and the
+
+113
+00:05:00,390 --> 00:05:00,720
+repo
+
+114
+00:05:00,870 --> 00:05:06,360
+sweet be hard to to understand also
+
+115
+00:05:06,360 --> 00:05:09,600
+creating segments of custom reports has to
+
+116
+00:05:09,600 --> 00:05:11,276
+be pretty
+
+117
+00:05:13,080 --> 00:05:14,040
+you have to know what you are
+
+118
+00:05:14,040 --> 00:05:15,030
+doing so to speak
+
+119
+00:05:16,110 --> 00:05:18,330
+because they can actually kill your performance
+
+120
+00:05:18,360 --> 00:05:19,800
+i will give you examples of this
+
+121
+00:05:19,800 --> 00:05:22,650
+later on but also doing this wrong
+
+122
+00:05:22,680 --> 00:05:24,960
+might lead to really really bad user
+
+123
+00:05:24,960 --> 00:05:28,230
+experiences because you need to know what
+
+124
+00:05:28,260 --> 00:05:30,300
+you are doing and what you're showing
+
+125
+00:05:30,300 --> 00:05:34,080
+to your users so you should be
+
+126
+00:05:34,080 --> 00:05:36,240
+really careful about giving away permissions
+
+127
+00:05:36,342 --> 00:05:38,880
+and make sure that uses that can
+
+128
+00:05:38,910 --> 00:05:41,070
+create segments for instance know what they're
+
+129
+00:05:41,070 --> 00:05:44,250
+doing the last one or the second
+
+130
+00:05:44,250 --> 00:05:46,762
+one and write bad applications and blame
+
+131
+00:05:46,770 --> 00:05:50,340
+at all for the issues so this
+
+132
+00:05:50,340 --> 00:05:53,070
+is actually something you need to be
+
+133
+00:05:53,070 --> 00:05:55,200
+aware of that was always just a
+
+134
+00:05:55,200 --> 00:05:56,340
+stupid system
+
+135
+00:05:56,430 --> 00:05:58,980
+whatever you send to matomo will be
+
+136
+00:05:58,980 --> 00:06:01,650
+eaten by the system so you can't
+
+137
+00:06:01,650 --> 00:06:04,710
+really fix things that is broken in
+
+138
+00:06:04,710 --> 00:06:07,230
+your application or actually can and i
+
+139
+00:06:07,230 --> 00:06:09,450
+will give you some examples of that
+
+140
+00:06:09,450 --> 00:06:12,090
+but you need to have the mentality
+
+141
+00:06:12,150 --> 00:06:15,750
+of understanding that and not always just
+
+142
+00:06:15,750 --> 00:06:16,560
+a stupid system
+
+143
+00:06:16,650 --> 00:06:18,870
+so if you send bad data into
+
+144
+00:06:18,870 --> 00:06:21,030
+moto this could be personal data or
+
+145
+00:06:21,030 --> 00:06:23,760
+whatever but all will just eat that
+
+146
+00:06:23,880 --> 00:06:25,110
+and you will store it and you
+
+147
+00:06:25,110 --> 00:06:28,350
+will have problems in different ways at
+
+148
+00:06:28,470 --> 00:06:31,950
+the two most important things to manage
+
+149
+00:06:31,953 --> 00:06:35,370
+properly are ass and titus because these
+
+150
+00:06:35,370 --> 00:06:36,720
+two will always be
+
+151
+00:06:36,720 --> 00:06:40,080
+he just stored in matomo when we
+
+152
+00:06:40,080 --> 00:06:41,220
+send it send it
+
+153
+00:06:47,340 --> 00:06:49,860
+and your attitude is actually pretty important
+
+154
+00:06:49,890 --> 00:06:53,760
+to manage in a large installation in
+
+155
+00:06:53,760 --> 00:06:54,360
+particular
+
+156
+00:06:56,850 --> 00:06:59,700
+from the third guideline that laterite the
+
+157
+00:06:59,700 --> 00:07:01,860
+department health nut and without proper training
+
+158
+00:07:02,430 --> 00:07:03,000
+at will
+
+159
+00:07:04,170 --> 00:07:06,900
+this goes for many systems not just
+
+160
+00:07:06,900 --> 00:07:07,710
+matomo bus
+
+161
+00:07:09,720 --> 00:07:12,720
+why it face and i actually have
+
+162
+00:07:13,380 --> 00:07:16,200
+lots of experiences with it and we
+
+163
+00:07:16,200 --> 00:07:17,820
+help a lot of my former clients
+
+164
+00:07:19,470 --> 00:07:21,690
+they often approach us because they want
+
+165
+00:07:21,690 --> 00:07:26,250
+help with implementing tracking we're understanding application
+
+166
+00:07:26,250 --> 00:07:28,140
+but usually i spend about a week
+
+167
+00:07:28,140 --> 00:07:31,170
+without the department in the beginning just
+
+168
+00:07:31,170 --> 00:07:33,960
+to fix things that hasn't been properly
+
+169
+00:07:33,960 --> 00:07:35,490
+set up or taken care of
+
+170
+00:07:37,650 --> 00:07:41,490
+because maintaining moto moran application actually requires
+
+171
+00:07:41,490 --> 00:07:44,940
+you to know that the application is
+
+172
+00:07:44,940 --> 00:07:46,500
+not enough to just set up a
+
+173
+00:07:46,500 --> 00:07:48,960
+server and install the software and then
+
+174
+00:07:48,960 --> 00:07:49,590
+you're ready
+
+175
+00:07:50,702 --> 00:07:53,820
+not always really really have to let
+
+176
+00:07:53,820 --> 00:07:55,860
+you need to know to maintain properly
+
+177
+00:07:56,880 --> 00:07:59,850
+because it needs constant updates and the
+
+178
+00:07:59,910 --> 00:08:02,100
+testing comes with that when we have
+
+179
+00:08:02,100 --> 00:08:04,560
+a new release all the time when
+
+180
+00:08:04,620 --> 00:08:06,120
+you really need to test this and
+
+181
+00:08:06,120 --> 00:08:09,630
+know and understand what was actually stolen
+
+182
+00:08:09,720 --> 00:08:10,800
+how will that affect
+
+183
+00:08:10,800 --> 00:08:14,430
+kt our instance of matomo even though
+
+184
+00:08:14,490 --> 00:08:17,460
+we do this twenty four seven we
+
+185
+00:08:17,460 --> 00:08:19,740
+work with moto my learn and we
+
+186
+00:08:19,740 --> 00:08:21,420
+still have problems when there are new
+
+187
+00:08:21,420 --> 00:08:24,810
+updates because you don't always know exactly
+
+188
+00:08:24,810 --> 00:08:27,360
+what will happen in your app
+
+189
+00:08:27,360 --> 00:08:29,460
+not my environment and this is of
+
+190
+00:08:29,460 --> 00:08:31,770
+course since it's a complex environment you
+
+191
+00:08:31,770 --> 00:08:35,669
+have plugins you have different integration and
+
+192
+00:08:35,669 --> 00:08:38,400
+so on and every setup is unique
+
+193
+00:08:39,990 --> 00:08:42,149
+we need to have constant monitoring in
+
+194
+00:08:42,149 --> 00:08:44,100
+place and monitoring in this case is
+
+195
+00:08:44,100 --> 00:08:46,620
+not only about dust but all will
+
+196
+00:08:46,620 --> 00:08:50,520
+respond it's it can be monitoring an
+
+197
+00:08:50,550 --> 00:08:55,680
+individual reports or a monitoring and database
+
+198
+00:08:55,680 --> 00:08:58,650
+for monitoring for errors really connected to
+
+199
+00:08:58,650 --> 00:08:59,250
+them at all
+
+200
+00:08:59,850 --> 00:09:01,170
+this is also something you need to
+
+201
+00:09:01,170 --> 00:09:05,340
+learn over time constant optimization or your
+
+202
+00:09:05,340 --> 00:09:07,380
+database will probably grow i will show
+
+203
+00:09:07,380 --> 00:09:09,840
+you examples of that and that means
+
+204
+00:09:09,840 --> 00:09:13,530
+he will continuously need to optimise and
+
+205
+00:09:13,620 --> 00:09:18,390
+again constantly change your configurations depending on
+
+206
+00:09:18,390 --> 00:09:19,590
+the needs of your
+
+207
+00:09:20,070 --> 00:09:24,480
+users so again feel free to to
+
+208
+00:09:24,540 --> 00:09:28,650
+do this internally and and but make
+
+209
+00:09:28,650 --> 00:09:31,110
+sure that the people that is taking
+
+210
+00:09:31,110 --> 00:09:33,690
+care of matomo has this as their
+
+211
+00:09:33,690 --> 00:09:38,220
+focus it's a huge difference to to
+
+212
+00:09:38,910 --> 00:09:39,600
+just
+
+213
+00:09:40,140 --> 00:09:41,550
+set up a server and install the
+
+214
+00:09:41,550 --> 00:09:44,730
+software and maintaining an application properly
+
+215
+00:09:46,560 --> 00:09:50,010
+so let's look into some of the
+
+216
+00:09:50,010 --> 00:09:53,160
+more specific problems that are related to
+
+217
+00:09:53,160 --> 00:09:56,130
+users i talked a little bit about
+
+218
+00:09:57,780 --> 00:10:01,710
+segments and custom reports because these both
+
+219
+00:10:01,710 --> 00:10:05,940
+to pass affects the aggregation him at
+
+220
+00:10:05,940 --> 00:10:08,490
+all and aggregation is the jobs that
+
+221
+00:10:08,580 --> 00:10:12,780
+happens under the hood and to produce
+
+222
+00:10:12,900 --> 00:10:15,630
+at the fast reports in the interface
+
+223
+00:10:17,250 --> 00:10:18,690
+if you go to the page use
+
+224
+00:10:18,690 --> 00:10:21,990
+the report that is actually an aggregation
+
+225
+00:10:21,990 --> 00:10:23,820
+of the raw data and to produce
+
+226
+00:10:23,820 --> 00:10:24,270
+that
+
+227
+00:10:25,530 --> 00:10:28,950
+there are jobs running under the hood
+
+228
+00:10:28,950 --> 00:10:31,560
+in matomo and they will require more
+
+229
+00:10:31,567 --> 00:10:33,865
+solar power so every time you create
+
+230
+00:10:33,870 --> 00:10:36,180
+a new segment for accustomed report you
+
+231
+00:10:36,180 --> 00:10:38,790
+actually add a new job or two
+
+232
+00:10:39,090 --> 00:10:40,230
+method before
+
+233
+00:10:41,430 --> 00:10:44,040
+seen recommendations in the community and and
+
+234
+00:10:44,040 --> 00:10:46,080
+we tried to have these recommendations as
+
+235
+00:10:46,080 --> 00:10:48,600
+well to not set up more than
+
+236
+00:10:48,600 --> 00:10:50,433
+one hundred segments for a site i'm
+
+237
+00:10:50,433 --> 00:10:52,320
+one hundred segments to be honest can
+
+238
+00:10:52,320 --> 00:10:54,900
+be quite a lot for your service
+
+239
+00:10:54,930 --> 00:10:59,400
+to to maintain as well so keep
+
+240
+00:10:59,400 --> 00:11:00,000
+that in mind
+
+241
+00:11:01,260 --> 00:11:03,930
+one thing we learned really really the
+
+242
+00:11:03,930 --> 00:11:06,840
+hard way is that if you create
+
+243
+00:11:06,870 --> 00:11:10,740
+segments see my total and you could
+
+244
+00:11:10,740 --> 00:11:14,850
+use these kind of wildcard questions in
+
+245
+00:11:14,850 --> 00:11:18,180
+your definitions they have a large impact
+
+246
+00:11:18,210 --> 00:11:20,190
+on your database performance
+
+247
+00:11:21,510 --> 00:11:23,790
+because what happens is you see the
+
+248
+00:11:23,880 --> 00:11:25,920
+sql query that is created this is
+
+249
+00:11:25,920 --> 00:11:27,780
+not the exact query but it's just
+
+250
+00:11:27,780 --> 00:11:30,330
+an example the important part is the
+
+251
+00:11:30,330 --> 00:11:34,200
+searched string at the end when you
+
+252
+00:11:34,320 --> 00:11:37,140
+send a query like that which happens
+
+253
+00:11:37,230 --> 00:11:38,760
+if you use it contains
+
+254
+00:11:39,840 --> 00:11:43,020
+setting is that we're not able to
+
+255
+00:11:43,020 --> 00:11:46,560
+use indexes imitable and and when you
+
+256
+00:11:46,560 --> 00:11:49,260
+create segments these queries goes to one
+
+257
+00:11:49,260 --> 00:11:51,390
+of the largest tables in the matomo
+
+258
+00:11:51,390 --> 00:11:55,590
+database and indexes these away too
+
+259
+00:11:56,910 --> 00:12:00,060
+medic credits faster basically in my script
+
+260
+00:12:00,390 --> 00:12:00,750
+but
+
+261
+00:12:01,920 --> 00:12:03,810
+these type of christ cannot use in
+
+262
+00:12:03,810 --> 00:12:06,000
+excess so that means that they have
+
+263
+00:12:06,000 --> 00:12:08,370
+to do a full table scan which
+
+264
+00:12:08,370 --> 00:12:10,620
+is kind of technical definition here
+
+265
+00:12:11,730 --> 00:12:13,620
+and that will really really kill your
+
+266
+00:12:13,620 --> 00:12:15,390
+performance if you have a lot of
+
+267
+00:12:15,390 --> 00:12:17,670
+data we're talking about
+
+268
+00:12:18,960 --> 00:12:21,690
+minutes to run sql queries if you
+
+269
+00:12:21,690 --> 00:12:23,790
+have a large database instead of maybe
+
+270
+00:12:23,790 --> 00:12:25,528
+seconds if you have a proper index
+
+271
+00:12:25,530 --> 00:12:27,660
+in place so the the impact can
+
+272
+00:12:27,660 --> 00:12:30,480
+be messy and especially if you have
+
+273
+00:12:30,480 --> 00:12:32,250
+a lot of these segments in place
+
+274
+00:12:32,310 --> 00:12:33,480
+on a large database
+
+275
+00:12:35,910 --> 00:12:39,450
+so instead you should try to change
+
+276
+00:12:39,450 --> 00:12:42,690
+your segments into using starts with for
+
+277
+00:12:42,690 --> 00:12:46,200
+instance if you do that your query
+
+278
+00:12:46,200 --> 00:12:49,080
+will be different and my skin will
+
+279
+00:12:49,080 --> 00:12:51,810
+actually be able to perform these queries
+
+280
+00:12:51,870 --> 00:12:54,570
+a lot faster though it's quite the
+
+281
+00:12:54,570 --> 00:12:54,690
+po
+
+282
+00:12:54,690 --> 00:12:57,000
+portland actually on a launched dataset to
+
+283
+00:12:57,030 --> 00:12:58,140
+to manage this
+
+284
+00:13:05,670 --> 00:13:08,370
+yes so with this in mind make
+
+285
+00:13:08,370 --> 00:13:12,060
+sure that only uses with with this
+
+286
+00:13:12,060 --> 00:13:15,390
+knowledge can create segments and that this
+
+287
+00:13:15,390 --> 00:13:18,330
+would also lead to that we avoid
+
+288
+00:13:18,330 --> 00:13:20,340
+bad configurations because i see a lot
+
+289
+00:13:20,340 --> 00:13:23,160
+of uses that use actually use segments
+
+290
+00:13:24,210 --> 00:13:27,360
+but in the wrong way i won't
+
+291
+00:13:27,390 --> 00:13:29,760
+go into too much about that but
+
+292
+00:13:30,510 --> 00:13:32,610
+alright again the example is if you
+
+293
+00:13:32,610 --> 00:13:34,650
+want to filter out the pages for
+
+294
+00:13:34,650 --> 00:13:36,990
+a specific section of your site i
+
+295
+00:13:36,990 --> 00:13:39,630
+often see users creating segments with this
+
+296
+00:13:40,410 --> 00:13:44,100
+because they misunderstand how segments work segments
+
+297
+00:13:44,160 --> 00:13:44,370
+is
+
+298
+00:13:44,370 --> 00:13:47,100
+is a way to to create the
+
+299
+00:13:47,100 --> 00:13:50,520
+bucket of users matching certain criteria if
+
+300
+00:13:51,180 --> 00:13:53,482
+so even though you will filter out
+
+301
+00:13:53,497 --> 00:13:55,920
+page views for that particular section you
+
+302
+00:13:55,920 --> 00:13:57,960
+will also fail to pay pictures for
+
+303
+00:13:57,960 --> 00:14:00,150
+other sessions that the use is matching
+
+304
+00:14:00,150 --> 00:14:04,380
+your segment criteria first have matched
+
+305
+00:14:04,560 --> 00:14:05,130
+so yup
+
+306
+00:14:06,300 --> 00:14:07,770
+different thing so
+
+307
+00:14:13,655 --> 00:14:14,010
+cape
+
+308
+00:14:15,900 --> 00:14:19,110
+yet one thing i often sees also
+
+309
+00:14:19,110 --> 00:14:20,129
+that i
+
+310
+00:14:22,080 --> 00:14:22,980
+uses
+
+311
+00:14:25,110 --> 00:14:28,800
+that creates segments that you can do
+
+312
+00:14:28,800 --> 00:14:31,560
+it on a personal level and suddenly
+
+313
+00:14:31,560 --> 00:14:34,140
+you see the segment as an administrator
+
+314
+00:14:34,286 --> 00:14:36,120
+and particularly on sites that a lot
+
+315
+00:14:36,120 --> 00:14:38,160
+of users i can see that sometimes
+
+316
+00:14:38,160 --> 00:14:40,710
+there are up to ten segments that
+
+317
+00:14:40,710 --> 00:14:44,130
+are almost the same thing because useless
+
+318
+00:14:44,130 --> 00:14:44,370
+crap
+
+319
+00:14:44,370 --> 00:14:46,140
+let's create some under the hood
+
+320
+00:14:47,482 --> 00:14:50,070
+under this is also bad because at
+
+321
+00:14:50,070 --> 00:14:52,410
+me tangibles are running under the hood
+
+322
+00:14:52,470 --> 00:14:54,990
+when you might only have needed one
+
+323
+00:14:54,990 --> 00:14:55,320
+of them
+
+324
+00:14:57,357 --> 00:14:59,370
+so yes let's keep that in mind
+
+325
+00:15:00,720 --> 00:15:03,900
+and of course this leads to avoiding
+
+326
+00:15:03,900 --> 00:15:04,970
+performance issues
+
+327
+00:15:06,840 --> 00:15:09,900
+also this is a nice one look
+
+328
+00:15:09,900 --> 00:15:11,160
+into that
+
+329
+00:15:13,230 --> 00:15:14,940
+global you need a peach pie fight
+
+330
+00:15:14,940 --> 00:15:16,800
+down your server and make sure it
+
+331
+00:15:16,890 --> 00:15:18,150
+has actually set
+
+332
+00:15:20,880 --> 00:15:23,370
+this is the user role needed to
+
+333
+00:15:23,370 --> 00:15:26,040
+add segments in that one so i
+
+334
+00:15:26,250 --> 00:15:28,080
+think that the default one is view
+
+335
+00:15:28,080 --> 00:15:29,850
+here and that means that basically any
+
+336
+00:15:29,850 --> 00:15:32,280
+user in your metal knees can create
+
+337
+00:15:32,280 --> 00:15:34,890
+segments so make sure to to
+
+338
+00:15:36,372 --> 00:15:38,460
+make it admin or super user or
+
+339
+00:15:38,460 --> 00:15:41,460
+write or whatever you or your organization
+
+340
+00:15:41,460 --> 00:15:45,240
+matches or so so that's the good
+
+341
+00:15:45,240 --> 00:15:48,450
+thing to look into alright so what
+
+342
+00:15:48,450 --> 00:15:49,860
+about bad applications
+
+343
+00:15:51,510 --> 00:15:52,440
+while that
+
+344
+00:15:53,760 --> 00:15:55,530
+one thing that is really important for
+
+345
+00:15:55,530 --> 00:15:57,720
+performance is to keep the number of
+
+346
+00:15:57,750 --> 00:15:58,680
+urine stone
+
+347
+00:16:00,810 --> 00:16:02,880
+and the thing here is that a
+
+348
+00:16:02,880 --> 00:16:07,230
+few for instance send a toma can't
+
+349
+00:16:07,233 --> 00:16:10,170
+differ between uppercase and lowercase so if
+
+350
+00:16:10,170 --> 00:16:12,030
+you have a page that will report
+
+351
+00:16:12,030 --> 00:16:15,780
+sometimes with an uppercase and some titans
+
+352
+00:16:15,780 --> 00:16:18,205
+with a lowercase metal movie handle that
+
+353
+00:16:18,210 --> 00:16:19,890
+has two different years
+
+354
+00:16:19,890 --> 00:16:23,130
+nz so make sure to to always
+
+355
+00:16:23,160 --> 00:16:24,720
+send lower case uranus
+
+356
+00:16:26,670 --> 00:16:30,060
+make sure to not send your parameters
+
+357
+00:16:30,150 --> 00:16:32,370
+if you can avoid that because that
+
+358
+00:16:32,370 --> 00:16:36,600
+will also create unique instances uranus meaning
+
+359
+00:16:36,720 --> 00:16:38,460
+and the job seem at all one
+
+360
+00:16:38,460 --> 00:16:40,440
+needs to process the tub for your
+
+361
+00:16:40,440 --> 00:16:41,040
+unique
+
+362
+00:16:42,450 --> 00:16:44,280
+also some cms says
+
+363
+00:16:45,360 --> 00:16:48,900
+sometimes sand trailing slashes the example is
+
+364
+00:16:48,900 --> 00:16:51,180
+my page and that will not be
+
+365
+00:16:51,360 --> 00:16:53,010
+the same as my page with an
+
+366
+00:16:53,010 --> 00:16:53,970
+ending flesh
+
+367
+00:16:55,560 --> 00:16:58,140
+another common thing that you might want
+
+368
+00:16:58,140 --> 00:17:00,445
+to avoid is for instance if you
+
+369
+00:17:00,450 --> 00:17:04,260
+have an issue number with unique you
+
+370
+00:17:04,260 --> 00:17:07,380
+or else containing numbers you might want
+
+371
+00:17:07,380 --> 00:17:10,020
+to look into anonymize these so that
+
+372
+00:17:10,020 --> 00:17:12,930
+you don't store unnecessarily
+
+373
+00:17:14,400 --> 00:17:15,210
+page views
+
+374
+00:17:16,800 --> 00:17:19,500
+so yup what i usually do is
+
+375
+00:17:19,500 --> 00:17:22,406
+that i create actually will show you
+
+376
+00:17:22,410 --> 00:17:24,030
+a script that without that can do
+
+377
+00:17:24,030 --> 00:17:26,849
+this later on but but this sometimes
+
+378
+00:17:26,849 --> 00:17:28,830
+you have an issue at your rattle
+
+379
+00:17:28,830 --> 00:17:30,720
+and you can end up with thousands
+
+380
+00:17:30,780 --> 00:17:33,090
+of unique page views so unique your
+
+381
+00:17:33,090 --> 00:17:35,550
+ants but no one will never look
+
+382
+00:17:35,550 --> 00:17:36,450
+at the uni
+
+383
+00:17:36,480 --> 00:17:39,450
+the page you for that so anonymize
+
+384
+00:17:39,450 --> 00:17:43,140
+them is actually good for performance and
+
+385
+00:17:43,170 --> 00:17:44,700
+probably also for
+
+386
+00:17:45,990 --> 00:17:48,480
+the analytics part to to understand the
+
+387
+00:17:48,480 --> 00:17:48,900
+site
+
+388
+00:17:50,130 --> 00:17:52,710
+so one way to do this this
+
+389
+00:17:52,710 --> 00:17:55,890
+is a custom javascript that i had
+
+390
+00:17:56,340 --> 00:17:59,310
+to recite that it's a it's a
+
+391
+00:17:59,310 --> 00:18:01,320
+variable so what you can do here
+
+392
+00:18:01,320 --> 00:18:04,590
+is that you created your cleanup and
+
+393
+00:18:04,620 --> 00:18:06,960
+in this example i started off like
+
+394
+00:18:07,050 --> 00:18:09,150
+i'm reading the euro from the browser
+
+395
+00:18:09,150 --> 00:18:10,290
+and making it lower case
+
+396
+00:18:10,290 --> 00:18:13,560
+case and the second one will remove
+
+397
+00:18:13,680 --> 00:18:14,880
+trailing slashes
+
+398
+00:18:16,650 --> 00:18:18,090
+then i'd have an example on how
+
+399
+00:18:18,090 --> 00:18:20,970
+you can anonymize an order id so
+
+400
+00:18:20,970 --> 00:18:23,190
+if you have and you're always saying
+
+401
+00:18:23,190 --> 00:18:24,990
+horner one two three four five six
+
+402
+00:18:24,990 --> 00:18:28,170
+this will become water flesh water page
+
+403
+00:18:28,950 --> 00:18:31,170
+and the way you use this then
+
+404
+00:18:31,200 --> 00:18:33,300
+if you go to your page view
+
+405
+00:18:33,450 --> 00:18:36,180
+and you use this variable in your
+
+406
+00:18:36,210 --> 00:18:38,670
+custom urine and by doing so you
+
+407
+00:18:38,670 --> 00:18:42,780
+can actually clean your site and and
+
+408
+00:18:42,840 --> 00:18:44,250
+this is also a good way if
+
+409
+00:18:44,250 --> 00:18:47,430
+you have problematic applications at this kind
+
+410
+00:18:47,430 --> 00:18:49,770
+of javascript can actually help you to
+
+411
+00:18:49,770 --> 00:18:52,110
+anonymize and remove personal data if you
+
+412
+00:18:52,110 --> 00:18:54,930
+have usually find those canvases so maybe
+
+413
+00:18:54,930 --> 00:18:56,370
+you haven't appliqued
+
+414
+00:18:56,370 --> 00:19:00,750
+nation that shares personal identification numbers or
+
+415
+00:19:00,750 --> 00:19:03,420
+email addresses from clients or whatever i've
+
+416
+00:19:03,420 --> 00:19:06,750
+seen tons of bad example there examples
+
+417
+00:19:06,750 --> 00:19:09,510
+there you can actually use this kind
+
+418
+00:19:09,510 --> 00:19:11,250
+of man your attitude to
+
+419
+00:19:12,600 --> 00:19:13,530
+to clean things
+
+420
+00:19:17,790 --> 00:19:20,040
+and another thing that i often see
+
+421
+00:19:20,130 --> 00:19:23,610
+on some cms systems aren't really terrible
+
+422
+00:19:23,610 --> 00:19:23,970
+here
+
+423
+00:19:25,740 --> 00:19:29,010
+so good and your unstructured look something
+
+424
+00:19:29,010 --> 00:19:32,190
+like this you have maybe are as
+
+425
+00:19:32,212 --> 00:19:36,240
+following your menu structure or other types
+
+426
+00:19:36,240 --> 00:19:38,460
+of categories and you can you have
+
+427
+00:19:38,460 --> 00:19:41,520
+a clear structuring your uranus and since
+
+428
+00:19:41,520 --> 00:19:43,440
+matan ways the stupid system it will
+
+429
+00:19:43,440 --> 00:19:45,330
+just take the euros asked
+
+430
+00:19:45,360 --> 00:19:47,730
+you send them to matomo a bad
+
+431
+00:19:47,730 --> 00:19:51,450
+example is if your cms will have
+
+432
+00:19:51,510 --> 00:19:53,670
+this kind of structure and this is
+
+433
+00:19:53,670 --> 00:19:56,100
+also bad if you're into su
+
+434
+00:19:56,940 --> 00:19:59,610
+of course but at that the point
+
+435
+00:19:59,610 --> 00:20:01,590
+here is like if you go to
+
+436
+00:20:01,620 --> 00:20:04,890
+your page views report you will see
+
+437
+00:20:04,890 --> 00:20:06,600
+something like this if you do a
+
+438
+00:20:06,600 --> 00:20:10,860
+nice your instruction you will have aggregated
+
+439
+00:20:12,120 --> 00:20:15,900
+numbers are matching your sections
+
+440
+00:20:17,190 --> 00:20:19,170
+but this is really really a nice
+
+441
+00:20:19,170 --> 00:20:19,830
+way to
+
+442
+00:20:21,945 --> 00:20:23,805
+or or a nice feature on having
+
+443
+00:20:23,805 --> 00:20:24,975
+nice applications
+
+444
+00:20:26,535 --> 00:20:29,025
+you can actually eat if you have
+
+445
+00:20:29,055 --> 00:20:31,905
+problems you can actually fix some problems
+
+446
+00:20:32,115 --> 00:20:35,295
+in this slum and so sometimes i've
+
+447
+00:20:35,295 --> 00:20:37,815
+seen applications where
+
+448
+00:20:39,075 --> 00:20:41,685
+where we have multiple neurons or for
+
+449
+00:20:41,685 --> 00:20:44,235
+the same page which is obviously bad
+
+450
+00:20:44,685 --> 00:20:45,945
+then you can add those
+
+451
+00:20:47,745 --> 00:20:49,995
+things in in into this year i'll
+
+452
+00:20:49,996 --> 00:20:52,155
+clean up your musket as well and
+
+453
+00:20:52,155 --> 00:20:53,385
+maybe air
+
+454
+00:20:53,835 --> 00:20:55,749
+make sure that they are reporting under
+
+455
+00:20:55,749 --> 00:20:57,675
+the same europe and you'll see a
+
+456
+00:20:57,675 --> 00:20:59,505
+broker or a muslim at least
+
+457
+00:21:01,155 --> 00:21:02,265
+but then there are a lot lots
+
+458
+00:21:02,265 --> 00:21:03,675
+of way we can help
+
+459
+00:21:05,355 --> 00:21:08,595
+help him alright so let's look into
+
+460
+00:21:08,685 --> 00:21:10,935
+optimized seem to move from a more
+
+461
+00:21:11,415 --> 00:21:12,975
+more of a server perspective
+
+462
+00:21:14,595 --> 00:21:18,195
+so some companies just seem to know
+
+463
+00:21:18,285 --> 00:21:20,955
+is that our transitions report is slow
+
+464
+00:21:21,045 --> 00:21:22,455
+if you use that one
+
+465
+00:21:23,535 --> 00:21:26,415
+the accustomed date trenches on slope because
+
+466
+00:21:26,685 --> 00:21:28,305
+what happens if you use a cap
+
+467
+00:21:28,335 --> 00:21:30,585
+custom date range is that you're actually
+
+468
+00:21:30,585 --> 00:21:34,155
+querying there the raw data the visitor
+
+469
+00:21:34,155 --> 00:21:36,855
+log obviously is something that can be
+
+470
+00:21:36,945 --> 00:21:37,455
+slow
+
+471
+00:21:38,685 --> 00:21:41,475
+sometimes you can see that today's data
+
+472
+00:21:41,475 --> 00:21:43,785
+is not coming in as quickly as
+
+473
+00:21:43,785 --> 00:21:46,305
+you good luck would it it would
+
+474
+00:21:46,305 --> 00:21:50,145
+like to maybe you don't see data
+
+475
+00:21:50,145 --> 00:21:52,335
+for today until in the evening or
+
+476
+00:21:52,335 --> 00:21:55,605
+whatever or uses get five hundred error
+
+477
+00:21:55,695 --> 00:21:57,555
+or timeout errors will type things like
+
+478
+00:21:57,555 --> 00:21:58,815
+that there is
+
+479
+00:21:58,845 --> 00:22:01,215
+no general solutions here but if you're
+
+480
+00:22:01,245 --> 00:22:02,415
+if you have a lot of this
+
+481
+00:22:02,565 --> 00:22:04,935
+and this is quite common if your
+
+482
+00:22:04,935 --> 00:22:07,185
+data grows you might want to look
+
+483
+00:22:07,185 --> 00:22:09,585
+into your server configurations
+
+484
+00:22:11,265 --> 00:22:13,510
+first of all look into the the
+
+485
+00:22:13,545 --> 00:22:16,335
+general guidelines always thought there to see
+
+486
+00:22:16,335 --> 00:22:20,295
+if your are you even following the
+
+487
+00:22:20,295 --> 00:22:24,075
+basics before you go into maybe my
+
+488
+00:22:24,075 --> 00:22:26,775
+more advanced recommendations later on
+
+489
+00:22:27,855 --> 00:22:28,125
+that
+
+490
+00:22:29,355 --> 00:22:31,875
+in general you need to understand that
+
+491
+00:22:31,876 --> 00:22:33,915
+matomo is a p h p application
+
+492
+00:22:33,915 --> 00:22:35,655
+and we usually refer to that as
+
+493
+00:22:35,655 --> 00:22:37,095
+a lamp installation
+
+494
+00:22:38,355 --> 00:22:41,895
+that means we have an apache web
+
+495
+00:22:41,895 --> 00:22:44,235
+server we have my a scam and
+
+496
+00:22:44,235 --> 00:22:46,046
+we have p h p c those
+
+497
+00:22:46,065 --> 00:22:49,035
+are the basic main components there are
+
+498
+00:22:49,035 --> 00:22:51,465
+more and you can actually change apache
+
+499
+00:22:51,469 --> 00:22:55,605
+to varnish or some other web server
+
+500
+00:22:55,605 --> 00:22:57,615
+and my scam can be maria db
+
+501
+00:22:58,335 --> 00:23:01,365
+so that don't take it to too
+
+502
+00:23:01,785 --> 00:23:02,535
+much of a
+
+503
+00:23:04,035 --> 00:23:06,015
+yeah hitler married but when you do
+
+504
+00:23:06,045 --> 00:23:08,145
+when you optimize these you need to
+
+505
+00:23:08,145 --> 00:23:11,805
+understand what kind of needs these systems
+
+506
+00:23:11,805 --> 00:23:14,235
+have so normally apache is a very
+
+507
+00:23:14,265 --> 00:23:18,075
+cpu intensive system meaning at what you
+
+508
+00:23:18,075 --> 00:23:21,285
+can optimize theories usually threads sometimes
+
+509
+00:23:22,365 --> 00:23:24,015
+something's a bit of a memory but
+
+510
+00:23:24,045 --> 00:23:26,385
+you can you can optimise hollow you
+
+511
+00:23:27,195 --> 00:23:28,245
+use the cpu
+
+512
+00:23:29,685 --> 00:23:31,845
+my style is usually memory and they
+
+513
+00:23:31,845 --> 00:23:33,525
+skimped and saved so make sure to
+
+514
+00:23:33,525 --> 00:23:37,395
+have the fastest this and then you
+
+515
+00:23:37,425 --> 00:23:40,935
+can often tweak my escrow at variables
+
+516
+00:23:40,995 --> 00:23:43,485
+and this is actually one thing when
+
+517
+00:23:43,485 --> 00:23:46,665
+i talk to either departments that has
+
+518
+00:23:46,755 --> 00:23:49,455
+been trying to maintain moto mo
+
+519
+00:23:49,455 --> 00:23:53,115
+do they usually install the database in
+
+520
+00:23:53,265 --> 00:23:55,425
+kind of the default setup that comes
+
+521
+00:23:55,425 --> 00:23:58,485
+with my sql and that is probably
+
+522
+00:23:58,485 --> 00:24:01,305
+the easiest way to make your matomo
+
+523
+00:24:01,305 --> 00:24:02,835
+server slow because
+
+524
+00:24:04,785 --> 00:24:06,345
+if you know my schedule you can
+
+525
+00:24:06,345 --> 00:24:09,315
+optimise i think over two hundred variables
+
+526
+00:24:09,405 --> 00:24:11,085
+that you shouldn't but you can
+
+527
+00:24:12,345 --> 00:24:16,635
+but on my scale application like nato
+
+528
+00:24:16,635 --> 00:24:19,215
+i'm whether it's very database intensive really
+
+529
+00:24:19,215 --> 00:24:21,555
+really needs a lot of optimizations
+
+530
+00:24:22,575 --> 00:24:24,135
+and there are great tools to help
+
+531
+00:24:24,135 --> 00:24:26,535
+you with that a peach pie is
+
+532
+00:24:26,535 --> 00:24:29,565
+of course super important and for that
+
+533
+00:24:30,435 --> 00:24:32,235
+we usually use the memory
+
+534
+00:24:33,405 --> 00:24:36,855
+and super important to cache the hp
+
+535
+00:24:36,855 --> 00:24:40,125
+because psp is a language that will
+
+536
+00:24:40,845 --> 00:24:44,025
+reprocess every page every time you see
+
+537
+00:24:44,025 --> 00:24:46,515
+it basically or everytime a function is
+
+538
+00:24:46,515 --> 00:24:49,515
+loaded it is actually processed unless you
+
+539
+00:24:49,540 --> 00:24:52,035
+use cache for caching is key and
+
+540
+00:24:52,035 --> 00:24:53,295
+when it comes to psp
+
+541
+00:24:56,139 --> 00:24:59,325
+one thing that is super nice and
+
+542
+00:24:59,325 --> 00:25:02,685
+particularly on larger installation is to use
+
+543
+00:25:02,685 --> 00:25:06,345
+the cute tracking plugin which would offload
+
+544
+00:25:06,345 --> 00:25:11,445
+your database significant sit significantly and also
+
+545
+00:25:12,195 --> 00:25:13,687
+give you features such as
+
+546
+00:25:13,695 --> 00:25:15,855
+you can restart your moto e installation
+
+547
+00:25:15,855 --> 00:25:19,965
+without losing data or really have to
+
+548
+00:25:19,965 --> 00:25:21,915
+look into this one if you haven't
+
+549
+00:25:21,915 --> 00:25:22,455
+already
+
+550
+00:25:25,935 --> 00:25:28,215
+you can also configure tons of things
+
+551
+00:25:28,245 --> 00:25:29,025
+in moto move
+
+552
+00:25:30,375 --> 00:25:33,285
+i linked to this little
+
+553
+00:25:35,865 --> 00:25:38,685
+file on tumblr dot org i can
+
+554
+00:25:38,685 --> 00:25:40,095
+assure you that actually
+
+555
+00:25:43,815 --> 00:25:44,925
+just open that
+
+556
+00:25:46,395 --> 00:25:48,525
+and just to give you an impression
+
+557
+00:25:48,525 --> 00:25:52,155
+but in your mental installation you have
+
+558
+00:25:52,155 --> 00:25:55,335
+a file called glow but the psv
+
+559
+00:25:55,335 --> 00:25:57,735
+this one is actually from github but
+
+560
+00:25:57,735 --> 00:25:59,145
+just to give you an idea how
+
+561
+00:25:59,145 --> 00:26:02,145
+much you can actually configure on your
+
+562
+00:26:02,205 --> 00:26:05,835
+matomo server or your particular
+
+563
+00:26:06,585 --> 00:26:09,525
+amazon instance you can you can tweak
+
+564
+00:26:09,795 --> 00:26:11,295
+all of those things and this is
+
+565
+00:26:11,475 --> 00:26:13,767
+great because it means we can adopt
+
+566
+00:26:13,785 --> 00:26:17,175
+motto in tons of ways but it's
+
+567
+00:26:17,175 --> 00:26:19,845
+also it also means that you can
+
+568
+00:26:20,355 --> 00:26:22,665
+yeah you can get problems if you
+
+569
+00:26:22,665 --> 00:26:25,305
+don't know what you're doing so one
+
+570
+00:26:25,305 --> 00:26:26,415
+thing you usually want
+
+571
+00:26:26,475 --> 00:26:29,295
+to have control of is the number
+
+572
+00:26:29,385 --> 00:26:31,425
+of rows that you're alone in different
+
+573
+00:26:31,425 --> 00:26:32,115
+reports
+
+574
+00:26:33,225 --> 00:26:35,325
+from a user perspective you normally want
+
+575
+00:26:35,325 --> 00:26:37,935
+to tweak this upwards there because i
+
+576
+00:26:37,935 --> 00:26:39,555
+think the default is that you show
+
+577
+00:26:39,555 --> 00:26:42,135
+only five hundred years and seen reports
+
+578
+00:26:42,795 --> 00:26:44,085
+and if you have a lot of
+
+579
+00:26:44,085 --> 00:26:46,425
+you rather see obviously want more than
+
+580
+00:26:46,425 --> 00:26:49,605
+five hundred but setting them too high
+
+581
+00:26:52,065 --> 00:26:56,177
+and that means the effective performance of
+
+582
+00:26:56,177 --> 00:26:57,915
+the scanning of forms if you use
+
+583
+00:26:57,915 --> 00:27:00,315
+the form analytics plugin is something you
+
+584
+00:27:00,315 --> 00:27:02,085
+should be really careful with that can
+
+585
+00:27:02,085 --> 00:27:05,205
+make your database grow also keep an
+
+586
+00:27:05,205 --> 00:27:07,365
+eye out over how long you store
+
+587
+00:27:07,365 --> 00:27:09,525
+your raw data this is normally something
+
+588
+00:27:09,525 --> 00:27:10,815
+you should know when you stop
+
+589
+00:27:10,960 --> 00:27:12,945
+but sometimes people don't have a clue
+
+590
+00:27:12,945 --> 00:27:13,695
+what that is
+
+591
+00:27:15,315 --> 00:27:18,465
+because that means growing the database is
+
+592
+00:27:18,465 --> 00:27:21,915
+growing a lot and also be a
+
+593
+00:27:21,915 --> 00:27:25,305
+bit careful with plugins because plugins we
+
+594
+00:27:25,785 --> 00:27:27,465
+consume a lot of memories
+
+595
+00:27:29,235 --> 00:27:31,305
+and if you don't need them don't
+
+596
+00:27:31,305 --> 00:27:31,875
+installer
+
+597
+00:27:35,235 --> 00:27:37,635
+yes my sql that
+
+598
+00:27:38,955 --> 00:27:40,605
+but yeah this is certainly something we
+
+599
+00:27:40,605 --> 00:27:43,005
+learned we are using maria db and
+
+600
+00:27:43,455 --> 00:27:45,135
+what we learned is that there are
+
+601
+00:27:45,135 --> 00:27:48,645
+actually features in my in matomo that
+
+602
+00:27:49,155 --> 00:27:52,545
+use functions in mind scale that are
+
+603
+00:27:52,545 --> 00:27:55,215
+not available in maria db so if
+
+604
+00:27:55,215 --> 00:27:56,955
+you're having a large database you might
+
+605
+00:27:56,955 --> 00:27:58,065
+run into problems
+
+606
+00:27:58,815 --> 00:28:00,548
+if you want to know the deacons
+
+607
+00:28:00,548 --> 00:28:02,745
+something her grandma call it linked to
+
+608
+00:28:02,745 --> 00:28:03,738
+those issues
+
+609
+00:28:05,295 --> 00:28:08,985
+ima ethanol tomorrow but one thing and
+
+610
+00:28:09,465 --> 00:28:10,785
+on a launch date the base at
+
+611
+00:28:10,785 --> 00:28:13,275
+least you need to keep an eye
+
+612
+00:28:13,275 --> 00:28:15,495
+on the database size and you can
+
+613
+00:28:15,495 --> 00:28:18,801
+use tools like tuning primary over my
+
+614
+00:28:18,801 --> 00:28:20,715
+oscar junior for two to get the
+
+615
+00:28:20,715 --> 00:28:22,905
+incense and one thing we also learned
+
+616
+00:28:22,935 --> 00:28:25,455
+is that over time the number of
+
+617
+00:28:25,545 --> 00:28:27,285
+table c moto movie grow
+
+618
+00:28:28,365 --> 00:28:28,785
+and
+
+619
+00:28:30,315 --> 00:28:33,525
+you might want to check these configuration
+
+620
+00:28:33,885 --> 00:28:37,875
+options for actually configuration variables in my
+
+621
+00:28:37,875 --> 00:28:38,265
+scale
+
+622
+00:28:39,375 --> 00:28:41,625
+because if you don't adjust these according
+
+623
+00:28:41,625 --> 00:28:45,105
+to your database you might have performance
+
+624
+00:28:45,105 --> 00:28:45,615
+issues
+
+625
+00:28:47,895 --> 00:28:51,285
+there are also optimizations that you can
+
+626
+00:28:51,645 --> 00:28:55,845
+do to make transition reports faster so
+
+627
+00:28:55,845 --> 00:28:57,225
+there is an africa there
+
+628
+00:29:00,315 --> 00:29:02,715
+every muslim installation is quite unique so
+
+629
+00:29:02,715 --> 00:29:05,255
+i wouldn't recommend you to just apply
+
+630
+00:29:05,295 --> 00:29:07,635
+every index for the the message said
+
+631
+00:29:07,635 --> 00:29:09,435
+to find you should really try them
+
+632
+00:29:09,455 --> 00:29:12,735
+and test how they affect your installations
+
+633
+00:29:13,275 --> 00:29:16,035
+indexes can grow your database quite a
+
+634
+00:29:16,035 --> 00:29:18,015
+lot and you should do that this
+
+635
+00:29:18,045 --> 00:29:18,495
+with care
+
+636
+00:29:19,425 --> 00:29:21,915
+this is obviously something you can look
+
+637
+00:29:21,915 --> 00:29:23,325
+into and test
+
+638
+00:29:25,935 --> 00:29:28,215
+another thing that is quite common is
+
+639
+00:29:28,215 --> 00:29:29,355
+that you have an if you have
+
+640
+00:29:29,355 --> 00:29:31,755
+a lot of segments and accustomed reports
+
+641
+00:29:31,815 --> 00:29:35,235
+you might want to start looking into
+
+642
+00:29:35,265 --> 00:29:37,875
+how to optimize the archiving that happens
+
+643
+00:29:37,875 --> 00:29:38,535
+under the hood
+
+644
+00:29:39,645 --> 00:29:41,535
+one thing we've been doing is that
+
+645
+00:29:42,105 --> 00:29:43,725
+if a client has a lot of
+
+646
+00:29:43,725 --> 00:29:46,245
+websites normally there is only one or
+
+647
+00:29:46,245 --> 00:29:48,225
+two websites that have a lot of
+
+648
+00:29:48,225 --> 00:29:50,565
+data and a lot of statements and
+
+649
+00:29:50,565 --> 00:29:53,205
+the other websites in the installation are
+
+650
+00:29:53,205 --> 00:29:55,575
+you should explore so one good thing
+
+651
+00:29:55,575 --> 00:29:57,465
+is actually to separate these into to
+
+652
+00:29:57,465 --> 00:29:59,775
+the different jobs meaning what
+
+653
+00:29:59,775 --> 00:30:01,275
+one job that might be happy and
+
+654
+00:30:01,275 --> 00:30:02,865
+take a lot of time will not
+
+655
+00:30:02,865 --> 00:30:05,325
+affect us more as sites so having
+
+656
+00:30:05,325 --> 00:30:08,145
+two jobs you can just do this
+
+657
+00:30:08,145 --> 00:30:11,325
+skip either site number one then force
+
+658
+00:30:11,325 --> 00:30:13,365
+i decide equals one on the on
+
+659
+00:30:13,365 --> 00:30:16,965
+the job then that when offload or
+
+660
+00:30:16,995 --> 00:30:19,155
+actually gave faster reports for the small
+
+661
+00:30:19,169 --> 00:30:19,695
+sites
+
+662
+00:30:20,715 --> 00:30:22,365
+another example is to
+
+663
+00:30:24,000 --> 00:30:27,030
+it's also that you run segments separately
+
+664
+00:30:27,570 --> 00:30:29,100
+that means that they're
+
+665
+00:30:30,780 --> 00:30:33,630
+if you're not apply any segment those
+
+666
+00:30:34,080 --> 00:30:35,940
+jobs might be faster but then you
+
+667
+00:30:35,940 --> 00:30:38,190
+might have other segments
+
+668
+00:30:39,600 --> 00:30:42,390
+that might take time if someone configured
+
+669
+00:30:42,390 --> 00:30:45,900
+for instance segments containing wildcards that takes
+
+670
+00:30:45,900 --> 00:30:47,670
+a lot of time you can actually
+
+671
+00:30:47,670 --> 00:30:52,890
+separate these into specific jobs maybe these
+
+672
+00:30:52,890 --> 00:30:56,190
+reports will take hours or two to
+
+673
+00:30:56,220 --> 00:30:59,413
+process but the other segments we respond
+
+674
+00:30:59,430 --> 00:30:59,520
+to
+
+675
+00:30:59,520 --> 00:31:01,470
+faster so that's something you can look
+
+676
+00:31:01,470 --> 00:31:02,880
+into and start tweaking
+
+677
+00:31:05,190 --> 00:31:08,430
+another example is that you want to
+
+678
+00:31:08,520 --> 00:31:14,190
+start optimizing your archiving process as you
+
+679
+00:31:14,190 --> 00:31:17,700
+can actually use these flags like concurrent
+
+680
+00:31:17,700 --> 00:31:20,250
+requests for a website or a concurrent
+
+681
+00:31:20,280 --> 00:31:23,280
+archiver cine can also stop liberating wit
+
+682
+00:31:23,880 --> 00:31:24,240
+and the
+
+683
+00:31:24,270 --> 00:31:28,170
+p h p memory that americans can
+
+684
+00:31:28,200 --> 00:31:31,560
+consume but this is really something you
+
+685
+00:31:31,560 --> 00:31:32,070
+should
+
+686
+00:31:33,120 --> 00:31:36,090
+i know what you're doing before before
+
+687
+00:31:36,090 --> 00:31:36,540
+trying
+
+688
+00:31:37,800 --> 00:31:39,784
+or you can try them and see
+
+689
+00:31:39,784 --> 00:31:40,320
+him learn
+
+690
+00:31:42,240 --> 00:31:44,820
+the one thing that i've been doing
+
+691
+00:31:45,330 --> 00:31:47,610
+is that i've actually created a plugin
+
+692
+00:31:49,140 --> 00:31:51,330
+to to warn you a bit this
+
+693
+00:31:51,330 --> 00:31:53,160
+is actually a plugin i wrote to
+
+694
+00:31:53,160 --> 00:31:55,560
+learn to how to write plugins sites
+
+695
+00:31:55,560 --> 00:31:59,490
+may maybe not the most beautiful code
+
+696
+00:31:59,760 --> 00:32:01,470
+i ever written but it's been a
+
+697
+00:32:01,470 --> 00:32:03,960
+good learning but what it actually does
+
+698
+00:32:04,020 --> 00:32:07,290
+is that it adds some reports to
+
+699
+00:32:07,350 --> 00:32:07,860
+my
+
+700
+00:32:09,106 --> 00:32:11,490
+my installation so under the hood i
+
+701
+00:32:11,490 --> 00:32:14,130
+can go in and get a few
+
+702
+00:32:14,490 --> 00:32:17,940
+recommendations so i have this performance tips
+
+703
+00:32:17,940 --> 00:32:20,760
+for instance that we gave me some
+
+704
+00:32:20,760 --> 00:32:24,360
+insights on how my database fees and
+
+705
+00:32:24,360 --> 00:32:29,040
+i'm doing some calculations on on home
+
+706
+00:32:29,040 --> 00:32:30,180
+my minds go
+
+707
+00:32:31,290 --> 00:32:35,130
+database is performing and in this case
+
+708
+00:32:35,130 --> 00:32:37,350
+for instance we're not really following their
+
+709
+00:32:37,350 --> 00:32:38,430
+recommendations
+
+710
+00:32:40,710 --> 00:32:42,510
+one how to configure motto this is
+
+711
+00:32:42,510 --> 00:32:45,120
+a database setting that we should changed
+
+712
+00:32:45,150 --> 00:32:48,570
+and also link to a recommendation former
+
+713
+00:32:48,570 --> 00:32:51,390
+tommaso yup this is something i've been
+
+714
+00:32:51,390 --> 00:32:53,430
+improving over time and we actually use
+
+715
+00:32:53,430 --> 00:32:55,200
+it in our database to to get
+
+716
+00:32:55,200 --> 00:32:58,980
+some feedback another thing i recently added
+
+717
+00:32:59,040 --> 00:32:59,760
+is regarding
+
+718
+00:32:59,820 --> 00:33:01,020
+the segments all
+
+719
+00:33:02,460 --> 00:33:04,320
+i was logged in i will fix
+
+720
+00:33:04,320 --> 00:33:04,680
+that
+
+721
+00:33:08,340 --> 00:33:10,800
+oh i can't actually because this one
+
+722
+00:33:10,800 --> 00:33:12,480
+requires me to be on a vpn
+
+723
+00:33:12,510 --> 00:33:14,040
+so we won't do that but i
+
+724
+00:33:14,096 --> 00:33:15,600
+actually created a list
+
+725
+00:33:16,830 --> 00:33:20,640
+of problematic segments so segment containing one
+
+726
+00:33:20,640 --> 00:33:22,500
+course you can you can
+
+727
+00:33:24,000 --> 00:33:26,760
+go to this repository and the and
+
+728
+00:33:26,760 --> 00:33:28,470
+download x and the
+
+729
+00:33:29,880 --> 00:33:31,740
+and please give feedback and may be
+
+730
+00:33:31,830 --> 00:33:33,810
+want to help to contributed to make
+
+731
+00:33:33,810 --> 00:33:34,980
+it to the photo there
+
+732
+00:33:36,150 --> 00:33:38,098
+the coding guidelines on what one but
+
+733
+00:33:38,098 --> 00:33:41,670
+basically i created some ways to easily
+
+734
+00:33:41,670 --> 00:33:42,180
+get
+
+735
+00:33:43,350 --> 00:33:45,480
+status variables and the
+
+736
+00:33:46,560 --> 00:33:47,430
+and things like that
+
+737
+00:33:51,330 --> 00:33:56,580
+yup what else we have to sign
+
+738
+00:33:56,580 --> 00:33:57,450
+for questions
+
+739
+00:34:02,250 --> 00:34:06,150
+and then thank you we have one
+
+740
+00:34:06,150 --> 00:34:08,760
+question the moon averages would you be
+
+741
+00:34:08,760 --> 00:34:11,400
+interested in publishing the db health plugin
+
+742
+00:34:11,429 --> 00:34:14,969
+on the marketplace definitely but i need
+
+743
+00:34:14,969 --> 00:34:16,590
+some help maybe it maybe lucas can
+
+744
+00:34:16,590 --> 00:34:18,659
+help me to to code reviewed
+
+745
+00:34:19,830 --> 00:34:21,780
+but i would definitely be interested in
+
+746
+00:34:21,780 --> 00:34:22,230
+doing that
+
+747
+00:34:26,010 --> 00:34:28,103
+if it's already free to download soon
+
+748
+00:34:28,103 --> 00:34:29,100
+so i guess
+
+749
+00:34:31,230 --> 00:34:33,570
+if newcastle bought it would be nice
+
+750
+00:34:36,600 --> 00:34:37,620
+the medal awaited
+
+751
+00:34:39,330 --> 00:34:41,159
+so if there any other questions of
+
+752
+00:34:41,159 --> 00:34:43,409
+if you asked him is it just
+
+753
+00:34:43,409 --> 00:34:45,300
+going to be the few moments for
+
+754
+00:34:45,300 --> 00:34:45,570
+that
+
+755
+00:34:48,659 --> 00:34:50,040
+yeah hang on
+
+756
+00:35:11,910 --> 00:35:16,979
+alright so long new questions it seems
+
+757
+00:35:16,980 --> 00:35:18,990
+great since i was have been delicious
+
+758
+00:35:19,560 --> 00:35:21,000
+you must seconds maybe
+
+759
+00:35:39,120 --> 00:35:41,826
+okay maybe not alright i mean as
+
+760
+00:35:41,826 --> 00:35:43,800
+as always the thread stays open so
+
+761
+00:35:43,860 --> 00:35:45,750
+maybe to see english lady you can
+
+762
+00:35:45,750 --> 00:35:47,399
+you can answer then i would i
+
+763
+00:35:47,399 --> 00:35:47,612
+would
+
+764
+00:35:48,750 --> 00:35:51,990
+but with that fill up the thing
+
+765
+00:35:52,050 --> 00:35:53,700
+elena thank you get it
+
+766
+00:35:56,100 --> 00:35:57,180
+i mean you're going to have an
+
+767
+00:35:57,180 --> 00:35:59,100
+hour to i think next hour but
+
+768
+00:35:59,490 --> 00:36:02,670
+then integrate the app thank you bye
+

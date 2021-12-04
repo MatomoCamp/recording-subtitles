@@ -1,0 +1,808 @@
+1
+00:08:52,323 --> 00:08:54,213
+of the different conferences
+
+2
+00:08:55,383 --> 00:08:57,423
+this evan to could not have been
+
+3
+00:08:57,603 --> 00:09:00,123
+without lucas winkler who is the guy
+
+4
+00:09:00,123 --> 00:09:02,493
+who took on his shoulders
+
+5
+00:09:03,513 --> 00:09:06,243
+a huge in their melons an impressive
+
+6
+00:09:06,273 --> 00:09:10,383
+amount of work he was here all
+
+7
+00:09:10,383 --> 00:09:13,743
+the time where i couldn't manage anything
+
+8
+00:09:13,743 --> 00:09:15,785
+anymore because i didn't have more time
+
+9
+00:09:15,785 --> 00:09:18,213
+i didn't have more energy and this
+
+10
+00:09:18,243 --> 00:09:19,353
+is where did the guy who is
+
+11
+00:09:19,353 --> 00:09:21,243
+doing kind of everything
+
+12
+00:09:22,743 --> 00:09:24,543
+we even met summer camps where would
+
+13
+00:09:24,543 --> 00:09:27,243
+like to thank him silva's when we
+
+14
+00:09:27,273 --> 00:09:30,993
+joined the team during to the evolution
+
+15
+00:09:30,993 --> 00:09:33,573
+of the creation of metamora camp she
+
+16
+00:09:33,573 --> 00:09:35,433
+was the one in charge of the
+
+17
+00:09:35,433 --> 00:09:38,613
+moderation of the different talks was all
+
+18
+00:09:38,703 --> 00:09:41,313
+communication apart i would like to sink
+
+19
+00:09:41,313 --> 00:09:42,633
+as well us define
+
+20
+00:09:42,633 --> 00:09:44,703
+i connect from the netherlands with a
+
+21
+00:09:44,703 --> 00:09:47,073
+book who helped us a vodka will
+
+22
+00:09:47,073 --> 00:09:50,403
+help us with all the system administration
+
+23
+00:09:50,403 --> 00:09:53,553
+the i t infrastructure for the lake
+
+24
+00:09:53,853 --> 00:09:55,713
+has weather was here for the duration
+
+25
+00:09:55,713 --> 00:09:57,573
+of the talk in french a huge
+
+26
+00:09:57,633 --> 00:10:00,594
+huge thanks to open digital us who've
+
+27
+00:10:00,603 --> 00:10:02,793
+an autumn buzz who is the one
+
+28
+00:10:03,325 --> 00:10:07,274
+hold the all the different streamer and
+
+29
+00:10:07,323 --> 00:10:09,786
+sings to him the true that we
+
+30
+00:10:09,873 --> 00:10:11,913
+got the recording of all the different
+
+31
+00:10:12,423 --> 00:10:14,913
+conferences i would like to sank as
+
+32
+00:10:14,913 --> 00:10:17,823
+well although digital is the ab team
+
+33
+00:10:18,123 --> 00:10:21,003
+and in particular thomas jefferson that some
+
+34
+00:10:21,003 --> 00:10:22,923
+of the attendees i've seen many time
+
+35
+00:10:23,223 --> 00:10:25,323
+i'm not one percent sure about the
+
+36
+00:10:25,323 --> 00:10:27,093
+number of told us that he made
+
+37
+00:10:27,093 --> 00:10:28,743
+but i think it's close to five
+
+38
+00:10:29,073 --> 00:10:30,063
+and they were all
+
+39
+00:10:31,383 --> 00:10:34,413
+incredible so thank you very much tomas
+
+40
+00:10:34,413 --> 00:10:35,910
+would like to thank as what stiff
+
+41
+00:10:35,913 --> 00:10:37,893
+and given to him as a number
+
+42
+00:10:37,953 --> 00:10:40,413
+and israel really came near careful the
+
+43
+00:10:40,443 --> 00:10:43,263
+organizing team lucas am i missing anyone
+
+44
+00:10:43,263 --> 00:10:44,703
+here within the organizing team
+
+45
+00:10:46,023 --> 00:10:47,763
+i can't think of anyone at the
+
+46
+00:10:47,763 --> 00:10:50,193
+moment hopefully i also don't miss one
+
+47
+00:10:50,673 --> 00:10:50,943
+book
+
+48
+00:10:51,993 --> 00:10:54,333
+i would like to thanks again or
+
+49
+00:10:54,333 --> 00:10:56,253
+to speak else they were coming from
+
+50
+00:10:56,283 --> 00:10:59,463
+all the different countries that i've made
+
+51
+00:10:59,463 --> 00:11:04,323
+or greats and impressive speech and of
+
+52
+00:11:04,323 --> 00:11:07,203
+course lucas when crowe zoo i came
+
+53
+00:11:07,203 --> 00:11:10,173
+they can richest duck from the inner
+
+54
+00:11:10,173 --> 00:11:11,793
+crust company was making
+
+55
+00:11:12,153 --> 00:11:14,883
+the conference favorite times of difference of
+
+56
+00:11:14,913 --> 00:11:17,733
+twelve i was from new zealand high
+
+57
+00:11:17,733 --> 00:11:19,503
+power else from the digital is a
+
+58
+00:11:19,503 --> 00:11:21,543
+b team in sweden tomatoes at moment
+
+59
+00:11:21,543 --> 00:11:26,583
+from germany nathan fight us silva as
+
+60
+00:11:26,583 --> 00:11:29,433
+well the italian team that represented by
+
+61
+00:11:29,493 --> 00:11:31,893
+that he did pull vecchio pierluigi to
+
+62
+00:11:31,923 --> 00:11:32,313
+cease
+
+63
+00:11:32,403 --> 00:11:36,873
+a close you shall again thomas chinese
+
+64
+00:11:36,903 --> 00:11:39,303
+stiff and connect pizza worker to my
+
+65
+00:11:39,303 --> 00:11:42,239
+stepson christian i dunno they're not embarrassed
+
+66
+00:11:42,239 --> 00:11:45,183
+about the steven victor vic safe from
+
+67
+00:11:45,303 --> 00:11:48,243
+an garish various boutique niche of headache
+
+68
+00:11:48,243 --> 00:11:51,603
+foster or hated pulse catchy new bay
+
+69
+00:11:51,603 --> 00:11:52,473
+from the united
+
+70
+00:11:52,593 --> 00:11:55,323
+kingdom and all not at all i'm
+
+71
+00:11:55,563 --> 00:11:58,143
+sorry lucas same questions again did i
+
+72
+00:11:58,143 --> 00:12:01,353
+forgot anyone here within this list i
+
+73
+00:12:01,383 --> 00:12:02,223
+hope you didn't
+
+74
+00:12:03,573 --> 00:12:05,043
+cause i mean they saw an adult
+
+75
+00:12:05,043 --> 00:12:08,403
+be complete and sorry for my pronunciation
+
+76
+00:12:08,433 --> 00:12:12,033
+as well i would like onslaught to
+
+77
+00:12:12,033 --> 00:12:15,903
+thank all sponsors so metromile who on
+
+78
+00:12:15,903 --> 00:12:19,863
+small hello has to create and use
+
+79
+00:12:20,673 --> 00:12:23,433
+a logo which is similar to
+
+80
+00:12:23,433 --> 00:12:26,193
+sales and those were a little husky
+
+81
+00:12:26,223 --> 00:12:28,383
+was met to move even though communication
+
+82
+00:12:28,389 --> 00:12:30,993
+support was well supported us in time
+
+83
+00:12:30,997 --> 00:12:34,875
+of communication also probably we felt was
+
+84
+00:12:35,025 --> 00:12:38,904
+communication impact we couldn't have reached today
+
+85
+00:12:39,003 --> 00:12:40,743
+or at least some of you guys
+
+86
+00:12:40,743 --> 00:12:42,363
+so i will like on small to
+
+87
+00:12:42,363 --> 00:12:43,593
+say thank you met tomorrow
+
+88
+00:12:43,690 --> 00:12:46,582
+of course to provide the world with
+
+89
+00:12:48,273 --> 00:12:51,243
+a free software and the gpl license
+
+90
+00:12:51,903 --> 00:12:53,539
+i would like to thank as well
+
+91
+00:12:53,583 --> 00:12:56,643
+of han digital who as i said
+
+92
+00:12:56,673 --> 00:12:58,173
+out the one in charge of all
+
+93
+00:12:58,173 --> 00:12:59,673
+the streaming part i would like to
+
+94
+00:12:59,673 --> 00:13:02,403
+sync on small the company of a
+
+95
+00:13:02,403 --> 00:13:03,993
+stiff and couldn't even get us who
+
+96
+00:13:04,053 --> 00:13:06,993
+missed analytics so as a soul no
+
+97
+00:13:06,993 --> 00:13:07,833
+heart from peter
+
+98
+00:13:07,833 --> 00:13:11,193
+our worker and styles from ligaments and
+
+99
+00:13:11,193 --> 00:13:12,303
+many was a
+
+100
+00:13:13,803 --> 00:13:14,943
+as well that i would like to
+
+101
+00:13:14,943 --> 00:13:18,273
+thank who as i said many organizers
+
+102
+00:13:18,409 --> 00:13:21,543
+have been speakers during this medical camp
+
+103
+00:13:21,543 --> 00:13:23,403
+and who has spent a lot of
+
+104
+00:13:23,403 --> 00:13:26,553
+time and energy within this this project
+
+105
+00:13:26,823 --> 00:13:30,093
+and of course us when i'm shortly
+
+106
+00:13:30,093 --> 00:13:32,793
+off cost of under the organizers you
+
+107
+00:13:32,793 --> 00:13:33,513
+forgot to match
+
+108
+00:13:34,083 --> 00:13:36,903
+of course europe or na who initially
+
+109
+00:13:36,903 --> 00:13:39,393
+had the idea to organize hematoma camp
+
+110
+00:13:39,723 --> 00:13:42,873
+and that ivana getting everything started and
+
+111
+00:13:43,233 --> 00:13:46,375
+are planning yeah there's a whole concept
+
+112
+00:13:46,563 --> 00:13:49,173
+from the beginning so thanks again for
+
+113
+00:13:49,173 --> 00:13:52,023
+this yeah thank you thank you so
+
+114
+00:13:52,023 --> 00:13:53,673
+much i have to
+
+115
+00:13:53,673 --> 00:13:55,503
+she said that i couldn't make it
+
+116
+00:13:56,167 --> 00:13:58,533
+without all of you guys and without
+
+117
+00:13:58,563 --> 00:14:01,233
+all that said i t free software
+
+118
+00:14:01,323 --> 00:14:03,243
+technology expertize i have to set up
+
+119
+00:14:03,303 --> 00:14:06,483
+my myself even with all the analogy
+
+120
+00:14:06,483 --> 00:14:08,313
+that i brought into it it's
+
+121
+00:14:09,873 --> 00:14:12,123
+i just put the nlg of someone
+
+122
+00:14:12,123 --> 00:14:14,493
+who to create an event and and
+
+123
+00:14:14,493 --> 00:14:17,403
+that's it do that thank you thank
+
+124
+00:14:17,403 --> 00:14:19,143
+you very much i i appreciate that
+
+125
+00:14:19,473 --> 00:14:21,873
+and of course thank you to all
+
+126
+00:14:21,873 --> 00:14:23,643
+of you for ten years because it's
+
+127
+00:14:23,643 --> 00:14:25,673
+always hard to find though some time
+
+128
+00:14:25,683 --> 00:14:27,873
+i'll on our walking time to come
+
+129
+00:14:27,873 --> 00:14:29,583
+and assist all those conferences
+
+130
+00:14:30,213 --> 00:14:32,373
+thank you for all your kindness because
+
+131
+00:14:33,393 --> 00:14:35,913
+we didn't have any any trolling experience
+
+132
+00:14:35,913 --> 00:14:38,223
+on the social networks you have been
+
+133
+00:14:38,253 --> 00:14:40,383
+all nice to each other as for
+
+134
+00:14:40,383 --> 00:14:42,723
+the chats you played the game you
+
+135
+00:14:42,723 --> 00:14:45,573
+accepted to i posted some question on
+
+136
+00:14:45,573 --> 00:14:47,613
+shut up not moved at all you
+
+137
+00:14:48,633 --> 00:14:49,713
+send some questions
+
+138
+00:14:50,073 --> 00:14:52,173
+and to the question that most of
+
+139
+00:14:52,173 --> 00:14:54,693
+you would probably ask are where the
+
+140
+00:14:54,693 --> 00:14:57,530
+materials off of the speakers and where
+
+141
+00:14:57,551 --> 00:14:59,853
+the rico did the recording of the
+
+142
+00:14:59,853 --> 00:15:02,523
+tourists off wanted the recording of the
+
+143
+00:15:02,523 --> 00:15:04,593
+talks correct me if i'm wrong lucas
+
+144
+00:15:04,593 --> 00:15:06,063
+but they will be posted on the
+
+145
+00:15:06,063 --> 00:15:09,713
+ul has named videos that metal candle
+
+146
+00:15:09,813 --> 00:15:09,993
+on
+
+147
+00:15:09,993 --> 00:15:12,003
+all within the coming days and right
+
+148
+00:15:12,933 --> 00:15:15,003
+eye gallery below to set up the
+
+149
+00:15:15,033 --> 00:15:17,193
+video platform in the next state and
+
+150
+00:15:17,583 --> 00:15:20,103
+editing the older recordings of cross will
+
+151
+00:15:20,103 --> 00:15:22,323
+take some time and we will just
+
+152
+00:15:22,323 --> 00:15:24,303
+go on and publish them once staffed
+
+153
+00:15:24,303 --> 00:15:26,253
+by this so if you follow us
+
+154
+00:15:26,253 --> 00:15:28,653
+on their social media accounts or if
+
+155
+00:15:28,653 --> 00:15:30,153
+you look on the tv
+
+156
+00:15:30,183 --> 00:15:31,893
+your platform every few days you've really
+
+157
+00:15:31,893 --> 00:15:34,053
+been notified whenever a new recording is
+
+158
+00:15:34,563 --> 00:15:35,193
+published
+
+159
+00:15:36,423 --> 00:15:39,603
+so yeah if you just the refreshment
+
+160
+00:15:39,603 --> 00:15:41,283
+to move can look all web page
+
+161
+00:15:41,853 --> 00:15:44,103
+from time to time issue follow us
+
+162
+00:15:44,433 --> 00:15:46,503
+on the social network which senses that
+
+163
+00:15:46,503 --> 00:15:48,033
+we will announce at some point that
+
+164
+00:15:48,434 --> 00:15:50,883
+the videos are live you can already
+
+165
+00:15:50,883 --> 00:15:52,773
+find one which is the one about
+
+166
+00:15:52,773 --> 00:15:56,339
+the pre maximo camp the event and
+
+167
+00:15:57,333 --> 00:16:00,063
+if you have some time i invite
+
+168
+00:16:00,063 --> 00:16:03,183
+you to a breaker meet that nakamura
+
+169
+00:16:03,213 --> 00:16:05,972
+combat dog which is the based on
+
+170
+00:16:06,003 --> 00:16:09,003
+walk adventure which is a social place
+
+171
+00:16:09,003 --> 00:16:11,643
+on which you can move and meet
+
+172
+00:16:11,883 --> 00:16:13,653
+different people who are connected on the
+
+173
+00:16:13,653 --> 00:16:15,603
+platform and then interact with them in
+
+174
+00:16:15,963 --> 00:16:16,713
+in in real
+
+175
+00:16:16,803 --> 00:16:19,203
+timing video on webcam and i'm going
+
+176
+00:16:19,203 --> 00:16:21,573
+to go down in something like two
+
+177
+00:16:21,573 --> 00:16:24,650
+minutes on safe finish the slide and
+
+178
+00:16:24,985 --> 00:16:26,583
+hope that they will have the opportunity
+
+179
+00:16:26,613 --> 00:16:28,083
+to meet some of you guys zealand
+
+180
+00:16:28,383 --> 00:16:30,183
+and to connect a little bit more
+
+181
+00:16:30,333 --> 00:16:32,823
+like if you're wearing a physical presence
+
+182
+00:16:33,873 --> 00:16:36,663
+lucas then on top of view of
+
+183
+00:16:36,663 --> 00:16:36,873
+any
+
+184
+00:16:37,053 --> 00:16:38,823
+any things left that you elect to
+
+185
+00:16:39,543 --> 00:16:41,133
+do so before we close officially the
+
+186
+00:16:41,133 --> 00:16:41,463
+oven
+
+187
+00:16:42,723 --> 00:16:45,333
+nothing major from you just thanks everyone
+
+188
+00:16:45,363 --> 00:16:48,753
+for making different possible and such a
+
+189
+00:16:48,783 --> 00:16:51,543
+huge success with it was the same
+
+190
+00:16:51,543 --> 00:16:52,773
+for me to thank you for your
+
+191
+00:16:52,773 --> 00:16:56,343
+time out of your speakers and just
+
+192
+00:16:56,373 --> 00:16:56,973
+specially
+
+193
+00:16:59,493 --> 00:17:02,193
+perfect thanks you guys that kill a
+
+194
+00:17:02,193 --> 00:17:04,263
+few other good we can then fold
+
+195
+00:17:04,263 --> 00:17:06,183
+the one we still have time just
+
+196
+00:17:06,183 --> 00:17:08,073
+go on the admit that met to
+
+197
+00:17:08,073 --> 00:17:09,933
+move chem dot org and we will
+
+198
+00:17:10,025 --> 00:17:11,313
+be there only no doubt about it
+
+199
+00:17:12,063 --> 00:17:13,953
+have a great weekend and thanks for
+
+200
+00:17:15,393 --> 00:17:16,773
+spending some time with us had met
+
+201
+00:17:16,773 --> 00:17:17,133
+him again
+
+202
+00:17:18,183 --> 00:17:18,453
+that
+
