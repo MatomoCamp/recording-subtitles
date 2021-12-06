@@ -1,0 +1,5180 @@
+1
+00:00:05,940 --> 00:00:07,589
+bonjour à tous ça et à toutes
+
+2
+00:00:07,589 --> 00:00:10,200
+et bienvenue pour cette deuxième journée du
+
+3
+00:00:10,230 --> 00:00:11,370
+mat moquant pont
+
+4
+00:00:12,360 --> 00:00:13,440
+alors pour le moment tout se passe
+
+5
+00:00:13,440 --> 00:00:14,970
+bien j'espère que ça va être le
+
+6
+00:00:14,970 --> 00:00:16,560
+cas tout au long de de cette
+
+7
+00:00:16,560 --> 00:00:18,270
+deuxième journée on a la chance et
+
+8
+00:00:18,270 --> 00:00:21,330
+l'honneur aujourd'hui à deux à recevoir valentin
+
+9
+00:00:21,330 --> 00:00:23,190
+barré qui est du coup à qui
+
+10
+00:00:23,190 --> 00:00:25,530
+trahissent empreintes digitales et qui en fait
+
+11
+00:00:25,560 --> 00:00:28,799
+euh la personne qui justement gère l'ensemble
+
+12
+00:00:29,040 --> 00:00:31,321
+des stries marquent on a aujourd'hui dans
+
+13
+00:00:31,500 --> 00:00:32,159
+qu on a eu hier
+
+14
+00:00:32,848 --> 00:00:34,680
+dans ma moquant par an juste pour
+
+15
+00:00:34,680 --> 00:00:37,217
+dire quelques petits mots sur valentin donc
+
+16
+00:00:37,290 --> 00:00:39,990
+valentin et devops chez empreintes digitales qui
+
+17
+00:00:40,001 --> 00:00:42,330
+une entreprise qui situe à à angers
+
+18
+00:00:43,080 --> 00:00:45,420
+sa mission principale sais le déploiement et
+
+19
+00:00:45,420 --> 00:00:47,942
+le maintien de la structure cloud en
+
+20
+00:00:48,120 --> 00:00:50,250
+mode saas s de l entreprise empreintes
+
+21
+00:00:50,280 --> 00:00:52,650
+digitales qui a un datacenter qui répartir
+
+22
+00:00:53,310 --> 00:00:55,170
+entre angers rennes et tours
+
+23
+00:00:55,770 --> 00:00:58,620
+dans cette conférence valentin va nous parler
+
+24
+00:00:58,710 --> 00:01:00,270
+hein ben voila de comment on gère
+
+25
+00:01:00,270 --> 00:01:02,520
+en fait une instance à matthew au
+
+26
+00:01:02,520 --> 00:01:05,697
+quotidien qui agisse d'une instance qui soit
+
+27
+00:01:05,880 --> 00:01:07,770
+majoritaires toute simple qu a pas beaucoup
+
+28
+00:01:07,770 --> 00:01:10,086
+de trafic jusqu à une instance a
+
+29
+00:01:10,086 --> 00:01:12,150
+un qui a jusqu à cinq millions
+
+30
+00:01:12,150 --> 00:01:14,970
+de visiteurs par mois donc c'est avant
+
+31
+00:01:14,970 --> 00:01:15,840
+tout à une conférence
+
+32
+00:01:15,930 --> 00:01:18,300
+en mode retour d'expérience sur près de
+
+33
+00:01:18,330 --> 00:01:19,110
+deux deux ans
+
+34
+00:01:20,070 --> 00:01:22,801
+empreintes digitales et à et valentin justement
+
+35
+00:01:22,801 --> 00:01:25,170
+à gère aujourd'hui un un client que
+
+36
+00:01:25,170 --> 00:01:27,120
+certains d'entre vous connaissent peut-être eux qui
+
+37
+00:01:27,120 --> 00:01:29,550
+pique et pique c'est en fait une
+
+38
+00:01:29,670 --> 00:01:32,401
+plateforme qui permet de tester les connaissances
+
+39
+00:01:32,401 --> 00:01:34,468
+sont numériques qui est notamment utilisé donc
+
+40
+00:01:34,559 --> 00:01:35,880
+dans le monde de l éducation
+
+41
+00:01:36,690 --> 00:01:39,538
+un éducation supérieure senti peu l'équivalent du
+
+42
+00:01:39,540 --> 00:01:41,760
+a du toeic mais en mode en
+
+43
+00:01:41,760 --> 00:01:43,800
+mode culture numérique donc à son petit
+
+44
+00:01:43,800 --> 00:01:45,180
+peu comme pour on a pu le
+
+45
+00:01:45,180 --> 00:01:47,940
+voir dans la conférence d'hier animée par
+
+46
+00:01:48,120 --> 00:01:49,800
+aurait deux de l'équipe de dj digitaux
+
+47
+00:01:49,800 --> 00:01:52,920
+lest abbé on est sur un site
+
+48
+00:01:52,920 --> 00:01:55,108
+qui reçoit un paquet de trafic et
+
+49
+00:01:55,228 --> 00:01:56,579
+qui arrive à tenir du coup d'ailleurs
+
+50
+00:01:56,640 --> 00:01:58,410
+becca avec un mat homo qui est
+
+51
+00:01:58,410 --> 00:02:00,929
+là pour monitor tout ça voilà ah
+
+52
+00:02:00,990 --> 00:02:03,210
+bah écoutez je vais laisser la parole
+
+53
+00:02:03,270 --> 00:02:05,850
+à valentin n'hésitez pas durant toute la
+
+54
+00:02:05,850 --> 00:02:08,130
+conférence a à interagir à poser des
+
+55
+00:02:08,130 --> 00:02:10,470
+questions à assure la plateforme qui je
+
+56
+00:02:10,470 --> 00:02:12,210
+le rappelle et tchate c h a
+
+57
+00:02:12,210 --> 00:02:15,150
+t mat homo campe org sur laquelle
+
+58
+00:02:15,150 --> 00:02:16,530
+vous pouvez vous inscrire vous avez un
+
+59
+00:02:16,530 --> 00:02:16,800
+salon
+
+60
+00:02:16,953 --> 00:02:18,960
+qui correspond du coup à la conférence
+
+61
+00:02:19,597 --> 00:02:21,360
+actuellement vous y poser toutes vos questions
+
+62
+00:02:21,720 --> 00:02:22,950
+et si vous souhaitez du coup a
+
+63
+00:02:22,950 --> 00:02:23,640
+par la suite
+
+64
+00:02:24,270 --> 00:02:26,340
+continuer à poser des questions à valentin
+
+65
+00:02:26,340 --> 00:02:28,110
+n'hésitez pas utiliser ce chatte qui sera
+
+66
+00:02:28,110 --> 00:02:29,730
+actif pour toute la journée je vous
+
+67
+00:02:29,730 --> 00:02:31,980
+souhaite à tous une très bonne conférence
+
+68
+00:02:36,930 --> 00:02:40,440
+alors bonjour à tous eux alors
+
+69
+00:02:40,598 --> 00:02:41,700
+d'abord je vais essayer de régler un
+
+70
+00:02:41,790 --> 00:02:44,040
+tout petit problème au niveau de la
+
+71
+00:02:44,040 --> 00:02:46,080
+concurrence puisque à priori il n'apparaît pas
+
+72
+00:02:47,430 --> 00:02:47,970
+donc je vais
+
+73
+00:02:49,320 --> 00:02:51,030
+me permettent de vous le dealer la
+
+74
+00:02:51,180 --> 00:02:52,140
+conférence
+
+75
+00:02:53,220 --> 00:02:53,760
+toc
+
+76
+00:02:56,010 --> 00:02:58,980
+c'est euh les petits oeufs du direct
+
+77
+00:02:58,980 --> 00:02:59,580
+on va dire
+
+78
+00:03:11,160 --> 00:03:12,000
+alors
+
+79
+00:03:20,670 --> 00:03:22,590
+je suis désolé pour ce petit contretemps
+
+80
+00:04:08,640 --> 00:04:09,240
+télécharger
+
+81
+00:04:10,230 --> 00:04:12,210
+alors bonjour à tous donc je me
+
+82
+00:04:12,210 --> 00:04:13,500
+fais longtemps merci ronan de m avoir
+
+83
+00:04:13,500 --> 00:04:15,690
+donné la parole eux pour vous parler
+
+84
+00:04:16,440 --> 00:04:18,779
+deux e ce qui est euh une
+
+85
+00:04:18,779 --> 00:04:20,814
+montée en charge va dire de matthew
+
+86
+00:04:22,079 --> 00:04:24,390
+donc on va parler euh de comment
+
+87
+00:04:24,390 --> 00:04:25,650
+est-ce qu'il est possible de créer une
+
+88
+00:04:25,650 --> 00:04:26,580
+instance maître mot
+
+89
+00:04:27,300 --> 00:04:29,490
+facilement euh montrer quel point c est
+
+90
+00:04:29,493 --> 00:04:31,140
+un logiciel qui est facile à mettre
+
+91
+00:04:31,140 --> 00:04:32,790
+en place et facile à maintenir
+
+92
+00:04:33,625 --> 00:04:36,150
+et deux également euh voir comment est-ce
+
+93
+00:04:36,180 --> 00:04:37,740
+qu'il est possible de monter jusqu à
+
+94
+00:04:38,013 --> 00:04:40,049
+d des décharges que l on a
+
+95
+00:04:40,050 --> 00:04:41,880
+pu rencontrer hier dans la première journée
+
+96
+00:04:41,880 --> 00:04:43,685
+e jusqu à cinquante millions de visites
+
+97
+00:04:43,685 --> 00:04:44,609
+par mois etc etc
+
+98
+00:04:46,260 --> 00:04:48,930
+alors tout d'abord qui suis-je donc euh
+
+99
+00:04:48,960 --> 00:04:50,160
+je m appelle jonathan barré je suis
+
+100
+00:04:50,160 --> 00:04:51,600
+divorcée et une génère chez empreintes digitales
+
+101
+00:04:52,558 --> 00:04:54,450
+on administre le du matou mode depuis
+
+102
+00:04:54,510 --> 00:04:55,260
+un peu plus de deux ans
+
+103
+00:04:56,550 --> 00:05:00,180
+euh on a euh on est parti
+
+104
+00:05:00,180 --> 00:05:01,860
+on va dire euh petit à petit
+
+105
+00:05:01,950 --> 00:05:05,970
+sur ce logiciel par eux par évidemment
+
+106
+00:05:05,970 --> 00:05:08,160
+appétence aux l open source eux et
+
+107
+00:05:08,160 --> 00:05:10,680
+pour offrir du service supplémentaire à nos
+
+108
+00:05:10,680 --> 00:05:10,950
+clients
+
+109
+00:05:11,940 --> 00:05:13,171
+et donc depuis deux ans on a
+
+110
+00:05:13,620 --> 00:05:15,510
+acquis pas mal d'expérience jusqu à eux
+
+111
+00:05:15,510 --> 00:05:17,400
+du coup on va voir atteindre des
+
+112
+00:05:17,490 --> 00:05:19,170
+chiffres on va dire plutôt intéressant sur
+
+113
+00:05:19,170 --> 00:05:20,970
+la gestion des instances matthew
+
+114
+00:05:24,300 --> 00:05:26,640
+euh voilà alors est-ce que je le
+
+115
+00:05:26,640 --> 00:05:28,650
+présente à bah euh pas vraiment on
+
+116
+00:05:28,650 --> 00:05:30,000
+est en mode make-up mais j'avais quand
+
+117
+00:05:30,000 --> 00:05:31,170
+même envie de dire deux trois trucs
+
+118
+00:05:31,890 --> 00:05:34,140
+c'était euh que euh matt mousse et
+
+119
+00:05:34,152 --> 00:05:36,270
+anciennement public euh que ça existe depuis
+
+120
+00:05:36,450 --> 00:05:38,610
+très longtemps e c est un logiciel
+
+121
+00:05:38,640 --> 00:05:40,710
+open source e de mesure de statistiques
+
+122
+00:05:40,710 --> 00:05:42,630
+web successeur de fc visite
+
+123
+00:05:43,410 --> 00:05:45,600
+e est conçu pour être une alternative
+
+124
+00:05:45,630 --> 00:05:47,970
+libre à google analytics sma togo fonctionne
+
+125
+00:05:47,970 --> 00:05:49,548
+sur des savoirs php et mysql
+
+126
+00:05:50,250 --> 00:05:51,722
+et comme le dit très justement hier
+
+127
+00:05:51,722 --> 00:05:54,720
+e ronan euh faut savoir que matt
+
+128
+00:05:54,720 --> 00:05:55,710
+homo c'est ni plus ni moins qu'une
+
+129
+00:05:55,710 --> 00:05:56,850
+base de données avec des données
+
+130
+00:05:57,660 --> 00:05:58,830
+l'on collecte au fur et à mesure
+
+131
+00:05:59,220 --> 00:06:00,180
+et ce qui est intéressant aussi c'est
+
+132
+00:06:00,180 --> 00:06:01,620
+de se dire que matmut est un
+
+133
+00:06:01,621 --> 00:06:03,090
+logiciel qui existe depuis des années des
+
+134
+00:06:03,090 --> 00:06:05,040
+années et que ça repose sur essentiellement
+
+135
+00:06:05,040 --> 00:06:05,490
+de briques
+
+136
+00:06:06,120 --> 00:06:08,250
+le php et une veste masculine
+
+137
+00:06:10,860 --> 00:06:13,500
+donc si seulement deux composants simples œufs
+
+138
+00:06:13,500 --> 00:06:14,880
+qui permet d'avoir un outil aussi puissant
+
+139
+00:06:14,880 --> 00:06:15,390
+que maître mot
+
+140
+00:06:16,170 --> 00:06:18,509
+le php qui va permettre eux de
+
+141
+00:06:18,510 --> 00:06:21,105
+traiter e l information alors évidemment il
+
+142
+00:06:21,105 --> 00:06:22,441
+y a un peu de langage maintenant
+
+143
+00:06:22,946 --> 00:06:24,558
+il y a du fc il y
+
+144
+00:06:24,559 --> 00:06:26,160
+a un peu plus de deux tuning
+
+145
+00:06:26,160 --> 00:06:27,420
+autour de tout ça mais à l'origine
+
+146
+00:06:27,420 --> 00:06:28,950
+il faut savoir que ces romans de
+
+147
+00:06:28,950 --> 00:06:31,500
+technologies les plus simples possibles pour créer
+
+148
+00:06:31,500 --> 00:06:33,750
+des outils analytiques que l'on connaît aujourd'hui
+
+149
+00:06:36,030 --> 00:06:38,793
+euh donc la première approche avec matthew
+
+150
+00:06:39,190 --> 00:06:41,130
+hein tu corriges mes petites images qui
+
+151
+00:06:41,130 --> 00:06:42,840
+fonctionne pas à cause de l du
+
+152
+00:06:42,879 --> 00:06:44,130
+du rendu pdf mais c'est pas grave
+
+153
+00:06:45,630 --> 00:06:46,746
+la première approche avec matthew
+
+154
+00:06:47,760 --> 00:06:51,240
+e t que juste reprendre mes petites
+
+155
+00:06:51,253 --> 00:06:51,750
+notes
+
+156
+00:06:55,952 --> 00:06:56,280
+voilà
+
+157
+00:07:06,090 --> 00:07:07,200
+alors moi j ai envie de vous
+
+158
+00:07:07,200 --> 00:07:09,420
+raconter une histoire dans de la mise
+
+159
+00:07:09,420 --> 00:07:10,410
+en place dans ma to mots comme
+
+160
+00:07:10,410 --> 00:07:12,990
+on pourrait l'entendre aujourd'hui c'est-à-dire que je
+
+161
+00:07:12,990 --> 00:07:14,220
+me place en tant qu'un d'eve alors
+
+162
+00:07:14,220 --> 00:07:15,720
+je suis un je pars de chez
+
+163
+00:07:15,750 --> 00:07:17,159
+moi dire un six obs e avec
+
+164
+00:07:17,160 --> 00:07:18,750
+inhalé transdev mais je me place comme
+
+165
+00:07:18,750 --> 00:07:20,040
+un av j une application je veux
+
+166
+00:07:20,040 --> 00:07:21,660
+tester l'audience google ça me plaît pas
+
+167
+00:07:21,660 --> 00:07:22,560
+trop je sais
+
+168
+00:07:22,620 --> 00:07:24,690
+que il y a quelques problèmes au
+
+169
+00:07:24,690 --> 00:07:26,700
+niveau de la vie privée si on
+
+170
+00:07:26,700 --> 00:07:28,290
+va dire j j r gps etc
+
+171
+00:07:28,950 --> 00:07:30,390
+euh donc je me dis tiens euh
+
+172
+00:07:30,450 --> 00:07:32,400
+stop sur google je tombe facilement sur
+
+173
+00:07:32,400 --> 00:07:33,090
+ma toux maux et je me dis
+
+174
+00:07:33,120 --> 00:07:34,620
+bah ça a l'air de correspondre à
+
+175
+00:07:34,620 --> 00:07:36,840
+mes besoins en plus euh j'ai regardé
+
+176
+00:07:36,840 --> 00:07:38,492
+la liste des intégrations en plein truc
+
+177
+00:07:38,520 --> 00:07:41,160
+intégrer très facilement dans votre prêt ce
+
+178
+00:07:41,430 --> 00:07:42,870
+dont hugo etc il y a plus
+
+179
+00:07:42,870 --> 00:07:44,760
+d'une quarantaine intégration ont été créés par
+
+180
+00:07:44,760 --> 00:07:45,390
+la communauté
+
+181
+00:07:46,199 --> 00:07:47,910
+nous je me dis mais ok parfait
+
+182
+00:07:48,090 --> 00:07:50,280
+je je je je vais mettre une
+
+183
+00:07:50,280 --> 00:07:52,830
+pièce dans dans cette danse être comment
+
+184
+00:07:52,830 --> 00:07:53,512
+dire ce logiciel
+
+185
+00:07:55,530 --> 00:07:57,240
+euh et donc là que je peux
+
+186
+00:07:57,240 --> 00:07:59,220
+voir c'est que euh matt homo ça
+
+187
+00:07:59,220 --> 00:08:00,990
+peut très traqués jusqu à plus de
+
+188
+00:08:00,990 --> 00:08:01,890
+cent mille pages
+
+189
+00:08:02,670 --> 00:08:05,700
+pfiou euh par moi euh avec eux
+
+190
+00:08:06,270 --> 00:08:07,800
+on va dire assez peu de ressources
+
+191
+00:08:07,830 --> 00:08:09,419
+c'est-à-dire de ces pays deux gigas de
+
+192
+00:08:09,420 --> 00:08:10,950
+ram et cinquante gigas de leicester
+
+193
+00:08:12,210 --> 00:08:14,730
+pour le disque e notamment donc ça
+
+194
+00:08:14,730 --> 00:08:16,740
+veut dire que sur mon application e
+
+195
+00:08:16,800 --> 00:08:19,350
+q je mets à disposition pour mon
+
+196
+00:08:19,350 --> 00:08:19,950
+développement
+
+197
+00:08:20,850 --> 00:08:22,351
+qui a pour but de vendre un
+
+198
+00:08:23,109 --> 00:08:24,329
+d'eve ai crée un produit j ai
+
+199
+00:08:24,329 --> 00:08:25,350
+envie de le vendre vide le faire
+
+200
+00:08:25,350 --> 00:08:27,870
+connaître etc euh ai-je envie de voir
+
+201
+00:08:27,870 --> 00:08:29,670
+comment est-ce que les utilisateurs utilisent
+
+202
+00:08:31,170 --> 00:08:32,820
+euh et bah tout simplement je vais
+
+203
+00:08:32,820 --> 00:08:35,640
+pouvoir euh euh traqué on va dire
+
+204
+00:08:35,669 --> 00:08:38,970
+euh liquidateur sur le fonctionnement de mon
+
+205
+00:08:38,970 --> 00:08:40,830
+site web et tout ça sans changer
+
+206
+00:08:40,830 --> 00:08:43,551
+de deux hosting sans rajouter de deux
+
+207
+00:08:43,604 --> 00:08:45,210
+deux cœurs de ces pays parce que
+
+208
+00:08:45,420 --> 00:08:46,530
+j'y ai pris un forfait chez vous
+
+209
+00:08:47,040 --> 00:08:48,780
+chez eux ce qui est louée chez
+
+210
+00:08:48,780 --> 00:08:49,559
+empreintes digitales s
+
+211
+00:08:50,430 --> 00:08:52,440
+euh et euh il est possible du
+
+212
+00:08:52,440 --> 00:08:54,720
+coude à voir euh mon austin à
+
+213
+00:08:54,720 --> 00:08:56,580
+côté euh de maths mot
+
+214
+00:08:58,800 --> 00:08:59,880
+donc c'est facile à installer
+
+215
+00:09:00,600 --> 00:09:02,940
+j'émets intégration facile à maintenir c'est du
+
+216
+00:09:02,970 --> 00:09:04,740
+php avec une base de données
+
+217
+00:09:05,790 --> 00:09:07,770
+il peut y avoir quelques surprises mais
+
+218
+00:09:07,950 --> 00:09:09,240
+globalement toutes les mises à jour se
+
+219
+00:09:09,240 --> 00:09:11,730
+font plutôt bien euh ça correspond à
+
+220
+00:09:11,880 --> 00:09:13,500
+tous mes besoins mon objectif au début
+
+221
+00:09:13,500 --> 00:09:15,240
+c'est d'avoir vraiment mais pfiou savoir combien
+
+222
+00:09:15,240 --> 00:09:18,570
+de personnes accèdent à mon application eux
+
+223
+00:09:18,570 --> 00:09:20,490
+et combien de pages de mon application
+
+224
+00:09:20,550 --> 00:09:23,280
+ont été euh etc et ça fonctionne
+
+225
+00:09:24,540 --> 00:09:26,489
+magiquement c'est-à-dire que une fois qu on
+
+226
+00:09:26,490 --> 00:09:28,080
+a posé le matos mot une fois
+
+227
+00:09:28,080 --> 00:09:29,880
+qu on a mis tracking les données
+
+228
+00:09:29,880 --> 00:09:32,491
+rentrent presque facilement euh dans l application
+
+229
+00:09:32,491 --> 00:09:34,260
+et il est possible en plus de
+
+230
+00:09:34,260 --> 00:09:37,290
+sade les consulter eux aussi facilement
+
+231
+00:09:39,900 --> 00:09:40,470
+donc là
+
+232
+00:09:43,050 --> 00:09:43,980
+l'image vous manque
+
+233
+00:09:44,689 --> 00:09:47,010
+grave euh je vous parle de cent
+
+234
+00:09:47,010 --> 00:09:49,950
+à un million d'utilisateurs mais pour instant
+
+235
+00:09:49,953 --> 00:09:51,630
+tu nous proposes avoir une installation pour
+
+236
+00:09:51,630 --> 00:09:53,010
+quelques heures est-ce que je vous rappelle
+
+237
+00:09:53,010 --> 00:09:53,670
+que ici
+
+238
+00:09:54,810 --> 00:09:55,380
+pardon
+
+239
+00:09:56,034 --> 00:09:58,080
+si euh mon objectif au début c'était
+
+240
+00:09:58,080 --> 00:10:01,260
+euh de de créer mon application e
+
+241
+00:10:01,260 --> 00:10:03,090
+d'avoir du tracking mais je sais que
+
+242
+00:10:03,150 --> 00:10:05,130
+lorsque je lance un business à moins
+
+243
+00:10:05,130 --> 00:10:08,280
+d'avoir été propulsée par des gros je
+
+244
+00:10:08,280 --> 00:10:09,690
+vais avoir que quelques heures
+
+245
+00:10:10,875 --> 00:10:13,635
+bon euh euh comment dire consulter mon
+
+246
+00:10:13,635 --> 00:10:15,075
+application e au début
+
+247
+00:10:15,765 --> 00:10:17,325
+ah donc tu me tues tu nous
+
+248
+00:10:17,325 --> 00:10:19,275
+parles de euh vu j'y ai passé
+
+249
+00:10:19,275 --> 00:10:21,285
+deux cents utilisateurs a plus d'enfants sans
+
+250
+00:10:21,285 --> 00:10:22,215
+view à plus d'un million
+
+251
+00:10:23,115 --> 00:10:25,125
+mais euh comment est-ce qu'on va faire
+
+252
+00:10:25,125 --> 00:10:27,105
+du coup parce que on est sur
+
+253
+00:10:27,165 --> 00:10:29,055
+une installation qui est de ces pays
+
+254
+00:10:29,055 --> 00:10:29,805
+deux gigas de ram
+
+255
+00:10:31,305 --> 00:10:32,415
+et en plus de ça tu nous
+
+256
+00:10:32,419 --> 00:10:34,395
+montres que lyrique vermont ça peut aller
+
+257
+00:10:34,455 --> 00:10:38,175
+que jusqu'à cent mille cent mille pages
+
+258
+00:10:38,175 --> 00:10:38,775
+vues par mois
+
+259
+00:10:40,841 --> 00:10:41,565
+non non je ne suis pas en
+
+260
+00:10:41,565 --> 00:10:43,395
+train de vous vous arnaquer vous inquiétez
+
+261
+00:10:43,395 --> 00:10:43,665
+pas
+
+262
+00:10:44,235 --> 00:10:45,465
+mon application fonctionne bien
+
+263
+00:10:47,265 --> 00:10:48,945
+on veut plus de visiteurs j'ai plus
+
+264
+00:10:48,945 --> 00:10:49,605
+de visiteurs
+
+265
+00:10:50,385 --> 00:10:52,965
+mon business se développe c'est génial je
+
+266
+00:10:52,965 --> 00:10:55,185
+passe de moi tout seul dans mon
+
+267
+00:10:55,185 --> 00:10:58,005
+garage a un peu plus euh dans
+
+268
+00:10:58,035 --> 00:10:59,805
+ma société que j'ai créée dans le
+
+269
+00:10:59,805 --> 00:11:00,945
+but de développer mon produit
+
+270
+00:11:02,145 --> 00:11:03,765
+et donc j'ai une équipe autour de
+
+271
+00:11:03,765 --> 00:11:06,285
+ça euh sur euh dans la société
+
+272
+00:11:06,615 --> 00:11:09,741
+on est maintenant trois quatre dév euh
+
+273
+00:11:10,425 --> 00:11:12,735
+j'ai fait entrer un web analyst dans
+
+274
+00:11:12,795 --> 00:11:15,345
+ma société parce que euh
+
+275
+00:11:16,845 --> 00:11:18,585
+on sait que c est aussi important
+
+276
+00:11:18,585 --> 00:11:21,435
+aujourd'hui de connaître la mesure d'audience notamment
+
+277
+00:11:21,435 --> 00:11:22,921
+sur des produits un an la en
+
+278
+00:11:22,989 --> 00:11:23,655
+hum hum extra
+
+279
+00:11:25,305 --> 00:11:27,255
+et donc du coup euh la hum
+
+280
+00:11:27,269 --> 00:11:28,635
+analyse me dit hola on commence à
+
+281
+00:11:28,635 --> 00:11:30,885
+avoir pas mal de trafic eux mais
+
+282
+00:11:30,885 --> 00:11:31,725
+par contre il y a une latence
+
+283
+00:11:31,725 --> 00:11:34,065
+pour me l'accès mon matos un jour
+
+284
+00:11:34,455 --> 00:11:36,704
+petit aparté je suis par là hum
+
+285
+00:11:36,765 --> 00:11:38,805
+comment dire d'un un retour d'expérience est
+
+286
+00:11:38,806 --> 00:11:39,493
+à peu près ce qu on ait
+
+287
+00:11:39,493 --> 00:11:40,335
+eu à dire que yale
+
+288
+00:11:41,475 --> 00:11:42,345
+plus de deux ans ça fait très
+
+289
+00:11:42,345 --> 00:11:43,455
+longtemps qu'on mutisme tout le mais ça
+
+290
+00:11:43,455 --> 00:11:44,409
+fait plus de deux ans maintenant on
+
+291
+00:11:44,415 --> 00:11:46,605
+essaye de les pros de le promouvoir
+
+292
+00:11:47,619 --> 00:11:48,645
+aussi pour nos clients je veux dire
+
+293
+00:11:49,213 --> 00:11:53,715
+hum hum utiliser eux matmut et on
+
+294
+00:11:53,775 --> 00:11:55,935
+s'est rendu compte que mince
+
+295
+00:11:56,505 --> 00:11:57,975
+l'accès maintenant et les sites web pouvait
+
+296
+00:11:57,975 --> 00:11:59,655
+être un peu plus ralenti de quelques
+
+297
+00:11:59,655 --> 00:12:01,635
+millisecondes mail web analyst nous a dit
+
+298
+00:12:01,635 --> 00:12:03,255
+ouais c'est quand même un peu gênant
+
+299
+00:12:03,315 --> 00:12:05,835
+parce que ça ralentit on va dire
+
+300
+00:12:05,835 --> 00:12:08,312
+presque la stack entière à jus on
+
+301
+00:12:08,312 --> 00:12:09,105
+ont ajouté tracking
+
+302
+00:12:09,915 --> 00:12:13,005
+ah alors là y'a un type assez
+
+303
+00:12:13,185 --> 00:12:15,285
+assez simple pour améliorer l'expérience au niveau
+
+304
+00:12:15,285 --> 00:12:18,225
+de l'accès euh on va dire au
+
+305
+00:12:18,225 --> 00:12:20,625
+tracking et donc l'enregistrement facilité et ont
+
+306
+00:12:20,625 --> 00:12:21,735
+donc on en a parlé hier
+
+307
+00:12:22,785 --> 00:12:24,645
+avec les le les premiers tomes de
+
+308
+00:12:24,645 --> 00:12:26,877
+type country with tips and tricks et
+
+309
+00:12:26,877 --> 00:12:28,905
+puis des globalement toutes les personnes qui
+
+310
+00:12:28,905 --> 00:12:29,805
+parlaient d'infrastructures
+
+311
+00:12:30,435 --> 00:12:32,985
+le must have dans ce cas-là eux
+
+312
+00:12:33,075 --> 00:12:34,629
+et de toute manière quasiment dans toutes
+
+313
+00:12:34,635 --> 00:12:38,325
+les installations maintenant c'est évidemment le cœur
+
+314
+00:12:38,325 --> 00:12:38,835
+de tracking
+
+315
+00:12:39,645 --> 00:12:41,085
+lucky tracking qu est que c'est et
+
+316
+00:12:41,475 --> 00:12:43,635
+eux et bassée la mise en que
+
+317
+00:12:43,695 --> 00:12:48,315
+des statistiques e d d comment dire
+
+318
+00:12:48,315 --> 00:12:49,005
+du code de suivi
+
+319
+00:12:49,635 --> 00:12:52,965
+de l utilisateur dans une kyu donc
+
+320
+00:12:53,025 --> 00:12:54,405
+euh là on parle de reddit ou
+
+321
+00:12:54,405 --> 00:12:54,974
+de masque
+
+322
+00:12:55,995 --> 00:13:00,195
+qui va permettre de mettre en attente
+
+323
+00:13:00,285 --> 00:13:03,195
+eux les enregistrement du du site web
+
+324
+00:13:03,555 --> 00:13:05,325
+et les ingérer fin d un d
+
+325
+00:13:05,352 --> 00:13:08,085
+les faire manger par masculins en lot
+
+326
+00:13:08,145 --> 00:13:10,005
+c'est-à-dire que plutôt que de mettre un
+
+327
+00:13:10,005 --> 00:13:11,115
+parrain au fur et à mesure et
+
+328
+00:13:11,171 --> 00:13:12,855
+avoir un suivi complet
+
+329
+00:13:13,545 --> 00:13:15,494
+de la requête jusqu'à la mise en
+
+330
+00:13:15,495 --> 00:13:17,655
+maisonnée là on va mettre dans une
+
+331
+00:13:17,655 --> 00:13:19,425
+boîte les différentes requêtes et une fois
+
+332
+00:13:19,425 --> 00:13:20,535
+que sa boîte cette boîte est remplie
+
+333
+00:13:20,595 --> 00:13:23,175
+on l'a mis euh dans euh comment
+
+334
+00:13:23,175 --> 00:13:25,454
+dire euh le à
+
+335
+00:13:26,655 --> 00:13:27,975
+le fc de deux maths homo qui
+
+336
+00:13:27,975 --> 00:13:29,085
+veut dire homme à tiens regarde j'ai
+
+337
+00:13:29,085 --> 00:13:30,765
+rempli la boîte est remplie je mette
+
+338
+00:13:31,092 --> 00:13:32,895
+cette boîte-là directement en base de données
+
+339
+00:13:33,345 --> 00:13:35,055
+et ça mine de rien ça améliore
+
+340
+00:13:35,055 --> 00:13:37,245
+grandement les euh comment dire leone
+
+341
+00:13:37,875 --> 00:13:38,715
+les performances
+
+342
+00:13:39,465 --> 00:13:41,835
+euh donc c'est ce que je répète
+
+343
+00:13:41,865 --> 00:13:43,335
+le principe est simple une file d'attente
+
+344
+00:13:43,335 --> 00:13:45,074
+pour enregistrer plus rapidement les accès et
+
+345
+00:13:45,074 --> 00:13:46,485
+réduire la charge en flux tendu plus
+
+346
+00:13:46,485 --> 00:13:48,075
+d'infos je vous ai mis le lien
+
+347
+00:13:48,075 --> 00:13:50,595
+du vieux plug in cute tracking n'hésitez
+
+348
+00:13:50,595 --> 00:13:51,735
+pas à le consulter il est vraiment
+
+349
+00:13:51,735 --> 00:13:53,621
+très intéressant et on a pu le
+
+350
+00:13:53,621 --> 00:13:56,115
+voir au fil des différentes conférences est
+
+351
+00:13:56,145 --> 00:13:56,745
+un must have
+
+352
+00:13:58,725 --> 00:14:03,615
+euh donc c'est super euh le maire
+
+353
+00:14:03,645 --> 00:14:05,355
+jean mots j'essaye de la faire j'espère
+
+354
+00:14:05,355 --> 00:14:07,185
+que ça fonctionnera si c'est pas sinon
+
+355
+00:14:07,965 --> 00:14:09,585
+je le je la passerai est pire
+
+356
+00:14:10,109 --> 00:14:11,115
+et puis c'est pas très grave
+
+357
+00:14:11,895 --> 00:14:14,415
+euh donc c'est super le web analystes
+
+358
+00:14:14,505 --> 00:14:17,285
+disent génial grâce à tes petites optimisations
+
+359
+00:14:17,892 --> 00:14:22,635
+euh tu as pu augmenter le score
+
+360
+00:14:22,935 --> 00:14:24,675
+de d'îlot de la page etc
+
+361
+00:14:25,845 --> 00:14:27,375
+et en plus de ça euh on
+
+362
+00:14:27,375 --> 00:14:28,935
+a pas eu besoin de reprendre un
+
+363
+00:14:28,965 --> 00:14:31,155
+hosting supplémentaire ah mince alors je suis
+
+364
+00:14:31,165 --> 00:14:31,485
+désolé
+
+365
+00:14:32,205 --> 00:14:34,065
+je la laisse
+
+366
+00:14:34,905 --> 00:14:35,955
+le schéma ne fonctionne pas
+
+367
+00:14:36,585 --> 00:14:37,815
+ce barrage vous le faire
+
+368
+00:14:38,865 --> 00:14:39,915
+un tac
+
+369
+00:14:41,715 --> 00:14:42,405
+on va dire qu on a les
+
+370
+00:14:42,405 --> 00:14:43,395
+utilisateurs ici
+
+371
+00:14:45,765 --> 00:14:46,305
+on a
+
+372
+00:14:47,685 --> 00:14:49,005
+ici matt homo
+
+373
+00:14:50,175 --> 00:14:50,625
+tac
+
+374
+00:14:51,225 --> 00:14:52,395
+enfin l'infâme atmo
+
+375
+00:14:55,226 --> 00:14:56,445
+improvise c'est pas grave
+
+376
+00:14:57,435 --> 00:15:00,465
+et donc euh là où avant j'avais
+
+377
+00:15:01,905 --> 00:15:02,895
+mais très schématique
+
+378
+00:15:06,165 --> 00:15:06,645
+hop
+
+379
+00:15:10,635 --> 00:15:11,085
+cinq
+
+380
+00:15:11,625 --> 00:15:13,215
+là où j'ai mon matou mots
+
+381
+00:15:15,135 --> 00:15:16,605
+avec ma base de données
+
+382
+00:15:22,185 --> 00:15:22,815
+j ai pu
+
+383
+00:15:23,745 --> 00:15:25,575
+alors je vais juste faire un petit
+
+384
+00:15:25,575 --> 00:15:26,325
+lien ici
+
+385
+00:15:27,525 --> 00:15:28,005
+toc
+
+386
+00:15:29,175 --> 00:15:30,075
+les rajouter ici
+
+387
+00:15:34,515 --> 00:15:36,345
+ah donc les utilisateurs arrivent sur ma
+
+388
+00:15:36,345 --> 00:15:37,815
+demo et une connexion entre la base
+
+389
+00:15:37,815 --> 00:15:39,615
+de données et math mots on a
+
+390
+00:15:39,615 --> 00:15:41,505
+pu ajouter ici ce qu on appelle
+
+391
+00:15:41,655 --> 00:15:43,965
+le cœur tracking via une base ready
+
+392
+00:15:45,555 --> 00:15:45,915
+hop
+
+393
+00:15:47,535 --> 00:15:49,275
+et donc d'un point de vue infrastructure
+
+394
+00:15:49,635 --> 00:15:50,355
+c'est très simple
+
+395
+00:15:51,105 --> 00:15:53,805
+nous avons l'utilisateur qui y va enregistrer
+
+396
+00:15:54,045 --> 00:15:56,234
+les requêtes dans le matou mots eux
+
+397
+00:15:56,237 --> 00:15:58,035
+et plutôt que de passer de matteo
+
+398
+00:15:58,037 --> 00:15:59,325
+mot à la base de données on
+
+399
+00:15:59,325 --> 00:16:00,765
+va passer par le reddit qui va
+
+400
+00:16:00,765 --> 00:16:02,415
+nous permettre de mettre en tampon l'ensemble
+
+401
+00:16:02,415 --> 00:16:04,905
+de ces requêtes et donc d'éviter de
+
+402
+00:16:04,905 --> 00:16:06,975
+surcharger le php qui utilisé par matt
+
+403
+00:16:06,975 --> 00:16:08,535
+homo et aussi par l'application on peut
+
+404
+00:16:08,535 --> 00:16:10,695
+imaginer sur un wordpress drupal
+
+405
+00:16:11,325 --> 00:16:13,002
+toute application php et donc du couple
+
+406
+00:16:13,035 --> 00:16:14,745
+hf est partagé et donc du coup
+
+407
+00:16:14,745 --> 00:16:16,725
+plutôt que d'ouvrir l'eau le fb de
+
+408
+00:16:16,725 --> 00:16:18,615
+la machine entière donc du petit vps
+
+409
+00:16:18,615 --> 00:16:19,215
+on peut imaginer
+
+410
+00:16:19,785 --> 00:16:20,985
+euh et bah on va
+
+411
+00:16:22,185 --> 00:16:23,823
+juste passer les plats dans ladies hématome
+
+412
+00:16:23,892 --> 00:16:25,095
+va agir
+
+413
+00:16:25,755 --> 00:16:27,705
+on va dire à intervalles presque réguliers
+
+414
+00:16:28,214 --> 00:16:31,635
+pour lancer l'intégration des deux des requêtes
+
+415
+00:16:31,635 --> 00:16:32,295
+dans la base de données
+
+416
+00:16:34,185 --> 00:16:35,625
+donc on a une infrastructure toute simple
+
+417
+00:16:36,345 --> 00:16:38,355
+euh on peut ce qu'elle donc on
+
+418
+00:16:38,355 --> 00:16:41,385
+est passé de quelques utilisateurs à dire
+
+419
+00:16:41,832 --> 00:16:44,655
+on peut peut-être imaginer plusieurs milles utilisateurs
+
+420
+00:16:45,225 --> 00:16:49,605
+euh dans la l'infrastructure sans changer grand-chose
+
+421
+00:16:49,695 --> 00:16:51,645
+le tracking est un atout
+
+422
+00:16:52,185 --> 00:16:54,885
+vraiment important dans euh dans ma thomas
+
+423
+00:16:56,445 --> 00:16:58,245
+euh et ça c'est génial c'est-à-dire que
+
+424
+00:16:58,545 --> 00:17:01,245
+eux même si on a son business
+
+425
+00:17:01,245 --> 00:17:03,525
+qui qui augmentent quand on a de
+
+426
+00:17:03,525 --> 00:17:06,223
+plus en plus de deux d'utilisateur on
+
+427
+00:17:06,223 --> 00:17:08,355
+a un petit plugin installé et c'est
+
+428
+00:17:08,355 --> 00:17:11,234
+parti on peut euh on peut euh
+
+429
+00:17:11,835 --> 00:17:15,435
+retardée e l augmentation de l infrastructure
+
+430
+00:17:17,625 --> 00:17:19,244
+alors la démo
+
+431
+00:17:19,905 --> 00:17:21,105
+j'ai pas le faire on la fera
+
+432
+00:17:21,105 --> 00:17:22,635
+à la fin si j'ai du temps
+
+433
+00:17:23,385 --> 00:17:26,085
+euh pour vous montrer réellement à quel
+
+434
+00:17:26,085 --> 00:17:28,725
+point c'est ah si c'est efficace
+
+435
+00:17:30,705 --> 00:17:33,105
+dans la théorie la démo est étant
+
+436
+00:17:33,105 --> 00:17:33,435
+succès
+
+437
+00:17:34,755 --> 00:17:35,985
+euh et du coup je me pose
+
+438
+00:17:35,985 --> 00:17:37,665
+la question de comment m'assurer du point
+
+439
+00:17:37,665 --> 00:17:39,285
+de rupture évidemment la joui
+
+440
+00:17:39,945 --> 00:17:42,375
+euh le web analyse nous a dit
+
+441
+00:17:42,435 --> 00:17:44,685
+tiens j'aimerais a augmenté
+
+442
+00:17:46,121 --> 00:17:47,985
+le temps de réponse de l'accès à
+
+443
+00:17:47,985 --> 00:17:50,385
+au tracking donc du petit j e
+
+444
+00:17:50,715 --> 00:17:53,085
+vous lors de la petite roquette php
+
+445
+00:17:53,115 --> 00:17:53,685
+etc
+
+446
+00:17:54,345 --> 00:17:55,125
+pour matouba
+
+447
+00:17:56,265 --> 00:17:57,105
+mais y a un autre problème
+
+448
+00:17:57,915 --> 00:18:01,597
+évidemment on retarde le l'augmentation des infrastructures
+
+449
+00:18:01,605 --> 00:18:02,835
+anges mara ne se rappelle un tout
+
+450
+00:18:02,835 --> 00:18:03,795
+à l'heure on était sûr de sep
+
+451
+00:18:03,914 --> 00:18:04,605
+deux gigas de ram
+
+452
+00:18:05,745 --> 00:18:07,815
+cinquante sd allez on se dit on
+
+453
+00:18:07,815 --> 00:18:09,495
+est passé à quatre pays quatre giga
+
+454
+00:18:09,495 --> 00:18:10,995
+de ram super on a pu augmenter
+
+455
+00:18:11,055 --> 00:18:12,285
+encore un peu plus la charge
+
+456
+00:18:13,035 --> 00:18:15,795
+mais euh là je commence à avoir
+
+457
+00:18:15,795 --> 00:18:18,555
+beaucoup de ralentissements sur mon application a
+
+458
+00:18:18,615 --> 00:18:19,993
+autant sms
+
+459
+00:18:21,135 --> 00:18:22,635
+oui mais crée nixon sms un sms
+
+460
+00:18:23,565 --> 00:18:26,535
+que euh pour eux l'intégration des données
+
+461
+00:18:26,535 --> 00:18:27,495
+dans maintenant et en plus de ça
+
+462
+00:18:27,495 --> 00:18:29,775
+j'ai l'impression que des fois euh c'est
+
+463
+00:18:29,775 --> 00:18:32,624
+pas tout à fait représentative de euh
+
+464
+00:18:33,013 --> 00:18:33,855
+de ce qui peut se passer
+
+465
+00:18:35,295 --> 00:18:36,375
+donc comment détecter les problèmes
+
+466
+00:18:37,335 --> 00:18:40,005
+alors évidemment le premier problème qui est
+
+467
+00:18:40,005 --> 00:18:43,515
+assez simple à à à identifier c'est
+
+468
+00:18:43,755 --> 00:18:45,075
+les slots access on a du mal
+
+469
+00:18:45,075 --> 00:18:46,125
+à accéder à l'application
+
+470
+00:18:46,785 --> 00:18:48,945
+plutôt que de l'oder l'application en une
+
+471
+00:18:48,945 --> 00:18:49,941
+seconde
+
+472
+00:18:50,505 --> 00:18:53,565
+allez euh cinq cents millisecondes etc
+
+473
+00:18:54,345 --> 00:18:55,875
+on se retrouve à trois quatre secondes
+
+474
+00:18:56,265 --> 00:18:57,315
+on a des erreurs cinq cent au
+
+475
+00:18:57,315 --> 00:18:58,605
+serveur et en plus on a time
+
+476
+00:18:58,605 --> 00:18:59,922
+out qui a qui apparaissent
+
+477
+00:19:00,945 --> 00:19:03,255
+dans le l dans le vrai dire
+
+478
+00:19:03,255 --> 00:19:07,035
+le veau est dans l'application matthew petit
+
+479
+00:19:07,035 --> 00:19:08,505
+apartheid second petit aparté
+
+480
+00:19:09,225 --> 00:19:11,085
+euh je parle de concepts je parle
+
+481
+00:19:11,085 --> 00:19:11,775
+pas de techno
+
+482
+00:19:12,675 --> 00:19:13,755
+tout ça ça peut être fait en
+
+483
+00:19:13,755 --> 00:19:17,055
+bare metal en conteneur en eux en
+
+484
+00:19:17,055 --> 00:19:19,305
+face sachant que ça évidemment c'est pas
+
+485
+00:19:19,337 --> 00:19:21,015
+vraiment vous qui jérémy on peut se
+
+486
+00:19:21,015 --> 00:19:22,301
+rend compte quand même des petits l'accès
+
+487
+00:19:22,305 --> 00:19:24,285
+c'est des petits time out eux même
+
+488
+00:19:24,285 --> 00:19:26,505
+des erreurs cinq cents adhérents du moniteur
+
+489
+00:19:26,505 --> 00:19:29,445
+unique ça bref je parle de concepts
+
+490
+00:19:29,535 --> 00:19:30,885
+euh et euh y a pas de
+
+491
+00:19:30,885 --> 00:19:32,475
+techno derrière tout ça vous faites
+
+492
+00:19:32,535 --> 00:19:34,035
+comme vous voulez c'est aussi l'avantage de
+
+493
+00:19:34,035 --> 00:19:34,725
+cette application
+
+494
+00:19:35,475 --> 00:19:38,175
+matt sait que c'est du fps donc
+
+495
+00:19:38,175 --> 00:19:40,273
+c'est relativement standard nous vous faites à
+
+496
+00:19:40,275 --> 00:19:40,905
+peu près comme vous voulez
+
+497
+00:19:41,835 --> 00:19:44,745
+euh donc voilà donc comment détecter problème
+
+498
+00:19:44,775 --> 00:19:46,634
+ces petits indicateurs peuvent nous dire ah
+
+499
+00:19:46,635 --> 00:19:48,225
+c'est bizarre ça y est mon bateau
+
+500
+00:19:48,225 --> 00:19:49,035
+mouche impression qu il est un peu
+
+501
+00:19:49,035 --> 00:19:49,515
+surchargé
+
+502
+00:19:50,685 --> 00:19:50,925
+non
+
+503
+00:19:51,495 --> 00:19:52,845
+comment est-ce qu'on peut augmenter la charge
+
+504
+00:19:53,595 --> 00:19:54,915
+donc je dis un petit peu juste
+
+505
+00:19:54,915 --> 00:19:56,175
+avant on peut augmenter le sais-tu on
+
+506
+00:19:56,175 --> 00:19:57,375
+peut augmenter la mémoire et hop ça
+
+507
+00:19:57,375 --> 00:19:59,475
+repart effectivement on peut augmenter le pays
+
+508
+00:19:59,476 --> 00:20:01,245
+on peut augmenter la le le la
+
+509
+00:20:01,245 --> 00:20:02,505
+mémoire et ça repart
+
+510
+00:20:03,195 --> 00:20:05,685
+on va dire presque c'est pas si
+
+511
+00:20:05,685 --> 00:20:09,451
+compliqué de d'augmenter à charge mais on
+
+512
+00:20:09,478 --> 00:20:11,385
+peut pas réellement augmenter un infini c'est-à-dire
+
+513
+00:20:11,385 --> 00:20:12,555
+que un moment
+
+514
+00:20:13,751 --> 00:20:17,320
+pas euh commander des machines avec cent
+
+515
+00:20:17,320 --> 00:20:20,350
+vingt-huit p u e trois terra drame
+
+516
+00:20:20,950 --> 00:20:23,110
+on citera de stockage juste pour le
+
+517
+00:20:23,110 --> 00:20:24,580
+plaisir de nous posions à dire et
+
+518
+00:20:24,580 --> 00:20:26,170
+pour se dire tiens c'est bon je
+
+519
+00:20:26,170 --> 00:20:28,120
+vais gérer mon infrastructure matos non ça
+
+520
+00:20:28,120 --> 00:20:29,260
+ne peut pas marcher comme ça pour
+
+521
+00:20:29,260 --> 00:20:31,900
+quelle raison bah simplement la haute disponibilité
+
+522
+00:20:33,400 --> 00:20:35,886
+notre business on est parti deux un
+
+523
+00:20:35,890 --> 00:20:37,870
+développeur à une équipe de développeurs et
+
+524
+00:20:37,870 --> 00:20:39,790
+maintenant ça y est le que je
+
+525
+00:20:39,790 --> 00:20:41,379
+suis bien entré dans dans le business
+
+526
+00:20:42,309 --> 00:20:43,630
+et pis bah ça fait partie vraiment
+
+527
+00:20:43,630 --> 00:20:47,200
+de de l'identité maintenant euh euh l'analytique
+
+528
+00:20:47,200 --> 00:20:50,290
+ce j'offre du produit a avec des
+
+529
+00:20:50,321 --> 00:20:52,240
+analytics etc donc il faut vraiment que
+
+530
+00:20:52,240 --> 00:20:54,220
+cette infrastructure mat homo soit un point
+
+531
+00:20:54,220 --> 00:20:56,830
+clé eux et une motivation supplémentaire pour
+
+532
+00:20:56,830 --> 00:21:00,850
+l'assurer dans l'infrastructure de mon entreprise et
+
+533
+00:21:00,850 --> 00:21:02,230
+non pour ça il faut évidemment avoir
+
+534
+00:21:02,230 --> 00:21:03,430
+il donna aux disponibilités
+
+535
+00:21:04,450 --> 00:21:06,010
+la haute disponibilité ça passe par quoi
+
+536
+00:21:06,340 --> 00:21:08,980
+bah par plein de choses
+
+537
+00:21:09,700 --> 00:21:10,450
+quoi avoir juste après
+
+538
+00:21:12,040 --> 00:21:14,260
+euh donc est-ce qu'on peut ce qu'elle
+
+539
+00:21:14,320 --> 00:21:14,980
+horizontalement
+
+540
+00:21:15,700 --> 00:21:18,132
+euh je dirai à chaque fois des
+
+541
+00:21:18,159 --> 00:21:20,320
+t-il schéma mais il veut je voulais
+
+542
+00:21:20,320 --> 00:21:23,245
+fournirait après dans une avec eux les
+
+543
+00:21:23,245 --> 00:21:25,210
+lire le pdf mieux gêner
+
+544
+00:21:25,990 --> 00:21:27,580
+et alors est-ce que est-ce que pascal
+
+545
+00:21:27,610 --> 00:21:29,320
+horizontalement dans la haute disponibilité on peut
+
+546
+00:21:29,320 --> 00:21:31,360
+se poser cette question-là est-ce pascal horizontalement
+
+547
+00:21:31,720 --> 00:21:33,580
+oui on peut quel composant la pièce
+
+548
+00:21:33,580 --> 00:21:35,260
+en php le redis la base de
+
+549
+00:21:35,260 --> 00:21:35,560
+données
+
+550
+00:21:36,250 --> 00:21:38,950
+ah évidemment on n'oublie pas last but
+
+551
+00:21:38,950 --> 00:21:40,960
+not least un l b l b
+
+552
+00:21:41,290 --> 00:21:42,760
+pour rappel pour les non techniques ou
+
+553
+00:21:42,760 --> 00:21:45,700
+pour les techniques load balancer donc euh
+
+554
+00:21:45,710 --> 00:21:47,680
+pour gérer la charge sur les différentes
+
+555
+00:21:47,710 --> 00:21:48,490
+applications php
+
+556
+00:21:49,240 --> 00:21:52,660
+euh l'avantage est une application qui eux
+
+557
+00:21:53,089 --> 00:21:55,870
+qui iront php qui est différents composants
+
+558
+00:21:55,870 --> 00:21:57,880
+qui peut fonctionner d'yves de différentes manières
+
+559
+00:21:58,420 --> 00:21:59,860
+euh on l'a vu hier avec les
+
+560
+00:21:59,860 --> 00:22:04,210
+différentes conférences eux notamment avec eux la
+
+561
+00:22:04,210 --> 00:22:06,310
+conférence de nos amis italiens qui était
+
+562
+00:22:06,370 --> 00:22:07,932
+génial je vous invite vous invite vraiment
+
+563
+00:22:07,932 --> 00:22:11,320
+aller l'avoir e s ont séparés vraiment
+
+564
+00:22:11,410 --> 00:22:12,730
+à chaque composante h
+
+565
+00:22:13,300 --> 00:22:16,090
+avec le cron li casque ski et
+
+566
+00:22:16,090 --> 00:22:18,880
+du leurre eux le tracking etc etc
+
+567
+00:22:19,780 --> 00:22:22,150
+donc super on sait que matt homo
+
+568
+00:22:22,150 --> 00:22:22,840
+on peut le ciel
+
+569
+00:22:23,440 --> 00:22:25,360
+c'est une bonne nouvelle c'est-à-dire que à
+
+570
+00:22:25,360 --> 00:22:27,580
+partir de maintenant on est capable de
+
+571
+00:22:28,000 --> 00:22:30,760
+passer d'une petite infrastructure sur un serveur
+
+572
+00:22:31,600 --> 00:22:34,210
+une base donnée à différents serveurs une
+
+573
+00:22:34,210 --> 00:22:36,490
+base ready qui peut être customisé
+
+574
+00:22:37,150 --> 00:22:38,769
+plusieurs bases de données qui permet de
+
+575
+00:22:38,769 --> 00:22:42,130
+faire du riz wright etc bref un
+
+576
+00:22:42,130 --> 00:22:42,640
+plaisir
+
+577
+00:22:44,830 --> 00:22:46,074
+et là on a pas là la
+
+578
+00:22:46,180 --> 00:22:47,740
+l'infrastructure à angers
+
+579
+00:22:48,670 --> 00:22:50,620
+je connais me permets pour le coup
+
+580
+00:22:51,220 --> 00:22:51,970
+euh
+
+581
+00:22:53,110 --> 00:22:55,523
+ajoutez une petite image puisque celle-ci je
+
+582
+00:22:55,540 --> 00:22:56,860
+trouve plutôt intéressante
+
+583
+00:22:59,590 --> 00:23:01,450
+donc je vous demande deux minutes
+
+584
+00:23:04,360 --> 00:23:04,840
+celle-ci
+
+585
+00:23:05,740 --> 00:23:06,280
+brière
+
+586
+00:23:10,210 --> 00:23:13,030
+empêche de gérer l'infrastructure c'est également de
+
+587
+00:23:13,030 --> 00:23:15,160
+connaître les outils pour le mettre cap
+
+588
+00:23:15,192 --> 00:23:16,630
+et donc je peux me permettent de
+
+589
+00:23:16,630 --> 00:23:18,370
+vous offrir la possibilité de voir ce
+
+590
+00:23:18,370 --> 00:23:19,060
+que je voulais vous montrer
+
+591
+00:23:20,020 --> 00:23:21,100
+et donc maintenant on se retrouve avec
+
+592
+00:23:21,100 --> 00:23:22,810
+une infrastructure qui sape qui est plus
+
+593
+00:23:22,810 --> 00:23:24,880
+complexe elle donc ça c'est la mise
+
+594
+00:23:24,880 --> 00:23:25,960
+en image de ce que je vous
+
+595
+00:23:25,960 --> 00:23:27,910
+expliquais juste avant on a les requêtes
+
+596
+00:23:27,910 --> 00:23:29,470
+qui arrivent on a le danseur qui
+
+597
+00:23:29,470 --> 00:23:31,510
+répartis sur les différents mat homo donc
+
+598
+00:23:31,510 --> 00:23:34,000
+ça peut être des foules application
+
+599
+00:23:34,779 --> 00:23:36,190
+ou pas donc comme je disais à
+
+600
+00:23:36,190 --> 00:23:38,890
+l'instant avec différents micros service
+
+601
+00:23:39,460 --> 00:23:42,850
+euh qui utilise un cluster reddit ou
+
+602
+00:23:42,910 --> 00:23:43,570
+un seul noureddine
+
+603
+00:23:44,290 --> 00:23:46,510
+bref y'a plein de solutions et ensuite
+
+604
+00:23:46,510 --> 00:23:47,770
+on a une base de données e
+
+605
+00:23:47,800 --> 00:23:51,400
+majuscule qui est en réplication master master
+
+606
+00:23:51,430 --> 00:23:52,300
+master slave
+
+607
+00:23:52,870 --> 00:23:56,260
+bref après évidemment on a plein d'imagination
+
+608
+00:23:56,260 --> 00:24:01,210
+pour améliorer l'infrastructure évidemment hum c'est aussi
+
+609
+00:24:01,210 --> 00:24:03,910
+limiter parler les euh comment dire aléa
+
+610
+00:24:04,900 --> 00:24:06,310
+l'est les choix qui ont été faits
+
+611
+00:24:06,310 --> 00:24:07,360
+par matthew mots on en parlait hier
+
+612
+00:24:07,360 --> 00:24:08,556
+avec les différentes bases de données qui
+
+613
+00:24:08,560 --> 00:24:11,470
+sont qui aimeraient être intégré dans un
+
+614
+00:24:11,500 --> 00:24:12,040
+matou mot
+
+615
+00:24:12,700 --> 00:24:13,810
+là c'est du maïs que j ai
+
+616
+00:24:13,810 --> 00:24:14,410
+pris évidemment
+
+617
+00:24:16,450 --> 00:24:20,529
+euh succès par rapport à notre petite
+
+618
+00:24:20,529 --> 00:24:22,690
+installation on s'est posé des questions et
+
+619
+00:24:22,690 --> 00:24:24,280
+on naît on s'est rendu compte maintenant
+
+620
+00:24:24,280 --> 00:24:27,190
+qu'il était possible de d'avoir une euh
+
+621
+00:24:27,250 --> 00:24:29,410
+comment dire une une infrastructure matthew mot
+
+622
+00:24:29,950 --> 00:24:33,610
+de production hautement disponible escalade génial on
+
+623
+00:24:33,610 --> 00:24:34,180
+est passé
+
+624
+00:24:34,900 --> 00:24:37,360
+deux cent mille allez à plus de
+
+625
+00:24:37,360 --> 00:24:38,080
+cent millions
+
+626
+00:24:38,890 --> 00:24:39,820
+deux visites par mois
+
+627
+00:24:40,569 --> 00:24:41,499
+c'est pas moi qui le dis c'est
+
+628
+00:24:41,499 --> 00:24:43,090
+évidemment la page de rick berman de
+
+629
+00:24:43,090 --> 00:24:43,540
+maths mots
+
+630
+00:24:44,380 --> 00:24:46,720
+et je schématise un peu parce que
+
+631
+00:24:46,720 --> 00:24:48,010
+en fait une fois qu'on a compris
+
+632
+00:24:48,520 --> 00:24:50,590
+comment exclu il était possible d'ajouter tel
+
+633
+00:24:50,590 --> 00:24:52,930
+ou tel composant de squelettes tel ou
+
+634
+00:24:52,930 --> 00:24:55,900
+tel composant il est facile de par
+
+635
+00:24:55,930 --> 00:24:57,340
+judy facile parce que on va voir
+
+636
+00:24:57,340 --> 00:24:59,800
+qui a des tites e e subtilité
+
+637
+00:24:59,800 --> 00:25:01,960
+mais il est relativement facile de comprendre
+
+638
+00:25:01,960 --> 00:25:04,150
+comment on peut augmenter la charge de
+
+639
+00:25:04,150 --> 00:25:04,390
+son mât
+
+640
+00:25:04,420 --> 00:25:04,690
+thomas
+
+641
+00:25:05,950 --> 00:25:06,640
+et je l j en ai pas
+
+642
+00:25:06,640 --> 00:25:10,060
+parlé mais euh on peut même une
+
+643
+00:25:10,060 --> 00:25:12,130
+fois que on est allé avec l'infrastructure
+
+644
+00:25:12,400 --> 00:25:13,780
+on est à l'aise avec les différents
+
+645
+00:25:13,780 --> 00:25:15,820
+éléments konami au niveau du tracking etc
+
+646
+00:25:16,270 --> 00:25:19,270
+un mètre notre notre petit code javascript
+
+647
+00:25:19,420 --> 00:25:21,819
+sur un cdn pour en plus augmenter
+
+648
+00:25:21,821 --> 00:25:22,630
+la possibilité
+
+649
+00:25:23,380 --> 00:25:27,310
+euh d'accès rapidement aux différents aux différents
+
+650
+00:25:27,310 --> 00:25:31,000
+comment dire fin à différents points du
+
+651
+00:25:31,000 --> 00:25:31,240
+globe
+
+652
+00:25:31,810 --> 00:25:34,125
+euh je les ai pas accès je
+
+653
+00:25:34,125 --> 00:25:35,860
+vous ai pas montré ça évidemment tout
+
+654
+00:25:35,860 --> 00:25:37,450
+ça ça peut se faire dans des
+
+655
+00:25:37,450 --> 00:25:39,610
+clusters bare metal dans des clusters qui
+
+656
+00:25:39,684 --> 00:25:42,430
+bêtises dans des clusters slam
+
+657
+00:25:43,090 --> 00:25:44,200
+je vous laisse je vous rappelle je
+
+658
+00:25:44,200 --> 00:25:45,250
+parle pas de techno je parle de
+
+659
+00:25:45,250 --> 00:25:47,860
+concepts ici on est sur des choses
+
+660
+00:25:47,890 --> 00:25:50,410
+qui nous permettent de comprendre comment il
+
+661
+00:25:50,410 --> 00:25:52,750
+est facile de passer de cent à
+
+662
+00:25:52,750 --> 00:25:54,100
+plusieurs millions d'utilisateurs par mois
+
+663
+00:25:56,770 --> 00:26:00,010
+euh bon un petit euh une petite
+
+664
+00:26:00,010 --> 00:26:01,450
+surprise on a eu dans notre expérience
+
+665
+00:26:01,720 --> 00:26:03,070
+c'est que le web analyse souhaite utiliser
+
+666
+00:26:03,070 --> 00:26:05,020
+un tag manager carl lussier avoir encore
+
+667
+00:26:05,020 --> 00:26:06,490
+plus de moyens d'analyser l'usage du site
+
+668
+00:26:06,520 --> 00:26:06,970
+génial
+
+669
+00:26:07,540 --> 00:26:09,280
+renault vous en parlera tag manager sa
+
+670
+00:26:09,340 --> 00:26:11,260
+superbe tir en un charbonneau et ronan
+
+671
+00:26:11,320 --> 00:26:13,630
+hello je crois bien qu'il y en
+
+672
+00:26:13,630 --> 00:26:15,070
+a qui en parle régulièrement
+
+673
+00:26:15,820 --> 00:26:19,690
+ce sont des supers outils eux mais
+
+674
+00:26:20,860 --> 00:26:22,450
+on s'est rendu compte d'une chose c'est
+
+675
+00:26:22,450 --> 00:26:23,860
+que dans un havre dans un environnement
+
+676
+00:26:23,860 --> 00:26:24,490
+cluster river
+
+677
+00:26:25,226 --> 00:26:26,860
+le thé leucate tag manager
+
+678
+00:26:27,700 --> 00:26:29,560
+n'est pas vraiment prévu pour être pasteurisé
+
+679
+00:26:29,650 --> 00:26:30,850
+alors y a des issues ou sur
+
+680
+00:26:30,850 --> 00:26:32,050
+guy table dans ce sens-là
+
+681
+00:26:33,400 --> 00:26:35,680
+nous dans notre cas euh d'expérience client
+
+682
+00:26:35,680 --> 00:26:37,570
+et de retour d'expérience
+
+683
+00:26:38,320 --> 00:26:40,505
+il a fallu trouver une solution relativement
+
+684
+00:26:40,930 --> 00:26:42,370
+rapidement alors comment est-ce qu'on est rendu
+
+685
+00:26:42,370 --> 00:26:42,580
+compte
+
+686
+00:26:43,450 --> 00:26:44,710
+euh donc quoi quoique est-ce que ça
+
+687
+00:26:44,710 --> 00:26:46,780
+veut dire un agm gens en fait
+
+688
+00:26:46,810 --> 00:26:48,212
+le tag majeur et il peut pas
+
+689
+00:26:48,212 --> 00:26:49,600
+être customisé il peut pas être utilisé
+
+690
+00:26:49,600 --> 00:26:51,563
+sur tous les mois en fait le
+
+691
+00:26:51,563 --> 00:26:52,930
+le tag manager il est généré en
+
+692
+00:26:52,930 --> 00:26:55,690
+local sur une instance du fc ce
+
+693
+00:26:55,690 --> 00:26:56,650
+qui veut dire que ça dépend sur
+
+694
+00:26:56,650 --> 00:26:58,270
+quel worker il est généré lorsque un
+
+695
+00:26:58,270 --> 00:26:59,500
+administrateur utilise la plateforme
+
+696
+00:27:00,100 --> 00:27:03,340
+euh donc tout simplement lorsque une mise
+
+697
+00:27:03,340 --> 00:27:04,690
+à jour du tag manager vite faite
+
+698
+00:27:05,590 --> 00:27:07,090
+bah si y a pas quelque chose
+
+699
+00:27:07,090 --> 00:27:08,170
+qui permet de mettre en lien les
+
+700
+00:27:08,170 --> 00:27:11,020
+différentes euh les différents euh donc là
+
+701
+00:27:11,020 --> 00:27:12,368
+on parle de javascript un les différents
+
+702
+00:27:12,370 --> 00:27:13,000
+javascript
+
+703
+00:27:13,960 --> 00:27:15,490
+pour eux que ce soit commun randy
+
+704
+00:27:15,520 --> 00:27:17,920
+autres les différents marqueurs bas il peut
+
+705
+00:27:17,920 --> 00:27:19,270
+y avoir des incohérences c est-à-dire qu
+
+706
+00:27:19,270 --> 00:27:21,370
+un cli un initiateur va arriver sur
+
+707
+00:27:21,370 --> 00:27:23,170
+une version un du tac majeur alors
+
+708
+00:27:23,170 --> 00:27:24,760
+que l'autre va arriver sur une version
+
+709
+00:27:24,760 --> 00:27:24,940
+deux
+
+710
+00:27:26,350 --> 00:27:28,629
+c'est pas vraiment l'esprit que l'on souhaite
+
+711
+00:27:28,990 --> 00:27:30,925
+avoir et le comportement concept le souhaitent
+
+712
+00:27:30,925 --> 00:27:32,470
+souhaite avoir donc
+
+713
+00:27:33,850 --> 00:27:38,290
+euh pour ça il a fallu euh
+
+714
+00:27:38,890 --> 00:27:40,959
+que euh fin on peut se poser
+
+715
+00:27:40,959 --> 00:27:41,920
+la question de est-ce que ça veut
+
+716
+00:27:41,920 --> 00:27:42,610
+dire que ta queue majeur n est
+
+717
+00:27:42,610 --> 00:27:43,690
+pas une sep sur les plateformes plus
+
+718
+00:27:43,690 --> 00:27:44,620
+complexe avec différentes
+
+719
+00:27:45,550 --> 00:27:46,570
+donc c'est pas ce que je veux
+
+720
+00:27:46,570 --> 00:27:48,070
+dire non non et on peut le
+
+721
+00:27:48,070 --> 00:27:49,390
+faire évidemment mais il y a quelques
+
+722
+00:27:49,390 --> 00:27:50,770
+tristes pour parvenir au résultat attendu
+
+723
+00:27:51,460 --> 00:27:52,720
+euh
+
+724
+00:27:54,640 --> 00:27:57,100
+alors ici je vous parle de ça
+
+725
+00:27:57,520 --> 00:27:58,600
+oops pardon
+
+726
+00:28:02,560 --> 00:28:04,893
+on pourrait utiliser le hum hum hum
+
+727
+00:28:05,068 --> 00:28:07,360
+hum fail système partagé entre les différents
+
+728
+00:28:07,390 --> 00:28:09,700
+marqueurs eux pour avoir exactement le même
+
+729
+00:28:09,700 --> 00:28:11,590
+que lorsque recommandé par maître mot c'est
+
+730
+00:28:11,649 --> 00:28:13,090
+il faut synchroniser lorsque on est dans
+
+731
+00:28:13,090 --> 00:28:15,250
+un environnement cristalliser le config php
+
+732
+00:28:16,000 --> 00:28:19,630
+euh donc ça c'est typiquement euh euh
+
+733
+00:28:19,660 --> 00:28:21,730
+là à dire base de connaissances de
+
+734
+00:28:21,730 --> 00:28:23,320
+configuration de mat mots
+
+735
+00:28:23,860 --> 00:28:25,570
+et applaudit l'ensemble des fichiers et des
+
+736
+00:28:25,570 --> 00:28:27,010
+plugins sur chaque serveur
+
+737
+00:28:28,120 --> 00:28:30,910
+okay donc effectivement il faut visiblement à
+
+738
+00:28:30,910 --> 00:28:31,630
+peu près la même base
+
+739
+00:28:32,950 --> 00:28:35,500
+comment est-ce que on peut s'assurer que
+
+740
+00:28:35,500 --> 00:28:36,490
+en permanence
+
+741
+00:28:37,150 --> 00:28:39,610
+euh jelly le même code etc et
+
+742
+00:28:39,610 --> 00:28:40,960
+en plus de ça sans réduire les
+
+743
+00:28:40,960 --> 00:28:43,540
+perfs euh évitez d'utiliser un effet sous
+
+744
+00:28:43,550 --> 00:28:46,000
+un partage samba afin jus juge j'émets
+
+745
+00:28:46,000 --> 00:28:47,287
+des hypothèses ou un même un s
+
+746
+00:28:47,287 --> 00:28:47,830
+trois etc
+
+747
+00:28:48,640 --> 00:28:50,320
+je veux pas perdre trois performances parce
+
+748
+00:28:50,320 --> 00:28:51,460
+que évidemment on a nos questions les
+
+749
+00:28:51,460 --> 00:28:52,240
+questions inexistant
+
+750
+00:28:55,780 --> 00:28:56,500
+donc du coup
+
+751
+00:28:57,310 --> 00:28:59,560
+euh oh il faut tout synchronisé mais
+
+752
+00:28:59,980 --> 00:29:01,699
+dans la base de maths homos y
+
+753
+00:29:01,699 --> 00:29:02,410
+a aussi le tps
+
+754
+00:29:03,490 --> 00:29:05,141
+et dans le mat c'est là qui
+
+755
+00:29:05,141 --> 00:29:07,390
+a généré le tag manager enfin le
+
+756
+00:29:07,390 --> 00:29:08,980
+le le javascript tag manager
+
+757
+00:29:10,750 --> 00:29:11,580
+et là on se rend compte que
+
+758
+00:29:11,580 --> 00:29:13,540
+euh est-ce que c'est vraiment important de
+
+759
+00:29:13,540 --> 00:29:15,190
+générer le tempo masque qui contient aussi
+
+760
+00:29:15,190 --> 00:29:17,200
+des plein de choses euh du cage
+
+761
+00:29:17,200 --> 00:29:19,510
+etc euh est-ce que ça peut ça
+
+762
+00:29:19,538 --> 00:29:20,559
+c'est fin ça veut dire que c'est
+
+763
+00:29:20,560 --> 00:29:22,848
+un hum comment dire un dossier qui
+
+764
+00:29:22,848 --> 00:29:26,440
+est très régulièrement écrit euh avec euh
+
+765
+00:29:26,560 --> 00:29:28,450
+potentiellement beaucoup d'accès etc donc si on
+
+766
+00:29:28,450 --> 00:29:29,830
+met un par un fail système
+
+767
+00:29:29,860 --> 00:29:31,390
+partager il faut que ces failles systèmes
+
+768
+00:29:31,390 --> 00:29:34,060
+partagés y soit très performant
+
+769
+00:29:35,260 --> 00:29:37,660
+et donc là pareil pour eux pour
+
+770
+00:29:37,660 --> 00:29:39,460
+faire refaire la bleue petit aparté je
+
+771
+00:29:39,460 --> 00:29:41,470
+parle de concepts euh et euh je
+
+772
+00:29:41,470 --> 00:29:43,720
+me dis euh bah moi au début
+
+773
+00:29:43,810 --> 00:29:45,340
+j'ai pas envie de dépenser des milles
+
+774
+00:29:45,340 --> 00:29:47,021
+et descendent en effet système hyper et
+
+775
+00:29:47,073 --> 00:29:48,340
+complexe etc pour que ça fonctionne
+
+776
+00:29:49,060 --> 00:29:51,220
+euh donc qu'est-ce que je peux faire
+
+777
+00:29:51,910 --> 00:29:52,360
+alors là
+
+778
+00:29:53,710 --> 00:29:54,490
+je vais vous le faire
+
+779
+00:29:56,170 --> 00:29:57,280
+qu'est ce que je peux faire
+
+780
+00:29:59,620 --> 00:30:00,970
+je jugeais pas de solution mon tag
+
+781
+00:30:00,970 --> 00:30:02,920
+manager il génère un côté euh et
+
+782
+00:30:02,920 --> 00:30:03,760
+si je veux le mettre à jour
+
+783
+00:30:03,760 --> 00:30:05,017
+il faut que j'aille sur les machines
+
+784
+00:30:05,290 --> 00:30:06,909
+que je le copie fin je sais
+
+785
+00:30:06,910 --> 00:30:07,360
+pas quoi faire
+
+786
+00:30:08,170 --> 00:30:09,730
+arnaud la solution qu'on a trouvé en
+
+787
+00:30:09,730 --> 00:30:12,519
+tous cas dans l'urgence euh fin agencement
+
+788
+00:30:12,520 --> 00:30:14,650
+pas de vengeance mais dans dans notre
+
+789
+00:30:14,740 --> 00:30:18,070
+cas on avait c'était d'utiliser e sing
+
+790
+00:30:18,070 --> 00:30:19,450
+sing sing sing j'sais pas si vous
+
+791
+00:30:19,450 --> 00:30:20,499
+savez ce que c'est mais ça a
+
+792
+00:30:20,499 --> 00:30:22,390
+un petit outil qui permet de le
+
+793
+00:30:22,390 --> 00:30:25,360
+synchroniser différents répertoires et en plus de
+
+794
+00:30:25,360 --> 00:30:27,100
+ça il y a une gestion de
+
+795
+00:30:27,106 --> 00:30:28,150
+des différentes vues
+
+796
+00:30:28,625 --> 00:30:30,035
+nom de fichier qui ont été synchronisées
+
+797
+00:30:30,725 --> 00:30:33,185
+c'est pas euh du live c'est synchrones
+
+798
+00:30:33,185 --> 00:30:34,894
+mais attention pas de dents synchrone à
+
+799
+00:30:34,894 --> 00:30:38,675
+quelques millisecondes et surtout ça permet d'éviter
+
+800
+00:30:40,234 --> 00:30:43,323
+d'avoir des locks e ou un a
+
+801
+00:30:43,353 --> 00:30:45,365
+fallu système qui soit dépendant d'une autre
+
+802
+00:30:45,365 --> 00:30:45,815
+machine
+
+803
+00:30:46,805 --> 00:30:48,155
+et en plus de ça d'éviter des
+
+804
+00:30:48,155 --> 00:30:49,415
+accès concurrents au niveau fait système
+
+805
+00:30:49,985 --> 00:30:52,715
+bref on a synchronisé tags génial c'est-à-dire
+
+806
+00:30:52,715 --> 00:30:56,044
+que on a noté tag manager qui
+
+807
+00:30:56,045 --> 00:30:57,695
+est maintenant disponible sur l'ensemble de nos
+
+808
+00:30:57,695 --> 00:31:01,235
+marqueurs et qui permettent qui permet e
+
+809
+00:31:01,415 --> 00:31:03,575
+web analyste e de ski scolaire sur
+
+810
+00:31:03,575 --> 00:31:05,945
+la plateforme de s'occuper de créer les
+
+811
+00:31:05,945 --> 00:31:08,465
+différents tags etc et de les mettre
+
+812
+00:31:08,465 --> 00:31:09,695
+en production instantanément
+
+813
+00:31:11,405 --> 00:31:13,355
+alors évidemment je vous parle de note
+
+814
+00:31:13,355 --> 00:31:15,756
+qu'à sa règle on utilise ainsi y
+
+815
+00:31:15,756 --> 00:31:20,195
+a plein d'autres solutions e libre à
+
+816
+00:31:20,195 --> 00:31:21,698
+vous de faire comme vous voulez j
+
+817
+00:31:21,706 --> 00:31:24,125
+je trouvais intéressant de de parler de
+
+818
+00:31:24,125 --> 00:31:26,075
+ce petit cas-là du tag manager qui
+
+819
+00:31:26,405 --> 00:31:28,985
+eux maintenant est presque
+
+820
+00:31:29,795 --> 00:31:32,015
+un incontournable de l utilisation de maths
+
+821
+00:31:32,015 --> 00:31:33,035
+homo et qui du coup nous a
+
+822
+00:31:33,035 --> 00:31:35,794
+posé quelques problèmes dans notre administration de
+
+823
+00:31:35,794 --> 00:31:36,095
+maîtres mots
+
+824
+00:31:38,285 --> 00:31:39,965
+alors faisons un point stop
+
+825
+00:31:41,225 --> 00:31:42,575
+je vous rappelle qu'au début on avait
+
+826
+00:31:42,575 --> 00:31:44,285
+notre petit d'eve qui était tout seul
+
+827
+00:31:44,285 --> 00:31:46,175
+sur son projet qui a commencé à
+
+828
+00:31:46,175 --> 00:31:48,781
+avoir son business euh qui qui a
+
+829
+00:31:48,875 --> 00:31:49,565
+qui a augmenté
+
+830
+00:31:50,495 --> 00:31:54,065
+et du coup euh il a engagé
+
+831
+00:31:54,065 --> 00:31:55,535
+du monde il engage des admins il
+
+832
+00:31:55,535 --> 00:31:57,185
+a engagé des débats bref maintenant c'est
+
+833
+00:31:57,185 --> 00:31:59,795
+bon c'est une city une société qui
+
+834
+00:31:59,795 --> 00:32:01,535
+est qui qui est bien huilée qui
+
+835
+00:32:01,535 --> 00:32:04,235
+est qui utilisent eux matthew homo hâte
+
+836
+00:32:04,235 --> 00:32:05,255
+skate etc
+
+837
+00:32:06,425 --> 00:32:06,965
+et tout ça
+
+838
+00:32:08,045 --> 00:32:09,275
+je lui ai pas dit mais évidemment
+
+839
+00:32:09,305 --> 00:32:10,775
+ce sont des maintenances qui peuvent être
+
+840
+00:32:10,805 --> 00:32:13,505
+faites quasiment sans doute team je rappelle
+
+841
+00:32:13,505 --> 00:32:15,065
+qu une base de données il est
+
+842
+00:32:15,065 --> 00:32:16,415
+possible de la mettre en application
+
+843
+00:32:17,675 --> 00:32:18,905
+facilement il est possible
+
+844
+00:32:19,625 --> 00:32:21,095
+de créer un nouveau voir qu'hier à
+
+845
+00:32:21,180 --> 00:32:23,408
+matt homo de mettre en front un
+
+846
+00:32:23,465 --> 00:32:25,625
+load balancer donc du coup le temps
+
+847
+00:32:25,625 --> 00:32:27,425
+de d'arrêter un matou mots sur un
+
+848
+00:32:27,635 --> 00:32:29,074
+sur notre petit ne c c p
+
+849
+00:32:29,135 --> 00:32:30,305
+de ces pays deux gigas de ram
+
+850
+00:32:30,605 --> 00:32:32,405
+euh je redirige le trafic
+
+851
+00:32:33,815 --> 00:32:35,884
+on a réussi à et l'ensemble de
+
+852
+00:32:35,884 --> 00:32:37,865
+l'application de passer de cent utilisateurs à
+
+853
+00:32:37,865 --> 00:32:40,235
+plus d'un million presque sans coupures en
+
+854
+00:32:40,235 --> 00:32:42,215
+se posant les bonnes questions en ayant
+
+855
+00:32:42,275 --> 00:32:44,251
+eu un peu de retours d'expérience en
+
+856
+00:32:44,345 --> 00:32:46,655
+rendons compte que finalement l'application matteo été
+
+857
+00:32:46,655 --> 00:32:48,244
+suffisamment bien faite pour pouvoir la skill
+
+858
+00:32:48,244 --> 00:32:48,875
+horizontalement
+
+859
+00:32:49,955 --> 00:32:50,974
+et surtout en ajoutant le cœur de
+
+860
+00:32:50,974 --> 00:32:53,165
+tracking qui lui est un composant très
+
+861
+00:32:53,165 --> 00:32:54,785
+important au niveau de la performance mais
+
+862
+00:32:54,785 --> 00:32:57,215
+aussi au niveau des maintenances euh j'en
+
+863
+00:32:57,217 --> 00:32:58,328
+ai pas parler évidemment mais le cœur
+
+864
+00:32:58,368 --> 00:33:01,475
+trekking lui permet également lors de maintenance
+
+865
+00:33:02,565 --> 00:33:05,040
+de continuer de récupérer les données donc
+
+866
+00:33:05,040 --> 00:33:06,948
+ils veulent aller magasiner les emmagasiner les
+
+867
+00:33:06,965 --> 00:33:08,795
+emmagasiner et une fois que la maintenance
+
+868
+00:33:08,795 --> 00:33:09,215
+est terminée
+
+869
+00:33:10,205 --> 00:33:11,855
+yves allait prendre les envoyer dans la
+
+870
+00:33:11,855 --> 00:33:13,625
+base de données et il va reprendre
+
+871
+00:33:13,625 --> 00:33:14,735
+le cours de sa vie à dire
+
+872
+00:33:15,065 --> 00:33:17,074
+à stocker les requêtes au fur et
+
+873
+00:33:17,074 --> 00:33:17,345
+à mesure
+
+874
+00:33:19,955 --> 00:33:22,385
+donc super mais finalement résumé qu est
+
+875
+00:33:22,385 --> 00:33:23,644
+ce qu on a vu elle en
+
+876
+00:33:23,644 --> 00:33:27,036
+résumé on a vu que euh le
+
+877
+00:33:27,036 --> 00:33:28,415
+quai tracking c'est un must have
+
+878
+00:33:29,135 --> 00:33:30,905
+alors euh je vais répondre à des
+
+879
+00:33:30,905 --> 00:33:32,045
+questions après mais j'en ai vu une
+
+880
+00:33:32,045 --> 00:33:34,265
+toute petite de ronan qui parlait du
+
+881
+00:33:34,265 --> 00:33:35,315
+fait que matteo est-ce que c est
+
+882
+00:33:35,317 --> 00:33:36,665
+important même sur les petites d'instance
+
+883
+00:33:37,445 --> 00:33:39,665
+pour moi oui c'est très important euh
+
+884
+00:33:39,755 --> 00:33:41,735
+parce que ça améliore beaucoup beaucoup de
+
+885
+00:33:41,735 --> 00:33:43,715
+choses euh et ça permet d'absorber les
+
+886
+00:33:43,715 --> 00:33:45,815
+pics de trafic est-ce qu'on peut fiscale
+
+887
+00:33:45,815 --> 00:33:47,885
+facilement oui on peut skier facilement on
+
+888
+00:33:47,885 --> 00:33:48,305
+l'a vu
+
+889
+00:33:50,105 --> 00:33:52,354
+dans les concepts c'est assez facile y
+
+890
+00:33:52,354 --> 00:33:53,525
+a même des petites astuces pour le
+
+891
+00:33:53,525 --> 00:33:54,815
+tag manager lorsque on a des problèmes
+
+892
+00:33:55,115 --> 00:33:57,575
+évidemment euh y a dit il y
+
+893
+00:33:57,575 --> 00:33:58,745
+a toujours quelques soucis
+
+894
+00:33:59,375 --> 00:34:01,625
+euh sur euh sur la montée en
+
+895
+00:34:01,625 --> 00:34:04,295
+charge ça on est bien d'accord euh
+
+896
+00:34:04,325 --> 00:34:05,404
+je vous invite à aller voir lier
+
+897
+00:34:05,735 --> 00:34:09,275
+des conférences de dh hier euh y
+
+898
+00:34:09,275 --> 00:34:10,893
+en a eu plusieurs qui parlait de
+
+899
+00:34:10,895 --> 00:34:14,056
+ses petits problèmes on va dire euh
+
+900
+00:34:14,178 --> 00:34:15,665
+euh vraiment euh ils ont fait des
+
+901
+00:34:15,665 --> 00:34:18,574
+retours défense hyper enrichissant aussi sur l'administration
+
+902
+00:34:18,574 --> 00:34:19,498
+et le skate de deux
+
+903
+00:34:19,505 --> 00:34:19,844
+matteo
+
+904
+00:34:20,705 --> 00:34:21,995
+euh donc voilà
+
+905
+00:34:24,185 --> 00:34:24,574
+afp
+
+906
+00:34:25,625 --> 00:34:27,617
+ah mince là la je vais je
+
+907
+00:34:27,635 --> 00:34:29,429
+me permettre de vous montrer quand même
+
+908
+00:34:29,495 --> 00:34:31,475
+la slide par là la petite et
+
+909
+00:34:32,195 --> 00:34:34,295
+la petite photo parce que euh
+
+910
+00:34:35,375 --> 00:34:36,005
+normalement
+
+911
+00:34:37,505 --> 00:34:40,054
+j'ai une petite image qui s'affiche
+
+912
+00:34:42,125 --> 00:34:43,054
+pas là
+
+913
+00:34:47,405 --> 00:34:49,565
+up donc on est avc avait en
+
+914
+00:34:49,565 --> 00:34:51,875
+résumé on peut passer de quelques centaines
+
+915
+00:34:51,875 --> 00:34:53,375
+d'utilisateurs par mois à plus de cinq
+
+916
+00:34:53,375 --> 00:34:55,771
+millions dix-sept heures donc ça c'est euh
+
+917
+00:34:56,945 --> 00:34:59,705
+c'est vraiment euh un cas concret hein
+
+918
+00:34:59,765 --> 00:35:02,105
+donc euh c'est euh c'est grâce à
+
+919
+00:35:02,105 --> 00:35:03,695
+notre expérience de montée en charge etc
+
+920
+00:35:03,771 --> 00:35:05,105
+on en arrive à ce résultat là
+
+921
+00:35:05,555 --> 00:35:07,805
+donc on on atteint euh alors là
+
+922
+00:35:07,805 --> 00:35:08,615
+c'est sur un mois
+
+923
+00:35:09,905 --> 00:35:11,645
+un mois plus de cinq millions de
+
+924
+00:35:11,645 --> 00:35:13,505
+visites plus de cent millions de pages
+
+925
+00:35:13,505 --> 00:35:14,915
+vues plus de cent trente et un
+
+926
+00:35:14,915 --> 00:35:16,895
+millions d'actions donc évidemment si vous êtes
+
+927
+00:35:16,895 --> 00:35:18,785
+pas forcément familles avec matos à tête
+
+928
+00:35:18,787 --> 00:35:21,455
+pas trop parler mais ce sont des
+
+929
+00:35:21,455 --> 00:35:22,685
+chiffres qui sont quand même assez impressionnant
+
+930
+00:35:22,745 --> 00:35:24,455
+et dans le dos sur lequel on
+
+931
+00:35:24,455 --> 00:35:26,285
+est euh on est plutôt satisfait nous
+
+932
+00:35:26,285 --> 00:35:27,965
+dans au sein de l'équipe empreintes digitales
+
+933
+00:35:27,965 --> 00:35:29,285
+sur im sûr
+
+934
+00:35:29,375 --> 00:35:30,965
+notre usage et une autre en charge
+
+935
+00:35:30,965 --> 00:35:31,445
+avec maintenant
+
+936
+00:35:32,195 --> 00:35:33,485
+euh voilà
+
+937
+00:35:34,832 --> 00:35:36,974
+hop je reprends est-ce qu on a
+
+938
+00:35:37,042 --> 00:35:38,855
+vous dit maille masculin on a parlé
+
+939
+00:35:38,855 --> 00:35:40,115
+de la montée en charge des concepts
+
+940
+00:35:40,115 --> 00:35:41,915
+etc deux du fait que on était
+
+941
+00:35:41,915 --> 00:35:43,625
+pas vraiment dépendant une techno juste de
+
+942
+00:35:43,892 --> 00:35:46,055
+de la du fonctionnement de l'architecture
+
+943
+00:35:47,285 --> 00:35:48,875
+bah on a pas tout à fait
+
+944
+00:35:48,875 --> 00:35:50,345
+tout dit c'est-à-dire que on a encore
+
+945
+00:35:50,345 --> 00:35:53,315
+quelques petits problèmes qui peuvent subvenir eux
+
+946
+00:35:53,375 --> 00:35:55,745
+et ça c'est euh dans la génération
+
+947
+00:35:55,745 --> 00:36:00,424
+des rapports euh y'a un des vins
+
+948
+00:36:00,455 --> 00:36:02,105
+nous on rencontre encore quelques soucis sur
+
+949
+00:36:02,105 --> 00:36:04,595
+ça certains clients la génération des rapports
+
+950
+00:36:04,595 --> 00:36:05,765
+prend énormément de temps
+
+951
+00:36:06,395 --> 00:36:08,585
+euh c'est ces rapports là sont faits
+
+952
+00:36:08,585 --> 00:36:10,475
+eux sont générés par le cnes etc
+
+953
+00:36:10,475 --> 00:36:12,695
+donc un quartz optimisations à faire là
+
+954
+00:36:12,695 --> 00:36:15,515
+il faut pas oublier que l hiver
+
+955
+00:36:15,725 --> 00:36:16,745
+important d'augmenter
+
+956
+00:36:17,405 --> 00:36:19,655
+au-delà même de l'application e matthew mots
+
+957
+00:36:19,715 --> 00:36:21,515
+et les applications sur lequel repose notamment
+
+958
+00:36:21,610 --> 00:36:23,795
+que netanyahu de pnjs annick du proxy
+
+959
+00:36:23,795 --> 00:36:27,395
+etc pour éviter que lorsque des génération
+
+960
+00:36:27,395 --> 00:36:30,515
+de rapports notamment le fc soit euh
+
+961
+00:36:30,935 --> 00:36:33,478
+comment dire euh soit eux qui lie
+
+962
+00:36:33,478 --> 00:36:33,905
+on va dire
+
+963
+00:36:35,495 --> 00:36:36,755
+euh y a des optimisations de la
+
+964
+00:36:36,755 --> 00:36:37,714
+base de données à faire et l
+
+965
+00:36:37,714 --> 00:36:40,445
+optimisation du cœur de tracking euh alors
+
+966
+00:36:40,445 --> 00:36:42,185
+je parle de l'optimisation du kit tracking
+
+967
+00:36:42,245 --> 00:36:46,503
+eux parce que on on avait on
+
+968
+00:36:46,503 --> 00:36:47,735
+va dire un peu de mal à
+
+969
+00:36:47,735 --> 00:36:49,836
+monter euh en charge lorsqu on a
+
+970
+00:36:49,836 --> 00:36:51,545
+eu un pic un moment c'est-à-dire que
+
+971
+00:36:51,545 --> 00:36:53,285
+le cœur de tracking fonctionner correctement mais
+
+972
+00:36:53,315 --> 00:36:54,635
+on avait pas de vue dans le
+
+973
+00:36:54,635 --> 00:36:55,235
+fameux riel
+
+974
+00:36:55,295 --> 00:36:56,705
+tim je sais pas
+
+975
+00:36:56,735 --> 00:36:58,535
+le real time dans leurs maîtres mots
+
+976
+00:37:00,338 --> 00:37:02,045
+y a euh y a un petit
+
+977
+00:37:02,045 --> 00:37:04,774
+réal time qui permet de le savoir
+
+978
+00:37:04,775 --> 00:37:07,565
+euh le nombre d'utilisateurs qui sont actuellement
+
+979
+00:37:07,565 --> 00:37:09,905
+euh euh comment dire sur la plateforme
+
+980
+00:37:10,865 --> 00:37:12,155
+et en fait il apparaît était toujours
+
+981
+00:37:12,155 --> 00:37:12,545
+à zéro
+
+982
+00:37:13,475 --> 00:37:14,735
+et c'est parce que le cœur tracking
+
+983
+00:37:14,765 --> 00:37:17,045
+augmenter à augmenter augmenter augmenter jusqu'à ce
+
+984
+00:37:17,045 --> 00:37:20,705
+que le fc ne puisse pu prendre
+
+985
+00:37:20,705 --> 00:37:22,115
+les différents lots et l'envoyer dans la
+
+986
+00:37:22,115 --> 00:37:24,065
+maisonnée est donc en optimisant un petit
+
+987
+00:37:24,065 --> 00:37:26,135
+peu on a pu réussir à atteindre
+
+988
+00:37:27,125 --> 00:37:29,345
+donc plus de neuf mille requêtes sur
+
+989
+00:37:29,345 --> 00:37:30,875
+les trois dernières minutes donc dans le
+
+990
+00:37:30,935 --> 00:37:32,645
+décompte évitant en temps réel vous irez
+
+991
+00:37:32,645 --> 00:37:35,463
+voir plus de neuf mille e e
+
+992
+00:37:35,525 --> 00:37:37,115
+utilisateur en temps réel sur la plateforme
+
+993
+00:37:37,175 --> 00:37:39,725
+et pour notre plus grand bonheur et
+
+994
+00:37:39,725 --> 00:37:42,095
+comme disait notre ami hier italien une
+
+995
+00:37:42,095 --> 00:37:43,984
+nuit il t'a regardé ce ce petit
+
+996
+00:37:44,705 --> 00:37:46,175
+décompte en temps réel à moi j'étais
+
+997
+00:37:46,175 --> 00:37:46,865
+pareil pour vérif
+
+998
+00:37:46,865 --> 00:37:47,945
+chic tout fonctionnait correctement
+
+999
+00:37:49,521 --> 00:37:52,204
+voilà j'ai fini j'espère que ça a
+
+1000
+00:37:52,204 --> 00:37:55,085
+été instructif j'espère que ça a été
+
+1001
+00:37:55,625 --> 00:37:56,934
+euh on va dire euh
+
+1002
+00:37:58,175 --> 00:38:01,085
+pas trop euh pas trop compliqué niveau
+
+1003
+00:38:01,085 --> 00:38:04,265
+e niveau euh comment dire ce concept
+
+1004
+00:38:04,265 --> 00:38:06,485
+d'administration externe but était de voir des
+
+1005
+00:38:06,485 --> 00:38:07,185
+concepts généraux
+
+1006
+00:38:07,745 --> 00:38:09,425
+pour vous expliquer que finalement le la
+
+1007
+00:38:09,455 --> 00:38:12,665
+pièce maintenant été était suffisamment bien faite
+
+1008
+00:38:12,665 --> 00:38:14,345
+pour pouvoir la scanner et que on
+
+1009
+00:38:14,345 --> 00:38:16,265
+avait peu de limite à à monter
+
+1010
+00:38:16,265 --> 00:38:17,855
+en charge avec application finalement
+
+1011
+00:38:18,725 --> 00:38:20,945
+voilà donc maintenant
+
+1012
+00:38:21,695 --> 00:38:24,215
+je me permets d'aller dans le tchate
+
+1013
+00:38:24,365 --> 00:38:27,185
+eux pour consulter les différentes questions
+
+1014
+00:38:28,355 --> 00:38:31,865
+euh dos alors ronan qui nous demande
+
+1015
+00:38:31,865 --> 00:38:34,117
+de mettre doit-on mettre le cute tracking
+
+1016
+00:38:34,117 --> 00:38:35,495
+même service des infrastructures au cas où
+
+1017
+00:38:35,495 --> 00:38:36,545
+on aurait un pic de trafic
+
+1018
+00:38:37,295 --> 00:38:40,835
+euh effectivement euh le de tracking euh
+
+1019
+00:38:40,865 --> 00:38:42,545
+moi je le recommande de facto sur
+
+1020
+00:38:42,545 --> 00:38:45,065
+n'importe quel type d'installation parce que euh
+
+1021
+00:38:45,095 --> 00:38:47,448
+il est euh il est important de
+
+1022
+00:38:47,465 --> 00:38:48,875
+de de pouvoir absorber ces qui de
+
+1023
+00:38:48,875 --> 00:38:50,975
+ces petits pics de trafic et si
+
+1024
+00:38:50,975 --> 00:38:51,755
+en plus de ça on a une
+
+1025
+00:38:51,755 --> 00:38:54,605
+application alors si on on a notre
+
+1026
+00:38:54,875 --> 00:38:57,275
+matou mots avec notre application php
+
+1027
+00:38:57,635 --> 00:39:00,154
+e le a comment dire le cœur
+
+1028
+00:39:00,155 --> 00:39:02,099
+tracking va nous permettre d'éviter de de
+
+1029
+00:39:02,374 --> 00:39:03,665
+de surcharger l'ensemble de la machine
+
+1030
+00:39:04,625 --> 00:39:05,555
+donc je pense qu effectivement
+
+1031
+00:39:06,215 --> 00:39:08,585
+euh c'est important de mettre sachant que
+
+1032
+00:39:08,585 --> 00:39:09,515
+on est pas obligé de mettre durer
+
+1033
+00:39:09,515 --> 00:39:10,955
+dix avec le cœur tracking même si
+
+1034
+00:39:10,955 --> 00:39:13,835
+c'est euh je pense pas trop consommateurs
+
+1035
+00:39:14,225 --> 00:39:16,115
+eux de mettre du ready on peut
+
+1036
+00:39:16,115 --> 00:39:18,455
+utiliser le tracking dans euh dans ma
+
+1037
+00:39:18,575 --> 00:39:19,205
+q indirectement
+
+1038
+00:39:20,825 --> 00:39:23,015
+avez-vous dû faire des certaines modifications de
+
+1039
+00:39:23,015 --> 00:39:25,414
+alexandre girelles d'un free config pour améliorer
+
+1040
+00:39:25,415 --> 00:39:25,985
+l'archivage
+
+1041
+00:39:26,795 --> 00:39:31,205
+euh alors on art on on a
+
+1042
+00:39:31,625 --> 00:39:33,935
+essayé de faire quelques-uns quelques modifications au
+
+1043
+00:39:33,935 --> 00:39:35,975
+niveau de l infra eux pour gérer
+
+1044
+00:39:35,975 --> 00:39:39,575
+l'archivage notamment à eux le comment dire
+
+1045
+00:39:39,575 --> 00:39:41,885
+les œufs comment les les limites au
+
+1046
+00:39:41,885 --> 00:39:42,965
+niveau du péage etc
+
+1047
+00:39:43,535 --> 00:39:45,214
+e é e ele é e
+
+1048
+00:39:45,665 --> 00:39:47,048
+les limites au niveau e
+
+1049
+00:39:48,372 --> 00:39:50,345
+la mémoire et du max max dingue
+
+1050
+00:39:50,495 --> 00:39:52,835
+parce que effectivement générer des oeufs là
+
+1051
+00:39:52,835 --> 00:39:53,945
+on a eu des cas où la
+
+1052
+00:39:53,945 --> 00:39:55,805
+génération se faisaient sur eux plus d'une
+
+1053
+00:39:55,805 --> 00:39:56,105
+heure
+
+1054
+00:39:56,735 --> 00:39:58,025
+donc il a fallu un petit peu
+
+1055
+00:39:58,025 --> 00:40:00,215
+optimisé et c'est une des pistes d'amélioration
+
+1056
+00:40:00,215 --> 00:40:03,935
+encore cnav actuellement c'est euh hum je
+
+1057
+00:40:03,935 --> 00:40:04,685
+pense qu il faut qu on essaye
+
+1058
+00:40:04,745 --> 00:40:07,115
+d'exporter vraiment la tâche d'archivage sur autre
+
+1059
+00:40:07,115 --> 00:40:09,875
+chose que fan essaie de
+
+1060
+00:40:11,165 --> 00:40:13,685
+deux de scinder vraiment la l'étage archivage
+
+1061
+00:40:13,685 --> 00:40:14,735
+puisque c'est cinq c'est quelque chose qui
+
+1062
+00:40:14,735 --> 00:40:15,335
+est très consommateur
+
+1063
+00:40:16,235 --> 00:40:17,225
+est-ce que tu aurais des exemples de
+
+1064
+00:40:17,225 --> 00:40:18,635
+ratios coût par an en fonction du
+
+1065
+00:40:18,635 --> 00:40:19,205
+nombre de visites
+
+1066
+00:40:19,985 --> 00:40:23,885
+euh non je ne lis pas ce
+
+1067
+00:40:23,915 --> 00:40:25,415
+genre d'information je suis désolé
+
+1068
+00:40:26,105 --> 00:40:29,345
+euh mais euh pour une infra on
+
+1069
+00:40:29,347 --> 00:40:31,115
+en a actuellement pour eux
+
+1070
+00:40:32,251 --> 00:40:33,150
+ce que je vous ai montré là
+
+1071
+00:40:33,660 --> 00:40:35,160
+on est sur eux
+
+1072
+00:40:37,680 --> 00:40:38,640
+cinq machines froid
+
+1073
+00:40:39,540 --> 00:40:43,080
+cinq machines e et le tout euh
+
+1074
+00:40:43,140 --> 00:40:44,670
+on va dire avec des limites
+
+1075
+00:40:45,720 --> 00:40:48,990
+physique donc ses épigrammes e flexible
+
+1076
+00:40:49,710 --> 00:40:51,390
+donc lorsque on a besoin d augmenter
+
+1077
+00:40:51,390 --> 00:40:53,310
+la charge soit on ajoute un oeuf
+
+1078
+00:40:53,339 --> 00:40:55,500
+lorsque c'est nécessaire son on voit que
+
+1079
+00:40:55,560 --> 00:40:59,340
+en augmentant uniquement la partie basse épigrammes
+
+1080
+00:40:59,370 --> 00:41:00,960
+on peut en absorber la charge
+
+1081
+00:41:02,040 --> 00:41:03,690
+avez-vous un système d'alerte qui vous prévient
+
+1082
+00:41:03,690 --> 00:41:06,060
+lorsque l analyse lorsque un analyste rencontres
+
+1083
+00:41:06,090 --> 00:41:07,211
+une page erreur lors de la finale
+
+1084
+00:41:07,223 --> 00:41:08,340
+rapport en effet selon le cas en
+
+1085
+00:41:08,340 --> 00:41:10,349
+espagne society alors nous on a des
+
+1086
+00:41:10,380 --> 00:41:11,340
+effectivement on a dû
+
+1087
+00:41:12,630 --> 00:41:15,870
+du du monitoring sur eux sur les
+
+1088
+00:41:15,870 --> 00:41:18,464
+pages e euh
+
+1089
+00:41:19,080 --> 00:41:21,779
+on utilise des outils classiques un type
+
+1090
+00:41:21,780 --> 00:41:22,289
+tellement beau
+
+1091
+00:41:23,250 --> 00:41:25,401
+e p garde utile je crois que
+
+1092
+00:41:25,401 --> 00:41:28,200
+comme ça euh qui lui permet d'avoir
+
+1093
+00:41:28,200 --> 00:41:31,290
+des des erreurs fin ça détecte les
+
+1094
+00:41:31,290 --> 00:41:33,330
+erreurs lorsque on fait des requins mais
+
+1095
+00:41:33,330 --> 00:41:34,860
+sinon hier on a un système également
+
+1096
+00:41:34,867 --> 00:41:38,066
+de deux deux on travaille hum on
+
+1097
+00:41:38,122 --> 00:41:40,080
+on on on est très comment dire
+
+1098
+00:41:40,320 --> 00:41:41,730
+proche de nos clients donc on travaille
+
+1099
+00:41:41,730 --> 00:41:43,050
+avec nos clients
+
+1100
+00:41:43,527 --> 00:41:45,870
+euh avec des chattes etc donc décrivant
+
+1101
+00:41:45,876 --> 00:41:48,630
+un souci ennuyant on est on est
+
+1102
+00:41:48,840 --> 00:41:51,030
+comment dire euh sollicités directement par eux
+
+1103
+00:41:51,060 --> 00:41:51,453
+pour eux
+
+1104
+00:41:52,230 --> 00:41:53,310
+pour essayer de régler le problème
+
+1105
+00:41:53,910 --> 00:41:55,020
+sachant qu'à chaque fois c'est des petits
+
+1106
+00:41:55,020 --> 00:41:57,029
+fausse positif c'est à dire que euh
+
+1107
+00:41:57,030 --> 00:41:58,994
+lana fois c'était euh le le fameux
+
+1108
+00:41:58,994 --> 00:42:01,141
+ami le fameux compteur temps réel qui
+
+1109
+00:42:01,141 --> 00:42:03,180
+euh qui étaient bloqués et en fait
+
+1110
+00:42:03,210 --> 00:42:05,850
+c'est là la crainte était que le
+
+1111
+00:42:05,850 --> 00:42:07,227
+cœur pratique le cœur de tracking ne
+
+1112
+00:42:07,227 --> 00:42:08,880
+fonctionne plus mais les données étaient bien
+
+1113
+00:42:08,880 --> 00:42:11,520
+en cœur c'est que matthew mots n'arrivaient
+
+1114
+00:42:11,520 --> 00:42:13,860
+pas à gérer l'ensemble des
+
+1115
+00:42:14,280 --> 00:42:16,560
+d comme david données âge à ingérer
+
+1116
+00:42:16,717 --> 00:42:18,060
+dans la base de données
+
+1117
+00:42:18,570 --> 00:42:20,220
+on attend davantage que tu mandant
+
+1118
+00:42:20,730 --> 00:42:23,248
+tu t'entends très bien et à suède
+
+1119
+00:42:23,248 --> 00:42:25,590
+et surtout à jean-françois sortant un focus
+
+1120
+00:42:25,590 --> 00:42:27,990
+sur cette question à pascal vrai que
+
+1121
+00:42:28,020 --> 00:42:29,640
+parfois en tant qu'utilisateur de mato ou
+
+1122
+00:42:29,993 --> 00:42:31,890
+un message en rouge qui apparait du
+
+1123
+00:42:31,890 --> 00:42:33,450
+coup dans les rapports en disant que
+
+1124
+00:42:33,450 --> 00:42:35,160
+a d'une certaine façon le le serveur
+
+1125
+00:42:35,160 --> 00:42:36,259
+est pas assez puissant ou il y
+
+1126
+00:42:36,259 --> 00:42:38,160
+a un problème d'archivage est en fait
+
+1127
+00:42:38,160 --> 00:42:39,929
+à ce qu'est ce que je sortie
+
+1128
+00:42:39,929 --> 00:42:40,890
+remarquée chez ces mecs
+
+1129
+00:42:40,890 --> 00:42:43,050
+client c'est lorsque il rencontra ce problème-là
+
+1130
+00:42:43,080 --> 00:42:44,250
+souvent et il était pas en train
+
+1131
+00:42:44,250 --> 00:42:45,787
+de questionner ma taureau ils vont est
+
+1132
+00:42:45,840 --> 00:42:46,740
+déjà en train de se dire au
+
+1133
+00:42:46,740 --> 00:42:48,360
+caire ah bon ben faut que je
+
+1134
+00:42:48,360 --> 00:42:49,709
+fasse cette requête la plus tard il
+
+1135
+00:42:49,710 --> 00:42:51,750
+osait pas en fait à prévenir directement
+
+1136
+00:42:51,750 --> 00:42:53,516
+à l'entreprise qui qui gère le matou
+
+1137
+00:42:53,516 --> 00:42:55,140
+moi et je voudrais savoir si dans
+
+1138
+00:42:55,140 --> 00:42:56,640
+le dans le monitoring dont tu as
+
+1139
+00:42:56,640 --> 00:42:58,260
+parlé à il y a quelques secondes
+
+1140
+00:42:58,500 --> 00:42:59,880
+est-ce que justement c'est ce type de
+
+1141
+00:42:59,880 --> 00:43:01,050
+message d'erreur en rouge
+
+1142
+00:43:01,080 --> 00:43:01,890
+alors je sais pas si du coup
+
+1143
+00:43:01,890 --> 00:43:03,952
+toi ça te cette parle qui apparaîtrait
+
+1144
+00:43:03,960 --> 00:43:05,550
+qui derrière booking et vous dit tiens
+
+1145
+00:43:05,550 --> 00:43:07,440
+bah là la personne a rencontré une
+
+1146
+00:43:07,440 --> 00:43:09,810
+erreur est-il vous pousse dirait ou qui
+
+1147
+00:43:09,810 --> 00:43:12,630
+vous motive ajustement creuser et savoir comment
+
+1148
+00:43:12,630 --> 00:43:14,582
+c est possible que isère rencontrez un
+
+1149
+00:43:14,582 --> 00:43:16,230
+message d'art est-ce que ce type d'erreur
+
+1150
+00:43:16,230 --> 00:43:18,151
+lac qui nous a monter euh non
+
+1151
+00:43:18,151 --> 00:43:19,200
+on a pas trop ce type d'erreurs
+
+1152
+00:43:19,242 --> 00:43:21,210
+qui nous a monté e s
+
+1153
+00:43:21,210 --> 00:43:24,990
+sachant que on consulte le régulièrement euh
+
+1154
+00:43:25,530 --> 00:43:26,820
+en la fermant niveau infra mais euh
+
+1155
+00:43:27,180 --> 00:43:29,670
+hum hum consulter les logs d'applications consulte
+
+1156
+00:43:29,670 --> 00:43:31,167
+les logs de la machine pour rfi
+
+1157
+00:43:31,167 --> 00:43:32,187
+qu on n a pas d di
+
+1158
+00:43:32,187 --> 00:43:35,550
+remontée anormale a assure l'exécution classique de
+
+1159
+00:43:35,550 --> 00:43:36,000
+l'application
+
+1160
+00:43:37,017 --> 00:43:39,900
+euh et du coup euh j j
+
+1161
+00:43:39,930 --> 00:43:41,310
+j'avoue que les les euh pour l'instant
+
+1162
+00:43:41,311 --> 00:43:42,480
+nous a pas trop remonter ce genre
+
+1163
+00:43:42,480 --> 00:43:43,560
+de problème alors il y a un
+
+1164
+00:43:43,560 --> 00:43:44,760
+client qui nous a remonté ce genre
+
+1165
+00:43:45,057 --> 00:43:46,350
+de problème sur une petite infra mais
+
+1166
+00:43:46,350 --> 00:43:47,850
+sur des sur un cas particulier c'est-à-dire
+
+1167
+00:43:47,850 --> 00:43:50,910
+que les url sont extrêmement longs
+
+1168
+00:43:51,540 --> 00:43:53,730
+euh et euh alors euh il me
+
+1169
+00:43:53,730 --> 00:43:55,290
+semble que la limite actuelle dans ma
+
+1170
+00:43:55,290 --> 00:43:56,970
+to mo c'est mille vingt-quatre caractères ou
+
+1171
+00:43:56,970 --> 00:43:57,783
+quatre mille quatre-vingt-seize ai
+
+1172
+00:43:58,380 --> 00:44:00,240
+mais le fait que on est énormément
+
+1173
+00:44:00,240 --> 00:44:02,130
+énormément énormément du du duel qui sont
+
+1174
+00:44:02,130 --> 00:44:02,580
+très longues
+
+1175
+00:44:03,240 --> 00:44:06,570
+euh ça euh ça ralentit énormément l'archivage
+
+1176
+00:44:06,570 --> 00:44:08,670
+et ça ça crée un problème on
+
+1177
+00:44:08,670 --> 00:44:09,480
+va dire dans l'interface
+
+1178
+00:44:10,200 --> 00:44:13,620
+donc euh donc euh là on a
+
+1179
+00:44:13,620 --> 00:44:15,570
+des remontées de côté client et c'est
+
+1180
+00:44:15,570 --> 00:44:16,979
+comme ça qu'on s'est rendu compte que
+
+1181
+00:44:17,400 --> 00:44:18,810
+bah pour même des titres d'un froid
+
+1182
+00:44:18,810 --> 00:44:20,010
+des fois il f il est nécessaire
+
+1183
+00:44:20,010 --> 00:44:22,378
+d augmenter drastiquement lire les ressources au
+
+1184
+00:44:22,378 --> 00:44:25,168
+niveau du fc pour pouvoir exécuter l'archivage
+
+1185
+00:44:25,230 --> 00:44:28,046
+normalement on va dire n'accorde actuellement neuf
+
+1186
+00:44:28,110 --> 00:44:30,000
+quarante-cinq il nous reste encore peut-être cinq
+
+1187
+00:44:30,000 --> 00:44:30,270
+minutes
+
+1188
+00:44:30,330 --> 00:44:32,519
+pour prendre encore quelques autres questions en
+
+1189
+00:44:32,520 --> 00:44:34,080
+une nouvelle qui vient tout juste d'arriver
+
+1190
+00:44:34,080 --> 00:44:35,070
+dans dans le chatte
+
+1191
+00:44:35,994 --> 00:44:38,040
+je dirais hum hum comment gérez vous
+
+1192
+00:44:38,040 --> 00:44:40,080
+l'archivage est-ce que vous le découper par
+
+1193
+00:44:40,080 --> 00:44:42,450
+segment ou année où vous ne exécuter
+
+1194
+00:44:42,450 --> 00:44:42,960
+normalement
+
+1195
+00:44:44,070 --> 00:44:46,079
+alors euh actuellement elle exécute normalement on
+
+1196
+00:44:46,080 --> 00:44:48,750
+a pas trop de soucis eux là-dessus
+
+1197
+00:44:48,780 --> 00:44:51,570
+sachant que hum alors le l le
+
+1198
+00:44:51,570 --> 00:44:52,890
+screen que je vous envoyé sur eux
+
+1199
+00:44:52,920 --> 00:44:54,570
+enfin le limage que je vous envoyé
+
+1200
+00:44:54,570 --> 00:44:57,330
+avec nos résultats e de plus de
+
+1201
+00:44:57,360 --> 00:45:00,360
+cent trente millions d'actions etc etc ce
+
+1202
+00:45:00,390 --> 00:45:01,710
+ça date du mois d'octobre
+
+1203
+00:45:02,340 --> 00:45:04,529
+et euh et non du coup là
+
+1204
+00:45:04,529 --> 00:45:05,760
+on va travailler avec les équipes donc
+
+1205
+00:45:06,020 --> 00:45:10,890
+nos clients pour eux pour eux pour
+
+1206
+00:45:10,890 --> 00:45:13,830
+discuter justement sur l'amélioration de l archivage
+
+1207
+00:45:13,832 --> 00:45:14,580
+de ce côté-là
+
+1208
+00:45:15,240 --> 00:45:17,761
+euh ça va être en discussion avec
+
+1209
+00:45:17,761 --> 00:45:19,650
+eux mais sinon on on exécute euh
+
+1210
+00:45:19,710 --> 00:45:21,930
+plutôt normalement le le l'archivage
+
+1211
+00:45:23,610 --> 00:45:24,090
+voilà
+
+1212
+00:45:29,220 --> 00:45:31,410
+super alors je regarde si on a
+
+1213
+00:45:31,410 --> 00:45:34,440
+encore quelques autres petites questions qui arrivent
+
+1214
+00:45:38,279 --> 00:45:38,699
+où
+
+1215
+00:45:40,200 --> 00:45:43,020
+alors je crois que alexandra nous indique
+
+1216
+00:45:43,020 --> 00:45:44,490
+que si elle sait toujours en cours
+
+1217
+00:45:44,490 --> 00:45:45,150
+d'écriture
+
+1218
+00:45:46,080 --> 00:45:47,580
+un dans le dans le tchat
+
+1219
+00:45:48,480 --> 00:45:48,690
+un
+
+1220
+00:45:51,660 --> 00:45:54,150
+ah ah du coup j'en profite pour
+
+1221
+00:45:54,150 --> 00:45:55,890
+annoncer les les deux conférences qui vont
+
+1222
+00:45:55,890 --> 00:45:57,810
+suivre juste après donc sur les coups
+
+1223
+00:45:57,810 --> 00:46:00,000
+de dix heures n'ont qu'à vous en
+
+1224
+00:46:00,000 --> 00:46:02,279
+avez une sur la visualisation de données
+
+1225
+00:46:02,280 --> 00:46:03,660
+anciennes confiance qui est en anglais mais
+
+1226
+00:46:03,660 --> 00:46:05,515
+qui est faite par un français donc
+
+1227
+00:46:05,609 --> 00:46:06,150
+assis
+
+1228
+00:46:06,450 --> 00:46:08,190
+certaines certains d'entre vous sont pas très
+
+1229
+00:46:08,190 --> 00:46:09,900
+à l'aise avec eux avec douglas je
+
+1230
+00:46:09,900 --> 00:46:11,580
+pense pas que ce soit un problème
+
+1231
+00:46:11,619 --> 00:46:13,440
+en tous cas pour poursuivre la la
+
+1232
+00:46:13,440 --> 00:46:16,050
+conférence qui va venir sinon à vous
+
+1233
+00:46:16,050 --> 00:46:18,323
+avez la possibilité d'aller dans un workshop
+
+1234
+00:46:18,448 --> 00:46:21,029
+à ce workshop les places sont à
+
+1235
+00:46:21,060 --> 00:46:22,920
+sont limitées c'est à dire que ç'a
+
+1236
+00:46:22,920 --> 00:46:24,782
+vraiment les les premiers arrivés premiers servis
+
+1237
+00:46:24,782 --> 00:46:26,490
+un et le workshop
+
+1238
+00:46:26,520 --> 00:46:28,410
+un an de souvenirs n'est sûr de
+
+1239
+00:46:28,410 --> 00:46:30,510
+la base de vingt-cinq à vingt-cinq personnes
+
+1240
+00:46:30,510 --> 00:46:33,990
+qui se connectent le workshop blessures implémente
+
+1241
+00:46:34,027 --> 00:46:36,510
+in advance by aussi préserver analytique sand
+
+1242
+00:46:36,510 --> 00:46:39,750
+mobile desktop serveur donc probablement plus une
+
+1243
+00:46:39,750 --> 00:46:42,600
+conférence qui est lié autour de de
+
+1244
+00:46:42,600 --> 00:46:44,910
+la vie privée en eux et du
+
+1245
+00:46:44,910 --> 00:46:46,500
+coup ce sera ce sera un retour
+
+1246
+00:46:46,500 --> 00:46:46,650
+d'ex
+
+1247
+00:46:46,650 --> 00:46:48,450
+espérance a là-dessus donc ce sera par
+
+1248
+00:46:48,510 --> 00:46:50,460
+nathan frais tasse et du coup dans
+
+1249
+00:46:50,460 --> 00:46:52,350
+la salle numéro une à la partie
+
+1250
+00:46:52,350 --> 00:46:55,380
+visualisation de données donc sera avec justement
+
+1251
+00:46:55,380 --> 00:46:57,659
+la présentation dans des logiciels libres il
+
+1252
+00:46:57,660 --> 00:47:00,030
+s'appelle meta base hein que peut-être certaines
+
+1253
+00:47:00,030 --> 00:47:02,310
+certains d'entre vous connaissent et à les
+
+1254
+00:47:02,310 --> 00:47:04,441
+présenter du coup par bâti steven qui
+
+1255
+00:47:04,441 --> 00:47:06,750
+y travaillent chez open source politique
+
+1256
+00:47:07,337 --> 00:47:09,000
+ah je regarde une dernière fois si
+
+1257
+00:47:09,019 --> 00:47:10,590
+a des questions dans le dans le
+
+1258
+00:47:10,590 --> 00:47:13,080
+tchate et bien oui ah on a
+
+1259
+00:47:13,140 --> 00:47:15,450
+une autre question de la part d'alexandra
+
+1260
+00:47:15,840 --> 00:47:18,360
+avez-vous rencontré des erreurs type maïs cool
+
+1261
+00:47:18,368 --> 00:47:20,370
+serveur as gone away china
+
+1262
+00:47:21,000 --> 00:47:23,490
+une erreur qui ressort souvent eux lors
+
+1263
+00:47:23,490 --> 00:47:25,320
+de l archivage après avoir invalidé des
+
+1264
+00:47:25,320 --> 00:47:25,770
+périodes
+
+1265
+00:47:27,090 --> 00:47:30,479
+euh non euh alors ça nous est
+
+1266
+00:47:30,479 --> 00:47:34,095
+arrivé mais ont augmenté eux ont augmenté
+
+1267
+00:47:34,186 --> 00:47:36,030
+notamment le nombre de connexions au niveau
+
+1268
+00:47:36,030 --> 00:47:37,351
+du cerveau masculin
+
+1269
+00:47:38,100 --> 00:47:39,150
+et je crois pas qu on ait
+
+1270
+00:47:39,150 --> 00:47:42,990
+eu trop rencontré ce problème euh il
+
+1271
+00:47:42,990 --> 00:47:44,160
+me semble qu on a été un
+
+1272
+00:47:44,160 --> 00:47:45,870
+peu épargnée sur ce truc-là on a
+
+1273
+00:47:46,709 --> 00:47:48,420
+on a on a dû le rencontrer
+
+1274
+00:47:48,598 --> 00:47:50,730
+rapidement mais e s je sais pas
+
+1275
+00:47:50,730 --> 00:47:51,840
+quelque chose qui m'a choqué dans la
+
+1276
+00:47:51,840 --> 00:47:53,940
+maintenance et dans la gestion des infrastructures
+
+1277
+00:47:53,940 --> 00:47:54,660
+mais au moins pour l'instant
+
+1278
+00:47:56,100 --> 00:47:56,610
+désolé
+
+1279
+00:47:57,450 --> 00:47:57,960
+super
+
+1280
+00:47:58,650 --> 00:48:01,260
+ah bah écoutez je merci beaucoup valentin
+
+1281
+00:48:01,350 --> 00:48:03,900
+e merci beaucoup à à toutes et
+
+1282
+00:48:03,900 --> 00:48:05,790
+à tous à être d'avoir choisi du
+
+1283
+00:48:05,790 --> 00:48:08,550
+coup cette conférence nous disposons désormais de
+
+1284
+00:48:08,550 --> 00:48:10,770
+douze minutes pour une pause café n'hésitez
+
+1285
+00:48:10,770 --> 00:48:12,240
+pas à interagir du coup dans le
+
+1286
+00:48:12,240 --> 00:48:14,010
+salon à café si vous voulez discuter
+
+1287
+00:48:14,010 --> 00:48:16,342
+avec d'autres participants ou aller prendre un
+
+1288
+00:48:16,741 --> 00:48:17,190
+café
+
+1289
+00:48:17,940 --> 00:48:19,380
+où et n oubliez pas vous pouvez
+
+1290
+00:48:19,380 --> 00:48:21,720
+également aller sur meet point matthew mmo
+
+1291
+00:48:21,720 --> 00:48:25,410
+campe point org pour interagir également directement
+
+1292
+00:48:25,410 --> 00:48:28,199
+via webcam avec d'autres autres participants je
+
+1293
+00:48:28,260 --> 00:48:30,750
+vous donne tous rendez-vous à dix heures
+
+1294
+00:48:30,750 --> 00:48:33,480
+pour le prochain jeu de conférence merci
+
+1295
+00:48:33,480 --> 00:48:33,870
+à vous
+
