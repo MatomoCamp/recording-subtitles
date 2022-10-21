@@ -1,0 +1,1696 @@
+1
+00:00:00,000 --> 00:00:16,000
+Genau, dann geht es jetzt los. Herzlich willkommen eben zur Matomo Kompakt Workshop. Vielleicht
+
+2
+00:00:16,000 --> 00:00:20,240
+mal ganz kurz, was erwartet euch heute? Ihr habt es vielleicht schon in der Description
+
+3
+00:00:20,240 --> 00:00:25,080
+gelesen. Also ich mag euch einfach mal kurz die Matomo Berichte näher bringen. Einfach
+
+4
+00:00:25,080 --> 00:00:30,600
+kurzes Grundverständnis einfach von den einzelnen Metriken. Was findet man wo? Wie kann ich
+
+5
+00:00:30,600 --> 00:00:37,280
+was denn auswerten? Wir schauen uns die Sucherlog, die Verhaltensberichte und die Akquisitionsberichte
+
+6
+00:00:37,280 --> 00:00:43,260
+an. Vielleicht nur kurze Sache noch zu mir selber. Also ich bin Thomas Scherneck. Ich
+
+7
+00:00:43,260 --> 00:00:50,720
+bin Senior SEO und Webanalyst bei einer Agentur in Salzburg und auch selbstständig. Gleichzeitig
+
+8
+00:00:50,720 --> 00:00:57,040
+im Matomo Universum habe ich mal versucht mit Webanalyse mit Kopf ein paar YouTube-Videos
+
+9
+00:00:57,040 --> 00:01:02,160
+zum Thema Matomo in Deutsch zu machen. Und falls ihr Fragen habt, dann gerne auch in
+
+10
+00:01:02,160 --> 00:01:08,200
+den Big Blue Button chat. Man kann auch die Fragen gerne, also ihr könnt sie ja gerne
+
+11
+00:01:08,200 --> 00:01:13,640
+unmuteen, falls irgendwas ist oder ihr wollt irgendwo aktuell in dem Bericht irgendwas
+
+12
+00:01:13,640 --> 00:01:19,760
+reinfragen. Also wir können am Anschluss dann noch kurze Q&A Session machen oder ihr
+
+13
+00:01:19,760 --> 00:01:26,840
+fragt einfach so rein oder ihr schreibt so einfach später entweder hier rein oder einfach
+
+14
+00:01:26,840 --> 00:01:35,080
+über LinkedIn. Das geht auch ganz gut. Dann starten wir mal los. Genau. Wie wir das jetzt
+
+15
+00:01:35,080 --> 00:01:41,480
+heute machen ist, wir schauen uns jetzt hier mal die Matomo Demo Seite an. Also unter
+
+16
+00:01:41,480 --> 00:01:48,760
+Demo.matomo.cloud kann man sich die Matomo Cloud Version, also die Demo mal anschauen.
+
+17
+00:01:48,760 --> 00:01:53,360
+Da haben wir jetzt die Demo-Daten drin von einer fiktiven Seite. Vielleicht falls ihr
+
+18
+00:01:53,360 --> 00:01:58,480
+jetzt On-Premise habt, also On-Premise, ihr habt es selber bei euch installiert, dann
+
+19
+00:01:58,480 --> 00:02:03,800
+wird es wahrscheinlich nur so ausschauen, wenn ihr nur die gängigsten Plugins installiert
+
+20
+00:02:03,800 --> 00:02:08,680
+habt oder einfach das ist die Grundinstallation. Ich schaue euch oder wir schauen uns jetzt
+
+21
+00:02:08,680 --> 00:02:14,120
+einfach mal das auf der Demo-Seite an. Also hier sind auch meistens mehr Plugins installiert,
+
+22
+00:02:14,120 --> 00:02:19,160
+vielleicht der eine oder andere nicht drauf hat, aber das ist die Version, die hat man,
+
+23
+00:02:19,160 --> 00:02:25,040
+wenn man zum Beispiel Matomo Cloud benutzt. Also wir steigen ein und was man zuerst sieht,
+
+24
+00:02:25,040 --> 00:02:31,920
+also hier oben ist die ganz normale Website-Auswahl. Also wir haben hier verschiedene Seiten, die
+
+25
+00:02:31,920 --> 00:02:37,120
+man hier auswählen kann und je nachdem ändert sich eben das komplette hier. Es ist ähnlich,
+
+26
+00:02:37,120 --> 00:02:40,360
+sage ich jetzt mal. Vielleicht kommt einer aus Google Analytics. Es ist ähnlich eben
+
+27
+00:02:40,360 --> 00:02:48,520
+zu den Analytics Datenansichten bzw. Properties, die man hier auswählen kann. Das zweite ist
+
+28
+00:02:48,520 --> 00:02:53,680
+eben hier der Date Picker. Jetzt habe ich heute den aktuellen Tag ausgewählt. Ich kann aber
+
+29
+00:02:53,680 --> 00:02:59,320
+hier genauso wochenweise gehen, das merkt man schon, kommt hier komplette Zeile, wird hier
+
+30
+00:02:59,320 --> 00:03:06,040
+markiert oder wir schauen uns jetzt einfach mal den Monat Oktober an. Hier oben gibt es
+
+31
+00:03:06,040 --> 00:03:13,200
+die Segmente. Also man kann segmentieren in Matomo, genauso wie man auch Segmente in
+
+32
+00:03:13,200 --> 00:03:20,120
+Analytics hat. Es gibt schon ein paar vorgefertigte Segmente. Ganz am Anfang hat man die alle
+
+33
+00:03:20,120 --> 00:03:26,560
+benutzt, das ist einfach ungefiltert. Die Segmente selbst zeige ich jetzt mal ganz kurz
+
+34
+00:03:26,560 --> 00:03:32,280
+auf dem anderen. Hier hat man die Möglichkeit, zum Beispiel habe ich jetzt hier Organic Search
+
+35
+00:03:32,280 --> 00:03:38,560
+schon eingestellt. Das heißt, der Kanaltyp entspricht zum Beispiel Search und das kann
+
+36
+00:03:38,560 --> 00:03:43,720
+man dann einfach auf Speichern und übernehmen klicken. Das Ganze ist so, dass es bei Matomo
+
+37
+00:03:43,720 --> 00:03:48,600
+Cloud hin und wieder ein bisschen dauert, bis das durch, bis das einfach alles komplett
+
+38
+00:03:48,600 --> 00:03:55,680
+verarbeitet wird, bis es dann angezeigt werden kann. Hier haben wir zum Beispiel schon etwas,
+
+39
+00:03:55,680 --> 00:04:02,360
+das heißt NZ Visitors, das sind eben hier aus Neuseeland Besucher. Die kann ich jetzt
+
+40
+00:04:02,360 --> 00:04:07,000
+einfach hier zum Beispiel selektieren. Wenn ich hier einfach drauf gehe, dann ist es komplett
+
+41
+00:04:07,000 --> 00:04:13,000
+selektiert. Man sieht schon, die Besucherkarte ändert sich jetzt hier mal auf Neuseeland.
+
+42
+00:04:13,000 --> 00:04:19,880
+Wenn man, man hat auch die Möglichkeit natürlich die ganzen Segmente untereinander zu vergleichen,
+
+43
+00:04:19,880 --> 00:04:25,840
+dazu geht man nicht auf direkt den Segment Titel, sondern geht hier auf dieses Vergleichen
+
+44
+00:04:25,840 --> 00:04:33,280
+Symbol und so hat man die alle Besucher gegenübergestellt eben zu den Besuchern von Neuseeland. Hier
+
+45
+00:04:33,280 --> 00:04:39,280
+sieht man jetzt leider wenig, weil die Besucher machen jetzt nicht so viel aus von den Gesamtbesuchern.
+
+46
+00:04:39,280 --> 00:04:46,680
+Dieses Dashboard kann man natürlich auch customisieren, das heißt, das ist nicht fix. Ich habe die
+
+47
+00:04:46,680 --> 00:04:53,200
+Möglichkeit, dass ich einfach hier auch jedes Widget, das sind einzelne Widgets, hier auch
+
+48
+00:04:53,200 --> 00:04:57,920
+woanders platzieren kann, zum Beispiel hier jetzt rechts und dann sieht man schon mal
+
+49
+00:04:57,920 --> 00:05:04,040
+was, was man auf jedem Blanko Dashboard hat. Man hat immer so einen netten Willkommen-Screen,
+
+50
+00:05:04,040 --> 00:05:10,240
+wo man begrüßt wird. Das kann man sich einmal anschauen, das ist immer das erste eigentlich,
+
+51
+00:05:10,240 --> 00:05:14,800
+was ich dann später mal schließe. Eigentlich braucht man es dann auch nicht mehr, dann
+
+52
+00:05:14,800 --> 00:05:20,000
+kann man es einfach hier wegklicken, kurz bestätigen, dass man es jetzt eigentlich weghaben will
+
+53
+00:05:20,000 --> 00:05:26,480
+und dann wäre es alles. Wenn ihr jetzt sagt, okay, mir geht jetzt hier ein Bericht ab,
+
+54
+00:05:26,480 --> 00:05:33,360
+das ist kein Problem, man hat hier, wenn man drauf geht, die Möglichkeit Widgets hinzuzufügen,
+
+55
+00:05:33,360 --> 00:05:38,520
+verschiedene Widgets und das Ganze ist ebenso untergliedert wie genau der linke Baum. Also
+
+56
+00:05:38,520 --> 00:05:44,720
+ihr habt hier dieser linke Menübaum, genauso hier habt ihr auch die verschiedenen Werte.
+
+57
+00:05:44,720 --> 00:05:52,320
+Nähen wir mal an, ich hätte jetzt Interesse und möchte gerne wissen, schauen wir kurz,
+
+58
+00:05:52,320 --> 00:06:00,640
+über welche Websites kommen denn die Nutzer auf meine Seite, dann habe ich hier eben die
+
+59
+00:06:00,640 --> 00:06:04,920
+Möglichkeit, dass ich das Widget gleich reingezogen habe und siehe eben hier das
+
+60
+00:06:04,920 --> 00:06:12,800
+diveadvisor.com, zum Beispiel die meisten Besuche bringt. Das kann hier alles schön
+
+61
+00:06:12,800 --> 00:06:18,200
+customisern, ihr habt auch die Möglichkeit dieses Dashboard oder mehrere Dashboard anzulegen,
+
+62
+00:06:18,200 --> 00:06:24,560
+das findet man dann einfach auch hier unten zum Beispiel mit Dashboard Layout verändern oder man
+
+63
+00:06:24,560 --> 00:06:31,760
+kann auch ein neues Dashboard anlegen, so muss ich jetzt leider wieder auf das andere Demo Dashboard
+
+64
+00:06:31,760 --> 00:06:37,160
+gehen, weil das in der Demo muss man wissen, kann man sich vieles anschauen, man hat eigentlich so
+
+65
+00:06:37,160 --> 00:06:43,160
+View Zugriff, man kann aber jetzt nicht viel zum Beispiel ändern in dem Demo Dashboard,
+
+66
+00:06:43,160 --> 00:06:48,200
+ist halt nur zum Ansehen da und hier könnte man zum Beispiel jetzt auch ein neues Dashboard
+
+67
+00:06:48,200 --> 00:06:53,840
+erstellen, den Namen einfach angeben und man hat dann die Möglichkeit zum Beispiel auch das
+
+68
+00:06:53,840 --> 00:07:03,160
+Spalten Layout, genau Widgets schnell hinzufügen und dann hat man die Möglichkeit, jetzt fügen wir
+
+69
+00:07:03,160 --> 00:07:11,280
+jetzt mal kurz hier hinzu, genau man hat natürlich auch noch die Möglichkeit das Spalten Layout zu
+
+70
+00:07:11,280 --> 00:07:17,760
+ändern, also dass man sagt, okay das Layout das ist jetzt mir zu komisch, drei Spalten, ich will
+
+71
+00:07:17,760 --> 00:07:22,760
+jetzt nur einspalten, das mal haben, weil ich einfach nur ganz wenig Widgets habe, dann kann
+
+72
+00:07:22,760 --> 00:07:30,320
+ich das hier auch ganz einfach machen, das wäre es jetzt mal hier in dem Bereich von den ganzen,
+
+73
+00:07:30,320 --> 00:07:35,240
+also von den Dashboards, was wir hier haben, also man kann hier verschiedene Dashboards anlegen,
+
+74
+00:07:35,240 --> 00:07:41,440
+wir schauen dann einfach mal ein Bericht weiter, das wäre jetzt mal der Besuchertab, was immer
+
+75
+00:07:41,440 --> 00:07:47,880
+ganz nett ist bei Matomo, es ist auch wahrscheinlich so ein Google Analytics der Fall, das sind die
+
+76
+00:07:47,880 --> 00:07:54,280
+wichtigsten Metriken, die man unter den Berichten, zum Beispiel die Besucher, also die Eigenschaften
+
+77
+00:07:54,280 --> 00:07:58,560
+der Besucher, dass man die jetzt einfach hier mal zusammen hat und die wichtigsten Metriken
+
+78
+00:07:58,560 --> 00:08:05,600
+sind einfach hier mal aufgelistet und dann kann man später ins Detail tiefer einsteigen. Hier haben
+
+79
+00:08:05,600 --> 00:08:12,600
+wir mal den Graphen der letzten Besucher auf der Webseite selbst, man hat auch die Möglichkeit bei
+
+80
+00:08:12,600 --> 00:08:18,840
+so einem Linechart zusätzlich noch eben die Metrik zu ändern, also wenn man sagt, okay die Besucher
+
+81
+00:08:18,840 --> 00:08:24,480
+interessieren mich gerade nicht, ich hätte gerne die Seitenansichten, dann wähle ich die einfach noch
+
+82
+00:08:24,480 --> 00:08:29,680
+mit aus, dann werden die zum Beispiel mit rein verglichen oder ich hacke zum Beispiel die Besucher
+
+83
+00:08:29,680 --> 00:08:37,240
+ab, dann sieht man einfach hier den Vergleich von den ganzen Daten, was man hier hat. Man kann eben
+
+84
+00:08:37,240 --> 00:08:43,920
+die ganzen Daten auch exportieren, hier gibt es unten noch mal so ein Button, wo es heißt, okay
+
+85
+00:08:43,920 --> 00:08:49,360
+ich möchte die Daten in ein anderes Format exportieren, hier ist es immer ganz gut, also wenn
+
+86
+00:08:49,360 --> 00:08:59,080
+man Reports macht oder dergleichen, nämlich meistens TSV, also auch in Excel ein gutes Format und holen
+
+87
+00:08:59,080 --> 00:09:05,280
+wir als Zeichen-Limit meistens alle, das kann man dann exportieren, wenn man das theoretischerweise
+
+88
+00:09:05,280 --> 00:09:12,320
+öfter braucht oder ich möchte zum Beispiel das in ein Google Data Studio importieren, das geht
+
+89
+00:09:12,320 --> 00:09:17,520
+vielleicht auch mittels einer API oder einer Schnittstelle, dann hat man verschiedene andere
+
+90
+00:09:17,520 --> 00:09:23,400
+Formate wie zum Beispiel JSON und kann sich eine Export URL anzeigen, das heißt jedes Mal, wenn die
+
+91
+00:09:23,400 --> 00:09:30,560
+aufgerufen wird, kann man genau diesen Report hier exportieren, was ihr dafür braucht noch ist
+
+92
+00:09:30,560 --> 00:09:37,240
+einen API-Token, den man sich erstellen kann, so damit man die Daten lesen kann. Warum muss ich
+
+93
+00:09:37,240 --> 00:09:43,000
+das machen? Damit nicht einfach jeder, der die URL aufruft, einfach gleichzeitig meine Daten lesen
+
+94
+00:09:43,000 --> 00:09:50,400
+kann, sondern man braucht einfach einen Schlüssel dafür. Die Möglichkeit, wenn man das jetzt noch
+
+95
+00:09:50,400 --> 00:09:55,760
+grafisch schön machen kann, kann man einerseits einen Screenshot machen oder die Möglichkeit beim
+
+96
+00:09:55,760 --> 00:10:02,040
+Atomo hier noch ein Exportbild sich zu ziehen und damit der rechten Maustaste einfach abzuspeichern,
+
+97
+00:10:02,040 --> 00:10:07,760
+das ist auch ein nettes Feature, was man hier hat. Vielleicht sind dem ein oder anderen jetzt schon
+
+98
+00:10:07,760 --> 00:10:14,960
+mal diese ganzen Textboxen aufgefallen, das sind die ganzen Anmerkungen, die man hier hat, also wenn
+
+99
+00:10:14,960 --> 00:10:19,000
+man zum Beispiel jetzt hergeht und sagt, ich habe zum Beispiel ein Website relaunched, dann kann ich
+
+100
+00:10:19,000 --> 00:10:24,960
+einfach so eine Anmerkung hinterlegen, dann habe ich vielleicht einfach auch Informationen und sage,
+
+101
+00:10:24,960 --> 00:10:30,440
+okay, was ist denn da passiert, wieso ist denn direkterweise hier einfach ein richtig großer
+
+102
+00:10:30,440 --> 00:10:36,520
+Drop an den Seitenansichten, fast bis zur Hälfte herunter, dann kann ich mir das komplett einfach
+
+103
+00:10:36,520 --> 00:10:45,520
+mal ansehen, wenn ich das möchte. Genau, das sind die ganzen Daten und hier sind die wichtigsten
+
+104
+00:10:45,520 --> 00:10:55,280
+Metriken und ich schaue mir das jetzt einfach mal an. Was sehr cool ist in Matomo und was sich
+
+105
+00:10:55,280 --> 00:11:02,560
+eigentlich durch Matomo zieht, ist dieser Besucher-Log, also ich kann mir theoretischerweise jeden Nutzer
+
+106
+00:11:02,560 --> 00:11:09,640
+einfach rausziehen und im Detail anschauen, also dieser Besucher-Log ist, also ich finde den
+
+107
+00:11:09,640 --> 00:11:16,040
+euch sehr, sehr gut, weil ich einfach detaillierte Informationen über den Nutzer habe hier drinnen
+
+108
+00:11:16,040 --> 00:11:22,400
+und ich kann auch schauen, was er genau macht. Was er genau macht, das zeige ich euch jetzt wirklich mal
+
+109
+00:11:22,400 --> 00:11:30,320
+auf der anderen Seite hier in dem Bereich. Ich habe jetzt die Möglichkeit, also ich sehe jetzt einerseits,
+
+110
+00:11:30,320 --> 00:11:37,600
+woher kommt der Nutzer, hier die IP-Adresse anonymisiert, je nachdem, was sie für Einstellungen
+
+111
+00:11:37,600 --> 00:11:45,880
+hier gegeben hat und sehe einfach auch das Gerät, Betriebssystem und wie er auf meine Webseite gekommen ist.
+
+112
+00:11:45,880 --> 00:11:53,800
+Hier sieht man, die Kampagne ist PPC, Pay Per Click. Wie ist das passiert oder wie kann man das machen?
+
+113
+00:11:53,800 --> 00:11:59,360
+Das ist mit Matomo eigentlich auch ganz gut. Es gibt auch einen Google Analytics, zum Beispiel den URL-Bilder,
+
+114
+00:11:59,360 --> 00:12:05,040
+so dass ich diverse Sachen wie die Quelle und das Medium einfach überschreiben kann. Also hier ist zum Beispiel
+
+115
+00:12:05,040 --> 00:12:14,640
+einfach die Quelle Google Ads überschrieben worden und das Medium ist PPC, also Pay Per Click und das
+
+116
+00:12:14,640 --> 00:12:19,960
+ist einfach eine Google Ads Anzeige, über die der Nutzer hier gekommen ist. Zum Beispiel hier die
+
+117
+00:12:19,960 --> 00:12:25,920
+Avengers Playing Cards ist einfach der erste Einstiegspunkt und dann sieht man einfach ganz gut,
+
+118
+00:12:25,920 --> 00:12:31,760
+er hat sich einfach mal durch die ganzen Seiten durchgeklickt, ist dann noch bei einem Produkt
+
+119
+00:12:31,760 --> 00:12:39,760
+hängen geblieben und ist dann einfach auch wieder ausgestiegen. Es gibt dann auch noch zum Beispiel
+
+120
+00:12:39,760 --> 00:12:45,440
+direkte Zugriffe hier in dem Bereich oder vielleicht auch Zugriffe über andere Suchmaschinen wie
+
+121
+00:12:45,440 --> 00:12:52,480
+Ecosia und dieses Feature, ich finde es einfach wirklich sehr gut, weil man sich das alles im
+
+122
+00:12:52,480 --> 00:12:57,960
+Detail sehr gut ansehen kann. Wenn man jetzt auch noch auf Besucherprofil ansehen klickt,
+
+123
+00:12:57,960 --> 00:13:04,320
+haben wir noch die Möglichkeit zu schauen, da ist es jetzt nicht der Fall, wenn der Nutzer zum
+
+124
+00:13:04,320 --> 00:13:10,840
+Beispiel öfter auf die Seite gekommen ist. Schauen wir mal ganz kurz, haben wir hier jemanden,
+
+125
+00:13:10,840 --> 00:13:20,520
+hier haben wir jetzt keine Aktionen, da jetzt leider nicht. Was wir jetzt vorhin gesehen haben,
+
+126
+00:13:20,520 --> 00:13:26,200
+einfach der Nutzer steigt auf die Seite ein und wenn ein Seitenaufruf stattgefunden hat,
+
+127
+00:13:26,200 --> 00:13:32,600
+sieht man das zum Beispiel an diesem Ordner-Symbol. Es gibt noch verschiedene andere Kategorien von
+
+128
+00:13:32,600 --> 00:13:39,280
+Events, die einfach durchgeführt werden können, zum Beispiel eine interne Suche, hat der Nutzer
+
+129
+00:13:39,280 --> 00:13:46,360
+einfach fins oben eingegeben oder zum Beispiel Checkout Form, also wenn jemand ein Form-View
+
+130
+00:13:46,360 --> 00:13:52,680
+stattgefunden hat, dann wird es hier einfach mit ausgegeben. Die ganze E-Commerce Tracking,
+
+131
+00:13:52,680 --> 00:14:00,120
+also wenn ein Warnkorb, der vorher gefüllt wurde, einfach abgebrochen wurde und Events,
+
+132
+00:14:00,120 --> 00:14:05,240
+also Events ist eigentlich fast dasselbe Pendant wie bei Google Analytics, man kann zusätzliche
+
+133
+00:14:05,240 --> 00:14:11,920
+Daten noch mitsenden an Matomo selbst, die man dann später auch alle auswerten kann.
+
+134
+00:14:11,920 --> 00:14:21,200
+So, dann schauen wir einfach mal weiter, gut die Echtzeit, Echtzeitbericht, das ist immer ganz nett,
+
+135
+00:14:21,200 --> 00:14:25,440
+so sieht man immer wenn oben was reinkommt, ist aber jetzt für eine detaillierte Analyse
+
+136
+00:14:25,440 --> 00:14:32,560
+eventuell nicht so zielführend. Die Besucherkarte in Echtzeit ist auch ein nettes Feature, wo man
+
+137
+00:14:32,560 --> 00:14:39,040
+einfach mal sieht, woher kommen denn die ganzen Nutzer auf meiner Webseite, interessanter wird
+
+138
+00:14:39,040 --> 00:14:46,400
+es dann wirklich mit dem Ortebericht. Hier sieht man verschiedene Widgets, zum Beispiel kann ich
+
+139
+00:14:46,400 --> 00:14:51,680
+jetzt hier auch direkt reingehen in die Vereinigten Staaten und mit der Mouse over sehe ich dann
+
+140
+00:14:51,680 --> 00:14:57,320
+einfach auch wie viele Besucher wirklich aus den Vereinigten Staaten kamen. Es deckt sich dann eh
+
+141
+00:14:57,320 --> 00:15:05,320
+mit diesem Bereich hier rechts und jetzt zeige ich euch noch mal was, hier sieht man jeweils immer
+
+142
+00:15:05,320 --> 00:15:12,840
+noch bei den ganzen Metriken immer ein segmentiertes Besucherlog öffnen, das heißt dieser Besucherlog,
+
+143
+00:15:12,840 --> 00:15:16,960
+wie ich vorhin schon erzählt habe, der zieht sich durch ganz Matomo, jetzt habe ich hier einfach
+
+144
+00:15:16,960 --> 00:15:23,560
+den Besucherlog wirklich gefiltert auf die Vereinigten Staaten von Amerika und kann mir
+
+145
+00:15:23,560 --> 00:15:29,440
+das hier detailliert ganz gut auswerten, somit muss ich jetzt nicht vorher irgendwie was im
+
+146
+00:15:29,440 --> 00:15:35,640
+Detail segmentieren, sondern nehme einfach schon die vorgefertigten Segmente jetzt mal von Matomo,
+
+147
+00:15:35,640 --> 00:15:41,000
+zum Beispiel dass der das jetzt auf das Land filtert, nehme das her und kann das komplett dann
+
+148
+00:15:41,000 --> 00:15:48,680
+auch auswerten. Der Gerätetapp, der ist auch sehr umfangreich, umfangreicher sage ich jetzt mal so
+
+149
+00:15:48,680 --> 00:15:55,720
+wie in Analytics, also wir haben hier neben Desktop, Tablet und Smartphone, haben wir noch
+
+150
+00:15:55,720 --> 00:16:02,000
+verschiedene andere Geräte, zum Beispiel Spielekonsole, die zum Beispiel auf die Webseite
+
+151
+00:16:02,000 --> 00:16:09,960
+kommen, hier als Verweistraffic zum Beispiel von Reddit direkt drauf auf die Webseite über eine
+
+152
+00:16:09,960 --> 00:16:15,000
+Spielekonsole, das ist auch ein interessantes Feature, hier hat man dann auch noch mehr
+
+153
+00:16:15,000 --> 00:16:22,960
+Informationen, natürlich Gerätemodelle, kann man hier auch komplett auswerten, die Marken,
+
+154
+00:16:22,960 --> 00:16:27,720
+je nachdem ob es schafft oder nicht, also wenn unbekannt ist, dann gibt es einfach da keine
+
+155
+00:16:27,720 --> 00:16:36,400
+Zuordnung in Matomo in dem Bereich, was auch ganz gut ist für responsive Design, man kann
+
+156
+00:16:36,400 --> 00:16:41,440
+sich auch mal hier anschauen, wie viele Nutzer greifen denn mit welcher Auflösung zu, das ist
+
+157
+00:16:41,440 --> 00:16:48,880
+eigentlich auch eine ganz gute Metrik. Software, die ist wahrscheinlich jetzt nur dafür da, dass man
+
+158
+00:16:48,880 --> 00:16:53,120
+jetzt einfach mal schauen kann, was für ein Browsersupport muss ich denn als Website Betreiber
+
+159
+00:16:53,120 --> 00:16:58,600
+anbieten noch, muss ich denn noch hergehen und sagen okay ich habe hier den Internet Explorer,
+
+160
+00:16:58,600 --> 00:17:05,280
+muss ich da eventuell noch eine uralt Version mit anbieten, ist ein nettes Feature.
+
+161
+00:17:05,280 --> 00:17:12,800
+Die Zeiten, da gibt es immer zwei Sachen, es gibt einfach den Besuch nach lokaler Zeit, das heißt
+
+162
+00:17:12,800 --> 00:17:18,440
+nehmen wir an mein Server steht jetzt in New York und ich greife um 8 Uhr, Mitteleuropäische
+
+163
+00:17:18,440 --> 00:17:24,480
+Sommerzeit drauf zu, dann wäre ich wahrscheinlich hier reingetrackt, die Serverzeit kann aber eine
+
+164
+00:17:24,480 --> 00:17:30,240
+ganz andere sein, zum Beispiel hier, das ist eigentlich sehr nützlich, wenn man sagt okay,
+
+165
+00:17:30,240 --> 00:17:36,720
+man hat eine hohe Serverlast in mehrere Zeitzonen vielleicht dann überein, das heißt okay morgens
+
+166
+00:17:36,720 --> 00:17:41,640
+habe ich viel Traffic und abends habe ich viel Traffic, für den Server in verschiedenen
+
+167
+00:17:41,640 --> 00:17:47,320
+Zeitzonen ist das zum Beispiel dann geballter Traffic auf Serverzeit, also das ist immer die
+
+168
+00:17:47,320 --> 00:17:53,040
+Zeit, wo der Nutzer auf die Seite schaut und das ist, wo der Server den Standort hat und wo da
+
+169
+00:17:53,040 --> 00:18:02,760
+eben der Aufruf dann auch generiert wird. Falls ihr zum Beispiel Webseitenbetreiber seid und ihr
+
+170
+00:18:02,760 --> 00:18:08,200
+habt irgendeinen Onlineshop, wo sich die Nutzer registrieren können, gibt es die Möglichkeit die
+
+171
+00:18:08,200 --> 00:18:15,160
+Nutzer-IDs direkt mitzugeben, ob es jetzt DSGVO technisch in Ordnung ist oder nicht, das kann
+
+172
+00:18:15,160 --> 00:18:20,400
+ich jetzt leider hier nicht beantworten, aber es ist möglich, dass man zum Beispiel E-Mail-Adressen
+
+173
+00:18:20,400 --> 00:18:25,400
+oder User-String hier noch mitgibt, dann hat man die Möglichkeit und kann sich zum Beispiel
+
+174
+00:18:25,400 --> 00:18:33,200
+anschauen, was hat denn Big Tank hier für Besucherprofil, zum Beispiel der ist schon
+
+175
+00:18:33,200 --> 00:18:40,280
+sehr oft hier drauf gekommen auf die Webseite und was hat er sich überhaupt angesehen. Ist
+
+176
+00:18:40,280 --> 00:18:45,200
+eigentlich sehr gut, was man da einfach mit dabei hat, falls man den Shop hat, kann man
+
+177
+00:18:45,200 --> 00:18:52,560
+das gebündelt mitgeben. Man kann auch noch verschiedene andere Variablen mitgeben. Nehmen
+
+178
+00:18:52,560 --> 00:18:58,840
+wir an, man hat einen Blog und man hat verschiedene Autoren und man kann auch per, also man könnte
+
+179
+00:18:58,840 --> 00:19:03,320
+jetzt, ist jetzt auch noch per, indem man das Tracking-Script von Matomo noch etwas anpasst,
+
+180
+00:19:03,320 --> 00:19:09,560
+wie das geht findet man meistens immer hier unter den Hilfeartikeln, das ist immer sehr gut,
+
+181
+00:19:09,560 --> 00:19:15,520
+wenn man mal nicht weiß, welche, was soll das für eine Metrik sein, um was geht es da, hat man
+
+182
+00:19:15,520 --> 00:19:21,200
+die Möglichkeit, sich das immer hier entweder durch Mouse-Over anzuzeigen oder sich die
+
+183
+00:19:21,200 --> 00:19:26,480
+Dokumentation oder eine Anleitung anzuschauen. Also es muss man im Tracking-Code mitgeben,
+
+184
+00:19:26,480 --> 00:19:31,680
+das heißt, wenn ich einen Blogpost aufrufe und das hat ein gewisser Autor geschrieben,
+
+185
+00:19:31,680 --> 00:19:38,640
+zum Beispiel der Charles, dann wird es neben der URL, den Typer und und und einfach noch mitgegeben,
+
+186
+00:19:38,640 --> 00:19:45,200
+als benutzerdefinierte Variable, ist eigentlich eine sehr gute Sache, wie man zum Beispiel seine
+
+187
+00:19:45,200 --> 00:19:53,600
+Daten mit noch anreichern könnte. Genau, das wäre es jetzt mal hier zu dem Teil, zu dem Besucherteil,
+
+188
+00:19:53,600 --> 00:20:01,880
+ob Sie vielleicht irgendwie schon Fragen in dem Bereich, also sonst schaue ich einfach mal weiter,
+
+189
+00:20:01,880 --> 00:20:07,920
+also sonst Fragen immer gern stellen, sonst gehen wir einfach mal weiter und schauen uns noch die
+
+190
+00:20:07,920 --> 00:20:13,320
+zwei anderen Berichte an, nämlich mal das Verhalten. Beim Verhalten geht es wirklich darum,
+
+191
+00:20:13,320 --> 00:20:19,920
+um die Seite selbst. Hier haben wir einfach die wichtigsten Metriken, Seitenansichten,
+
+192
+00:20:19,920 --> 00:20:26,160
+eindeutige Seitenansichten, zwei Metriken, warum sind die so verschieden? Natürlich,
+
+193
+00:20:26,160 --> 00:20:31,680
+ich kann in einer Sitzung zum Beispiel eine Seite fünfmal aufrufen, dann habe ich eine
+
+194
+00:20:31,680 --> 00:20:37,080
+Seitenansicht von fünf und eindeutig eins, weil ich das einfach in der Sitzung noch einmal
+
+195
+00:20:37,080 --> 00:20:42,960
+aufgerufen habe und die ganzen Metriken wie Abschwungrate und wie lange bleibt man denn
+
+196
+00:20:42,960 --> 00:20:50,400
+durchschnittlich auf dieser Seite. Hier sieht man einfach das gebündelt anhand von der Ordnerstruktur,
+
+197
+00:20:50,400 --> 00:20:56,160
+das heißt, wenn ich jetzt hier einfach mal drauf schaue, dann ist das einfach slash diving, slash
+
+198
+00:20:56,160 --> 00:21:01,720
+und alles, was dahinter passiert. Also das ist eigentlich so wie der Bericht in Analytics nach
+
+199
+00:21:01,720 --> 00:21:09,240
+Content-Seiten. Wenn es einem jetzt nicht gefällt, kann man ganz nach unten gehen und sagen, okay,
+
+200
+00:21:09,240 --> 00:21:15,960
+ich möchte gerne diesen nicht hierarchisch strukturiert sein, ich möchte es einfach gerne
+
+201
+00:21:15,960 --> 00:21:22,520
+flach angezeigt haben. Also flach heißt einfach die erste Ebene oder jede Seiten-URL wird dann im
+
+202
+00:21:22,520 --> 00:21:28,240
+Detail einfach angezeigt. Und jetzt habe ich einfach hier die einzelnen Seiten, kann sie mir
+
+203
+00:21:28,240 --> 00:21:36,480
+natürlich auch mal aufrufen, wenn ich hier drauf gehe und habe dann auch gleich meine Seite parat.
+
+204
+00:21:36,480 --> 00:21:44,560
+Die Einstiegsseiten sind die Landing-Pages. Hier geht es einfach darum, wie kommt der Nutzer auf
+
+205
+00:21:44,560 --> 00:21:51,120
+die Seite, was ist die erste Seite, wenn er auf eure Seite kommt und genau das sind dann die Seiten,
+
+206
+00:21:51,120 --> 00:21:58,360
+die unter Einstiegsseiten aufgelistet werden. Anders wiederum, Ausstiegsseiten, wahrscheinlich
+
+207
+00:21:58,360 --> 00:22:03,840
+kann man sich schon denken, das sind die Seiten, wo einfach nach, wenn man die ganze Sitzung durch
+
+208
+00:22:03,840 --> 00:22:09,240
+ist und wo man dann einfach aufgehört. Das heißt, Browser schließen ist dann die Ausstiegsseite.
+
+209
+00:22:09,240 --> 00:22:18,160
+Wenn man sich mit den URLs, wenn man sagt, okay, URLs möchte ich jetzt nicht mehr anschauen,
+
+210
+00:22:18,160 --> 00:22:22,560
+ich möchte einfach nur den Titel sehen. Dann hat man hier den Titel, da ist aber immer ganz
+
+211
+00:22:22,560 --> 00:22:29,920
+wichtig, ich ändere den Titel einmal, dann habe ich hier zum Beispiel zweimal Card und den anderen
+
+212
+00:22:29,920 --> 00:22:35,200
+Titel und müsste die dann wieder kombinieren. Deswegen ist die URL zum Auswerten eigentlich
+
+213
+00:22:35,200 --> 00:22:42,640
+sehr gut und sehr wichtig, dass man das einfach wirklich URL-basiert macht. Die interne Suche,
+
+214
+00:22:42,640 --> 00:22:48,360
+das kann man auch, indem man zum Beispiel das anpasst. Einerseits das Tracking-Script,
+
+215
+00:22:48,360 --> 00:22:52,880
+andererseits kann ich in den Einstellungen reingehen und sagen, ich möchte so gängige
+
+216
+00:22:52,880 --> 00:23:00,040
+Parameter, in WordPress ist es glaube ich S oder Q, die anhängen und dann wird einfach,
+
+217
+00:23:00,040 --> 00:23:07,680
+dass dahinter, also wenn man WordPress sucht, irgendwas, zum Beispiel hier Floats und dann
+
+218
+00:23:07,680 --> 00:23:14,160
+Enter drückt, dann ist es wirklich in der URL einfach, dass es dann S ist gleich Floats und
+
+219
+00:23:14,160 --> 00:23:22,040
+das nach dem Ist gleich wird dann hier direkt kommt es dann rein. Das sind die Suchbegriffe und wenn
+
+220
+00:23:22,040 --> 00:23:27,560
+man zum Beispiel sucht, wird dann einfach auch geschaut, was passiert denn danach. Da ist es
+
+221
+00:23:27,560 --> 00:23:33,480
+ganz gut, vielleicht als kleiner SEO-Tipp, nehmen wir an, es wird sehr oft was gesucht und ihr habt
+
+222
+00:23:33,480 --> 00:23:39,120
+es nicht im Menü drin, lohnt es sich vielleicht diese Seiteprominente hervorzuheben. Man kommt
+
+223
+00:23:39,120 --> 00:23:44,640
+eventuell auch auf neue Keywords, was man vielleicht noch nicht bedacht hat, was man vielleicht in
+
+224
+00:23:44,640 --> 00:23:51,760
+gewissen Unterseiten dann integrieren kann. Was auch sehr cooles Feature ist, dafür müsst ihr aber
+
+225
+00:23:51,760 --> 00:23:57,600
+auch die Technik fragen, ob das implementiert wird, das ist einfach für einen zusätzlichen Call,
+
+226
+00:23:57,600 --> 00:24:04,760
+was passiert, wenn der Nutzer was sucht und es kommen einfach Null Ergebnisse. Wenn es auch zu
+
+227
+00:24:04,760 --> 00:24:10,920
+oft vorkommt, dann einfach dafür neue Seite anlegen. Das ist im Atom eigentlich sehr gut, da kann man
+
+228
+00:24:10,920 --> 00:24:17,720
+auch mal reingehen und sich das komplett mal anschauen in dem Bereich. Wenn man jetzt hergeht,
+
+229
+00:24:17,720 --> 00:24:23,680
+in den Settings einfach seine Domain hinterlegt, dann hat man die Möglichkeit auch zu schauen,
+
+230
+00:24:23,680 --> 00:24:31,000
+wo gehen die Nutzer denn danach hin, also was ist der nächste Click? Es gibt da Click Tracking auf
+
+231
+00:24:31,000 --> 00:24:37,120
+externe Domains. Hier ist zum Beispiel Live Abort und ich habe auch eben auch die Möglichkeit,
+
+232
+00:24:37,120 --> 00:24:43,640
+hier das mal auszuklappen, wenn das jetzt wieder Domain basiert, wenn das zum Beispiel öfter,
+
+233
+00:24:43,640 --> 00:24:49,400
+also verschiedene URLs einer Domain sind dann wieder gruppiert. Ich kann das natürlich auch
+
+234
+00:24:49,400 --> 00:24:56,080
+wieder flach anzeigen lassen, nicht hierarchisch und ich habe einfach dann auch die Möglichkeit zu
+
+235
+00:24:56,080 --> 00:25:05,160
+schauen, hier jetzt im Detail, wo wurde denn dieser Link geklickt? Das ist hier eben ein Link-Click und
+
+236
+00:25:05,160 --> 00:25:12,240
+das wurde gleichzeitig auch noch als Ziel hinterlegt. Das ist auch eine tolle Sache. Ist vielleicht
+
+237
+00:25:12,240 --> 00:25:16,840
+auch ganz gut, nehmen wir an, man hat gewisse Partner und sagt, du kannst da einen Banner bei
+
+238
+00:25:16,840 --> 00:25:21,160
+uns einbinden und dann hat man gleichzeitig eigentlich eine Statistik, wie oft wurde zum
+
+239
+00:25:21,160 --> 00:25:28,520
+Beispiel ein Banner zum externen Partner geklickt, falls man das benötigt. Download Tracking gibt es
+
+240
+00:25:28,520 --> 00:25:39,120
+auch on the fly. Es heißt, es wird einfach geschaut, ist es PDF, DocX, auch JPEG, je nach dem,
+
+241
+00:25:39,120 --> 00:25:45,280
+man kann auch weitere hinzufügen im Tracking-Codes und dann werden einfach die Downloads getrackt.
+
+242
+00:25:45,280 --> 00:25:51,440
+Da ist es wichtig zu wissen, dass ein Download Tracking, dass es jetzt nicht so etwas ist,
+
+243
+00:25:51,440 --> 00:25:56,680
+wenn ich diese URL direkt aufrufen würde, dann wird es eben nicht getrackt. Warum wird es nicht
+
+244
+00:25:56,680 --> 00:26:04,520
+getrackt? Weil kein JavaScript-Code in einem Bild zum Beispiel ausgeführt werden kann oder in einem
+
+245
+00:26:04,520 --> 00:26:09,680
+PDF eigentlich auch nicht und deswegen wird nicht der Aufruf getrackt, sondern eigentlich nur der
+
+246
+00:26:09,680 --> 00:26:15,600
+Klick zu dem Dokument auf der Webseite. Das ist eigentlich auch ganz gut oder wichtig zu wissen
+
+247
+00:26:15,600 --> 00:26:22,000
+in dem Bereich. Vorn hat man die Ereignisse, das heißt, man hat Events, was man zusätzlich noch
+
+248
+00:26:22,000 --> 00:26:29,040
+mitsenden kann in dem Bereich. Hier wurde zum Beispiel Click Tracking noch mit integriert als
+
+249
+00:26:29,040 --> 00:26:35,200
+Event-Kategorie, also das war Back to Top. Man kann sich das wieder mit dem Segment, mit dem
+
+250
+00:26:35,200 --> 00:26:42,080
+segmentierten Besucherlog anschauen, wo ist denn das ungefähr, das zum Beispiel auf dieser Registerseite
+
+251
+00:26:42,080 --> 00:26:49,320
+gibt es einfach anscheinend einen Back to Top-Button, den man tracken kann. So Click Tracking lässt
+
+252
+00:26:49,320 --> 00:26:54,040
+sich dann meistens immer ganz gut mit dem Atomo Tag Manager machen. Wenn der integriert ist, da
+
+253
+00:26:54,040 --> 00:27:02,240
+gibt es dann auch schon gute Vorlagen, wie man das auch machen kann. Wir schauen uns genau die
+
+254
+00:27:02,240 --> 00:27:08,000
+Inhalte an, also Inhalte, dann machen wir auch nochmal Inhaltsbereiche, die man hier mit angeben
+
+255
+00:27:08,000 --> 00:27:16,480
+kann, ist auch ein gutes Feature, muss man aber auch vorher definieren. Ganz gut, wir schauen uns
+
+256
+00:27:16,480 --> 00:27:23,280
+jetzt noch Engagement an, das sind halt alle so Metriken, durchschnittliche Verweildauer, wie
+
+257
+00:27:23,280 --> 00:27:29,440
+viele Aktionen wurden denn überhaupt durchgeführt, wie oft kommt ein gewisser Nutzer wieder auf die
+
+258
+00:27:29,440 --> 00:27:35,160
+Seite, wie viele Seiten werden denn so im Schnitt angesehen, das sind alles so Metriken, die man sich
+
+259
+00:27:35,160 --> 00:27:45,720
+da gerne gebündelt anschauen kann. Und wir schauen uns jetzt mal den Besucherfluss an, das ist auch
+
+260
+00:27:45,720 --> 00:27:50,320
+ein sehr guter Chart, hier sieht man einfach, kann man sich das mal anschauen, okay, wenn jetzt
+
+261
+00:27:50,320 --> 00:27:58,240
+jemand auf die Jobseite geht, gibt es zum Beispiel 59 Prozent Ausstiege, aber wo gehen denn die ganzen
+
+262
+00:27:58,240 --> 00:28:04,880
+anderen Ausstiege dann wirklich hin, also wo geht der Nutzer denn wirklich später hin, auf welche
+
+263
+00:28:04,880 --> 00:28:10,640
+Seiten, das visualisiert es euch ganz gut, das ist zum Beispiel jetzt auch ein Feature, das gibt es
+
+264
+00:28:10,640 --> 00:28:18,360
+jetzt nur entweder Cloud-hosted oder es ist eben ein Premium Plugin von Matomo, deswegen möchte ich
+
+265
+00:28:18,360 --> 00:28:23,200
+da jetzt auch gar nicht so weiter reingehen, weil ich weiß nicht, ob jeder von euch eben hat dieses
+
+266
+00:28:23,200 --> 00:28:28,960
+Feature. Hier unten haben wir nochmal unsere benutzerdefinierten Variablen, wie wir vorhin eben
+
+267
+00:28:28,960 --> 00:28:34,640
+schon gesehen haben, das ist jetzt zum Beispiel die Page Autos, die sind dann eben dann hier unten
+
+268
+00:28:34,640 --> 00:28:42,800
+aufgelistet. Akquisitionsbericht, wie kommen denn die Nutzer auf unsere Seite, also hier haben wir
+
+269
+00:28:42,800 --> 00:28:49,280
+nochmal in der Übersicht, wie auch überall nochmal aufgelistet, die verschiedenen Kanaltypen,
+
+270
+00:28:49,280 --> 00:28:59,040
+direkt Suchmaschinen, soziale Netzwerke, Webseiten und Kampagnen, das ganze nochmal aufgedröselt
+
+271
+00:28:59,040 --> 00:29:06,240
+nach Kanaltyp, bei der Kanaltyp zum Beispiel Suchmaschinen, dann werden hier eventuell die
+
+272
+00:29:06,240 --> 00:29:11,280
+Suchbegriffe angezeigt, da würde ich mich jetzt aber nicht hundertprozentig immer darauf verlassen,
+
+273
+00:29:11,280 --> 00:29:16,960
+bei Google gibt es zum Beispiel kaum mehr, das sind immer not provided, also es sind eigentlich 95
+
+274
+00:29:16,960 --> 00:29:22,880
+Prozent der Klicks aus Suchmaschinen, geben keine Keywords mit, also nicht, dass jetzt irgendjemand
+
+275
+00:29:22,880 --> 00:29:32,960
+einfach sagt, okay, das sind 53.000 Besucher und das ist 319 mal, ist es der Suchbegriff, vielleicht
+
+276
+00:29:32,960 --> 00:29:38,640
+ist es dann der, der am häufigsten gesucht wird. Da empfehle ich einfach nur immer die Search-Konsole
+
+277
+00:29:38,640 --> 00:29:45,920
+einfach mal reinzuschauen, da gibt es wirklich die echten Search-Daten. Dann schauen wir nochmal
+
+278
+00:29:45,920 --> 00:29:51,920
+genau alle Kanäle, hier haben wir auch nochmal die verschiedenen Kanäle einfach aufgedröselt,
+
+279
+00:29:51,920 --> 00:29:58,520
+zum Beispiel auch die Verweise, Suchmaschinen und Suchbegriffe, hier wäre das alles komplett im
+
+280
+00:29:58,520 --> 00:30:03,000
+Detail, was wir vorhin kurz gesehen haben, aufgeteilt, auch ganz gut, das finde ich hier,
+
+281
+00:30:03,000 --> 00:30:09,560
+diese Suchmaschinenverteilung und bei Matomo auch ein großes Pro-Feature ist, dass es halt überall
+
+282
+00:30:09,560 --> 00:30:14,840
+auch Icons gibt, also man hat auch die Möglichkeit, das mal gut zu exportieren und sich auch dann
+
+283
+00:30:14,840 --> 00:30:25,960
+komplett auch schön anzuzeigen in dem Diagramm. Wir gehen nochmal kurz, genau, das sind die
+
+284
+00:30:25,960 --> 00:30:36,400
+verschiedenen Suchbegriffe bei den verschiedenen Suchmaschinen, ja, bei den Websites, da geht es
+
+285
+00:30:36,400 --> 00:30:40,760
+nochmal darum, wer verweist denn überhaupt auf mich oder wie viele Nutzer kommen denn von
+
+286
+00:30:40,760 --> 00:30:47,920
+gewissen Webseiten, auf meine Seite dazu, genauso wie Social Media, Netzwerke, welche gibt es denn
+
+287
+00:30:47,920 --> 00:30:54,000
+überhaupt und wie kommen denn die verschiedenen Nutzer drauf, ist zum Beispiel Reddit, ist hier
+
+288
+00:30:54,000 --> 00:31:01,400
+sehr gefragt und falls ich selbst Kampagnen habe, bei den Kampagnen ist es jetzt so, es gibt einerseits
+
+289
+00:31:01,400 --> 00:31:08,920
+hier diesen Kampagnennamen, theoretisch weiß ich das Schlüsselwort und und und und hier unten gibt
+
+290
+00:31:08,920 --> 00:31:16,720
+es einen Kampagnen URL-Erzeuger, wenn ich da jetzt drauf gehe, kann ich mir das, was dann später in
+
+291
+00:31:16,720 --> 00:31:21,560
+den Kampagnen ist, selbst zusammenbauen, das heißt, ich haue hier einfach meine URL mal mit rein,
+
+292
+00:31:21,560 --> 00:31:29,120
+sag dann, okay, nehme meinen Kampagnennamen, sag, geh zum Beispiel her und sag, okay, Quelle Medium,
+
+293
+00:31:29,120 --> 00:31:35,040
+also woher kommt das komplett, also wenn ich sag, okay, das ist zum Beispiel ein Newsletter,
+
+294
+00:31:35,040 --> 00:31:41,280
+das Medium ist E-Mail, dann kann ich das hier eintragen, dann habe ich das später hier in
+
+295
+00:31:41,280 --> 00:31:49,120
+meinem Kampagnen-Report-Suchbegriffe und gut, da gibt es jetzt leider keine Daten mehr in dieser
+
+296
+00:31:49,120 --> 00:31:54,000
+Demo, aber dann habe ich, hätte ich hier alles zusammen kompakt da, deswegen auch mein Appell,
+
+297
+00:31:54,000 --> 00:32:02,840
+es gibt nämlich sehr viele Kanäle, wo es heißt, der Direct Traffic, Direct None, kennt vielleicht
+
+298
+00:32:02,840 --> 00:32:07,760
+noch der eine oder andere von Analytics, das ist meistens eigentlich dieses Auffangbecken von dem
+
+299
+00:32:07,760 --> 00:32:13,560
+Traffic, der nicht zuordnbar ist, also teilweise sind das Nutzer, die oben was eingeben, teilweise
+
+300
+00:32:13,560 --> 00:32:18,400
+eben aber auch Nutzer, die aus einem Link, aus einem E-Mail-Programm anklicken, da ist es immer
+
+301
+00:32:18,400 --> 00:32:22,800
+sehr wichtig, dass man, wenn man zum Beispiel eine Signatur oder ein Newsletter aussendet,
+
+302
+00:32:22,800 --> 00:32:29,320
+solche Kampagnen-URLs erzeugt, das ist dann die URL und dahinter sind dann die ganzen, zum Beispiel,
+
+303
+00:32:29,320 --> 00:32:33,880
+was ist das jetzt wirklich für eine Quelle, was ist für ein Medium und dann kommt es zum
+
+304
+00:32:33,880 --> 00:32:40,080
+Beispiel auch hier mit woanders rein und nicht nur der Direct Traffic. Das ist eigentlich sehr wichtig,
+
+305
+00:32:40,080 --> 00:32:46,320
+weil sonst ist man da ein bisschen aufgeschmissen, es gibt verschiedene Szenarien, dir geht es also
+
+306
+00:32:46,320 --> 00:32:52,120
+auch um QR-Code, wenn ich ein QR-Code mal auswerten will, muss ich auch unbedingt eine Kampagnen-URL
+
+307
+00:32:52,120 --> 00:33:01,680
+erzeugen, weil mir sonst nichts anderes über bleibt, weil ich vorne nicht weiß, wie die Nutzer
+
+308
+00:33:01,680 --> 00:33:07,320
+auf die Seite kommen und das kann ich eben nur machen, indem ich so eine Kampagnen-URL erzeuge.
+
+309
+00:33:07,320 --> 00:33:14,960
+Falls ihr einen Shop habt, habt ihr auch die Möglichkeit mit dem E-Commerce-Tracking einfach
+
+310
+00:33:14,960 --> 00:33:21,560
+auch die kompletten Verkäufe zu tracken. Hier nochmal eben der Verlauf der Bestellungen und
+
+311
+00:33:21,560 --> 00:33:26,400
+man sieht halt einfach auf Anib die ganzen Conversion Rate, was jetzt sehr wichtig ist
+
+312
+00:33:26,400 --> 00:33:32,480
+und man kann sich das zusätzlich auch noch mit dem erweiterten E-Commerce-Tracking anschauen,
+
+313
+00:33:32,480 --> 00:33:36,800
+wo werden denn überhaupt Warnkörbe verlassen, das heißt, okay, der Nutzer hat zum Beispiel
+
+314
+00:33:36,800 --> 00:33:43,120
+irgendwas hinzugefügt, ist aber nie gekauft, dann kann das alles hier komplett rein. Was ganz
+
+315
+00:33:43,120 --> 00:33:47,920
+gut ist, man hat jetzt nochmal hier das E-Commerce-Protokoll, das ist sowas wie der
+
+316
+00:33:47,920 --> 00:33:55,280
+Besucherlog, nur auf E-Commerce-Aktivitäten gefiltert, kann man sich auch nochmal anschauen und
+
+317
+00:33:55,280 --> 00:33:59,360
+hier sieht man nochmal alle kompletten Daten. Wie gesagt, E-Commerce-Tracking ist wieder eine
+
+318
+00:33:59,360 --> 00:34:06,160
+andere Liga, das muss man sich dann von Development-Abteilung auch umsetzen lassen,
+
+319
+00:34:06,160 --> 00:34:12,280
+testen lassen, aber es ist eigentlich auch ein sehr gutes Feature, dass man hier einfach mal die
+
+320
+00:34:12,280 --> 00:34:19,840
+ganzen wichtigsten Infos auch hat. Was bringt denn überhaupt mein Shop? Genau, man kann sich das
+
+321
+00:34:19,840 --> 00:34:25,280
+dann nochmal, das sind eben die Produktdaten, genauso wie den Umsatz, bei dem Umsatz ist es
+
+322
+00:34:25,280 --> 00:34:30,880
+nochmal so, dass man hier nochmal wirklich tiefer geht im Atomo und die Möglichkeit hat, okay,
+
+323
+00:34:30,880 --> 00:34:35,160
+man kann sich den Umsatz nach Kanaltypen anschauen, da habe ich dann einfach die
+
+324
+00:34:35,160 --> 00:34:41,680
+Möglichkeit, okay, zu sagen, wo investiere ich mehr, hier zum Beispiel Social Networks hat
+
+325
+00:34:41,680 --> 00:34:48,080
+einfach den meisten Traffic gemacht, im CEO eher am wenigsten, kann sein, dass ich zum Beispiel
+
+326
+00:34:48,080 --> 00:34:53,520
+hier in Social Advertising noch ein bisschen was reinstecke und es sind lauter solche Sachen,
+
+327
+00:34:53,520 --> 00:34:58,880
+die man dann hier direkt mal auswerten kann, auch wenn ich jetzt hier zum Beispiel gewisse
+
+328
+00:34:58,880 --> 00:35:05,960
+Kampagnen habe, habe ich jetzt leider nicht, doch Kampagnennamen wahrscheinlich, habe ich
+
+329
+00:35:05,960 --> 00:35:10,680
+auch die Möglichkeit, okay, das sind Kampagnen, die haben alle keine Einnahmen erzählt, kann ich
+
+330
+00:35:10,680 --> 00:35:17,840
+mir vielleicht überlegen, ob ich die eventuell abschalte in dem Bereich. Was ist eine Webseite
+
+331
+00:35:17,840 --> 00:35:24,800
+ohne Ziele? Eigentlich ohne Ziele sollte eigentlich eine Webseite nie irgendwie online gehen, weil
+
+332
+00:35:24,800 --> 00:35:32,320
+ich jede Webseite verfolge der Ziel und hier kann man verschiedene Ziele eben auch eingeben und
+
+333
+00:35:32,320 --> 00:35:38,040
+eben auch verfolgen, also man hat dann immer Conversion Rate und eine Anzahl von den Conversions,
+
+334
+00:35:38,040 --> 00:35:43,840
+was man hier zum Beispiel hat in dem Bereich und das ist eigentlich eine wichtige Sache, was man
+
+335
+00:35:43,840 --> 00:35:49,280
+hat, die Ziele verwalten, schauen wir uns nochmal kurz hier an, die Ziele kann ich leider nur
+
+336
+00:35:49,280 --> 00:35:58,280
+verwalten, wenn ich selbst, genau, Ziele verwalten, kann einfach ganz normales neues Ziel definieren,
+
+337
+00:35:58,280 --> 00:36:03,720
+kann eine URL sein, es kann zum Beispiel auch eine Seite mit einem bestimmten Titel sein,
+
+338
+00:36:03,720 --> 00:36:09,400
+ich kann es per Event machen, ich kann eine gewisse Datei zum Beispiel herunterladen,
+
+339
+00:36:09,400 --> 00:36:16,160
+wenn ich sage, okay, ich möchte das Ziel haben, einen gewissen Klick auf link an der externen
+
+340
+00:36:16,160 --> 00:36:22,200
+Seite, das ist wie vorhin das Beispiel, ich habe einen, ich biete zum Beispiel Bannerplätze an und
+
+341
+00:36:22,200 --> 00:36:27,760
+sage, okay, der Bannerplatz XY, wenn der, will ich einfach mal gerne anschauen, wie oft er zum
+
+342
+00:36:27,760 --> 00:36:32,640
+Beispiel geklickt worden ist, was für Conversion Rate der dann eigentlich hat, kann ich da Ziel
+
+343
+00:36:32,640 --> 00:36:40,400
+einfach einrichten, genauso wie Pfeildauer und habe dann hier die Möglichkeit, einfach das direkt
+
+344
+00:36:40,400 --> 00:36:47,720
+noch mit anzugeben, ist eigentlich ganz eine gute Sache, was man hier hat. Jetzt in dem normalen
+
+345
+00:36:47,720 --> 00:36:52,800
+Matomo wäre es das noch in dem Bereich, wir haben jetzt noch fünf Minuten, ich zeige euch mal kurz
+
+346
+00:36:52,800 --> 00:37:00,360
+noch die Premium Plugins oder die Plugins, die man bei Matomo Cloud hat, es gibt die Funnels,
+
+347
+00:37:00,360 --> 00:37:06,160
+die Funnels bauen eigentlich auf den Zielen auf, ich kann eben hier bei jedem Ziel noch ein Funnel
+
+348
+00:37:06,160 --> 00:37:11,960
+definieren, das heißt, ich habe hier die Möglichkeit, genau, hier Job Application Form,
+
+349
+00:37:11,960 --> 00:37:18,200
+verschiedene Schritte zu definieren, dass ich einfach sage, okay, woher kommen denn die Nutzer
+
+350
+00:37:18,200 --> 00:37:25,720
+auf das Job Board, wie viel gehen denn weiter, hier hat man zum Beispiel etwas wenig, springen
+
+351
+00:37:25,720 --> 00:37:33,480
+hier weiter, dann wird einfach ein Job sich angeschaut und wird sich wirklich auf diesen Job
+
+352
+00:37:33,480 --> 00:37:39,880
+beworben, das heißt, wir haben ein Conversion Rate von 0,8, warum ist das so? Ja gut, ich habe hier
+
+353
+00:37:39,880 --> 00:37:49,600
+oben 600, 6500 Einstiege ungefähr und hier unten 52 Conversions, wenn man das gegenrechnet, ist das
+
+354
+00:37:49,600 --> 00:37:57,520
+0,8, ist ein nettes Plugin, was man hier eben noch hat, entweder den Cloud Hosted Plan oder man
+
+355
+00:37:57,520 --> 00:38:06,280
+kann sich das eben auch im Matomo Marketplace mal anschauen und dann auch tierischweise kaufen,
+
+356
+00:38:06,280 --> 00:38:11,560
+muss man schauen, okay, für vier User kostet das, das gebe ich jetzt noch einmal als Tipp mit, das
+
+357
+00:38:11,560 --> 00:38:21,320
+ist 179 Euro pro Jahr, ne, aber man braucht mehrere Plugins, dann reicht meistens aber auch schon so
+
+358
+00:38:21,320 --> 00:38:25,680
+eine Matomo Cloud Version, muss ich ehrlich sagen, also wenn man da jetzt einfach mit her geht und
+
+359
+00:38:25,680 --> 00:38:35,680
+sich das dann komplett anschaut mal auf Matomo und dann, wenn man hier nochmal drauf geht und sich
+
+360
+00:38:35,680 --> 00:38:43,560
+dann das Preise, nein, die sind woanders, Pricing hier anschaut und sagt, okay, man hat jetzt eine
+
+361
+00:38:43,560 --> 00:38:50,720
+kleinere Webseite und da wäre man tierischweise mit dem Cloud Hosting 19 Euro schon mal ganz gut
+
+362
+00:38:50,720 --> 00:38:57,160
+dabei, je nachdem wie groß die Seite ist, kann man hier zum Beispiel 35 Euro, wenn man das jetzt
+
+363
+00:38:57,160 --> 00:39:06,040
+gegenrechnet und sagt, okay, man hat 100.000, 35 Euro wären 400 Euro im Jahr, 400, 500 Euro im Jahr, das ist jetzt
+
+364
+00:39:06,040 --> 00:39:12,360
+eigentlich schon mal der Preis für drei Plugins, die man hat und man hat sehr viele Plugins eigentlich
+
+365
+00:39:12,360 --> 00:39:20,440
+mit dabei, das ist der Activity Log zum Beispiel Funnels, was man mit dabei hat, man kann das komplette
+
+366
+00:39:20,440 --> 00:39:26,640
+White Labeling machen und diese Custom Reports, genau wie diese Form, Form Tracking, ist auch
+
+367
+00:39:26,640 --> 00:39:33,440
+sehr gut. Das kann ich nur jedem empfehlen, genau dieses Form Tracking ist, da werden einfach jedes
+
+368
+00:39:33,440 --> 00:39:41,320
+Formsabschluss mit automatisch von Matomo gemessen und eben hier als Formular mit ausgegeben und da
+
+369
+00:39:41,320 --> 00:39:46,560
+kann man dann einfach sich dann anschauen, wenn man Apply-to-Job Form hat, was ist die Starter Rate?
+
+370
+00:39:46,560 --> 00:39:52,560
+Das Starter Rate ist einfach das, wenn einfach was angeklickt wird, also wenn der Fokus in der Formular
+
+371
+00:39:52,560 --> 00:39:58,720
+gesetzt wird, das erste Mal mit am Formular interagiert wird und man hat so Submission Rate, ist
+
+372
+00:39:58,720 --> 00:40:05,120
+eigentlich auch ein sehr gutes Plugin, was man hier noch mit dabei hat. Medien, wenn man zum
+
+373
+00:40:05,120 --> 00:40:11,320
+Beispiel Video, Audio, Player, YouTube, Vimeo oder Self-hosted sich analysieren will, dann hat man
+
+374
+00:40:11,320 --> 00:40:18,120
+das hier eigentlich auch gut mit dabei, hat man den Titel, sie machen mir die Video-Resource, super
+
+375
+00:40:18,120 --> 00:40:25,640
+Feature, A-B-Testing natürlich, zwei Versionen gegeneinander testen, Heatmaps, wie man sie eben
+
+376
+00:40:25,640 --> 00:40:34,880
+ganz normal auch kennt, Fail-to-Load, funktioniert das gerade nicht, aber meistens schon, das ist jetzt
+
+377
+00:40:34,880 --> 00:40:40,080
+genau, was wir dann noch die Möglichkeit haben, sind diese Session Recording, hier wird wirklich der
+
+378
+00:40:40,080 --> 00:40:46,320
+echte Klick aufgezeichnet, schauen wir uns jetzt mal hier ganz kurz an, also wir haben hier noch
+
+379
+00:40:46,320 --> 00:40:53,800
+etwas, was man normal deaktivieren sollte, so kann man sich einfach das mal anschauen, wie klickt
+
+380
+00:40:53,800 --> 00:41:00,040
+denn der Nutzer, was ist die Maus-Interaktion und und und, ist auch ein tolles Feature, wenn man
+
+381
+00:41:00,040 --> 00:41:05,240
+wirklich mal so Sachen ausprobieren will oder messen will, wie irgendwas, was dynamisch aufklappt
+
+382
+00:41:05,240 --> 00:41:11,080
+oder zugeht, kann man sich eigentlich nur empfehlen. Benutzerdefinierte Berichte, wenn euch irgendein
+
+383
+00:41:11,080 --> 00:41:16,800
+Bericht abgeht, könnt ihr den hier selbst nachbauen, er wird dann einfach auch berechnet und
+
+384
+00:41:16,800 --> 00:41:23,080
+ihr könnt dann verschiedene Metriken gegeneinander anzeigen lassen, das ist auch ein sehr sehr guter
+
+385
+00:41:23,080 --> 00:41:33,160
+Report. Genau, jetzt ist es so, dass wir jetzt eigentlich mal so am Ende wären in dem Bereich,
+
+386
+00:41:33,160 --> 00:41:39,320
+ihr könnt jetzt gerne auch noch Fragen stellen, also sei es eben in den Chats oder auch hier,
+
+387
+00:41:39,320 --> 00:41:45,440
+ihr könnt es auch auch anmuten, wenn ihr das wollt und dann einfach direkt fragen, wenn
+
+388
+00:41:45,440 --> 00:41:57,760
+sie Fragen habt, aber wir schauen mal kurz. Jetzt schauen wir kurz, genau, Melanie, ich habe eine
+
+389
+00:41:57,760 --> 00:42:04,120
+Frage zu den Zeitraumberichten für Suchbegriffe ohne Ergebnisse, also interne Suche, genau,
+
+390
+00:42:04,120 --> 00:42:09,560
+die monatlichen Berichte liefern weniger Treffer als die täglichen Berichte im jeweiligen Monat,
+
+391
+00:42:09,560 --> 00:42:15,240
+also wie kann es sein, funktioniert die Aggression nicht oder verstehe ich den Bericht noch falsch?
+
+392
+00:42:15,240 --> 00:42:22,080
+Das müsst ihr jetzt mal anschauen, ich habe es jetzt nicht an einem konkreten Beispiel, das heißt,
+
+393
+00:42:22,080 --> 00:42:34,680
+wir schauen uns das mal ganz kurz an. Ich hoffe, ich kann es hier eigentlich nachstellen, das heißt,
+
+394
+00:42:34,680 --> 00:42:45,800
+du meinst jetzt eigentlich für den Oktober die Besucher für intern Suche anfragen. Ich weiß
+
+395
+00:42:45,800 --> 00:42:52,120
+jetzt nicht, ob du das meinst, also wenn dann, du kannst mir auch eben, schauen wir kurz,
+
+396
+00:42:52,120 --> 00:43:01,760
+den Bericht da runter, sonst schauen wir das mal kurz rein, genau, den Bericht Suche ohne,
+
+397
+00:43:01,760 --> 00:43:07,400
+also das hier eigentlich, wenn ich die täglichen zusammennehme und die dann eigentlich aggregierte
+
+398
+00:43:07,400 --> 00:43:11,960
+Monat unterschiedlich sind, normalerweise sollte es jetzt nicht der Fall sein, das müsste ich
+
+399
+00:43:11,960 --> 00:43:17,760
+mir wahrscheinlich bei dir jetzt mal im Detail anschauen, warum es so der Fall ist. Eigentlich
+
+400
+00:43:17,760 --> 00:43:23,840
+dürfte das normalerweise nicht der Fall sein in dem, aber du kannst mir gerne schauen, wir können
+
+401
+00:43:23,840 --> 00:43:30,760
+uns gerne danach mal eine Videosession ausmachen, ich schaue mir das einfach im Detail an, wo das
+
+402
+00:43:30,760 --> 00:43:39,320
+vielleicht das Problem liegt, wenn das okay ist für dich. Genau, dann machen wir das einfach so,
+
+403
+00:43:39,320 --> 00:43:52,160
+meld sie einfach bei mir, genau. Sonst, ich hoffe, sonst ist es so, ich hoffe, ich konnte euch schon
+
+404
+00:43:52,160 --> 00:43:59,360
+einen guten Überblick geben mal über die Fragen, über die verschiedenen Berichte,
+
+405
+00:43:59,360 --> 00:44:05,960
+falls ihr Fragen habt, dann gerne hier rein, es ist auch Fragen, also falls ihr Fragen habt,
+
+406
+00:44:05,960 --> 00:44:09,600
+also ich kann euch mal sagen, wie ich es damals gemacht habe, es gibt das Matomo-Forum, da war
+
+407
+00:44:09,600 --> 00:44:15,520
+eben der Lukas auch gut drinnen, der hat mir auch sehr viel dann weitergeholfen, das heißt,
+
+408
+00:44:15,520 --> 00:44:19,880
+es ist ein Matomo-Forum, es gibt auch sogar einen deutschen Bereich, da kann man auch immer sehr
+
+409
+00:44:19,880 --> 00:44:26,080
+gut was rein posten und da wird einem auch gut geholfen, wenn man die Cloud-Version hat,
+
+410
+00:44:26,080 --> 00:44:32,840
+dann gibt es sogar ein Matomo-Support, es gibt Videos, es gibt englische Videos, ich habe auch
+
+411
+00:44:32,840 --> 00:44:39,240
+noch ein paar Videos, was es jetzt auch noch gibt, genau, Lukas schreibt noch, im Anschluss um 16 Uhr
+
+412
+00:44:39,240 --> 00:44:46,480
+haben wir eine Q&A-Session, da melden wir, genau, das ist auf Englisch, könntest du eventuell das
+
+413
+00:44:46,480 --> 00:44:52,720
+nochmal mitnehmen, ob das vielleicht vom Verarbeiten zum Beispiel ein Problem ist, da kann man auch
+
+414
+00:44:52,720 --> 00:44:59,000
+nochmal gut die Fragen stellen, allgemein zum Matomo-Techmanage-Integration, Self-hosted und,
+
+415
+00:44:59,000 --> 00:45:05,560
+und, da sind um die fünf Experten dann mit dabei, wir sehen uns, glaube ich, dann nochmal in zehn
+
+416
+00:45:05,560 --> 00:45:11,320
+Minuten, da könnt ihr gerne mal rein wechseln in die Q&A-Session, vielleicht postet der Lukas
+
+417
+00:45:11,320 --> 00:45:18,760
+nochmal kurz den Link rein, so dass man direkt gleich weghupfen kann in dem Bereich und ja,
+
+418
+00:45:18,760 --> 00:45:26,400
+und sonst sage ich mal vielen Dank, vielen Dank für eure Zeit, vielen Dank einfach mal fürs
+
+419
+00:45:26,400 --> 00:45:33,360
+Zuhören, fürs Dranbleiben, sind doch genau fast 20 Leute, es hat mich sehr gefreut, falls es noch
+
+420
+00:45:33,360 --> 00:45:40,800
+etwas gibt, einfach anschreiben, es gibt keine dummen Fragen, einfach nicht scheuen, anschreiben
+
+421
+00:45:40,800 --> 00:45:48,320
+und wir können das gemeinsam uns anschauen und wir können das alles gemeinsam lösen. Ich wünsche
+
+422
+00:45:48,320 --> 00:45:56,200
+euch noch einen sehr schönen Tag, noch eine schöne Zeit hier im Matomo-Camp, heute Morgen ist auch noch
+
+423
+00:45:56,200 --> 00:46:01,960
+etwas, morgen ist auch noch ein Tag, schaut euch auch an, sehr viele interessante Vorträge, macht
+
+424
+00:46:01,960 --> 00:46:29,960
+es gut und bleibt gesund. Tschüss.
+
