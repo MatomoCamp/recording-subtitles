@@ -1,0 +1,1820 @@
+1
+00:00:00,000 --> 00:00:11,120
+Hello everyone and welcome to this second day of the Matomo Camp.
+
+2
+00:00:11,120 --> 00:00:16,400
+So for the moment everything is going well, I hope that will be the case throughout this
+
+3
+00:00:16,400 --> 00:00:23,320
+second day. We are lucky and honored today to receive Valentin Bares who works
+
+4
+00:00:23,320 --> 00:00:30,080
+at Empreinte Digital and who is actually the person who manages all the streams that we
+
+5
+00:00:30,080 --> 00:00:36,520
+have today and that we had yesterday in Matomo Camp. Just to say a few words about Valentin,
+
+6
+00:00:36,520 --> 00:00:43,480
+so Valentin is DevOps at Empreinte Digital which is a company located in Angers. His main
+
+7
+00:00:43,480 --> 00:00:50,120
+mission is the deployment and maintenance of the cloud structure in SAS mode of the Empreinte
+
+8
+00:00:50,120 --> 00:00:56,040
+Digital which is a data center that is spread between Angers, Rennes and Tours. In this
+
+9
+00:00:56,040 --> 00:01:02,960
+conference, Valentin will tell us how we manage a Matomo instance on a daily basis,
+
+10
+00:01:02,960 --> 00:01:08,160
+whether it is an instance that is very simple, that does not have a lot of traffic,
+
+11
+00:01:08,160 --> 00:01:15,400
+up to an instance that has up to 5 million visitors per month. So it is above all a
+
+12
+00:01:15,400 --> 00:01:22,120
+conference in experience return mode for nearly two years. Empreinte Digital and Valentin
+
+13
+00:01:22,120 --> 00:01:28,440
+are currently managing a client that some of you may know, which is PIX. PIX is
+
+14
+00:01:28,440 --> 00:01:33,960
+actually a platform that allows you to test digital knowledge which is notably used
+
+15
+00:01:33,960 --> 00:01:40,600
+in the world of higher education. It is a little bit the equivalent of TOEIC but
+
+16
+00:01:40,600 --> 00:01:45,600
+in digital culture mode. So it's a little bit like how we could see it in the
+
+17
+00:01:45,600 --> 00:01:52,680
+conference yesterday hosted by Roré from the Digitalist AB team. We are on a site
+
+18
+00:01:52,680 --> 00:01:58,240
+that receives a lot of traffic and which manages to keep up with a Matomo who is
+
+19
+00:01:58,240 --> 00:02:04,840
+there to monitor all of this. That's it. Listen, I'm going to leave the floor to Valentin. Do not hesitate
+
+20
+00:02:04,840 --> 00:02:10,840
+during the whole conference to interact, to ask questions on the platform which I remind you is
+
+21
+00:02:10,840 --> 00:02:17,560
+chat.matomocamp.org on which you can register. You have a room that corresponds
+
+22
+00:02:17,560 --> 00:02:22,140
+to the conference we currently have. You ask all your questions there. And if you
+
+23
+00:02:22,140 --> 00:02:27,640
+want to continue to ask questions to Valentin, do not hesitate to use this chat
+
+24
+00:02:27,640 --> 00:02:37,040
+which will be active for the whole day. I wish you all a very good conference.
+
+25
+00:02:37,040 --> 00:02:42,480
+Hello everyone. So first of all I'm going to try to fix a little problem at the
+
+26
+00:02:42,480 --> 00:02:49,960
+level of the conference because a priori it does not appear. So I'm going to allow myself to
+
+27
+00:02:49,960 --> 00:02:59,240
+upload the conference to you. These are the little direct alerts we are going to say.
+
+28
+00:03:10,920 --> 00:03:11,320
+So
+
+29
+00:03:11,320 --> 00:03:22,360
+I'm sorry for this little setback.
+
+30
+00:03:41,320 --> 00:04:11,160
+Downloaded. So hello everyone.
+
+31
+00:04:12,120 --> 00:04:18,720
+My name is Valentin. Thank you Renan for giving me the floor to talk to you about what is a
+
+32
+00:04:18,720 --> 00:04:25,880
+upload of Matomo. So we're going to talk about how it is possible to create a Matomo
+
+33
+00:04:25,880 --> 00:04:32,640
+instance easily. To show how easy it is to set up and maintain a software.
+
+34
+00:04:32,640 --> 00:04:39,920
+And also to see how it is possible to upload up to loads that we
+
+35
+00:04:39,920 --> 00:04:44,480
+were able to meet yesterday in the first day up to 50 million visits per month, etc.
+
+36
+00:04:44,480 --> 00:04:50,880
+So first of all, who am I? My name is Valentin Barret. I am a DevOps Engineer at
+
+37
+00:04:50,880 --> 00:05:00,000
+Empreinte Digital. We have been running Matomo for a little over two years. We started
+
+38
+00:05:00,000 --> 00:05:08,240
+little by little on this software by obviously appetizing to open source and to
+
+39
+00:05:08,240 --> 00:05:14,080
+offer additional service to our customers. And so for two years we have acquired a lot of
+
+40
+00:05:14,080 --> 00:05:19,200
+experience until we will see, we will reach rather interesting numbers on the
+
+41
+00:05:19,200 --> 00:05:28,520
+management of Matomo instances. So do I have to introduce Matomo? Well, not really,
+
+42
+00:05:28,520 --> 00:05:33,880
+we are at MatomoComp, but I still wanted to say a few things. It was that Matomo,
+
+43
+00:05:33,880 --> 00:05:39,040
+it is formerly Peweak, that it has existed for a very long time. It is an open source software
+
+44
+00:05:39,040 --> 00:05:45,480
+for web statistics, successor to PHP MyVisit and designed to be an alternative
+
+45
+00:05:45,480 --> 00:05:50,520
+free to Google Analytics, Matomo works on PHP and MySQL servers. And as Renan
+
+46
+00:05:50,520 --> 00:05:56,120
+said very precisely yesterday, you should know that Matomo is neither more nor less than a database
+
+47
+00:05:56,120 --> 00:06:00,240
+with data that we collect as we go. And what is also interesting is to
+
+48
+00:06:00,240 --> 00:06:03,960
+say that Matomo is a software that has existed for years and years and that it is based
+
+49
+00:06:03,960 --> 00:06:12,640
+on essentially two bricks, PHP and MySQL. So it's only two simple components
+
+50
+00:06:12,640 --> 00:06:18,800
+that allow you to have a tool as powerful as Matomo. PHP which will allow you to process
+
+51
+00:06:18,800 --> 00:06:24,280
+information, so obviously there is a bit of language, now there is JavaScript, there is PHP,
+
+52
+00:06:24,280 --> 00:06:28,160
+there is a little more tuning around all that, but originally you have to know that it is really
+
+53
+00:06:28,160 --> 00:06:33,360
+two technologies, the simplest possible to create analytics tools that we know today.
+
+54
+00:06:33,360 --> 00:06:41,400
+So the first approach with Matomo. So I have my little images that do not work
+
+55
+00:06:41,400 --> 00:07:09,080
+because of the PDF rendering, but it does not matter. The first approach with Matomo. So I just want to tell you the story of the
+
+56
+00:07:09,080 --> 00:07:13,280
+implementation of Matomo as we could hear it today. That is to say that I place myself
+
+57
+00:07:13,280 --> 00:07:18,560
+as a dev, I am not a dev, I am a sysops with a dev habitat, but I place myself
+
+58
+00:07:18,560 --> 00:07:21,760
+as a dev, I have an application, I want to test the audience, Google I do not like it too much,
+
+59
+00:07:21,760 --> 00:07:29,840
+I know that there are some privacy problems, I have RGPD, etc. So I tell myself,
+
+60
+00:07:29,840 --> 00:07:34,920
+I type on Google, I easily come across Matomo and I tell myself that it seems to correspond to my needs,
+
+61
+00:07:34,920 --> 00:07:40,560
+in addition, I looked at the list of integrations, I can integrate it very easily in WordPress,
+
+62
+00:07:40,560 --> 00:07:45,200
+in Hugo, etc. There are more than 40 integrations that have been created by the community.
+
+63
+00:07:45,200 --> 00:07:53,440
+So I tell myself, but ok, perfect, I'm going to put a piece in this software.
+
+64
+00:07:53,440 --> 00:08:01,480
+And so there, what I can see is that Matomo can track up to more than 100,000 pages,
+
+65
+00:08:01,480 --> 00:08:08,680
+so page views per month, with, let's say, quite a few resources, that is to say 2 CPUs,
+
+66
+00:08:08,680 --> 00:08:16,080
+2 GB of RAM and 50 GB of SSD for the disk in particular. So that means that on my application
+
+67
+00:08:16,080 --> 00:08:23,160
+that I put at my disposal for my development, which aims to sell, I am a dev,
+
+68
+00:08:23,160 --> 00:08:27,760
+I created a product, I want to sell it, I want to make it known, etc. And I want to see
+
+69
+00:08:27,760 --> 00:08:35,000
+how the users use it. And well, quite simply, I will be able to track,
+
+70
+00:08:35,000 --> 00:08:41,840
+let's say, the user on the functioning of my website. And all this without changing hosting,
+
+71
+00:08:41,840 --> 00:08:49,280
+without adding CPU cores, because I took a forfeit at OVH, at Scaleway, at Emprunt Digital,
+
+72
+00:08:49,280 --> 00:08:59,640
+and it is possible to have my hosting next to my Matomo. So it's easy to install,
+
+73
+00:08:59,640 --> 00:09:06,120
+I have my integrations, easy to maintain, it's PHP with a database, there may be
+
+74
+00:09:06,120 --> 00:09:12,080
+some surprises, but overall all the updates are going pretty well. It corresponds to all my
+
+75
+00:09:12,080 --> 00:09:15,520
+needs. My goal at the beginning is to really have my page views, to know how many people
+
+76
+00:09:15,520 --> 00:09:22,120
+access my application and how many pages of my application have been consulted, etc.
+
+77
+00:09:22,120 --> 00:09:27,400
+And it works automatically, that is to say that once we have installed the Matomo,
+
+78
+00:09:27,400 --> 00:09:32,400
+once we have put the tracking, the data almost easily enter the application
+
+79
+00:09:32,400 --> 00:09:40,120
+and it is possible, in addition to that, to consult them so easily. So there,
+
+80
+00:09:40,120 --> 00:09:48,840
+the image is missing, it doesn't matter, I'm talking about 100 to 1 million users,
+
+81
+00:09:48,840 --> 00:09:52,880
+but for now you offer us to have an installation for a few users, because I remind you
+
+82
+00:09:52,880 --> 00:10:02,080
+that here, my goal at the beginning was to create my application, to have tracking,
+
+83
+00:10:02,080 --> 00:10:07,600
+but I know that when I start a business, unless I have been driven by big guys,
+
+84
+00:10:07,600 --> 00:10:14,960
+I will only have a few users who will, how to say, consult my application at the beginning.
+
+85
+00:10:14,960 --> 00:10:22,080
+So you tell us, I'm going to go from 100 users to more than a million,
+
+86
+00:10:22,080 --> 00:10:28,840
+but how are we going to do it because we are on an installation that is 2 CPUs,
+
+87
+00:10:28,840 --> 00:10:35,320
+2 GB of RAM, and in addition to that you show us that the requirements can go only up to
+
+88
+00:10:35,320 --> 00:10:43,400
+100,000 pageviews per month. No, no, I'm not fooling you, don't worry,
+
+89
+00:10:43,400 --> 00:10:49,360
+my application works well, we want more visitors, I have more visitors,
+
+90
+00:10:49,360 --> 00:10:56,720
+my business is developing, it's great, I go from me alone in my garage to a little more
+
+91
+00:10:56,720 --> 00:11:03,120
+in my company that I created in order to develop my product, and so I have a team
+
+92
+00:11:03,120 --> 00:11:11,640
+around that in the company. We are now 3-4 devs, I had a web analyst
+
+93
+00:11:11,640 --> 00:11:20,040
+enter my company because we know that it is also important today to know the
+
+94
+00:11:20,040 --> 00:11:27,760
+audience, especially on products in extra web. And so suddenly the web analyst tells me
+
+95
+00:11:27,760 --> 00:11:32,240
+oh there we are starting to have a lot of traffic, but on the other hand there is a latency for my access to my
+
+96
+00:11:32,240 --> 00:11:39,120
+Matomo. So a little aside, I'm talking to you about a feedback, it's pretty much
+
+97
+00:11:39,120 --> 00:11:43,120
+what we had, that is to say that more than two years ago, it's been a long time since we used Matomo,
+
+98
+00:11:43,120 --> 00:11:48,080
+but it's been more than two years now that we're trying to promote it, also for our
+
+99
+00:11:48,080 --> 00:11:57,160
+clients I mean. We were using Matomo and we realized that damn the access now to the
+
+100
+00:11:57,160 --> 00:12:00,840
+websites could be a little slower by a few milliseconds, but the web analyst
+
+101
+00:12:00,840 --> 00:12:06,480
+told us yeah it's still a bit embarrassing because it slows down almost the entire stack
+
+102
+00:12:06,480 --> 00:12:14,320
+just because we added tracking. So there is a pretty simple tip to improve
+
+103
+00:12:14,320 --> 00:12:20,400
+the experience in terms of access to tracking and therefore easier recording.
+
+104
+00:12:20,400 --> 00:12:27,000
+So we talked about it yesterday with the first talks of Tips and Tricks, and then
+
+105
+00:12:27,000 --> 00:12:32,160
+globally all the people who talked about infrastructure. The must-have in this case,
+
+106
+00:12:32,160 --> 00:12:38,760
+and in almost all Matomo installations, is obviously the Qt tracking.
+
+107
+00:12:38,760 --> 00:12:48,240
+What is Qt tracking? Well, it's the tailing of the statistics, how to say,
+
+108
+00:12:48,240 --> 00:12:54,840
+of the user's follow-up code in a queue. So here we are talking about Redis or MySQL,
+
+109
+00:12:54,840 --> 00:13:04,320
+which will allow us to wait for the records of the website and to ingest them,
+
+110
+00:13:04,320 --> 00:13:10,160
+to feed them by MySQL in batches, that is to say that rather than putting them one by one
+
+111
+00:13:10,160 --> 00:13:15,800
+as we go along and having a complete follow-up of the request until it is stored,
+
+112
+00:13:15,800 --> 00:13:20,400
+here we are going to put the different requests in a box and once this box is filled,
+
+113
+00:13:20,400 --> 00:13:30,200
+we put it in, how to say, Matomo's PHP, which will say, oh look, the box is filled,
+
+114
+00:13:30,200 --> 00:13:35,240
+I'm going to put this box directly to the database. And that, by the way, greatly improves
+
+115
+00:13:35,240 --> 00:13:43,200
+the performance. So that's what I'm saying, the principle is simple, a waiting line
+
+116
+00:13:43,200 --> 00:13:46,680
+to record more quickly the accesses and reduce the load in a tight flow. More info,
+
+117
+00:13:46,680 --> 00:13:51,200
+I put the link of the plugin QtTracking, do not hesitate to go and check it out,
+
+118
+00:13:51,200 --> 00:13:55,600
+it is really very interesting and we have been able to see it over the different conferences,
+
+119
+00:13:55,600 --> 00:14:04,800
+it is a must-have. So it's great, I have a demo, I'll try to do it,
+
+120
+00:14:04,800 --> 00:14:12,960
+I hope it works, otherwise I'll skip it and then it's not very fun. So it's great,
+
+121
+00:14:12,960 --> 00:14:20,520
+the web analyst tells me, great, thanks to your little optimizations, you were able to
+
+122
+00:14:20,520 --> 00:14:28,360
+increase the score of the page load, etc. And on top of that, we didn't need to
+
+123
+00:14:28,360 --> 00:14:35,880
+take up an additional hosting, oh damn, I'm sorry, the diagram doesn't work,
+
+124
+00:14:35,880 --> 00:14:47,760
+it doesn't matter, I'll do it for you. We will say that we have the users here, we have
+
+125
+00:14:47,760 --> 00:15:17,200
+the matomo here, finally the inframatomo, we improvise, it doesn't matter. And so, where before I had my matomo with my database,
+
+126
+00:15:17,200 --> 00:15:35,840
+I could, so I'm just going to make a little note here, and add here. So the users
+
+127
+00:15:35,840 --> 00:15:40,400
+arrive on matomo and there is a connection between the database and matomo, we were able to add
+
+128
+00:15:40,400 --> 00:15:49,800
+here what we call QtTracking via a Redis database. And so from an infrastructure point of view,
+
+129
+00:15:49,800 --> 00:15:56,280
+it's very simple, we have the user who will record the requests in the matomo,
+
+130
+00:15:56,280 --> 00:16:01,200
+and rather than going from matomo to the database, we will go through the Redis which will allow us
+
+131
+00:16:01,200 --> 00:16:07,240
+to stamp all of these requests and therefore to avoid overloading the PHP used by matomo
+
+132
+00:16:07,240 --> 00:16:12,280
+and also by the application, we can imagine that it is a Wordpress, a Drupal, any PHP application,
+
+133
+00:16:12,280 --> 00:16:17,560
+and therefore that the PHP is shared. And so rather than overloading the PHP of the entire machine,
+
+134
+00:16:17,560 --> 00:16:23,800
+so the small VPS that we can imagine, we will just pass the plates in the Redis and matomo
+
+135
+00:16:23,800 --> 00:16:31,600
+will act, we will say at an almost regular interval, to launch the integration of the requests
+
+136
+00:16:31,600 --> 00:16:38,720
+in the database. So we have a very simple infrastructure, we can scale, so we went from
+
+137
+00:16:38,720 --> 00:16:48,160
+a few users to, we will say, we can perhaps imagine several thousand users in the infrastructure
+
+138
+00:16:48,160 --> 00:16:57,200
+without changing much. QtTracking is a really important asset in matomo. And that's
+
+139
+00:16:57,200 --> 00:17:03,840
+great, that is to say that even if we have our business that is increasing, that we have more and more
+
+140
+00:17:03,840 --> 00:17:14,280
+users, we have a small plugin to install and let's go, we can delay the increase
+
+141
+00:17:14,280 --> 00:17:22,360
+of the infrastructure. So the demo, I'm not going to do it, we'll do it at the end if I have time
+
+142
+00:17:22,360 --> 00:17:33,320
+to really show you how effective it is. In theory, the demo is a success.
+
+143
+00:17:33,320 --> 00:17:38,800
+And so I ask myself the question of how to make sure of the point of break. Obviously there I
+
+144
+00:17:38,800 --> 00:17:47,120
+told you, the web analyst told us, here I would like to increase the response time of
+
+145
+00:17:47,120 --> 00:17:56,680
+access to tracking, so small JS or small PHP request, etc. for matomo. But there is another
+
+146
+00:17:56,680 --> 00:18:02,520
+problem, that is to say that obviously we delay the increase of the infrastructure. I remember
+
+147
+00:18:02,520 --> 00:18:09,640
+earlier we were on two 2 GB RAM CPUs, 50 SSDs. Come on, we said to ourselves, we went from 4 GB RAM CPUs,
+
+148
+00:18:09,640 --> 00:18:16,040
+great, we were able to increase the load even more, but now I'm starting to have a lot of
+
+149
+00:18:16,040 --> 00:18:26,160
+slowdowns on my application, as much as cms, imagine it's a cms, than for the integration of
+
+150
+00:18:26,160 --> 00:18:31,800
+data in matomo. And on top of that, I have the impression that sometimes it's not quite representative
+
+151
+00:18:31,800 --> 00:18:39,560
+of what can happen. So how to detect problems? So obviously the first problem
+
+152
+00:18:39,560 --> 00:18:45,880
+which is quite simple to identify is the slow access. We have trouble accessing the application,
+
+153
+00:18:45,880 --> 00:18:55,360
+rather than loading the application in 1 second, 500 milliseconds, etc. We find ourselves at 3-4
+
+154
+00:18:55,360 --> 00:19:01,120
+seconds, we have errors 500 in server and in addition we have timeouts that appear in the
+
+155
+00:19:01,120 --> 00:19:10,080
+vhost, in the matomo application. So small aside, second small aside, I'm talking about
+
+156
+00:19:10,080 --> 00:19:17,200
+concepts, I'm not talking about techno. All this can be done in barmetal, in container, in sass,
+
+157
+00:19:17,200 --> 00:19:20,960
+knowing that the sass obviously it's not really you who manage, but we can still
+
+158
+00:19:20,960 --> 00:19:26,760
+realize small slow access and small timeouts, even errors 500 if we have monitoring etc.
+
+159
+00:19:26,760 --> 00:19:32,760
+In short, I'm talking about concepts and there is no techno behind all this, you do it as you
+
+160
+00:19:32,760 --> 00:19:38,240
+want. This is also the advantage of this matomo application, it's PHP, so it's
+
+161
+00:19:38,240 --> 00:19:44,560
+relatively standard, so you do it roughly as you want. So how to detect problems?
+
+162
+00:19:44,560 --> 00:19:48,800
+These small indicators can tell us, ah it's weird, that's it, my matomo I have the impression that it is
+
+163
+00:19:48,800 --> 00:19:54,600
+a little overloaded. So how can we increase the load? So I said a little bit
+
+164
+00:19:54,600 --> 00:19:57,560
+earlier, we can increase the cpu, we can increase the memory and hop it starts again,
+
+165
+00:19:57,560 --> 00:20:02,320
+indeed we can increase the cpu, we can increase the memory and it starts again,
+
+166
+00:20:02,320 --> 00:20:10,360
+we will say almost. It's not that complicated to increase the load, but we can't increase
+
+167
+00:20:10,360 --> 00:20:17,840
+infinitely, that is to say that at one point we are not going to order machines with 128 cpu,
+
+168
+00:20:17,840 --> 00:20:24,680
+3 terabytes of ram, 6 terabytes of storage, just for the pleasure of our eyes, we will say, and to
+
+169
+00:20:24,680 --> 00:20:28,680
+say to ourselves, it's good, I'm going to manage my matomo infrastructure. No, it can't work like that.
+
+170
+00:20:28,680 --> 00:20:36,240
+For what reason? Simply high availability. Our business, we started from a developer
+
+171
+00:20:36,240 --> 00:20:42,320
+to a team of developers and now that's it, I feel like I'm well into the business and
+
+172
+00:20:42,320 --> 00:20:50,240
+then it's really part of the identity now, the analytics, I offer products with
+
+173
+00:20:50,240 --> 00:20:54,360
+analytics etc. So it really has to be that this matomo infrastructure is a key point
+
+174
+00:20:54,360 --> 00:21:00,720
+and an additional motivation to ensure it in the infrastructure of my company. And
+
+175
+00:21:00,720 --> 00:21:05,600
+so for that, you obviously have to have high availability. High availability goes through
+
+176
+00:21:05,600 --> 00:21:14,800
+what? Well, through a lot of things that we will see just after. So can we scale horizontally?
+
+177
+00:21:14,800 --> 00:21:23,200
+I'm sorry, every time there are small diagrams but I will provide them to you after with the
+
+178
+00:21:23,200 --> 00:21:29,040
+PDF better generated. So can we scale horizontally? In high availability,
+
+179
+00:21:29,040 --> 00:21:32,120
+we can ask ourselves this question. Can we scale horizontally? Yes we can.
+
+180
+00:21:32,120 --> 00:21:37,920
+What components? The PHP application, the Redis, the database and of course we don't forget,
+
+181
+00:21:37,920 --> 00:21:43,320
+last but not least, a LB. LB for calls, for technical names or for techniques,
+
+182
+00:21:43,320 --> 00:21:48,400
+the load balancer, so to manage the load on the different PHP applications.
+
+183
+00:21:48,400 --> 00:21:55,640
+The advantage is that it is an application that is in PHP, which has different components,
+
+184
+00:21:55,640 --> 00:22:01,040
+which can work in different ways. We have seen it with the different conferences,
+
+185
+00:22:01,040 --> 00:22:06,680
+especially with the conference of our Italian friends, which was great,
+
+186
+00:22:06,680 --> 00:22:12,760
+I really invite you to go and see it. They have really separated each PHP component
+
+187
+00:22:12,760 --> 00:22:22,000
+with the cron, the task scheduler, the tracking, etc. So great, we know that Matomo,
+
+188
+00:22:22,000 --> 00:22:27,360
+we can scale it. That's good news. That is to say that from now on, we are able to
+
+189
+00:22:27,360 --> 00:22:33,680
+switch from a small infrastructure on a server, a database, to different servers,
+
+190
+00:22:33,680 --> 00:22:39,920
+a Redis database that can be clustered, several databases that can do read-write, etc.
+
+191
+00:22:39,920 --> 00:22:49,120
+In short, a pleasure. And here we don't have the infrastructure. So I'm going to
+
+192
+00:22:49,120 --> 00:22:59,960
+allow myself to add a small image because I find this one rather interesting. So I
+
+193
+00:22:59,960 --> 00:23:13,600
+ask you two minutes. On the page to manage the infrastructure, it is also to know the tools
+
+194
+00:23:13,600 --> 00:23:18,400
+for the Matomo camp. So I can afford to offer you the possibility to see what I
+
+195
+00:23:18,400 --> 00:23:23,120
+wanted to show you. And so now we end up with an infrastructure that is more complex.
+
+196
+00:23:23,120 --> 00:23:27,400
+So this is the visualization of what I was explaining to you just before. We have the
+
+197
+00:23:27,400 --> 00:23:31,520
+requests that arrive, we have a load balancer that is distributed on the different Matomo. So it
+
+198
+00:23:31,520 --> 00:23:38,680
+can be full applications or not, as I said at the moment, with different microservices,
+
+199
+00:23:38,680 --> 00:23:46,400
+which uses a Redis cluster or a Redis node. In short, there are plenty of solutions. And then
+
+200
+00:23:46,400 --> 00:23:53,520
+we have a MySQL database that is in replication, master-master, master-slave. In short,
+
+201
+00:23:53,520 --> 00:23:59,160
+obviously, we have plenty of imagination to improve the infrastructure. Obviously,
+
+202
+00:23:59,160 --> 00:24:07,240
+it is also limited by the choices that have been made by Matomo. We talked about it yesterday
+
+203
+00:24:07,240 --> 00:24:13,040
+with the different databases that would like to be integrated into Matomo. This is
+
+204
+00:24:13,040 --> 00:24:21,040
+the result of the MySQL that I took, obviously. Success! In relation to our little installation,
+
+205
+00:24:21,040 --> 00:24:26,120
+we asked ourselves questions and we realized now that it was possible to have
+
+206
+00:24:26,120 --> 00:24:33,080
+a Matomo infrastructure of highly available and scalable production. Great,
+
+207
+00:24:33,080 --> 00:24:41,120
+we went from 100,000 to more than 100 million visits per month. It's not me who said it,
+
+208
+00:24:41,120 --> 00:24:46,880
+it's obviously the Matomo requirements page. And I schematize a little because in fact,
+
+209
+00:24:46,880 --> 00:24:51,200
+once we understood how it was possible to add this or that component,
+
+210
+00:24:51,200 --> 00:24:57,240
+of what is this or that component, it is easy to... I say easy because we will see
+
+211
+00:24:57,240 --> 00:25:02,520
+that there are small subtleties, but it is relatively easy to understand how we can
+
+212
+00:25:02,520 --> 00:25:09,040
+increase the load of our Matomo. And I didn't talk about it, but we can even,
+
+213
+00:25:09,040 --> 00:25:13,880
+once we are comfortable with the infrastructure, we are comfortable with the different elements
+
+214
+00:25:13,880 --> 00:25:19,680
+that we have put at the level of tracking, etc. Put our little JavaScript code on a
+
+215
+00:25:19,680 --> 00:25:31,120
+CDN to further increase the possibility of quick access to different points of the globe.
+
+216
+00:25:31,120 --> 00:25:38,640
+I didn't show you that. Obviously, all of this can be done in bar-metal clusters,
+
+217
+00:25:38,640 --> 00:25:44,760
+in Kubernetes clusters, in SWAM clusters. I remind you, I'm not talking about techno,
+
+218
+00:25:44,760 --> 00:25:49,520
+I'm talking about concepts. Here we are on things that allow us to understand how
+
+219
+00:25:49,520 --> 00:25:54,000
+it is easy to go from 100 to several million users per month.
+
+220
+00:25:54,000 --> 00:26:02,360
+Well, a little surprise that we had in our experience is that the web analyst
+
+221
+00:26:02,360 --> 00:26:05,840
+wants to use a tag manager because the goal is to have even more ways to analyze the
+
+222
+00:26:05,840 --> 00:26:10,200
+use of the site. Great! Renan will tell you about it, tag manager is a great tool,
+
+223
+00:26:10,200 --> 00:26:16,480
+Renan Chardonneau and Renan Hélo, I remember, who talk about it regularly. These are great
+
+224
+00:26:16,480 --> 00:26:25,320
+tools, but we realized one thing, it is that in a clustered environment,
+
+225
+00:26:25,320 --> 00:26:30,560
+the tag manager is not really designed to be clustered. So there are issues
+
+226
+00:26:30,560 --> 00:26:38,440
+in this sense. We, in our case of client experience and return of experience,
+
+227
+00:26:38,440 --> 00:26:43,360
+had to find a solution relatively quickly. So how did we figure it out?
+
+228
+00:26:43,360 --> 00:26:48,360
+What does a tag manager mean? In fact, the tag manager cannot be
+
+229
+00:26:48,360 --> 00:26:52,800
+clustered, it cannot be used on all nodes. In fact, the tag manager is generated
+
+230
+00:26:52,800 --> 00:26:57,960
+locally on an PHP instance, which means that it depends on which worker it is generated
+
+231
+00:26:57,960 --> 00:27:03,480
+when an administrator uses the platform. So, quite simply, when an update
+
+232
+00:27:03,480 --> 00:27:08,040
+of the tag manager is done, if there is not something that allows you to link
+
+233
+00:27:08,040 --> 00:27:14,200
+the different... so here we are talking about javascript, the different javascripts
+
+234
+00:27:14,200 --> 00:27:19,000
+so that it is common between the different workers, there can be inconsistencies,
+
+235
+00:27:19,000 --> 00:27:23,200
+that is to say that a client, a user will arrive on version 1 of the tag manager while
+
+236
+00:27:23,200 --> 00:27:29,400
+the other will arrive on a version 2. It is not really the spirit that we want to have
+
+237
+00:27:29,400 --> 00:27:38,400
+and the behavior that we want to have. So for that, we had to... well,
+
+238
+00:27:38,400 --> 00:27:42,680
+we can ask the question of does that mean that the tag manager is not
+
+239
+00:27:42,680 --> 00:27:46,360
+clustered on the most complex platforms with different nodes? So that's not what
+
+240
+00:27:46,360 --> 00:27:50,000
+I mean. No, no, we can do it, of course, but there are a few tricks to achieve
+
+241
+00:27:50,000 --> 00:28:05,440
+the expected result. So, here I am talking about that. We could use a shared
+
+242
+00:28:05,440 --> 00:28:10,640
+file system between the different workers to have exactly the same code. So what
+
+243
+00:28:10,640 --> 00:28:14,240
+Mattomo recommends is that you have to synchronize when you are in a clustered environment
+
+244
+00:28:14,240 --> 00:28:21,600
+the PHP configuration. So this is typically the, we will say, base of knowledge
+
+245
+00:28:21,600 --> 00:28:26,040
+of the configuration of Mattomo and upload all the files and plugins
+
+246
+00:28:26,040 --> 00:28:31,600
+on each server. Okay, so actually, you need to have about the same base.
+
+247
+00:28:31,600 --> 00:28:40,360
+How can we make sure that there is always the same codebase etc. and on top of that,
+
+248
+00:28:40,360 --> 00:28:46,600
+reduce the perfs, avoid using an NFS or a shared file. I like hypotheses
+
+249
+00:28:46,600 --> 00:28:50,600
+or even an S3, etc. I don't want to lose too much performance because obviously
+
+250
+00:28:50,600 --> 00:28:59,240
+my application is clustered, etc. So suddenly, we say to ourselves, we have to synchronize everything,
+
+251
+00:28:59,240 --> 00:29:05,400
+but in the base of Mattomo, there is also the TMP and in the TMP, it is there that
+
+252
+00:29:05,400 --> 00:29:12,360
+the tag manager is generated, the tag manager JavaScript. And then we realize that, is
+
+253
+00:29:12,360 --> 00:29:16,680
+it really important to generate the TMP because it also contains a lot of things,
+
+254
+00:29:16,680 --> 00:29:24,000
+cache, etc. Does that mean that it is a file that is very regularly
+
+255
+00:29:24,000 --> 00:29:30,240
+written, with potentially a lot of access, etc. So if we put a shared file system,
+
+256
+00:29:30,240 --> 00:29:37,840
+this shared file system must be very efficient. So there, the same, to
+
+257
+00:29:37,840 --> 00:29:44,360
+redo the little aside, I'm talking about concepts and I say to myself, at the beginning, I don't want to
+
+258
+00:29:44,360 --> 00:29:48,280
+spend thousands of cents on super complex file systems, etc. so that it works.
+
+259
+00:29:48,280 --> 00:29:57,000
+So what can I do? So there, I'll do it for you. What can I do?
+
+260
+00:29:57,000 --> 00:30:03,640
+I have no solution, my tag manager is generated aside and if I want to update it,
+
+261
+00:30:03,640 --> 00:30:08,360
+I have to go to the machines, that I copy it, finally I don't know how to do it. So we,
+
+262
+00:30:08,360 --> 00:30:12,240
+the solution that we found, in any case in the emergency, finally in the emergency,
+
+263
+00:30:12,240 --> 00:30:18,920
+not in the emergency but in our case that we had, was to use SingSing. So SingSing,
+
+264
+00:30:18,920 --> 00:30:22,920
+I don't know if you know what it is, but it is a small tool that allows you to synchronize
+
+265
+00:30:22,920 --> 00:30:28,720
+different repertoires and in addition to that there is a management of the different versions of
+
+266
+00:30:28,720 --> 00:30:33,720
+files that have been synchronized. It's not live, it's in sync, but be careful,
+
+267
+00:30:33,720 --> 00:30:40,520
+we're talking about in sync in a few milliseconds. And above all, it avoids having
+
+268
+00:30:40,520 --> 00:30:47,400
+locks or a file system that is dependent on another machine and in addition to that,
+
+269
+00:30:47,400 --> 00:30:52,040
+avoiding concurrent accesses at the file system level. In short, we synchronized the tags. Great,
+
+270
+00:30:52,040 --> 00:30:57,880
+that is to say that we have our tag manager which is now available on all of our workers
+
+271
+00:30:57,880 --> 00:31:05,840
+and which allows web analysts who connect to the platform to take care of creating
+
+272
+00:31:05,840 --> 00:31:11,840
+the different tags etc. and to put them into production instantly. So obviously,
+
+273
+00:31:11,840 --> 00:31:16,280
+I'm talking about our case, it's a REX, we used SingSing, there are lots of other solutions,
+
+274
+00:31:16,280 --> 00:31:24,600
+it's up to you to do whatever you want. I found it interesting to talk about this little case
+
+275
+00:31:24,600 --> 00:31:32,120
+of the tag manager which is now almost an essential part of the use of Matomo
+
+276
+00:31:32,120 --> 00:31:38,560
+and which suddenly caused us some problems in our Matomo administration. So let's
+
+277
+00:31:38,560 --> 00:31:44,720
+make a point. I remind you that at the beginning we had our little dev who was alone on his project
+
+278
+00:31:44,720 --> 00:31:54,920
+who started to have his business which increased and suddenly he hired people, he hired
+
+279
+00:31:54,920 --> 00:32:01,040
+admins, he hired devops. In short, it's good, it's a company that is well oiled,
+
+280
+00:32:01,040 --> 00:32:09,640
+that uses Matomo at scale etc. And all that, I didn't tell you, but obviously these are
+
+281
+00:32:09,640 --> 00:32:14,880
+maintenance that can be done almost without downtime. I remind you that a database,
+
+282
+00:32:14,880 --> 00:32:21,560
+it is possible to put it into replication easily, it is possible to create a new Matomo worker,
+
+283
+00:32:21,560 --> 00:32:28,000
+to put in front a load balancer. So suddenly, the time to stop a Matomo on our
+
+284
+00:32:28,000 --> 00:32:36,240
+tiny 2GB RAM CPU, I redirect the traffic. We managed to scale the entire application,
+
+285
+00:32:36,240 --> 00:32:40,520
+to go from 100 users to more than a million, almost without downtime, by asking ourselves the
+
+286
+00:32:40,520 --> 00:32:45,440
+right questions, by having had a little feedback, by realizing that finally
+
+287
+00:32:45,440 --> 00:32:48,680
+the Matomo application was sufficiently well done to be able to scale it horizontally.
+
+288
+00:32:48,680 --> 00:32:54,080
+And especially by adding the Qt tracking which is a very important component in terms of
+
+289
+00:32:54,080 --> 00:32:58,560
+performance but also in terms of maintenance. I didn't talk about it obviously but the Qt tracking
+
+290
+00:32:58,560 --> 00:33:05,240
+also allows during maintenance to continue to recover the data. So it will
+
+291
+00:33:05,240 --> 00:33:10,560
+store them, store them, store them. And once the maintenance is finished, it will take them,
+
+292
+00:33:10,560 --> 00:33:16,160
+send them to the database and it will resume the course of its life, we will say, to store
+
+293
+00:33:16,160 --> 00:33:22,680
+the requests as and when needed. So great, but finally in summary, what did we see?
+
+294
+00:33:22,680 --> 00:33:31,080
+Well in summary, we saw that Qt tracking is a must-have. So I will answer questions
+
+295
+00:33:31,080 --> 00:33:35,280
+after but I saw a very small one from Ronan who was talking about the fact that Matomo is
+
+296
+00:33:35,280 --> 00:33:40,640
+important even on small instances. For me yes it is very important because it improves
+
+297
+00:33:40,640 --> 00:33:46,120
+a lot of things and it allows you to absorb traffic peaks. Can we scale easily?
+
+298
+00:33:46,120 --> 00:33:52,520
+Yes we can scale easily. We saw it in the concepts, it's easy. There are even
+
+299
+00:33:52,520 --> 00:33:57,720
+little tips for the tag manager when we have problems. Obviously there are always
+
+300
+00:33:57,720 --> 00:34:04,880
+some concerns about the load. We agree on that. I invite you to go
+
+301
+00:34:04,880 --> 00:34:12,640
+see yesterday's conferences. There were several who talked about these little problems,
+
+302
+00:34:12,640 --> 00:34:17,960
+we will say. And really they made very enriching feedback also on the
+
+303
+00:34:17,960 --> 00:34:29,000
+management and the scale of Matomo. So here I am. I will allow myself to show you
+
+304
+00:34:29,000 --> 00:34:39,840
+the slide, the little photo because normally I have a small image that is displayed.
+
+305
+00:34:39,840 --> 00:34:53,080
+We are in summary. We can go from a few hundred users per month to more than
+
+306
+00:34:53,080 --> 00:35:02,680
+5 million users. This is really a concrete case. It is thanks to our experience
+
+307
+00:35:02,680 --> 00:35:11,560
+of getting in charge that we get to this result. We reached more than 5 million
+
+308
+00:35:11,560 --> 00:35:16,720
+visits, more than 100 million views, more than 131 million shares. Obviously if you
+
+309
+00:35:16,720 --> 00:35:20,280
+are not necessarily familiar with Matomo, it may not be worth talking to you. But
+
+310
+00:35:20,280 --> 00:35:26,200
+these are figures that are quite impressive and on which we are rather satisfied
+
+311
+00:35:26,200 --> 00:35:32,200
+within the digital footprint team on our use and our getting in charge with Matomo.
+
+312
+00:35:32,200 --> 00:35:39,680
+Do we have anything else to say? Yes, because there we talked about getting in charge,
+
+313
+00:35:39,680 --> 00:35:44,520
+concepts, etc. The fact that we were not really dependent on Techno, just
+
+314
+00:35:44,520 --> 00:35:50,040
+the functioning of the architecture. We did not say everything. That is to say that we
+
+315
+00:35:50,040 --> 00:35:55,800
+still have a few small problems that can arise and that is in the generation of
+
+316
+00:35:55,800 --> 00:36:03,880
+reports. We still encounter a few problems with some customers. The generation
+
+317
+00:36:03,880 --> 00:36:10,600
+of reports takes a lot of time. These reports are generated by the account, etc.
+
+318
+00:36:10,600 --> 00:36:16,080
+So there are still optimizations to be made. It should not be forgotten that it is important
+
+319
+00:36:16,080 --> 00:36:21,600
+to increase beyond the Matomo application, the applications on which Matomo rests,
+
+320
+00:36:21,600 --> 00:36:27,400
+the timeouts of PHP, Nginx, Proxy, etc. to prevent that when there are generations
+
+321
+00:36:27,400 --> 00:36:36,880
+of reports, in particular the PHP is killed. There are optimizations of the base
+
+322
+00:36:36,880 --> 00:36:41,440
+of the data to be made. There is the optimization of Quick Tracking. I'm talking about the optimization
+
+323
+00:36:41,440 --> 00:36:49,920
+of Quick Tracking because we had a little trouble getting in charge when we had
+
+324
+00:36:49,920 --> 00:36:53,680
+a peak at one point. That is to say that the Quick Tracking worked correctly but we did not have
+
+325
+00:36:53,680 --> 00:37:04,640
+a view in the famous real-time. There is a small real-time that allows you to know
+
+326
+00:37:04,640 --> 00:37:12,120
+the number of users who are currently on the platform. In fact, it was still
+
+327
+00:37:12,120 --> 00:37:16,520
+at 0 and it was because the Quick Tracking was increasing, increasing, increasing, increasing,
+
+328
+00:37:16,520 --> 00:37:22,800
+until the PHP could no longer take the different loads and send it to the database.
+
+329
+00:37:22,800 --> 00:37:29,200
+So by optimizing a little bit, we were able to achieve more than 9,000 requests
+
+330
+00:37:29,200 --> 00:37:33,400
+in the last three minutes. So in the real-time visitor count, you will see,
+
+331
+00:37:33,400 --> 00:37:39,760
+more than 9,000 users in real time on the platform and for our greatest happiness.
+
+332
+00:37:39,760 --> 00:37:45,920
+And as our Italian friend said, he was looking at this little real-time count,
+
+333
+00:37:45,920 --> 00:37:47,920
+I was the same to check that everything was working correctly.
+
+334
+00:37:47,920 --> 00:37:56,280
+That's it, I'm done. I hope it was instructive. I hope it was, let's say,
+
+335
+00:37:56,280 --> 00:38:06,320
+not too complicated in terms of management concepts, etc. My goal was to see
+
+336
+00:38:06,320 --> 00:38:11,240
+general concepts to explain to you that finally the Matomo application was
+
+337
+00:38:11,240 --> 00:38:16,200
+well made enough to scale it and that we had little limit to get
+
+338
+00:38:16,200 --> 00:38:22,560
+on board with the application. That's it. So now I allow myself to go
+
+339
+00:38:22,560 --> 00:38:31,720
+to the chat to consult the different questions. So Renan who asks us,
+
+340
+00:38:31,720 --> 00:38:35,680
+should we put the Quick Tracking even on the infrastructure, in case we would have
+
+341
+00:38:35,680 --> 00:38:42,240
+a traffic peak? Indeed, the Quick Tracking, I recommend it de facto
+
+342
+00:38:42,240 --> 00:38:48,400
+on any type of installation because it is important to be able to absorb
+
+343
+00:38:48,400 --> 00:38:52,120
+these small traffic peaks. And if in addition to that we have an application,
+
+344
+00:38:52,120 --> 00:38:59,560
+so if we have our Matomo with our PHP application, how to say,
+
+345
+00:38:59,560 --> 00:39:03,520
+the Quick Tracking will allow us to avoid overloading the entire machine.
+
+346
+00:39:03,520 --> 00:39:09,200
+So I think it's important to put it. Knowing that we don't have to put
+
+347
+00:39:09,200 --> 00:39:15,600
+Redis with the Quick Tracking, even if I think it's not too consumerist to put Redis,
+
+348
+00:39:15,600 --> 00:39:19,120
+we can use the Quick Tracking in MySQL directly.
+
+349
+00:39:19,120 --> 00:39:25,720
+Have you had to make some modifications to improve the archiving?
+
+350
+00:39:25,720 --> 00:39:36,240
+So we tried to make some modifications at the infra level to manage the archiving,
+
+351
+00:39:36,240 --> 00:39:48,880
+in particular the limits at the PHP level, etc. And the limits at the level of memory and
+
+352
+00:39:48,880 --> 00:39:56,840
+the max time. We had cases where the generation took more than an hour,
+
+353
+00:39:56,840 --> 00:40:00,200
+so we had to optimize that a little bit. And that's one of the ways to improve
+
+354
+00:40:00,200 --> 00:40:05,320
+that we currently have. I think we really have to try to export
+
+355
+00:40:05,320 --> 00:40:13,240
+the archiving task on something else. I mean, try to make the archiving task
+
+356
+00:40:13,240 --> 00:40:15,280
+really easy, because it's something that is very consumerist.
+
+357
+00:40:15,280 --> 00:40:21,160
+Do you have any examples of cost-per-year ratios depending on the number of visits?
+
+358
+00:40:21,160 --> 00:40:25,400
+No, I don't have that kind of information, I'm sorry.
+
+359
+00:40:25,400 --> 00:40:33,520
+But for an infra that we currently have, for the numbers that I showed you there,
+
+360
+00:40:33,520 --> 00:40:46,640
+we're on five machines, I think. And all of them, let's say, with physical limits,
+
+361
+00:40:46,640 --> 00:40:53,000
+so flexible CPU RAM. So when we need to increase the load, either we add
+
+362
+00:40:53,000 --> 00:40:59,360
+a node when it's necessary, or we see that by increasing only the CPU RAM part,
+
+363
+00:40:59,360 --> 00:41:03,680
+we can absorb the load. Do you have a data system that warns you
+
+364
+00:41:03,680 --> 00:41:07,560
+when an analyst meets an error page during the report display?
+
+365
+00:41:07,560 --> 00:41:14,840
+Indeed, in this case, we don't want to be alone. So we actually have monitoring
+
+366
+00:41:14,840 --> 00:41:22,360
+on the pages. We use classic tools, like Uptime Robot,
+
+367
+00:41:22,360 --> 00:41:30,200
+PayGearDuty, things like that, that allow us to have errors.
+
+368
+00:41:30,200 --> 00:41:36,320
+It detects the errors when we make requests. But we also have a system of...
+
+369
+00:41:36,320 --> 00:41:42,960
+We work, we are very close to our clients, so we work with our clients
+
+370
+00:41:42,960 --> 00:41:50,280
+with chats, etc. So as soon as they have a problem, we are directly
+
+371
+00:41:50,280 --> 00:41:54,560
+guided by them to try to solve the problem. Knowing that each time,
+
+372
+00:41:54,560 --> 00:42:00,080
+there are small positive faults. The last time, it was the famous real-time
+
+373
+00:42:00,080 --> 00:42:06,720
+counter that was blocked. The fear was that the tracking queue
+
+374
+00:42:06,720 --> 00:42:10,800
+didn't work anymore, but the data was in the queue. It's just that
+
+375
+00:42:10,800 --> 00:42:18,280
+Matomo couldn't manage all the data in the database.
+
+376
+00:42:18,280 --> 00:42:20,480
+Okay. Valentin, can you hear me?
+
+377
+00:42:20,480 --> 00:42:21,480
+I can hear you very well.
+
+378
+00:42:21,480 --> 00:42:29,480
+Okay. I'm focusing on this question because sometimes, as a Matomo user,
+
+379
+00:42:29,480 --> 00:42:33,480
+we often see a message in red that appears in the reports saying that
+
+380
+00:42:33,480 --> 00:42:37,480
+the server is not powerful enough or that there is an archiving problem.
+
+381
+00:42:37,480 --> 00:42:43,080
+What I noticed in my clients is that when they encountered this problem,
+
+382
+00:42:43,080 --> 00:42:46,680
+they weren't questioning Matomo. They were just saying to themselves,
+
+383
+00:42:46,680 --> 00:42:50,680
+okay, I have to do this request later. They didn't dare to directly
+
+384
+00:42:50,680 --> 00:42:54,680
+warn the company that manages Matomo. I wanted to know if,
+
+385
+00:42:54,680 --> 00:42:58,680
+in the monitoring that you talked about a few seconds ago, is it
+
+386
+00:42:58,680 --> 00:43:04,680
+this type of error message in red that would appear and ping you
+
+387
+00:43:04,680 --> 00:43:10,680
+and tell you that the person has encountered an error and that it motivates you
+
+388
+00:43:10,680 --> 00:43:14,680
+to dig and find out how it is possible that they have encountered an error message.
+
+389
+00:43:14,680 --> 00:43:16,680
+Is it this type of error that has arisen?
+
+390
+00:43:16,680 --> 00:43:20,680
+No, we don't have too much of this type of error that has arisen,
+
+391
+00:43:20,680 --> 00:43:28,680
+knowing that we regularly check the application logs,
+
+392
+00:43:28,680 --> 00:43:31,680
+we check the logs of the machine to make sure that we don't have
+
+393
+00:43:31,680 --> 00:43:35,680
+abnormal errors on the classic execution of the application.
+
+394
+00:43:35,680 --> 00:43:42,680
+I admit that, for the moment, this kind of problem hasn't arisen too much.
+
+395
+00:43:42,680 --> 00:43:46,680
+There is a client who has raised this type of problem on a small infra,
+
+396
+00:43:46,680 --> 00:43:50,680
+but on a particular case, that is to say that the URLs are extremely long.
+
+397
+00:43:50,680 --> 00:43:57,680
+It seems to me that the current limit in Matomo is 1024 characters or 4087,
+
+398
+00:43:57,680 --> 00:44:02,680
+but the fact that we have a lot of URLs that are very long,
+
+399
+00:44:02,680 --> 00:44:09,680
+it slows down the archiving a lot and it creates a problem in the interface.
+
+400
+00:44:09,680 --> 00:44:16,680
+So, here we have customer feedback and that's how we realized that,
+
+401
+00:44:16,680 --> 00:44:21,680
+for even small infra, sometimes it is necessary to drastically increase the resources
+
+402
+00:44:21,680 --> 00:44:25,680
+at the PHP level to be able to execute the archiving normally.
+
+403
+00:44:25,680 --> 00:44:31,680
+Okay, it is currently 9.45, we still have maybe 5 minutes to take a few more questions.
+
+404
+00:44:31,680 --> 00:44:34,680
+We have a new one that has just arrived in the chat.
+
+405
+00:44:34,680 --> 00:44:42,680
+How do you manage the archiving, do you cut it by segment or year or do you execute it normally?
+
+406
+00:44:42,680 --> 00:44:48,680
+So, we actually execute it normally, we don't have too many problems with that.
+
+407
+00:44:48,680 --> 00:44:55,680
+The screen that I sent you, the image that I sent you with our results
+
+408
+00:44:55,680 --> 00:45:01,680
+of more than 130 million actions, etc., it dates from October.
+
+409
+00:45:01,680 --> 00:45:06,680
+And so, we are going to work with the teams, our customers,
+
+410
+00:45:06,680 --> 00:45:14,680
+to discuss the improvement of archiving on this side.
+
+411
+00:45:14,680 --> 00:45:17,680
+It's going to be a discussion with them.
+
+412
+00:45:17,680 --> 00:45:22,680
+But otherwise, we normally execute the archiving.
+
+413
+00:45:22,680 --> 00:45:24,680
+That's it.
+
+414
+00:45:24,680 --> 00:45:33,680
+Great, so I'm looking to see if we still have a few more small questions coming in.
+
+415
+00:45:39,680 --> 00:45:47,680
+So, I see that Alexandra, we are told that it is still in writing, in the chat.
+
+416
+00:45:47,680 --> 00:45:56,680
+So, I take this opportunity to announce the two conferences that will follow right after,
+
+417
+00:45:56,680 --> 00:45:58,680
+on the costs of Deezer.
+
+418
+00:45:58,680 --> 00:46:01,680
+You have one on data visualization.
+
+419
+00:46:01,680 --> 00:46:04,680
+It's a conference in English, but it's done in French.
+
+420
+00:46:04,680 --> 00:46:09,680
+So, if some of you are not very comfortable with English,
+
+421
+00:46:09,680 --> 00:46:14,680
+I don't think it's a problem to follow the conference that's coming.
+
+422
+00:46:14,680 --> 00:46:18,680
+Otherwise, you have the opportunity to go to a workshop.
+
+423
+00:46:18,680 --> 00:46:21,680
+In this workshop, the places are limited.
+
+424
+00:46:21,680 --> 00:46:24,680
+That is to say that it is really the first to arrive, the first to serve.
+
+425
+00:46:24,680 --> 00:46:31,680
+And the workshop, as a reminder, we are based on 25 people who connect.
+
+426
+00:46:31,680 --> 00:46:37,680
+The workshop is on Implementing Advanced Privacy, Preserving Analytics on Mobile Desktop and Server.
+
+427
+00:46:37,680 --> 00:46:43,680
+So, probably more a conference that is related to private life.
+
+428
+00:46:43,680 --> 00:46:47,680
+And so, it will be a feedback on that.
+
+429
+00:46:47,680 --> 00:46:49,680
+So, it will be by Nathan Freitas.
+
+430
+00:46:49,680 --> 00:46:54,680
+And so, in room number one, the data visualization part will be with,
+
+431
+00:46:54,680 --> 00:46:58,680
+precisely, the presentation of a free software called MetaBase,
+
+432
+00:46:58,680 --> 00:47:01,680
+that maybe some of you know.
+
+433
+00:47:01,680 --> 00:47:06,680
+And it is presented by Baptiste Stephen, who works at Open Source Politics.
+
+434
+00:47:06,680 --> 00:47:10,680
+I look one last time if there are any questions in the chat.
+
+435
+00:47:10,680 --> 00:47:15,680
+Well, yes, we have another question from Alexandra.
+
+436
+00:47:15,680 --> 00:47:19,680
+Have you encountered errors like MySQL Server has gone away,
+
+437
+00:47:19,680 --> 00:47:22,680
+so there is an error that often comes up,
+
+438
+00:47:22,680 --> 00:47:26,680
+during archiving after having invalidated periods?
+
+439
+00:47:26,680 --> 00:47:29,680
+No.
+
+440
+00:47:29,680 --> 00:47:32,680
+So, it happened to us, but we increased,
+
+441
+00:47:32,680 --> 00:47:37,680
+we increased in particular the number of connections at the MySQL server level.
+
+442
+00:47:37,680 --> 00:47:42,680
+And I do not think we encountered this problem too much.
+
+443
+00:47:42,680 --> 00:47:46,680
+It seems to me that we were a little spared on this thing.
+
+444
+00:47:46,680 --> 00:47:51,680
+We had to meet it quickly, but it is not something that shocked me
+
+445
+00:47:51,680 --> 00:47:55,680
+in the maintenance and management of the infrastructure at the moment.
+
+446
+00:47:55,680 --> 00:47:57,680
+Sorry.
+
+447
+00:47:57,680 --> 00:48:01,680
+Great. But listen, thank you very much, Valentin.
+
+448
+00:48:01,680 --> 00:48:06,680
+Thank you very much to all of you for choosing this conference.
+
+449
+00:48:06,680 --> 00:48:09,680
+We now have 12 minutes for a coffee break.
+
+450
+00:48:09,680 --> 00:48:14,680
+Do not hesitate to interact in the coffee room if you want to discuss with other participants
+
+451
+00:48:14,680 --> 00:48:16,680
+or go for a real coffee.
+
+452
+00:48:16,680 --> 00:48:22,680
+Or, and do not forget, you can also go to meet.matomocamp.org
+
+453
+00:48:22,680 --> 00:48:27,680
+to also interact directly via webcam with other participants.
+
+454
+00:48:27,680 --> 00:48:32,680
+I give you all an appointment at 10 o'clock for the next conference game.
+
+455
+00:48:32,680 --> 00:48:37,680
+Thank you all.
+
