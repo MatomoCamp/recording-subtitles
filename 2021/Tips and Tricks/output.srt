@@ -16,7 +16,7 @@ of Matomo features which you might not know about. So, let's hear Richard for mo
 
 5
 00:00:37,320 --> 00:00:42,180
-Good evening from New Zealand. Thank you, everybody, for joining this Matomo Camp session
+Good evening from New Zealand. Thank you, everybody, for joining this MatomoCamp session
 
 6
 00:00:42,180 --> 00:00:48,980
@@ -880,7 +880,7 @@ beforehand. The console command, if you just type in console on an SSH or in a t
 
 221
 00:21:20,400 --> 00:21:26,120
-window in the Mitoma root directory and you add the dash dash list option, it's going
+window in the Matomo root directory and you add the dash dash list option, it's going
 
 222
 00:21:26,120 --> 00:21:31,840
@@ -888,7 +888,7 @@ to give you a full list of all of the console commands that you can run directly
 
 223
 00:21:31,840 --> 00:21:37,460
-Mitoma server. And now that you've got this great list of console commands, you can then
+Matomo server. And now that you've got this great list of console commands, you can then
 
 224
 00:21:37,460 --> 00:21:43,200
@@ -904,11 +904,11 @@ plugin requires. So the important thing to remember whenever you're working on t
 
 227
 00:21:56,120 --> 00:22:01,680
-is that just because a command works on one Mitoma server doesn't necessarily mean that
+is that just because a command works on one Matomo server doesn't necessarily mean that
 
 228
 00:22:01,680 --> 00:22:06,640
-it works on every other Mitoma server. And the reason for this is that every plugin that
+it works on every other Matomo server. And the reason for this is that every plugin that
 
 229
 00:22:06,640 --> 00:22:13,120
@@ -932,11 +932,11 @@ command from there. Alright, so our next section is going to be useful free plug
 
 234
 00:22:37,020 --> 00:22:43,760
-are specifically plugins that are not installed in Mitoma by default, but are available to
+are specifically plugins that are not installed in Matomo by default, but are available to
 
 235
 00:22:43,760 --> 00:22:49,000
-be downloaded and installed directly from within your Mitoma instance without requiring
+be downloaded and installed directly from within your Matomo instance without requiring
 
 236
 00:22:49,000 --> 00:22:54,840
@@ -944,7 +944,7 @@ any additional information. All you basically have to do is click download and i
 
 237
 00:22:54,840 --> 00:23:00,400
-your Mitoma instance. And we're going to start with the first one on my list at least and
+your Matomo instance. And we're going to start with the first one on my list at least and
 
 238
 00:23:00,400 --> 00:23:07,320
@@ -956,7 +956,7 @@ plugin. So the Queued Tracking plugin, it improves the performance and the stabi
 
 240
 00:23:14,440 --> 00:23:20,920
-of your Mitoma server by reducing the load on the Mitoma database during tracking. It
+of your Matomo server by reducing the load on the Matomo database during tracking. It
 
 241
 00:23:20,920 --> 00:23:27,720
@@ -964,7 +964,7 @@ also at the same time really greatly improves the speed of tracking requests sen
 
 242
 00:23:27,720 --> 00:23:33,560
-Mitoma server. So how this works does take a little bit of an explanation. So we're going
+Matomo server. So how this works does take a little bit of an explanation. So we're going
 
 243
 00:23:33,560 --> 00:23:37,840
@@ -980,7 +980,7 @@ top there, the browser sends that HTTP tracking request. That tracking request t
 
 246
 00:23:49,040 --> 00:23:55,040
-by the Mitoma server and needs to be processed. It's then inserted directly into the Mitoma
+by the Matomo server and needs to be processed. It's then inserted directly into the Matomo
 
 247
 00:23:55,040 --> 00:24:01,000
@@ -992,7 +992,7 @@ to the browser. Now the Queued Tracking plugin, this behavior changes in a few k
 
 249
 00:24:10,000 --> 00:24:15,320
-as we can see on the next graphic, as soon as the Mitoma server, so here at the top again
+as we can see on the next graphic, as soon as the Matomo server, so here at the top again
 
 250
 00:24:15,320 --> 00:24:21,640
@@ -1000,7 +1000,7 @@ we can see the HTTP tracking request. As soon as that is received by the server,
 
 251
 00:24:21,640 --> 00:24:27,180
-into a queue and then immediately the Mitoma server responds to that browser or to that
+into a queue and then immediately the Matomo server responds to that browser or to that
 
 252
 00:24:27,180 --> 00:24:31,480
@@ -1012,7 +1012,7 @@ on. Once that tracking request is then placed into the queue, there's a few diff
 
 254
 00:24:36,780 --> 00:24:42,720
-that can happen. Now, number one, you can either set up your Mitoma instance to automatically
+that can happen. Now, number one, you can either set up your Matomo instance to automatically
 
 255
 00:24:42,720 --> 00:24:49,000
@@ -1032,7 +1032,7 @@ this really does is that like you saw in the beginning, it not only improves the
 
 259
 00:25:05,480 --> 00:25:12,740
-performance, but it also enables your Mitoma server to handle very large traffic peaks
+performance, but it also enables your Matomo server to handle very large traffic peaks
 
 260
 00:25:12,740 --> 00:25:17,000
@@ -1052,7 +1052,7 @@ of the tracking requests in that queue as a batch tracking request. So it really
 
 264
 00:25:33,480 --> 00:25:38,720
-your Mitoma server and it really makes a lot more stable and capable of handling those
+your Matomo server and it really makes a lot more stable and capable of handling those
 
 265
 00:25:38,720 --> 00:25:41,080
@@ -1068,7 +1068,7 @@ spam prevention plugin gives you some really good options that you can enable to
 
 268
 00:25:53,600 --> 00:26:00,040
-spam tracking requests being sent or logged in your Mitoma server. So it does this by
+spam tracking requests being sent or logged in your Matomo server. So it does this by
 
 269
 00:26:00,040 --> 00:26:04,640
@@ -1116,7 +1116,7 @@ Number three, it can restrict the number of actions in a single visit or the max
 
 280
 00:26:53,360 --> 00:26:59,560
-of actions that Mitoma will track in a single visit. This is especially useful to prevent
+of actions that Matomo will track in a single visit. This is especially useful to prevent
 
 281
 00:26:59,560 --> 00:27:05,600
@@ -1128,7 +1128,7 @@ in a single visit. We've seen some examples with people that we've provided supp
 
 283
 00:27:10,360 --> 00:27:17,400
-in the past from the Mitoma team, where they've had individual visits tracked over 10,000
+in the past from the Matomo team, where they've had individual visits tracked over 10,000
 
 284
 00:27:17,400 --> 00:27:22,880
@@ -1172,7 +1172,7 @@ All right. The next plugin on the list, which is an absolute must-have, is the m
 
 294
 00:28:13,560 --> 00:28:20,080
-campaigns reporting. So by default, Mitoma will give you the option or will give you
+campaigns reporting. So by default, Matomo will give you the option or will give you
 
 295
 00:28:20,080 --> 00:28:26,360
@@ -1180,7 +1180,7 @@ the ability to track campaigns. And it comes with a really useful campaign URL b
 
 296
 00:28:26,360 --> 00:28:32,360
-directly in the Mitoma UI. However, a lot of people, or let me rather say, most people
+directly in the Matomo UI. However, a lot of people, or let me rather say, most people
 
 297
 00:28:32,360 --> 00:28:38,480
@@ -1204,7 +1204,7 @@ used by these platforms, as well as providing support for some of these campaign
 
 302
 00:29:02,840 --> 00:29:10,020
-parameters without needing to use any of the Mitoma-specific campaign parameters. We have
+parameters without needing to use any of the Matomo-specific campaign parameters. We have
 
 303
 00:29:10,020 --> 00:29:14,560
@@ -1216,11 +1216,11 @@ marketing campaigns reporting, and I would definitely recommend installing it on
 
 305
 00:29:18,560 --> 00:29:23,880
-Mitoma server. All right. The next one on the list is probably a little bit more for
+Matomo server. All right. The next one on the list is probably a little bit more for
 
 306
 00:29:23,880 --> 00:29:30,060
-the Mitoma administrators out there. So that's called the Log Viewer. So the Log Viewer is
+the Matomo administrators out there. So that's called the Log Viewer. So the Log Viewer is
 
 307
 00:29:30,060 --> 00:29:35,200
@@ -1228,7 +1228,7 @@ kind of more just a quality of life or convenience plugin that you can install t
 
 308
 00:29:35,200 --> 00:29:41,440
-look at the Mitoma application logs. So this can really save you some time and effort instead
+look at the Matomo application logs. So this can really save you some time and effort instead
 
 309
 00:29:41,440 --> 00:29:46,840
@@ -1236,7 +1236,7 @@ of having to SSH into your server and grep some logs or download your logs from 
 
 310
 00:29:46,840 --> 00:29:52,920
-syslog server, you can just log into Mitoma, go to your administration UI, and have a look
+syslog server, you can just log into Matomo, go to your administration UI, and have a look
 
 311
 00:29:52,920 --> 00:30:01,240
@@ -1252,7 +1252,7 @@ at the reports every single day. And what the Custom Alerts plugin allows you to
 
 314
 00:30:12,160 --> 00:30:19,960
-to get notified when something changes or something specific happens in your Mitoma
+to get notified when something changes or something specific happens in your Matomo
 
 315
 00:30:19,960 --> 00:30:25,160
@@ -1304,11 +1304,11 @@ up an SMS alert, you'll need to make sure that you also set up the Mobile Messag
 
 327
 00:31:29,560 --> 00:31:35,080
-Plugin. Now, the Mobile Messaging Plugin is included in Matoma Core, but it might not
+Plugin. Now, the Mobile Messaging Plugin is included in Matomo Core, but it might not
 
 328
 00:31:35,080 --> 00:31:39,480
-be activated on your Matoma server. So if you want to set up SMS alerts with a Custom
+be activated on your Matomo server. So if you want to set up SMS alerts with a Custom
 
 329
 00:31:39,480 --> 00:31:45,520
@@ -1320,7 +1320,7 @@ plugin on our list for today is the IP2 Company Plugin. This one kind of explain
 
 331
 00:31:53,040 --> 00:32:00,400
-What it does is it adds the functionality to your Matoma server to easily see if visits
+What it does is it adds the functionality to your Matomo server to easily see if visits
 
 332
 00:32:00,400 --> 00:32:07,880
@@ -1344,7 +1344,7 @@ website or using your application more than others. And all of these plugins can
 
 337
 00:32:31,640 --> 00:32:39,320
-on the Matoma Plugins website at plugins.matoma.org. There is a massive list of plugins that didn't
+on the Matomo Plugins website at plugins.matomo.org. There is a massive list of plugins that didn't
 
 338
 00:32:39,320 --> 00:32:43,960
@@ -1352,7 +1352,7 @@ make the cut, unfortunately, for this session today. So if you're ever curious, 
 
 339
 00:32:43,960 --> 00:32:48,800
-to know how you can extend the capability of your Matoma server, have a look at the
+to know how you can extend the capability of your Matomo server, have a look at the
 
 340
 00:32:48,800 --> 00:32:56,080
@@ -1360,7 +1360,7 @@ list of plugins available there. And alternatively, you can also find them in th
 
 341
 00:32:56,080 --> 00:33:01,360
-section of your Matoma server. From there, you can directly install and activate and
+section of your Matomo server. From there, you can directly install and activate and
 
 342
 00:33:01,360 --> 00:33:07,680
@@ -1368,7 +1368,7 @@ start using these awesome plugins. All right. And that brings us to the end of t
 
 343
 00:33:07,680 --> 00:33:13,240
-segment for this Matoma Camp session. So we're going to move on to some question and answers
+segment for this MatomoCamp session. So we're going to move on to some question and answers
 
 344
 00:33:13,240 --> 00:33:19,400
@@ -1384,7 +1384,7 @@ chat on this side as well. So we'll just have a quick look through those questio
 
 347
 00:33:28,280 --> 00:33:37,100
-if we can answer some of them. How is it like to work for the Matoma or InnerCraft team?
+if we can answer some of them. How is it like to work for the Matomo or InnerCraft team?
 
 348
 00:33:37,100 --> 00:33:43,220
@@ -1424,7 +1424,7 @@ features are going to be worked on next. What is the priority for those sorts of
 
 357
 00:34:29,960 --> 00:34:35,680
-Can we add new shortcuts with Matoma? This is actually something I'm not 100% sure. And
+Can we add new shortcuts with Matomo? This is actually something I'm not 100% sure. And
 
 358
 00:34:35,680 --> 00:34:40,620
@@ -1628,7 +1628,7 @@ something new today that will help give you success with Matomo. And I'd also li
 
 408
 00:40:10,680 --> 00:40:17,640
-give a massive thank you to the volunteers that have made Matomo Camp possible. This
+give a massive thank you to the volunteers that have made MatomoCamp possible. This
 
 409
 00:40:17,640 --> 00:40:22,460
