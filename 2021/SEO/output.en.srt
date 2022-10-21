@@ -1,0 +1,2388 @@
+1
+00:00:00,000 --> 00:00:13,520
+Yes, wonderful. I would have simply said, we are starting now, yes, from my side
+
+2
+00:00:13,520 --> 00:00:19,440
+also first of all welcome to Matomo Camp. This is the first Matomo Camp that we
+
+3
+00:00:19,440 --> 00:00:25,440
+also organize and I have, in addition to the fact that Lukas has organized almost everything, of course
+
+4
+00:00:25,440 --> 00:00:30,600
+, the honor of holding my own lecture here. We have decided in advance
+
+5
+00:00:30,600 --> 00:00:37,280
+that we also want to record this workshop. This should mean, for example, if you have
+
+6
+00:00:37,280 --> 00:00:42,280
+a video on or if you decide to say something or say something,
+
+7
+00:00:42,280 --> 00:00:46,400
+then that is not forbidden. But you should just think that we record it.
+
+8
+00:00:46,400 --> 00:00:52,800
+We actually planned it in such a way that we, so to speak, I now do the presentation
+
+9
+00:00:52,800 --> 00:00:57,680
+first. We just put the questions back a bit. We now have the advantage in this
+
+10
+00:00:57,680 --> 00:01:04,680
+workshop that we have the time until, so to speak, 11.45 a.m. and that there is now also the
+
+11
+00:01:04,680 --> 00:01:09,120
+lunch break afterwards. That means that if we can then ask questions afterwards,
+
+12
+00:01:09,120 --> 00:01:14,040
+then that is not so problematic, because you would not miss any other sessions and so on
+
+13
+00:01:14,040 --> 00:01:18,440
+. Maybe you would lose a little one or two minutes of the lunch break or something.
+
+14
+00:01:18,440 --> 00:01:23,760
+So that's why, as I said, welcome again from my side at this point.
+
+15
+00:01:23,760 --> 00:01:30,120
+My lecture today is just how to use Matomo correctly for SEO. That means, how can I
+
+16
+00:01:30,120 --> 00:01:34,280
+combine these two systems or how can I best combine them together to
+
+17
+00:01:34,280 --> 00:01:39,000
+get numbers out of Matomo that are very helpful for the search engine optimization.
+
+18
+00:01:39,000 --> 00:01:45,920
+And briefly to my person, my name is Thomas Zeithammel. I have actually been working in online
+
+19
+00:01:45,920 --> 00:01:51,960
+marketing in the field of SEO since 2001. At that time we did not even know that it was called SEO.
+
+20
+00:01:51,960 --> 00:01:57,360
+I have been there for so long, an old rabbit. I have already been through a lot and have
+
+21
+00:01:57,360 --> 00:02:02,840
+various customers from different areas, which of course also come from Google Analytics
+
+22
+00:02:02,840 --> 00:02:09,480
+and have also already worked with Matomo. And since 2009, simply out of private interest,
+
+23
+00:02:09,480 --> 00:02:13,680
+with my own websites, I looked around for software and at that time
+
+24
+00:02:13,680 --> 00:02:20,440
+I became aware of Pepeg. And yes, I have been familiar with the system for 12 years now,
+
+25
+00:02:20,440 --> 00:02:26,080
+give training, offer consulting and so on. And I would like to talk about the topic today,
+
+26
+00:02:26,080 --> 00:02:33,920
+what we can really combine in SEO and Matomo. The most important thing for me is
+
+27
+00:02:33,920 --> 00:02:39,720
+actually to really interpret the numbers correctly. And it is the case that we first of all
+
+28
+00:02:39,720 --> 00:02:46,000
+pick up a lot of numbers that we are actually more or less interested in.
+
+29
+00:02:46,000 --> 00:02:51,840
+So a value such as IP address, website title, for example the screen resolution,
+
+30
+00:02:51,840 --> 00:02:58,080
+with which language the browser works and so on. All these values are all
+
+31
+00:02:58,080 --> 00:03:04,640
+investigated and collected via the data layer or whatever, whether with a tech manager or whatever.
+
+32
+00:03:04,640 --> 00:03:10,000
+We now have all these dimensions on board in Matomo and can then of course
+
+33
+00:03:10,000 --> 00:03:14,480
+evaluate them. The question is, can I start something with the IP address,
+
+34
+00:03:14,480 --> 00:03:20,240
+which is anonymized, can I use it for SEO? Not really. That means I have to pick out here
+
+35
+00:03:20,240 --> 00:03:26,480
+which numbers are particularly important for SEO. And there I just picked out 10
+
+36
+00:03:26,480 --> 00:03:30,520
+where I said that is really something where you should always keep an eye on it.
+
+37
+00:03:30,520 --> 00:03:35,440
+On the one hand, of course, the search terms that you, for example, got from Google
+
+38
+00:03:35,440 --> 00:03:41,800
+and so on. In the end, the search terms are unfortunately no longer completely visible,
+
+39
+00:03:41,800 --> 00:03:48,560
+but there is a way in which I will then help you to unravel these search terms again.
+
+40
+00:03:48,560 --> 00:03:53,920
+The second is a very important number, for example the period of time. This is also underestimated very,
+
+41
+00:03:53,920 --> 00:03:59,440
+very often. But for SEO it is of course very, very important to see if I can do it with
+
+42
+00:03:59,440 --> 00:04:04,720
+my content, with my page, in the end, to keep the visitors on my page for a long time.
+
+43
+00:04:04,720 --> 00:04:09,440
+And that results again with the jump rate. If I see that, oh, it's very high.
+
+44
+00:04:09,440 --> 00:04:13,600
+That also means again for Google, of course, I may have a return to search
+
+45
+00:04:13,600 --> 00:04:18,880
+quota, a very high one, which sends a signal to Google that perhaps the content is not so good
+
+46
+00:04:18,880 --> 00:04:24,520
+or does not fit the search phrase. So that can also be important for SEO, so to speak,
+
+47
+00:04:24,520 --> 00:04:30,920
+and we have that here in the system. Webvitals, of course, the classic now of the last six,
+
+48
+00:04:30,920 --> 00:04:36,240
+seven months. Everyone who deals with SEO is just talking about these terms,
+
+49
+00:04:36,240 --> 00:04:40,560
+such as webvitals and the topic performance loading time. That has been very high in the last two,
+
+50
+00:04:40,560 --> 00:04:46,320
+three years, which of course also gives Matomo a very, very good plug-in
+
+51
+00:04:46,320 --> 00:04:54,160
+or opportunities to raise these numbers. Entry pages, classic, yes, certainly,
+
+52
+00:04:54,160 --> 00:05:00,040
+very, very important for the field of SEO, as well as the visitor sources. So not to see
+
+53
+00:05:00,040 --> 00:05:04,520
+where the visitors really come from, not just to focus on the zoom machine,
+
+54
+00:05:04,520 --> 00:05:11,440
+but perhaps also to look at the references. Technical aspects. Where do I have maybe 404
+
+55
+00:05:11,440 --> 00:05:16,240
+errors on my page? Where are there server errors? It may also be that this can of course be determined
+
+56
+00:05:16,240 --> 00:05:21,960
+by tracking or, in the end, by crawling tools. But here I have the
+
+57
+00:05:21,960 --> 00:05:26,480
+opportunity to say right away, wait a minute, so many have really called up. Of course,
+
+58
+00:05:26,480 --> 00:05:30,280
+such a dead link is always bad, but if I see in the web analysis that it has
+
+59
+00:05:30,280 --> 00:05:34,800
+never been called up in any way, then it's not that bad either. Then I don't have to
+
+60
+00:05:34,800 --> 00:05:39,200
+worry too much about it. While I, when I see that in another statistic, that a page
+
+61
+00:05:39,200 --> 00:05:45,960
+that sends 404 has been called up a few times, maybe even a day, then I have to react faster
+
+62
+00:05:45,960 --> 00:05:51,240
+and can also evaluate the internal search. Very important for the editorial team,
+
+63
+00:05:51,240 --> 00:05:56,080
+for example. Also this number, whether an article has been read or not,
+
+64
+00:05:56,080 --> 00:06:02,240
+I can somehow summarize in Matomo or have it issued. And of course the whole
+
+65
+00:06:02,240 --> 00:06:08,400
+topic of conversion tracking. These are the most important numbers that you will certainly have
+
+66
+00:06:08,400 --> 00:06:14,400
+in the SEO as points of contact with Matomo. I'm going to take out a few things now,
+
+67
+00:06:14,400 --> 00:06:20,440
+such as the delay and the delay. Because that has always been the topic of Google in recent years,
+
+68
+00:06:20,440 --> 00:06:26,120
+although they introduced a panda update back then in 2012, so it's been a little longer again.
+
+69
+00:06:26,120 --> 00:06:31,440
+But what happened is that the delay and the jump rate of Google can also be
+
+70
+00:06:31,440 --> 00:06:38,680
+raised. So Google has this data available and can integrate it into their user signals
+
+71
+00:06:38,680 --> 00:06:43,960
+and let these user signals flow into their algorithm. And you just need a few
+
+72
+00:06:43,960 --> 00:06:50,040
+points that you have to consider here in these two numbers, delay and jump rate.
+
+73
+00:06:50,040 --> 00:06:56,400
+And there I just set up six points that make it a little easier for me to
+
+74
+00:06:56,400 --> 00:07:04,400
+explain the connections. On the one hand, if I have a jump rate of 100 percent, then in Matomo
+
+75
+00:07:04,400 --> 00:07:11,520
+there is also a value of 0.0 seconds for these pages. That means if there is a jump rate,
+
+76
+00:07:11,520 --> 00:07:18,480
+so a jump is sent, then I don't have any delay in this session.
+
+77
+00:07:18,480 --> 00:07:25,080
+This is related to how the delay is calculated. And here it is the case that the last page,
+
+78
+00:07:25,080 --> 00:07:32,040
+i.e. the exit page, is not included in the visit as time. That means I always have
+
+79
+00:07:32,040 --> 00:07:39,240
+the last page of the visit with a value of 0.000 seconds delay. So unfortunately the exit page
+
+80
+00:07:39,240 --> 00:07:45,720
+always sends no signals as to how long you have been on this page. Because in Matomo, like other
+
+81
+00:07:45,720 --> 00:07:51,760
+systems, so also like Google Analytics, the distance between page 1 call and page
+
+82
+00:07:51,760 --> 00:07:58,640
+2 call is always counted together. And just as in the delay, with the jump rate,
+
+83
+00:07:58,640 --> 00:08:05,360
+then I have the entry page, then the exit page. This is how the jump rate is defined.
+
+84
+00:08:05,360 --> 00:08:10,560
+And then of course, because the exit page has no value, I have this value of zero here.
+
+85
+00:08:10,560 --> 00:08:15,920
+That means you have to understand these two metrics first of all, why sometimes
+
+86
+00:08:15,920 --> 00:08:22,160
+the exact value is not in there that you might expect. But of course you don't always have
+
+87
+00:08:22,160 --> 00:08:27,040
+a jump rate of 100%, but just less. And then of course there are users
+
+88
+00:08:27,040 --> 00:08:32,880
+who also send values here. So high jump rates are always a recommendation of mine
+
+89
+00:08:32,880 --> 00:08:38,160
+to take a look at such pages in the page analysis and say, wow, there may be
+
+90
+00:08:38,160 --> 00:08:43,360
+technical errors. We already had cases where a consent banner was delivered over the page,
+
+91
+00:08:43,360 --> 00:08:48,200
+but they were not so well integrated on the mobile device that the people simply
+
+92
+00:08:48,200 --> 00:08:52,200
+couldn't click these buttons anymore. So there was no way to accept, because it was too far
+
+93
+00:08:52,200 --> 00:08:56,800
+to the right outside of the screen and you couldn't scroll. And then of course we see,
+
+94
+00:08:56,800 --> 00:09:02,760
+ha, wobala, in the mobile area the jump rate is very, very high and not so high in the desktop area.
+
+95
+00:09:02,760 --> 00:09:07,880
+So you can also detect and detect errors. So such a high jump rate can
+
+96
+00:09:07,880 --> 00:09:13,560
+definitely be looked at. But a high jump rate does not mean that the page is
+
+97
+00:09:13,560 --> 00:09:18,920
+very, very bad, but a high jump rate in connection with a period of time
+
+98
+00:09:18,920 --> 00:09:25,440
+makes sense. Because the period of time is very high, I don't really care about the jump rate
+
+99
+00:09:25,440 --> 00:09:31,120
+in the end. Because it can also mean that the user has come to the page,
+
+100
+00:09:31,120 --> 00:09:36,200
+has been busy with the content for a long time, has read it completely and was then simply
+
+101
+00:09:36,200 --> 00:09:41,480
+more satisfied and then left the page because of that. Not because he was dissatisfied.
+
+102
+00:09:41,480 --> 00:09:47,960
+So that means just going to the jump rate is not so ideal here. The same is true
+
+103
+00:09:47,960 --> 00:09:52,480
+if I have a high period of time and a low jump rate, that is also a positive
+
+104
+00:09:52,480 --> 00:09:57,680
+value actually. Because the users have read the article, that's why this high period of time
+
+105
+00:09:57,680 --> 00:10:03,840
+and went on. I can see that from the fact that the jump rate is then just low. That
+
+106
+00:10:03,840 --> 00:10:08,760
+means I was able to keep the visitors on the page and maybe
+
+107
+00:10:08,760 --> 00:10:15,200
+navigate them better through the website through similar articles in e-commerce or through related topics
+
+108
+00:10:15,200 --> 00:10:19,640
+again on a news page or something. Or I have blog posts that I wrote about
+
+109
+00:10:19,640 --> 00:10:25,120
+and they are also interesting for the reader. So that is of course something that is very, very good,
+
+110
+00:10:25,120 --> 00:10:31,760
+which is actually the ideal step 5 here or this point 5. But of course there is also a
+
+111
+00:10:31,760 --> 00:10:37,560
+low period of time and a very high jump rate. That is always such a sign that you
+
+112
+00:10:37,560 --> 00:10:43,760
+may have been dissatisfied as a user. So, in general, you can't say that either. Just think of
+
+113
+00:10:43,760 --> 00:10:49,160
+the industry books. Industry books, I'll give you one, Dachdecker, Augsburg, I'll get to a page,
+
+114
+00:10:49,160 --> 00:10:53,600
+I'll quickly write down the phone number, I'll be on the page again. That means I don't spend
+
+115
+00:10:53,600 --> 00:10:58,640
+much time reading the content or something, but I just need to
+
+116
+00:10:58,640 --> 00:11:02,720
+contact you somehow quickly. I'll get the information out of it very briefly,
+
+117
+00:11:02,720 --> 00:11:09,560
+have seen everything. Also, if I enter which pre-election number the 0421 belongs to or something,
+
+118
+00:11:09,560 --> 00:11:14,280
+then I just give it to pre-election 0421. Then I come to a page, look at me, ah,
+
+119
+00:11:14,280 --> 00:11:18,840
+that's the one and the city, then I'm gone again. So please don't
+
+120
+00:11:18,840 --> 00:11:24,400
+always be so partial. And just when you say that, yes, I have to understand the characteristics,
+
+121
+00:11:24,400 --> 00:11:29,720
+then please also understand that detractors always play a big role here. I have
+
+122
+00:11:29,720 --> 00:11:35,040
+set up such a small screen at the bottom, where you can see that these average values,
+
+123
+00:11:35,040 --> 00:11:39,760
+which are unfortunately excluded in Matomo, which cannot influence either, that they can of course
+
+124
+00:11:39,760 --> 00:11:45,120
+also be influenced by certain pages. At the bottom of the screen, so I have different
+
+125
+00:11:45,120 --> 00:11:53,000
+pages, page 1, 2, 3 and so on, and this page 5 is so popular. If page 5 now has a super
+
+126
+00:11:53,000 --> 00:12:01,160
+deflection rate of maybe only 20 percent, but all the other pages are with a
+
+127
+00:12:01,160 --> 00:12:06,960
+deflection rate of 80 percent or something, then my average value, because the one page
+
+128
+00:12:06,960 --> 00:12:15,320
+here, the 5, is so good, would give me a little bit of a good feeling that the
+
+129
+00:12:15,320 --> 00:12:19,360
+deflection rate here is not a problem at all in this domain. So that means that these
+
+130
+00:12:19,360 --> 00:12:24,520
+statistic values ​​please always look at each other separately, really go into the data
+
+131
+00:12:24,520 --> 00:12:31,320
+, really break down and take a deeper look. So in the average values is often
+
+132
+00:12:31,320 --> 00:12:37,960
+simply something covered up, which you can see more when you go into the details. Especially when you
+
+133
+00:12:37,960 --> 00:12:42,720
+have pages that dominate very, very much. These can be, for example, pages like the starting page,
+
+134
+00:12:42,720 --> 00:12:48,920
+which of course always serves as an entry for many pages in the e-commerce area, which then
+
+135
+00:12:48,920 --> 00:12:53,720
+always sends positive signals, but maybe the product details at the back send all bad
+
+136
+00:12:53,720 --> 00:12:59,840
+signals. Then I should just look at them separately from each other. And of course the
+
+137
+00:12:59,840 --> 00:13:05,120
+segments help me very, very well. So in Matomo I have the opportunity to create these segments
+
+138
+00:13:05,120 --> 00:13:11,640
+among all these visitors. The problem is that they are more or less not given by Matomo,
+
+139
+00:13:11,640 --> 00:13:16,480
+but that I have to create them myself. That is always the first thing I do when I
+
+140
+00:13:16,480 --> 00:13:22,360
+go to a website with a customer or so on, to create these segments here so that the
+
+141
+00:13:22,360 --> 00:13:28,600
+users can then also compare these segments, i.e. the customers. And there I always recommend
+
+142
+00:13:28,600 --> 00:13:35,120
+at least to divide the channels so that I really have the channel direct, the channel campaigns,
+
+143
+00:13:35,120 --> 00:13:42,560
+the channel search engines, the channel maybe also references and also the desktop or mobile types,
+
+144
+00:13:42,560 --> 00:13:47,520
+i.e. what is available to us as a device type as a dimension in Matomo. Then I can
+
+145
+00:13:47,520 --> 00:13:52,960
+compare how the user behaves in mobile versus the user in the desktop area. Or just
+
+146
+00:13:52,960 --> 00:13:57,760
+make the comparison of how people who come from search engines behave versus people who,
+
+147
+00:13:57,760 --> 00:14:03,640
+for example, come via Google Ads, via campaigns or via direct entries. Because they
+
+148
+00:14:03,640 --> 00:14:08,080
+behave completely differently. And I would like to identify more precisely in the SEO,
+
+149
+00:14:08,080 --> 00:14:13,560
+how it is and how it works, for example. And then these values, such as exit rates or
+
+150
+00:14:13,560 --> 00:14:19,040
+or departure rates or also for a while, or side views and so on,
+
+151
+00:14:19,040 --> 00:14:26,440
+these will become much clearer. That first of all to pre-tension, yes, to understand that
+
+152
+00:14:26,440 --> 00:14:31,240
+these values ​​also have to be interpreted correctly. Otherwise it won't help me for my SEO
+
+153
+00:14:31,240 --> 00:14:36,400
+in the end. The second thing I would like to address is the data collection.
+
+154
+00:14:36,400 --> 00:14:43,040
+It should mean how I can simply evaluate or improve the values ​​that I measure.
+
+155
+00:14:43,040 --> 00:14:50,040
+And here the classic, the events. I still have the case very often that events have
+
+156
+00:14:50,040 --> 00:14:55,200
+not yet been set up. And now with the Tag Manager, for example, it is so easy to
+
+157
+00:14:55,200 --> 00:14:59,760
+set up these events. Of course, you need a bit of knowledge, perhaps from the HTML,
+
+158
+00:14:59,760 --> 00:15:05,640
+to recognize that this is the CSS class, the button is called ID and so on. Or here is the
+
+159
+00:15:05,640 --> 00:15:10,920
+link text. What is a link text? Of course, you do need a bit of foresight, but it is a
+
+160
+00:15:10,920 --> 00:15:16,400
+very nice opportunity to transfer these events, what happens on the page,
+
+161
+00:15:16,400 --> 00:15:24,120
+and so on, to Matomo. And with that the data will be better again. And then maybe
+
+162
+00:15:24,120 --> 00:15:29,600
+set up as goals. And there you can also distinguish two topics. On the one hand, my technical
+
+163
+00:15:29,600 --> 00:15:34,680
+problems that I may have on the page. That means I solve events if, for example,
+
+164
+00:15:34,680 --> 00:15:39,400
+a page of errors arises or is called up. Zack, same event,
+
+165
+00:15:39,400 --> 00:15:45,720
+Amatomo, Zack, page 404. The same also with a 500 error, if my server is not currently
+
+166
+00:15:45,720 --> 00:15:50,280
+reachable or something and I still deliver the error message or the error page,
+
+167
+00:15:50,280 --> 00:15:55,960
+or if the URL was just built up like that because someone from the forum has mistakenly linked it to our
+
+168
+00:15:55,960 --> 00:16:01,960
+website. Then I can also send these errors to the web analyzer right away.
+
+169
+00:16:01,960 --> 00:16:08,040
+And the same, of course, also on the page level, if I have certain topics there. For example,
+
+170
+00:16:08,040 --> 00:16:13,800
+if I notice that an article has been sold out. Here, Zack, please send to Matomo right away. Because I can
+
+171
+00:16:13,800 --> 00:16:18,920
+then make evaluations about it later and can say how many people have run into articles. I have
+
+172
+00:16:18,920 --> 00:16:24,240
+1000 visitors. And of the 1000 visitors, how many have run into articles that were really
+
+173
+00:16:24,240 --> 00:16:29,960
+sold out? What do I do with it? Do I let them run like that? Because they might come back.
+
+174
+00:16:29,960 --> 00:16:34,680
+So I can then think about my viewing measures more carefully. Or the
+
+175
+00:16:34,680 --> 00:16:40,080
+no search results. I also had an e-commerce shop myself and there I also found out
+
+176
+00:16:40,080 --> 00:16:46,040
+in the search what people enter. There is also this Google zeitgeist, where at the end of the year
+
+177
+00:16:46,040 --> 00:16:50,960
+always comes out what people are looking for wrong with Google, i.e. where the writing is wrong. There is
+
+178
+00:16:50,960 --> 00:16:55,560
+a word like couch, for example, always in the top ten, where I think to myself, oh, couch is
+
+179
+00:16:55,560 --> 00:17:01,200
+actually not that difficult. But that is one of the most common wrongly written words. If you
+
+180
+00:17:01,200 --> 00:17:06,480
+are now a furniture seller and then also notice, wait a minute, people enter couch
+
+181
+00:17:06,480 --> 00:17:13,080
+wrongly written and I have no search results, then this event can help you
+
+182
+00:17:13,080 --> 00:17:17,200
+point out that somehow these hits are not there. It is also very often simply not
+
+183
+00:17:17,200 --> 00:17:23,760
+set up. And I just went from bottom to top a bit, the page read topic.
+
+184
+00:17:23,760 --> 00:17:30,440
+So that is also something that you can then set up something similar to scroll depth very, very nicely
+
+185
+00:17:30,440 --> 00:17:36,880
+via the tag manager. Of course also manually. But in the end it's really about
+
+186
+00:17:36,880 --> 00:17:41,360
+really taking something like a scroll depth in here. We have the case very often,
+
+187
+00:17:41,360 --> 00:17:48,080
+you have a page, the people are on it, you have a period of time, but you actually don't know
+
+188
+00:17:48,080 --> 00:17:53,480
+when such an article will be finished. And that's what this content tracking format
+
+189
+00:17:53,480 --> 00:17:59,000
+is very valuable for. Because with it, for example, I have such blocks that are close to the footer,
+
+190
+00:17:59,000 --> 00:18:03,480
+you can also do it directly over the footer. But if I have such elements
+
+191
+00:18:03,480 --> 00:18:09,200
+above the footer, such as these social bookmarks or share links or something, then I can
+
+192
+00:18:09,200 --> 00:18:14,720
+just say that if that appears in the area of ​​the visible in the browser, then it has
+
+193
+00:18:14,720 --> 00:18:20,000
+dealt intensively with such an article somewhere and read through it. There are very few people
+
+194
+00:18:20,000 --> 00:18:26,720
+who really scroll down completely at the end, go up again and then start reading.
+
+195
+00:18:26,720 --> 00:18:32,200
+But the people already proceed in such a way that they scroll down one or two times, but do not scroll down the whole
+
+196
+00:18:32,200 --> 00:18:37,680
+article. And so I can see a little bit when I say when the footer is
+
+197
+00:18:37,680 --> 00:18:42,920
+displayed, then I know, ah okay, this article has at least been read. These two
+
+198
+00:18:42,920 --> 00:18:50,200
+numbers, pages, views and pages read, I'll call them pages read, I can then
+
+199
+00:18:50,200 --> 00:18:55,040
+see again in direct relation and say, okay, then I really have a problem here at this point
+
+200
+00:18:55,040 --> 00:19:01,000
+because I have a thousand views on the page, less than 20 at some point
+
+201
+00:19:01,000 --> 00:19:05,760
+have seen the footer. So I can grab these numbers a little better again and
+
+202
+00:19:05,760 --> 00:19:10,000
+especially then also locate in my editorial office and say, now look here,
+
+203
+00:19:10,000 --> 00:19:14,800
+we just have a more accurate evaluation now. And this scroll depth can be used in the
+
+204
+00:19:14,800 --> 00:19:19,720
+tag manager then also by percentage, which is of course much more
+
+205
+00:19:19,720 --> 00:19:28,520
+convincing. And of course please use your own dimensions, because that is
+
+206
+00:19:28,520 --> 00:19:32,840
+the most valuable thing that I can actually integrate into the evaluations. I can
+
+207
+00:19:32,840 --> 00:19:37,960
+take something like the release date, for example, or just the article type with
+
+208
+00:19:37,960 --> 00:19:44,080
+article type or also page types, I mean, is it a product part page, is it an overview,
+
+209
+00:19:44,080 --> 00:19:49,880
+is it the start page, is it the search page, are there topic pages, text pages, whatever,
+
+210
+00:19:49,880 --> 00:19:54,520
+I can transfer what I want. And these own dimensions are just
+
+211
+00:19:54,520 --> 00:19:59,800
+super suitable for this, as well as to include product categories and say, this is the
+
+212
+00:19:59,800 --> 00:20:06,080
+overridden product category, for example, this is food, this is fashion, this is that,
+
+213
+00:20:06,080 --> 00:20:10,640
+because later on in my conversions, for example, I can also divide it up more precisely,
+
+214
+00:20:10,640 --> 00:20:16,200
+or I can just say, aha, okay, our conversion in the field, for example, fashion is higher
+
+215
+00:20:16,200 --> 00:20:22,920
+than the conversion in the field of food or something, yes, or in other topics. You have
+
+216
+00:20:22,920 --> 00:20:27,680
+comparability through this. You can also include indexing, if you say you have
+
+217
+00:20:27,680 --> 00:20:33,200
+many pages on noindex, that is, these are pages that are excluded for Google,
+
+218
+00:20:33,200 --> 00:20:39,560
+but are still on the website, yes, I'm thinking, for example, of certain categories,
+
+219
+00:20:39,560 --> 00:20:45,400
+page pages and so on. Then I can also transfer these indexing values to Matomo and say,
+
+220
+00:20:45,400 --> 00:20:49,880
+okay, here, then I can see how much traffic I still have on my noindex page.
+
+221
+00:20:49,880 --> 00:20:54,880
+Then I can possibly think, oh, maybe with a little text enrichment I can
+
+222
+00:20:54,880 --> 00:21:01,440
+still put it from noindex to index, or, or, or. These are the points that you can
+
+223
+00:21:01,440 --> 00:21:06,640
+easily deduce. Or just the number of words, yes, that just makes sense in rounds,
+
+224
+00:21:06,640 --> 00:21:12,200
+so 50 or 100 words in rounds, but then you can see how the duration also behaves,
+
+225
+00:21:12,200 --> 00:21:16,640
+how the deviation rates also behave. And where I can see exactly, with all texts
+
+226
+00:21:16,640 --> 00:21:21,680
+that were below 100 words, the deviation rate was just very, very high, or just very low,
+
+227
+00:21:21,680 --> 00:21:27,080
+because maybe the information I have is already enough. So to transfer these values to Matomo,
+
+228
+00:21:27,080 --> 00:21:32,880
+also structured data, yes, filter, yes, if I have a shop, that also makes sense
+
+229
+00:21:32,880 --> 00:21:38,720
+to transfer to Matomo. Because to take everything in again and think about how
+
+230
+00:21:38,720 --> 00:21:44,960
+I can deduce measures and proportions from my numbers, that is what is
+
+231
+00:21:44,960 --> 00:21:49,480
+important for you in the end and then, to make decisions. What do we do with it?
+
+232
+00:21:49,480 --> 00:21:55,040
+Do we link this category more often? Do we put more text on it? Do we look at
+
+233
+00:21:55,040 --> 00:21:59,840
+technical problems? How do we get this done? Quite classic now maybe the loading time optimization,
+
+234
+00:21:59,840 --> 00:22:05,320
+if I just know that, for example, on the article type product page, the deviation rates are
+
+235
+00:22:05,320 --> 00:22:10,600
+higher and the delay is lower, then I can just see how the measurement data for the
+
+236
+00:22:10,600 --> 00:22:15,600
+WebVitals are. And if they are significantly worse than on the overview pages, then I can go there,
+
+237
+00:22:15,600 --> 00:22:21,040
+then I go there first and optimize there. So I can use the segments, the dimensions,
+
+238
+00:22:21,040 --> 00:22:26,000
+I can also use the segments, just get in here much, much better and check it out.
+
+239
+00:22:26,000 --> 00:22:33,040
+And also this search term is not defined, which means what the visitors came up with
+
+240
+00:22:33,040 --> 00:22:38,440
+on Google. Yes, Google was blocked back then, they said in 2014, because of the NSA affair,
+
+241
+00:22:38,440 --> 00:22:44,040
+because of our HTTPS encryption, we no longer transfer these search terms. But
+
+242
+00:22:44,040 --> 00:22:49,320
+the funny thing is, there is the Google Search Console that offers this data again. And here
+
+243
+00:22:49,320 --> 00:22:56,880
+there is a very simple plug-in from Matomo, although it is mandatory, but that is really one of the
+
+244
+00:22:56,880 --> 00:23:02,040
+must-have plug-ins that I need for the SEO area, because that brings me back these data
+
+245
+00:23:02,040 --> 00:23:08,080
+into Matomo. And that's the nice thing, because I have my segments here, I have everything
+
+246
+00:23:08,080 --> 00:23:13,240
+in the area of ​​conversions and so on running together. That means in the Google Search Console you can
+
+247
+00:23:13,240 --> 00:23:17,920
+also say, yes, I have the data there. But because I connect it to Matomo, it does
+
+248
+00:23:17,920 --> 00:23:22,920
+that much better, because then I can also see which conversions are responsible for which keywords,
+
+249
+00:23:22,920 --> 00:23:28,360
+for example. So this combination of this data again with my dimensions,
+
+250
+00:23:28,360 --> 00:23:33,560
+with my segments, with mobile versus desktop and all these topics, I can now
+
+251
+00:23:33,560 --> 00:23:39,000
+evaluate them much better here in Matomo and sort them out. That means
+
+252
+00:23:39,000 --> 00:23:44,800
+all the filter functions, everything I have associated with it, is just much, much better
+
+253
+00:23:44,800 --> 00:23:50,160
+for me. So for me a must-have. But you can also look at the functionality. I
+
+254
+00:23:50,160 --> 00:23:55,000
+also included it as a link at the bottom. You are welcome to go to the Matomo Cloud, there is a demo version
+
+255
+00:23:55,000 --> 00:23:59,800
+where this plug-in is also installed. Then you can see, aha, is there anything suitable for me or not.
+
+256
+00:23:59,800 --> 00:24:06,840
+That means you can definitely take a look at that. That's as far as what I should definitely
+
+257
+00:24:06,840 --> 00:24:13,160
+mention in terms of data points, i.e. events, content tracking and of course these search terms
+
+258
+00:24:13,160 --> 00:24:18,560
+and dimensions. These are the four topics that in any case, if you don't have that yet and
+
+259
+00:24:18,560 --> 00:24:23,720
+really want to evaluate it better in SEO, then you need these four measuring points
+
+260
+00:24:23,720 --> 00:24:31,600
+in addition. And now just a few more tips, so to speak, on improvement. And it's
+
+261
+00:24:31,600 --> 00:24:37,040
+about me just explaining a few things to you again, what you can do or how you
+
+262
+00:24:37,040 --> 00:24:42,880
+could really approach that. So in the field of SEO you are always looking for
+
+263
+00:24:42,880 --> 00:24:48,640
+these topics. So I already mentioned earlier, yes, especially this Panda update or
+
+264
+00:24:48,640 --> 00:24:53,320
+other updates that always target the same thing, namely where I have
+
+265
+00:24:53,320 --> 00:24:59,960
+thin content on my domain, bad content, little text, maybe and so on and so forth.
+
+266
+00:24:59,960 --> 00:25:06,200
+There are a lot of really cool SEO tools that can help there too, but the most important
+
+267
+00:25:06,200 --> 00:25:12,840
+metrics for these recognitions are always rather to be found in Matomo or in the web analysis.
+
+268
+00:25:12,840 --> 00:25:18,080
+And there you just have to look at two real values. I've already said that one
+
+269
+00:25:18,080 --> 00:25:23,680
+is in the end the jump rate. Please note here that this jump rate always refers to
+
+270
+00:25:23,680 --> 00:25:29,160
+the entries and not to the side views. This means that this 90 percent does not refer here
+
+271
+00:25:29,160 --> 00:25:35,880
+in the first line to this 31, but you really have to jump into the table where
+
+272
+00:25:35,880 --> 00:25:41,520
+the entries are also included. But that tells me here now, 90 percent of all people
+
+273
+00:25:41,520 --> 00:25:47,520
+who have arrived at this bottom page or even these 97 percent of these users who have arrived
+
+274
+00:25:47,520 --> 00:25:53,520
+here on the page, 97 percent of them are gone again, so really very, very many.
+
+275
+00:25:53,520 --> 00:26:00,200
+I can definitely take a look at that, but also in relation to the pass rate.
+
+276
+00:26:00,200 --> 00:26:05,840
+There I only see one second, so all the people jumped off and there was only one second
+
+277
+00:26:05,840 --> 00:26:13,240
+on it and there only three seconds. So in general there is a very, very low pass rate on the page,
+
+278
+00:26:13,240 --> 00:26:20,320
+which means that I can take a look at all of these pages. And then you often come up with
+
+279
+00:26:20,320 --> 00:26:25,080
+this problem of the jump rate that refers to the entry pages. You have to jump back and forth a bit
+
+280
+00:26:25,080 --> 00:26:30,320
+and also jump back and forth to the entry pages here in order to
+
+281
+00:26:30,320 --> 00:26:37,560
+show this jump rate in more detail. So here I also have 34 entries and
+
+282
+00:26:37,560 --> 00:26:44,000
+also 34 jumps, so 100 percent. So it does not refer to 90 or 100 page views,
+
+283
+00:26:44,000 --> 00:26:49,600
+but really only to these entries. And then you will find pages like this, for example
+
+284
+00:26:49,600 --> 00:26:55,280
+here on the example of the yellow pages where I have entered something, Matomo under Meitingen. Then
+
+285
+00:26:55,280 --> 00:27:00,880
+down here, dear users, there is unfortunately no hit in this radius for your search term. I have
+
+286
+00:27:00,880 --> 00:27:05,800
+a radius of 50 kilometers here, so I am the only one in 50 kilometers who seems to be dealing with the topic
+
+287
+00:27:05,800 --> 00:27:12,000
+and still have not been introduced. Of course, this is a very bad experience for users.
+
+288
+00:27:12,000 --> 00:27:17,280
+You will not say, okay, I'll stay on this page for five minutes now and take a
+
+289
+00:27:17,280 --> 00:27:23,000
+closer look at everything again, but either, of course, I enter something else at the top or
+
+290
+00:27:23,000 --> 00:27:28,040
+I turn my back on the page and then immediately go away and look for the second result.
+
+291
+00:27:28,040 --> 00:27:33,960
+So search in search is always difficult anyway, people usually go back to Google.
+
+292
+00:27:33,960 --> 00:27:40,440
+Or there are also pages where I notice that the button for buying is faded out, this product
+
+293
+00:27:40,440 --> 00:27:45,440
+may no longer exist. Yes, then of course I am quickly away from this page, because I
+
+294
+00:27:45,440 --> 00:27:49,680
+might have wanted to buy this now and it just doesn't exist anymore. Then I go back
+
+295
+00:27:49,680 --> 00:27:57,000
+and maybe look for someone else. Especially with Amazon it is the page, for example, buying PS5,
+
+296
+00:27:57,000 --> 00:28:01,800
+which is causing quite a bit of despair, because of course there is no PS5 to buy.
+
+297
+00:28:01,800 --> 00:28:05,160
+And you keep coming back to the page, but you see that I can't buy it at all,
+
+298
+00:28:05,160 --> 00:28:08,880
+then everyone is gone. And they don't read much more, because they were
+
+299
+00:28:08,880 --> 00:28:13,480
+already there five or six times. That's why for this page they also have a bad
+
+300
+00:28:13,480 --> 00:28:20,320
+jump rate and a low pass rate, that always pulls everything down a bit. Just
+
+301
+00:28:20,320 --> 00:28:27,680
+as a practical example. And now my tips on how to interpret these numbers correctly.
+
+302
+00:28:27,680 --> 00:28:34,000
+You have this little gear symbol when you scroll down within this evaluation page,
+
+303
+00:28:34,000 --> 00:28:40,440
+where you don't have these data in this grouping where they have the folder structure at the front,
+
+304
+00:28:40,440 --> 00:28:45,760
+in this hierarchical order, but you can also display these data flatly.
+
+305
+00:28:45,760 --> 00:28:49,280
+I always find that nicer, because then you can sort it out nicely with this flat representation,
+
+306
+00:28:49,280 --> 00:28:53,480
+where all web addresses are really listed on top of each other, without, pardon me,
+
+307
+00:28:53,480 --> 00:28:58,760
+groups. And then you can just say, for example, I sort after a
+
+308
+00:28:58,760 --> 00:29:05,720
+pass rate, I sort after a jump rate. So the clarity is just much, much better here.
+
+309
+00:29:05,720 --> 00:29:11,480
+A note, of course, that you always had to look at it differently from case to case.
+
+310
+00:29:11,480 --> 00:29:15,320
+That means that what I'm giving you here as tips is not entangled in stone,
+
+311
+00:29:15,320 --> 00:29:20,040
+because again, the industry books have different conditions, so it's different there.
+
+312
+00:29:20,040 --> 00:29:26,520
+The same goes for other pages, types, it always depends on it. But if you just want to say,
+
+313
+00:29:26,520 --> 00:29:30,440
+and I want to do that here, because I have very good experience in the field of SEO,
+
+314
+00:29:30,440 --> 00:29:37,000
+which pages should you look at, then everything that is over 70% in the jump rate,
+
+315
+00:29:37,000 --> 00:29:41,080
+yes, don't just throw it away blindly and say, oh, that's probably all crap,
+
+316
+00:29:41,080 --> 00:29:47,360
+but definitely look at it more closely. And just look at it, if I have 70% and higher,
+
+317
+00:29:47,360 --> 00:29:53,720
+where is the delay perhaps under 15 seconds? Why 15 seconds? Such a page always needs
+
+318
+00:29:53,720 --> 00:29:59,560
+time until it is there, until you orientate a bit. The structure is always top left, the logo
+
+319
+00:29:59,560 --> 00:30:05,120
+at the top right, maybe the goods basket. If you have a large navigation at the top, a search field,
+
+320
+00:30:05,120 --> 00:30:08,960
+then somehow there might be a text again. I don't even know yet, I have to
+
+321
+00:30:08,960 --> 00:30:13,960
+find my way around a bit. If it's a product overview page, then I scroll through it first
+
+322
+00:30:13,960 --> 00:30:19,480
+and look, ah, these are products that are exhausting me. That means this time to find my way around
+
+323
+00:30:19,480 --> 00:30:25,640
+at all, without me starting and reading text or thinking about it,
+
+324
+00:30:25,640 --> 00:30:33,120
+I always need between 7 and 10 seconds. That's why everything that is under 15 seconds was a
+
+325
+00:30:33,120 --> 00:30:39,320
+quick decision that doesn't fit for me. Let me just differentiate again. Of course,
+
+326
+00:30:39,320 --> 00:30:44,920
+if you only have a photo series with one picture on it, then that's faster than 15 seconds,
+
+327
+00:30:44,920 --> 00:30:49,360
+which of course doesn't mean, yes, always on your own, on your own body,
+
+328
+00:30:49,360 --> 00:30:53,960
+maybe play through it, make a fool of yourself, go to the page, say, okay, how long do I need
+
+329
+00:30:53,960 --> 00:30:58,600
+now, if I would now deal with this page for the first time. And these pages
+
+330
+00:30:58,600 --> 00:31:05,080
+also scroll up so much that you always have at least 50 pages of impressions or more.
+
+331
+00:31:05,080 --> 00:31:09,200
+So that means you can control that via the date at the top, that you say, yes, I don't just want
+
+332
+00:31:09,200 --> 00:31:13,560
+one day now, but the week, or if the week doesn't work out, then rather a month,
+
+333
+00:31:13,560 --> 00:31:18,960
+because of the statistics, I can't just make better equipment. The
+
+334
+00:31:18,960 --> 00:31:25,000
+Heinzberg study back then with Corona, yes, where they tested 500 and I think 700 people there,
+
+335
+00:31:25,000 --> 00:31:31,240
+said, well, that's how it has to be with 82 million Germans, I don't think anything of it as a statistician.
+
+336
+00:31:31,240 --> 00:31:37,240
+So then rather say, I just need more values, with more values I have a more reasonable
+
+337
+00:31:37,240 --> 00:31:43,120
+statement of strength, which brings these topics together, like delay and drop rate. And
+
+338
+00:31:43,120 --> 00:31:49,240
+through more data, I also smooth out these average values. Because so outliers that were then once a day
+
+339
+00:31:49,240 --> 00:31:54,320
+or something, I just smooth them out with it and through more data. And these pages,
+
+340
+00:31:54,320 --> 00:31:58,880
+as I said, please take a look in the browser to be able to understand the behavior,
+
+341
+00:31:58,880 --> 00:32:05,440
+to see, was that understandable, so why, okay, the users got the information here
+
+342
+00:32:05,440 --> 00:32:09,920
+, if they wanted to, then here is a drop rate, a high drop rate, not at all
+
+343
+00:32:09,920 --> 00:32:17,560
+surprising, yes. Yes, tip number two was already a topic earlier, so of course the
+
+344
+00:32:17,560 --> 00:32:23,240
+internet search is often not taken care of. You actually have to enter these parameters
+
+345
+00:32:23,240 --> 00:32:27,520
+at the bottom of many systems only under manage settings, which you then also use for the search yourself
+
+346
+00:32:27,520 --> 00:32:32,960
+. Or then maybe also send this information via Javascript,
+
+347
+00:32:32,960 --> 00:32:39,000
+also in the tech manager, please set it up, that is often the case, even if it is not present in the system
+
+348
+00:32:39,000 --> 00:32:44,480
+or something, you can also do it relatively easily, because it just brings a lot of great results
+
+349
+00:32:44,480 --> 00:32:50,080
+for your own evaluation. On the one hand, the top searches always give hints on what
+
+350
+00:32:50,080 --> 00:32:56,320
+are the topics in question. And people always search when the pages are not so easy to reach for
+
+351
+00:32:56,320 --> 00:33:02,760
+them, because they say, oh, the menu control is very complex or hoppala, I don't know
+
+352
+00:33:02,760 --> 00:33:08,000
+exactly how I get there, is that now in this category or there, there may be no
+
+353
+00:33:08,000 --> 00:33:13,720
+brand overviews, I know, but I'm looking for the product of the brand, so they are very, very
+
+354
+00:33:13,720 --> 00:33:18,680
+fast because they just say, oh, that seems very complex to me and I want to get to my goal
+
+355
+00:33:18,680 --> 00:33:25,200
+very quickly, that's why this search is also used. Normally, in the field of e-commerce or
+
+356
+00:33:25,200 --> 00:33:30,280
+other areas, 5 to 15 percent is now on average. Of course, that can also differ
+
+357
+00:33:30,280 --> 00:33:35,720
+from page to page and of course it also depends on the integration. Something like the yellow pages or other
+
+358
+00:33:35,720 --> 00:33:40,560
+industry publishers, yes, they have a focus on the fact that people are also looking there, that the
+
+359
+00:33:40,560 --> 00:33:45,560
+search is very prominent. Think of Amazon too, the search field is very prominent up there
+
+360
+00:33:45,560 --> 00:33:51,360
+, no one is hanging around because of these 40,000 categories that Amazon offers there.
+
+361
+00:33:51,360 --> 00:33:56,920
+But it is always a good indication of what people are really looking for. Please also pay attention to
+
+362
+00:33:56,920 --> 00:34:01,680
+large and small writing points here. We also have that very often, for example, that jackets
+
+363
+00:34:01,680 --> 00:34:07,120
+in large writing and jackets in small writing have two numbers in this statistic.
+
+364
+00:34:07,120 --> 00:34:12,920
+That makes it more difficult to evaluate again and also discover many new editorial topics,
+
+365
+00:34:12,920 --> 00:34:18,960
+write mistakes, I already mentioned that earlier, and also measure these zero hit results.
+
+366
+00:34:18,960 --> 00:34:23,520
+You can either see that in this search overview here or you send it out
+
+367
+00:34:23,520 --> 00:34:31,160
+as I suggested earlier. Tip number three, which pages should I
+
+368
+00:34:31,160 --> 00:34:35,480
+optimize? I say that very often because that is also an important aspect in SEO.
+
+369
+00:34:35,480 --> 00:34:43,840
+Yes, our shop may have 50,000 products. I can't optimize 50,000 products. No, but I
+
+370
+00:34:43,840 --> 00:34:50,640
+have the product sales data in Matomo. I know exactly how many purchases or how many
+
+371
+00:34:50,640 --> 00:34:55,920
+purchases have been made about it and what amount was also in the warehouse. So I have this information.
+
+372
+00:34:55,920 --> 00:35:00,760
+I just called it here small 1 to small 10 and counted some numbers with it.
+
+373
+00:35:00,760 --> 00:35:06,400
+But what I see again and again in the evaluations is that if I pull out the top 25 products here
+
+374
+00:35:06,400 --> 00:35:11,760
+and therefore this segment product pages and so on and also in the e-commerce area these
+
+375
+00:35:11,760 --> 00:35:19,240
+product SKUs and so on, then I immediately see which 25 products make the most
+
+376
+00:35:19,240 --> 00:35:26,360
+sales for me. And I have pages that make up 70 percent, the average is then more like 30 percent,
+
+377
+00:35:26,360 --> 00:35:33,000
+but of course these are the pages that I should optimize. That means I go through the top 25 here
+
+378
+00:35:33,000 --> 00:35:38,760
+and look at page 2, page 3, page 4. What can I do much better on these pages?
+
+379
+00:35:38,760 --> 00:35:44,760
+That's just, the effort can then scale. When I have the 25 products ready, I go to the
+
+380
+00:35:44,760 --> 00:35:51,120
+next ones. So I don't go and say 50,000, we need 50,000 new product texts now,
+
+381
+00:35:51,120 --> 00:35:57,360
+but first I need 25 new product texts. And if they work and if they work to some extent,
+
+382
+00:35:57,360 --> 00:36:02,600
+then I go to the next ones. But first of all, I always take out the most profitable names
+
+383
+00:36:02,600 --> 00:36:07,440
+and optimize them. Because the probability that I now have a product at the bottom that
+
+384
+00:36:07,440 --> 00:36:13,480
+is perhaps a storekeeper, that I make a bestseller out of it, is rather low. So look there,
+
+385
+00:36:13,480 --> 00:36:18,400
+what is in the internal search, is also searched often. You can
+
+386
+00:36:18,400 --> 00:36:22,840
+put these numbers nicely together and say, okay, it is searched often, these are one of our
+
+387
+00:36:22,840 --> 00:36:27,800
+most popular categories, I can see that from the page evaluation and I go to these products.
+
+388
+00:36:27,800 --> 00:36:36,240
+Tip number 4 is the visitor flow. We already have this transition in Matomo,
+
+389
+00:36:36,240 --> 00:36:39,880
+where you can see what are the predecessors and successors, more about that in a moment,
+
+390
+00:36:39,880 --> 00:36:43,880
+but there is also a very nice plug-in that is unfortunately also free of charge,
+
+391
+00:36:43,880 --> 00:36:49,000
+but also saves me work. That's why I'm always such a friend of such plug-ins,
+
+392
+00:36:49,000 --> 00:36:52,600
+which then save me a lot of work, where I don't sit in the evaluation for four hours,
+
+393
+00:36:52,600 --> 00:36:58,080
+but have understood in two minutes what is going on. For me it is always an argument
+
+394
+00:36:58,080 --> 00:37:02,840
+why you can say, okay, then I really go there. And as I said, I have good connections
+
+395
+00:37:02,840 --> 00:37:08,240
+for Matomo, but I also had to buy these plug-ins, but I also use them
+
+396
+00:37:08,240 --> 00:37:14,520
+often. And this user flow is a complete view of the entire domain, how the visitors
+
+397
+00:37:14,520 --> 00:37:18,680
+behave on my site now. And there I also see patterns again and again, that, for example,
+
+398
+00:37:18,680 --> 00:37:23,200
+people who go through the site and at the end of the visit, for whatever reason,
+
+399
+00:37:23,200 --> 00:37:29,880
+they go back to the start page, for example. So now I can think about where I want my
+
+400
+00:37:29,880 --> 00:37:36,320
+users to go and integrate that into this whole workflow. This
+
+401
+00:37:36,320 --> 00:37:43,080
+behavior flow. I have a few metrics in my hand right now that I have now simply visually
+
+402
+00:37:43,080 --> 00:37:47,480
+prepared better. On the one hand, I see dikes on the basis of my jump rates, which are
+
+403
+00:37:47,480 --> 00:37:54,080
+these red bars, where I simply lose visitors massively. If I already lose a lot of visitors
+
+404
+00:37:54,080 --> 00:37:59,200
+on the first page, then there is simply little left out of the back that then navigates
+
+405
+00:37:59,200 --> 00:38:05,840
+further through the page. What I can also do is show these details to me,
+
+406
+00:38:05,840 --> 00:38:12,360
+what kind of pages are in there, for example, and how many exits or further leading
+
+407
+00:38:12,360 --> 00:38:18,200
+visitors there are. That means I can really navigate through here in detail
+
+408
+00:38:18,200 --> 00:38:26,240
+and look at these paths and analyze them. That means looking at the top paths,
+
+409
+00:38:26,240 --> 00:38:33,600
+where the visitors go further and what they do there. That is very, very nice about this module
+
+410
+00:38:33,600 --> 00:38:41,680
+and very quickly and beautifully visualized by this plugin. I also have such evaluations
+
+411
+00:38:41,680 --> 00:38:48,200
+under it, where I immediately see this top path, where I see that the people who
+
+412
+00:38:48,200 --> 00:38:53,440
+all somehow get on the website analysis and then go back to the website
+
+413
+00:38:53,440 --> 00:38:58,440
+analysis. They just press F5 or take something through at some point. Or that the people
+
+414
+00:38:58,440 --> 00:39:04,320
+arrive at my web analysis page and then go to the start page. So I see
+
+415
+00:39:04,320 --> 00:39:09,640
+such elements now. As I said, my page is not that prominent now. I now
+
+416
+00:39:09,640 --> 00:39:14,840
+put relatively little focus on it, but it's not the best page either, I have to admit.
+
+417
+00:39:14,840 --> 00:39:19,960
+But of course it is also important for me when I say how my services are,
+
+418
+00:39:19,960 --> 00:39:25,800
+how things are. With a larger page, of course, it is much more interesting. Do I get the people
+
+419
+00:39:25,800 --> 00:39:30,480
+there? When do they start looking for it? And you can see that very nicely in these
+
+420
+00:39:30,480 --> 00:39:38,280
+top navigations. And of course also here, which is very nicely depicted in this user flow,
+
+421
+00:39:38,280 --> 00:39:44,640
+but I often want to take a deeper look at it, these transitions are then
+
+422
+00:39:44,640 --> 00:39:50,200
+under behavior. This is both in the menu as well as if you have the pages
+
+423
+00:39:50,200 --> 00:39:55,400
+displayed flat or if you are here on the URL level. So I only call it blue links.
+
+424
+00:39:55,400 --> 00:40:01,480
+Yes, then you have it available right when you drive over this field with the mouse.
+
+425
+00:40:01,480 --> 00:40:06,560
+That's just this nice butterfly graphic that just tells me where the people
+
+426
+00:40:06,560 --> 00:40:12,000
+came from on the clicked page. So I see here, I have 256 page impressions,
+
+427
+00:40:12,000 --> 00:40:18,840
+of which 50 came from internal and so on and so forth. Yes, and 195 from search engines.
+
+428
+00:40:18,840 --> 00:40:24,480
+So these are the predecessors of the internal pages. And I see, and that's just what is
+
+429
+00:40:24,480 --> 00:40:32,360
+next. What is it, so to speak, what happens next? Where are you going? And here just for a page
+
+430
+00:40:32,360 --> 00:40:37,960
+that has to do with crafts. And so I immediately see if someone was on the craftsman's side,
+
+431
+00:40:37,960 --> 00:40:43,760
+where is he going? And I can already see hoppala, these are just building instructions, very popular.
+
+432
+00:40:43,760 --> 00:40:48,640
+So if I go over this page, then people want to jump into these building instructions.
+
+433
+00:40:48,640 --> 00:40:54,800
+So, and now we come to SEO aspects where I just say, that's why it makes no sense to present a
+
+434
+00:40:54,800 --> 00:41:00,120
+fly-out menu on many pages. Better a menu where I can see where I am right now and where
+
+435
+00:41:00,120 --> 00:41:04,400
+I am right now. This is again and again where I have to discuss this with many customers,
+
+436
+00:41:04,400 --> 00:41:10,360
+because someone who is in ladies' fashion does not buy a furniture cabinet wall now.
+
+437
+00:41:10,360 --> 00:41:16,680
+He doesn't. But he is in his ladies' world or she is in his ladies' world and looks at things there.
+
+438
+00:41:16,680 --> 00:41:24,200
+If I'm wearing evening dresses, they bring you to the left, maybe blouses or jackets,
+
+439
+00:41:24,200 --> 00:41:30,240
+even further. But they don't jump back and forth like that. You can see that very well with Zalando.
+
+440
+00:41:30,240 --> 00:41:35,280
+They have three theme worlds at the top, ladies, gentlemen and children. And if you go into gentlemen,
+
+441
+00:41:35,280 --> 00:41:39,640
+then you no longer see a menu. You have no way of getting to the ladies' skirt,
+
+442
+00:41:39,640 --> 00:41:44,360
+which doesn't make any sense at all. And you can do that here, if you show this statistic.
+
+443
+00:41:44,360 --> 00:41:50,320
+First make it really clear to many. Look, you have so much, you have 200 links on the page,
+
+444
+00:41:50,320 --> 00:41:57,400
+but the relevant ones are these top 5, for example. And these are all themes near pages.
+
+445
+00:41:57,400 --> 00:42:02,360
+That means that no one clicks across somehow and the reach of the menu does not have to go down
+
+446
+00:42:02,360 --> 00:42:07,160
+to every third level so that I have 600 links at the top of the menu because I have such a large
+
+447
+00:42:07,160 --> 00:42:13,600
+product range. Or in the news publisher of the newspaper publisher, who then says,
+
+448
+00:42:13,600 --> 00:42:18,360
+yes, we have 84 places in the region and of course they should all be reachable. Yes,
+
+449
+00:42:18,360 --> 00:42:24,400
+but if the places are then really far apart in the region and you just say,
+
+450
+00:42:24,400 --> 00:42:29,640
+yes, here from north to south it is somehow 180 kilometers, then no one looks at that anymore.
+
+451
+00:42:29,640 --> 00:42:34,480
+So whoever is sitting at the very bottom doesn't look at the content at the top anymore, geographically speaking.
+
+452
+00:42:34,480 --> 00:42:40,880
+So please always evaluate that. Unfortunately, only these top 5 here, I think that's a bit of a shame.
+
+453
+00:42:40,880 --> 00:42:45,280
+I would also like, maybe for Lukas, you can, you can also listen, hopefully,
+
+454
+00:42:45,280 --> 00:42:50,720
+that you could just expand into these transitions again somehow, so that you
+
+455
+00:42:50,720 --> 00:42:57,680
+don't just see 5. User flow. As I said, for me it is always a very, very important topic,
+
+456
+00:42:57,680 --> 00:43:03,240
+because I can derive so much from it. So because I want the people, the visitors
+
+457
+00:43:03,240 --> 00:43:07,040
+of my website, the users, to come to my target pages, where I want them to be,
+
+458
+00:43:07,040 --> 00:43:11,320
+namely on the product pages, maybe in the shop, or on the overview pages,
+
+459
+00:43:11,320 --> 00:43:17,280
+on my news portals or whatever. I see how the user navigates,
+
+460
+00:43:17,280 --> 00:43:21,760
+that is what is also asked very often. Yes, how is the behavior on the page?
+
+461
+00:43:21,760 --> 00:43:27,240
+I can see that from this predecessor, successor. And when does the user start searching?
+
+462
+00:43:27,240 --> 00:43:33,560
+I can see that from there. And from that I can, in turn, derive measures for SEO. How can I
+
+463
+00:43:33,560 --> 00:43:37,760
+improve my menu structure and how can I improve the internal links?
+
+464
+00:43:37,760 --> 00:43:44,040
+So that is of course a very, very important aspect, always in here. Tip number 5,
+
+465
+00:43:44,040 --> 00:43:50,040
+the performance. It's nice that you know TUMO, yes, and I just see a great distribution here in the end
+
+466
+00:43:50,040 --> 00:43:55,760
+. You say, okay, everything looks like this, yes, it's at least the same. You
+
+467
+00:43:55,760 --> 00:44:01,720
+have one or two days here and a few outliers, but please, at this point, the page load time,
+
+468
+00:44:01,720 --> 00:44:05,560
+that's something that Google also sees very, very quickly. And there are currently,
+
+469
+00:44:05,560 --> 00:44:12,480
+in my opinion, too many error lines in this evaluation of TUMO. Because I just,
+
+470
+00:44:12,480 --> 00:44:18,040
+depending on where, for example, I put the TUMO script in and maybe
+
+471
+00:44:18,040 --> 00:44:24,520
+also load scripts beforehand and then reload TUMO only later. Because if that's with the
+
+472
+00:44:24,520 --> 00:44:28,920
+tech manager, it might be different, but with the normal one, it just always needs that.
+
+473
+00:44:28,920 --> 00:44:33,400
+That's why I always have a bit of a problem with measuring there. And also there,
+
+474
+00:44:33,400 --> 00:44:38,680
+often seen after the module is still very, very new, also available since version 4,
+
+475
+00:44:38,680 --> 00:44:42,720
+that I sometimes just see that there are still bugs in the preparation.
+
+476
+00:44:42,720 --> 00:44:48,280
+That's why my tip at this point, if you go in, for example, and say you want to take the
+
+477
+00:44:48,280 --> 00:44:53,560
+right loading time, then we take such tools as WebPageTest or Google PageSpeed,
+
+478
+00:44:53,560 --> 00:44:59,040
+because they set the standard. That means, if I check that today, if I check that tomorrow, I
+
+479
+00:44:59,040 --> 00:45:03,760
+always check it under the same conditions. In other words, the device behind it that
+
+480
+00:45:03,760 --> 00:45:08,440
+captures the loading time, that's still with the same configuration. Here in this
+
+481
+00:45:08,440 --> 00:45:13,840
+performance, you would actually have to filter it out now and say, for mobile devices and
+
+482
+00:45:13,840 --> 00:45:19,040
+maybe sort out different brands there, what is the loading time there, how is it on the
+
+483
+00:45:19,040 --> 00:45:24,560
+desktop. I would really have to go in here again and see where my problems actually hang.
+
+484
+00:45:24,560 --> 00:45:30,080
+And these two tools are really to be recommended. Nevertheless, of course, there is also the
+
+485
+00:45:30,080 --> 00:45:35,520
+topic of WebVirtuals, where I can quickly get these data into Matomo. And there are two
+
+486
+00:45:35,520 --> 00:45:40,920
+plugins that I would recommend to you. One is the Performance Auto Plugin. That is free,
+
+487
+00:45:40,920 --> 00:45:45,760
+is a bit tricky to install, I honestly write that too, because you need
+
+488
+00:45:45,760 --> 00:45:51,960
+Node.js here, because Node.js has to run on the server to calculate these values yourself and
+
+489
+00:45:51,960 --> 00:45:56,320
+then also to record for the pages. That means, a script runs through every night,
+
+490
+00:45:56,320 --> 00:46:01,000
+which then performs this calculation. The values that come out of it are very, very good.
+
+491
+00:46:01,000 --> 00:46:06,520
+So that also corresponds to what the other tools actually offer in this regard.
+
+492
+00:46:06,520 --> 00:46:11,400
+Plus, as I said, it's a bit tricky to install. But if you can do that,
+
+493
+00:46:11,400 --> 00:46:16,840
+then you have all these values. And on the other hand, there is a cost-effective one from
+
+494
+00:46:16,840 --> 00:46:23,640
+InnoCraft, i.e. from Matomo itself. That is cost-effective, yes, but at this point it is
+
+495
+00:46:23,640 --> 00:46:29,480
+simply, let's say, easier to integrate into this whole topic. The data
+
+496
+00:46:29,480 --> 00:46:34,480
+investigation is a bit different at this point. Here the API is pulled from Google.
+
+497
+00:46:34,480 --> 00:46:40,000
+That's nice and good, but not necessarily the super cool effect on very large pages.
+
+498
+00:46:40,000 --> 00:46:46,000
+Because you only have a certain number of API credits at Google and I think they go up to
+
+499
+00:46:46,000 --> 00:46:52,040
+10,000. So if you have a page where you say 15,000-20,000 sub-pages and I would like to have it for every page,
+
+500
+00:46:52,040 --> 00:46:58,600
+then this is not the point. Both tools, however, in the end show similar metrics.
+
+501
+00:46:58,600 --> 00:47:04,120
+They tell me exactly what is going on on my page, so to speak, in relation to these web
+
+502
+00:47:04,120 --> 00:47:11,680
+websites, bad, CLS, LCP, these values, also the overview average, which Google or in the end
+
+503
+00:47:11,680 --> 00:47:19,120
+which score is achieved there. You can see that in both tools. So it's about tip 6, the last tip,
+
+504
+00:47:19,120 --> 00:47:24,560
+so to speak, to identify the bad link givers. So bad link givers are of course
+
+505
+00:47:24,560 --> 00:47:29,840
+also pages that may bring me visitors, but then also send bad signals on my
+
+506
+00:47:29,840 --> 00:47:36,120
+page. And you should just take a look at the source. And you have
+
+507
+00:47:36,120 --> 00:47:42,160
+these actions here on average, how many actions there were. And if I have sources
+
+508
+00:47:42,160 --> 00:47:49,000
+in it, where I notice, for example, that visitors are coming, but unfortunately I get a very high
+
+509
+00:47:49,000 --> 00:47:54,680
+jump rate here. And the pass rate is also very, very low for the visitors. Then I can
+
+510
+00:47:54,680 --> 00:48:01,920
+read these out here right away and show them to me. And then see, also in the segmentation log,
+
+511
+00:48:01,920 --> 00:48:06,040
+which is also a very good overview. If you then drive over these links here, then you get
+
+512
+00:48:06,040 --> 00:48:13,400
+them already shown. Where did they arrive? And then see, okay, can I maybe write down the link giver
+
+513
+00:48:13,400 --> 00:48:17,880
+and say, look, this content there, it doesn't somehow fit with yours, what you
+
+514
+00:48:17,880 --> 00:48:23,440
+have linked. Can you maybe adjust that again? Maybe I could optimize it that way. Or I
+
+515
+00:48:23,440 --> 00:48:28,960
+can also think about it, because there are also many spam portals or referer spam at this
+
+516
+00:48:28,960 --> 00:48:34,520
+point, which can then also be filtered out or blocked out. So I can get a little bit of
+
+517
+00:48:34,520 --> 00:48:41,200
+a grip on that. And again, the best links are of course also the ones that bring visitors to me,
+
+518
+00:48:41,200 --> 00:48:47,160
+so to speak, count here as backlinks. I can then also take a look at them and
+
+519
+00:48:47,160 --> 00:48:52,360
+also derive measures from them for SEO. As I said, that's actually it, unfortunately
+
+520
+00:48:52,360 --> 00:48:57,280
+already at the end. I just explained that again as a summary of two minutes. That means
+
+521
+00:48:57,280 --> 00:49:01,800
+always see the jump rate and expiration date in context. I think that's very, very important,
+
+522
+00:49:01,800 --> 00:49:08,600
+especially to track sync content. The data layers, the data information that I have,
+
+523
+00:49:08,600 --> 00:49:14,160
+should be enriched with different custom dimensions, with events, for example,
+
+524
+00:49:14,160 --> 00:49:21,880
+to be able to filter better here and to see the data better. Use segments intensively,
+
+525
+00:49:21,880 --> 00:49:28,840
+so as I said, typical segments, channel type and device type, because then I can
+
+526
+00:49:28,840 --> 00:49:35,400
+also make comparisons again, use events more intensively, set up 400 or 500 errors
+
+527
+00:49:35,400 --> 00:49:41,120
+that an event is then sent immediately, use the scroll depth to identify
+
+528
+00:49:41,120 --> 00:49:45,920
+whether the article was really read down to the bottom. Of course, it is not that
+
+529
+00:49:45,920 --> 00:49:53,520
+significant, but it is definitely better to see 1000 pages and only 20 have seen the
+
+530
+00:49:53,520 --> 00:49:57,440
+footer at the bottom, because then I just see, okay, maybe the people have already
+
+531
+00:49:57,440 --> 00:50:01,640
+left before and haven't read it to the end. So be sure to use scroll depth.
+
+532
+00:50:01,640 --> 00:50:06,640
+User path, that's just very, very important for the internal structure of the website.
+
+533
+00:50:06,640 --> 00:50:11,280
+Do I maybe have a menu somewhere where I also, and that's what I always say,
+
+534
+00:50:11,280 --> 00:50:16,960
+I'm a fan of Zillowing and Zillowing means I only have links on my pages that are
+
+535
+00:50:16,960 --> 00:50:22,480
+in the topic environment. That's also what I find very, very well implemented in the fashion
+
+536
+00:50:22,480 --> 00:50:28,740
+area at Zalando, because when I'm in a world, in a
+
+537
+00:50:28,740 --> 00:50:33,840
+theme world, then I only have links on the page that also have to do with this
+
+538
+00:50:33,840 --> 00:50:40,040
+theme world and no longer 600 links over the menu. And just predecessors and successors,
+
+539
+00:50:40,040 --> 00:50:45,280
+that's exactly the point. There I can show these data to the customer and say,
+
+540
+00:50:45,280 --> 00:50:50,720
+look, these are the frequent links that are also clicked there. So the interest is there.
+
+541
+00:50:50,720 --> 00:50:56,440
+The internal search can help me to better identify these contents that are
+
+542
+00:50:56,440 --> 00:51:02,480
+searched for. With us it was quite classic in the shop that the people wrote a lot of brands wrong,
+
+543
+00:51:02,480 --> 00:51:06,160
+because they didn't know it better either. And in the end we just expanded our
+
+544
+00:51:06,160 --> 00:51:12,200
+internal search so that we could enter aliases there and then in the end
+
+545
+00:51:12,200 --> 00:51:17,120
+led the people back to the right direction and thus generated more revenue. That wasn't
+
+546
+00:51:17,120 --> 00:51:22,560
+so bad either. And also to cover up the bad links. So what brings me visitors,
+
+547
+00:51:22,560 --> 00:51:29,640
+but these visitors are all, rather, bad values, bad signals in relation to
+
+548
+00:51:29,640 --> 00:51:35,880
+values ​​such as jump rate and passing time or then of course in the e-commerce area, where I say
+
+549
+00:51:35,880 --> 00:51:41,880
+I track my goals and my conversions. There is also the which bad back links,
+
+550
+00:51:41,880 --> 00:51:46,280
+so to speak, never count on my whole things. Maybe just a note,
+
+551
+00:51:46,280 --> 00:51:51,120
+because it just flew around in the other project. Please pay more attention to what
+
+552
+00:51:51,120 --> 00:51:56,000
+Blogspot is doing right now. So they don't do it themselves, but they have a huge
+
+553
+00:51:56,000 --> 00:52:00,320
+band problem right now and we already have two or three large newspaper publishers who really had to
+
+554
+00:52:00,320 --> 00:52:05,800
+suffer. Yes, that's it from my side. As I said, here again my contact details.
+
+555
+00:52:05,800 --> 00:52:11,480
+Feel free to write to me via the various platforms if you have any questions.
+
+556
+00:52:11,480 --> 00:52:21,080
+Yes, and otherwise I hope that the lecture was good and despite the short interruption that you
+
+557
+00:52:21,080 --> 00:52:27,360
+could take a lot with you. Exactly, so if there are still questions now, I don't want to
+
+558
+00:52:27,360 --> 00:52:35,560
+discourage you. And I can turn on my camera here too. Then you also have a picture for the
+
+559
+00:52:35,560 --> 00:52:46,200
+face. If that now transfers a picture to the film. Exactly, so hello from me too.
+
+560
+00:52:46,200 --> 00:52:59,640
+Exactly, so if there are questions, please just put yourself through. Yes, I had already
+
+561
+00:52:59,640 --> 00:53:04,040
+initially, as you talked about the topic of jump rates, I wrote in the chat
+
+562
+00:53:04,040 --> 00:53:10,040
+that you can also set the heartbeat timer. Exactly, yes. That even on a single page,
+
+563
+00:53:10,040 --> 00:53:14,480
+I have a blog and there I have a very high jump rate on one page,
+
+564
+00:53:14,480 --> 00:53:19,040
+that's why I discovered the heartbeat timer, at least to measure a stay time.
+
+565
+00:53:19,040 --> 00:53:24,320
+That might be an important note. Exactly, maybe also here at this point, there are a lot of
+
+566
+00:53:24,320 --> 00:53:30,720
+ideas from Google Analytics to switch over to Matomo. There it is also the case that, for example,
+
+567
+00:53:30,720 --> 00:53:37,280
+in Google Analytics, the events, when I set them, for example, something like button clicks
+
+568
+00:53:37,280 --> 00:53:43,880
+or downloads and so on, that they then also completely, so to speak, the jump rate
+
+569
+00:53:43,880 --> 00:53:47,960
+or also the stay time, then also send. That means there is simply a different
+
+570
+00:53:47,960 --> 00:53:52,600
+way of doing things than we do at Matomo. That's why at this point, really a very good tip,
+
+571
+00:53:52,600 --> 00:53:57,400
+also with the heartbeat timer. However, it is not used that often,
+
+572
+00:53:57,400 --> 00:54:02,280
+because I also have the problem very, very often that it sends every 15 seconds,
+
+573
+00:54:02,280 --> 00:54:07,080
+I can configure that. First of all, it sends every 15 seconds back home,
+
+574
+00:54:07,080 --> 00:54:12,960
+which for many is similar to a page impression, leads to great loads. And the second
+
+575
+00:54:12,960 --> 00:54:18,360
+is that many already have historical data, which of course no longer work properly,
+
+576
+00:54:18,360 --> 00:54:25,360
+because you then compare before heartbeat timer to the right times. I definitely recommend heartbeat timer
+
+577
+00:54:25,360 --> 00:54:30,680
+in any case. Especially, of course, when you have single page applications,
+
+578
+00:54:30,680 --> 00:54:34,760
+you know that very often in the meantime. There is only one page and there are
+
+579
+00:54:34,760 --> 00:54:38,840
+perhaps different anchor jumps on the website and then I have no
+
+580
+00:54:38,840 --> 00:54:44,240
+values ​​to pass by. And that's why, as I said, at this point a lot of good
+
+581
+00:54:44,240 --> 00:54:47,240
+use of this heartbeat timer.
+
+582
+00:54:53,920 --> 00:55:02,160
+Oh, one more note, especially for those who have joined the WordPress plugin in Matomo,
+
+583
+00:55:02,160 --> 00:55:06,040
+the heartbeat timer can be activated very easily with a little hook.
+
+584
+00:55:06,040 --> 00:55:11,280
+Exactly, you have to say that didn't work at the beginning, you still repaired something,
+
+585
+00:55:11,280 --> 00:55:18,920
+because the heartbeat timer was a bit destroyed with version 4 and couldn't be set up properly
+
+586
+00:55:18,920 --> 00:55:23,920
+via the tech manager. That should now also work, as I said, from WordPress.
+
+587
+00:55:23,920 --> 00:55:28,720
+I also know it, most of the net users really use WordPress and that's where it works.
+
+588
+00:55:28,720 --> 00:55:34,960
+Should you just be aware that it is always sent home every 15 seconds,
+
+589
+00:55:34,960 --> 00:55:39,960
+for example, it will be said, I'm still there, I'm still there, I'm still there.
+
+590
+00:55:39,960 --> 00:55:46,960
+Yes, so if there are no more questions, I'm also on Facebook, I'm on Xing,
+
+591
+00:55:46,960 --> 00:55:51,960
+you should also find me relatively easily on the Internet. If there are still questions,
+
+592
+00:55:51,960 --> 00:55:56,960
+go to the workshop or maybe just topics where you want to discuss it or say,
+
+593
+00:55:56,960 --> 00:56:02,960
+yes, I might see it differently, I'm very open, as I said, as far as the whole topic is concerned.
+
+594
+00:56:02,960 --> 00:56:07,960
+Yes, otherwise I thank you, I hope, as I said, it was an interesting lecture,
+
+595
+00:56:07,960 --> 00:56:12,960
+the slides and so on, the recording and all that, I hope that it will also be distributed
+
+596
+00:56:12,960 --> 00:56:17,960
+by Matomo himself or by the organizers here and shared.
+
+597
+00:56:17,960 --> 00:56:36,960
+And yes, then I thank you for your attention and I look forward to seeing you again.
+
