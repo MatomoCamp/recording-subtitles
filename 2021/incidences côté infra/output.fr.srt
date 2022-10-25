@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:11,080
-Bonjour à tous et à toutes et bienvenue pour cette deuxième journée du Matomo Camp.
+Bonjour à tous et à toutes et bienvenue pour cette deuxième journée du MatomoCamp.
 
 2
 00:00:11,080 --> 00:00:16,400
@@ -16,7 +16,7 @@ est du coup qui travaille chez Empreintes Digital et qui en fait la personne qui
 
 5
 00:00:27,560 --> 00:00:34,600
-l'ensemble des streams qu'on a aujourd'hui et qu'on a eu hier dans Matomo Camp. Juste pour
+l'ensemble des streams qu'on a aujourd'hui et qu'on a eu hier dans MatomoCamp. Juste pour
 
 6
 00:00:34,600 --> 00:00:40,040

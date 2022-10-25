@@ -36,7 +36,7 @@ zum Thema Matomo in Deutsch zu machen. Und falls ihr Fragen habt, dann gerne auc
 
 10
 00:01:02,160 --> 00:01:08,200
-den Big Blue Button chat. Man kann auch die Fragen gerne, also ihr könnt sie ja gerne
+den BigBlueButton chat. Man kann auch die Fragen gerne, also ihr könnt sie ja gerne
 
 11
 00:01:08,200 --> 00:01:13,640

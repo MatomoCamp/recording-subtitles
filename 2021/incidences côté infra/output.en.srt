@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:11,120
-Hello everyone and welcome to this second day of the Matomo Camp.
+Hello everyone and welcome to this second day of the MatomoCamp.
 
 2
 00:00:11,120 --> 00:00:16,400
@@ -16,7 +16,7 @@ at Empreinte Digital and who is actually the person who manages all the streams 
 
 5
 00:00:30,080 --> 00:00:36,520
-have today and that we had yesterday in Matomo Camp. Just to say a few words about Valentin,
+have today and that we had yesterday in MatomoCamp. Just to say a few words about Valentin,
 
 6
 00:00:36,520 --> 00:00:43,480

@@ -4,7 +4,7 @@ Ja, wunderbar. Ich hätte einfach gesagt, wir starten jetzt das ja von meiner Se
 
 2
 00:00:14,680 --> 00:00:20,440
-herzlich willkommen zu Matomo Camp. Das ist ja das erste Matomo Camp, das wir auch veranstalten
+herzlich willkommen zu MatomoCamp. Das ist ja das erste MatomoCamp, das wir auch veranstalten
 
 3
 00:00:20,440 --> 00:00:26,520

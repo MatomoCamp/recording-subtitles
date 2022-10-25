@@ -1376,7 +1376,7 @@ then just put a new page on it.
 
 345
 00:24:09,000 --> 00:24:11,000
-That's actually very good in Matoma,
+That's actually very good in Matomo,
 
 346
 00:24:11,000 --> 00:24:15,000
@@ -3180,7 +3180,7 @@ I wish you a very nice day.
 
 796
 00:45:52,000 --> 00:45:55,000
-Thank you for your time here at the Matomo Camp.
+Thank you for your time here at the MatomoCamp.
 
 797
 00:45:55,000 --> 00:45:58,000
