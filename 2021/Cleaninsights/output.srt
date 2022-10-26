@@ -28,7 +28,7 @@ Let's hear Nathan's talk for more.
 
 8
 00:00:44,000 --> 00:00:48,640
-Great, thank you Silva, thank you Lucas and everyone who's organized Matomo Camp.
+Great, thank you Silva, thank you Lukas and everyone who's organized MatomoCamp.
 
 9
 00:00:48,640 --> 00:00:55,320
@@ -1480,7 +1480,7 @@ want to do we have so much to learn from you and from people that have already b
 
 371
 00:33:18,900 --> 00:33:22,660
-measurement or already implementing things like Matoma have been through this or who
+measurement or already implementing things like Matomo have been through this or who
 
 372
 00:33:22,660 --> 00:33:27,300

@@ -212,7 +212,7 @@ I forgot to introduce myself, of course.
 
 54
 00:04:52,320 --> 00:04:58,520
-I'm Lucas Winkler, and most of you will know me from the Matomo forum.
+I'm Lukas Winkler, and most of you will know me from the Matomo forum.
 
 55
 00:04:58,520 --> 00:05:04,840

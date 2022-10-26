@@ -12,7 +12,7 @@ Thank you very much, Aurélie, for being with us today.
 
 4
 00:00:20,480 --> 00:00:27,440
-I have to say that Aurélie has been the first speaker that I asked to come to MatoboCamp
+I have to say that Aurélie has been the first speaker that I asked to come to MatomoCamp
 
 5
 00:00:27,440 --> 00:00:30,120
@@ -40,7 +40,7 @@ So it's probably the only one in addition to the roundtable that we had yesterda
 
 11
 00:00:53,880 --> 00:00:56,120
-the different Matobo experts.
+the different Matomo experts.
 
 12
 00:00:56,120 --> 00:00:59,560
@@ -72,7 +72,7 @@ It's just that I'm not an artist when I design the slides.
 
 19
 00:01:24,060 --> 00:01:31,920
-If you would like to ask any questions to Aurélie, please use chat.matobocamp.org.
+If you would like to ask any questions to Aurélie, please use chat.matomocamp.org.
 
 20
 00:01:31,920 --> 00:01:36,360
@@ -576,7 +576,7 @@ I repeat it for our audience, but if some of you guys would like to ask some que
 
 145
 00:11:35,160 --> 00:11:41,400
-to Aurélie, please feel free to go on chat.matumocamp.org, select the room which corresponds to this
+to Aurélie, please feel free to go on chat.matomocamp.org, select the room which corresponds to this
 
 146
 00:11:41,400 --> 00:11:47,320
@@ -1368,7 +1368,7 @@ Okay.
 
 343
 00:28:42,040 --> 00:28:47,560
-So here on the screen, we probably have the ugliest slide of the Matthew McCamp that I
+So here on the screen, we probably have the ugliest slide of the MatomoCamp that I
 
 344
 00:28:47,560 --> 00:28:49,360
@@ -1376,11 +1376,11 @@ did myself.
 
 345
 00:28:49,360 --> 00:28:54,600
-The question is just the following, that the topic submission that you make for Matthew
+The question is just the following, that the topic submission that you make for
 
 346
 00:28:54,600 --> 00:29:01,000
-McCamp is, how does risk for DPO differ from classical risk perception?
+MatomoCamp is, how does risk for DPO differ from classical risk perception?
 
 347
 00:29:01,000 --> 00:29:05,800

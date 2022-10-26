@@ -11,10 +11,17 @@ current_dir = Path(".")
 
 replacements = {
     "Mitoma": "Matomo",
+    "Matobo": "Matomo",
     "Matoma": "Matomo",
     "matoma": "matomo",
+    "Matamow": "Matomo",
+    "Matahomo": "Matomo",
     "Matomo Camp": "MatomoCamp",
-    "Big Blue Button": "BigBlueButton"
+    "matamocamp":"matomocamp",
+    "matumocamp":"matomocamp",
+    "motomocamp":"matomocamp",
+    "Big Blue Button": "BigBlueButton",
+    "Lucas": "Lukas"
 }
 search_strings = [re.escape(k) for k in sorted(replacements, key=len, reverse=True)]
 pattern = re.compile("|".join(search_strings), flags=re.DOTALL)

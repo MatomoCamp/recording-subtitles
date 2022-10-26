@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:10,800
-Okay, so first of all, thank you, everyone, for attending this Pre Matomo Camp event today.
+Okay, so first of all, thank you, everyone, for attending this Pre MatomoCamp event today.
 
 2
 00:00:10,800 --> 00:00:19,680
@@ -24,7 +24,7 @@ Analytics. And as well, I got with a couple of friends this crazy idea of creati
 
 7
 00:00:48,080 --> 00:00:55,200
-named Matomo Camp, which will be held next month, so in 30 days exactly from now, where the idea is
+named MatomoCamp, which will be held next month, so in 30 days exactly from now, where the idea is
 
 8
 00:00:55,200 --> 00:01:00,960
@@ -36,11 +36,11 @@ Analytics, so as I'm doing today. About this presentation, so I choose this spec
 
 10
 00:01:08,880 --> 00:01:17,680
-because last summer we ran a survey on Matomo Camp, so matomocamp.org, survey asking about
+because last summer we ran a survey on MatomoCamp, so matomocamp.org, survey asking about
 
 11
 00:01:17,680 --> 00:01:22,720
-what kind of topic would you like us to cover during the Matomo Camp event, which will be
+what kind of topic would you like us to cover during the MatomoCamp event, which will be
 
 12
 00:01:22,720 --> 00:01:30,000
@@ -72,11 +72,11 @@ for the volume of attendees. So this is what we are doing today, so I really wou
 
 19
 00:02:10,080 --> 00:02:15,360
-two guys who are behind the screen, or at least behind the server, let's say, Lucas Winkler,
+two guys who are behind the screen, or at least behind the server, let's say, Lukas Winkler,
 
 20
 00:02:15,360 --> 00:02:20,160
-Lucas Winkler that you just heard in the introduction was answering to me, and as well,
+Lukas Winkler that you just heard in the introduction was answering to me, and as well,
 
 21
 00:02:20,160 --> 00:02:27,920
@@ -88,7 +88,7 @@ and install the different software on the server in order for us to be able to h
 
 23
 00:02:33,200 --> 00:02:41,280
-this pre-Matomo Camp and the Matomo Camp event as well. If you have any questions at any time,
+this pre-MatomoCamp and the MatomoCamp event as well. If you have any questions at any time,
 
 24
 00:02:41,280 --> 00:02:48,800
@@ -1680,7 +1680,7 @@ like to say thank you for all the people who are attending it today. I think we 
 
 421
 00:46:26,240 --> 00:46:31,840
-let's say, technical issues. So, that's great that we organized this program at Matomo Camp.
+let's say, technical issues. So, that's great that we organized this program at MatomoCamp.
 
 422
 00:46:31,840 --> 00:46:37,360

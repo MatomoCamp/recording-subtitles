@@ -1260,7 +1260,7 @@ web server there is on the planet as long as you can configure it to run. And it
 
 316
 00:43:05,520 --> 00:43:14,800
-like my pronunciation was correct. So yay. Lucas is sharing in the chat, if you are using
+like my pronunciation was correct. So yay. Lukas is sharing in the chat, if you are using
 
 317
 00:43:14,800 --> 00:43:21,960
@@ -1268,7 +1268,7 @@ nginx, you might want to look into this link, which is a GitHub repository. Let 
 
 318
 00:43:21,960 --> 00:43:38,160
-that with screen share so we can take a look at it together. There we go. Lucas, thank
+that with screen share so we can take a look at it together. There we go. Lukas, thank
 
 319
 00:43:38,160 --> 00:43:47,720
@@ -1292,7 +1292,7 @@ when there are new versions of Matomo coming out. Awesome.
 
 324
 00:44:39,680 --> 00:44:47,960
-Okay. So Lucas is sharing that the reason is that the HD access files, so these are
+Okay. So Lukas is sharing that the reason is that the HD access files, so these are
 
 325
 00:44:47,960 --> 00:44:55,600
@@ -1300,7 +1300,7 @@ some files that configure a part of how the web server operates, and they're usu
 
 326
 00:44:55,600 --> 00:45:03,080
-when you use Apache 2. Lucas points out that these files won't work in nginx, which is
+when you use Apache 2. Lukas points out that these files won't work in nginx, which is
 
 327
 00:45:03,080 --> 00:45:11,960

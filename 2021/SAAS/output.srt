@@ -8,7 +8,7 @@ Today, we are going to talk about how
 
 3
 00:00:14,840 --> 00:00:17,760
-to configure Matamow for SAS and get
+to configure Matomo for SAS and get
 
 4
 00:00:17,760 --> 00:00:21,320
@@ -52,7 +52,7 @@ and development techniques.
 
 14
 00:00:50,520 --> 00:00:54,320
-And I'm also a Matamow contributor.
+And I'm also a Matomo contributor.
 
 15
 00:00:54,320 --> 00:01:00,560
@@ -60,7 +60,7 @@ I made many contributions, like TEMs or plugins.
 
 16
 00:01:00,560 --> 00:01:04,320
-The one, it's a dark TEM to turn your Matamow interface
+The one, it's a dark TEM to turn your Matomo interface
 
 17
 00:01:04,320 --> 00:01:05,720
@@ -68,11 +68,11 @@ into dark.
 
 18
 00:01:05,720 --> 00:01:12,360
-Google TEM to prevent incoming users to Matamow
+Google TEM to prevent incoming users to Matomo
 
 19
 00:01:12,360 --> 00:01:16,080
-from Google Analytics to the Matamow interface.
+from Google Analytics to the Matomo interface.
 
 20
 00:01:16,080 --> 00:01:19,360
@@ -80,7 +80,7 @@ They will love the Google TEM applying
 
 21
 00:01:19,360 --> 00:01:21,160
-to the Matamow interface.
+to the Matomo interface.
 
 22
 00:01:21,160 --> 00:01:25,520
@@ -100,7 +100,7 @@ The purpose of this talk, we are talking
 
 26
 00:01:37,920 --> 00:01:40,240
-about Matamow advanced configuration
+about Matomo advanced configuration
 
 27
 00:01:40,240 --> 00:01:42,880
@@ -124,7 +124,7 @@ We are not talking about infrastructure
 
 32
 00:01:56,600 --> 00:01:59,760
-because there are many people at Matamow Camp
+because there are many people at MatomoCamp
 
 33
 00:01:59,760 --> 00:02:02,760
@@ -160,7 +160,7 @@ being GDPR compliant.
 
 41
 00:02:30,520 --> 00:02:36,920
-So I imagine that you are in a basic Matamow configuration.
+So I imagine that you are in a basic Matomo configuration.
 
 42
 00:02:36,920 --> 00:02:40,000
@@ -204,7 +204,7 @@ So that's all the data or a part of the data
 
 52
 00:03:13,600 --> 00:03:16,800
-that Matamow already collects for you.
+that Matomo already collects for you.
 
 53
 00:03:16,800 --> 00:03:18,160
@@ -260,11 +260,11 @@ One of the first things you have to do
 
 66
 00:04:01,880 --> 00:04:05,200
-is to switch between the basic Matamow configuration
+is to switch between the basic Matomo configuration
 
 67
 00:04:05,200 --> 00:04:09,400
-to the Matamow Tag Manager configuration.
+to the Matomo Tag Manager configuration.
 
 68
 00:04:09,400 --> 00:04:13,480
@@ -272,7 +272,7 @@ To do this, you just have to switch between the tracking
 
 69
 00:04:13,480 --> 00:04:17,920
-code that provides by Matamow and placing this Matamow Tag
+code that provides by Matomo and placing this Matomo Tag
 
 70
 00:04:17,920 --> 00:04:22,600
@@ -280,11 +280,11 @@ Manager code on every single page you want to track.
 
 71
 00:04:22,600 --> 00:04:28,600
-Don't forget to place the default Matamow statistic
+Don't forget to place the default Matomo statistic
 
 72
 00:04:28,600 --> 00:04:32,080
-tag, which allows you to recreate the default Matamow
+tag, which allows you to recreate the default Matomo
 
 73
 00:04:32,080 --> 00:04:33,760
@@ -292,7 +292,7 @@ configuration.
 
 74
 00:04:33,760 --> 00:04:36,480
-Matamow Tag Manager provides you a cool interface
+Matomo Tag Manager provides you a cool interface
 
 75
 00:04:36,480 --> 00:04:39,880
@@ -312,7 +312,7 @@ The things that will very, very help
 
 79
 00:04:51,320 --> 00:04:54,200
-us to configure Matamow for your SAS
+us to configure Matomo for your SAS
 
 80
 00:04:54,200 --> 00:04:56,880
@@ -336,11 +336,11 @@ to trigger those custom events and collect them
 
 85
 00:05:10,760 --> 00:05:13,320
-into your Matamow interface.
+into your Matomo interface.
 
 86
 00:05:13,320 --> 00:05:16,440
-This event will be sent back to Matamow
+This event will be sent back to Matomo
 
 87
 00:05:16,440 --> 00:05:20,840
@@ -348,7 +348,7 @@ and collected and displayed in the events report right
 
 88
 00:05:20,840 --> 00:05:24,520
-in your Matamow instance.
+in your Matomo instance.
 
 89
 00:05:24,520 --> 00:05:28,840
@@ -376,7 +376,7 @@ So look, you go just in your back office,
 
 95
 00:05:47,480 --> 00:05:50,680
-create a Matamow Analytics tag.
+create a Matomo Analytics tag.
 
 96
 00:05:50,680 --> 00:05:56,720
@@ -432,7 +432,7 @@ And then your trigger will be created and assigned
 
 109
 00:06:37,600 --> 00:06:41,000
-to the Matamow event tag.
+to the Matomo event tag.
 
 110
 00:06:41,000 --> 00:06:45,160
@@ -2068,7 +2068,7 @@ And how hard is it to extract data out
 
 518
 00:33:03,720 --> 00:33:08,840
-of the reporting API of Matahomo and show it on a web page
+of the reporting API of Matomo and show it on a web page
 
 519
 00:33:08,840 --> 00:33:10,480
@@ -2080,7 +2080,7 @@ It really depends on the skills you already had.
 
 521
 00:33:13,160 --> 00:33:20,080
-So the Matahomo API is pretty cool and pretty easy to use.
+So the Matomo API is pretty cool and pretty easy to use.
 
 522
 00:33:20,080 --> 00:33:22,840
@@ -2096,7 +2096,7 @@ already familiar with the use of API.
 
 525
 00:33:29,440 --> 00:33:32,080
-So the Matahomo part is not the harder for me.
+So the Matomo part is not the harder for me.
 
 526
 00:33:32,080 --> 00:33:37,960
@@ -2108,7 +2108,7 @@ in your back office.
 
 528
 00:33:39,360 --> 00:33:45,240
-But asking Matahomo via the API to get the data you need
+But asking Matomo via the API to get the data you need
 
 529
 00:33:45,240 --> 00:33:50,120
@@ -2128,7 +2128,7 @@ Maybe I will make a video to explain
 
 533
 00:34:08,840 --> 00:34:11,560
-how Matahomo API will work and publish it.
+how Matomo API will work and publish it.
 
 534
 00:34:11,560 --> 00:34:15,680
@@ -2172,19 +2172,19 @@ be heavy to carry on and will make many, many requests
 
 544
 00:34:52,880 --> 00:34:59,480
-to Matahomo if the API were set on this main page.
+to Matomo if the API were set on this main page.
 
 545
 00:34:59,480 --> 00:35:04,400
-But I think the Matahomo API is powerful to send data
+But I think the Matomo API is powerful to send data
 
 546
 00:35:04,400 --> 00:35:10,200
-to Matahomo and to ask them, but only in a main entity page.
+to Matomo and to ask them, but only in a main entity page.
 
 547
 00:35:10,200 --> 00:35:15,000
-So as you can see, I just use the Matahomo API
+So as you can see, I just use the Matomo API
 
 548
 00:35:15,000 --> 00:35:19,120
@@ -2236,7 +2236,7 @@ if you want to create some custom reports.
 
 560
 00:36:01,600 --> 00:36:03,800
-But it's not about Matahomo API.
+But it's not about Matomo API.
 
 561
 00:36:03,800 --> 00:36:10,000
@@ -2260,7 +2260,7 @@ Apparently, there are no further questions in the chat.
 
 566
 00:36:31,920 --> 00:36:35,240
-So I'd like to thank you, Ronan, for joining Matahomo Camp
+So I'd like to thank you, Ronan, for joining Matomo Camp
 
 567
 00:36:35,240 --> 00:36:38,200

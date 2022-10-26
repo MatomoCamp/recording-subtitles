@@ -296,7 +296,7 @@ We really need to get away from this behavior to just create email reports and s
 
 75
 00:06:43,360 --> 00:06:50,200
-around because to be honest, the people here at Matomo Camp are probably pretty good at
+around because to be honest, the people here at MatomoCamp are probably pretty good at
 
 76
 00:06:50,200 --> 00:06:52,200

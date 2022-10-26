@@ -52,7 +52,7 @@ Hello, everyone.
 
 14
 00:01:01,440 --> 00:01:08,600
-I'm very excited to join this very first event of Matomo Camp.
+I'm very excited to join this very first event of MatomoCamp.
 
 15
 00:01:08,600 --> 00:01:16,960

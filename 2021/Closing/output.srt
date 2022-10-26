@@ -20,7 +20,7 @@ it done so far. That was a really dense event. Two full days, many different spe
 
 6
 00:00:51,960 --> 00:00:59,560
-are some KPIs. By the way, feel free to go on chat.matamucamp.org. You have a specific
+are some KPIs. By the way, feel free to go on chat.matomocamp.org. You have a specific
 
 7
 00:00:59,560 --> 00:01:07,360
@@ -64,7 +64,7 @@ whatever the expertise was about, it was really impressive. Up to 1 p.m. we had 
 
 17
 00:02:26,800 --> 00:02:37,640
-804 visits on live.matamocamp.org for the two days. I recently watched back the numbers
+804 visits on live.matomocamp.org for the two days. I recently watched back the numbers
 
 18
 00:02:37,640 --> 00:02:48,320
@@ -92,11 +92,11 @@ to doesn't represent 900 individuals. But I guess we are getting close to these 
 
 24
 00:03:24,960 --> 00:03:32,960
-On chat.matamocamp.org, same thing measured here. It was only for the first day and a
+On chat.matomocamp.org, same thing measured here. It was only for the first day and a
 
 25
 00:03:32,960 --> 00:03:39,280
-half. We got 95 users who make an effort of creating an account on chat.matamocamp.org
+half. We got 95 users who make an effort of creating an account on chat.matomocamp.org
 
 26
 00:03:39,280 --> 00:03:48,680
@@ -140,11 +140,11 @@ probably one full day of answering all those emails. But that's part of the game
 
 36
 00:04:55,720 --> 00:05:07,600
-are part of a big organization such as such as Matomo Camp. In terms of other KPIs, 45
+are part of a big organization such as such as MatomoCamp. In terms of other KPIs, 45
 
 37
 00:05:07,600 --> 00:05:13,880
-countries were represented during this Matomo Camp. So according to Matomo's data, the
+countries were represented during this MatomoCamp. So according to Matomo's data, the
 
 38
 00:05:13,880 --> 00:05:21,200
@@ -176,7 +176,7 @@ attendees from all over the world. What's next after this event? Well, we're goi
 
 45
 00:05:59,200 --> 00:06:06,000
-to let's say gather all the organizing committees of the Matomo Camp in order to define and
+to let's say gather all the organizing committees of the MatomoCamp in order to define and
 
 46
 00:06:06,000 --> 00:06:14,440
@@ -192,7 +192,7 @@ did you like it? And after, we will of course see if we want to go for another v
 
 49
 00:06:26,880 --> 00:06:34,280
-Matomo Camp. Do we need to think as well about local events? For example, I was really surprised
+MatomoCamp. Do we need to think as well about local events? For example, I was really surprised
 
 50
 00:06:34,280 --> 00:06:42,360
@@ -200,7 +200,7 @@ the first day to see a lot of people coming from Nordic countries, Denmark, Norw
 
 51
 00:06:42,360 --> 00:06:47,680
-So I don't know. There may be some spaces in order to have a Matomo Camp version for
+So I don't know. There may be some spaces in order to have a MatomoCamp version for
 
 52
 00:06:47,680 --> 00:06:55,920
@@ -224,7 +224,7 @@ Just would like to say that if you would like to join the super team that we had
 
 57
 00:07:20,280 --> 00:07:26,160
-to have this year for this Matomo Camp, please feel free to contact us through matomocamp.org.
+to have this year for this MatomoCamp, please feel free to contact us through matomocamp.org.
 
 58
 00:07:26,160 --> 00:07:34,000
@@ -280,7 +280,7 @@ Matomo organizing team. Today, Marcus, today and yesterday, Marcus was here in o
 
 71
 00:08:50,880 --> 00:08:58,440
-do the moderation of the different conferences. This event could not have been without Lucas
+do the moderation of the different conferences. This event could not have been without Lukas
 
 72
 00:08:58,440 --> 00:09:09,120
@@ -296,11 +296,11 @@ more time, I didn't have more energy, and he's really the guy who is doing kind 
 
 75
 00:09:21,080 --> 00:09:28,920
-within Matomo Camp. So, I really would like to thank him. Silva, as well, joined the team
+within MatomoCamp. So, I really would like to thank him. Silva, as well, joined the team
 
 76
 00:09:28,920 --> 00:09:36,040
-during the evolution of the creation of Matomo Camp. She was the one in charge of the moderation
+during the evolution of the creation of MatomoCamp. She was the one in charge of the moderation
 
 77
 00:09:36,040 --> 00:09:42,720
@@ -340,7 +340,7 @@ they were all incredible. So, thank you very much, Thomas. I would like to thank
 
 86
 00:10:35,720 --> 00:10:42,240
-Stéphane Gill, Thomas Zeithnamerl, and Joachim Neckel for the organizing team. Lucas, am
+Stéphane Gill, Thomas Zeithnamerl, and Joachim Neckel for the organizing team. Lukas, am
 
 87
 00:10:42,240 --> 00:10:46,360
@@ -356,7 +356,7 @@ I would like to thank, again, all the speakers. They were coming from all the di
 
 90
 00:10:58,080 --> 00:11:08,360
-They have made all great and impressive speeches. Of course, Lucas Winkler, Joachim Neckel,
+They have made all great and impressive speeches. Of course, Lukas Winkler, Joachim Neckel,
 
 91
 00:11:08,360 --> 00:11:14,040
@@ -384,7 +384,7 @@ from Hungary, Boris Budini, Frédéric Forster, Aurélie Pauls, Cathy Newbay fro
 
 97
 00:11:52,480 --> 00:11:58,040
-Kingdom, and Ronan Elow. Sorry, Lucas, same questions again. Did I
+Kingdom, and Ronan Elow. Sorry, Lukas, same questions again. Did I
 
 98
 00:11:58,040 --> 00:12:02,760
@@ -492,7 +492,7 @@ the materials are of the speakers and where the recording of the talks are. Well
 
 124
 00:15:01,720 --> 00:15:06,120
-recording of the talks, correct me if I'm wrong, Lucas, but they will be posted on the
+recording of the talks, correct me if I'm wrong, Lukas, but they will be posted on the
 
 125
 00:15:06,120 --> 00:15:13,000
@@ -552,7 +552,7 @@ I really hope that I will have the opportunity to meet some of you guys there an
 
 139
 00:16:29,080 --> 00:16:37,040
-a little bit more like if we were in a physical presence. Lucas, Valentin, do you have any
+a little bit more like if we were in a physical presence. Lukas, Valentin, do you have any
 
 140
 00:16:37,040 --> 00:16:43,040
@@ -568,7 +568,7 @@ huge success as it was.
 
 143
 00:16:51,480 --> 00:16:57,640
-Same for me. Just thank you for your time. All of your speakers and Lucas, especially.
+Same for me. Just thank you for your time. All of your speakers and Lukas, especially.
 
 144
 00:16:57,640 --> 00:17:04,880

@@ -120,7 +120,7 @@ So up on the left hand, you can see that now we're not reloading the page, we're
 
 31
 00:02:43,080 --> 00:02:49,480
-rewriting the URL, but it's not really happening, but when I switch to the Matoma org website,
+rewriting the URL, but it's not really happening, but when I switch to the Matomo org website,
 
 32
 00:02:49,480 --> 00:02:53,680
@@ -144,7 +144,7 @@ there are a lot more examples, but these are probably the biggest three framewor
 
 37
 00:03:19,700 --> 00:03:27,440
-As you might know, Angular is used in Matoma to create the widgets and we're actually switching
+As you might know, Angular is used in Matomo to create the widgets and we're actually switching
 
 38
 00:03:27,440 --> 00:03:31,960
@@ -156,11 +156,11 @@ So I think that is supported from 4.5 and I've seen that the interface has been 
 
 40
 00:03:38,080 --> 00:03:39,840
-to be rewritten in Matoma.
+to be rewritten in Matomo.
 
 41
 00:03:39,840 --> 00:03:45,880
-So actually when you go into the Matoma interface to load different reports, you can actually
+So actually when you go into the Matomo interface to load different reports, you can actually
 
 42
 00:03:45,880 --> 00:03:48,840
@@ -168,7 +168,7 @@ see a single page application in place.
 
 43
 00:03:48,840 --> 00:03:55,400
-We are refreshing Matoma's interface without actually reloading the whole page.
+We are refreshing Matomo's interface without actually reloading the whole page.
 
 44
 00:03:55,400 --> 00:04:06,080

@@ -8,7 +8,7 @@ which is the first Matomo camp ever. Welcome to the Matomo camp opening ceremony
 
 3
 00:00:24,640 --> 00:00:33,280
-is Renan and I'm here with Lucas Winkler. Lucas, can you hear us? Yes, I can hear you fine
+is Renan and I'm here with Lukas Winkler. Lukas, can you hear us? Yes, I can hear you fine
 
 4
 00:00:33,280 --> 00:00:42,800
@@ -52,7 +52,7 @@ holding it today? So in fact it just started with a bunch of Matomo passionate t
 
 14
 00:01:53,120 --> 00:02:02,480
-Lucas, myself and other guys and that's not probably the best storytelling ever that we're
+Lukas, myself and other guys and that's not probably the best storytelling ever that we're
 
 15
 00:02:02,480 --> 00:02:07,440
@@ -116,11 +116,11 @@ software editor of those free software platforms that we are using for this even
 
 30
 00:03:46,480 --> 00:03:53,760
-starting by Matomo, Matomatics which is the number one free software web analytics platform,
+starting by Matomo, Matomotics which is the number one free software web analytics platform,
 
 31
 00:03:53,760 --> 00:03:59,920
-then BigBlueButton which is the video conference software that we are using right now with Lucas
+then BigBlueButton which is the video conference software that we are using right now with Lukas
 
 32
 00:03:59,920 --> 00:04:07,840
@@ -140,7 +140,7 @@ been used thanks to a solution which is named Nextcloud. Most of the servers whi
 
 36
 00:04:32,560 --> 00:04:44,960
-the different apps that we have now are using an Nginx software platform. Lucas you can correct me
+the different apps that we have now are using an Nginx software platform. Lukas you can correct me
 
 37
 00:04:44,960 --> 00:04:51,680
@@ -256,7 +256,7 @@ About the organizing team, you will have the possibility to see all of them eith
 
 65
 00:08:07,600 --> 00:08:14,160
-or as moderators. So I would like to thank Onsmore Lucas-Krinkler for all the involvement that he put
+or as moderators. So I would like to thank Onsmore Lukas-Krinkler for all the involvement that he put
 
 66
 00:08:14,160 --> 00:08:21,520
@@ -268,7 +268,7 @@ all the communication that you may have seen either on the website or either on 
 
 68
 00:08:27,440 --> 00:08:34,240
-Peter Bolk who is the guy who deals with all the system administration part with the help of Lucas.
+Peter Bolk who is the guy who deals with all the system administration part with the help of Lukas.
 
 69
 00:08:34,800 --> 00:08:41,440
@@ -300,7 +300,7 @@ coming from all over the world and I really would like to thank them on small fo
 
 76
 00:09:24,800 --> 00:09:33,840
-of this event. So you will see Lucas, you will see myself. Joachim Richard-Stark will take the talk
+of this event. So you will see Lukas, you will see myself. Joachim Richard-Stark will take the talk
 
 77
 00:09:33,840 --> 00:09:39,920
@@ -332,7 +332,7 @@ from France. Once more I would like to thank all those speakers that we are goin
 
 84
 00:10:17,600 --> 00:10:30,000
-chance to have today from 9 a.m. to 5 p.m. and as well tomorrow from 9 to 5 p.m. CST time. Lucas,
+chance to have today from 9 a.m. to 5 p.m. and as well tomorrow from 9 to 5 p.m. CST time. Lukas,
 
 85
 00:10:30,640 --> 00:10:39,440
@@ -348,7 +348,7 @@ nice time overview when which talk or workshop will take place to day and tomorr
 
 88
 00:10:52,720 --> 00:10:58,400
-probably have also seen our live streaming page live.motomocamp.org where all of our
+probably have also seen our live streaming page live.matomocamp.org where all of our
 
 89
 00:10:59,440 --> 00:11:06,240
@@ -360,15 +360,15 @@ and can you go to the next slide please. And so if you want to participate in th
 
 91
 00:11:14,240 --> 00:11:22,560
-watch all of the talks on live.motomocamp.org you can see the live streams there. If you want to
+watch all of the talks on live.matomocamp.org you can see the live streams there. If you want to
 
 92
 00:11:22,560 --> 00:11:30,320
-ask questions to the speakers we have a chat room for every single talk on chat.motomocamp.org or
+ask questions to the speakers we have a chat room for every single talk on chat.matomocamp.org or
 
 93
 00:11:31,200 --> 00:11:40,080
-the chat room is also visible below the live stream. And you can also find on chat.motomocamp.org
+the chat room is also visible below the live stream. And you can also find on chat.matomocamp.org
 
 94
 00:11:40,080 --> 00:11:47,280
@@ -388,11 +388,11 @@ Matomo users and want to know their experience, talk to them, we have a work adv
 
 98
 00:12:09,120 --> 00:12:17,840
-on meet.motomocamp.org and there you can join and talk to other people in groups or together
+on meet.matomocamp.org and there you can join and talk to other people in groups or together
 
 99
 00:12:18,560 --> 00:12:26,560
-in a voice or video chat. So if you're interested in talking to other people you can go to meet.motomocamp.org
+in a voice or video chat. So if you're interested in talking to other people you can go to meet.matomocamp.org
 
 100
 00:12:26,560 --> 00:12:33,520
@@ -556,7 +556,7 @@ two or three days just after it so you can expect just a one week delay in order
 
 140
 00:17:13,360 --> 00:17:19,520
-online it's not going to take like like a month. Lucas do you have anything that you would like to
+online it's not going to take like like a month. Lukas do you have anything that you would like to
 
 141
 00:17:19,520 --> 00:17:27,760

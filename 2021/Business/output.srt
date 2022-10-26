@@ -1212,7 +1212,7 @@ plugin. Those developers exist. You can easily find them on the community. I'm t
 
 304
 00:34:45,200 --> 00:34:51,280
-Peter. I'm thinking here of Stefan. I'm thinking here of maybe Lucas. There are some people within
+Peter. I'm thinking here of Stefan. I'm thinking here of maybe Lukas. There are some people within
 
 305
 00:34:51,280 --> 00:34:58,160
@@ -1472,7 +1472,7 @@ to understand the free software philosophy. That's it for this conference. I rea
 
 369
 00:41:39,200 --> 00:41:46,400
-that you enjoy it and that you have plenty of questions. Okay, Lucas. Well, I guess
+that you enjoy it and that you have plenty of questions. Okay, Lukas. Well, I guess
 
 370
 00:41:47,440 --> 00:41:53,200

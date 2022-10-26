@@ -28,7 +28,7 @@ today.
 
 8
 00:00:24,600 --> 00:00:33,920
-Just as a reminder, you are able to join the chat room on the matamucamp.org website.
+Just as a reminder, you are able to join the chat room on the matomocamp.org website.
 
 9
 00:00:33,920 --> 00:00:43,440
@@ -1288,7 +1288,7 @@ Frederick about this session and what was discussed here.
 
 323
 00:31:50,720 --> 00:31:55,920
-So Frederick, once again, many thanks for attending Matomo Camp.
+So Frederick, once again, many thanks for attending MatomoCamp.
 
 324
 00:31:55,920 --> 00:31:56,920
