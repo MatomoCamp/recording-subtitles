@@ -1,0 +1,1360 @@
+1
+00:00:00,000 --> 00:00:13,940
+Hi there, everybody. How are you? I hope you're doing well. So my name is Boris, and today
+
+2
+00:00:13,940 --> 00:00:21,320
+we're going to go over how we can have our own Matomo instance. I'm sure we have heard
+
+3
+00:00:21,320 --> 00:00:29,260
+a lot of positive things about it during MatomoCam. And so I wanted to host a workshop on how
+
+4
+00:00:29,260 --> 00:00:36,960
+everyone can install their own Matomo instance. Now, when we want to have a Matomo instance
+
+5
+00:00:36,960 --> 00:00:45,600
+up and running, the first thing we will need will be to have a computer to run it. So we'll
+
+6
+00:00:45,600 --> 00:00:52,060
+also go over where you can find different providers, and I'll try to make it as easy
+
+7
+00:00:52,060 --> 00:00:59,040
+to follow. But in case anybody has questions during the workshop, please feel free to write
+
+8
+00:00:59,040 --> 00:01:04,220
+in the chat, and I'll do my best to explain everything to you.
+
+9
+00:01:04,220 --> 00:01:12,240
+So before we dive into Matomo, first I would like to introduce myself. So as I mentioned,
+
+10
+00:01:12,240 --> 00:01:21,680
+my name is Boris. I am based in Albania, which is located in Europe, and I have been contributing
+
+11
+00:01:21,680 --> 00:01:29,360
+to different open source projects for around six years now. I am a member of the local
+
+12
+00:01:29,360 --> 00:01:38,200
+hackerspace, open the apps hackerspace, and I also am part of cloud68.co, where what we
+
+13
+00:01:38,200 --> 00:01:45,960
+do is we maintain different open source instances like Matomo, for example, where we not only
+
+14
+00:01:45,960 --> 00:01:51,840
+install them, but we make sure there are backups, monitoring for the health of the service,
+
+15
+00:01:51,840 --> 00:01:59,680
+and provide support. So I think that's a pretty good beginning introduction about myself.
+
+16
+00:01:59,680 --> 00:02:07,720
+So without further ado, I would like to get into how you can have your own Matomo instance.
+
+17
+00:02:07,720 --> 00:02:15,640
+So for the guide, I have estimated that our Matomo instance should be able to handle around
+
+18
+00:02:15,640 --> 00:02:24,560
+100,000 visits, and that is based off the official documentation from the Matomo website.
+
+19
+00:02:24,560 --> 00:02:29,840
+Of course, as you scale up, you might need a different setup to accommodate for all the
+
+20
+00:02:29,840 --> 00:02:35,480
+traffic that you're going to be having. So as I was mentioning, the first thing we're
+
+21
+00:02:35,480 --> 00:02:42,920
+going to need is a computer, or more specifically, what we need is a server. That way, when somebody
+
+22
+00:02:42,920 --> 00:02:49,840
+goes to the URL for our Matomo site, they will be able to see the website. And there
+
+23
+00:02:49,840 --> 00:02:53,960
+are a couple of different providers. One of the first things you need to keep in mind
+
+24
+00:02:53,960 --> 00:03:02,280
+is, if you're doing a setup similar to what we're going to do, you need to be aware of
+
+25
+00:03:02,280 --> 00:03:08,400
+where most of your user visits are going to be from, because the closer the server is
+
+26
+00:03:08,400 --> 00:03:15,400
+to your users, the faster it will load. If I am in Europe and I try to access a server,
+
+27
+00:03:15,400 --> 00:03:22,480
+for example, in Asia, it might be much slower to load compared to a server that's in Germany.
+
+28
+00:03:22,480 --> 00:03:31,480
+So one of the providers I highly recommend usually is Hetzner. They offer dedicated servers,
+
+29
+00:03:31,480 --> 00:03:38,120
+but they also offer virtual private servers. And the difference in that explained very
+
+30
+00:03:38,120 --> 00:03:45,840
+briefly is that with a VPS or a virtual private server, you essentially get a small chunk
+
+31
+00:03:45,840 --> 00:03:52,280
+of a physical machine. And you can install whatever you want on it. It has its own operating
+
+32
+00:03:52,280 --> 00:03:58,880
+system, and it's quite easy to add more hardware to it. Whereas compared with a dedicated server,
+
+33
+00:03:58,880 --> 00:04:04,800
+you have a lot more hardware and computing power allocated to it, but it does require
+
+34
+00:04:04,800 --> 00:04:11,040
+more maintenance because you have to look out for stuff like hard drive failures or
+
+35
+00:04:11,040 --> 00:04:19,000
+RAM corruption, and you have to constantly monitor it. So in Hetzner, the virtual private
+
+36
+00:04:19,000 --> 00:04:26,560
+server section, they call it Hetzner Cloud, and they have pretty good beginning prices.
+
+37
+00:04:26,560 --> 00:04:33,920
+So for a Matomo instance of about 100,000 users, something like the CX11 tier, which
+
+38
+00:04:33,920 --> 00:04:42,900
+has one CPU core and two gigabytes of RAM is a good start. And if you essentially use
+
+39
+00:04:42,900 --> 00:04:48,620
+all of that computing power, you can just upgrade to the next plan and downgrade later
+
+40
+00:04:48,620 --> 00:04:56,380
+on down the line. Another popular provider is DigitalOcean. The good thing about DigitalOcean
+
+41
+00:04:56,380 --> 00:05:04,080
+is that it has a lot more data centers compared to Hetzner. So Hetzner only has data centers
+
+42
+00:05:04,080 --> 00:05:11,760
+in Europe. And yesterday or the day before that, they launched a new data center in the
+
+43
+00:05:11,760 --> 00:05:20,140
+US, but DigitalOcean has data centers in a couple of US cities in Europe, as well as
+
+44
+00:05:20,140 --> 00:05:27,320
+in Asia. So if you're outside of Europe, I will highly recommend checking out DigitalOcean.
+
+45
+00:05:27,320 --> 00:05:34,420
+Another popular provider is also Linode, which is fairly similar to DigitalOcean. You can
+
+46
+00:05:34,420 --> 00:05:40,880
+of course use Amazon Web Services and Google Cloud Platform. I personally don't use them
+
+47
+00:05:40,880 --> 00:05:50,280
+because I don't agree with essentially their ethics. Google, Amazon, and other big tech
+
+48
+00:05:50,280 --> 00:05:56,600
+companies have been known to not be the most privacy respecting companies out there. So
+
+49
+00:05:56,600 --> 00:06:02,500
+I try to stay away from them, but of course you are free to host them wherever you want.
+
+50
+00:06:02,500 --> 00:06:11,640
+Okay, so in preparation for today's workshop, I have already created a server on Hetzner.
+
+51
+00:06:11,640 --> 00:06:21,000
+And the domain for that, I am going to paste it in the chat really quickly, will be matamotest.cloud68.co.
+
+52
+00:06:21,000 --> 00:06:27,600
+If you go to that URL, you will not see anything load. And that's because nothing has been
+
+53
+00:06:27,600 --> 00:06:36,840
+set up yet. So give me a bit of time to share my screen. And I think you should be able
+
+54
+00:06:36,840 --> 00:06:44,280
+to see it now. Let me just make it a bit bigger so that you can see. If the screen size, the
+
+55
+00:06:44,280 --> 00:06:51,120
+font size is too small, please let me know and I'll increase it. Okay, so first thing
+
+56
+00:06:51,120 --> 00:06:57,840
+you are going to want to do is to connect to that server. And for that, we use SSH.
+
+57
+00:06:57,840 --> 00:07:04,580
+So this is a command that lets you connect to the server as root, which is a user that
+
+58
+00:07:04,580 --> 00:07:10,780
+can perform, can execute all the commands on the server, which will be very helpful
+
+59
+00:07:10,780 --> 00:07:20,240
+during installation, but it's usually recommended to not run commands as root. So now we are
+
+60
+00:07:20,240 --> 00:07:27,120
+inside the server. And you can see that because here it says root at matamotest, whereas before
+
+61
+00:07:27,120 --> 00:07:37,120
+it was saying Boris at whatever my computer name is. Okay, first thing you do after connecting
+
+62
+00:07:37,120 --> 00:07:42,960
+to a new server will be to make sure that it's up to date with the latest version because
+
+63
+00:07:42,960 --> 00:07:49,500
+packages come out all the time. So new software comes out all the time. And since this computer
+
+64
+00:07:49,500 --> 00:07:56,360
+will be publicly accessed, we want to make sure it's up to date so that it's more secure.
+
+65
+00:07:56,360 --> 00:08:03,960
+So this is running Ubuntu 18. And to update the packages, we have to run two commands.
+
+66
+00:08:03,960 --> 00:08:11,720
+The first one will be apt update. And this essentially just refreshes the list of new
+
+67
+00:08:11,720 --> 00:08:18,160
+software, but it doesn't actually install them. So if we let it finish real quick, there
+
+68
+00:08:18,160 --> 00:08:23,640
+we go. It says that three packages can be upgraded. And to upgrade them, what we have
+
+69
+00:08:23,640 --> 00:08:32,680
+to do is we will have to run apt upgrade in this case. So let's just confirm that we indeed
+
+70
+00:08:32,680 --> 00:08:46,640
+want to update. Okay, there we go. So now what we have to do is we are going to have
+
+71
+00:08:46,640 --> 00:08:53,520
+to install some other software to make sure that, you know, if you go to that URL that
+
+72
+00:08:53,520 --> 00:08:59,320
+I shared in the chat, Matomo shows up and your browser knows how to interact with this
+
+73
+00:08:59,320 --> 00:09:06,640
+computer. So the different components that we need installed are mainly a web server,
+
+74
+00:09:06,640 --> 00:09:11,840
+which is a program installed on the server so that your browser knows how to talk to
+
+75
+00:09:11,840 --> 00:09:19,400
+it. We'll need a database. So this is where Matomo will store all the data that it collects.
+
+76
+00:09:19,400 --> 00:09:25,600
+And for this guide, we will be using something called MySQL. Of course, you are free to use
+
+77
+00:09:25,600 --> 00:09:30,680
+whatever you want, as long as the program is compatible with it. And the last thing
+
+78
+00:09:30,680 --> 00:09:39,080
+we're going to need to install will be the PHP softwares into the server. So Matomo is
+
+79
+00:09:39,080 --> 00:09:45,200
+written in PHP. And for that reason, we need to make sure that the server itself can run
+
+80
+00:09:45,200 --> 00:09:54,360
+this program and then serve that on your browser. Okay, so to install the web server, it's really,
+
+81
+00:09:54,360 --> 00:10:00,800
+really easy. Using the apt command from before, we're going to tell it to install, and then
+
+82
+00:10:00,800 --> 00:10:05,760
+we're going to say the name of the program that we want to install. In the case of the
+
+83
+00:10:05,760 --> 00:10:12,240
+web server, we're going to be using something called Nginx. Another very popular option
+
+84
+00:10:12,240 --> 00:10:20,040
+is Apache 2. But there are a couple more you might want to dive into at your own leisure.
+
+85
+00:10:20,040 --> 00:10:27,560
+And other than Nginx, we are also going to install MySQL server. So this is the web server,
+
+86
+00:10:27,560 --> 00:10:35,480
+and this is the database server. Let's just run that really quickly.
+
+87
+00:10:35,480 --> 00:10:43,120
+Now when it comes to PHP installation, you can use different versions of PHP. Matomo
+
+88
+00:10:43,120 --> 00:10:53,600
+itself recommends using PHP 7.2 or up. For this guide, we'll be using PHP 7.4. So the
+
+89
+00:10:53,600 --> 00:11:04,360
+problem then becomes that PHP 7.4 is not available by default, I think, in Ubuntu 18.04. So we
+
+90
+00:11:04,360 --> 00:11:12,220
+have to add something called a repository, which is like a list of other packages or
+
+91
+00:11:12,220 --> 00:11:19,560
+other programs that you can install on your computer that are not available by default.
+
+92
+00:11:19,560 --> 00:11:27,240
+So to do that, what we first have to run is this command, which installs some, it's essentially
+
+93
+00:11:27,240 --> 00:11:34,480
+the apt command again, but it installs some background applications needed to follow the
+
+94
+00:11:34,480 --> 00:11:40,360
+other steps. And we can see in this case, because it didn't say installing anything
+
+95
+00:11:40,360 --> 00:11:49,080
+new, it was already present in my installation. Okay. Now we are going to run another command,
+
+96
+00:11:49,080 --> 00:11:56,000
+which is add apt repository. So essentially add a new list of possible programs that you
+
+97
+00:11:56,000 --> 00:12:03,320
+can install. And then the repository that we're going to be installing is Andre slash
+
+98
+00:12:03,320 --> 00:12:11,400
+PHP. So if we press enter on that, it will warn us with things that we need to keep in
+
+99
+00:12:11,400 --> 00:12:18,920
+mind of, and then it will ask us to press enter to continue. So we're going to do that.
+
+100
+00:12:18,920 --> 00:12:25,440
+And here you can see that it's updating the list of programs. So these are what it had
+
+101
+00:12:25,440 --> 00:12:35,520
+by default. And then you can see here what we just added. Okay. Now we can run the step
+
+102
+00:12:35,520 --> 00:12:44,480
+to install PHP 7.4. So let's go ahead and do that. I am going to be installing a version
+
+103
+00:12:44,480 --> 00:12:58,680
+of PHP 7.4 called FPM. So let's press enter on that. And let's just give it a little bit
+
+104
+00:12:58,680 --> 00:13:10,320
+of time to configure everything. Okay. So now we are pretty much almost ready to continue
+
+105
+00:13:10,320 --> 00:13:19,240
+with a Matomo installation, but PHP in Ubuntu 18 comes with what are called modules. So
+
+106
+00:13:19,240 --> 00:13:26,880
+these are optional softwares that you install on your computer and they provide more functions
+
+107
+00:13:26,880 --> 00:13:35,000
+to PHP. If you head over to the Matomo user installation guide, so let me get that link
+
+108
+00:13:35,000 --> 00:13:43,960
+and paste it in the chat really quickly. So in here you will see that the recommendation
+
+109
+00:13:43,960 --> 00:13:51,640
+is to install a bunch of packages. I have written them down beforehand. And what we're
+
+110
+00:13:51,640 --> 00:13:57,400
+going to do is we're going to install them, but we want to make sure that we install the
+
+111
+00:13:57,400 --> 00:14:05,720
+same version for the module as we did for PHP when we initially installed it here. So
+
+112
+00:14:05,720 --> 00:14:13,640
+I said 7.4 and I have to make sure that in here it also says 7.4. So let's go ahead and
+
+113
+00:14:13,640 --> 00:14:30,800
+press enter on that. And let's give it a bit of time. There we go. Now we are ready to
+
+114
+00:14:30,800 --> 00:14:42,480
+download the Matomo code from Matomo's website. So let me reshare my screen really quickly.
+
+115
+00:14:42,480 --> 00:14:54,360
+I think it's this one. Yeah. Okay. So let's open that in fuller view. What we're going
+
+116
+00:14:54,360 --> 00:14:58,840
+to want to do is we're going to want to go to the download Matomo section and we can
+
+117
+00:14:58,840 --> 00:15:07,440
+see that the latest release is version 4.5.0. And we're going to want to right click this
+
+118
+00:15:07,440 --> 00:15:15,920
+button over here. And we're going to want to copy the link. Now let's jump back into
+
+119
+00:15:15,920 --> 00:15:28,760
+the server. So let me share my screen one more time. Okay. And let's make it a bit easier
+
+120
+00:15:28,760 --> 00:15:35,760
+to read by removing all of these things. If you also want to clear screen in case you're
+
+121
+00:15:35,760 --> 00:15:42,040
+following along, you can type clear. And once you press enter, it will essentially free
+
+122
+00:15:42,040 --> 00:15:48,680
+up your view so that it's easier to read what's going on. Okay. First we're going to want
+
+123
+00:15:48,680 --> 00:15:54,720
+to download the URL we just copied. So to do that in Ubuntu, you can use curl or you
+
+124
+00:15:54,720 --> 00:16:02,120
+can use something called wget. I personally prefer wget. So let's go with that. And the
+
+125
+00:16:02,120 --> 00:16:09,600
+syntax for that will be wget and the URL that we just copied. So once we press enter, we
+
+126
+00:16:09,600 --> 00:16:15,680
+can see that it has downloaded it. We can verify this by running another command called
+
+127
+00:16:15,680 --> 00:16:24,520
+ls, which is something like list structure. And we can see here that matomo.zip does indeed
+
+128
+00:16:24,520 --> 00:16:32,860
+exist in my current directory. So you can see that it's a.zip file. So it's an archive
+
+129
+00:16:32,860 --> 00:16:37,920
+and it has a bunch of folders inside. What we're going to want to do is we're going to
+
+130
+00:16:37,920 --> 00:16:46,880
+want to unpack that. So first let's create a directory called matomo. To create a directory,
+
+131
+00:16:46,880 --> 00:16:52,760
+I use the command called mkdir, then a space, and then the name of the directory I want
+
+132
+00:16:52,760 --> 00:17:00,920
+to create. Then we're going to type mv, which moves a file or a folder to another location.
+
+133
+00:17:00,920 --> 00:17:10,200
+And we're going to move matomo.zip to the matomo folder. So if you run ls one more time,
+
+134
+00:17:10,200 --> 00:17:17,120
+we can see that now we have this folder. And inside that folder, we have the zip file that
+
+135
+00:17:17,120 --> 00:17:24,200
+we downloaded. Okay. Then we are going to want to enter that folder and all the commands
+
+136
+00:17:24,200 --> 00:17:30,400
+that we're going to be executing now will take place from there. So to change the directory,
+
+137
+00:17:30,400 --> 00:17:36,520
+you have to use a command called cd. And then after the space, you enter the directory that
+
+138
+00:17:36,520 --> 00:17:44,360
+you want to go in. So in that case, cd matomo. And we are going to want to unzip this. So
+
+139
+00:17:44,360 --> 00:17:51,560
+we say unzip and then the file name matomo.zip. And we can see it's printing out a bunch of
+
+140
+00:17:51,560 --> 00:17:59,040
+stuff. So if we run ls, we will see there is a how to install matomo.html. There is
+
+141
+00:17:59,040 --> 00:18:07,160
+a matomo folder and then there is the matomo.zip file that we downloaded. Now for the next
+
+142
+00:18:07,160 --> 00:18:13,080
+step, what we're going to want to do is we are going to want to move this matomo folder
+
+143
+00:18:13,080 --> 00:18:19,120
+that we just extracted. And we're going to want to move that to a place where our web
+
+144
+00:18:19,120 --> 00:18:25,600
+server, so in a place where the program in our computer, which makes sure that the site
+
+145
+00:18:25,600 --> 00:18:32,840
+loads from the browser, has the option of reading those files. So to do that, let's
+
+146
+00:18:32,840 --> 00:18:41,960
+use the mv command again and say matomo. And the place where we want to move this in Ubuntu
+
+147
+00:18:41,960 --> 00:18:51,600
+is slash bar slash www. So this is a default directory that is created when we install
+
+148
+00:18:51,600 --> 00:19:00,880
+our web server. So if we go over there now, we will see that we have HTML and matomo.
+
+149
+00:19:00,880 --> 00:19:12,720
+And if we go to, let me share my screen again. But essentially, if we go to our URL, so that
+
+150
+00:19:12,720 --> 00:19:20,360
+is matomotest.cloud6a.co, we will see a welcome to nginx page, which to me doesn't look a
+
+151
+00:19:20,360 --> 00:19:25,900
+lot like the software we want to install. But the good thing is we can change that.
+
+152
+00:19:25,900 --> 00:19:35,800
+So to do that, let's jump back into our terminal window, where we are typing the commands.
+
+153
+00:19:35,800 --> 00:19:42,600
+And first, if we run ls, so the same command to show the structure, but this time we add
+
+154
+00:19:42,600 --> 00:19:53,400
+a dash l, it will show us a bit more information on the contents of the slash bar slash www
+
+155
+00:19:53,400 --> 00:20:00,440
+folder. And what we're going to want to do is that for the matomo user, currently its
+
+156
+00:20:00,440 --> 00:20:07,480
+owner is the root user, which is the user I am logged in as, but it's generally recommended
+
+157
+00:20:07,480 --> 00:20:15,360
+that you change the permissions of this folder. So to change the permission, or more exactly
+
+158
+00:20:15,360 --> 00:20:24,560
+to change the owner, we have to type chown, and then we're going to type a option which
+
+159
+00:20:24,560 --> 00:20:33,040
+says don't change the owner of just this folder, but change the owner of all folders and files
+
+160
+00:20:33,040 --> 00:20:41,960
+inside this folder. So that is dash r, capital R. And then we define the user that we are
+
+161
+00:20:41,960 --> 00:20:48,880
+going to grant ownership of this folder to. So in the case of nginx on ubuntu, this user
+
+162
+00:20:48,880 --> 00:20:59,560
+is called www dash data. And then we have to do the same thing, but this time what we're
+
+163
+00:20:59,560 --> 00:21:07,800
+defining here is the group. So we essentially set an owner, which is a user on our system
+
+164
+00:21:07,800 --> 00:21:14,560
+and a group that have ownership to this folder. So let's go ahead and complete the command
+
+165
+00:21:14,560 --> 00:21:21,120
+by specifying the directory that we want, which is matomo, and press enter. Now for
+
+166
+00:21:21,120 --> 00:21:27,360
+the next step, we're going to want to change the configuration of our web server. So to
+
+167
+00:21:27,360 --> 00:21:34,460
+do that, we are going to be using a text editor. I'm sure a lot of people have strong opinions
+
+168
+00:21:34,460 --> 00:21:41,680
+about which text editor you should use. In my opinion, you should just use a text editor
+
+169
+00:21:41,680 --> 00:21:49,320
+that you know how to use and can easily navigate around. So in my case, I use nano and the
+
+170
+00:21:49,320 --> 00:21:56,640
+file we are going to want to edit is located inside the etc folder, which is where most
+
+171
+00:21:56,640 --> 00:22:03,360
+of the configuration for different softwares is located in Linux. And we're going to say
+
+172
+00:22:03,360 --> 00:22:09,120
+nginx and we can see that there are a bunch of files and folders here, but the one we're
+
+173
+00:22:09,120 --> 00:22:16,560
+interested in is sites enabled. So let's go ahead and type that. And in here we can see
+
+174
+00:22:16,560 --> 00:22:27,120
+that there is a file called default. So let's go ahead and change that. I will mute just
+
+175
+00:22:27,120 --> 00:22:50,240
+for a minute for the ambulance to drive by. Okay, now it must be a bit easier to hear.
+
+176
+00:22:50,240 --> 00:22:57,920
+So I'm going to cheat a little bit. I'm going to be using an nginx template, which I had
+
+177
+00:22:57,920 --> 00:23:07,520
+already prepared beforehand, but you can find pretty much the same configuration online.
+
+178
+00:23:07,520 --> 00:23:13,240
+And I'm going to want to change a couple of things. So before I change them, let me first
+
+179
+00:23:13,240 --> 00:23:21,360
+explain what we're doing. When you visit a website and you go to HTTP, what essentially
+
+180
+00:23:21,360 --> 00:23:28,340
+you say is, hey, I want to access this server, but think of the server as a building. Sure,
+
+181
+00:23:28,340 --> 00:23:34,320
+you might want to enter a building, but you have to choose a door in which you enter from.
+
+182
+00:23:34,320 --> 00:23:41,160
+And in computers, we use port to describe this behavior. So you want to specify a port
+
+183
+00:23:41,160 --> 00:23:51,000
+for that. Luckily for us or unluckily, depends on how you look at it, some ports are standards.
+
+184
+00:23:51,000 --> 00:24:01,400
+So for HTTP, we use port 80. And for HTTPS, so that's when the site has a green lock next
+
+185
+00:24:01,400 --> 00:24:11,080
+to it and says that the site is secure. We use port 443. We're not quite ready for port
+
+186
+00:24:11,080 --> 00:24:18,680
+443. So let's change the configuration a bit by essentially commenting out some of these
+
+187
+00:24:18,680 --> 00:24:26,720
+functions, but we can uncomment them later. To comment them, we just use this icon in front
+
+188
+00:24:26,720 --> 00:24:35,320
+of what we want to comment. So let's go ahead and do that for a few lines here. What we're
+
+189
+00:24:35,320 --> 00:24:44,200
+doing mostly is we're removing the SSL configuration. So we're removing the HTTPS config. Now this
+
+190
+00:24:44,200 --> 00:24:51,160
+is not permanent because it's highly recommended that you do run HTTPS on your site because
+
+191
+00:24:51,160 --> 00:24:59,000
+you don't only protect your own systems, but most importantly, you protect your users.
+
+192
+00:24:59,000 --> 00:25:05,680
+And then we're going to want to change this option right here. It's actually located in
+
+193
+00:25:05,680 --> 00:25:14,160
+two different places called inventory hostname. This is a template for the automating tool
+
+194
+00:25:14,160 --> 00:25:20,600
+that we use at cloud68. But what we're going to want to type instead of that will be the
+
+195
+00:25:20,600 --> 00:25:32,840
+URL for our website. So let's say matomotest.cloud68.co and confirm everything. Okay. Another thing
+
+196
+00:25:32,840 --> 00:25:38,360
+we are going to want to have to change is the PHP version because this template uses
+
+197
+00:25:38,360 --> 00:25:46,640
+version 7.2 of PHP, which you can see here, whereas we installed PHP 4. So let's make
+
+198
+00:25:46,640 --> 00:25:55,880
+that change as well. And we are now essentially ready to save the file. So in nano to save
+
+199
+00:25:55,880 --> 00:26:07,040
+a file, you are going to... Yeah, I did comment the server section. So in nginx, the way you
+
+200
+00:26:07,040 --> 00:26:13,120
+define things is you define server blocks and in there you enter your configuration.
+
+201
+00:26:13,120 --> 00:26:19,480
+As you can see here, we have two server blocks. And the reason for that is we have one that
+
+202
+00:26:19,480 --> 00:26:26,840
+listens on port 80 and all it does, it just redirects you to HTTPS. And we have another
+
+203
+00:26:26,840 --> 00:26:36,560
+one for HTTPS. Now I haven't commented this section here, and that is so that we are essentially
+
+204
+00:26:36,560 --> 00:26:43,440
+just using a single server running on port 80, which will be serving the Matomo website.
+
+205
+00:26:43,440 --> 00:26:55,080
+But we are going to uncomment that later on. So let's go ahead and save by typing control
+
+206
+00:26:55,080 --> 00:27:01,800
+and then O. It will ask us where to save. Let's just say the default file we opened.
+
+207
+00:27:01,800 --> 00:27:07,080
+And then we're going to want to close the editor. So for that, we type control and then
+
+208
+00:27:07,080 --> 00:27:16,240
+X. Now we can go ahead and restart our web server, but it's usually recommended we test
+
+209
+00:27:16,240 --> 00:27:23,000
+if the syntax for what we just did is correct. So to do that, we are going to type nginx
+
+210
+00:27:23,000 --> 00:27:30,000
+and then space dash T. This tells nginx, hey, can you test my current configuration and
+
+211
+00:27:30,000 --> 00:27:38,720
+make sure I haven't forgotten semicolon somewhere or forgotten to close a server block. So we
+
+212
+00:27:38,720 --> 00:27:46,840
+can see that the configuration file is syntax is okay. And we are now ready to restart our
+
+213
+00:27:46,840 --> 00:27:56,320
+program. To do this in Ubuntu, Ubuntu uses a system called systemd. So to restart our
+
+214
+00:27:56,320 --> 00:28:03,480
+web server application without restarting our entire server, which is a bit ineffective,
+
+215
+00:28:03,480 --> 00:28:11,360
+we have to type systemctl, then the operation that we want to perform. So in this case,
+
+216
+00:28:11,360 --> 00:28:18,400
+restart and then the name of the program we want to restart. So there we go. And if we
+
+217
+00:28:18,400 --> 00:28:33,080
+refresh our site now, let me just change my screen. We now see a new page, which is the
+
+218
+00:28:33,080 --> 00:28:39,000
+Matomo installation wizard. And this page, in my opinion, is really, really cool because
+
+219
+00:28:39,000 --> 00:28:46,240
+first thing it does is it performs a system check and it sees if what you have is all
+
+220
+00:28:46,240 --> 00:28:51,280
+correct and if there is anything you need to change. So we can see the PHP version is
+
+221
+00:28:51,280 --> 00:28:57,800
+fine. All of these extensions and configurations are fine. And then there are some optional
+
+222
+00:28:57,800 --> 00:29:06,360
+suggestions. So you can see force SSL connection. We're not using SSL and that's a problem.
+
+223
+00:29:06,360 --> 00:29:12,960
+It also gives us a bunch of information. Now I do want to continue to the next step, which
+
+224
+00:29:12,960 --> 00:29:18,760
+is database setup. But when we go to database setup, we can see that we are going to have
+
+225
+00:29:18,760 --> 00:29:26,240
+to enter a username, a password, a name for our database. So it's probably good to configure
+
+226
+00:29:26,240 --> 00:29:36,480
+HTTPS before we move on. Okay. Now to configure HTTPS, you usually have to have something
+
+227
+00:29:36,480 --> 00:29:42,440
+called an SSL certificate. And SSL certificates, there are a couple of different ways to get
+
+228
+00:29:42,440 --> 00:29:48,440
+them. You can buy one, which lasts for a year, or you can use Let's Encrypt. Let me mute
+
+229
+00:29:48,440 --> 00:30:03,600
+really quickly just for the ambulance to go by. So as I was saying, you can also use something
+
+230
+00:30:03,600 --> 00:30:09,120
+called Let's Encrypt, which gives you a free certificate available for 90 days. So we're
+
+231
+00:30:09,120 --> 00:30:20,120
+going to say that our website is running nginx, and we're going to use upuntu 18.04. It will
+
+232
+00:30:20,120 --> 00:30:25,400
+show us some commands that we can run. And those commands first, we have to install something
+
+233
+00:30:25,400 --> 00:30:36,240
+called snapd, which allows us to install other packets not available by APT. And let me just
+
+234
+00:30:36,240 --> 00:30:43,920
+copy this command beforehand. This command essentially refreshes the list of available
+
+235
+00:30:43,920 --> 00:30:54,720
+programs for snapd to install. It's very similar to APT update that we performed. And then
+
+236
+00:30:54,720 --> 00:31:01,900
+we're going to run snap install certbot. So this is a program developed by the Electronic
+
+237
+00:31:01,900 --> 00:31:08,400
+Frontier Foundation, which essentially makes it very, very easy for you to get a Let's
+
+238
+00:31:08,400 --> 00:31:15,000
+Encrypt certificate and authenticate yourself and then be able to use it. Last thing we're
+
+239
+00:31:15,000 --> 00:31:22,240
+going to do is run this command, which I can't go into details about what it does due to
+
+240
+00:31:22,240 --> 00:31:28,080
+time constraint, but it makes it possible for us to run certbot in our system and for
+
+241
+00:31:28,080 --> 00:31:36,200
+it to respond to us. So let's cancel this. To get the SSL certificate, we're going to
+
+242
+00:31:36,200 --> 00:31:44,080
+run certbot cert only. So only give us a certificate, don't do anything else to our system, and
+
+243
+00:31:44,080 --> 00:31:49,840
+then dash dash nginx, which is the web server we have installed. We are going to want to
+
+244
+00:31:49,840 --> 00:31:58,000
+type a email address to get security notices and renewal info. For now, let's just use
+
+245
+00:31:58,000 --> 00:32:07,800
+no reply at cloud68.co. You need to agree to their terms of service. And if you want,
+
+246
+00:32:07,800 --> 00:32:13,760
+you can sign up for their newsletter. After you do all that, it will ask you what names
+
+247
+00:32:13,760 --> 00:32:19,560
+you will want the certificate for. So it has already gotten Matomo test from our nginx
+
+248
+00:32:19,560 --> 00:32:26,320
+configuration. So let's just press enter. And certbot will do everything that's needed
+
+249
+00:32:26,320 --> 00:32:33,480
+for us. We won't have to take care of verifying who we are and verifying that we have access
+
+250
+00:32:33,480 --> 00:32:41,720
+to this domain when we own it. So now we can head back to our nginx configuration and uncomment
+
+251
+00:32:41,720 --> 00:32:49,400
+everything that we had commented. So in here, we define the location for our certificate.
+
+252
+00:32:49,400 --> 00:32:57,320
+And these are some other configuration options just to increase general security on the site.
+
+253
+00:32:57,320 --> 00:33:06,040
+So let's go ahead and save. We run nginx dash t again to verify everything is running correctly.
+
+254
+00:33:06,040 --> 00:33:15,120
+And we restart our web server again. Now, if we go back to our site, let me close my
+
+255
+00:33:15,120 --> 00:33:23,820
+screen share so I can show you my browser. We can see that now this website is running
+
+256
+00:33:23,820 --> 00:33:32,220
+on HTTPS. And we are now ready to do our database configuration. So to do our database configuration,
+
+257
+00:33:32,220 --> 00:33:38,600
+we are going to have to talk to our database server, which is installed in the same server
+
+258
+00:33:38,600 --> 00:33:48,560
+that we were using. Let's go there. And let me share this. Okay. So we're going to want
+
+259
+00:33:48,560 --> 00:33:55,560
+to type MySQL to talk to the server. And we can see that the view has changed a bit. First,
+
+260
+00:33:55,560 --> 00:34:01,920
+we're going to say create database Matomo. You can name this anything you want. Then
+
+261
+00:34:01,920 --> 00:34:09,360
+we're going to say create user Matomo user at localhost. So create that user in this
+
+262
+00:34:09,360 --> 00:34:18,520
+system identified by, I might be confusing it a bit with another syntax or another database
+
+263
+00:34:18,520 --> 00:34:25,440
+server. But let's use a really, really bad password for now. And next, we're going to
+
+264
+00:34:25,440 --> 00:34:34,360
+run grant all privileges on Matomo. So grant all accesses to the Matomo database to the
+
+265
+00:34:34,360 --> 00:34:42,760
+Matomo user at localhost. Okay. So everything's done now. We can now close that and go back
+
+266
+00:34:42,760 --> 00:34:54,280
+to the webpage we were viewing before. And for logging, we're going to say Matomo user
+
+267
+00:34:54,280 --> 00:34:59,760
+for the password, the password redefined and the database name. And we're going to click
+
+268
+00:34:59,760 --> 00:35:09,580
+on next. There we go. So Matomo has successfully talked to the database and created the structure
+
+269
+00:35:09,580 --> 00:35:17,880
+needed for us to continue. Now we create a super user. So this is our username for the
+
+270
+00:35:17,880 --> 00:35:27,920
+administrative account. Let me generate a quick password for this. There we go. And
+
+271
+00:35:27,920 --> 00:35:38,800
+we're going to want to type our email address and we can click on the configurations options
+
+272
+00:35:38,800 --> 00:35:47,800
+that we want and click next. And we can see that database access denied. So what I'm
+
+273
+00:35:47,800 --> 00:35:54,440
+assuming is happening here is somebody might have done this configuration before we have.
+
+274
+00:35:54,440 --> 00:36:21,880
+So let's go ahead and check the logs really quickly. And just give me a little bit.
+
+275
+00:36:21,880 --> 00:36:33,000
+Oh, I can see that my screen share is not working. Let me check really quickly what's
+
+276
+00:36:33,000 --> 00:37:02,120
+going on. Give me just a second. Okay. So I just redid the configuration again. Apologies
+
+277
+00:37:02,120 --> 00:37:08,160
+for not seeing, but I was essentially just going over the website again. And now we can
+
+278
+00:37:08,160 --> 00:37:14,640
+set up a website that we want to monitor. So let's say cloud68.co, which is located
+
+279
+00:37:14,640 --> 00:37:27,760
+at this URL. We select a time zone for our website. So let's try to find Tirana or we
+
+280
+00:37:27,760 --> 00:37:36,640
+can just say UTC plus one. And we click on next. And it will now give us the Matomo JavaScript
+
+281
+00:37:36,640 --> 00:37:42,760
+code, which we can add to our website and start having analytics. And that is pretty
+
+282
+00:37:42,760 --> 00:37:49,240
+much it. We now have a beginning installation of Matomo. There are a couple of things we
+
+283
+00:37:49,240 --> 00:37:58,000
+can further do. We can add a geo database that will show us, you know, we can see that
+
+284
+00:37:58,000 --> 00:38:05,320
+there is a database upgrade required. So to do that, let's copy this command and run that
+
+285
+00:38:05,320 --> 00:38:19,880
+on our server. And I can see that you're not seeing my terminal. So let's change that.
+
+286
+00:38:19,880 --> 00:38:29,120
+There we go. Now, it's generally a bad idea to do this without backups, but this is a
+
+287
+00:38:29,120 --> 00:38:36,240
+test instance. So I guess you only live once in this case. But please don't just execute
+
+288
+00:38:36,240 --> 00:38:44,200
+commands on a production system without making sure you have good backups. And let's fix
+
+289
+00:38:44,200 --> 00:39:02,600
+the permission. And let's upgrade Matomo. Let me change my screen again. And in here
+
+290
+00:39:02,600 --> 00:39:20,480
+we say admin. Let me take my password again. And there you go. You now have a Matomo instance
+
+291
+00:39:20,480 --> 00:39:26,320
+running. As I was saying, there are more things to configure your instance. You have to set
+
+292
+00:39:26,320 --> 00:39:32,000
+up automatic backups. You have to set up monitoring to make sure the instance is healthy. You
+
+293
+00:39:32,000 --> 00:39:40,840
+do have to set up something called cron jobs, which are essentially background jobs that
+
+294
+00:39:40,840 --> 00:39:46,360
+perform different operations on the data and make sure that your instance loads quicker
+
+295
+00:39:46,360 --> 00:39:51,920
+because it doesn't have to compute everything at the same time. It can just show you the
+
+296
+00:39:51,920 --> 00:39:59,800
+data it has processed ahead of time. I want to show you a few configurations really quickly
+
+297
+00:39:59,800 --> 00:40:06,960
+that are just to optimize the instance. If we have time, if not, please feel free to
+
+298
+00:40:06,960 --> 00:40:15,400
+stop me. But essentially we can see here that it says we should set force SSL to one in
+
+299
+00:40:15,400 --> 00:40:22,200
+the general section of our configuration of Matomo. And we need to increase the max allowed
+
+300
+00:40:22,200 --> 00:40:30,400
+packet in our SQL database to at least 64 megabytes. So there are different configuration
+
+301
+00:40:30,400 --> 00:40:38,800
+and tweaks that you can do to your instance to make it behave more responsive. So in case
+
+302
+00:40:38,800 --> 00:40:46,600
+there are any questions, please feel free to let me know. Now's the time and I'll look
+
+303
+00:40:46,600 --> 00:41:07,400
+forward to answering them. So Melanie asks how often should the archive cron job be scheduled
+
+304
+00:41:07,400 --> 00:41:17,600
+for? Every hour or something else? It really depends on how much data you have really.
+
+305
+00:41:17,600 --> 00:41:25,400
+Usually I set a configuration where it runs once every day, but this is for installations
+
+306
+00:41:25,400 --> 00:41:33,360
+that track a hundred visits a day max. You can set this to run more often. Something
+
+307
+00:41:33,360 --> 00:41:39,600
+like an hour might be a good idea if the traffic you're getting is around a hundred thousand
+
+308
+00:41:39,600 --> 00:41:46,920
+visits, because that's essentially going to process all the data. And when Matomo has
+
+309
+00:41:46,920 --> 00:42:06,920
+to calculate all of that, when you load the page, it's quite intensive for it. No problem.
+
+310
+00:42:06,920 --> 00:42:31,120
+Marianne, sorry if I'm mispronouncing your name, asks any reason for using nginx? To
+
+311
+00:42:31,120 --> 00:42:39,820
+be honest, there's no strong reason why you should use nginx or apache 2 in my opinion.
+
+312
+00:42:39,820 --> 00:42:44,880
+They are optimized for different loads. Yes. But the main criteria you have to keep in
+
+313
+00:42:44,880 --> 00:42:52,000
+mind is you have to use a software that you're comfortable for. In my case, I really like
+
+314
+00:42:52,000 --> 00:42:58,640
+nginx syntax. It's really easy for me to read. So that's what I use, but you can use any
+
+315
+00:42:58,640 --> 00:43:05,520
+web server there is on the planet as long as you can configure it to run. And it seems
+
+316
+00:43:05,520 --> 00:43:14,800
+like my pronunciation was correct. So yay. Lucas is sharing in the chat, if you are using
+
+317
+00:43:14,800 --> 00:43:21,960
+nginx, you might want to look into this link, which is a GitHub repository. Let me open
+
+318
+00:43:21,960 --> 00:43:38,160
+that with screen share so we can take a look at it together. There we go. Lucas, thank
+
+319
+00:43:38,160 --> 00:43:47,720
+you for sharing this. I did not share it beforehand. So we can see that the Matomo organization
+
+320
+00:43:47,720 --> 00:43:55,760
+on GitHub has a nginx configuration for Matomo. So I will highly recommend checking this out
+
+321
+00:43:55,760 --> 00:44:01,640
+to have essentially the same configuration that I copied over from our template. You
+
+322
+00:44:01,640 --> 00:44:09,680
+can find that one in here. And this is frequently updated. So you might want to check into it
+
+323
+00:44:09,680 --> 00:44:29,080
+when there are new versions of Matomo coming out. Awesome.
+
+324
+00:44:39,680 --> 00:44:47,960
+Okay. So Lucas is sharing that the reason is that the HD access files, so these are
+
+325
+00:44:47,960 --> 00:44:55,600
+some files that configure a part of how the web server operates, and they're usually used
+
+326
+00:44:55,600 --> 00:45:03,080
+when you use Apache 2. Lucas points out that these files won't work in nginx, which is
+
+327
+00:45:03,080 --> 00:45:11,960
+correct because it's an Apache 2 only setup. So those configurations won't work in nginx.
+
+328
+00:45:11,960 --> 00:45:19,760
+And they have had to write the config rules manually. And it's very, very important for
+
+329
+00:45:19,760 --> 00:45:27,460
+you to copy the correct config because otherwise your Matomo instance might not be protected.
+
+330
+00:45:27,460 --> 00:45:33,560
+Some files in the Matomo instance might not be protected. And that's not a very good idea
+
+331
+00:45:33,560 --> 00:45:48,200
+if your Matomo installation is public. So if I share my screen again, one such configuration,
+
+332
+00:45:48,200 --> 00:45:56,160
+for example, is this one. And it says, disable access to the following directories, config,
+
+333
+00:45:56,160 --> 00:46:04,440
+KMP, core, and length. And it says, deny all requests to these locations and show a 403
+
+334
+00:46:04,440 --> 00:46:12,800
+error code. Yeah, I think you should really use this config because if somebody can access
+
+335
+00:46:12,800 --> 00:46:22,280
+your configuration folder remotely, then it's pretty much game over. So you want to protect
+
+336
+00:46:22,280 --> 00:46:37,640
+that. Is there any other question that you want answered? Of course, you can ask me at
+
+337
+00:46:37,640 --> 00:46:45,400
+any time even later on. My username almost everywhere is this one. I am also in the metrics
+
+338
+00:46:45,400 --> 00:47:02,520
+chat where you can find me with this username instead. Awesome. It looks like we have answered
+
+339
+00:47:02,520 --> 00:47:09,960
+all questions. So thank you again, everyone, for joining. And I hope you have fun during
+
+340
+00:47:09,960 --> 00:47:15,520
+Matomo camp. And we'll see you around.
+

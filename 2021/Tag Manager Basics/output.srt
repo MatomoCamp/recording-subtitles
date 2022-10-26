@@ -1,0 +1,1008 @@
+1
+00:00:00,000 --> 00:00:12,800
+Today, I will go through the basics of the Matomo Tag Manager and also the basics of
+
+2
+00:00:12,800 --> 00:00:17,960
+getting consent management to work together with the Matomo Tag Manager.
+
+3
+00:00:17,960 --> 00:00:23,920
+For those interested in the tracking of SPA applications, I will do that tomorrow.
+
+4
+00:00:23,920 --> 00:00:32,080
+All right, so let's look into what this is, but let's first talk a little bit about me.
+
+5
+00:00:32,080 --> 00:00:38,480
+As the introduction said, I've been working with analytics since 2010-ish.
+
+6
+00:00:38,480 --> 00:00:44,320
+I usually refer to myself as some kind of a generalist when it comes to web development.
+
+7
+00:00:44,320 --> 00:00:51,880
+I started working within the web industry around 2000 and have had a mix of roles.
+
+8
+00:00:51,880 --> 00:00:57,880
+I started off as a front-end developer, but today I'm more of a business developer,
+
+9
+00:00:57,880 --> 00:01:07,720
+but I still love the coding, so I can't get my fingers away from the commit messages, so to speak.
+
+10
+00:01:07,720 --> 00:01:17,640
+So what I usually do on my daily job is to help our clients at Digitalist with implementing
+
+11
+00:01:17,640 --> 00:01:23,000
+Matomo in their organizations, and that can be everything from helping out with tag management
+
+12
+00:01:23,000 --> 00:01:30,280
+issues or more technical deep dives or educating or training developers or whatever that needs to
+
+13
+00:01:30,280 --> 00:01:37,960
+learn about Matomo. So who are Digitalist? Well, we're a digital product agency that loves open
+
+14
+00:01:37,960 --> 00:01:43,080
+source. I think we've been contributing to different open source projects since 2005,
+
+15
+00:01:43,080 --> 00:01:49,240
+and our main project to contribute to has been Drupal, where we're pretty well known within the
+
+16
+00:01:49,240 --> 00:01:56,200
+Drupal community, the CMS, but the three, four last years we've been starting to contribute more
+
+17
+00:01:56,200 --> 00:02:04,440
+and more to Matomo, and we hope to do much more of that as well. What we offer as a company is,
+
+18
+00:02:04,440 --> 00:02:13,960
+of course, a SaaS solution for Matomo and professional consulting to help people with that.
+
+19
+00:02:13,960 --> 00:02:21,320
+We're also building and selling premium plugins to Matomo, so that's something we will hopefully
+
+20
+00:02:21,320 --> 00:02:27,640
+share more news about soon. I have a presentation about one of them tomorrow called the User
+
+21
+00:02:27,640 --> 00:02:34,920
+Feedback Plugin, but that's for tomorrow. So let's get into today's topic, and that is tag
+
+22
+00:02:34,920 --> 00:02:43,080
+management. Tag management isn't super new in the Matomo world, it is, but basically tag
+
+23
+00:02:43,080 --> 00:02:50,520
+management, a tag manager is a tool that helps us structure the tracking code that we can add to our
+
+24
+00:02:50,520 --> 00:02:58,440
+websites. Once we have it installed, it means that we can implement tracking without actually
+
+25
+00:02:59,000 --> 00:03:05,560
+changing code in our CMS system or on the production servers. We can do that through the tool
+
+26
+00:03:05,560 --> 00:03:15,640
+tag manager. Why should we use a tag manager? Well, first of all, it gives us autonomy.
+
+27
+00:03:15,640 --> 00:03:21,080
+We don't have to depend on developers or ops team to actually implement new tracking, and this is
+
+28
+00:03:21,080 --> 00:03:27,160
+actually a great thing because if you're working with tracking, it's usually a lot of fast,
+
+29
+00:03:29,160 --> 00:03:37,560
+short-term jobs we need to apply. We need to maybe meet a campaign that has a tight deadline or
+
+30
+00:03:38,280 --> 00:03:42,120
+start to track things and continuously improve what we're doing.
+
+31
+00:03:42,120 --> 00:03:49,160
+So tag management is great from that perspective. Tag management also gives us a better visual
+
+32
+00:03:49,160 --> 00:03:57,320
+structure of what we're doing on our site. So by using it, we can actually jump between websites
+
+33
+00:03:57,320 --> 00:04:06,760
+and learn pretty well and understand how things have been done, and we don't have to invent a
+
+34
+00:04:06,760 --> 00:04:14,600
+and we don't have to invent the wheel over and over again. So that means that the quality will
+
+35
+00:04:14,600 --> 00:04:23,240
+actually be better. And this, of course, leads to better security and quality, less loading time,
+
+36
+00:04:23,240 --> 00:04:29,000
+often since we don't invent the wheel, the code that is implemented through the tag manager is
+
+37
+00:04:29,000 --> 00:04:37,640
+fast and consistent. And, of course, we can be faster with our development and applying new
+
+38
+00:04:37,640 --> 00:04:49,080
+changes to our websites. The concept of tag management has three components, basically.
+
+39
+00:04:49,080 --> 00:04:56,120
+We talk about tags, triggers, and variables, and together with these three components, we can build
+
+40
+00:04:56,120 --> 00:05:03,640
+pretty much anything once we start to learn how it works. First of all, triggers are actually
+
+41
+00:05:03,640 --> 00:05:11,560
+connected to events in browsers. So events can be such a thing as reloading a page, clicking on
+
+42
+00:05:11,560 --> 00:05:18,280
+something, or if you use the scrolls, or submits a form, or basically anything that has to be with
+
+43
+00:05:18,280 --> 00:05:27,320
+interaction on a page or in a browser. Tags are the actual code that we are executing. And this
+
+44
+00:05:27,320 --> 00:05:34,600
+can also be pretty much anything. We have predefined code snippets within the tag manager
+
+45
+00:05:34,600 --> 00:05:41,480
+that help us, for instance, to do the Matomo tracking. But as my example here in the presentation
+
+46
+00:05:41,480 --> 00:05:48,840
+shows, we can basically execute any type of code, like the alert hello world. Finally, we can use
+
+47
+00:05:48,840 --> 00:05:59,480
+variables to fetch data from the page or the browser and use that data within our tags or
+
+48
+00:05:59,480 --> 00:06:06,920
+the triggers to create logic. Altogether, they create a really, really nice way to structure our
+
+49
+00:06:06,920 --> 00:06:21,480
+tracking. So, let's look at the next example. I'm actually going to demo how to set up tracking in
+
+50
+00:06:21,480 --> 00:06:27,960
+Matomo. So, I'm going to go to Matomo's tag manager, and what we're going to look at here is
+
+51
+00:06:27,960 --> 00:06:37,560
+the default setup for page view tracking. So, to do that, you basically have to click here to create
+
+52
+00:06:37,560 --> 00:06:48,600
+a new tag. You select the tag type called Matomo Analytics. And as I explained before, this actually
+
+53
+00:06:48,600 --> 00:06:56,920
+means that when you click on any of these, you're getting prewritten code. And if you click
+
+54
+00:06:56,920 --> 00:07:03,480
+on this tag, Matomo Analytics, I'm actually going to go back and click on the one I already created.
+
+55
+00:07:04,760 --> 00:07:12,040
+You're getting a set of predefined configurations. So, in this case, I'm going to track
+
+56
+00:07:12,040 --> 00:07:19,000
+data to Matomo, and I'm going to track page views, the thing we normally start with when we implement
+
+57
+00:07:19,000 --> 00:07:27,640
+a new website. As you can see here, I have different fields that I can change and configure,
+
+58
+00:07:28,200 --> 00:07:34,120
+but in this case, we're doing it really easy. The second thing I need to do here is to tell
+
+59
+00:07:35,800 --> 00:07:40,920
+the Matomo tag manager when to execute this code. And as you see here, I already selected
+
+60
+00:07:40,920 --> 00:07:46,680
+page view, and if I click on this little button, I can actually start to edit it. And this is
+
+61
+00:07:46,680 --> 00:07:55,480
+always, of course, when a user reloads the page, I want to send a new page view to Matomo so that
+
+62
+00:07:55,480 --> 00:08:06,680
+we can track that within our website. So, it's pretty simple, actually. Let's see. Do we have
+
+63
+00:08:06,680 --> 00:08:13,960
+any variables? Yes. In Matomo, we also have a variable that helps us to get the standard data
+
+64
+00:08:13,960 --> 00:08:22,200
+data that decides what to send. So, in this variable, for instance, we can
+
+65
+00:08:25,560 --> 00:08:29,720
+set up things like if I want to disable cookies or if I want to
+
+66
+00:08:31,960 --> 00:08:40,120
+send beacons, which is a quite techy setup, but we can also force requiring a consent here.
+
+67
+00:08:40,120 --> 00:08:45,880
+So, this is a pretty nice way to start off with. So, I'm going to go back to my presentation,
+
+68
+00:08:45,880 --> 00:08:55,080
+and I'm going to talk a little bit about a more detailed case, which is tracking users without
+
+69
+00:08:55,080 --> 00:09:03,960
+asking for consent. And the background to this task, which is pretty common, is that GDPR requires
+
+70
+00:09:03,960 --> 00:09:14,760
+GDPR requires us to ask for consent from users before we start to track them. And this relates
+
+71
+00:09:14,760 --> 00:09:26,120
+to that GDPR is describing that if you're storing personal data or if you do profiling, you need to
+
+72
+00:09:26,120 --> 00:09:37,480
+ask for consent. So, we're looking a bit to what that really means. So, personal data is, of course,
+
+73
+00:09:37,480 --> 00:09:48,440
+the IP address in many cases. But the reason why we want to do tracking without consent is that,
+
+74
+00:09:48,440 --> 00:09:54,600
+of course, if we start to ask consent from all the users, we will lose a lot of data.
+
+75
+00:09:54,600 --> 00:10:03,960
+So, depending on how your website is set up. So, the interpretation of GDPR that many organizations
+
+76
+00:10:03,960 --> 00:10:14,680
+do is that if we implement cookie-free tracking, we can actually track users without having the
+
+77
+00:10:14,680 --> 00:10:22,920
+consent, which is, of course, nice if you want to have correct data on your website. So, what is
+
+78
+00:10:22,920 --> 00:10:29,320
+actually profiling in Matomo? Well, when a user visits your website for the first time, we set a
+
+79
+00:10:29,320 --> 00:10:41,560
+cookie. And that cookie contains a little number, which is the visitor ID. And that ID is stored in
+
+80
+00:10:41,560 --> 00:10:48,680
+Matomo together with the data we collect. So, the next time a user visits your site, Matomo
+
+81
+00:10:48,680 --> 00:10:57,320
+script can find that cookie. And it will actually start adding data to the already created profile
+
+82
+00:10:57,320 --> 00:11:05,880
+in Matomo so that we're building a profile in Matomo. It looks like this if you look in the
+
+83
+00:11:05,880 --> 00:11:10,680
+interface. So, you can see here, like, there's visit number one and visit number two. And
+
+84
+00:11:10,680 --> 00:11:19,640
+then the data collected from that user is stored to the same profile. And this is what GDPR talks
+
+85
+00:11:19,640 --> 00:11:26,840
+about, that it requires a consent if you start to do that. So, the solution is, of course, to
+
+86
+00:11:28,360 --> 00:11:34,120
+not do profiling. And that means that when a user visits you the first time, we are not setting
+
+87
+00:11:34,120 --> 00:11:41,080
+persistent cookies, meaning the data stored in Matomo is connected to a session cookie only. So,
+
+88
+00:11:41,080 --> 00:11:47,000
+the next time the user gets there, we don't have any persistent cookie that can connect that ID
+
+89
+00:11:47,560 --> 00:11:54,520
+to any previous visits. So, we create a new profile in Matomo. And this is actually the
+
+90
+00:11:54,520 --> 00:12:04,600
+definition of profiling. So, we can avoid that through having Matomo to not set these cookies.
+
+91
+00:12:04,600 --> 00:12:13,000
+So, let's look into how to do this. Step by step, you need to basically disable cookies by default.
+
+92
+00:12:14,440 --> 00:12:20,760
+You need to identify the consent. And this is usually happening through the CMS.
+
+93
+00:12:20,760 --> 00:12:27,800
+So, we need to know if someone clicked the consent dialogue button or button or something similar.
+
+94
+00:12:29,080 --> 00:12:32,600
+And then we need to have some kind of logic to execute
+
+95
+00:12:35,160 --> 00:12:38,840
+some particular functions in Matomo. I will show you pretty soon.
+
+96
+00:12:40,760 --> 00:12:49,240
+That will, if the user has given a consent, we will actually start setting cookies. And the reason
+
+97
+00:12:49,240 --> 00:12:59,480
+we want to set cookies is that it's because it's sometimes nice to have that extra information we
+
+98
+00:12:59,480 --> 00:13:07,480
+get from cookies to be able to see recurring visits. Because if you're using Matomo without
+
+99
+00:13:07,480 --> 00:13:17,400
+cookies or persistent cookies, basically every user will be reported as a new visitor. And when
+
+100
+00:13:17,400 --> 00:13:24,360
+you're starting to analyze your application, it's often nice to know and perhaps create
+
+101
+00:13:24,360 --> 00:13:31,160
+segments of recurring visitors or visitors that has been to the site more than 10 times, et cetera.
+
+102
+00:13:31,160 --> 00:13:36,840
+So, this is, of course, nice to do if we have the consent. So, that's the background to why we
+
+103
+00:13:36,840 --> 00:13:42,840
+usually want to do this as well. So, first of all, you go to your Matomo configuration variable.
+
+104
+00:13:42,840 --> 00:13:51,320
+So, we looked at it here before. It's basically this little checkbox. So, we can click disable
+
+105
+00:13:51,320 --> 00:14:01,800
+cookies. And we can also check another checkbox further down. Now it's a bit up. Where we're
+
+106
+00:14:01,800 --> 00:14:23,720
+forcing, let's see. Okay. Now I missed that. But this one, I'm actually going to do it manually.
+
+107
+00:14:23,720 --> 00:14:33,240
+Sorry for being confusing. But we go by disabling cookies like this. The second step is to identify
+
+108
+00:14:33,960 --> 00:14:42,200
+the cookie consent from our CMS. Now I'm looking at the European Commission site. And normally we
+
+109
+00:14:42,200 --> 00:14:49,480
+have a button like this that says accept all cookies. And that's the behavior we want to
+
+110
+00:14:49,480 --> 00:14:57,640
+start looking into. So, when that happens, we want to identify this somehow. And to do so,
+
+111
+00:14:57,640 --> 00:15:03,800
+I usually create a variable that reads that cookie information from the browser.
+
+112
+00:15:05,480 --> 00:15:13,000
+And by doing so, I can create a new logic so that if the cookie is set, basically, I can
+
+113
+00:15:13,000 --> 00:15:21,400
+execute that we have a consent given to Matomo, which is the yes option down here. And when we're
+
+114
+00:15:21,400 --> 00:15:30,040
+doing so, Matomo will start setting cookies. And if we don't have the consent, or actually on every
+
+115
+00:15:31,560 --> 00:15:37,960
+other page view, we will run the code above that requires us to get a cookie consent.
+
+116
+00:15:37,960 --> 00:15:45,000
+So, that in combination with the track without cookies will give us the wanted behavior.
+
+117
+00:15:47,640 --> 00:15:57,960
+So, let's jump to the next step. The final step is to do a trigger, as I said, that if we have
+
+118
+00:15:57,960 --> 00:16:08,680
+the cookie consent, we will execute this little code. And let's look at how that looks in the...
+
+119
+00:16:13,960 --> 00:16:20,760
+So, what I have done here is that I have a Matomo configuration variable as we looked into before,
+
+120
+00:16:20,760 --> 00:16:32,680
+where I have disabled cookies. I also created a tag for several tags. The first one is require
+
+121
+00:16:32,680 --> 00:16:41,960
+consent. This one will always be executed. And the only thing it does is to run a custom JavaScript
+
+122
+00:16:41,960 --> 00:16:55,400
+saying require consent. The second logic is that if consent is given, which my trigger I talked
+
+123
+00:16:55,400 --> 00:17:05,240
+about is here, I'm going to execute this code. Remember cookie consent given. And the trigger
+
+124
+00:17:05,240 --> 00:17:15,400
+I configured in this case is that we're looking at the value from the cookie. And this one is
+
+125
+00:17:15,400 --> 00:17:20,840
+actually configured to work with the European Commission site. And I will show you that in a
+
+126
+00:17:20,840 --> 00:17:31,400
+while. It's actually a bit advanced. So, looking at this site, I have to go to code inspection.
+
+127
+00:17:31,400 --> 00:17:41,480
+And I have to go to code inspection. And go to our cookies. And there is actually a cookie called
+
+128
+00:17:43,480 --> 00:17:52,920
+CK1. And they have an array of data in this one. So, CM equals true means that we have a consent.
+
+129
+00:17:52,920 --> 00:17:57,800
+So, if I remove this one and reload the page, I will probably see the cookie consent again.
+
+130
+00:17:57,800 --> 00:18:07,320
+So, reading this one now, we have CM false. So, as long as that one is false, I will not execute
+
+131
+00:18:08,760 --> 00:18:15,640
+the script cookie consent given. As you see here, Matomo already stored this. I can actually remove
+
+132
+00:18:15,640 --> 00:18:23,240
+that cookie. And hopefully, if I reload the page, we can see that we don't get the Matomo cookies.
+
+133
+00:18:23,240 --> 00:18:31,240
+But as soon as I do that and reload the page, we're going to get the Matomo cookie consent
+
+134
+00:18:31,240 --> 00:18:40,840
+stored. And we're also setting the persistent cookies from Matomo. So, in this way, we're able
+
+135
+00:18:40,840 --> 00:18:52,120
+to track the consent and handle the cookieless tracking for users that hasn't been giving a
+
+136
+00:18:52,120 --> 00:19:07,240
+consent. Let's see. So, one thing that I can share as well is that I'm not working with the European
+
+137
+00:19:08,200 --> 00:19:16,280
+commission and helping them with Matomo. But instead, I am using a little plug-in in my
+
+138
+00:19:16,280 --> 00:19:22,200
+Chrome browser that helped me to simulate tracking on basically any site I would like to play with.
+
+139
+00:19:23,160 --> 00:19:30,360
+The little plug-in is called user and JavaScript and CSS. And if I click this one,
+
+140
+00:19:33,080 --> 00:19:39,960
+I can add both JavaScript and CSS that will be running in my browser on basically any site.
+
+141
+00:19:39,960 --> 00:19:45,240
+So, you can see it's connected to this domain. So, what I usually do here is that I go to the
+
+142
+00:19:45,240 --> 00:19:53,400
+tag manager. I go to the install code section. I grab this JavaScript. I add it to this site.
+
+143
+00:19:54,600 --> 00:20:01,160
+And then basically press save. And by doing so, I can also make sure that it's green up here.
+
+144
+00:20:01,160 --> 00:20:09,560
+I know that I will always execute this script on this site. So, that's a great way to simulate
+
+145
+00:20:09,560 --> 00:20:24,920
+tracking. Let's see. So, let's go back to the presentation. Yeah, we looked at the demo. And
+
+146
+00:20:26,360 --> 00:20:33,080
+actually, this was a pretty quick demonstration. I will do a bit more advanced
+
+147
+00:20:33,080 --> 00:20:39,880
+session tomorrow displaying how to track single page applications. So, right now, I'm going to
+
+148
+00:20:39,880 --> 00:20:47,000
+open up for questions and details about this. I hope to be able to share the presentation with
+
+149
+00:20:47,000 --> 00:20:53,560
+you guys afterwards. So, let's go ahead with questions.
+
+150
+00:20:53,560 --> 00:21:01,560
+Yeah, thank you. So, if there are any questions, please type them out now so that they can ask
+
+151
+00:21:01,560 --> 00:21:24,440
+them and we can answer them.
+
+152
+00:21:31,560 --> 00:21:54,440
+Okay. Seems to be quite, not quite. Now we'll get one question maybe.
+
+153
+00:22:01,560 --> 00:22:16,040
+Okay. Where to disable cookies? Good. So, when you go into the tag manager, you usually have
+
+154
+00:22:16,040 --> 00:22:26,200
+a variable called the Matomo configuration. And when you edit that one, scroll down,
+
+155
+00:22:26,200 --> 00:22:35,080
+and you will find this little check box, disabled cookies. Maybe I should do this actually from
+
+156
+00:22:35,080 --> 00:22:41,800
+scratch. That's actually, I'm actually going to create a new tag manager container and just do it
+
+157
+00:22:41,800 --> 00:22:50,840
+from an empty container. So, you can follow it step by step. So, now I have a totally empty
+
+158
+00:22:50,840 --> 00:22:59,320
+tag manager. So, what I usually start with is to create a Matomo tracking tag. So, I want to
+
+159
+00:22:59,320 --> 00:23:08,040
+track page views. I'm not going to do much more now. But before, normally here, you select the
+
+160
+00:23:09,080 --> 00:23:14,680
+Matomo configuration variable. So, I will click on this one. And this will actually bring up
+
+161
+00:23:14,680 --> 00:23:21,960
+a new variable. And pretty much everything pre-filled. I will check the disabled cookies.
+
+162
+00:23:23,320 --> 00:23:29,640
+And I will scroll down and just create that variable. So, now my page view tag is connected
+
+163
+00:23:29,640 --> 00:23:36,440
+to the Matomo configuration variable. The last thing I need to do is to create the trigger.
+
+164
+00:23:37,480 --> 00:23:43,800
+I will click on page view because that's when I want to fire it and create it. So,
+
+165
+00:23:43,800 --> 00:23:54,520
+basically, and I need to create a tag. So, if I publish this, I can give it a version name of one.
+
+166
+00:23:56,520 --> 00:24:05,560
+I basically have page views running. So, I have a tag executing that. I have a trigger for page
+
+167
+00:24:05,560 --> 00:24:12,280
+views. And in this case, I only have one variable containing the Matomo configuration. So, if I
+
+168
+00:24:12,280 --> 00:24:20,440
+install this code now and go back to my European Commission page and we change the JavaScript I
+
+169
+00:24:20,440 --> 00:24:30,600
+use, I have to remove the script tags. And we can save it. So, to see that it really works now,
+
+170
+00:24:30,600 --> 00:24:38,600
+I need to go to my network tab. And I usually filter my IP address. And when I reload this one,
+
+171
+00:24:38,600 --> 00:24:45,000
+when I reload this one, I can see that we have a Matomo PHP called and an action name. So,
+
+172
+00:24:45,000 --> 00:24:53,960
+I can actually see that this one is sending data to Matomo. I need to remove this one and
+
+173
+00:24:53,960 --> 00:25:03,480
+reload it again. Yes. So, right now, we disabled cookies for all the users. And the next step
+
+174
+00:25:03,480 --> 00:25:23,960
+would be to let's see. Just lost my screen there. Okay. The next step would be to
+
+175
+00:25:25,800 --> 00:25:32,760
+create a variable that looks at this cookie. So, let's create that variable. We create a
+
+176
+00:25:32,760 --> 00:25:41,560
+variable of the type. Where are we? The first party cookie. I'm going to go back to my site.
+
+177
+00:25:41,560 --> 00:25:49,080
+And the cookie I want to look for is this one. CCK1. So, I'm just going to name it like that.
+
+178
+00:25:49,080 --> 00:25:58,120
+And this is where I actually name the cookie I'm going to look into. And this cookie, in this case,
+
+179
+00:25:58,120 --> 00:26:05,880
+it always exists. If you have a simple solution that a lot of sites have cookies that either they
+
+180
+00:26:05,880 --> 00:26:15,080
+exist or not. And if that's the solution you have, you can actually set a default value here to not
+
+181
+00:26:15,080 --> 00:26:20,200
+set. That won't matter right now because this cookie is always set. But if you do that,
+
+182
+00:26:20,200 --> 00:26:25,800
+you can use that in your logic for the trigger later on. So, we'll actually write it like that.
+
+183
+00:26:25,800 --> 00:26:30,520
+So, first of all, now we will read that cookie on the page.
+
+184
+00:26:33,320 --> 00:26:37,480
+The next thing I need to do is to require the cookie consent.
+
+185
+00:26:38,440 --> 00:26:45,880
+So, that's a JavaScript. And I'm going to actually copy this code from my other tag manager instance.
+
+186
+00:26:45,880 --> 00:26:55,640
+Because now we're going to do this one. I'm just going to copy the code here. Sorry.
+
+187
+00:26:58,280 --> 00:27:05,160
+So, this is the current tag manager. I'm going to create a new tag of the type custom HTML.
+
+188
+00:27:05,160 --> 00:27:18,520
+Require consent. I'm going to paste the script here. Require consent. I can then create the
+
+189
+00:27:18,520 --> 00:27:25,560
+trigger. And the trigger I want to use here is doom ready. That's actually a bit before
+
+190
+00:27:25,560 --> 00:27:35,400
+before our page view is triggered to make sure that we're requiring it before the page view is
+
+191
+00:27:35,400 --> 00:27:45,480
+sent. So, creating this tag. Now we're requiring consent. And the last thing would be to
+
+192
+00:27:47,800 --> 00:27:55,400
+set the logic for the consent given. So, I'll show you how that works. I'm just going to copy
+
+193
+00:27:55,400 --> 00:28:12,600
+the code here again. So, going back, creating a new tag of the type custom HTML. Now we'll paste
+
+194
+00:28:12,600 --> 00:28:20,280
+it here. And now to the perhaps more trickier part. Now we need to create this custom trigger.
+
+195
+00:28:20,280 --> 00:28:29,640
+So, we're going to do it on doom ready. And in this case, I want to look at my previously created
+
+196
+00:28:29,640 --> 00:28:38,600
+variables. I'm going to go to custom. And here you find my variable called cck1, which was the
+
+197
+00:28:38,600 --> 00:28:51,400
+cookie consent cookie. So, now to the logic. The easy solution is normally to
+
+198
+00:28:55,000 --> 00:29:02,600
+make it like this. If your solution is that the cookie doesn't exist until you have a consent.
+
+199
+00:29:02,600 --> 00:29:09,800
+And you remember I gave this variable a default value. So, if you do it like this, not set.
+
+200
+00:29:13,560 --> 00:29:19,320
+So, you're actually going to do a negative logic here. So, if it doesn't equal not set,
+
+201
+00:29:19,320 --> 00:29:26,520
+we know that we have a consent. But in our example here, the cookie always existed. So,
+
+202
+00:29:26,520 --> 00:29:33,560
+I had to create a little bit more advanced regular expression to do that matching. So,
+
+203
+00:29:33,560 --> 00:29:42,040
+I had to do a regular expression with not matches to make it work. So, that would be
+
+204
+00:29:42,040 --> 00:29:56,440
+the where do we have it? Not matches regular expression. So, it can't say CM false basically.
+
+205
+00:30:02,440 --> 00:30:09,880
+I could actually write it equal CM true as well. So, creating this tag should
+
+206
+00:30:09,880 --> 00:30:15,000
+be what we need. And if I do this, I publish it.
+
+207
+00:30:19,640 --> 00:30:26,360
+If we go back to this site, let's delete this and reload.
+
+208
+00:30:31,560 --> 00:30:33,000
+Let's remove that as well.
+
+209
+00:30:33,000 --> 00:30:44,200
+Okay. So, now I'm looking. And it seems like we're not having the Matomo cookie set.
+
+210
+00:30:45,400 --> 00:30:52,840
+We can see that CM false. And if I click accept on this one, we see that the value changes to CM
+
+211
+00:30:52,840 --> 00:31:02,680
+true. If I reload now, we can also see that we get the Matomo cookie consent. So, that's how
+
+212
+00:31:02,680 --> 00:31:06,280
+it works basically. Let's see if we have more questions.
+
+213
+00:31:16,680 --> 00:31:23,400
+So, another question is if it is possible to separate or look into users who didn't give consent?
+
+214
+00:31:23,400 --> 00:31:38,120
+And well, no, not really. You can only see users that are new. But that is not necessarily the
+
+215
+00:31:38,120 --> 00:31:45,480
+same thing as giving a consent. What you could do is probably to create a dimension in Matomo
+
+216
+00:31:45,480 --> 00:31:53,080
+and store the consent given value. And do it that way.
+
+217
+00:31:56,920 --> 00:32:05,960
+Okay. Thank you. Another question or something that has been discussed in the chat is if there's
+
+218
+00:32:05,960 --> 00:32:10,280
+a way not to write a version name for every published version of the tags?
+
+219
+00:32:10,280 --> 00:32:24,040
+Yeah. So, I think I showed you. So, when I publish something new, if you add a number here to
+
+220
+00:32:24,040 --> 00:32:31,000
+Matomo, it will actually start counting up automatically. So, if I publish now, I always
+
+221
+00:32:31,000 --> 00:32:38,280
+start by just writing one. So, every time I create a new version and publish a new release,
+
+222
+00:32:38,280 --> 00:32:44,920
+it will actually be added automatically. So, now I created a new version, probably if you see it
+
+223
+00:32:44,920 --> 00:32:50,520
+in the version number, it's number three. And if I click create new version, it will automatically
+
+224
+00:32:50,520 --> 00:32:55,560
+be four. So, that's actually a pretty nice one. And then you don't have to write in the descriptions.
+
+225
+00:33:00,040 --> 00:33:05,880
+Thank you. Another one. If I go back to an earlier published version, are both the tags,
+
+226
+00:33:05,880 --> 00:33:08,920
+triggers, and variables back to the earlier versions?
+
+227
+00:33:10,200 --> 00:33:18,760
+Yeah. So, you can actually, if you go to the version history, you can actually see which
+
+228
+00:33:18,760 --> 00:33:24,520
+version that is published live. And I should probably do this one. Oh, yeah. Now I'm looking
+
+229
+00:33:24,520 --> 00:33:32,120
+at different Tag Manager accounts, I think. This is a bit, but yeah. So, here you have more versions.
+
+230
+00:33:32,120 --> 00:33:38,520
+So, basically you can go down here and just click on this little icon and publish
+
+231
+00:33:38,520 --> 00:33:46,280
+the old version like this. So, now this version will be running in your live production.
+
+232
+00:33:46,920 --> 00:33:54,520
+So, that's pretty easy. What I would like to see is a better way to do a diff between versions
+
+233
+00:33:55,080 --> 00:34:01,480
+to do that right now. At least as far as I know, you basically have to export the configuration
+
+234
+00:34:01,480 --> 00:34:06,280
+here. So, that's also a nice thing. You can click on this little icon and that will actually give
+
+235
+00:34:06,280 --> 00:34:12,680
+you a JSON file containing the current version. But it would be nice to have an interface
+
+236
+00:34:12,680 --> 00:34:18,520
+really telling us what's happening. All right. Anything else?
+
+237
+00:34:20,680 --> 00:34:26,680
+Okay. Another thing that has been discussed in the chat before, I don't know if the answer is
+
+238
+00:34:26,680 --> 00:34:32,520
+enough yet. It would be what's the regulation in Sweden regarding the use of Matomo?
+
+239
+00:34:34,440 --> 00:34:40,520
+There is no regulation in Sweden in terms of Matomo. There is GDPR and there is
+
+240
+00:34:41,400 --> 00:34:50,440
+some other laws in regards to privacy. So, right now it's a lot of discussions on how to interpret
+
+241
+00:34:50,440 --> 00:35:00,040
+it. What's the judgment to do? As I think that most of the European Union is discussing.
+
+242
+00:35:00,920 --> 00:35:07,080
+So, there are no real statements about Matomo. But what we see is that basically the whole
+
+243
+00:35:07,080 --> 00:35:13,160
+public sector in Sweden is leaving Google Analytics and most of them are moving to Matomo.
+
+244
+00:35:14,200 --> 00:35:19,400
+The discussion I have with a lot of them right now is whether this solution I showed you today
+
+245
+00:35:19,400 --> 00:35:28,520
+is legally okay or not to actually track users without the consent or not.
+
+246
+00:35:30,440 --> 00:35:33,240
+And that refers more to the cookie law than GDPR.
+
+247
+00:35:36,760 --> 00:35:41,960
+Thank you for that. I think that's all the questions that have been asked until now.
+
+248
+00:35:41,960 --> 00:35:49,800
+I'm going to wait a few more seconds just to see if another one comes up.
+
+249
+00:35:54,520 --> 00:36:01,480
+It would seem that is not the case. So, once again, thank you for your talk. And if there
+
+250
+00:36:01,480 --> 00:36:07,400
+are any other questions, the chat stays open as with the other talks. We'll be available for 10
+
+251
+00:36:07,400 --> 00:36:15,880
+more minutes to answer questions or have a dialogue in the chat. Thank you and have a good evening.
+
+252
+00:36:15,880 --> 00:36:37,240
+Thank you. You too.
+

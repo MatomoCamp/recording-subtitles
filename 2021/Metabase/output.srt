@@ -1,0 +1,1508 @@
+1
+00:00:00,000 --> 00:00:09,800
+Welcome in this session of MatomoCamp.
+
+2
+00:00:09,800 --> 00:00:19,240
+Hey everyone, we are welcoming Dinamo today, who is a recently graduated computer scientist
+
+3
+00:00:19,240 --> 00:00:23,840
+working as a developer and business analyst at open source politics.
+
+4
+00:00:23,840 --> 00:00:30,280
+Today he will tell us more about his integration of Matomo and Metabase.
+
+5
+00:00:30,280 --> 00:00:34,960
+Welcome Dinamo and looking forward to your talk.
+
+6
+00:00:34,960 --> 00:00:38,640
+Thanks Sylvia, sorry.
+
+7
+00:00:38,640 --> 00:00:40,800
+So good morning everyone.
+
+8
+00:00:40,800 --> 00:00:48,400
+So I'll briefly talk about Metamo and another software we are using currently, which are
+
+9
+00:00:48,400 --> 00:00:51,040
+Metabase, which is a business analytics tool.
+
+10
+00:00:51,040 --> 00:00:56,120
+I will introduce further in my presentation.
+
+11
+00:00:56,120 --> 00:01:02,360
+And basically the purpose of this presentation is to show you how we can improve visualizations
+
+12
+00:01:02,360 --> 00:01:04,840
+coming from Matomo.
+
+13
+00:01:04,840 --> 00:01:07,040
+So let's get started.
+
+14
+00:01:07,040 --> 00:01:15,920
+I first introduce many topics, among them who we are at my company, so open source politics.
+
+15
+00:01:15,920 --> 00:01:22,320
+The presentation of also the Metabase software, I'll do it shortly.
+
+16
+00:01:22,320 --> 00:01:28,240
+And in second time, I go through the work we have done on Metabase and the link between
+
+17
+00:01:28,240 --> 00:01:31,600
+Metabase and Metamo we have done.
+
+18
+00:01:31,600 --> 00:01:38,400
+And finally, I'll give some insights about what can be improved, what are the next developments
+
+19
+00:01:38,400 --> 00:01:45,280
+of what we have done, and answers to your questions if you have them.
+
+20
+00:01:45,280 --> 00:01:48,680
+So let's go first by introducing who we are.
+
+21
+00:01:48,680 --> 00:01:54,480
+So I'm currently working at a small company called Open Source Politics.
+
+22
+00:01:54,480 --> 00:01:59,140
+We are part of an ecosystem called the Civic Tech companies.
+
+23
+00:01:59,140 --> 00:02:05,760
+So basically, Civic Techs are companies that want to bridge the gap between democracy and
+
+24
+00:02:05,760 --> 00:02:07,760
+digital tools.
+
+25
+00:02:07,760 --> 00:02:11,000
+So for that, we are working around software called Decidim.
+
+26
+00:02:11,000 --> 00:02:14,200
+I will present it shortly after.
+
+27
+00:02:14,200 --> 00:02:20,280
+And as the name of our company suggested, we're aiming at working fully on open source
+
+28
+00:02:20,280 --> 00:02:24,920
+software, which brought us to Matomo.
+
+29
+00:02:24,920 --> 00:02:32,120
+So let's get started with the first demonstration of the software we are using.
+
+30
+00:02:32,120 --> 00:02:34,900
+So here we are.
+
+31
+00:02:34,900 --> 00:02:42,100
+So Decidim was a software created in 2015 by the City Council of Barcelona.
+
+32
+00:02:42,100 --> 00:02:49,480
+And as I said, the purpose of that type of software is to bridge the gap between citizen
+
+33
+00:02:49,480 --> 00:02:57,480
+asking for more democracy, for more possibility to take part in the decision making.
+
+34
+00:02:57,480 --> 00:03:05,120
+And the fact that currently we are more and more in a digital era, with everybody having
+
+35
+00:03:05,120 --> 00:03:07,080
+a smartphone on them.
+
+36
+00:03:07,080 --> 00:03:11,280
+So there is new ways of participation.
+
+37
+00:03:11,280 --> 00:03:19,080
+It can give new ways of new possibilities for citizens to take part in the democratic
+
+38
+00:03:19,080 --> 00:03:27,280
+life, not only for elections, they want to take part as more, just not for elections.
+
+39
+00:03:27,280 --> 00:03:34,900
+So to give you some examples of implementations of Decidim, there is obviously the City Council
+
+40
+00:03:34,900 --> 00:03:41,560
+of Barcelona, but I will give some instance we have made at Open Source Politics.
+
+41
+00:03:41,560 --> 00:03:48,740
+So this first platform you see here is Decidim we installed one and a half year ago at New
+
+42
+00:03:48,740 --> 00:03:50,280
+York City.
+
+43
+00:03:50,280 --> 00:03:58,240
+So it's not a platform aimed for the whole city of New York, but more for a small district,
+
+44
+00:03:58,240 --> 00:04:03,440
+for a school on which they wanted to organize their participatory budget.
+
+45
+00:04:03,440 --> 00:04:06,800
+So basically, they have an amount of money.
+
+46
+00:04:06,800 --> 00:04:11,560
+And with that amount of money, they make proposals about what we can do with that money.
+
+47
+00:04:11,560 --> 00:04:17,640
+So creating new spaces, buying some stuff, so on and so forth.
+
+48
+00:04:17,640 --> 00:04:23,520
+And the second step is to analyze if these proposals respect the criteria and finally
+
+49
+00:04:23,520 --> 00:04:27,600
+implement them according to the rules.
+
+50
+00:04:27,600 --> 00:04:35,600
+Another example, a bigger one is the city of Angers in France, which is about 100,000
+
+51
+00:04:35,600 --> 00:04:37,080
+inhabitants.
+
+52
+00:04:37,080 --> 00:04:43,320
+And since four years, they are organizing also their participatory budgets.
+
+53
+00:04:43,320 --> 00:04:51,680
+So again, a certain amount of money organized every year, so I said it, and people are making
+
+54
+00:04:51,680 --> 00:04:56,380
+proposals about urbanistic culture, so on and so forth.
+
+55
+00:04:56,380 --> 00:05:00,480
+So here you see the one made in 2021.
+
+56
+00:05:00,480 --> 00:05:07,080
+And right now, we are in the final steps of releasing the results of that participatory
+
+57
+00:05:07,080 --> 00:05:08,480
+budget.
+
+58
+00:05:08,480 --> 00:05:14,560
+And as I said, so we at Open Source Politics are implementing those platforms, and we wanted
+
+59
+00:05:14,560 --> 00:05:18,800
+to work from the beginning with open source software.
+
+60
+00:05:18,800 --> 00:05:25,600
+So if you go on any of our platform, you can see the famous Matomo snippet code here.
+
+61
+00:05:25,600 --> 00:05:34,860
+And we have currently about 100 instances of Decidim using Matomo.
+
+62
+00:05:34,860 --> 00:05:39,680
+So that is for Decidim.
+
+63
+00:05:39,680 --> 00:05:44,600
+And you might say right now, what is the link with Metabase?
+
+64
+00:05:44,600 --> 00:05:50,820
+We had that problem that we have many different data sources.
+
+65
+00:05:50,820 --> 00:05:56,760
+We had data from Decidim, so basically, proposals.
+
+66
+00:05:56,760 --> 00:06:03,300
+What are the main topics which are talked about?
+
+67
+00:06:03,300 --> 00:06:06,400
+Are people commenting about, is there a lot of proposals?
+
+68
+00:06:06,400 --> 00:06:09,160
+Is there a lot of people registered on the platform?
+
+69
+00:06:09,160 --> 00:06:14,760
+It's helping, and therefore, city councils, but also organizations or companies that are
+
+70
+00:06:14,760 --> 00:06:20,160
+implementing Decidim to know if the participation is going well.
+
+71
+00:06:20,160 --> 00:06:25,400
+Then we had that other tool from the beginning, which is Matomo, which tracked more roughly
+
+72
+00:06:25,400 --> 00:06:33,680
+the number of visitors, what are the pages which are visited, who are the visitors coming
+
+73
+00:06:33,680 --> 00:06:36,760
+from, so on and so forth.
+
+74
+00:06:36,760 --> 00:06:44,600
+And we had no centralizing tool to brought all those data at the same place.
+
+75
+00:06:44,600 --> 00:06:51,480
+And to also offer like an overview without having to go to Decidim, then having to go
+
+76
+00:06:51,480 --> 00:06:58,200
+to Matomo, then having to go for like the mailing platform to see all those, we have
+
+77
+00:06:58,200 --> 00:07:01,760
+all those data, but are separated.
+
+78
+00:07:01,760 --> 00:07:04,200
+And here came Metabase.
+
+79
+00:07:04,200 --> 00:07:10,780
+So Metabase is basically to power BI and tableau what Matomo is for Google Analytics.
+
+80
+00:07:10,780 --> 00:07:17,100
+So it's one of the main open source alternative to make business analytics.
+
+81
+00:07:17,100 --> 00:07:25,520
+So centralizing all your database in a single place and offer really talkative visualizations
+
+82
+00:07:25,520 --> 00:07:34,540
+that are simple, efficient to communicate for city councils or organizations.
+
+83
+00:07:34,540 --> 00:07:42,760
+So after describing it, I will just show it because it's again easier.
+
+84
+00:07:42,760 --> 00:07:49,120
+So here you have the main page of Metabase, and I'll show you what the work we have done
+
+85
+00:07:49,120 --> 00:07:56,000
+for a platform called the Agence Nationale Pour la Coalition des Territoires, or shortly
+
+86
+00:07:56,000 --> 00:07:57,800
+ANCT.
+
+87
+00:07:57,800 --> 00:08:00,440
+So here you have the Decidim instance.
+
+88
+00:08:00,440 --> 00:08:04,920
+You have, again, the Matomo snippet we put it here.
+
+89
+00:08:04,920 --> 00:08:13,960
+And on this Metabase instance, we had different dashboards, which are summing up data from
+
+90
+00:08:13,960 --> 00:08:16,640
+that platform, but also from Matomo.
+
+91
+00:08:16,640 --> 00:08:19,920
+So here you have data from Matomo.
+
+92
+00:08:19,920 --> 00:08:28,320
+So basically number of visits, average time spent on the platform, referrals, what were
+
+93
+00:08:28,320 --> 00:08:31,160
+the pages who were viewed.
+
+94
+00:08:31,160 --> 00:08:34,880
+And on the same page below, you have data coming from Decidim.
+
+95
+00:08:34,880 --> 00:08:41,800
+So the number of users, number of proposals who were made, number of people who were subscribed,
+
+96
+00:08:41,800 --> 00:08:44,180
+what are the main topics discussed here.
+
+97
+00:08:44,180 --> 00:08:47,640
+So you have culture, sports, so on and so forth.
+
+98
+00:08:47,640 --> 00:08:52,680
+And the main proposals who are the most voted.
+
+99
+00:08:52,680 --> 00:08:58,960
+So as you see, centralizing all data in the same places, and offer really talkative and
+
+100
+00:08:58,960 --> 00:09:07,460
+easy visualizations to communicate.
+
+101
+00:09:07,460 --> 00:09:14,400
+So viewing the results like that seems really easy, but obviously it's not.
+
+102
+00:09:14,400 --> 00:09:19,960
+And I will right now present the work we have done around those two softwares to bring them
+
+103
+00:09:19,960 --> 00:09:22,400
+back together.
+
+104
+00:09:22,400 --> 00:09:31,240
+So first, what must be known is that Metabase is really easy to use to add new databases.
+
+105
+00:09:31,240 --> 00:09:35,120
+I'll share my screen again.
+
+106
+00:09:35,120 --> 00:09:42,360
+Here you have the admin dashboard, the admin board, sorry, to add new databases to your
+
+107
+00:09:42,360 --> 00:09:43,360
+Metabase instance.
+
+108
+00:09:43,360 --> 00:09:46,200
+And as you see, you have here what we call drivers.
+
+109
+00:09:46,200 --> 00:09:54,060
+So basically endpoint, which helps you to easily add new database sources.
+
+110
+00:09:54,060 --> 00:09:59,720
+So you have the one like everybody knows, MySQL, Postgres, SQLite.
+
+111
+00:09:59,720 --> 00:10:04,400
+And there is also a Google Analytics driver, but as you see, there is not a Matomo driver,
+
+112
+00:10:04,400 --> 00:10:06,440
+not yet.
+
+113
+00:10:06,440 --> 00:10:09,800
+And that was the first job to do.
+
+114
+00:10:09,800 --> 00:10:15,520
+The job was to bring, because there is no drivers for Matomo in Metabase, you had to
+
+115
+00:10:15,520 --> 00:10:22,640
+bring back those data to Metabase in any sort of database, which is accepted by Metabase.
+
+116
+00:10:22,640 --> 00:10:26,920
+So SQLite, Postgres, MySQL, so on and so forth.
+
+117
+00:10:26,920 --> 00:10:35,000
+The second problem, which I met as a newbie in Matomo, is that the MySQL database is not
+
+118
+00:10:35,000 --> 00:10:37,120
+so user friendly.
+
+119
+00:10:37,120 --> 00:10:43,480
+Like if you're a data analyst and you go through the Matomo databases, so it's databases which
+
+120
+00:10:43,480 --> 00:10:48,120
+is summing up all websites which are tracked.
+
+121
+00:10:48,120 --> 00:10:56,640
+So if you want to isolate one website, isolate those referrals, it's not so easy.
+
+122
+00:10:56,640 --> 00:11:01,960
+But there is something which is really great, which is the API of Matomo.
+
+123
+00:11:01,960 --> 00:11:14,400
+If you go through the API for the one who knows, I'll just go on the instance of Matomo
+
+124
+00:11:14,400 --> 00:11:21,200
+for the government, the one of which we gathered data from ANCT.
+
+125
+00:11:21,200 --> 00:11:25,160
+So here we are.
+
+126
+00:11:25,160 --> 00:11:27,040
+So that is talkative.
+
+127
+00:11:27,040 --> 00:11:32,080
+That is really interesting because without knowing anything of the Matomo database, I
+
+128
+00:11:32,080 --> 00:11:37,160
+can see the number of visits, the referrals here.
+
+129
+00:11:37,160 --> 00:11:44,040
+And in one click, I can see what is the API endpoint to get those data.
+
+130
+00:11:44,040 --> 00:11:49,240
+So that was the path we have chosen at Open Source Politics is that we didn't have the
+
+131
+00:11:49,240 --> 00:11:54,720
+skills to develop specific Matomo drivers.
+
+132
+00:11:54,720 --> 00:11:58,740
+But we had to do this API which is really well built.
+
+133
+00:11:58,740 --> 00:12:06,740
+So we started with this API endpoint, and we finished with that scheme of data.
+
+134
+00:12:06,740 --> 00:12:13,400
+So we have the Matomo instance, we have our Metabase instance, and we have created a small
+
+135
+00:12:13,400 --> 00:12:21,440
+script, not so small right now, called Matomo pool, which is, as its name suggests, something
+
+136
+00:12:21,440 --> 00:12:26,680
+which will pull the data from Matomo and bring them back to an external database.
+
+137
+00:12:26,680 --> 00:12:32,720
+In our case, it was Postgres, but you can imagine all type of database.
+
+138
+00:12:32,720 --> 00:12:39,720
+So you use the API endpoint, you pool the data you want, you put them back in the Postgres
+
+139
+00:12:39,720 --> 00:12:40,720
+databases.
+
+140
+00:12:40,720 --> 00:12:46,880
+And as we have shown previously, you can, with Metabase, add a Postgres database.
+
+141
+00:12:46,880 --> 00:12:52,800
+So easy peasy, as we said.
+
+142
+00:12:52,800 --> 00:13:00,240
+So let's get started with that script.
+
+143
+00:13:00,240 --> 00:13:08,280
+So here it is, I'll make it bigger.
+
+144
+00:13:08,280 --> 00:13:16,400
+So here you have the main architecture of this program I won't go through because it's
+
+145
+00:13:16,400 --> 00:13:24,240
+not the purpose of the presentation, but basically we created it as a container, so it can be
+
+146
+00:13:24,240 --> 00:13:29,400
+instantiated on whatever web host or you want.
+
+147
+00:13:29,400 --> 00:13:35,200
+And you just have to put here the necessary parameters you need.
+
+148
+00:13:35,200 --> 00:13:43,760
+So the base URL of your Matomo instance, the DB name of it, the ID site provided by Matomo,
+
+149
+00:13:43,760 --> 00:13:47,620
+the starting and ending date of the data you want.
+
+150
+00:13:47,620 --> 00:13:56,880
+And finally, really important, the authentication token provided by Matomo again to recover
+
+151
+00:13:56,880 --> 00:13:58,240
+the data.
+
+152
+00:13:58,240 --> 00:14:00,640
+So here I go.
+
+153
+00:14:00,640 --> 00:14:12,600
+And if I want to ping and get my data, it will gather following different API endpoints,
+
+154
+00:14:12,600 --> 00:14:15,640
+all data's coming from that instance.
+
+155
+00:14:15,640 --> 00:14:19,880
+So here the magic is a bit hidden so I can go through.
+
+156
+00:14:19,880 --> 00:14:27,080
+Here is the config.yaml file on which you see really the fact that we are basing this,
+
+157
+00:14:27,080 --> 00:14:32,640
+we were based on the API of Matomo.
+
+158
+00:14:32,640 --> 00:14:40,800
+So here you see some parameters given in the URL, which will be used in the URL.
+
+159
+00:14:40,800 --> 00:14:48,120
+If you go back to what I previously showed, it's basically what we have here.
+
+160
+00:14:48,120 --> 00:14:53,640
+So the parameters you have here are exactly the same as here.
+
+161
+00:14:53,640 --> 00:14:57,200
+And we are adding again, so it's really plug and play.
+
+162
+00:14:57,200 --> 00:15:04,160
+You can add a new one if you want or delete a new one following your needs.
+
+163
+00:15:04,160 --> 00:15:11,960
+And finally, when the script is over, you'll have all your data put in a Postgres databases.
+
+164
+00:15:11,960 --> 00:15:15,760
+So that's for the Matomobu script.
+
+165
+00:15:15,760 --> 00:15:22,800
+So if you want to participate on it and see it, I put the link on the presentation and
+
+166
+00:15:22,800 --> 00:15:33,220
+it's completely available and freely forkable of whatever you want on our main page.
+
+167
+00:15:33,220 --> 00:15:38,280
+So that's for Matomobu.
+
+168
+00:15:38,280 --> 00:15:44,800
+And I previously shown that thanks to it, we had those visualizations both of DCDM and
+
+169
+00:15:44,800 --> 00:15:51,960
+Matomo at the same place, which is the purpose of our work.
+
+170
+00:15:51,960 --> 00:15:57,940
+It was faster than I imagined, so I hope you have a lot of questions.
+
+171
+00:15:57,940 --> 00:16:06,940
+Through that work, we had a lot of questions which arose and I will go through them.
+
+172
+00:16:06,940 --> 00:16:09,920
+The first one was about GDPR compliance.
+
+173
+00:16:09,920 --> 00:16:20,880
+So as you know, Matomo is really ahead in this topic about respecting GDPR by design,
+
+174
+00:16:20,880 --> 00:16:24,240
+privacy by design.
+
+175
+00:16:24,240 --> 00:16:34,440
+But the problem created by this script, so Matomobu, and this dataflux is that you have
+
+176
+00:16:34,440 --> 00:16:36,160
+to make it safe.
+
+177
+00:16:36,160 --> 00:16:41,960
+So basically, the use of an external container, this Matomobu container, must be safe.
+
+178
+00:16:41,960 --> 00:16:50,720
+You have to use, in our case, it was a GSM token used to really restrict the access to
+
+179
+00:16:50,720 --> 00:16:57,920
+that container to people having a special key pass, passphrase, sorry.
+
+180
+00:16:57,920 --> 00:17:03,480
+There is also the fact that we have maybe more endpoints, which are great right now
+
+181
+00:17:03,480 --> 00:17:05,320
+and not available.
+
+182
+00:17:05,320 --> 00:17:12,440
+So I heard that in the new version of Matomo, there is the new endpoints were created.
+
+183
+00:17:12,440 --> 00:17:22,320
+So we had to improve this Matomobu script to take these endpoints into the script.
+
+184
+00:17:22,320 --> 00:17:29,440
+And finally, what would be the best is that without using that script, which needs to
+
+185
+00:17:29,440 --> 00:17:36,920
+be a bit of, to know a bit about development and having, using bash things and so on and
+
+186
+00:17:36,920 --> 00:17:42,960
+so forth, handling databases, external databases, it would be, the best would be to know how
+
+187
+00:17:42,960 --> 00:17:48,800
+to code enclosure, which is the language of Metabase, and to code enclosure.
+
+188
+00:17:48,800 --> 00:17:57,880
+The Matomo driver as the Google Analytics driver is currently coded for Metabase.
+
+189
+00:17:57,880 --> 00:18:06,520
+So right now, if I share again my screen, I'll go, so, okay, so I think it's over.
+
+190
+00:18:06,520 --> 00:18:15,440
+I have my Postgres databases and I can, so it's the database way ANCT.
+
+191
+00:18:15,440 --> 00:18:24,960
+So and I can dump it and recreate it on whatever Postgres remote database I have.
+
+192
+00:18:24,960 --> 00:18:30,360
+So that was again for the demonstration.
+
+193
+00:18:30,360 --> 00:18:32,700
+I was really fast, faster than I thought.
+
+194
+00:18:32,700 --> 00:18:42,440
+So if there is any questions or details I can show, I will gladly answer them.
+
+195
+00:18:42,440 --> 00:18:49,240
+Okay, I just saw them.
+
+196
+00:18:49,240 --> 00:18:53,040
+So question from Ronald, have you analyzed how they developed the connector from Google
+
+197
+00:18:53,040 --> 00:18:55,040
+Analytics at Metabase?
+
+198
+00:18:55,040 --> 00:19:02,080
+Yes, no, to be honest, I didn't take a look at it.
+
+199
+00:19:02,080 --> 00:19:08,160
+The problem is that the Google Analytics way of handling data is completely different from
+
+200
+00:19:08,160 --> 00:19:10,120
+the Matomo one.
+
+201
+00:19:10,120 --> 00:19:17,840
+To give an example, to request any database from Postgres to MySQL to SQLite, you have
+
+202
+00:19:17,840 --> 00:19:22,640
+a standard, which is the structured query language, SQL language.
+
+203
+00:19:22,640 --> 00:19:27,640
+And for Google Analytics, it's a JSON way of making requests.
+
+204
+00:19:27,640 --> 00:19:33,360
+So it's completely different and therefore I don't think it's applicable to Google Analytics.
+
+205
+00:19:33,360 --> 00:19:43,960
+Furthermore, there is, I tried to use that connector to Metabase, so using, sorry, to
+
+206
+00:19:43,960 --> 00:19:53,440
+use, to bring back, to use that Google Analytics driver and the authentications, the parameters
+
+207
+00:19:53,440 --> 00:19:58,640
+needed for Google Analytics are completely different from the Matomo.
+
+208
+00:19:58,640 --> 00:20:04,440
+For Matomo, I think you only need basically the ID site, the authentication token, and
+
+209
+00:20:04,440 --> 00:20:05,440
+that's over.
+
+210
+00:20:05,440 --> 00:20:09,680
+So I think it would be easier to develop that driver.
+
+211
+00:20:09,680 --> 00:20:15,480
+I do not code it, but in the future it would be really awesome.
+
+212
+00:20:15,480 --> 00:20:23,680
+I think it's easier, and it's something we can do in the, like, middle or long term at
+
+213
+00:20:23,680 --> 00:20:27,400
+Open Source Politics.
+
+214
+00:20:27,400 --> 00:20:29,600
+I'll take the next one.
+
+215
+00:20:29,600 --> 00:20:35,960
+What are the new features that Metabase developed over the last six months and or any new coming
+
+216
+00:20:35,960 --> 00:20:39,800
+nice features which would make the integration of Matomo easier?
+
+217
+00:20:39,800 --> 00:20:43,840
+So making the integration of Matomo easier, I said it.
+
+218
+00:20:43,840 --> 00:20:46,720
+It's coding a Matomo driver.
+
+219
+00:20:46,720 --> 00:20:53,200
+If you have the authentication token and the ID site, I think it's really 30 seconds to
+
+220
+00:20:53,200 --> 00:20:55,520
+do it.
+
+221
+00:20:55,520 --> 00:21:01,080
+And new features that Metabase developed over the last six months, they are really great.
+
+222
+00:21:01,080 --> 00:21:02,080
+I'll go through.
+
+223
+00:21:02,080 --> 00:21:08,840
+I went really short on the possibilities of Metabase, but you have the possibility to
+
+224
+00:21:08,840 --> 00:21:21,400
+send by mail all that, sorry, it's the possibility to send the entire dashboard by mail.
+
+225
+00:21:21,400 --> 00:21:23,960
+So here I am.
+
+226
+00:21:23,960 --> 00:21:36,400
+So if I click on subscription, I'll go through, there it is, and you can send to whatever
+
+227
+00:21:36,400 --> 00:21:37,400
+mail you want.
+
+228
+00:21:37,400 --> 00:21:45,440
+So if I put my personal mail as instance, and I can also join the results.
+
+229
+00:21:45,440 --> 00:21:53,920
+So here you have the visual results, but you can also can join the CSV sheets of it.
+
+230
+00:21:53,920 --> 00:21:56,440
+You can send it by mail.
+
+231
+00:21:56,440 --> 00:22:03,280
+There is also a good nice features about protecting the data, like you can create groups which
+
+232
+00:22:03,280 --> 00:22:08,680
+are restrained to that type of data or that dashboard.
+
+233
+00:22:08,680 --> 00:22:10,480
+There is also visualizations.
+
+234
+00:22:10,480 --> 00:22:26,400
+If I go to asking a question, if I go to that database, I just go and select all users.
+
+235
+00:22:26,400 --> 00:22:29,680
+That's to show you.
+
+236
+00:22:29,680 --> 00:22:35,400
+So here they are just showing them as basically a table, but here you have all different visualizations
+
+237
+00:22:35,400 --> 00:22:37,520
+as they are adding more and more.
+
+238
+00:22:37,520 --> 00:22:41,520
+So you have lines, pie charts, cloud points.
+
+239
+00:22:41,520 --> 00:22:53,120
+If I can show you, we recently have done something for the National French Assembly, and you
+
+240
+00:22:53,120 --> 00:22:58,680
+also have maps of you can add.
+
+241
+00:22:58,680 --> 00:23:02,440
+So here it is.
+
+242
+00:23:02,440 --> 00:23:07,920
+It's taking up to load because there is quite a number of results to analyze, but there
+
+243
+00:23:07,920 --> 00:23:08,920
+is maps.
+
+244
+00:23:08,920 --> 00:23:12,400
+There are, yes, new visualizations every release.
+
+245
+00:23:12,400 --> 00:23:13,760
+It's really an active software.
+
+246
+00:23:13,760 --> 00:23:21,280
+So here you have, so basically we, that our data coming from the CDEM, but I'm really
+
+247
+00:23:21,280 --> 00:23:26,800
+sure we can do the same for data coming from Matomo.
+
+248
+00:23:26,800 --> 00:23:32,160
+If you want to have more information about the rune map, there is like a release every
+
+249
+00:23:32,160 --> 00:23:34,680
+two months of Metabase.
+
+250
+00:23:34,680 --> 00:23:42,360
+You can go, I will put the link on the chat.
+
+251
+00:23:42,360 --> 00:23:43,360
+Next question.
+
+252
+00:23:43,360 --> 00:23:48,480
+How much work in terms of time would you estimate for the creation of a driver potentially cost
+
+253
+00:23:48,480 --> 00:23:51,000
+if it was you coding it?
+
+254
+00:23:51,000 --> 00:23:55,600
+So if it was me coding it, I think it would be a lot of money because I don't know how
+
+255
+00:23:55,600 --> 00:23:56,800
+to code in Clojure.
+
+256
+00:23:56,800 --> 00:24:02,040
+So I said it, but maybe some people don't know what it is.
+
+257
+00:24:02,040 --> 00:24:10,300
+So Clojure is a programming language, which is a derivative of Lisp and which is running
+
+258
+00:24:10,300 --> 00:24:12,520
+on the Java virtual machine.
+
+259
+00:24:12,520 --> 00:24:17,360
+I won't go through details, but it's really an interesting language.
+
+260
+00:24:17,360 --> 00:24:27,560
+I didn't looked well on it and I'm not really a fan of it.
+
+261
+00:24:27,560 --> 00:24:34,740
+I didn't have the time because my language was Python, so I went with Python.
+
+262
+00:24:34,740 --> 00:24:36,760
+I do not think it would be too difficult.
+
+263
+00:24:36,760 --> 00:24:42,360
+As I said previously, the Matomo analytics driver seems really more difficult to code
+
+264
+00:24:42,360 --> 00:24:44,360
+than the Matomo one.
+
+265
+00:24:44,360 --> 00:24:49,600
+So to answer your question, no, I don't know how much it will cost, but I think it's really
+
+266
+00:24:49,600 --> 00:24:55,400
+feasible if you find the right person in the Metabase community, which is a strong community,
+
+267
+00:24:55,400 --> 00:25:01,520
+as strong as the Matomo one, I think, because there is a new release every two months.
+
+268
+00:25:01,520 --> 00:25:08,600
+So I think it would be really feasible compared to other drivers who are currently developed.
+
+269
+00:25:08,600 --> 00:25:15,120
+Hi, how happy is your client is about Matomo within Metabase?
+
+270
+00:25:15,120 --> 00:25:18,120
+Really good question.
+
+271
+00:25:18,120 --> 00:25:25,720
+Basically, Metabase is not made for viewing everything you can see on Matomo.
+
+272
+00:25:25,720 --> 00:25:30,720
+The real first purpose is to have different data sources on the same place.
+
+273
+00:25:30,720 --> 00:25:35,840
+So if you want all data provided by Matomo, go on Matomo.
+
+274
+00:25:35,840 --> 00:25:45,560
+But if your client, like ours, is not really interested in viewing every day or every week,
+
+275
+00:25:45,560 --> 00:25:51,400
+how is going the participation, how is going the frequentation of the website?
+
+276
+00:25:51,400 --> 00:25:57,800
+I think Metabase is a great deal because you put it, the visualizations are really well
+
+277
+00:25:57,800 --> 00:25:58,800
+built.
+
+278
+00:25:58,800 --> 00:26:05,360
+I think they are more efficient, they are more talkative than the one provided by Matomo.
+
+279
+00:26:05,360 --> 00:26:11,440
+Even if the one of Matomo are great, I'm not here to have enemies.
+
+280
+00:26:11,440 --> 00:26:15,880
+But it's really efficient if you have other data coming from other data sources.
+
+281
+00:26:15,880 --> 00:26:20,040
+If you do not have them, I do not think it's worth the risk.
+
+282
+00:26:20,040 --> 00:26:24,560
+But for us, it was really a great deal.
+
+283
+00:26:24,560 --> 00:26:29,560
+So I said 100 instances of Decidim on which we have Matomo.
+
+284
+00:26:29,560 --> 00:26:36,640
+And right now, there is like a dozen of them, which are mainly new customers, which are
+
+285
+00:26:36,640 --> 00:26:44,600
+really happy having that centralization of data in the same place.
+
+286
+00:26:44,600 --> 00:26:47,560
+So I'll go through next question.
+
+287
+00:26:47,560 --> 00:26:52,680
+Have you also imported some visitors log raw data from Matomo into Metabase or are you
+
+288
+00:26:52,680 --> 00:26:55,880
+just working with aggregated data?
+
+289
+00:26:55,880 --> 00:26:59,320
+Yes, we are just working with aggregated data.
+
+290
+00:26:59,320 --> 00:27:03,200
+As I said, I'm quite a newbie in Matomo.
+
+291
+00:27:03,200 --> 00:27:07,280
+I didn't know how basically the database is built.
+
+292
+00:27:07,280 --> 00:27:13,720
+And when I tried to import the MySQL database of Matomo inside Metabase, really, I didn't
+
+293
+00:27:13,720 --> 00:27:17,920
+found anything, whereas with the API, it was really straightforward.
+
+294
+00:27:17,920 --> 00:27:24,840
+You had, you just had to provide the ID site and you had a table of visits and endpoints
+
+295
+00:27:24,840 --> 00:27:30,760
+for referrals and endpoints for pages and endpoints for everything, so on and so forth.
+
+296
+00:27:30,760 --> 00:27:38,760
+And it was really more easy to implement that script, Matomo pool, with the API.
+
+297
+00:27:38,760 --> 00:27:42,720
+But I'm really open to like new ways of implementing it.
+
+298
+00:27:42,720 --> 00:27:48,080
+I think, for example, if we had to code the Matomo driver, it would be more like efficient
+
+299
+00:27:48,080 --> 00:27:53,940
+to start again from the MySQL database and then recreate the aggregated data.
+
+300
+00:27:53,940 --> 00:27:59,600
+Because for data analysts who do not have the time to discover all the data scheme of
+
+301
+00:27:59,600 --> 00:28:06,680
+Matomo, it would be really easier to go through, to start from the API.
+
+302
+00:28:06,680 --> 00:28:13,920
+If I, to illustrate it, if I go here and I start with the Matomo database of ANCT, as
+
+303
+00:28:13,920 --> 00:28:15,960
+you see, it's really straightforward.
+
+304
+00:28:15,960 --> 00:28:21,000
+You have a table for every type and you have to imagine that every table you have here
+
+305
+00:28:21,000 --> 00:28:30,240
+is basically a visualization or an API endpoint available on Matomo.
+
+306
+00:28:30,240 --> 00:28:36,720
+And another question, have you seen any discrepancies in terms of data between Matomo and Metabase
+
+307
+00:28:36,720 --> 00:28:41,760
+data, typically the count of visits per day?
+
+308
+00:28:41,760 --> 00:28:52,680
+Yes, we have, no, sorry, I talked too fast.
+
+309
+00:28:52,680 --> 00:28:57,680
+The data are basically updated every 24 hours for us.
+
+310
+00:28:57,680 --> 00:29:02,640
+So yes, basically there is differences between the two data, the one we see on Matomo and
+
+311
+00:29:02,640 --> 00:29:07,200
+the one we see on Metabase, but it's perfectly normal since we are launching that container
+
+312
+00:29:07,200 --> 00:29:10,840
+once every 24 hours.
+
+313
+00:29:10,840 --> 00:29:13,720
+That's one, again, of the subject of having a Matomo driver.
+
+314
+00:29:13,720 --> 00:29:18,680
+If you have a Matomo driver, you can do the request every instantaneously.
+
+315
+00:29:18,680 --> 00:29:29,360
+If I go back to the admin board and I take, for example, a PostgreSQL database, you can
+
+316
+00:29:29,360 --> 00:29:34,820
+choose to execute automatically requests.
+
+317
+00:29:34,820 --> 00:29:41,840
+So here you have that button which basically say if you want to like having a temp database
+
+318
+00:29:41,840 --> 00:29:48,400
+on which Metabase work and synchronize that database every, I don't know, 24 hours.
+
+319
+00:29:48,400 --> 00:29:53,960
+And in that case, it's no, the database are directly the one who are available.
+
+320
+00:29:53,960 --> 00:29:56,520
+So there is no differences.
+
+321
+00:29:56,520 --> 00:30:01,340
+In our case, there is, but they are not too strong because we are updating the database
+
+322
+00:30:01,340 --> 00:30:04,940
+every day.
+
+323
+00:30:04,940 --> 00:30:08,480
+Have you considered other open source data visualization software?
+
+324
+00:30:08,480 --> 00:30:12,080
+Why did you finally choose to go for Metabase?
+
+325
+00:30:12,080 --> 00:30:22,040
+Yes, there is also Redash, which is an open source software for business analytics.
+
+326
+00:30:22,040 --> 00:30:27,140
+I didn't discover much that were as evolved as Metabase.
+
+327
+00:30:27,140 --> 00:30:33,360
+To be honest, I'm human, so I may have missed them.
+
+328
+00:30:33,360 --> 00:30:40,080
+The thing was that we already have, we had implemented Metabase at open source politics.
+
+329
+00:30:40,080 --> 00:30:43,480
+So it was available right now.
+
+330
+00:30:43,480 --> 00:30:50,600
+The thing is that also it was really active and that was one of the main argument which
+
+331
+00:30:50,600 --> 00:30:53,320
+pushed us to use it.
+
+332
+00:30:53,320 --> 00:31:01,920
+Also, the fact that it is more user friendly, so if I go back to the main dashboard and
+
+333
+00:31:01,920 --> 00:31:06,920
+I ask a question, even without being a data analyst, I can create visualizations.
+
+334
+00:31:06,920 --> 00:31:10,400
+So I'll go through it to show you.
+
+335
+00:31:10,400 --> 00:31:15,960
+So if I take like, for example, a Metamo database and I want to have the number of visitors,
+
+336
+00:31:15,960 --> 00:31:23,840
+so I choose the number of visits and I want to have the sum of number of visits and here
+
+337
+00:31:23,840 --> 00:31:25,280
+it is.
+
+338
+00:31:25,280 --> 00:31:31,860
+So it's really straightforward even for people who are not acquainted with databases.
+
+339
+00:31:31,860 --> 00:31:38,240
+So that was one, the two criteria was that it was already implemented, the community
+
+340
+00:31:38,240 --> 00:31:39,640
+was really active.
+
+341
+00:31:39,640 --> 00:31:47,040
+And second one, it was really appealing for consultants, people who are not data analysts
+
+342
+00:31:47,040 --> 00:31:59,440
+to work with and to take that tool to discover and to learn this tool.
+
+343
+00:31:59,440 --> 00:32:00,440
+But it's not over.
+
+344
+00:32:00,440 --> 00:32:07,800
+If you have any suggestion of any other tool which can be used for centralizing data and
+
+345
+00:32:07,800 --> 00:32:12,360
+sharing them, I'm completely open.
+
+346
+00:32:12,360 --> 00:32:17,720
+I think I went through all the questions.
+
+347
+00:32:17,720 --> 00:32:25,040
+Maybe what I can do is I will share all the links about visualizations.
+
+348
+00:32:25,040 --> 00:32:27,120
+I've shown you there is some public data.
+
+349
+00:32:27,120 --> 00:32:33,780
+So I've showed you ANCT because the data of ANCT are open.
+
+350
+00:32:33,780 --> 00:32:39,560
+But if you want to have more details about how we implemented it and what is our roadmap
+
+351
+00:32:39,560 --> 00:32:47,120
+about this Metamo pool script, I'll gladly answer them.
+
+352
+00:32:47,120 --> 00:32:59,680
+Maybe I can give you back the stage, Silva.
+
+353
+00:32:59,680 --> 00:33:04,160
+So we still have a little bit of time.
+
+354
+00:33:04,160 --> 00:33:13,640
+So if people have more questions, this is the moment to write them down.
+
+355
+00:33:13,640 --> 00:33:14,640
+Maybe waiting for the question.
+
+356
+00:33:14,640 --> 00:33:20,260
+I will go through all the pages and all the links I can provide.
+
+357
+00:33:20,260 --> 00:33:26,440
+So if you want to know more about the work we have done, so again, it's available here
+
+358
+00:33:26,440 --> 00:33:32,400
+on our main page, if I can take it back to the public chat.
+
+359
+00:33:32,400 --> 00:33:38,720
+So if you want to improve it or creating issues or pull requests, it's completely open.
+
+360
+00:33:38,720 --> 00:33:44,640
+There is also what we have done again.
+
+361
+00:33:44,640 --> 00:33:48,720
+If you want to know more about DCD, here it is.
+
+362
+00:33:48,720 --> 00:33:56,460
+And finally, more important, that are the main dashboard we started with.
+
+363
+00:33:56,460 --> 00:34:00,240
+So basically, the data here are completely open.
+
+364
+00:34:00,240 --> 00:34:05,640
+As I've shown you, it's available on the Metamo instance, which is completely open, given
+
+365
+00:34:05,640 --> 00:34:08,600
+by the French government.
+
+366
+00:34:08,600 --> 00:34:15,740
+So another great feature of Metabase that you can share easily.
+
+367
+00:34:15,740 --> 00:34:19,200
+So here we are.
+
+368
+00:34:19,200 --> 00:34:20,840
+And here are the public links.
+
+369
+00:34:20,840 --> 00:34:41,880
+So if you want people to work around it, it's really straightforward.
+
+370
+00:34:41,880 --> 00:34:47,280
+Now maybe go in deeper details, is there is any question, Silva?
+
+371
+00:34:47,280 --> 00:34:53,680
+No, there are no more questions, but we also have the metrics chat.
+
+372
+00:34:53,680 --> 00:35:00,840
+So you can also continue the conversation there if people want to ask more questions
+
+373
+00:35:00,840 --> 00:35:02,920
+later, basically.
+
+374
+00:35:02,920 --> 00:35:06,480
+So thank you very much for this very interesting session.
+
+375
+00:35:06,480 --> 00:35:08,100
+You're welcome.
+
+376
+00:35:08,100 --> 00:35:13,760
+Thank you for your time, and special thanks to Ronan and Lucas, and also you, Silva, for
+
+377
+00:35:13,760 --> 00:35:40,760
+helping us to do so.
+

@@ -1,0 +1,1936 @@
+1
+00:00:00,000 --> 00:00:08,720
+So, hello and welcome everybody.
+
+2
+00:00:08,720 --> 00:00:14,280
+You might today have heard already a lot about Matomo, from different angles, from different
+
+3
+00:00:14,280 --> 00:00:22,160
+use cases, from beginner-friendly content to topics that are focusing quite on experts.
+
+4
+00:00:22,160 --> 00:00:29,920
+And I guess a lot of questions about the topic of Matomo, beginning from usability to technical
+
+5
+00:00:29,920 --> 00:00:33,000
+questions, a lot of questions might have arised.
+
+6
+00:00:33,000 --> 00:00:38,440
+So that's why today we have a Q&A session, where you can ask these questions you have
+
+7
+00:00:38,440 --> 00:00:43,440
+about Matomo to these speakers we have here today.
+
+8
+00:00:43,440 --> 00:00:49,060
+So the way this works is quite similar to the talks we have already had today.
+
+9
+00:00:49,060 --> 00:00:52,480
+You can see obviously the live streamer if you're watching.
+
+10
+00:00:52,480 --> 00:00:58,240
+And we have a chat room for this where you can ask any question you have about Matomo.
+
+11
+00:00:58,240 --> 00:01:04,680
+And I will then forward this question to one of the five speakers we have here in the room.
+
+12
+00:01:04,680 --> 00:01:10,560
+So to give you a bit of time to collect your questions and post them in the chat room,
+
+13
+00:01:10,560 --> 00:01:15,440
+I can start by quickly introducing our speakers here.
+
+14
+00:01:15,440 --> 00:01:17,320
+So let's start with Ronan.
+
+15
+00:01:17,320 --> 00:01:25,080
+Ronan is a Matomo analytics expert since 2010, and he's mostly focusing on training and doing
+
+16
+00:01:25,080 --> 00:01:32,000
+consulting for all types of companies, institutions, always around about Matomo analytics.
+
+17
+00:01:32,000 --> 00:01:40,500
+Stefan Koning, our second expert here, is also an expert mostly on focusing on digital analytics
+
+18
+00:01:40,500 --> 00:01:42,960
+and conversion rate optimization.
+
+19
+00:01:42,960 --> 00:01:48,080
+He has a lot of experience with Matomo and he will be able to answer your analytics related
+
+20
+00:01:48,080 --> 00:01:49,080
+questions.
+
+21
+00:01:49,080 --> 00:01:55,680
+Then we have Thomas Zernig, he's a CEO and web analytics expert from the border between
+
+22
+00:01:55,680 --> 00:01:57,520
+Austria and Germany.
+
+23
+00:01:57,520 --> 00:02:03,120
+And you might know him from the German Matomo explanation videos he does, or from the Power
+
+24
+00:02:03,120 --> 00:02:08,080
+of the Extension Matomo helper, which might some of you will be using.
+
+25
+00:02:08,080 --> 00:02:14,600
+And he will be able to answer your question about how to use Matomo and how to solve issues
+
+26
+00:02:14,600 --> 00:02:17,040
+using the user interface.
+
+27
+00:02:17,040 --> 00:02:21,800
+And we also have here as our fourth speaker, Stefan Giel.
+
+28
+00:02:21,800 --> 00:02:25,480
+He is part of the Matomo team since 2010.
+
+29
+00:02:25,480 --> 00:02:30,480
+And he is working full time on the Matomo core development in the last years.
+
+30
+00:02:30,480 --> 00:02:36,520
+So he is part of the core development team and expert for all the code related questions
+
+31
+00:02:36,520 --> 00:02:38,560
+in Matomo.
+
+32
+00:02:38,560 --> 00:02:44,160
+And besides this, he is also maintaining the Matomo translation and device detector, the
+
+33
+00:02:44,160 --> 00:02:51,720
+separate project, which converts user agents into the nice device information reports we
+
+34
+00:02:51,720 --> 00:02:53,720
+can see in Matomo.
+
+35
+00:02:53,720 --> 00:02:56,320
+And lastly, we also have Peter Bolleke.
+
+36
+00:02:56,320 --> 00:03:01,680
+He's part of the Matomo community from the very beginning in 2008.
+
+37
+00:03:01,680 --> 00:03:06,800
+And since then, he's supporting companies with all operations around Matomo.
+
+38
+00:03:06,800 --> 00:03:15,440
+And he can answer all kinds of technical questions around Matomo.
+
+39
+00:03:15,440 --> 00:03:25,360
+And yeah, I hope everyone can see the screen.
+
+40
+00:03:25,360 --> 00:03:30,160
+And let's just wait a few minutes for questions.
+
+41
+00:03:30,160 --> 00:03:36,560
+Maybe in the meantime, while people are typing questions, some of you, if anyone of you wants
+
+42
+00:03:36,560 --> 00:03:48,400
+to do a quick introduction or talk about some topic, they can talk about it now.
+
+43
+00:03:48,400 --> 00:03:52,640
+Maybe a question to all.
+
+44
+00:03:52,640 --> 00:03:58,240
+How do you learn something about Matomo or what is your entry point or what was your
+
+45
+00:03:58,240 --> 00:03:59,800
+entry point?
+
+46
+00:03:59,800 --> 00:04:11,680
+Or where do you can ask questions beyond this Matomo camp?
+
+47
+00:04:11,680 --> 00:04:19,200
+First of all, maybe not everyone knows that there is a forum, a board, where you can ask
+
+48
+00:04:19,200 --> 00:04:26,280
+questions, where you can ask questions in mother tongue, like Germany.
+
+49
+00:04:26,280 --> 00:04:30,120
+There is a good support in there.
+
+50
+00:04:30,120 --> 00:04:38,920
+And the other one is the Matomo support if you take the Matomo Cloud version.
+
+51
+00:04:38,920 --> 00:04:48,000
+And maybe the other ones have also some tips how to get more knowledge about Matomo.
+
+52
+00:04:48,000 --> 00:04:49,000
+A good point.
+
+53
+00:04:49,000 --> 00:04:52,320
+I forgot to introduce myself, of course.
+
+54
+00:04:52,320 --> 00:04:58,520
+I'm Lucas Winkler, and most of you will know me from the Matomo forum.
+
+55
+00:04:58,520 --> 00:05:04,840
+I spend a lot of my time answering people's questions on the Matomo forum, but also maintaining
+
+56
+00:05:04,840 --> 00:05:09,320
+some other documentation and answering to GitHub issues.
+
+57
+00:05:09,320 --> 00:05:13,640
+And this is also kind of the answer to your question.
+
+58
+00:05:13,640 --> 00:05:19,160
+If you have any questions about Matomo, if it's a general question, something doesn't
+
+59
+00:05:19,160 --> 00:05:25,320
+work on your setup, something like this, the best way probably is the Matomo forum.
+
+60
+00:05:25,320 --> 00:05:30,760
+A lot of people already have asked their questions there, and it's a great way to slowly get
+
+61
+00:05:30,760 --> 00:05:33,360
+to the bottom of the issue.
+
+62
+00:05:33,360 --> 00:05:38,920
+If you know that the thing you're asking is definitively a bug, and you have definitive
+
+63
+00:05:38,920 --> 00:05:45,000
+steps how to reproduce them, you can skip the forum and go straight to GitHub and create
+
+64
+00:05:45,000 --> 00:05:50,080
+a bug issue.
+
+65
+00:05:50,080 --> 00:05:57,440
+And that way, ideally describe it in a lot of detail so people can reproduce it.
+
+66
+00:05:57,440 --> 00:06:04,720
+And this way, people can see it, it's quickly organized, and it's easier to fix them.
+
+67
+00:06:04,720 --> 00:06:05,720
+Okay.
+
+68
+00:06:05,720 --> 00:06:09,920
+While we did this introduction, there have been a lot of questions.
+
+69
+00:06:09,920 --> 00:06:15,120
+And I'll start with one question from Peter Jones.
+
+70
+00:06:15,120 --> 00:06:19,560
+He asks, we can add the users in the Matomo interface.
+
+71
+00:06:19,560 --> 00:06:24,600
+I wonder if it will be possible to use groups in the future.
+
+72
+00:06:24,600 --> 00:06:29,480
+This will be useful when there are hundreds of thousands of users.
+
+73
+00:06:29,480 --> 00:06:35,400
+Does anyone have to say something about this?
+
+74
+00:06:35,400 --> 00:06:36,920
+Maybe it's Stefan.
+
+75
+00:06:36,920 --> 00:06:42,480
+I personally don't know about this suggestion.
+
+76
+00:06:42,480 --> 00:06:48,840
+I'm not even sure if someone has even suggested it until now.
+
+77
+00:06:48,840 --> 00:06:53,840
+But indeed, there are Matomo instances with a large amount of users, and some kind of
+
+78
+00:06:53,840 --> 00:07:01,280
+grouping might be useful, especially to give access rights to a site to many people at
+
+79
+00:07:01,280 --> 00:07:02,280
+once.
+
+80
+00:07:02,280 --> 00:07:12,440
+There had been a couple of requests for a more extensive permission management in Matomo.
+
+81
+00:07:12,440 --> 00:07:18,960
+And yeah, some of them were, I guess, asking for groups, but there currently aren't any
+
+82
+00:07:18,960 --> 00:07:20,960
+plans.
+
+83
+00:07:20,960 --> 00:07:31,680
+Then again, as a workaround until then, all of the user management features can be also
+
+84
+00:07:31,680 --> 00:07:33,560
+accessed via the API.
+
+85
+00:07:33,560 --> 00:07:40,560
+So if the issue is just having to manually add hundreds of users to a site, then of course,
+
+86
+00:07:40,560 --> 00:07:45,800
+you can easily automate this with a script in the programming language of your choice
+
+87
+00:07:45,800 --> 00:07:52,600
+and add the users there.
+
+88
+00:07:52,600 --> 00:07:54,320
+I hope this roughly answers your question.
+
+89
+00:07:54,320 --> 00:07:57,240
+There's a bit of a delay, so I will go on.
+
+90
+00:07:57,240 --> 00:08:02,480
+And if you have any follow up to this, simply ask again.
+
+91
+00:08:02,480 --> 00:08:08,120
+So Valentin asks, which killer feature from Google Analytics do you think should be included
+
+92
+00:08:08,120 --> 00:08:13,040
+in Matomo?
+
+93
+00:08:13,040 --> 00:08:18,040
+Secondary dimensions.
+
+94
+00:08:18,040 --> 00:08:27,920
+There is the custom report, it's a very great plugin for Matomo Cloud, or you can pay for
+
+95
+00:08:27,920 --> 00:08:30,480
+the on-premise version.
+
+96
+00:08:30,480 --> 00:08:42,760
+But I missed something like secondary dimension in time to filter in time, not to make the
+
+97
+00:08:42,760 --> 00:08:50,720
+custom report and then maybe the data takes a little bit longer to process.
+
+98
+00:08:50,720 --> 00:09:00,560
+So I wish, I think I added a feature request to the second dimension feature, but on the
+
+99
+00:09:00,560 --> 00:09:08,800
+technical side, it's a very huge feature and I think it's very complicated to integrate
+
+100
+00:09:08,800 --> 00:09:09,800
+into Matomo.
+
+101
+00:09:09,800 --> 00:09:22,320
+I think the data visualization part is as well missing somehow, highly asked by a Google
+
+102
+00:09:22,320 --> 00:09:25,040
+Analytics user who was Google Data Studio.
+
+103
+00:09:25,040 --> 00:09:32,720
+You will have a conference tomorrow from Baptiste Tivand about how to use Metabase with Matomo
+
+104
+00:09:32,720 --> 00:09:38,720
+Analytics, but it's still something which is kind of tacky, so you cannot put it within
+
+105
+00:09:38,720 --> 00:09:40,560
+the end of a marketer.
+
+106
+00:09:40,560 --> 00:09:47,240
+So I think working more on the integration of Matomo with a third party data visualization
+
+107
+00:09:47,240 --> 00:10:02,040
+system or to have its own more sexy data visualization system is of paramount importance for Matomo.
+
+108
+00:10:02,040 --> 00:10:08,480
+One feature that could be included that Valentin suggested that, now that I read it, also find
+
+109
+00:10:08,480 --> 00:10:13,920
+a good idea is simply a live view that shows the number of hits in the last five minutes
+
+110
+00:10:13,920 --> 00:10:21,680
+to get a really close how many people are accessing the website right now view, which
+
+111
+00:10:21,680 --> 00:10:26,640
+incidentally, now that I'm looking at the reports for the Matomo camp, might also be
+
+112
+00:10:26,640 --> 00:10:32,240
+something interesting to see.
+
+113
+00:10:32,240 --> 00:10:38,920
+In addition to I agree with Thomas as well, definitely secondary dimensions, but also
+
+114
+00:10:38,920 --> 00:10:44,960
+a decent way to import and add additional data into Matomo to combine it with the data
+
+115
+00:10:44,960 --> 00:10:52,640
+set that you already have in the thing that would make a lot of sense as well.
+
+116
+00:10:52,640 --> 00:11:01,120
+Okay, I see an interesting another question from Peter Jones.
+
+117
+00:11:01,120 --> 00:11:06,600
+They have an older PVIC instance, but are trying to migrate it to Matomo.
+
+118
+00:11:06,600 --> 00:11:10,800
+What are your experiences of migrating PVIC data into Matomo?
+
+119
+00:11:10,800 --> 00:11:15,120
+Maybe something for Peter or Stefan.
+
+120
+00:11:15,120 --> 00:11:20,920
+Well, I can take on this one.
+
+121
+00:11:20,920 --> 00:11:21,920
+It is possible.
+
+122
+00:11:21,920 --> 00:11:26,120
+It depends on how much data do you have in the instance.
+
+123
+00:11:26,120 --> 00:11:31,320
+So also with low amounts of data and also with high amounts of data, it's definitely
+
+124
+00:11:31,320 --> 00:11:32,320
+possible.
+
+125
+00:11:32,320 --> 00:11:37,800
+But it can with a higher amount of data take some time because a lot of scheme changes
+
+126
+00:11:37,800 --> 00:11:41,000
+for the MySQL database are necessary.
+
+127
+00:11:41,000 --> 00:11:50,720
+And also things can break because the version jump from two or three to four is a major
+
+128
+00:11:50,720 --> 00:11:51,720
+one.
+
+129
+00:11:51,720 --> 00:11:57,280
+So a lot of things in the database scheme have been optimized and have been changed
+
+130
+00:11:57,280 --> 00:11:58,840
+also.
+
+131
+00:11:58,840 --> 00:12:04,080
+So you should definitely make sure to have a real good backup before you start doing
+
+132
+00:12:04,080 --> 00:12:06,080
+that migration.
+
+133
+00:12:06,080 --> 00:12:14,160
+And then think also about some outage of your Matomo instance while you're updating, at
+
+134
+00:12:14,160 --> 00:12:18,800
+least with a bigger amount of data you have in your instance.
+
+135
+00:12:18,800 --> 00:12:25,460
+Lock around could be, for example, like you could just leave the tracker running or writing
+
+136
+00:12:25,460 --> 00:12:27,160
+into a log file.
+
+137
+00:12:27,160 --> 00:12:33,840
+And then after your migration is complete, you can import this log file with the replay
+
+138
+00:12:33,840 --> 00:12:36,540
+log functionality of the log importer.
+
+139
+00:12:36,540 --> 00:12:39,780
+So you don't lose too much data.
+
+140
+00:12:39,780 --> 00:12:46,240
+So the replay logging probably is the best solution for importing nearly this data that
+
+141
+00:12:46,240 --> 00:12:51,160
+would have come into the instance while you had this outage.
+
+142
+00:12:51,160 --> 00:12:58,240
+But all in all, you have to make sure that you have a few hours of outage in your Matomo
+
+143
+00:12:58,240 --> 00:12:59,240
+instance.
+
+144
+00:12:59,240 --> 00:13:03,280
+So your users have to know and the stakeholders have to know.
+
+145
+00:13:03,280 --> 00:13:11,320
+But all in all, I also updated, I think, 20 to 30 big instances to Matomo from Pivik or
+
+146
+00:13:11,320 --> 00:13:18,320
+from the early versions, and everything went perfectly well.
+
+147
+00:13:18,320 --> 00:13:24,200
+One minor thing I also want to add is something a lot of, even if it's a small instance, something
+
+148
+00:13:24,200 --> 00:13:30,460
+a lot of people are struggling with, if they have a really old Pivik version, is that this
+
+149
+00:13:30,460 --> 00:13:35,800
+really old version, of course, also runs with a really old version of PHP, and there might
+
+150
+00:13:35,800 --> 00:13:40,680
+not even be a version of PHP that is really old Pivik version is compatible with.
+
+151
+00:13:40,680 --> 00:13:43,880
+And the newest Matomo version is compatible with.
+
+152
+00:13:43,880 --> 00:13:49,760
+So if it's a really old version, it might be useful to do a few intermediate jumps of
+
+153
+00:13:49,760 --> 00:13:52,520
+a few intermediate versions of Matomo.
+
+154
+00:13:52,520 --> 00:13:57,760
+And maybe if the compatibility requirements also require it, also intermediate versions
+
+155
+00:13:57,760 --> 00:14:03,640
+of PHP to make sure the migration runs as smooth as possible.
+
+156
+00:14:03,640 --> 00:14:09,560
+A lot of people might not know it, but on builds.matomo.org, the download page, you can
+
+157
+00:14:09,560 --> 00:14:17,320
+download every single Matomo version, I think that has been released since 2008.
+
+158
+00:14:17,320 --> 00:14:31,240
+So this way you can easily update to another old version before you do the next jump.
+
+159
+00:14:31,240 --> 00:14:38,080
+Another question from Juliet is, is there a possibility to aggregate that data directly
+
+160
+00:14:38,080 --> 00:14:39,240
+in Matomo?
+
+161
+00:14:39,240 --> 00:14:44,400
+So the number of users grouped by a certain custom variable, for instance.
+
+162
+00:14:44,400 --> 00:14:50,760
+She says I'm mostly using the API and then aggregate that data with Python pandas.
+
+163
+00:14:50,760 --> 00:14:56,480
+Personally, I can't say much helpful things about it.
+
+164
+00:14:56,480 --> 00:15:01,680
+Don't really have much experience with any use case where you would have to aggregate
+
+165
+00:15:01,680 --> 00:15:02,920
+data.
+
+166
+00:15:02,920 --> 00:15:08,960
+Of course, the way you are doing it, using the API and then doing any data processing
+
+167
+00:15:08,960 --> 00:15:15,760
+afterwards, of course, always works, but might not be the most ideal one.
+
+168
+00:15:15,760 --> 00:15:20,040
+Probably Juliet, it would be good to elaborate a bit on that, what you're trying to achieve,
+
+169
+00:15:20,040 --> 00:15:28,280
+because in the custom dimension reports, you have everything grouped by the custom dimension
+
+170
+00:15:28,280 --> 00:15:34,120
+in the sense of that every custom dimension has its own row in that report.
+
+171
+00:15:34,120 --> 00:15:41,040
+If you're trying to group all other reports in the dashboard, for example, for those custom
+
+172
+00:15:41,040 --> 00:15:46,480
+dimensions, combinations or a single custom dimension, this is probably not possible in
+
+173
+00:15:46,480 --> 00:15:48,040
+the dashboard at least.
+
+174
+00:15:48,040 --> 00:15:57,600
+So going with an external solution like Python pandas or Tableau Power BI Metabase or something
+
+175
+00:15:57,600 --> 00:16:02,840
+like that would be the way to go, at least for the moment.
+
+176
+00:16:02,840 --> 00:16:19,800
+One quick note to Peter's previous explanation for replaying the logs by Chris is if one
+
+177
+00:16:19,800 --> 00:16:27,120
+tries to go this way and jump the downtime of the upgrade by afterwards replaying the
+
+178
+00:16:27,120 --> 00:16:31,880
+server logs that reach the Matomo server, one of course has to pay attention that all
+
+179
+00:16:31,880 --> 00:16:37,320
+requests sent to Matomo are GET requests, not POST requests, otherwise, of course, the
+
+180
+00:16:37,320 --> 00:16:45,560
+data won't be written in the reports in the server logs.
+
+181
+00:16:45,560 --> 00:16:49,320
+Mikael has another question about database speed.
+
+182
+00:16:49,320 --> 00:16:55,880
+He says that the database speed is a big issue and is it possible or has someone tried to
+
+183
+00:16:55,880 --> 00:17:00,960
+use Solr or any other database for quicker queries?
+
+184
+00:17:00,960 --> 00:17:09,120
+Maybe Stefan or I can say something about it.
+
+185
+00:17:09,120 --> 00:17:17,200
+As far as I know, there aren't any plans to support other databases because it's hard
+
+186
+00:17:17,200 --> 00:17:23,240
+to start supporting other databases when you have a software that should be available for
+
+187
+00:17:23,240 --> 00:17:32,520
+every user on a hosted system and MySQL is simply the mostly supported database.
+
+188
+00:17:32,520 --> 00:17:40,320
+Indeed, the main issue, I think, is if you wanted to add support for another database
+
+189
+00:17:40,320 --> 00:17:47,440
+and it doesn't matter if it's something like Postgres SQL or something completely different,
+
+190
+00:17:47,440 --> 00:17:53,920
+it would always mean you'd have to rewrite a huge portion of Matomo.
+
+191
+00:17:53,920 --> 00:17:59,480
+And in this case, it might even be quicker to simply export the data from Matomo.
+
+192
+00:17:59,480 --> 00:18:07,920
+And if you're already rewriting it from scratch, do the queries in this database directly.
+
+193
+00:18:07,920 --> 00:18:13,320
+And of course, the other thing is if you would rewrite a huge portion of Matomo to support
+
+194
+00:18:13,320 --> 00:18:21,440
+other databases that are maybe more specialized for analytics data, is that either both versions
+
+195
+00:18:21,440 --> 00:18:27,040
+that would differ quite a lot, usually would need to be maintained in the future, which
+
+196
+00:18:27,040 --> 00:18:34,400
+is really hard to do, or the MySQL, only MySQL compatible version would have to be dropped.
+
+197
+00:18:34,400 --> 00:18:39,200
+But this would mean that nearly everyone who can at the moment simply install Matomo on
+
+198
+00:18:39,200 --> 00:18:45,720
+their server using MySQL, MariaDB or something like this, would have major issues continuing
+
+199
+00:18:45,720 --> 00:18:48,440
+to use Matomo in the future.
+
+200
+00:18:48,440 --> 00:18:56,360
+So because of all of this, I think it won't change in the near future, that Matomo will
+
+201
+00:18:56,360 --> 00:19:00,760
+be MySQL and MariaDB only.
+
+202
+00:19:00,760 --> 00:19:08,800
+An interesting question by Peter Makers is, are there any ideas about integrating a website
+
+203
+00:19:08,800 --> 00:19:14,200
+carbon calculator, which measures how much impact your website has on the planet?
+
+204
+00:19:14,200 --> 00:19:19,520
+It could be a unique selling point for potential new users.
+
+205
+00:19:19,520 --> 00:19:25,720
+If no one else has something to say about this.
+
+206
+00:19:25,720 --> 00:19:31,480
+I think this is one of the use cases, which would be a really nice Matomo plugin, because
+
+207
+00:19:31,480 --> 00:19:36,240
+it's something only a few people would be interested in, but it would be a nice feature
+
+208
+00:19:36,240 --> 00:19:43,760
+for them, and it's something you can quite easily put around a Matomo without having
+
+209
+00:19:43,760 --> 00:19:47,720
+to modify something of the core code.
+
+210
+00:19:47,720 --> 00:19:51,680
+So this would be a nice, simple plugin.
+
+211
+00:19:51,680 --> 00:19:56,720
+And if someone gets around to programming it, it would be really nice if they could
+
+212
+00:19:56,720 --> 00:20:01,360
+publish it on the marketplace, I think.
+
+213
+00:20:01,360 --> 00:20:08,240
+In the meantime, maybe a question about translation.
+
+214
+00:20:08,240 --> 00:20:13,760
+How does the translation process work in Matomo?
+
+215
+00:20:13,760 --> 00:20:21,680
+If Matomo isn't completely translated in the language I speak, or if I notice a type or
+
+216
+00:20:21,680 --> 00:20:27,000
+a sentence that doesn't really make sense in Matomo, how can I fix this?
+
+217
+00:20:27,000 --> 00:20:28,800
+How can I report this?
+
+218
+00:20:28,800 --> 00:20:34,520
+Maybe Stefan has something to say about this.
+
+219
+00:20:34,520 --> 00:20:41,840
+We recently switched our translation platform to Contribute2, and all our translations are
+
+220
+00:20:41,840 --> 00:20:44,920
+currently hosted on Weblate.
+
+221
+00:20:44,920 --> 00:20:49,240
+It's another open source software to maintain translations.
+
+222
+00:20:49,240 --> 00:20:56,600
+And everyone can suggest or change the translations there to any language.
+
+223
+00:20:56,600 --> 00:21:06,240
+And from there, the translations are automatically pushed to our GitHub repository and will later
+
+224
+00:21:06,240 --> 00:21:16,200
+be included in any new release of Matomo or any of our plugins.
+
+225
+00:21:16,200 --> 00:21:33,600
+OK, then a bit more analytics-based question from Arribas is, they are currently using
+
+226
+00:21:33,600 --> 00:21:42,160
+Matomo in order to save page data, but would we like to be able to categorize the pages
+
+227
+00:21:42,160 --> 00:21:43,960
+based on the department?
+
+228
+00:21:43,960 --> 00:21:46,560
+The data for this is already in the page.
+
+229
+00:21:46,560 --> 00:21:52,440
+And could you please let us know how to proceed?
+
+230
+00:21:52,440 --> 00:21:54,080
+I can take this one.
+
+231
+00:21:54,080 --> 00:21:59,400
+It's basically what you could do is, if the information is already there, you should be
+
+232
+00:21:59,400 --> 00:22:05,440
+able to store those kind of input within custom dimensions and then basically also be able
+
+233
+00:22:05,440 --> 00:22:08,440
+to segment on this later on as well in Matomo.
+
+234
+00:22:08,440 --> 00:22:15,840
+I would recommend to start measuring it together with the default page view tracking and also
+
+235
+00:22:15,840 --> 00:22:21,800
+add some certain custom dimension tracking with the given values that you have for the
+
+236
+00:22:21,800 --> 00:22:24,880
+given departments and store it there.
+
+237
+00:22:24,880 --> 00:22:31,160
+And then you are able to filter it, segment it, or create custom reports with it, as you
+
+238
+00:22:31,160 --> 00:22:32,160
+wish.
+
+239
+00:22:32,160 --> 00:22:38,920
+Yeah, it should be easily doable with the tag manager.
+
+240
+00:22:38,920 --> 00:22:44,960
+Typically, you could just say, OK, there's this element on the page which is on the future
+
+241
+00:22:44,960 --> 00:22:48,640
+on the footer who has those given HTML attribute.
+
+242
+00:22:48,640 --> 00:22:54,720
+So I'm taking out this given attribute that I insert within the custom dimension field
+
+243
+00:22:54,720 --> 00:23:01,440
+in the Matomo custom variable, configuration variable within the tag manager.
+
+244
+00:23:01,440 --> 00:23:06,120
+And every time that the page is going to be loaded, as this given element is on the page,
+
+245
+00:23:06,120 --> 00:23:09,480
+it's going to grab it and put it as a custom dimension.
+
+246
+00:23:09,480 --> 00:23:16,560
+And then it will slice your categories accordingly.
+
+247
+00:23:16,560 --> 00:23:24,200
+Perhaps also as an important comment on exactly this problem is, from the performance view
+
+248
+00:23:24,200 --> 00:23:32,000
+of things, you should always try to put as much business complexity in the tracking runtime.
+
+249
+00:23:32,000 --> 00:23:39,560
+So try to put as much complexity as possible from your data reporting and dashboard reporting
+
+250
+00:23:39,560 --> 00:23:42,340
+and your segment definitions, et cetera.
+
+251
+00:23:42,340 --> 00:23:48,480
+Try to put it into the tag manager, because if you have to filter for a custom dimension,
+
+252
+00:23:48,480 --> 00:23:59,200
+it is very quick, it is very performant, very effective, and also the underlying MySQL queries.
+
+253
+00:23:59,200 --> 00:24:09,720
+If you, for example, have your segment definition grouping 100 page URLs to try to define your
+
+254
+00:24:09,720 --> 00:24:16,040
+branch or something else, some page grouping via segment, it will be very ineffective and
+
+255
+00:24:16,040 --> 00:24:17,040
+slow.
+
+256
+00:24:17,040 --> 00:24:24,080
+So try always to do as much as possible in the tag manager with custom dimensions, track
+
+257
+00:24:24,080 --> 00:24:34,120
+some events with extra data, and so your performance stays good.
+
+258
+00:24:34,120 --> 00:24:46,960
+I just noticed that I missed a question a bit above for Melanie.
+
+259
+00:24:46,960 --> 00:24:52,240
+They have problems aggregating certain reports where monthly reports have fewer data than
+
+260
+00:24:52,240 --> 00:24:56,520
+the daily reports in the internal search report.
+
+261
+00:24:56,520 --> 00:25:00,600
+And which actions could we take to analyze the problem?
+
+262
+00:25:00,600 --> 00:25:06,760
+So I think this is something that's hard to do a general guess, but how can one approach
+
+263
+00:25:06,760 --> 00:25:09,360
+such an issue?
+
+264
+00:25:09,360 --> 00:25:14,520
+What is the easy way to get in the direction of the issue?
+
+265
+00:25:14,520 --> 00:25:19,240
+How to start troubleshooting?
+
+266
+00:25:19,240 --> 00:25:31,320
+So perhaps I will just start on trying to answer that.
+
+267
+00:25:31,320 --> 00:25:40,640
+The troubleshooting probably starts with making clear which part of the system makes this
+
+268
+00:25:40,640 --> 00:25:41,640
+error.
+
+269
+00:25:41,640 --> 00:25:54,600
+So probably one thing to keep in mind is that the archiving could fail on the monthly archives.
+
+270
+00:25:54,600 --> 00:25:57,280
+Mostly this is the case when the memory limit is reached.
+
+271
+00:25:57,280 --> 00:26:05,200
+So you will have to search in the server log files for errors in the archiving process.
+
+272
+00:26:05,200 --> 00:26:10,800
+When you have a look, so if you're using the cron drop, so you should make sure that you
+
+273
+00:26:10,800 --> 00:26:13,600
+disable the browser archiving.
+
+274
+00:26:13,600 --> 00:26:20,240
+I think we can attach some links to that page later on in the chat also that you can make
+
+275
+00:26:20,240 --> 00:26:25,320
+sure that you enable the cron drop for the asynchronous archiving of data.
+
+276
+00:26:25,320 --> 00:26:34,520
+And then you can also read on that page how to log the things that this cron drop writes
+
+277
+00:26:34,520 --> 00:26:41,720
+to the console, how to log it into a file and then analyze that file for errors in the
+
+278
+00:26:41,720 --> 00:26:45,680
+monthly archive generation.
+
+279
+00:26:45,680 --> 00:26:53,080
+That's probably in 90% of the cases the problem that the archiving job is failing for some
+
+280
+00:26:53,080 --> 00:26:54,080
+reason.
+
+281
+00:26:54,080 --> 00:26:57,200
+That's in general I think a good advice.
+
+282
+00:26:57,200 --> 00:27:05,440
+If there are weird issues with the reports, maybe check the output of the archiving process
+
+283
+00:27:05,440 --> 00:27:09,360
+if you're using a cron drop to regularly call it.
+
+284
+00:27:09,360 --> 00:27:14,360
+Because it can be quite verbose and there are some parameters which you can add to make
+
+285
+00:27:14,360 --> 00:27:15,880
+it even more verbose.
+
+286
+00:27:15,880 --> 00:27:20,800
+And sometimes you can find something weird or some warnings in there which are a good
+
+287
+00:27:20,800 --> 00:27:25,000
+hint in which direction to look.
+
+288
+00:27:25,000 --> 00:27:33,040
+A short question from Niklas who has problems with the heatmaps before I will just quickly
+
+289
+00:27:33,040 --> 00:27:38,840
+recommend you to send a quick email about it to the premium plugin support team.
+
+290
+00:27:38,840 --> 00:27:43,560
+They can help you with this probably quite easily.
+
+291
+00:27:43,560 --> 00:27:49,360
+Then another question from Chris because we talked about get and post requests previously.
+
+292
+00:27:49,360 --> 00:27:53,240
+If there is a way to switch all requests to get.
+
+293
+00:27:53,240 --> 00:28:01,000
+I can say something on that and by default the Matomo tracking uses send beacon from
+
+294
+00:28:01,000 --> 00:28:03,400
+the browser which uses a post request.
+
+295
+00:28:03,400 --> 00:28:09,520
+You can either disable this with the method disable always use beacon or something like
+
+296
+00:28:09,520 --> 00:28:15,880
+that or you can force the request method with set request method.
+
+297
+00:28:15,880 --> 00:28:24,400
+Those should be JavaScript tracking options you can send with a tracking code.
+
+298
+00:28:24,400 --> 00:28:29,680
+The only thing to keep in mind there is of course there is a limit of how much data can
+
+299
+00:28:29,680 --> 00:28:32,720
+be sent in the get request.
+
+300
+00:28:32,720 --> 00:28:39,120
+Matomo also the old versions automatically switch to a post request if the older data
+
+301
+00:28:39,120 --> 00:28:41,720
+that would be sent would be too large.
+
+302
+00:28:41,720 --> 00:28:47,400
+I think it's quite a lot of data that would need to be sent for it to be too large for
+
+303
+00:28:47,400 --> 00:28:48,400
+a get.
+
+304
+00:28:48,400 --> 00:28:53,680
+But if the website you're tracking has enormously long URLs or something like this, this is
+
+305
+00:28:53,680 --> 00:28:56,400
+something to maybe keep in mind.
+
+306
+00:28:56,400 --> 00:29:02,520
+Just to mention it, this will always be the case if you are tracking heatmaps and stuff
+
+307
+00:29:02,520 --> 00:29:10,120
+like that because it tries to send all the HTML body with a tracking request and that
+
+308
+00:29:10,120 --> 00:29:17,000
+is required to send with post as get won't work.
+
+309
+00:29:17,000 --> 00:29:22,920
+Another question by Valentin, which was a bit answered in the chat already, I just want
+
+310
+00:29:22,920 --> 00:29:25,680
+to mention it here on stream for the recording.
+
+311
+00:29:25,680 --> 00:29:31,080
+If it is possible to set the custom time for a scheduled task, for example, to choose that
+
+312
+00:29:31,080 --> 00:29:35,840
+the scheduled task should always run in the night when there are fewer Matomo website
+
+313
+00:29:35,840 --> 00:29:40,600
+visitors that the server has less load or something like this.
+
+314
+00:29:40,600 --> 00:29:44,040
+And as far as I know, there isn't yet a feature like this.
+
+315
+00:29:44,040 --> 00:29:48,640
+It might be something that could be added and that a lot of people might be interested
+
+316
+00:29:48,640 --> 00:29:49,640
+in.
+
+317
+00:29:49,640 --> 00:29:55,480
+A workaround that Tasman is suggested is, of course, you can run the Matomo scheduled
+
+318
+00:29:55,480 --> 00:29:57,440
+task individually.
+
+319
+00:29:57,440 --> 00:30:03,480
+So if this is something you care about, you could set up a separate Chrome jobs for all
+
+320
+00:30:03,480 --> 00:30:08,160
+the scheduled tasks in Matomo.
+
+321
+00:30:08,160 --> 00:30:17,680
+One question by T Scott is, are there plans to introduce filtering much like what exists
+
+322
+00:30:17,680 --> 00:30:24,480
+in Google Analytics because segments don't cover all visits, which doesn't suit their
+
+323
+00:30:24,480 --> 00:30:25,480
+purpose?
+
+324
+00:30:25,480 --> 00:30:39,240
+As far as I know, there is actually an issue on GitHub, but I don't know the current state
+
+325
+00:30:39,240 --> 00:30:40,240
+of it.
+
+326
+00:30:40,240 --> 00:30:43,360
+But I guess it isn't planned currently.
+
+327
+00:30:43,360 --> 00:30:48,160
+Yeah, I'm sharing the same answer.
+
+328
+00:30:48,160 --> 00:30:50,000
+I don't have the answer here.
+
+329
+00:30:50,000 --> 00:30:55,880
+So for the guys who are not familiar with Google Analytics, typically in Matomo, you
+
+330
+00:30:55,880 --> 00:30:58,280
+get a different way of working.
+
+331
+00:30:58,280 --> 00:31:04,360
+So they have like within the global settings, you can exclude by IP address and by adding,
+
+332
+00:31:04,360 --> 00:31:09,640
+for example, the spam tracking prevention, you can exclude by countries, but you don't
+
+333
+00:31:09,640 --> 00:31:15,240
+have as much flexibility as the Google Analytics filter, which are including those two dimensions
+
+334
+00:31:15,240 --> 00:31:21,600
+that I just mentioned, including as well user agent, I forgot in Google Analytics, you have
+
+335
+00:31:21,600 --> 00:31:29,040
+all the other dimensions, possibility to use as filter to come in, to filter out or include
+
+336
+00:31:29,040 --> 00:31:33,180
+out within Google Analytics.
+
+337
+00:31:33,180 --> 00:31:36,960
+And it's true that currently Matomo does not offer them all.
+
+338
+00:31:36,960 --> 00:31:39,240
+And I don't know if they have plan of doing it.
+
+339
+00:31:39,240 --> 00:31:44,200
+Yeah, I posted a link to the GitHub issue Stefan referred to.
+
+340
+00:31:44,200 --> 00:31:51,180
+If you're interested in this topic, I'd recommend you to look it up there.
+
+341
+00:31:51,180 --> 00:31:56,240
+In the meantime, while I'm looking for the chapter, one question I think would always
+
+342
+00:31:56,240 --> 00:32:04,400
+be interesting to hear is, how can one contribute to Matomo?
+
+343
+00:32:04,400 --> 00:32:12,800
+Either how can I report, notice a bug in Matomo, how can I report it, or if I know how to program,
+
+344
+00:32:12,800 --> 00:32:15,760
+how can I even fix it myself?
+
+345
+00:32:15,760 --> 00:32:22,800
+Okay, so it follows up, I think, a bit to the thing I mentioned in the beginning.
+
+346
+00:32:22,800 --> 00:32:29,400
+So if you just have a vague issue and are not sure what is exactly going wrong, the
+
+347
+00:32:29,400 --> 00:32:32,240
+easiest thing is to ask on the forum.
+
+348
+00:32:32,240 --> 00:32:38,200
+And that way, find out a bit closer what exactly is the issue, what is going wrong.
+
+349
+00:32:38,200 --> 00:32:51,080
+If you know exactly what is going wrong and how someone can reproduce it, then you can
+
+350
+00:32:51,080 --> 00:32:54,920
+go directly to GitHub and create a GitHub issue for it.
+
+351
+00:32:54,920 --> 00:33:01,200
+Of course, adding steps how to reproduce it makes it a lot easier to understand the issue,
+
+352
+00:33:01,200 --> 00:33:08,080
+makes it a lot easier to fix it because oftentimes it's obvious for the person writing a GitHub
+
+353
+00:33:08,080 --> 00:33:16,040
+issue to know, it's obvious for them what they are talking about, but if you're not
+
+354
+00:33:16,040 --> 00:33:19,960
+up to date on what they are doing, it's quite hard to understand it.
+
+355
+00:33:19,960 --> 00:33:25,640
+And adding steps to exactly reproduce the issue makes it a lot easier to understand
+
+356
+00:33:25,640 --> 00:33:35,040
+the issue, and that way also a lot easier for a developer to debug it and then fix it.
+
+357
+00:33:35,040 --> 00:33:41,640
+And of course, if you're a developer yourself and know how to fix it, then the easiest thing
+
+358
+00:33:41,640 --> 00:33:48,880
+is of course to change the code, create a pull request with the change and contribute
+
+359
+00:33:48,880 --> 00:33:52,960
+it to Matomo yourself.
+
+360
+00:33:52,960 --> 00:33:59,720
+If you're a developer but don't know, not that familiar with Matomo, then you can also
+
+361
+00:33:59,720 --> 00:34:08,960
+go to the Matomo developer page, which has a great page about how to get started with
+
+362
+00:34:08,960 --> 00:34:15,960
+the code base of Matomo and how to set up a local Matomo development instance, which
+
+363
+00:34:15,960 --> 00:34:27,960
+makes it a lot easier to contribute code changes.
+
+364
+00:34:27,960 --> 00:34:36,280
+More analytics-related question about funnels, maybe for Stefano or Ronan, do you see the
+
+365
+00:34:36,280 --> 00:34:37,280
+question yourself?
+
+366
+00:34:37,280 --> 00:34:40,880
+I'll repeat it for people watching the recording.
+
+367
+00:34:40,880 --> 00:34:44,680
+Talking about funnel refills, how is it working?
+
+368
+00:34:44,680 --> 00:34:49,760
+If you have a funnel like this, where the first step is entry, then going to a conversion
+
+369
+00:34:49,760 --> 00:35:00,560
+directly, does it get refills in the steps afterwards before the goal conversion?
+
+370
+00:35:00,560 --> 00:35:02,880
+Maybe Ronan or Stefano have something to say about it.
+
+371
+00:35:02,880 --> 00:35:04,800
+I'm not that familiar with it.
+
+372
+00:35:04,800 --> 00:35:06,800
+I can't really help here.
+
+373
+00:35:06,800 --> 00:35:11,880
+Otherwise, the question would again be to ask the support team.
+
+374
+00:35:11,880 --> 00:35:18,680
+Well, you can of course set your goal in there and the conversion will be set in the second
+
+375
+00:35:18,680 --> 00:35:23,600
+step when it's directly being achieved.
+
+376
+00:35:23,600 --> 00:35:31,160
+It depends whether the fifth step is also being set as a conversion in your goal configuration.
+
+377
+00:35:31,160 --> 00:35:37,920
+You can set it, set Matomo to make a conversion multiple times or to do it only once within
+
+378
+00:35:37,920 --> 00:35:38,920
+a given visit.
+
+379
+00:35:38,920 --> 00:35:47,560
+So that kind of things matter in your goal configuration, but as soon as someone moves
+
+380
+00:35:47,560 --> 00:35:54,680
+across additional steps, it depends on whether certain steps are required or not to check
+
+381
+00:35:54,680 --> 00:35:59,080
+whether the steps have been achieved and it really depends on your goal configuration
+
+382
+00:35:59,080 --> 00:36:03,200
+settings there.
+
+383
+00:36:03,200 --> 00:36:15,720
+A question by Marcel that I think a lot of people are asking is they have a website and
+
+384
+00:36:15,720 --> 00:36:22,240
+they want to collect the reader feedback, so feedback by the people visiting the website,
+
+385
+00:36:22,240 --> 00:36:26,560
+something like how did the story make you feel?
+
+386
+00:36:26,560 --> 00:36:32,240
+It makes sense to collect this data in Matomo to connect it to the other data and could
+
+387
+00:36:32,240 --> 00:36:38,360
+this be realistically implemented on top of Matomo or with Matomo as a data store?
+
+388
+00:36:38,360 --> 00:36:44,880
+Of course, you could program something like this rather easily yourself if you do the
+
+389
+00:36:44,880 --> 00:36:51,200
+user interface part yourself and then send the data, for example, as a custom event or
+
+390
+00:36:51,200 --> 00:36:58,840
+something like this, but by chance, we have a talk tomorrow where Thomas Pearson is talking
+
+391
+00:36:58,840 --> 00:37:05,960
+about a plugin they developed which does quite exactly this, which adds a feedback feature
+
+392
+00:37:05,960 --> 00:37:09,200
+to a website using Matomo.
+
+393
+00:37:09,200 --> 00:37:13,000
+So you might want to listen to this talk tomorrow.
+
+394
+00:37:13,000 --> 00:37:17,800
+Yeah, I added the link within the chat.
+
+395
+00:37:17,800 --> 00:37:24,880
+I think don't focus yourself on the form which is on the page link that I show you because
+
+396
+00:37:24,880 --> 00:37:31,160
+I think that's in the link that you sent, you're like eight different buttons.
+
+397
+00:37:31,160 --> 00:37:38,040
+I think that you can add with this plugin custom layout in order to have more than two
+
+398
+00:37:38,040 --> 00:37:40,440
+buttons and to have eight like yours.
+
+399
+00:37:40,440 --> 00:37:45,320
+The best thing is, yes, of course, to ask Thomas, but they work since probably two years
+
+400
+00:37:45,320 --> 00:37:46,320
+on this plugin.
+
+401
+00:37:46,320 --> 00:37:48,520
+So that's going to be a premium feature.
+
+402
+00:37:48,520 --> 00:37:53,000
+So that's more the part where your hype go down, let's say.
+
+403
+00:37:53,000 --> 00:37:59,680
+But it's always good to discuss with him to see, in fact, how they did it and the spirit
+
+404
+00:37:59,680 --> 00:38:00,680
+behind.
+
+405
+00:38:00,680 --> 00:38:07,280
+And I had the chance to assist to several conferences of demo that he made and it's
+
+406
+00:38:07,280 --> 00:38:18,560
+very impressive and great feature.
+
+407
+00:38:18,560 --> 00:38:25,680
+Maybe in the meantime, also a more marketing related or user related question that I get
+
+408
+00:38:25,680 --> 00:38:33,680
+a lot of times is now that there is Matomo tech manager, what are the differences between
+
+409
+00:38:33,680 --> 00:38:41,760
+using Matomo the regular way and using Matomo tech manager?
+
+410
+00:38:41,760 --> 00:38:46,520
+So I could say a few words about that.
+
+411
+00:38:46,520 --> 00:38:53,400
+So basically or generally both things are working and will work in the future.
+
+412
+00:38:53,400 --> 00:38:59,640
+So that's the important thing to know at first.
+
+413
+00:38:59,640 --> 00:39:07,200
+But mostly also with bigger teams working on Matomo, also more than one analyst.
+
+414
+00:39:07,200 --> 00:39:14,980
+And if you have more than one requirement collected for tracking capabilities and everything,
+
+415
+00:39:14,980 --> 00:39:20,040
+the tech manager makes more sense than the legacy tracking code.
+
+416
+00:39:20,040 --> 00:39:28,440
+The reason for that is probably if you want to extend your tracking concept and you want
+
+417
+00:39:28,440 --> 00:39:34,400
+to have more tracking features, collect custom dimensions, events, and have some behavioral
+
+418
+00:39:34,400 --> 00:39:37,760
+stuff included into the tracking code.
+
+419
+00:39:37,760 --> 00:39:44,320
+For example, if it's just a simple thing like tracking clicks on a call to action button
+
+420
+00:39:44,320 --> 00:39:51,720
+or some kind of other interaction stuff, you would always have to have a release cycle
+
+421
+00:39:51,720 --> 00:39:58,640
+and close contact to the developer of the website to just give him the code and prepare
+
+422
+00:39:58,640 --> 00:40:00,160
+everything.
+
+423
+00:40:00,160 --> 00:40:02,120
+And he has to include it in the website.
+
+424
+00:40:02,120 --> 00:40:06,040
+And then you have to release a new version of the website to include the new version
+
+425
+00:40:06,040 --> 00:40:07,580
+of the tracking code.
+
+426
+00:40:07,580 --> 00:40:12,800
+And then in worst case, you have made an error anywhere or you need more data.
+
+427
+00:40:12,800 --> 00:40:19,400
+You have a stakeholder that called with a feature request in the last second and you
+
+428
+00:40:19,400 --> 00:40:25,400
+didn't bring it into the current sprint or something like that.
+
+429
+00:40:25,400 --> 00:40:30,080
+So it's quite a nightmare to maintain this kind of code.
+
+430
+00:40:30,080 --> 00:40:37,520
+With a tech manager code, it's mostly or most of the things you can do within the tech manager
+
+431
+00:40:37,520 --> 00:40:40,880
+configuration in the generic user interface.
+
+432
+00:40:40,880 --> 00:40:48,960
+So this is not a free ticket for everyone to do everything with tags and release new
+
+433
+00:40:48,960 --> 00:40:52,960
+container versions and stuff because you can't break the site with that.
+
+434
+00:40:52,960 --> 00:40:55,320
+So there should be a workflow for that.
+
+435
+00:40:55,320 --> 00:41:00,920
+But basically, it is your time to market for the tracking is much better than with the
+
+436
+00:41:00,920 --> 00:41:03,000
+legacy code.
+
+437
+00:41:03,000 --> 00:41:06,280
+And also the maintainability is much better.
+
+438
+00:41:06,280 --> 00:41:12,320
+And you can feed information that you can't collect from the HTML directly.
+
+439
+00:41:12,320 --> 00:41:14,660
+You can gather via the data layer.
+
+440
+00:41:14,660 --> 00:41:21,560
+So that's the single point of connection between you and the developer or the CMS is the data
+
+441
+00:41:21,560 --> 00:41:23,120
+layer.
+
+442
+00:41:23,120 --> 00:41:28,120
+You have to ask the developer to pass over information that you can get from the HTML
+
+443
+00:41:28,120 --> 00:41:33,200
+and then you can pass it over to the tech manager and process everything with it.
+
+444
+00:41:33,200 --> 00:41:36,840
+So it makes things in life much easier here.
+
+445
+00:41:36,840 --> 00:41:42,200
+I also just noticed if you're really interested in this topic, you might want to leave the
+
+446
+00:41:42,200 --> 00:41:48,320
+session right now and go to the other livestream room because Thomas Persson is currently talking
+
+447
+00:41:48,320 --> 00:41:53,920
+about TomoTag Manager and the basics of it.
+
+448
+00:41:53,920 --> 00:41:58,960
+In addition, you have also everything in one place.
+
+449
+00:41:58,960 --> 00:42:05,560
+Every tracking script, you know where the tracking script is implemented and so on.
+
+450
+00:42:05,560 --> 00:42:13,920
+And if you do a relaunch, you don't have to make a list of all the tracking scripts in
+
+451
+00:42:13,920 --> 00:42:16,640
+page path 500 and so on.
+
+452
+00:42:16,640 --> 00:42:24,680
+And so you can only open the tech manager container and see which scripts you are using.
+
+453
+00:42:24,680 --> 00:42:32,200
+Sometimes it's easier to troubleshoot everything with the development or debug view.
+
+454
+00:42:32,200 --> 00:42:40,200
+And you have some templates, some you can fill in so you don't have to code something
+
+455
+00:42:40,200 --> 00:42:43,240
+if you're not familiar with coding.
+
+456
+00:42:43,240 --> 00:42:51,320
+And so you can use some templates to integrate some external services.
+
+457
+00:42:51,320 --> 00:42:58,080
+And if you want to roll back, you have a version control and I think it's easier to roll back
+
+458
+00:42:58,080 --> 00:43:03,360
+a tech manager version than a release version.
+
+459
+00:43:03,360 --> 00:43:12,240
+So I think in time, you can easily roll back a version in tech manager and like to say,
+
+460
+00:43:12,240 --> 00:43:20,240
+you have to go to the developer and say, okay, can you reverse please the last version?
+
+461
+00:43:20,240 --> 00:43:22,320
+And so it's easier.
+
+462
+00:43:22,320 --> 00:43:29,880
+And yeah, sometimes you can see you have also documented who changes what.
+
+463
+00:43:29,880 --> 00:43:33,360
+But okay, in the development, you have this too.
+
+464
+00:43:33,360 --> 00:43:38,960
+But there you have the user permission management in one place.
+
+465
+00:43:38,960 --> 00:43:45,160
+And I think some of this are all very good features.
+
+466
+00:43:45,160 --> 00:43:54,120
+And I think in mind, I would never integrate tracking scripts without a container without
+
+467
+00:43:54,120 --> 00:44:02,680
+Matomo tech manager or something else, something some other tech managers.
+
+468
+00:44:02,680 --> 00:44:14,440
+Hey, I think I have answered most of the questions.
+
+469
+00:44:14,440 --> 00:44:17,360
+Of course, the Matomo camp doesn't end now.
+
+470
+00:44:17,360 --> 00:44:21,960
+We still have a rest of the day and a full day tomorrow.
+
+471
+00:44:21,960 --> 00:44:28,600
+And if you have any more questions, just feel free to ask them in the chat.
+
+472
+00:44:28,600 --> 00:44:29,960
+People will still be here.
+
+473
+00:44:29,960 --> 00:44:32,160
+People will still be able to answer.
+
+474
+00:44:32,160 --> 00:44:39,280
+And maybe if you want to talk to other people, again, the advertisement in the breaks or
+
+475
+00:44:39,280 --> 00:44:47,960
+maybe after the last talk today, you can go to meet.matomocamp.org and talk to other attendees
+
+476
+00:44:47,960 --> 00:44:49,640
+of Matomo camp.
+
+477
+00:44:49,640 --> 00:44:51,360
+Maybe some of us will be there.
+
+478
+00:44:51,360 --> 00:44:53,360
+I'm not sure.
+
+479
+00:44:53,360 --> 00:44:57,200
+Well, thank you very much for all the questions that you ask.
+
+480
+00:44:57,200 --> 00:45:03,120
+And we hope that you are having a great Matomo camp.
+
+481
+00:45:03,120 --> 00:45:04,120
+Thank you very much.
+
+482
+00:45:04,120 --> 00:45:07,120
+Have a nice evening, guys.
+
+483
+00:45:07,120 --> 00:45:09,520
+You too.
+
+484
+00:45:09,520 --> 00:45:37,520
+Bye bye.
+

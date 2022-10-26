@@ -1,0 +1,1696 @@
+1
+00:00:00,000 --> 00:00:10,800
+Okay, so first of all, thank you, everyone, for attending this Pre Matomo Camp event today.
+
+2
+00:00:10,800 --> 00:00:19,680
+So from now until the next 60 minutes, so 45 minutes of presentation plus 15 minutes
+
+3
+00:00:19,680 --> 00:00:27,040
+of questions and answer, I'm going to talk about a specific topic, which is Matomo Tag
+
+4
+00:00:27,040 --> 00:00:32,480
+Manager, and I'm going to try to cover as many things as I can. So that's why I decided to name
+
+5
+00:00:32,480 --> 00:00:41,440
+it from A to Z. My name is Ronan Chardonnoux. I'm a professional consultant and trainer on Matomo
+
+6
+00:00:41,440 --> 00:00:48,080
+Analytics. And as well, I got with a couple of friends this crazy idea of creating an event
+
+7
+00:00:48,080 --> 00:00:55,200
+named Matomo Camp, which will be held next month, so in 30 days exactly from now, where the idea is
+
+8
+00:00:55,200 --> 00:01:00,960
+to have people from all over the world to a common stage and make a presentation about Matomo
+
+9
+00:01:00,960 --> 00:01:08,880
+Analytics, so as I'm doing today. About this presentation, so I choose this specific topic
+
+10
+00:01:08,880 --> 00:01:17,680
+because last summer we ran a survey on Matomo Camp, so matomocamp.org, survey asking about
+
+11
+00:01:17,680 --> 00:01:22,720
+what kind of topic would you like us to cover during the Matomo Camp event, which will be
+
+12
+00:01:22,720 --> 00:01:30,000
+on November the 4th and November the 5th, and one topic which was highly asked was Matomo Tag
+
+13
+00:01:30,000 --> 00:01:36,960
+Manager, so the idea was today to talk about Matomo Tag Manager, and why are we talking about an event,
+
+14
+00:01:36,960 --> 00:01:44,240
+pre-event today, whereas the official event will be in one month. The idea is that as it's the first
+
+15
+00:01:44,240 --> 00:01:49,600
+time that we organize such an event with a team who, let's say, don't know each other, who has no,
+
+16
+00:01:49,600 --> 00:01:56,480
+let's say, IT infrastructure defined, we decided to launch a pre-event in order to test our IT
+
+17
+00:01:56,480 --> 00:02:03,440
+infrastructure in order to ensure that on the day we are able to scale the different conferences
+
+18
+00:02:03,440 --> 00:02:10,080
+for the volume of attendees. So this is what we are doing today, so I really would like to thank
+
+19
+00:02:10,080 --> 00:02:15,360
+two guys who are behind the screen, or at least behind the server, let's say, Lucas Winkler,
+
+20
+00:02:15,360 --> 00:02:20,160
+Lucas Winkler that you just heard in the introduction was answering to me, and as well,
+
+21
+00:02:20,160 --> 00:02:27,920
+Valentin, who is from a company named Empreinte Digital, and will in fact scale the server
+
+22
+00:02:27,920 --> 00:02:33,200
+and install the different software on the server in order for us to be able to held
+
+23
+00:02:33,200 --> 00:02:41,280
+this pre-Matomo Camp and the Matomo Camp event as well. If you have any questions at any time,
+
+24
+00:02:41,280 --> 00:02:48,800
+please feel free to drop us an email directly on matomocamp.org, so I can show you the website. So
+
+25
+00:02:48,800 --> 00:02:54,000
+here is the website, so matomocamp.org, you just need to go over here and write and contact us.
+
+26
+00:02:54,640 --> 00:03:03,440
+So as, what you can do is you can go on live.matomocamp.org, so you can click over here,
+
+27
+00:03:03,440 --> 00:03:08,320
+and if you click over here, you will get, in fact, access to the stream that you are currently
+
+28
+00:03:08,320 --> 00:03:13,040
+viewing right now, and in addition to that, at the bottom of the page, you're going to see the
+
+29
+00:03:13,040 --> 00:03:20,880
+metrics chat, which is the chat that we use in order to communicate with each other, and of course,
+
+30
+00:03:20,880 --> 00:03:27,920
+the place where you can ask some questions. So yes, if you have some questions, please feel free to
+
+31
+00:03:27,920 --> 00:03:36,800
+use either contact us page, and or you can as well use directly the chat over here on which you can
+
+32
+00:03:36,800 --> 00:03:40,800
+send some questions. I can see already that someone is typing in something, so if you have
+
+33
+00:03:40,800 --> 00:03:45,840
+some questions dealing with either the event or the presentation that I'm doing today about Matomo
+
+34
+00:03:45,840 --> 00:03:54,960
+Tag Manager, please feel free to do so. So the topic of today is Matomo Tag Manager,
+
+35
+00:03:54,960 --> 00:04:01,760
+so we're going to first start with a definition. Matomo Tag Manager is what we call a tag management
+
+36
+00:04:01,760 --> 00:04:10,000
+system, so it's already like three big words here, tag management and system. Management system,
+
+37
+00:04:10,000 --> 00:04:17,120
+you probably already, you are probably familiar with it, so if you are taking a content management
+
+38
+00:04:17,120 --> 00:04:23,040
+system, for example, such as Drupal, such as WordPress, such as, I don't know, proprietary
+
+39
+00:04:23,040 --> 00:04:28,560
+solutions, such as Wix or that kind of thing, you know already what it refers to. Content management
+
+40
+00:04:28,560 --> 00:04:37,200
+system is a software which is here in order to manage some content, such as posts, such as pages,
+
+41
+00:04:37,200 --> 00:04:44,720
+such as media, or any kind of other, let's say, content that you can imagine. In a tag management
+
+42
+00:04:44,720 --> 00:04:51,760
+system, instead of managing contents like mostly media and text content, you're going to manage
+
+43
+00:04:51,760 --> 00:04:59,680
+what we call tags, and tags are nothing more than, in fact, tracking codes. And some of you may not
+
+44
+00:04:59,680 --> 00:05:06,880
+be familiar with tracking codes, but you may, I guess, have seen at least once, when you access
+
+45
+00:05:06,880 --> 00:05:13,680
+to your Matomo installation, and then the first, let's say the first step that you need to do in
+
+46
+00:05:13,680 --> 00:05:20,400
+order to send some data to your Matomo is to copy and paste a snippet, a tracking code, or we can
+
+47
+00:05:20,400 --> 00:05:25,680
+call it a tag, which looks like this, and this is exactly what we are talking about here.
+
+48
+00:05:25,680 --> 00:05:32,480
+Tags are nothing more than those snippets of code that you insert on your website in order to push
+
+49
+00:05:33,120 --> 00:05:40,560
+data to Matomo. This is what it's about. So, Matomo Tag Manager is nothing more than a piece
+
+50
+00:05:40,560 --> 00:05:47,680
+of software, a place where you're going to manage, instead of content, you manage tags, you manage
+
+51
+00:05:47,680 --> 00:05:52,720
+tracking codes, in order to push your data collection to the next level. This is what it
+
+52
+00:05:52,720 --> 00:06:00,720
+is about. So, of course, for most of the people, they don't really see the advantage of it because
+
+53
+00:06:00,720 --> 00:06:07,360
+they are used to play with this single tracking code, which is pushing most of the time enough
+
+54
+00:06:07,360 --> 00:06:12,880
+information in order to start, in fact, your analysis, because it's pushing out the page that
+
+55
+00:06:12,880 --> 00:06:18,080
+you are looking at, it's pushing out through the enabled link tracking, the clicks, which are performed
+
+56
+00:06:18,800 --> 00:06:26,960
+downloadable clicks, downloadable files, and outlinks, but it may happen that in some cases,
+
+57
+00:06:26,960 --> 00:06:32,880
+you may want to collect more interaction than those three. For example, tomorrow you may be
+
+58
+00:06:32,880 --> 00:06:38,240
+interested in measuring the fact that people are scrolling down the page because you would like to
+
+59
+00:06:38,240 --> 00:06:43,920
+know if they read your content entirely, or at least if they view it entirely. If you have some
+
+60
+00:06:43,920 --> 00:06:49,520
+videos on your website, you may be interested in knowing if people are clicking on the play button,
+
+61
+00:06:49,520 --> 00:06:55,440
+pause button. If you have some pictures on your website, and when you hover your mouse over them,
+
+62
+00:06:55,440 --> 00:07:00,400
+because it gets bigger, like there's a zoom which is happening, that's typically the kind of thing
+
+63
+00:07:00,400 --> 00:07:06,080
+that you want to perform with additional, let's say, tracking data collection,
+
+64
+00:07:06,080 --> 00:07:13,120
+and let's say scenario system, and it's exactly what you do with a tag management system. By the
+
+65
+00:07:13,120 --> 00:07:18,080
+way, within this presentation, I will, of course, demo, I will choose a website, and we'll implement
+
+66
+00:07:18,080 --> 00:07:24,400
+a tag management system in order for you guys to see really how you can push your data collection
+
+67
+00:07:25,120 --> 00:07:34,000
+to the next level. This is exactly what I just mentioned, so I'm not going to go back on it.
+
+68
+00:07:34,000 --> 00:07:39,280
+Why should you use a tag management system, or why should you use Matamode tag manager? Well,
+
+69
+00:07:39,280 --> 00:07:46,960
+for better management, so it's exactly like a CMS. In a CMS, you create a lot of blog posts,
+
+70
+00:07:46,960 --> 00:07:53,680
+you create different pages, you have different authors, you know when it's published, who has
+
+71
+00:07:53,680 --> 00:07:58,800
+done what, and when. It's exactly the same thing with a tag management system. The idea is to have
+
+72
+00:07:58,800 --> 00:08:04,160
+a backend on which you know what are different tracking codes which have been implemented on your
+
+73
+00:08:04,160 --> 00:08:09,200
+website, who has done what, what has been implemented, and here we are talking about
+
+74
+00:08:09,200 --> 00:08:16,720
+project management, that more transparency within your organization, about knowing about what your
+
+75
+00:08:16,720 --> 00:08:22,560
+colleagues have implemented already, about, it's also about better communication between
+
+76
+00:08:22,560 --> 00:08:29,920
+your IT teams and marketing and communication teams. It's of course easy to know what happened
+
+77
+00:08:29,920 --> 00:08:35,760
+in the history of your website in terms of data collection. It's as well better in terms of
+
+78
+00:08:35,760 --> 00:08:43,040
+security in the sense that you know at least what is deployed and when it is deployed. It can,
+
+79
+00:08:43,040 --> 00:08:49,920
+in some cases, decrease the loading time of your website because most of the time what you do when
+
+80
+00:08:49,920 --> 00:08:55,440
+you implement for the first time your basic tracking code on your website, you're just copying
+
+81
+00:08:55,440 --> 00:09:00,400
+and pasting it everywhere, and when you add some other tracking code, you may have the same,
+
+82
+00:09:01,040 --> 00:09:06,160
+let's say the same configuration, like putting it everywhere, whereas with the tag management system,
+
+83
+00:09:06,160 --> 00:09:10,960
+you can decide when you would like those tags to be triggered or not, and of course
+
+84
+00:09:11,760 --> 00:09:18,720
+if you optimize this, well, you can only measure what you need and not the amount of data that you
+
+85
+00:09:18,720 --> 00:09:26,240
+need and not the extra data that you'll probably never look at. And as well, and this is very
+
+86
+00:09:26,240 --> 00:09:33,040
+important, it gives more autonomy to marketing and communication teams, let's say the non-tech teams,
+
+87
+00:09:33,040 --> 00:09:40,560
+and it allows them to more easily deploy advanced measurements without relying on, let's say,
+
+88
+00:09:40,560 --> 00:09:48,160
+some deployment time from the IT team. How tag management systems are working? Well,
+
+89
+00:09:48,160 --> 00:09:53,680
+you will see that it's really similar to what you are used to because most of the time you copy and
+
+90
+00:09:53,680 --> 00:09:58,880
+paste this tracking code, you put it on all the pages. With the deployment of a tag management
+
+91
+00:09:58,880 --> 00:10:03,840
+system, all you need to do is that instead of copying and pasting this code on all the pages,
+
+92
+00:10:03,840 --> 00:10:08,720
+what you do is that you just click over here, this is very simple, it's named Matamode Tag Manager,
+
+93
+00:10:08,720 --> 00:10:14,080
+and in fact, you take this snippet of code that you put as well on all the pages. In fact, this
+
+94
+00:10:14,080 --> 00:10:20,880
+code is going to substitute this one, okay? So you take this one, you copy and paste it on all the
+
+95
+00:10:20,880 --> 00:10:29,040
+pages on your website, and voila. Then once this one is deployed everywhere on your website, on
+
+96
+00:10:29,040 --> 00:10:35,920
+all the pages on your website, then you can in fact use the backend of the tag management system,
+
+97
+00:10:35,920 --> 00:10:41,440
+the backend of the tag management system, which will be displayed over here. So if you cannot
+
+98
+00:10:41,440 --> 00:10:48,800
+see it right now on your Matamode installation, that's probably because maybe it has not been
+
+99
+00:10:48,800 --> 00:10:53,680
+installed. So it's a plugin that you need to download and activate. It's a free plugin,
+
+100
+00:10:53,680 --> 00:11:00,160
+you don't have to pay for it. Or either it means that someone gives you an access to Matamode,
+
+101
+00:11:00,160 --> 00:11:05,200
+but you have extra rights in order to have an access to it. So in Matamode, you have the
+
+102
+00:11:05,200 --> 00:11:10,320
+superuser, you have the admin, you have the write access, you have the read access, and you get the
+
+103
+00:11:10,320 --> 00:11:16,720
+anonymous access, and you get as well special rights for the tag manager. So in order to play
+
+104
+00:11:16,720 --> 00:11:21,120
+with it, you will need to ask either to your admin or superuser, I don't remember which one,
+
+105
+00:11:21,680 --> 00:11:27,440
+in order for them to give you an access to it. Once you get an access to it, well, you just need
+
+106
+00:11:27,440 --> 00:11:34,080
+to click, and then you will see here the backend. And here the backend, in fact, over here, represents
+
+107
+00:11:34,080 --> 00:11:40,480
+all the tags and different configurations I'm going to talk about later on, which will, in fact,
+
+108
+00:11:40,480 --> 00:11:46,640
+be fired thanks to the tracking code that I was, that was showing you just right here. So in fact,
+
+109
+00:11:46,640 --> 00:11:52,080
+here, this is what we can call a master tracking code, which is going to control, which is going
+
+110
+00:11:52,080 --> 00:12:02,960
+to execute everything which is located over here within this backend. To make it simple,
+
+111
+00:12:02,960 --> 00:12:09,520
+this is the classical configuration that you add so far. So this is your website without tag
+
+112
+00:12:09,520 --> 00:12:16,560
+management system. So you have, let's say, one tracking code, one tag for every solution that
+
+113
+00:12:16,560 --> 00:12:23,440
+you want to, that you use in order to collect some data. So let's imagine that here instead of
+
+114
+00:12:23,440 --> 00:12:30,960
+analytics.js, it's your classic Matomo tracking code. Here is another tracking code that you're
+
+115
+00:12:30,960 --> 00:12:35,520
+going to install, because I don't know, you are playing with some advertising networks, okay,
+
+116
+00:12:35,520 --> 00:12:44,080
+without naming it like the big American one, let's say conversion tracking code. And then in addition
+
+117
+00:12:44,080 --> 00:12:50,800
+to that, you have as well another tracking code, such as, let's say, NAB testing solution. With a
+
+118
+00:12:50,800 --> 00:12:55,040
+tag management system, what's going to happen is that you're just going to have your container
+
+119
+00:12:55,040 --> 00:12:59,600
+over here, which is the master tag that was showing you some minutes ago. So the Matomo
+
+120
+00:12:59,600 --> 00:13:08,160
+tag manager.js container. And then, in fact, all those scripts are going to be added within
+
+121
+00:13:08,160 --> 00:13:14,880
+this one, thanks to the UI that we can see over here. So here I'm going to go into detail in this
+
+122
+00:13:14,880 --> 00:13:22,880
+one. But as you can see, I can add tags. So it's not like only centered around Matomo. A tag manager
+
+123
+00:13:22,880 --> 00:13:30,480
+is a general name in order to be able, let's say, to collect, to gather all the different tracking
+
+124
+00:13:30,480 --> 00:13:37,840
+codes that you would like to send to other players or other solutions that you are on your server.
+
+125
+00:13:37,840 --> 00:13:42,960
+So you can, this is probably one of the ones that you will play the most with, which is custom
+
+126
+00:13:42,960 --> 00:13:50,160
+HTML, which allows you to copy and paste any script that you want over here. And on SmallVoila,
+
+127
+00:13:50,160 --> 00:13:56,800
+this is exactly what we want to perform here, is that to have within one single system,
+
+128
+00:13:56,800 --> 00:14:02,560
+named the tag management system, all our different tracking codes in order to organize better our
+
+129
+00:14:02,560 --> 00:14:09,120
+data collection model. This is what I just explained. So this is the master tracking code
+
+130
+00:14:09,120 --> 00:14:13,920
+that you need to implement on your website in order to get started. Of course, according to
+
+131
+00:14:13,920 --> 00:14:19,040
+the different CMS that you are using, there's already some plugins which are here and there
+
+132
+00:14:19,040 --> 00:14:27,680
+in order for you to even make this installation even faster. How does a tag management system
+
+133
+00:14:27,680 --> 00:14:34,720
+work? Well, it works with mainly three components. The first one is what we call a tag. So the tag
+
+134
+00:14:34,720 --> 00:14:40,960
+represents the solution to which you would like to send the data to. So this is what we have over
+
+135
+00:14:40,960 --> 00:14:48,240
+here. This is the list of the different tracking code that we can pick up. Once you choose a tag,
+
+136
+00:14:48,240 --> 00:14:53,280
+so let's say I want to send the data to Matomo, then you're going to configure it. I'm going to
+
+137
+00:14:53,280 --> 00:14:59,920
+go into detail into this one later on. And then you need to explain when you would like this given
+
+138
+00:14:59,920 --> 00:15:05,920
+tag to be triggered, so to say to be executed. I'm going to take back the example that I had
+
+139
+00:15:05,920 --> 00:15:11,040
+some minutes ago, which was about, okay, you would like to measure the fact that people
+
+140
+00:15:11,040 --> 00:15:16,960
+are scrolling down your website and you would like to send this information to Matomo. So what
+
+141
+00:15:16,960 --> 00:15:22,240
+you will do is that you pick up a tag which is Matomo Analytics tag. You're probably going to
+
+142
+00:15:22,240 --> 00:15:28,480
+send what we call an event, which is an interaction. So you send an interaction to Matomo,
+
+143
+00:15:28,480 --> 00:15:34,160
+and you would like this to happen every time that someone is scrolling down. And to do so,
+
+144
+00:15:34,160 --> 00:15:40,960
+what you will do is that you will select a second, let's say, big name or component that we have
+
+145
+00:15:40,960 --> 00:15:47,040
+within the tag management vocabulary, which is trigger. And this is what we have over here. So
+
+146
+00:15:47,040 --> 00:15:52,800
+here you get the list of triggers, so to say the condition in order for the tracking code to be
+
+147
+00:15:52,800 --> 00:15:57,600
+executed. And here you're going to select, for example, over here, the scroll reach in order
+
+148
+00:15:57,600 --> 00:16:04,880
+to say, okay, if someone is scrolling down my page, I want the tag to be fired. And here by
+
+149
+00:16:04,880 --> 00:16:10,480
+default is going to be fired every time that the people are going to scroll down more than 50%
+
+150
+00:16:10,480 --> 00:16:15,440
+of the page. Or you can, of course, change that out and say, okay, when they scroll up to 90%
+
+151
+00:16:15,440 --> 00:16:22,800
+of the page. And this is how it's going to work. So as a recap, it's you select the, let's say,
+
+152
+00:16:24,480 --> 00:16:30,400
+the place where you would like to send the data to, either Matomo, either an advertising platform,
+
+153
+00:16:30,400 --> 00:16:37,040
+or either any other solution that you have on your server. Then over here as a trigger,
+
+154
+00:16:37,040 --> 00:16:44,960
+you define the condition in order for this tag to deploy in order to execute your tracking code.
+
+155
+00:16:45,520 --> 00:16:52,960
+And last but not least, exactly like in a content management system, when you write a blog post,
+
+156
+00:16:53,840 --> 00:17:00,160
+it's by default written as a draft. And then if you want to put it live, to send it for real
+
+157
+00:17:00,160 --> 00:17:04,720
+on your website, you need to publish. And this is exactly what we have over here. You see with
+
+158
+00:17:04,720 --> 00:17:11,120
+a small rocket, it's the publish button. And when you click on it, it means that what you configured
+
+159
+00:17:11,120 --> 00:17:17,920
+over here is going to be sent to the solution that you want, either Matomo or either an advertising
+
+160
+00:17:17,920 --> 00:17:26,160
+platform or anywhere else. I'm not going to detail much about all the other, let's say,
+
+161
+00:17:26,160 --> 00:17:31,200
+possibilities because I can talk about the preview mode. I can talk as well about variable
+
+162
+00:17:31,200 --> 00:17:36,160
+and so on and so forth. But I'm not going to make it complex. So far, I'm just going to
+
+163
+00:17:36,160 --> 00:17:41,440
+make a brief demo in order for you to clearly identify what's the point and what we are talking
+
+164
+00:17:41,440 --> 00:17:48,800
+about here. So just to conclude with, let's say, the theoretical approach is that you select a tag,
+
+165
+00:17:48,800 --> 00:17:55,120
+you link it to a trigger, and then you publish. You send it live. For the sake of the conference,
+
+166
+00:17:55,120 --> 00:18:01,920
+what I'm going to do is that I'm going to take a real use case. What I did is that I use a website
+
+167
+00:18:01,920 --> 00:18:08,640
+named the uselessweb.com, which is randomly picking up a website just for you to know that
+
+168
+00:18:08,640 --> 00:18:13,200
+I'm not taking any website from a client or anything like this. And I ended up with the
+
+169
+00:18:13,200 --> 00:18:21,760
+following website. So I don't know this website at all. I'm just going to try to show you how a tag
+
+170
+00:18:21,760 --> 00:18:27,840
+manager will be useful here. So as I don't know the webmaster of the website over here, I'm going
+
+171
+00:18:27,840 --> 00:18:35,840
+to use a great extension, which has been recommended to me by a guy named Thomas Persson from Digitalis
+
+172
+00:18:35,840 --> 00:18:42,240
+AB that you will probably see during the Matomo campus. He's doing a lot of conferences about
+
+173
+00:18:42,240 --> 00:18:48,480
+Matomo. This extension is available for Google Chrome, Chromium, and everything which is Google
+
+174
+00:18:48,480 --> 00:18:54,400
+Chrome something. It's named user, CSS, and JavaScript. It's very useful because it allows
+
+175
+00:18:54,400 --> 00:19:00,880
+you to insert some tracking code on a website that you don't own. So it's really good for demoing.
+
+176
+00:19:00,880 --> 00:19:07,280
+So that's what I'm going to do here. So first things first is that I'm going to show you
+
+177
+00:19:07,280 --> 00:19:14,480
+what the website would have looked like in Matomo if I wouldn't have used the tag management system.
+
+178
+00:19:14,480 --> 00:19:20,320
+So I'm going to take the classic tracking code and I'm going to go over here on the website. I'm
+
+179
+00:19:20,320 --> 00:19:30,000
+going to use this given extension. So the extension will just require me to remove the HTML comments
+
+180
+00:19:30,000 --> 00:19:36,720
+so as the script tag like this. And now we are good to go. So I'm going to call it originally
+
+181
+00:19:36,720 --> 00:19:46,080
+matmo matmo camp. Okay. Save and let's go. Okay. So now what's going to happen is that if I look
+
+182
+00:19:46,080 --> 00:19:52,000
+at the website right now, the tracking code is going to be implemented. So normally if I go
+
+183
+00:19:52,000 --> 00:20:00,480
+over here on this page, I should see that I get my visits. Okay. Great. It works. So this is,
+
+184
+00:20:00,480 --> 00:20:08,080
+this is myself. So nothing incredible here. Okay. It's exactly what we are used to see with a
+
+185
+00:20:08,080 --> 00:20:14,720
+traditional Matomo tracking code. As you can see, if I scroll down the page and if I look at my
+
+186
+00:20:14,720 --> 00:20:21,440
+Matomo, nothing crazy will come. And the reason is that this is the classic tracking code. So
+
+187
+00:20:21,440 --> 00:20:28,000
+it's just measuring the page view and just the click as well on outlinks. And we mentioned it's
+
+188
+00:20:28,000 --> 00:20:34,960
+as a file extension downloads. So here, let's imagine, for example, I would like to track the
+
+189
+00:20:34,960 --> 00:20:39,840
+number of people who are clicking on this given image. You see I'm like clicking like five times
+
+190
+00:20:39,840 --> 00:20:46,880
+on it. Nothing's going to happen. Why is that? Well, because the classic tracking code of Matomo
+
+191
+00:20:46,880 --> 00:20:55,200
+has not been, is not hyper here. If I click, for example, here on the RSS, as you can see on the
+
+192
+00:20:55,200 --> 00:21:03,520
+bottom left of my page is going to go on the same, I think it's going to go on index. I'm going to
+
+193
+00:21:03,520 --> 00:21:10,400
+double check if this will be measured by Matomo. Yes. This one's going to be measured by Matomo.
+
+194
+00:21:10,400 --> 00:21:14,640
+It's just that it's not telling me that it's an RSS feed, but I could somehow guess it.
+
+195
+00:21:14,640 --> 00:21:25,200
+Get in touch is a mail too. So I'm going to click on it. I'm going to see if it's going to work.
+
+196
+00:21:25,200 --> 00:21:30,720
+No, it's not working. So here, this is just what I wanted to show you is that the classic
+
+197
+00:21:30,720 --> 00:21:36,000
+Matomo tracking code won't measure probably everything that you need. So if you want to
+
+198
+00:21:36,000 --> 00:21:40,320
+know, for example, if people are interacting with your images, if you want to know if people are
+
+199
+00:21:40,320 --> 00:21:46,320
+clicking over here on the image, if you want to know if they reach a specific part of the content
+
+200
+00:21:46,320 --> 00:21:50,400
+of your page, you cannot know it by default with the classic tracking code of Matomo.
+
+201
+00:21:50,400 --> 00:21:56,400
+Now we're going to see what's going to happen if I deploy a Matomo Tag Manager tracking code. So
+
+202
+00:21:57,200 --> 00:22:02,160
+I'm going to go over here in Tag Manager. I'm going to pick up the
+
+203
+00:22:02,160 --> 00:22:10,080
+container. As I previously mentioned it, what's going to happen is that I'm going to use on small
+
+204
+00:22:10,080 --> 00:22:20,480
+this extension. So it's, which one do I want to play with? It's this one. Okay. I'm going to remove
+
+205
+00:22:20,480 --> 00:22:29,600
+this one. And now we're going to see what's going to happen. So oops. And save. Okay. All good.
+
+206
+00:22:29,600 --> 00:22:39,040
+And save. Okay. All good. Now I go back on the page. Nothing's going to happen. Nothing's going
+
+207
+00:22:39,040 --> 00:22:44,480
+to be incredible right now, because as you can see from the backend of my solution, I have not
+
+208
+00:22:44,480 --> 00:22:49,760
+yet configured the different behavior that I want to measure, like the score tracking, like the click
+
+209
+00:22:49,760 --> 00:22:54,400
+on the mail tool, and so on and so forth. So this is what we're going to do right now. So I'm going
+
+210
+00:22:54,400 --> 00:23:02,400
+to create a new tag. These tags are going to be like, I'm going to call it like scroll event
+
+211
+00:23:02,400 --> 00:23:07,760
+Matomo Ethics. So I just want to have a name, which is different than the other tag, which is already
+
+212
+00:23:07,760 --> 00:23:13,360
+implemented, which is just measurement of page view. Here I'm going to say, okay, I want to measure
+
+213
+00:23:13,360 --> 00:23:18,480
+an event, not a page view, because it has no sense. I mean, someone who is scrolling down the page is
+
+214
+00:23:18,480 --> 00:23:25,600
+still on the same page, so I don't need another page view to be recorded. Then I'm going to have
+
+215
+00:23:25,600 --> 00:23:33,600
+to insert here different values. This is specific to events, because an event is defined by a
+
+216
+00:23:33,600 --> 00:23:40,880
+category, an action, and the name. I mean, that's what Matomo is expecting to have as an event.
+
+217
+00:23:40,880 --> 00:23:48,320
+So here I can fill them with whatever data that I want, but also a time you organize your company,
+
+218
+00:23:48,320 --> 00:23:53,120
+you organize your analytic system in a certain way, and you want to have a naming conversion,
+
+219
+00:23:54,240 --> 00:23:59,600
+which makes sense. So most of the time, the category of an event will be something like,
+
+220
+00:23:59,600 --> 00:24:10,160
+okay, we want to measure interactions. The action is, let's say, the scroll. This is what people
+
+221
+00:24:10,160 --> 00:24:16,880
+perform. This is scroll. And name, I could put the same name as this one, but will be redundant.
+
+222
+00:24:16,880 --> 00:24:22,160
+And so what I'm going to do here is that I'm going to pick up over here what we call a variable.
+
+223
+00:24:23,040 --> 00:24:28,080
+Instead, so variable means that it's not going to be an outcoded value like I did here. It's
+
+224
+00:24:28,080 --> 00:24:33,520
+going to be something which is dynamic based on what we call the DOM of the page, the document
+
+225
+00:24:33,520 --> 00:24:42,000
+object model, which is the information which are on the page. And so here they are. And the one that
+
+226
+00:24:42,000 --> 00:24:47,760
+I'm interested in is technically be, in fact, the page URL, but I would rather prefer to know
+
+227
+00:24:47,760 --> 00:24:52,880
+how far people are scrolling down the page. So I'm going to pick up over here the scroll,
+
+228
+00:24:53,440 --> 00:25:01,360
+and it's the scroll vertical percentage. So until which level do people scroll down.
+
+229
+00:25:02,240 --> 00:25:08,640
+And now I'm going to add a trigger. So the trigger is, as I previously mentioned, is the condition
+
+230
+00:25:08,640 --> 00:25:13,600
+for which the data will be collected. So I'm going to pick up over here the scroll reach.
+
+231
+00:25:14,640 --> 00:25:23,040
+And I want it to be fired. I would consider like, yeah, 50% is fine to me. And that's it.
+
+232
+00:25:23,040 --> 00:25:29,200
+So I click over here and create new trigger. So what I did over here is that I said to the system,
+
+233
+00:25:29,200 --> 00:25:35,440
+please Matomo Tag Manager, send an event with those values, so as a category interaction,
+
+234
+00:25:35,440 --> 00:25:41,920
+as an action scroll, and as a name, pick up the dynamic value to which the people scroll down.
+
+235
+00:25:42,880 --> 00:25:51,360
+And I want you to fire every time that someone is reaching more than 50% of the scroll of the page.
+
+236
+00:25:51,360 --> 00:25:57,760
+And now I can create my tag, and I can decide to publish. So it means like everything which is
+
+237
+00:25:57,760 --> 00:26:07,280
+now within the container, I want it to go live. So I go over here. I give the name of the version.
+
+238
+00:26:08,320 --> 00:26:18,800
+So like scroll deployment. And I click over here. And now what is happening is that
+
+239
+00:26:18,800 --> 00:26:23,920
+everything which was within my container, so here the measurement of the page view,
+
+240
+00:26:23,920 --> 00:26:30,320
+the measurement of scroll event, should have been, if my demo is going in the right direction,
+
+241
+00:26:30,320 --> 00:26:37,360
+should have been deployed properly. So if I go now back on the website, well, nothing impressive
+
+242
+00:26:37,360 --> 00:26:42,880
+is happening because I have not yet scrolled down my page. So if I go over here, I will still see
+
+243
+00:26:42,880 --> 00:26:49,520
+that's okay. I'm over here. I mean, the page is currently viewed. The time is correct. But I have
+
+244
+00:26:49,520 --> 00:26:54,560
+not yet scrolled down. So there's no scroll event which are measured. And now if I scroll down,
+
+245
+00:26:54,560 --> 00:27:01,120
+as you can see, I'm not yet at 50%. So I'm like 30% here. If I go back and let my refresh,
+
+246
+00:27:01,120 --> 00:27:06,240
+nothing should have happened. And this is normal because I have not yet reached the 50%. I'm going
+
+247
+00:27:06,240 --> 00:27:13,120
+to reach the 50%. This is a long page. So it's probably okay. I'm not yet at 50%.
+
+248
+00:27:14,320 --> 00:27:19,360
+But I'm just going to refresh in order to show you that it's still not deployed. And now
+
+249
+00:27:19,360 --> 00:27:28,000
+if I go, okay, here I guess I reached at least 60 or 70%. So normally if I'm lucky enough,
+
+250
+00:27:28,000 --> 00:27:33,920
+I should see, wow, okay, I'm lucky enough. You see, as you can see, the event has been measured.
+
+251
+00:27:33,920 --> 00:27:40,160
+So like, okay, I reached more than 50% of the page. So it's pushing to the system,
+
+252
+00:27:40,160 --> 00:27:47,520
+interaction, scroll, and 50, which represent exactly what I wanted. And once those data are
+
+253
+00:27:47,520 --> 00:27:53,600
+sent, as I decided to send them as an event, they will show up over here in behavior and then event.
+
+254
+00:27:54,480 --> 00:28:00,560
+And I will see them over here. So of course, it's going to give me a lot of valuable information
+
+255
+00:28:00,560 --> 00:28:06,000
+that I didn't have so far. So far with a, let's say, classic tracking measurement,
+
+256
+00:28:06,000 --> 00:28:10,960
+all I could say that people are going on the page, but I don't know if they are reading the
+
+257
+00:28:10,960 --> 00:28:14,800
+content at all, or at least I don't know if they are interacting with the page at all.
+
+258
+00:28:14,800 --> 00:28:19,440
+And thanks to the scroll tracking, I can already say that, okay, at least they understood that
+
+259
+00:28:19,440 --> 00:28:25,360
+they can, let's say, go down the page. Let's take maybe another example,
+
+260
+00:28:25,360 --> 00:28:32,320
+and we're going to take this button, which is the get in touch. So here it's, this one is more for
+
+261
+00:28:32,320 --> 00:28:38,000
+contact interaction. So this is of course very interesting because probably, I mean, this guy,
+
+262
+00:28:38,000 --> 00:28:43,360
+I don't know who is behind the website, but probably he or she wants to get his book
+
+263
+00:28:43,360 --> 00:28:49,920
+purchased or anything like this. So getting the measurement of people who had an intent to contact
+
+264
+00:28:49,920 --> 00:28:56,800
+him, I think it's important. So I'm going to do is that I'm going to hover my mouse over here on the
+
+265
+00:28:58,640 --> 00:29:05,520
+elements because I will need this element information in order to configure my Matomo
+
+266
+00:29:05,520 --> 00:29:14,240
+Tag Manager. Here what I can see is that I have a, it's a link, which is an href, which contains
+
+267
+00:29:14,240 --> 00:29:23,120
+an information, which is mailtooth, so as a text element, which is get in touch. So here I can play
+
+268
+00:29:23,120 --> 00:29:28,160
+differently. I can configure it differently, but I guess that in my case, I will probably say, okay,
+
+269
+00:29:28,160 --> 00:29:34,560
+every time someone's going to click on a link on the page, which contain the information,
+
+270
+00:29:34,560 --> 00:29:40,880
+get in touch as a text element, I want the information to be sent to Matomo. So that's
+
+271
+00:29:40,880 --> 00:29:46,640
+what I'm going to do. So I'm going to go back over here within Matomo. I'm going to select
+
+272
+00:29:47,520 --> 00:29:52,720
+Matomo Analytics as a tag. I could definitely decide to send the data to a third party player.
+
+273
+00:29:52,720 --> 00:29:59,840
+I mean, that's totally fine. It of course depends on the different information system that you are
+
+274
+00:29:59,840 --> 00:30:05,520
+using, but in my case, I'm just using Matomo Analytics. So I'm going to call it like Intents
+
+275
+00:30:06,560 --> 00:30:15,760
+to Contact, Intent to Contact, and I keep the name Matomo Analytics. So here I could decide
+
+276
+00:30:16,480 --> 00:30:22,080
+to send it as an event or to send it as a goal. Maybe for the sake of this example,
+
+277
+00:30:22,080 --> 00:30:27,120
+I'm going to use a goal. The reason why I would like to use a goal is just for this
+
+278
+00:30:27,120 --> 00:30:32,480
+presentation for you guys to see differences. So let's imagine that I want to consider it
+
+279
+00:30:32,480 --> 00:30:39,200
+as a goal. The purpose of my website is really to get some leads, to get some contacts,
+
+280
+00:30:39,200 --> 00:30:44,160
+and probably this interaction has far more value than just scrolling down. If people are scrolling
+
+281
+00:30:44,160 --> 00:30:48,160
+down, nothing is telling me that they are going to contact and purchase my books. Whereas if they
+
+282
+00:30:48,160 --> 00:30:54,560
+contact me to get in touch, there's probably a highest probability that those people convert.
+
+283
+00:30:54,560 --> 00:30:57,840
+So that's probably why I want to define a goal here rather than an event.
+
+284
+00:30:59,440 --> 00:31:06,320
+I'm going to add a trigger now. So the trigger will be an interaction which is based on the click,
+
+285
+00:31:06,320 --> 00:31:14,960
+which is based on the link element. So I'm going to call it like Link Click Mail To.
+
+286
+00:31:16,480 --> 00:31:22,800
+And here I'm going to use a filter because if I just set it like this, it will be like
+
+287
+00:31:22,800 --> 00:31:29,280
+every link that I click on the website, which will be measured as a goal. That's typically not
+
+288
+00:31:29,280 --> 00:31:33,840
+what I want to do because I have many links on the page. As you can see, I've got one here,
+
+289
+00:31:33,840 --> 00:31:40,720
+I've got one here, I've got many. That's not what I want to do. So I want to filter it and I want
+
+290
+00:31:40,720 --> 00:31:46,480
+to say, okay, it's just every time that someone is going to click on an element of the page,
+
+291
+00:31:46,480 --> 00:31:54,240
+so to say here the link where the value equal get in touch. Okay. So click text, get in touch.
+
+292
+00:31:54,240 --> 00:32:01,600
+Here I'm saying, okay, if someone click on the link which contain the text, which is in my case,
+
+293
+00:32:01,600 --> 00:32:09,280
+get in touch. Okay. And now I can create my tag. So it's not going to work straight away.
+
+294
+00:32:09,280 --> 00:32:16,800
+All I need to do first is to go over here in Matomo and I need to add a goal because I haven't
+
+295
+00:32:17,520 --> 00:32:24,720
+done it yet. MailToIntentToContact. So for the people who don't know what a goal is,
+
+296
+00:32:24,720 --> 00:32:30,160
+it's like the most important action that you would like to measure on your website. Here I'm
+
+297
+00:32:30,160 --> 00:32:36,000
+going to select a manual goal because that's how the Matomo Tag Manager recognizes goals
+
+298
+00:32:36,000 --> 00:32:43,040
+with child shift. You need to set them as a manual. I'm going to select a low goal to be
+
+299
+00:32:43,040 --> 00:32:48,560
+converted more than on the visit just for debug purposes and as well because probably one person
+
+300
+00:32:48,560 --> 00:32:54,880
+during the visit can be interesting contacting me multiple times. It's not making much sense,
+
+301
+00:32:54,880 --> 00:33:03,920
+but we never know. So this is what I did. So same thing as last time. Nothing extraordinary
+
+302
+00:33:03,920 --> 00:33:13,600
+is going to happen right now because I have not yet published my work. So now I can decide to publish
+
+303
+00:33:13,600 --> 00:33:20,800
+it. But in my case, I'm going to use something that I have not yet shown you, which is the preview
+
+304
+00:33:20,800 --> 00:33:25,360
+and debug mode because if I publish it, I mean, it's fine in order to make some demo and stuff,
+
+305
+00:33:25,360 --> 00:33:31,120
+but if you do it for real and that you mess up something up, it means that everybody,
+
+306
+00:33:31,120 --> 00:33:38,080
+all the visitors who are going to go on your website will probably send you some fake data
+
+307
+00:33:38,080 --> 00:33:42,880
+or the wrong data and this is like this. So it's a good practice to never publish straight away,
+
+308
+00:33:42,880 --> 00:33:50,080
+but just to preview first in order to say, okay, I want to see if my implementation is correct
+
+309
+00:33:50,960 --> 00:33:59,440
+rather than directly publishing it live. In fact, using the preview mode, it's like reviewing your
+
+310
+00:33:59,440 --> 00:34:04,560
+content draft before publishing it. So that's what I'm going to do over here. So in order to
+
+311
+00:34:04,560 --> 00:34:09,360
+activate the preview mode, you need to enable it within the Matomo Tag Manager, so as I did,
+
+312
+00:34:09,360 --> 00:34:15,360
+and then you need to open the following parameter at the end of the URL. If for some reason it
+
+313
+00:34:15,360 --> 00:34:22,400
+doesn't work like right now, it's probably that you need to clear your cache first, so CTRL F5,
+
+314
+00:34:22,400 --> 00:34:29,680
+and then if you are lucky, so as I do, you get in fact the preview mode which is activated here.
+
+315
+00:34:29,680 --> 00:34:35,680
+So here the preview mode is telling me, okay, the first tag has been deployed, which is the
+
+316
+00:34:37,040 --> 00:34:41,600
+page view one, the fact that the page has been viewed. The scroll tracking has not been yet
+
+317
+00:34:42,560 --> 00:34:48,000
+fired, and that's normal because I have not yet scrolled down up to 50%, and the intent to contact
+
+318
+00:34:48,000 --> 00:34:52,720
+tag has not been deployed yet, hasn't been executed because I haven't yet clicked and get in touch.
+
+319
+00:34:54,000 --> 00:34:59,200
+Just for the sake of the example, you see if I scroll down the page, if I go up to 50%,
+
+320
+00:34:59,200 --> 00:35:05,120
+I get the scroll reach over here, and the scroll reach is executed. Okay, so this is what the preview
+
+321
+00:35:05,120 --> 00:35:11,520
+mode is about. It's about showing you, debugging, helping you in knowing if the tag that you
+
+322
+00:35:11,520 --> 00:35:17,360
+implemented is working or not. What I'm going to do right now is I'm going to click and get in touch,
+
+323
+00:35:17,360 --> 00:35:22,000
+and if I'm lucky enough, normally what's going to happen over here is that an event will be fired
+
+324
+00:35:22,000 --> 00:35:28,320
+in order to say, hey, you know what, the trigger that you implemented with the tag associated to
+
+325
+00:35:28,320 --> 00:35:35,200
+it worked, and it has been recorded by the system. So here I'm going to click on get in touch. Since
+
+326
+00:35:35,200 --> 00:35:40,160
+that I'm kind of lucky, as you can see, the whole link click has been deployed, and here
+
+327
+00:35:40,160 --> 00:35:47,680
+I'm getting it, so it's great. It means that the data has been sent to Matomo, so I can now
+
+328
+00:35:47,680 --> 00:35:54,880
+peacefully look over here and have, in fact, as you can see, the goal which has been deployed.
+
+329
+00:35:54,880 --> 00:36:00,560
+So this is, in fact, what Matomo Tag Manager is about. As I said, it's like pushing your data
+
+330
+00:36:00,560 --> 00:36:08,720
+collection to the next level by giving you the possibility to implement very complex tracking,
+
+331
+00:36:08,720 --> 00:36:16,880
+let's say, method easily thanks to a backend. So, of course, shown like this, you may have the
+
+332
+00:36:16,880 --> 00:36:24,000
+feeling that it's super hard to do, it's going to take me hours to do, I need training, and so on
+
+333
+00:36:24,000 --> 00:36:29,600
+and so forth. Well, just to let you know, just by watching this video, watching this training,
+
+334
+00:36:29,600 --> 00:36:34,320
+let's say this conference, you already learned a lot. After, it's a lot about practice. So,
+
+335
+00:36:34,320 --> 00:36:39,920
+in order to practice, what you can do is exactly the way I did it, is like using this extension
+
+336
+00:36:39,920 --> 00:36:47,680
+and use a JavaScript and CSS, implement it on a website that you don't own, and then send the data
+
+337
+00:36:47,680 --> 00:36:53,520
+to a Matomo website that you have, who will be just for the sake of the demo, just for the sake
+
+338
+00:36:53,520 --> 00:36:59,760
+of practice, and this is how you can learn a lot. Then you have as well on matomo.org, you have a
+
+339
+00:36:59,760 --> 00:37:05,680
+full guide, which is over here, that you can, you just need to type Tag Manager, and you will see,
+
+340
+00:37:05,680 --> 00:37:14,720
+in fact, the full guide over here from the Matomo team. And then at the end of the guide, you even
+
+341
+00:37:14,720 --> 00:37:21,920
+get Tag Manager training. So, unfortunately, that's me again, but with full videos that you can watch
+
+342
+00:37:21,920 --> 00:37:28,560
+explaining you everything that I just show you step by step in order for you guys to feel more
+
+343
+00:37:28,560 --> 00:37:36,480
+confident with the Tag Management system. So, that's really what I wanted to show you as,
+
+344
+00:37:36,480 --> 00:37:49,840
+let's say, the intermediate, let's say, the basic and intermediate level of using a Matomo
+
+345
+00:37:49,840 --> 00:37:55,040
+Tag Manager, or let's say a Tag Manager in general. This is about understanding what it is about and
+
+346
+00:37:55,040 --> 00:38:00,960
+being able to play with the user interface in order to be able already to make some data collection.
+
+347
+00:38:01,760 --> 00:38:08,160
+Then, of course, after some practice, the fact to start to be used with it. And the next part,
+
+348
+00:38:08,160 --> 00:38:15,040
+which is about how to go to the next level, is about knowing what we call the use of the,
+
+349
+00:38:15,040 --> 00:38:25,760
+so, that's my presentation. But the next part in order to move to the next level is really to
+
+350
+00:38:25,760 --> 00:38:34,000
+understand what is the data layer and how you can use it and why is it useful. So, here's the
+
+351
+00:38:34,000 --> 00:38:39,760
+controversy around the Tag Management system. The Tag Management system, as you can see, is
+
+352
+00:38:39,760 --> 00:38:46,720
+mostly advertised for communication and marketing department guys in order to tell them, okay, now
+
+353
+00:38:46,720 --> 00:38:52,480
+you have the super tools which can make super complex things and you don't need to rely on the
+
+354
+00:38:52,480 --> 00:38:58,800
+IT guys anymore. That's the way it is advertised, but you have to know that the way you play or the
+
+355
+00:38:58,800 --> 00:39:05,200
+way I show you how to play with the Tag Management system is just one part of it. That's the part
+
+356
+00:39:05,200 --> 00:39:11,920
+which is the less techy, but for, let's say, advanced and complex project, you will need to
+
+357
+00:39:11,920 --> 00:39:18,480
+use what we call a data layer, which this part relies on your IT dev teams. I'm going to explain
+
+358
+00:39:18,480 --> 00:39:29,360
+myself a little bit. Let's use another example here in order for what I'm explaining you to make
+
+359
+00:39:29,360 --> 00:39:35,840
+more sense. Let's imagine, for example, that you would like to collect as a data for this given
+
+360
+00:39:35,840 --> 00:39:44,320
+page the author of the page. You would like to push to the fact that this given piece of content
+
+361
+00:39:44,320 --> 00:39:52,480
+has been returned by John. The problem here is that the name John is not on the page. You see,
+
+362
+00:39:52,480 --> 00:39:59,680
+I can look on the page. Oh, by the way, I have a John. Bad example. I'm going to say it's written
+
+363
+00:39:59,680 --> 00:40:10,240
+by Johnny. Johnny, double N. I don't have any Johnny on the page. That's problematic, because
+
+364
+00:40:10,240 --> 00:40:17,200
+I cannot send this data to Matomo, but me, as a webmaster, I know that it's Johnny who wrote this
+
+365
+00:40:17,200 --> 00:40:23,760
+given page. So, how can I do this? Well, just with the time measure, the way I show it to you, I
+
+366
+00:40:23,760 --> 00:40:31,360
+cannot. But with, let's say, the contribution of the IT guys, thanks to the data layer, I could make
+
+367
+00:40:31,360 --> 00:40:37,840
+this data available, because you know within your internal system, your CMS, for example, or any
+
+368
+00:40:37,840 --> 00:40:42,560
+user database, that this is John who wrote the content, because on your CMS, you have the
+
+369
+00:40:42,560 --> 00:40:48,480
+possibility to insert the data that the author, for example, it's just that you decided to not show
+
+370
+00:40:48,480 --> 00:40:54,640
+it up on the page, but you need this information in order to send it to Matomo. So, what you need
+
+371
+00:40:54,640 --> 00:41:00,800
+to play with, what you need to have here is what we call a data layer, which consists of a piece of
+
+372
+00:41:00,800 --> 00:41:07,440
+additional code that you add on the page in order for Matomo Tag Manager to be able to grab this
+
+373
+00:41:07,440 --> 00:41:14,000
+information and then push it out to the system. So, it consists of lines of code that you add like
+
+374
+00:41:14,000 --> 00:41:23,360
+this, like this one, directly on the page. And, of course, here, what we call the value are written
+
+375
+00:41:23,360 --> 00:41:30,960
+in programming language. Most of the time, it's PHP or other language that your dev team is familiar
+
+376
+00:41:30,960 --> 00:41:37,600
+with in order to fetch the database, require the data that you want, and then make it available for
+
+377
+00:41:37,600 --> 00:41:45,680
+you within what we call a data layer that you can afterwards get within the system. So, for the sake
+
+378
+00:41:45,680 --> 00:41:51,600
+of the example, what I'm going to do is that I'm going to go back over here, and I'm going to add
+
+379
+00:41:51,600 --> 00:41:59,600
+physically this data layer thing. So, this is what I'm going to do here. I'm going to just name like
+
+380
+00:41:59,600 --> 00:42:08,560
+an author. And I'm going to give it a name, which is, as I said, it's going to be Jonny. So,
+
+381
+00:42:09,760 --> 00:42:19,760
+yes. So, Jonny. And I should be good to go. Okay. So, this is what I have now. I have a data layer
+
+382
+00:42:19,760 --> 00:42:27,600
+on the page with a variable, which is author, which has a value, which is Jonny. And what I can
+
+383
+00:42:27,600 --> 00:42:32,880
+do now within the tag management system, so I'm just going to go back on it. Yes, tag management
+
+384
+00:42:32,880 --> 00:42:39,680
+system. I'm just going to create this variable, and you're going to see that we can grab this value
+
+385
+00:42:39,680 --> 00:42:45,440
+and make it available for the tag manager. So, I'm going to go over here, and I'm going to select
+
+386
+00:42:45,440 --> 00:42:52,000
+what we call the data layer. I'm going to give it a name, which is explicit and which, of course,
+
+387
+00:42:52,000 --> 00:42:58,160
+corresponds to the data layer that I created, which is author. And now it's going to make a bridge
+
+388
+00:42:58,160 --> 00:43:08,080
+between the tag manager and the data layer. And now I need to ask myself, okay, how can I push it
+
+389
+00:43:08,080 --> 00:43:16,480
+to the system? So, in my case, I'm going to, how could I do it? I'm just thinking about this is,
+
+390
+00:43:16,480 --> 00:43:22,080
+there's going to be a custom dimension. So, I'm going to go over here, and I'm going to create a
+
+391
+00:43:22,080 --> 00:43:27,280
+custom dimension. The custom dimension is going to be at the action level. It's going to be named
+
+392
+00:43:27,280 --> 00:43:32,480
+author. It's going to be active. And that's it. So, for the people who don't know what is a custom
+
+393
+00:43:32,480 --> 00:43:40,400
+dimension, it's an entry that we create in Matomo, which is custom. So, it means it doesn't exist by
+
+394
+00:43:40,400 --> 00:43:46,080
+default. It's just, it corresponds to what your website collects, but Matomo has no entry for it.
+
+395
+00:43:46,080 --> 00:43:52,080
+So, that's why it's a custom one. And I just created it in order to be able to have a place
+
+396
+00:43:52,080 --> 00:44:00,640
+where to send the data to within Matomo. And that's mostly it. What I need to do now is just to,
+
+397
+00:44:01,840 --> 00:44:07,920
+in fact, correct this given tag, because this tag is the one dealing with the page view.
+
+398
+00:44:08,480 --> 00:44:15,440
+And I just want to modify this one and say every time that the page is going to be loaded,
+
+399
+00:44:15,440 --> 00:44:21,840
+I want as well to send information dealing with the author, because I want to know who wrote
+
+400
+00:44:21,840 --> 00:44:28,160
+the page. So, I'm going to go over here, and I'm going to select the data variable that I created.
+
+401
+00:44:28,160 --> 00:44:33,360
+And now, if I'm lucky enough on small, I'm not going to publish it. I'm just going to stay in
+
+402
+00:44:33,360 --> 00:44:39,440
+preview mode. But if I have done this thing properly, I should see the author showing up
+
+403
+00:44:39,440 --> 00:44:46,160
+within my Matomo Analytics. So, on small, I'm going to go over here within the visit log,
+
+404
+00:44:46,160 --> 00:44:51,520
+showing you that so far the information is not collected dealing with the page. So, here,
+
+405
+00:44:51,520 --> 00:44:56,400
+for example, if I hover my mouse over this page, I don't know who is the author of the page.
+
+406
+00:44:56,400 --> 00:45:01,280
+But now, if I'm lucky enough and if I put myself in preview mode like this,
+
+407
+00:45:02,880 --> 00:45:08,720
+okay. So, here the page has been loaded. So, normally the variable should have been sent
+
+408
+00:45:08,720 --> 00:45:13,280
+as well. So, I'm going to look at the data layer. Here within the data layer, I know that I have an
+
+409
+00:45:13,280 --> 00:45:19,280
+author named Johnny, which is exactly what I wanted. And if I look at the Matomo configuration,
+
+410
+00:45:19,280 --> 00:45:25,280
+normally on small, I should have, yes, I have it. You see custom dimension index one value Johnny.
+
+411
+00:45:25,840 --> 00:45:32,560
+That's perfect. So, I can now go back within my Matomo. I can refresh my page. And normally,
+
+412
+00:45:32,560 --> 00:45:37,040
+if I hover my mouse over the page, as you can see, there's a custom dimension
+
+413
+00:45:37,040 --> 00:45:42,640
+named author equal Johnny, which is telling me that this page has been written by Johnny.
+
+414
+00:45:42,640 --> 00:45:48,320
+So, if I go over here in behavior, I should see author and I should see the name Johnny,
+
+415
+00:45:48,320 --> 00:45:55,200
+if I'm lucky enough. So, it's loading the page. It's a chip server that I have here. So,
+
+416
+00:45:55,200 --> 00:45:59,120
+that's the reason why it's taking some time. And here, as you can see, I get to report name
+
+417
+00:45:59,120 --> 00:46:03,600
+author with Johnny. And then I get the different pages which have been written by Johnny.
+
+418
+00:46:03,600 --> 00:46:13,040
+So, that's everything that I wanted to show you for today. I'm going to look at the different
+
+419
+00:46:13,040 --> 00:46:19,600
+questions which are asked within the chat for the people who had the chance to watch it. I just would
+
+420
+00:46:19,600 --> 00:46:26,240
+like to say thank you for all the people who are attending it today. I think we encountered,
+
+421
+00:46:26,240 --> 00:46:31,840
+let's say, technical issues. So, that's great that we organized this program at Matomo Camp.
+
+422
+00:46:31,840 --> 00:46:37,360
+If you have any questions dealing with Matomo Tag Manager, just feel free to send them through
+
+423
+00:46:37,360 --> 00:46:43,600
+matomocamp.org through our contact form. Or feel free as well to send directly your questions
+
+424
+00:46:43,600 --> 00:47:01,520
+directly through the metrics that we have right now running at the moment.
+

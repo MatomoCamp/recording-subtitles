@@ -1,0 +1,1708 @@
+1
+00:00:00,000 --> 00:00:10,720
+Hello, everyone. Thank you for joining this session. We are now welcoming Viktor, who is
+
+2
+00:00:10,720 --> 00:00:18,000
+a privacy activist, researcher and writer. He is the head of communications at IPPN and
+
+3
+00:00:18,000 --> 00:00:27,040
+the founder of the Privacy Issue, an editorial platform. Today he will be elaborating some
+
+4
+00:00:27,040 --> 00:00:31,680
+spicy questions about surveillance. Let's hear Viktor for more.
+
+5
+00:00:33,360 --> 00:00:42,000
+Hello. Thanks for the intro. Hi, everyone. As Silva said, my name is Viktor. I'm a privacy
+
+6
+00:00:42,000 --> 00:00:50,160
+researcher from Hungary. I've been a PIVIC and Matomo user for close to 10 years now,
+
+7
+00:00:50,160 --> 00:00:56,960
+so I'm really excited to be here. I would like to kick off this talk with a quote about the question
+
+8
+00:00:56,960 --> 00:01:02,000
+of technological determinism, the question of do we have an agency over the effect of new technology?
+
+9
+00:01:02,560 --> 00:01:08,160
+And Lynn White Jr. said, technology merely opens the door. It does not compare one to enter.
+
+10
+00:01:08,720 --> 00:01:12,960
+And for this gentleman called Marvin Kranzeberg said, true, we are not
+
+11
+00:01:12,960 --> 00:01:18,080
+compelled to enter White's open door. But an open door is an invitation. Besides,
+
+12
+00:01:18,080 --> 00:01:22,960
+who decides which doors to open? And are not our future directions guided by the chamber into
+
+13
+00:01:22,960 --> 00:01:28,720
+which we have stepped? Equally important, once we have crossed the threshold, can we turn back?
+
+14
+00:01:29,680 --> 00:01:33,760
+So just to give you a little bit of context about why I'm really motivated to give this talk.
+
+15
+00:01:34,560 --> 00:01:42,000
+I've been at IPPN for three years now, and we've been talking and thinking and discussing the
+
+16
+00:01:42,000 --> 00:01:48,320
+topic of privacy quite a lot internally and within communities and with customers. And the question
+
+17
+00:01:48,320 --> 00:01:52,960
+regularly comes up, why does it matter? Why privacy matters? What is this end state that we
+
+18
+00:01:52,960 --> 00:01:57,440
+would like to protect ourselves against? And there are many theoretical, philosophical,
+
+19
+00:01:57,440 --> 00:02:02,640
+historical and legal answers to this. But what I would like to explore today is like,
+
+20
+00:02:02,640 --> 00:02:06,240
+if we would be living in a surveillance state or we are headed to a surveillance state,
+
+21
+00:02:06,240 --> 00:02:12,960
+how it will all go down? Would we notice it? And to explore this, I will talk about technological
+
+22
+00:02:12,960 --> 00:02:19,680
+adoptions, surveillance and its relationship with power, and slippery slopes. So to get started,
+
+23
+00:02:19,680 --> 00:02:24,960
+I would like to talk a little bit about privacy and surveillance and some definitions.
+
+24
+00:02:26,000 --> 00:02:32,240
+There are many possible ways to define these terms. But for me, the best one for privacy is
+
+25
+00:02:32,240 --> 00:02:39,840
+that it's the ability to selectively reveal ourselves to others. And this is universally
+
+26
+00:02:39,840 --> 00:02:44,800
+applicable, and it depends on different contexts and relationship and the parties involved. But
+
+27
+00:02:44,800 --> 00:02:51,040
+ultimately, it's about giving you autonomy and having agency over our own actions and thoughts.
+
+28
+00:02:51,760 --> 00:02:59,200
+So they can be used to judge us and nudge us, and it gives us a unique character. So surveillance,
+
+29
+00:02:59,200 --> 00:03:03,840
+for me, is a method of encroaching on that privacy. And this creates an interesting
+
+30
+00:03:03,840 --> 00:03:09,600
+dynamic that the surveyor knows more about us than we know about them. The surveyor knows
+
+31
+00:03:09,600 --> 00:03:14,080
+what it knows, what they know, and they can define the rules of the game and the capabilities and
+
+32
+00:03:14,080 --> 00:03:22,400
+what information to collect. So in this sense, they have an advantage over us. So I think these
+
+33
+00:03:22,400 --> 00:03:27,680
+methodologies have evolved way beyond the 80s movies, like people following you around in vans
+
+34
+00:03:27,680 --> 00:03:33,520
+and rifle mics and all this kind of stuff. These capabilities have exploded. They are massive.
+
+35
+00:03:34,080 --> 00:03:40,880
+And the actors who are doing this have their own reasons for not revealing these. So on the state
+
+36
+00:03:40,880 --> 00:03:46,720
+side, when the state's doing surveillance, they usually have secret committees, secret decision
+
+37
+00:03:46,720 --> 00:03:52,720
+making, and obfuscation, as we'll see in examples. And on the corporate side, on the corporate
+
+38
+00:03:52,720 --> 00:03:58,240
+surveillance side, it's made available by the market, the open market, the last of our approach
+
+39
+00:03:58,240 --> 00:04:06,320
+and the lagging regulations. So why this is very important for me is I think privacy is power.
+
+40
+00:04:06,320 --> 00:04:13,520
+That's the core of the issue for me. Because if there is surveillance, that means there is a
+
+41
+00:04:13,520 --> 00:04:19,360
+lack of privacy, and you lose that power. Because information about you can be used against you,
+
+42
+00:04:19,360 --> 00:04:24,720
+and that creates this power imbalance. And this power can be used for control in the name of
+
+43
+00:04:24,720 --> 00:04:29,760
+national security and the interest of the people. And it can be used for profit in the name of
+
+44
+00:04:29,760 --> 00:04:39,760
+progress and convenience. And this power can manifest in many different ways. And one way is
+
+45
+00:04:39,760 --> 00:04:46,000
+the soft power, where there is maybe not a very clear way of this happening. Maybe it's just like
+
+46
+00:04:46,000 --> 00:04:56,000
+a softer nudges and influence and giving benefits and rewards and taking away some benefits.
+
+47
+00:04:56,560 --> 00:05:03,360
+But on the other end of the spectrum, there's this hard power, which is taking away the freedoms and
+
+48
+00:05:03,360 --> 00:05:12,640
+jails and camps. And both can be exerted on citizens and customers. So exploring soft power
+
+49
+00:05:12,640 --> 00:05:18,480
+a little bit. The clearest example for me of this soft power on the state side is the social credit
+
+50
+00:05:18,480 --> 00:05:22,800
+system in China. Many of you, most of you probably heard about it, but I'm going to give you an
+
+51
+00:05:22,800 --> 00:05:30,400
+overview. So in China, surveillance and AI is used for control, for rewards and benefits, and some,
+
+52
+00:05:31,040 --> 00:05:38,400
+let's say, softer punishments. And it's important to note that these Chinese social credit systems,
+
+53
+00:05:38,400 --> 00:05:45,520
+there is no centralized ubiquitous system where everyone is controlled everywhere and there is
+
+54
+00:05:45,520 --> 00:05:51,520
+one all-seeing guy. These systems are tested in a decentralized fashion in different areas
+
+55
+00:05:51,520 --> 00:05:58,720
+with various rules. And just to give you an overview, I'd like to show this clip.
+
+56
+00:05:58,720 --> 00:06:04,000
+This is from a French movie that the French friends watching this stream might have seen it.
+
+57
+00:06:04,000 --> 00:06:11,440
+7 billion suspects. And they've sourced the clip from the Chinese TV on the social credit system.
+
+58
+00:06:12,640 --> 00:06:17,920
+This is a one-minute clip about this introduction. So I'd like to show you this. I hope it's going to
+
+59
+00:06:17,920 --> 00:06:34,400
+show all right.
+
+60
+00:07:17,920 --> 00:07:24,960
+So, feel free to launch it. I think that's an interesting take on this whole thing. You see,
+
+61
+00:07:24,960 --> 00:07:30,240
+it's like there's this cartoonish, easygoing introduction to this. But I would argue that
+
+62
+00:07:30,240 --> 00:07:34,880
+this is probably not so much fun, especially for the people on this discredited backlist.
+
+63
+00:07:36,000 --> 00:07:41,200
+Although it's important to note that, you know, to make this happen, there is a lot of things
+
+64
+00:07:41,200 --> 00:07:47,760
+happening on the technological side, facial recognition systems, data from different
+
+65
+00:07:47,760 --> 00:07:52,880
+applications, payment system, banking information, police records. All this data is fed into an AI
+
+66
+00:07:53,600 --> 00:07:59,680
+to make decisions and give discourse. And many people in China like it, as per the reports and
+
+67
+00:07:59,680 --> 00:08:04,320
+what we know about this. There's some clear benefits. You know, your latte in the morning
+
+68
+00:08:04,320 --> 00:08:10,560
+might arrive earlier, or you don't have to put down a deposit to rent a car. Great. But on the
+
+69
+00:08:10,560 --> 00:08:14,560
+other end, you know, the people punished by the systems are pushed out to the edges. They become
+
+70
+00:08:15,360 --> 00:08:23,200
+biased. There is a small chance for rehabilitation. And there is a serious chilling effect on what you
+
+71
+00:08:23,200 --> 00:08:31,280
+can do and how far you can push the edges of the system. And when I was researching this whole
+
+72
+00:08:31,280 --> 00:08:37,360
+topic, I was interested in the question of how is this all possible in China? And I encountered one
+
+73
+00:08:37,360 --> 00:08:43,040
+concept. I think it's really important to describe here. It's the concept of legalism or Faji,
+
+74
+00:08:43,920 --> 00:08:49,520
+which says that there is a cost and benefit approach to applying the laws in China. Not
+
+75
+00:08:49,520 --> 00:08:54,560
+everyone is equal in the eye of the law. And the party and the leader decides what is good for
+
+76
+00:08:56,160 --> 00:09:01,600
+society. And laws can be bent and applied selectively and unchallenged to be used for
+
+77
+00:09:01,600 --> 00:09:07,600
+their end. There's not a lot of democratic input. And this is framed as like an extrapolation of
+
+78
+00:09:07,600 --> 00:09:12,240
+the existing laws. We are doing it for you. We are doing it for the betterment of societies.
+
+79
+00:09:12,240 --> 00:09:19,680
+And all this soft power is exerted because it's for the people. But ultimately, there's one person,
+
+80
+00:09:19,680 --> 00:09:28,880
+you know, and he charges to make these decisions, decide, like, what's a good behavior? Like,
+
+81
+00:09:28,880 --> 00:09:34,960
+we will tell you how to behave. And you might have a chance, you know, to decide whether you
+
+82
+00:09:34,960 --> 00:09:41,200
+comply. But ultimately, you cannot make this choice. And I think, you know, the thinking
+
+83
+00:09:41,200 --> 00:09:45,840
+behind this is opposite to the liberal social values that I personally think is better for
+
+84
+00:09:46,480 --> 00:09:53,360
+democracies and the advancement of free ideas. So after exploring this soft
+
+85
+00:09:53,360 --> 00:09:58,240
+power part on the state side, I would like to move on to the corporate side and what's happening
+
+86
+00:09:58,240 --> 00:10:05,360
+there. As you might know from reports and analysis over the years, like, on the corporate side,
+
+87
+00:10:05,360 --> 00:10:09,920
+these surveillance-based business models, especially by Facebook and Google, these have
+
+88
+00:10:09,920 --> 00:10:16,800
+created enormous power and wealth for them, trillions of dollars in market capitalization.
+
+89
+00:10:16,800 --> 00:10:24,320
+So as we move into the direction of spending more time online, especially after these COVID
+
+90
+00:10:24,320 --> 00:10:29,840
+dynamics, shaking things up, spending more time online, doing work online, meeting friends and
+
+91
+00:10:29,840 --> 00:10:37,440
+family online, leisure time, there is more and more data generated. And now we have seen these
+
+92
+00:10:37,440 --> 00:10:45,600
+reports coming out of the vision of Mark Zuckerberg changing the company name to Meta to build this
+
+93
+00:10:45,600 --> 00:10:53,680
+Metaverse. This part of the talk, I've prepared for a couple of months now. And
+
+94
+00:10:53,680 --> 00:10:59,120
+these news that they are renaming the companies is pretty fresh, but it lines up really well with
+
+95
+00:10:59,120 --> 00:11:05,920
+the things that I wanted to share about this, is that in these Metaverse, these real-world dynamics
+
+96
+00:11:05,920 --> 00:11:12,800
+are recreated with their own boundaries and own rules. And people are going to be spending a lot
+
+97
+00:11:12,800 --> 00:11:18,000
+more time there. And we can argue about different aspects, whether it's good for society and what
+
+98
+00:11:18,000 --> 00:11:22,800
+are the downsides. But for me, this surveillance aspect is what's really interesting.
+
+99
+00:11:22,800 --> 00:11:30,080
+In this context, because so far they had the power to sell our attention and
+
+100
+00:11:30,080 --> 00:11:34,800
+not just into ways the algorithm sinks, it's best for engagement and the highest bidder,
+
+101
+00:11:35,440 --> 00:11:42,160
+but it was kind of confined into that space. But in the Metaverse, Facebook is going to own
+
+102
+00:11:42,160 --> 00:11:47,680
+the entire stack, the hardware gateways, the payments, the commerce, social graphs, messaging,
+
+103
+00:11:47,680 --> 00:11:57,440
+and this creates an option for this aggregated ID system. And what Mark Zuckerberg thinks about
+
+104
+00:11:58,560 --> 00:12:03,360
+Facebook, they have to re-transform it into something like the state, because they will
+
+105
+00:12:03,360 --> 00:12:10,800
+have to write the rules of the engagement and the behavior, and they have to kind of do some sort of
+
+106
+00:12:10,800 --> 00:12:15,440
+police work. And to show you, he already thinks along these lines, because when he was asked
+
+107
+00:12:15,440 --> 00:12:20,560
+recently about misinformation and moderation and content policy on Facebook, he said that
+
+108
+00:12:21,360 --> 00:12:25,520
+when you think about the integrity of a system like this, it's a little bit like fighting crime
+
+109
+00:12:25,520 --> 00:12:29,920
+in a city. No one expects you that you're ever going to fully solve it, but the police will
+
+110
+00:12:29,920 --> 00:12:34,480
+have to do a good enough job of helping to deter and catch the bad thing when it happens. So
+
+111
+00:12:35,360 --> 00:12:39,680
+right now on Facebook, this is kind of like encapsulated, but in the Metaverse, this is
+
+112
+00:12:39,680 --> 00:12:46,400
+going to be a much more important question. And in this context, there is no need for Fagi or legalism.
+
+113
+00:12:47,040 --> 00:12:51,920
+Let's just lose regulations and the opportunity for one person to make these kind of decisions
+
+114
+00:12:51,920 --> 00:12:58,640
+and say who and why is rewarded, what is acceptable, and this will be closed systemated
+
+115
+00:12:58,640 --> 00:13:06,080
+by constant surveillance. So I just want to note here without trying to pass any big judgments here
+
+116
+00:13:06,080 --> 00:13:12,400
+that Black Mirror series was not an operating manual. So maybe this is something to think
+
+117
+00:13:12,400 --> 00:13:17,840
+about for people working on this stuff. Okay, so after exploring the soft power, I would like
+
+118
+00:13:17,840 --> 00:13:24,880
+to move on to hard power, like the more egregious and scary violations on privacy and the examples
+
+119
+00:13:24,880 --> 00:13:31,520
+where surveillance is used to exert hard power on populations. We have seen this before in history.
+
+120
+00:13:31,520 --> 00:13:38,080
+You know, we know this from the history books. Oppressive states, authoritarian leaders,
+
+121
+00:13:39,040 --> 00:13:43,680
+xenophobia, you know, feeling into this. But what's happening now, and this is also something that
+
+122
+00:13:43,680 --> 00:13:50,240
+was widely reported and I hope you've heard about it, this is happening now in China, in the province
+
+123
+00:13:50,240 --> 00:13:57,520
+of Xinjiang, where at least tens of thousands of Uyghurs are put into these re-education camps,
+
+124
+00:13:57,520 --> 00:14:02,880
+which are actually concentration camps, because there is evidence of violence and coercion. So
+
+125
+00:14:03,680 --> 00:14:09,520
+they are put into these camps because of their religion, mainly, because they are not conforming
+
+126
+00:14:09,520 --> 00:14:14,480
+with the idea of how Chinese people should behave. And they have not seen a lawyer, they were not
+
+127
+00:14:14,480 --> 00:14:20,240
+convicted. And, you know, these tens of thousands is just the confirmed numbers, you know, activists
+
+128
+00:14:20,240 --> 00:14:28,400
+and researchers say it's probably in the hundreds of thousands. So all this project was carried out
+
+129
+00:14:28,400 --> 00:14:32,560
+with the help of surveillance technology, facial recognition, monitoring of communications,
+
+130
+00:14:32,560 --> 00:14:37,920
+behavioral data, biometric information, feeding into these data points and feeding into this AI.
+
+131
+00:14:38,800 --> 00:14:44,320
+And this system is called IGOP. And like the Chinese secret police use this, and with the
+
+132
+00:14:44,320 --> 00:14:50,960
+help of military police, they put QR codes on houses, monitor people, set up checkpoints. And
+
+133
+00:14:50,960 --> 00:14:56,240
+this algorithm actually makes the decision of who is this, who are the subversive elements and who
+
+134
+00:14:57,440 --> 00:15:03,840
+pose the biggest risk and they are sent into these camps. So this example is the most chilling
+
+135
+00:15:03,840 --> 00:15:09,360
+example of use of surveillance technology. But I want to make the point here that this same logic
+
+136
+00:15:09,360 --> 00:15:14,880
+applies as with the soft power, you know, separate the good and bad, use the data and use these kind
+
+137
+00:15:14,880 --> 00:15:24,480
+of AI systems and these kind of methodologies for the same purpose. So data and tech, we can say
+
+138
+00:15:24,480 --> 00:15:30,240
+it's neutral and it's benign, but it can be introduced and scaled and tested and repurposed
+
+139
+00:15:30,240 --> 00:15:37,680
+for more sinister end. This actually happened in China. So to conclude this part, I would like to
+
+140
+00:15:37,680 --> 00:15:41,280
+talk a little bit about the outsourcing of surveillance, because I've talked about this
+
+141
+00:15:41,280 --> 00:15:50,800
+parallel of state and corporate application of these technologies. It's good to note here that
+
+142
+00:15:50,800 --> 00:15:56,960
+they have similar motivations and they have an interest in working together. And there is big
+
+143
+00:15:56,960 --> 00:16:01,440
+money to be made in surveillance on the private side. And some of the examples here, LexisNexis
+
+144
+00:16:01,440 --> 00:16:05,360
+is a data broker, mainly operating in the U.S. but there are other areas as well.
+
+145
+00:16:05,360 --> 00:16:10,320
+They have 10,000 data points on hundreds of millions of people collecting it from different
+
+146
+00:16:10,320 --> 00:16:18,960
+sources, location, information, license plate data, and different other stuff. And this is all used by
+
+147
+00:16:19,680 --> 00:16:29,280
+law enforcement in the U.S. Another example is the Clearview AI, who build these big facial recognition
+
+148
+00:16:29,280 --> 00:16:38,000
+database systems and they use it from, and they do it with the help of public and private sources.
+
+149
+00:16:38,000 --> 00:16:45,040
+So this is the part where the data collection part is outsourced to private companies. But
+
+150
+00:16:45,040 --> 00:16:50,800
+there's also the next step, which is the making sense of the data. And Palantir is an excellent
+
+151
+00:16:50,800 --> 00:16:55,120
+example here. We are going to see some examples from the U.S. and some other areas as well.
+
+152
+00:16:55,120 --> 00:17:01,440
+Palantir is a data analytics company worth 50 billion now in U.S. dollars, give or take,
+
+153
+00:17:01,440 --> 00:17:06,720
+and dozens of states around the world use it. In the U.S., they deploy so-called fusion centers
+
+154
+00:17:06,720 --> 00:17:12,560
+where they help with the LAPD uses this and New Orleans Police uses this. They help with the
+
+155
+00:17:12,560 --> 00:17:20,320
+comprehension and this kind of like predictive policing system. And they use the state databases
+
+156
+00:17:20,320 --> 00:17:26,000
+and private databases, what we've seen before, and aggregate all this data to make sense of
+
+157
+00:17:26,000 --> 00:17:31,280
+what is happening. And it's called GADM. That might give you an indication of what they think
+
+158
+00:17:31,280 --> 00:17:37,440
+about the whole city and the crime there. So anyone can look at anyone in there who have
+
+159
+00:17:37,440 --> 00:17:43,200
+access to the system. But for example, in L.A., half of all the police officers have access to
+
+160
+00:17:43,200 --> 00:17:49,200
+the system and they look at anyone. And they've also used this like chronic offender test there
+
+161
+00:17:49,200 --> 00:17:55,520
+where they give like points to people in the system to identify who is likely to be offended.
+
+162
+00:17:55,520 --> 00:17:59,840
+And they also list like nonviolent offenders and non-suspects and persons of interest,
+
+163
+00:18:00,400 --> 00:18:05,280
+people who are in different areas getting that kind of like geofenced information from them.
+
+164
+00:18:05,280 --> 00:18:11,840
+So this really feeds into the idea of everyone can become a suspect. So, yeah, this is about
+
+165
+00:18:11,840 --> 00:18:18,320
+the outsourcing of the surveillance. So now I've given you kind of like an overview of what's
+
+166
+00:18:18,320 --> 00:18:23,360
+happening and some of the capabilities. Just moving back to the question of the title of the
+
+167
+00:18:23,360 --> 00:18:28,080
+talk, are we there yet? I think in some places we are definitely there. It depends on where you live
+
+168
+00:18:28,080 --> 00:18:37,680
+and who you are. And to help you determine at your place whether you are there yet,
+
+169
+00:18:38,240 --> 00:18:44,240
+it's important to, I think, to talk about the concept of slippery slopes. So the slippery
+
+170
+00:18:44,240 --> 00:18:49,840
+slope argument is that when we take one small step in a specific direction, it can have a snowball
+
+171
+00:18:49,840 --> 00:18:55,600
+or domino effect. It can have dire outcomes. And this question came up with the questions of
+
+172
+00:18:55,600 --> 00:19:01,600
+Apple's deployment of client-side scanning for child exploitation images when they scan your
+
+173
+00:19:01,600 --> 00:19:06,640
+iPhone if you are synced to iCloud and check against these hashes. Now, the technical details
+
+174
+00:19:06,640 --> 00:19:14,000
+are more complex than I could get into in this timeframe. But the point here is that privacy
+
+175
+00:19:14,960 --> 00:19:22,560
+advocates and researchers and information security professionals warned that this whole thing can
+
+176
+00:19:23,520 --> 00:19:29,200
+make us end up in a bad place. And it will lead to more privacy issues. It will lead to more
+
+177
+00:19:29,200 --> 00:19:34,160
+surveillance. It will give capabilities to authoritarian governments. And a lot of people
+
+178
+00:19:34,160 --> 00:19:39,600
+are eager to jump in, like, OK, come on. Don't use the slippery slope argument. That's a fallacy.
+
+179
+00:19:39,600 --> 00:19:46,080
+And that won't happen. If you enable iCloud, you're not going to end up in a concentration camp.
+
+180
+00:19:46,080 --> 00:19:51,600
+That's just silly. But my argument here is that that's not what privacy advocates are saying.
+
+181
+00:19:51,600 --> 00:19:59,120
+I think the slippery slope argument is only a fallacy if the steps following each other would
+
+182
+00:19:59,120 --> 00:20:04,560
+not lead to the proposed outcome. And we cannot demonstrate that. But the inference of these steps
+
+183
+00:20:04,560 --> 00:20:12,160
+is warranted after careful evaluation of these steps. Then we can agree and we can agree
+
+184
+00:20:12,160 --> 00:20:18,480
+objectively about these steps. And then it's a valid argument. And it's not a threat.
+
+185
+00:20:19,840 --> 00:20:24,480
+It's a threat. And it's not a fallacy. So it's valid to talk about these things.
+
+186
+00:20:24,480 --> 00:20:32,000
+And what we've seen in China as a possible end state, it's not an imaginary situation.
+
+187
+00:20:32,000 --> 00:20:40,480
+We can easily get there if there are different steps to happen. And for this part of the talk,
+
+188
+00:20:40,480 --> 00:20:46,080
+I wanted to create this thought experiment, how this slippery surveillance slope would look like.
+
+189
+00:20:46,080 --> 00:20:53,280
+Well, that's a tongue twister. So there are six steps that I've identified. And we are going to
+
+190
+00:20:53,280 --> 00:21:00,640
+look at them and how they happen in different countries now. So first, that data about citizens
+
+191
+00:21:00,640 --> 00:21:06,880
+is abundant. I think this is given in most areas of the world now. Both in the state and on the
+
+192
+00:21:06,880 --> 00:21:13,600
+corporate side and the sharing on these two ends. And then the second step on the slope is targeted
+
+193
+00:21:13,600 --> 00:21:21,600
+surveillance and easy and normalized. So hacking into people's accounts, giving a lot of legal
+
+194
+00:21:21,600 --> 00:21:27,600
+space for that, getting around different legal protections, getting stuff without obtaining
+
+195
+00:21:27,600 --> 00:21:35,360
+warrants. So we'll see an example in the next part and example from Hungary, where I'm from.
+
+196
+00:21:35,360 --> 00:21:42,960
+And so this is the next step I've identified. And the third one is that the state increases
+
+197
+00:21:42,960 --> 00:21:47,440
+the scope without any kind of pushback. So after this targeted surveillance is easy and normalized,
+
+198
+00:21:47,440 --> 00:21:53,280
+after this targeted surveillance is easy and normalized, and we can see there is no oversight,
+
+199
+00:21:54,400 --> 00:21:59,840
+there is a lot of dodging questions, and there is more data points, and there is more information
+
+200
+00:21:59,840 --> 00:22:07,600
+to be had, they start to build these systems. So I think in some of the states, we definitely
+
+201
+00:22:07,600 --> 00:22:12,640
+know about the Snowden revelations. It's happened already there. China is definitely there. In the
+
+202
+00:22:12,640 --> 00:22:18,080
+EU, I think some of the countries are moving into this direction, as we're going to explore
+
+203
+00:22:18,080 --> 00:22:24,800
+a little bit later. So this is the third step. This is moving into this dragnet and mass surveillance
+
+204
+00:22:25,520 --> 00:22:29,600
+and using that for different purposes. And then a fourth step is very important here,
+
+205
+00:22:29,600 --> 00:22:35,600
+is the interventions due to political need. So when there is like this loosening grip on power
+
+206
+00:22:35,600 --> 00:22:41,680
+or that there is this challenge from civil society, from journalists, there is this part
+
+207
+00:22:41,680 --> 00:22:48,640
+where this data is actually getting used. And then as a fifth step, you can become the subject of
+
+208
+00:22:48,640 --> 00:22:53,920
+surveillance. And the first step, only the journalists and only the opposition party members
+
+209
+00:22:54,560 --> 00:23:01,040
+and people of interest in that kind of groups. But then it's very easy to say that, okay,
+
+210
+00:23:01,040 --> 00:23:07,120
+so we don't want any kind of gay propaganda going on here. There are some voices sounding that in
+
+211
+00:23:07,120 --> 00:23:12,720
+different parts of the world, like in Hungary. So it's very easy to move to that direction.
+
+212
+00:23:12,720 --> 00:23:18,960
+We need to create this list and we need to survey more and more people. And the sixth step,
+
+213
+00:23:20,080 --> 00:23:27,360
+you can be discriminated. Your rights can be denied and you can end up in confinement or worse,
+
+214
+00:23:27,360 --> 00:23:32,960
+depending on the legal protections that you have or how much your state want to honor them.
+
+215
+00:23:32,960 --> 00:23:40,720
+And so going back to this normalizing surveillance part, I think it's very instructive,
+
+216
+00:23:40,720 --> 00:23:46,080
+like what happened in Hungary about the Pegasus scandal. If you haven't heard about that,
+
+217
+00:23:46,080 --> 00:23:51,520
+Pegasus is a spyware. It can be installed on phones. It's pretty costly and it's very targeted.
+
+218
+00:23:52,320 --> 00:23:58,480
+And in Hungary, we had this leak where it involved many other countries as well. Not just Hungary,
+
+219
+00:23:58,480 --> 00:24:05,200
+but in Hungary, there were at least a hundred people on this list. And in some cases, at least
+
+220
+00:24:05,200 --> 00:24:11,040
+10 cases, it was demonstrated that these phones have actually been hacked. But on the list,
+
+221
+00:24:11,040 --> 00:24:19,680
+there was opposition politicians, lawyers, investigative journalists. And this whole thing
+
+222
+00:24:19,680 --> 00:24:25,440
+came out in July and there were no clear answers. There was no admittance, like who have done this,
+
+223
+00:24:25,440 --> 00:24:31,040
+why they have done this, why it was a good idea. There was always just obfuscation. And finally,
+
+224
+00:24:31,040 --> 00:24:36,000
+yesterday, after a couple of months, the Hungarian government admitted it. Yes,
+
+225
+00:24:36,000 --> 00:24:42,960
+we have purchased the software. But still, the line is that we have done everything legally.
+
+226
+00:24:43,680 --> 00:24:47,680
+Yeah, of course. I mean, the laws are written in a way to help states like ours get away with
+
+227
+00:24:47,680 --> 00:24:51,440
+this kind of surveillance and normalize this surveillance. And they can use this for their
+
+228
+00:24:51,440 --> 00:24:59,520
+own ends and goals to get the grip on power and sustain that power. And a very interesting line
+
+229
+00:24:59,520 --> 00:25:06,320
+from yesterday is that the person, the government officials who were announcing this for journalists
+
+230
+00:25:06,320 --> 00:25:12,640
+said, it's OK, because tech giants do more spying than the state. And he went on to talk about how
+
+231
+00:25:12,640 --> 00:25:18,960
+law-moner ads follow their friends around and stuff like that. Well, of course, that's a valid
+
+232
+00:25:18,960 --> 00:25:26,320
+point in itself, but not when you want to escape accountability and hide your own actions. It's
+
+233
+00:25:27,520 --> 00:25:38,080
+moving this whole conversation away from that. So yeah, so just thinking a little bit about
+
+234
+00:25:39,360 --> 00:25:44,000
+giving you an overview about what's happening with the adoption of these technologies. That's the
+
+235
+00:25:44,000 --> 00:25:50,880
+next section I want to talk about. It's important to note that many countries, China especially,
+
+236
+00:25:50,880 --> 00:25:58,000
+but even some of the European surveillance tech, is getting exported into other countries. China,
+
+237
+00:25:58,000 --> 00:26:03,360
+that's if you put it in your favorite search engine, which is, I really hope it's not Google,
+
+238
+00:26:03,360 --> 00:26:08,240
+China surveillance technology plus a country, you can play this game and many countries will end up
+
+239
+00:26:08,240 --> 00:26:15,440
+with some reports of China trying to push their surveillance tech to them. Ecuador, Chile, and many
+
+240
+00:26:15,440 --> 00:26:22,960
+African countries cooperate with them. And they use this to legitimize their whole reasoning.
+
+241
+00:26:22,960 --> 00:26:29,440
+It works here. It will work for you. Look at all this success. And they want to make money off of
+
+242
+00:26:29,440 --> 00:26:37,280
+it, of course, and this whole technological dominance. But this is not the end of the story.
+
+243
+00:26:37,280 --> 00:26:42,480
+I mean, most of the EU countries, we have some cooperation with the Chinese, but I think it's
+
+244
+00:26:42,480 --> 00:26:47,920
+getting a little bit more like a hot topic. So some of the states are pulling back. But
+
+245
+00:26:49,680 --> 00:26:54,800
+in terms of cooperating with companies like Preview AI or Palantir that I've talked about,
+
+246
+00:26:54,800 --> 00:27:01,680
+there is a lot of things going on. So like in the EU, Palantir is partnered with Europol,
+
+247
+00:27:01,680 --> 00:27:07,280
+French intelligence services, Danish national police, and other countries. And like the Dutch,
+
+248
+00:27:08,000 --> 00:27:13,280
+authorities have revealed that they are holding more than 45,000 documents relating to Palantir
+
+249
+00:27:13,280 --> 00:27:19,280
+and their cooperation, but they don't show these. And Danish police have refused freedom of
+
+250
+00:27:19,280 --> 00:27:26,560
+information requests on these documents. Europol reportedly have 69 documents, but they refused
+
+251
+00:27:26,560 --> 00:27:31,920
+access to almost all of them on the grounds of public security. So you can see there is
+
+252
+00:27:31,920 --> 00:27:38,960
+this obfuscation going on in these areas as well. And one other crazy story about Preview AI and
+
+253
+00:27:38,960 --> 00:27:48,160
+this facial recognition databases is from Finland. Like Buzzfeed, a journalist went and explored
+
+254
+00:27:48,160 --> 00:27:55,680
+these leaks about who is using Preview AI and who's testing it. And Swedish police have tested it
+
+255
+00:27:55,680 --> 00:28:03,280
+and French Ministry of Interior have tested it. And they went to a Finnish government official
+
+256
+00:28:03,280 --> 00:28:08,480
+and asked them, okay, so have you used it? Because we have some conflicting reports here. And the
+
+257
+00:28:08,480 --> 00:28:14,480
+Finnish official said like, we don't know what Preview AI is. But then after this conversation,
+
+258
+00:28:14,480 --> 00:28:21,280
+they researched it and have started testing it. So yeah, so this is the downside of awareness,
+
+259
+00:28:21,280 --> 00:28:30,640
+I guess. So moving on and thinking about these adoptions and putting it a little bit into like
+
+260
+00:28:30,640 --> 00:28:37,600
+this long-term and historical perspective and this longer term trajectory. I would like to
+
+261
+00:28:37,600 --> 00:28:45,600
+show you this framework by Carlotta Perez, a scholar who is researching technological revolutions.
+
+262
+00:28:45,600 --> 00:28:52,480
+And this is about this technology search cycle. And she says that there are two phases of these
+
+263
+00:28:52,480 --> 00:28:57,360
+revolutions, the installation period and the deployment period. And these general purpose
+
+264
+00:28:57,360 --> 00:29:02,880
+technologies, last time it happened with the car and oil and mass production in the early 20th
+
+265
+00:29:02,880 --> 00:29:09,440
+century, there is this first phase where there is this rapid testing and creative destruction
+
+266
+00:29:09,440 --> 00:29:15,040
+and new paradigms coming and there is a cultural shift. Industries collapsed, loss of jobs,
+
+267
+00:29:15,040 --> 00:29:21,360
+wealth inequality, and there's usually a financial bubble. And this creates a lot of disillusionment,
+
+268
+00:29:21,360 --> 00:29:28,000
+this creates a lot of chaos. And then in the last time this happened, there were these wars and
+
+269
+00:29:28,000 --> 00:29:33,920
+like Hitler happened. So I'm not saying that's going to happen again. But what Ms. Perez is
+
+270
+00:29:33,920 --> 00:29:42,160
+saying right now, she has explored this in the current context with the computer and information
+
+271
+00:29:42,160 --> 00:29:48,880
+technology, energy, clean energy revolution, nanotech and biotech. She argues that we are
+
+272
+00:29:48,880 --> 00:29:55,760
+somewhat halfway there. So we had some bubbles now and we had some crisis, like two bigger
+
+273
+00:29:55,760 --> 00:30:02,480
+crises in the past 20 years. But she says that we are still in this turning point. And why it's
+
+274
+00:30:02,480 --> 00:30:08,480
+important in this context is because it brings a lot of disillusioned people and it creates a lot
+
+275
+00:30:08,480 --> 00:30:14,800
+of upheaval. And this creates an opening for messianic type of authoritarian leaders,
+
+276
+00:30:15,360 --> 00:30:20,560
+just like it happens in the 30s, who come in and offer a direction, offer a solution,
+
+277
+00:30:20,560 --> 00:30:25,200
+I will tell you and I will help you to make sense of this work. And my argument here is that
+
+278
+00:30:25,200 --> 00:30:31,760
+surveillance helps them a great deal to create this kind of stability and order. And we can argue,
+
+279
+00:30:31,760 --> 00:30:36,880
+if you look at what's happening in China, they're already in this synergy phase. There was enormous
+
+280
+00:30:36,880 --> 00:30:43,520
+growth based on all these technologies in the past 5-10 years. And it came together with the
+
+281
+00:30:43,520 --> 00:30:48,480
+rapid deployment of surveillance. So this golden age that comes with this deployment period,
+
+282
+00:30:48,480 --> 00:30:53,760
+just like it happened after the wars, it might come with a big surveillance for us.
+
+283
+00:30:55,280 --> 00:31:03,120
+So we bring it all together. I think we are in this moment where it's ripe for this rapid
+
+284
+00:31:03,120 --> 00:31:08,960
+and wide adoption of surveillance technologies. And if you think about this long-term trajectory,
+
+285
+00:31:08,960 --> 00:31:14,560
+there could be new capabilities and really hocus-pocus growth of adoption like we see
+
+286
+00:31:14,560 --> 00:31:20,960
+with other technologies. And I think we are not at the point of this sci-fi, all-seeing guy,
+
+287
+00:31:20,960 --> 00:31:26,160
+everyone is monitored all the time in real time, but it's possible. And we can really get there.
+
+288
+00:31:26,160 --> 00:31:33,440
+It might take 5 years, 10 years. It might happen in China first. But if there is success there,
+
+289
+00:31:33,440 --> 00:31:40,800
+which can be emulated, it's without legislation, without awareness, without pushback from people
+
+290
+00:31:40,800 --> 00:31:49,520
+like us, there might be more progress towards that area. So all this makes me want to make
+
+291
+00:31:50,160 --> 00:31:54,880
+a couple of points. First is like autocratic states love surveillance, so we love surveillance.
+
+292
+00:31:54,880 --> 00:31:59,200
+They benefit a lot from these technologies and the framing of the security and betterment
+
+293
+00:31:59,200 --> 00:32:05,520
+of societies. And I would expect to see more of this against the others, migrants, subversive
+
+294
+00:32:05,520 --> 00:32:12,720
+elements. And this whole security incentives and this whole national security drum can be beaten
+
+295
+00:32:12,720 --> 00:32:20,240
+and say that we will sway the public opinion towards this surveillance being a good thing for
+
+296
+00:32:20,240 --> 00:32:27,680
+you. And the next question for me is, who can push the button tomorrow? Who are going to be the
+
+297
+00:32:27,680 --> 00:32:36,240
+future rulers? Yuval Harari, writer and thinker, recently noted that perhaps a future autocrat is
+
+298
+00:32:36,240 --> 00:32:42,080
+going to be an Instagram star and not a Bond villain. They will use these technologies in a
+
+299
+00:32:42,080 --> 00:32:46,640
+very methodical way. They will know all the ins and outs. And also they will know a lot about
+
+300
+00:32:46,640 --> 00:32:53,760
+branding and propaganda. And who will be their advisors? Who will make these kind of decisions?
+
+301
+00:32:53,760 --> 00:32:59,600
+I think these questions are not asked enough. And right now we are in this phase where there is this
+
+302
+00:32:59,600 --> 00:33:05,200
+veil of fake accountability and leader knows best rhetoric of one party state. This is creeping
+
+303
+00:33:05,200 --> 00:33:14,320
+into our democracies. And the question also comes like what is lost? And I think the open societies
+
+304
+00:33:14,320 --> 00:33:20,480
+right to self-determination, freedom to experiment and human rights equally to all and religious
+
+305
+00:33:20,480 --> 00:33:26,960
+freedoms, these are all under attack. And I think in liberal democracies, these values are given
+
+306
+00:33:26,960 --> 00:33:35,360
+and often fought for. And privacy helps these values. But surveillance has a chilling effect on
+
+307
+00:33:35,360 --> 00:33:42,240
+them. And I think this whole question is a defining topic in our lives. And a push away from these
+
+308
+00:33:42,240 --> 00:33:47,200
+can support increased surveillance, strengthening autocratic systems and help new autocrats come
+
+309
+00:33:47,200 --> 00:33:55,600
+into power will be harder to challenge. And last question before we are wrapping up, who benefits?
+
+310
+00:33:55,600 --> 00:34:01,600
+This hunger for information and more data and creation of more data points is kind of endless
+
+311
+00:34:01,600 --> 00:34:07,680
+now because of its value. It has been demonstrated and tested for this power. And the trust in
+
+312
+00:34:07,680 --> 00:34:14,800
+governments and corporations are eroding. All the measurements and all the service shows that.
+
+313
+00:34:14,800 --> 00:34:21,280
+And to rebuild that, if you want to rebuild that, we need to have awareness and oversight
+
+314
+00:34:21,280 --> 00:34:28,000
+and transparency and accountability from state and corporations. And there has to be some sort of a
+
+315
+00:34:28,000 --> 00:34:34,000
+real democratic process to decide from citizens and customers, not just a black box and like
+
+316
+00:34:34,000 --> 00:34:43,120
+obfuscating everything in the name of security. So ultimately, if you want to ask for the question
+
+317
+00:34:43,120 --> 00:34:47,360
+of the title of the talk, I think you have to decide. Now you have some view, you have some
+
+318
+00:34:47,360 --> 00:34:51,840
+frameworks, and you have some ideas about my thinking about this. But you have to decide for
+
+319
+00:34:51,840 --> 00:34:57,840
+yourself, how deep is this slippery slope? Where does it lead? How far we are on it? You might
+
+320
+00:34:57,840 --> 00:35:03,600
+disagree with some of my conclusions. But what I know is that without these checks and
+
+321
+00:35:03,600 --> 00:35:07,760
+balances and the ability and willingness to understand and oppose these changes,
+
+322
+00:35:08,320 --> 00:35:14,640
+we are going to get pushed down on these slopes by others. So I have a short plea to you. If you
+
+323
+00:35:14,640 --> 00:35:19,840
+agree with me about these values and these questions and threats, please don't work on
+
+324
+00:35:19,840 --> 00:35:25,760
+surveillance technologies and these capabilities to deploy them for control and creating these
+
+325
+00:35:25,760 --> 00:35:31,680
+power imbalances. Palantir is looking for a lot of people in a lot of European countries.
+
+326
+00:35:31,680 --> 00:35:37,840
+You know, so that's something that I would argue for you and others to not take that step. But
+
+327
+00:35:37,840 --> 00:35:42,320
+maybe we'll end up with the finished preview example and someone will start working for
+
+328
+00:35:42,320 --> 00:35:49,680
+Palantir after this. Yeah, I hope that's not gonna happen. So what you can do instead is working on
+
+329
+00:35:49,680 --> 00:35:56,240
+giving power to the people and like with building encryption, privacy preserving software, activism,
+
+330
+00:35:56,240 --> 00:36:01,680
+education. And together, we can envision new models of governance and new business models.
+
+331
+00:36:01,680 --> 00:36:06,400
+And since you are here at Matomo can be watching this talk, you might already do some of this work
+
+332
+00:36:06,400 --> 00:36:11,840
+and I really applaud you. And I would like to, you know, ask you to keep doing that. I'm more
+
+333
+00:36:11,840 --> 00:36:18,560
+than happy to help you and be a partner in that. And together, we can support the public to conduct
+
+334
+00:36:18,560 --> 00:36:23,760
+their affairs in private, communicate in private, and do all this without the undue and unjust
+
+335
+00:36:23,760 --> 00:36:32,720
+surveillance. So before we part, I would like to finish with the the other end of this quote
+
+336
+00:36:32,720 --> 00:36:39,760
+from Malin Kranzberg that we have started with. He says that technology is neither good nor bad,
+
+337
+00:36:39,760 --> 00:36:44,880
+nor is it neutral. Many of our technology related problems arise because of the unforeseen
+
+338
+00:36:44,880 --> 00:36:50,160
+consequences when apparently benign technologies are employed on a massive scale. As many technical
+
+339
+00:36:50,160 --> 00:36:55,120
+applications that seem the boon to mankind when first introduced become threats when they're used
+
+340
+00:36:55,120 --> 00:37:01,600
+become widespread. So thank you for your attention. I think we have something like 10 minutes for
+
+341
+00:37:01,600 --> 00:37:06,960
+questions. But if there's no way of doing that, you know, you can just email me at
+
+342
+00:37:06,960 --> 00:37:13,600
+victor.ivp.net. So I'm happy to talk about any of these topics and help you with research or anything else.
+
+343
+00:37:13,600 --> 00:37:21,920
+I have shared some questions in the chat for you, Victor. Okay, I'm just gonna read them out loud
+
+344
+00:37:21,920 --> 00:37:27,040
+then and try to answer them. So life like house and money are often two big factors which are
+
+345
+00:37:27,040 --> 00:37:32,560
+making people move. According to you, how is it possible for citizens feel more concerned about
+
+346
+00:37:32,560 --> 00:37:41,680
+privacy? If I understand the question correctly, it's like perhaps that there are more important
+
+347
+00:37:41,680 --> 00:37:49,840
+or more like pressing things on people's lists than than privacy. I think you can connect,
+
+348
+00:37:49,840 --> 00:37:57,680
+you know, these topics to privacy, for example. So the health data is exploited as well and states
+
+349
+00:37:57,680 --> 00:38:04,640
+are sharing health data. For example, the NHS in the UK is sharing health data with Palantir.
+
+350
+00:38:04,640 --> 00:38:12,240
+So if we summarize my talk and its possible outcomes and you connect it with
+
+351
+00:38:13,120 --> 00:38:19,520
+these kind of issues of health and money, that's one way to get there. But of course, you know,
+
+352
+00:38:19,520 --> 00:38:26,080
+we have this massive hierarchy of needs to think about. So I think if some really have like really
+
+353
+00:38:26,080 --> 00:38:32,720
+pressing matters that would prevent them to think about these issues and they don't have the
+
+354
+00:38:32,720 --> 00:38:37,920
+options to switch to different other solutions, like using other providers, that are usually more
+
+355
+00:38:37,920 --> 00:38:44,000
+costly. So I see that as a challenge. But if there is more awareness, there is more demand,
+
+356
+00:38:44,000 --> 00:38:49,040
+there's going to be more solutions that are more private. So I think that's one way to get there.
+
+357
+00:38:50,720 --> 00:38:54,880
+Second question, do you have any proof or leak or any other sort of information showing that
+
+358
+00:38:54,880 --> 00:38:59,040
+a gay fan can track an individual along the website's apps he's visiting? For example,
+
+359
+00:38:59,040 --> 00:39:03,120
+being loaded to Google account and being able to know that this user is visiting a given website
+
+360
+00:39:03,120 --> 00:39:09,840
+thanks to tracker with GG funds. Well, I have to tell you that this is not my specific area of
+
+361
+00:39:09,840 --> 00:39:16,800
+expertise. So I won't have to get back on you on that about the technical details. But, you know,
+
+362
+00:39:16,800 --> 00:39:23,200
+I don't think we need any leaks for this. There's actually, you know, third party trackers. So,
+
+363
+00:39:23,840 --> 00:39:27,840
+for example, if you visit sites that have Google Analytics or like a Facebook pixel,
+
+364
+00:39:27,840 --> 00:39:34,560
+that immediately analyzes your persona, based on different information, like your IP address,
+
+365
+00:39:35,360 --> 00:39:40,080
+and like your screen size and different unique, there is this unique fingerprint,
+
+366
+00:39:40,080 --> 00:39:44,320
+and that is passed on to Google and that is passed on to Facebook. And then they are able
+
+367
+00:39:44,320 --> 00:39:48,640
+to track you across sites. I think this is pretty well documented. So I hope I understand the
+
+368
+00:39:48,640 --> 00:39:52,960
+question well. So yeah, this is happening. If you're concerned about this, you can use
+
+369
+00:39:52,960 --> 00:39:58,160
+tracker blockers and perhaps VPN and some other issues. But yeah, I don't want to promote any of
+
+370
+00:39:58,160 --> 00:40:06,560
+the things that we are doing. So next question, like any websites, sources of information,
+
+371
+00:40:06,560 --> 00:40:11,200
+of reference that we can refer to in order to find that the technologies you mentioned about
+
+372
+00:40:11,200 --> 00:40:17,440
+surveillance? Well, I think if you are looking for something specific, I think you should email me
+
+373
+00:40:17,440 --> 00:40:23,440
+and I can help you get back to you with a couple of links. Well, my source of information, one is
+
+374
+00:40:23,440 --> 00:40:28,640
+that there are many great technology writers, investigative journalists, who really try to track
+
+375
+00:40:28,640 --> 00:40:35,680
+this stuff down. And they publish in different like in the Verge, Vice and different other
+
+376
+00:40:35,680 --> 00:40:41,520
+mainstream publications. And there are also independent bodies. So EDIRI are a good resource
+
+377
+00:40:41,520 --> 00:40:49,680
+in Europe for this. Privacy International, it's mostly concerned with Europe. And there are the
+
+378
+00:40:49,680 --> 00:40:56,240
+similar organizations in the US to document this kind of stuff. So I think I would go to that kind
+
+379
+00:40:56,240 --> 00:41:02,880
+of sources. Any ideas on how Pegasus got into the smartphones? Was it like installing a special
+
+380
+00:41:02,880 --> 00:41:09,840
+Android app? Yeah, I think I've listened to a discussion with a Hungarian journalist about this
+
+381
+00:41:09,840 --> 00:41:20,560
+just recently. So the Pegasus malware is based on so called zero day exploits. So they work with
+
+382
+00:41:20,560 --> 00:41:28,720
+hackers and like callers who try to find exploits in the operating systems, which are not have been
+
+383
+00:41:28,720 --> 00:41:34,800
+have not been discovered before. So for example, they could manage to do a like an installation
+
+384
+00:41:34,800 --> 00:41:40,960
+methodology, where they send just a link to someone on WhatsApp. So for example, for investigative
+
+385
+00:41:40,960 --> 00:41:44,720
+journalists, here is an interesting leak about something that's happening in my country, and
+
+386
+00:41:44,720 --> 00:41:49,440
+there is a link. And if you follow that link, you don't have to do anything. It just uses your
+
+387
+00:41:50,080 --> 00:41:57,760
+this exploit in your phone and this vulnerability in your phone to restart the system and, and jail
+
+388
+00:41:57,760 --> 00:42:01,920
+break it, which means that there is like a change in the whole operating system. And after that,
+
+389
+00:42:01,920 --> 00:42:06,640
+they immediately take care of that phone. And there was like another thing that was discovered
+
+390
+00:42:06,640 --> 00:42:12,560
+that they didn't even have to click any links. I think it was through Skype or some sort of
+
+391
+00:42:12,560 --> 00:42:17,360
+video call technology. If you had that app running in the background, they could send requests through
+
+392
+00:42:17,360 --> 00:42:21,920
+that app, through that app, and no links, you wouldn't have to do anything. If you are sleeping
+
+393
+00:42:21,920 --> 00:42:25,840
+and that happens on your phone, they were immediately installed. So this is this is the
+
+394
+00:42:25,840 --> 00:42:29,520
+scariest thing about that, that you know, you might not have to do anything wrong for that.
+
+395
+00:42:29,520 --> 00:42:36,320
+That you know, you might not have to do anything wrong for this. Yeah. And the last last question,
+
+396
+00:42:36,320 --> 00:42:42,080
+how to fight crime while protecting the integrity of people? Yeah, this is this is the biggest
+
+397
+00:42:42,080 --> 00:42:46,560
+biggest question, at least for me, this is the one I grapple with the most, like the ethical and more
+
+398
+00:42:46,560 --> 00:42:51,600
+implications. I think this would could warrant the talk itself. Maybe it's a good idea for
+
+399
+00:42:51,600 --> 00:43:02,160
+next talk, I'll think about it. I think there are ways to do all this kind of like crime fighting
+
+400
+00:43:02,160 --> 00:43:08,080
+without going into surveillance or limiting it to very specific needs. So I think this is a scale.
+
+401
+00:43:08,880 --> 00:43:14,960
+And on that scale, we are moving into the areas where a lot of like rights to freedom and freedom
+
+402
+00:43:14,960 --> 00:43:20,960
+of association and stuff that I talked about, I really encroached on now. And and this is all
+
+403
+00:43:20,960 --> 00:43:26,560
+done with the obfuscation. So I think we can tone it down a little bit and move back a couple of
+
+404
+00:43:26,560 --> 00:43:34,480
+steps. And I think warranted, targeted surveillance on people that are, you know, proven to
+
+405
+00:43:36,080 --> 00:43:41,440
+be a threat, and they have to be investigated, even like the child pornography and the terrorist
+
+406
+00:43:41,440 --> 00:43:48,560
+stuff. So I think that should be done. I'm not arguing against any any type of any type of
+
+407
+00:43:48,560 --> 00:43:56,960
+surveillance. But what is done with the with the increase in that scope, that creates a dragnet
+
+408
+00:43:56,960 --> 00:44:01,520
+where everyone can become a suspect and you get you can become a suspect and it creates this kind
+
+409
+00:44:01,520 --> 00:44:06,880
+of opening this kind of open door, where people use it for for others. So I think this crime
+
+410
+00:44:06,880 --> 00:44:11,840
+fighting can be done maybe not as efficiently as right now, maybe a couple of percent less
+
+411
+00:44:11,840 --> 00:44:17,280
+efficient. But the but this freedom protections and this right protections that that's not going
+
+412
+00:44:17,280 --> 00:44:22,720
+to increase with the 10%, it's going to increase the manifold. So I think it's trade off. And I
+
+413
+00:44:22,720 --> 00:44:28,800
+think it should be discussed because many people perhaps disagree with me. But there is a lot of
+
+414
+00:44:29,520 --> 00:44:34,400
+methodologies available already to police the good old fashioned policing that can be done.
+
+415
+00:44:35,360 --> 00:44:41,280
+And the stores that we are deploying now, so like the encryption for everyone, everyone should use
+
+416
+00:44:41,280 --> 00:44:47,520
+signal I think for for communications just for these reasons that I've I've told you about. But
+
+417
+00:44:47,520 --> 00:44:52,160
+I think that this is kind of like a utility that is available to everyone should be available to
+
+418
+00:44:52,160 --> 00:44:59,760
+to everyone. So and utilities like like the roads and the water and everything else that's
+
+419
+00:44:59,760 --> 00:45:07,040
+that's also available to criminals. And it's you cannot say that like people who are suspects or
+
+420
+00:45:07,040 --> 00:45:11,440
+people who may might do some crime in the future, they cannot use our roads, you know, how do you
+
+421
+00:45:12,160 --> 00:45:17,600
+how do you scan against that? So I think, you know, this is an interesting discussion. As I said,
+
+422
+00:45:17,600 --> 00:45:23,280
+I'm just exploring these topics. These are all the tools that I had had for now. So but I'm really
+
+423
+00:45:23,280 --> 00:45:27,680
+happy to continue conversation about this by email, because I'm really interested in this topic as
+
+424
+00:45:27,680 --> 00:45:37,200
+well. So yeah, I think it's 45 now. Yeah, thanks for thanks for all your questions and your and
+
+425
+00:45:37,200 --> 00:45:45,680
+your attention. So many thank you for many thank you for this session, Victor, we were very happy
+
+426
+00:45:45,680 --> 00:45:52,960
+to have you here. Thank you. Thank you for the facilitation and have fun in the next couple of
+
+427
+00:45:52,960 --> 00:45:58,800
+hours. Goodbye. Goodbye. Thank you.
+

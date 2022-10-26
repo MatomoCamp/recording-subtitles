@@ -1,0 +1,584 @@
+1
+00:00:00,000 --> 00:00:14,920
+Okay. So it's currently 5 p.m. and that's the end of the first in the history Matamua
+
+2
+00:00:14,920 --> 00:00:24,400
+camp event. So this last conference will not last 30 minutes, but maybe if we have a lot
+
+3
+00:00:24,400 --> 00:00:28,720
+of things to say, it can go up to 30 minutes, but probably I guess that we're going to make
+
+4
+00:00:28,720 --> 00:00:39,400
+it in 10 minutes. Just probably the simplest word to say is thank you. Thanks for having
+
+5
+00:00:39,400 --> 00:00:51,960
+it done so far. That was a really dense event. Two full days, many different speakers. Here
+
+6
+00:00:51,960 --> 00:00:59,560
+are some KPIs. By the way, feel free to go on chat.matamucamp.org. You have a specific
+
+7
+00:00:59,560 --> 00:01:07,360
+room for this last conference. And I'm closing a ceremony on which you can just say thank
+
+8
+00:01:07,360 --> 00:01:14,160
+you or just give feedback about the event. Just a couple of KPIs that we wanted to show
+
+9
+00:01:14,160 --> 00:01:23,520
+you guys. So we went for two days of talks. Three languages. So we got talk in English.
+
+10
+00:01:23,520 --> 00:01:30,560
+Mostly in English. Some in German the first day and some in French in the second and the
+
+11
+00:01:30,560 --> 00:01:39,280
+first day. It was mainly English and German. We got 26 conferences in total. For a total
+
+12
+00:01:39,280 --> 00:01:49,120
+of 26 recordings. Representing at the mid journey of today, those recordings were representing
+
+13
+00:01:49,120 --> 00:01:58,000
+already more than 10 gigabytes. So I guess the ended result will be close to 15 gigabytes.
+
+14
+00:01:58,000 --> 00:02:07,600
+We got 24 speakers. We would like to send them once more because I viewed half of the
+
+15
+00:02:07,600 --> 00:02:15,080
+conferences and I was really impressed of the level of all of them. Whatever the topic,
+
+16
+00:02:15,080 --> 00:02:26,800
+whatever the expertise was about, it was really impressive. Up to 1 p.m. we had a number of
+
+17
+00:02:26,800 --> 00:02:37,640
+804 visits on live.matamocamp.org for the two days. I recently watched back the numbers
+
+18
+00:02:37,640 --> 00:02:48,320
+and it was around 930 visits on the two days. And let's say optimistic goal forecast for
+
+19
+00:02:48,320 --> 00:02:56,920
+this event was at 1,000 visits. So to say these events went beyond our expectation.
+
+20
+00:02:56,920 --> 00:03:02,240
+It was really a remarkable event in terms of content brought by the speakers. But as
+
+21
+00:03:02,240 --> 00:03:09,880
+well in terms of visitors on the website visits. Even if we don't have, we don't put in place
+
+22
+00:03:09,880 --> 00:03:16,280
+any system to measure the number of individuals. So I guess the 900 visits that I'm referring
+
+23
+00:03:16,280 --> 00:03:24,960
+to doesn't represent 900 individuals. But I guess we are getting close to these figures.
+
+24
+00:03:24,960 --> 00:03:32,960
+On chat.matamocamp.org, same thing measured here. It was only for the first day and a
+
+25
+00:03:32,960 --> 00:03:39,280
+half. We got 95 users who make an effort of creating an account on chat.matamocamp.org
+
+26
+00:03:39,280 --> 00:03:48,680
+in order to interact with us, which is a lot. We used another KPI during the pre-event,
+
+27
+00:03:48,680 --> 00:03:56,280
+which was held one month ago. This was the number of IP connected to the stream. For
+
+28
+00:03:56,280 --> 00:04:05,000
+the pre-event, we got 28 IP connections. And today at 1 p.m., including everything which
+
+29
+00:04:05,000 --> 00:04:15,080
+was made the day before, we were up to 385 individual IP connected. Taking into account
+
+30
+00:04:15,080 --> 00:04:22,240
+that we have some people who are coming from the same institution or company. Of course,
+
+31
+00:04:22,240 --> 00:04:28,480
+those IP does not relate to one individual, but probably in some cases to more than this.
+
+32
+00:04:28,480 --> 00:04:35,200
+42 is the funny number. In fact, now it came to 43 is the number of unread emails that
+
+33
+00:04:35,200 --> 00:04:42,960
+we'll have to deal with over the weekend due to the fact that I was fully busy for this
+
+34
+00:04:42,960 --> 00:04:50,240
+event. I hope that for all the other organizers, it's not that many because 42 means for me
+
+35
+00:04:50,240 --> 00:04:55,720
+probably one full day of answering all those emails. But that's part of the game when you
+
+36
+00:04:55,720 --> 00:05:07,600
+are part of a big organization such as such as Matomo Camp. In terms of other KPIs, 45
+
+37
+00:05:07,600 --> 00:05:13,880
+countries were represented during this Matomo Camp. So according to Matomo's data, the
+
+38
+00:05:13,880 --> 00:05:21,200
+attendees were mainly from Germany, then from Sweden, then from France, then from the United
+
+39
+00:05:21,200 --> 00:05:28,000
+Kingdom, and then the Netherlands. And I'm happy to announce that we got visitors from
+
+40
+00:05:28,000 --> 00:05:34,200
+all the continents. As you can see on the maps, of course, mainly Europe, because the
+
+41
+00:05:34,200 --> 00:05:39,760
+time zone were more convenient for people based in Europe. But we really had all the
+
+42
+00:05:39,760 --> 00:05:45,160
+nationality which were represented. I was really impressed to see so many flags within
+
+43
+00:05:45,160 --> 00:05:51,180
+the Matomo system that I looked at some hours ago. So I really would like to thank all the
+
+44
+00:05:51,180 --> 00:05:59,200
+attendees from all over the world. What's next after this event? Well, we're going
+
+45
+00:05:59,200 --> 00:06:06,000
+to let's say gather all the organizing committees of the Matomo Camp in order to define and
+
+46
+00:06:06,000 --> 00:06:14,440
+see how they react to the event, what they like, what they dislike. Maybe we will launch
+
+47
+00:06:14,440 --> 00:06:20,480
+another survey. I don't know. We just need to plan a meeting in order to see, okay, how
+
+48
+00:06:20,480 --> 00:06:26,880
+did you like it? And after, we will of course see if we want to go for another version of
+
+49
+00:06:26,880 --> 00:06:34,280
+Matomo Camp. Do we need to think as well about local events? For example, I was really surprised
+
+50
+00:06:34,280 --> 00:06:42,360
+the first day to see a lot of people coming from Nordic countries, Denmark, Norway, Sweden.
+
+51
+00:06:42,360 --> 00:06:47,680
+So I don't know. There may be some spaces in order to have a Matomo Camp version for
+
+52
+00:06:47,680 --> 00:06:55,920
+Nordic countries, but as well for Germany, Sweden, as we just saw was a huge part of
+
+53
+00:06:55,920 --> 00:07:01,680
+the visitors. Maybe France. I don't know. This really depends on, in fact, all the attendees
+
+54
+00:07:01,680 --> 00:07:07,360
+that we had today, so as the people within the organizing committee to see in which sense
+
+55
+00:07:07,360 --> 00:07:13,680
+we would like the Matomo community to evolve. But we don't have any plan at the moment.
+
+56
+00:07:13,680 --> 00:07:20,280
+Just would like to say that if you would like to join the super team that we had the chance
+
+57
+00:07:20,280 --> 00:07:26,160
+to have this year for this Matomo Camp, please feel free to contact us through matomocamp.org.
+
+58
+00:07:26,160 --> 00:07:34,000
+Some people informed us that the contact form on our website was not working. It's a bit
+
+59
+00:07:34,000 --> 00:07:38,440
+more complicated than this, just that you need to push several times on the button.
+
+60
+00:07:38,440 --> 00:07:42,680
+I had the same feeling this morning when I tested it. I had the feeling that it wasn't
+
+61
+00:07:42,680 --> 00:07:50,240
+working and then I pressed it twice and then the mail was sent. So, yes, the matomocamp.org
+
+62
+00:07:50,240 --> 00:07:59,800
+contact form is still the way to contact us. If you don't receive an answer by your team,
+
+63
+00:07:59,800 --> 00:08:06,960
+just send another one and good chance. We are answering to everything except spam, so
+
+64
+00:08:06,960 --> 00:08:12,120
+you, of course, will receive an answer. If you don't receive it in the proper time, feel
+
+65
+00:08:12,120 --> 00:08:20,160
+free to send another one or try to connect to us through another web by your different
+
+66
+00:08:20,160 --> 00:08:25,280
+name. The names are the ones that you can see here. So, I really would like to thank
+
+67
+00:08:25,280 --> 00:08:31,960
+all the members of the organizing team. I really apologize if I miss anyone here. For
+
+68
+00:08:31,960 --> 00:08:37,520
+example, Marcus Asenberger is probably the one who did the more apologizes because I
+
+69
+00:08:37,520 --> 00:08:44,880
+forgot to mention him during the opening ceremony. So, thank you, Marcus, for being part of the
+
+70
+00:08:44,880 --> 00:08:50,880
+Matomo organizing team. Today, Marcus, today and yesterday, Marcus was here in order to
+
+71
+00:08:50,880 --> 00:08:58,440
+do the moderation of the different conferences. This event could not have been without Lucas
+
+72
+00:08:58,440 --> 00:09:09,120
+Winkler, who is the guy who took on his shoulders a huge amount, an impressive amount of work.
+
+73
+00:09:09,120 --> 00:09:15,080
+He was here all the time where I could not manage anything anymore because I didn't have
+
+74
+00:09:15,080 --> 00:09:21,080
+more time, I didn't have more energy, and he's really the guy who is doing kind of everything
+
+75
+00:09:21,080 --> 00:09:28,920
+within Matomo Camp. So, I really would like to thank him. Silva, as well, joined the team
+
+76
+00:09:28,920 --> 00:09:36,040
+during the evolution of the creation of Matomo Camp. She was the one in charge of the moderation
+
+77
+00:09:36,040 --> 00:09:42,720
+of the different talks, so as all the communication part. I would like to thank, as well, Stéphane
+
+78
+00:09:42,720 --> 00:09:50,440
+Konig from the Netherlands, Peter Borg, who helped us with all the system administration
+
+79
+00:09:50,440 --> 00:09:56,320
+and IT infrastructure. Frédéric, as well, was here for the moderation of the talk in
+
+80
+00:09:56,320 --> 00:10:04,000
+French. A huge, huge thanks to Emprunt Digital, to Valentin Bares, who is the one who holds
+
+81
+00:10:04,000 --> 00:10:11,280
+all the different streams. And thanks to him that we will get the recording of all the
+
+82
+00:10:11,280 --> 00:10:18,240
+different conferences. I would like to thank, as well, all the digitalists, the AAB team,
+
+83
+00:10:18,240 --> 00:10:23,320
+and in particular, Thomas Pearson, that some of the attendees have seen many times. I'm
+
+84
+00:10:23,320 --> 00:10:29,320
+not 100% sure about the number of talks that he made, but I think it's close to five, and
+
+85
+00:10:29,320 --> 00:10:35,720
+they were all incredible. So, thank you very much, Thomas. I would like to thank, as well,
+
+86
+00:10:35,720 --> 00:10:42,240
+Stéphane Gill, Thomas Zeithnamerl, and Joachim Neckel for the organizing team. Lucas, am
+
+87
+00:10:42,240 --> 00:10:46,360
+I missing anyone here within the organizing team?
+
+88
+00:10:46,360 --> 00:10:52,200
+I can't think of anyone at the moment. Hopefully, I also don't miss anyone.
+
+89
+00:10:52,200 --> 00:10:58,080
+I would like to thank, again, all the speakers. They were coming from all the different countries.
+
+90
+00:10:58,080 --> 00:11:08,360
+They have made all great and impressive speeches. Of course, Lucas Winkler, Joachim Neckel,
+
+91
+00:11:08,360 --> 00:11:14,040
+Richard Stark from the InnoCrafts company was making the conference with a time zone
+
+92
+00:11:14,040 --> 00:11:20,720
+difference of 12 hours from New Zealand, Jorge Powers from the Digitalist AAB team in Sweden,
+
+93
+00:11:20,720 --> 00:11:29,160
+Thomas Ekman from Germany, Nathan Freitas, Silva Arapi, as well. The Italian team represented
+
+94
+00:11:29,160 --> 00:11:37,840
+by Davide Porovecchio, Pier Luigi Tassi, Claudio Czelligin, Thomas Czernik, Stéphane Konig,
+
+95
+00:11:37,840 --> 00:11:44,560
+Peter Buhelke, Thomas Pearson, Christian Hallner, Valentin Bares, Baptiste Steven, Victor Vexei
+
+96
+00:11:44,560 --> 00:11:52,480
+from Hungary, Boris Budini, Frédéric Forster, Aurélie Pauls, Cathy Newbay from the United
+
+97
+00:11:52,480 --> 00:11:58,040
+Kingdom, and Ronan Elow. Sorry, Lucas, same questions again. Did I
+
+98
+00:11:58,040 --> 00:12:02,760
+forget anyone here within this list? I hope you didn't.
+
+99
+00:12:02,760 --> 00:12:14,200
+I'm sorry for my pronunciation as well. I would like, once more, to thank our sponsors,
+
+100
+00:12:14,200 --> 00:12:23,880
+so Matomo, who, once more, allow us to create and use a logo which is similar to theirs
+
+101
+00:12:23,880 --> 00:12:30,320
+and as well allow us to use Matomo within our communication support, who as well supported
+
+102
+00:12:30,320 --> 00:12:36,840
+us in terms of communication. So, probably without their communication impact, we couldn't
+
+103
+00:12:36,840 --> 00:12:42,360
+have reached you today, or at least some of you guys. So, I would like, once more, to
+
+104
+00:12:42,360 --> 00:12:51,880
+say thank you, Matomo, and of course to provide the world with a free software and a GPL license.
+
+105
+00:12:51,880 --> 00:12:57,680
+I would like to thank, as well, Empreinte Digital, who, as I said, are the one in charge
+
+106
+00:12:57,680 --> 00:13:03,520
+of all the streaming parts. I would like to thank, once more, the company of Stefan König,
+
+107
+00:13:03,520 --> 00:13:11,480
+who missed analytics, so as Sonora from Peter Voelker and Stairs from Ligue 1. And many
+
+108
+00:13:11,480 --> 00:13:18,920
+others, as well, that I would like to thank, who, as I said, many organizers who have been
+
+109
+00:13:18,920 --> 00:13:25,320
+speakers during this Matomo camp and who have spent a lot of time and energy within this
+
+110
+00:13:25,320 --> 00:13:32,720
+project. And, of course, yes, I can answer shortly. Of course, the one organizer you
+
+111
+00:13:32,720 --> 00:13:38,880
+forgot to mention is, of course, you, Roland, who initially had the idea to organize a Matomo
+
+112
+00:13:38,880 --> 00:13:48,120
+camp and were the one getting everything started and planning the whole concept from the beginning.
+
+113
+00:13:48,120 --> 00:13:54,680
+So thanks again for this. Yeah, thank you. Thank you so much. I have to say that I couldn't
+
+114
+00:13:54,680 --> 00:14:01,840
+have made it without all of you guys and without all, let's say, the IT, free software technology
+
+115
+00:14:01,840 --> 00:14:07,640
+expertise. I have to say that by myself, even with all the energy that I could brought into
+
+116
+00:14:07,640 --> 00:14:16,880
+it, it's... I just put the energy of someone who wants to create an event and that's it.
+
+117
+00:14:16,880 --> 00:14:22,560
+Thank you. Thank you very much. I appreciate it. And, of course, thank you to all of you,
+
+118
+00:14:22,560 --> 00:14:27,800
+our attendees, because it's always hard to find some time on our working time to come
+
+119
+00:14:27,800 --> 00:14:33,960
+and assist all those conferences. Thank you for all your kindness because we didn't have
+
+120
+00:14:33,960 --> 00:14:40,360
+any trolling experience on the social networks. You have been all nice to each other through
+
+121
+00:14:40,360 --> 00:14:47,440
+the chat. You played the game. You accepted to post some questions on chat.matomo.org.
+
+122
+00:14:47,440 --> 00:14:54,520
+You sent some questions. And to the question that most of you will probably ask are where
+
+123
+00:14:54,520 --> 00:15:01,720
+the materials are of the speakers and where the recording of the talks are. Well, the
+
+124
+00:15:01,720 --> 00:15:06,120
+recording of the talks, correct me if I'm wrong, Lucas, but they will be posted on the
+
+125
+00:15:06,120 --> 00:15:13,000
+URL named videos.matomocamp.org within the coming days, am I right?
+
+126
+00:15:13,000 --> 00:15:19,520
+Yeah, we will set up the video platform in the next days and editing all the recordings,
+
+127
+00:15:19,520 --> 00:15:24,760
+of course, will take some time and we will just go on and publish them once they're ready.
+
+128
+00:15:24,760 --> 00:15:30,960
+So if you follow us on the social media accounts or if you look on the video platform every
+
+129
+00:15:30,960 --> 00:15:36,520
+few days, you will be notified whenever a new recording is published.
+
+130
+00:15:36,520 --> 00:15:44,280
+So yeah, if you just refresh matomocamp.org webpage from time to time, if you follow us
+
+131
+00:15:44,280 --> 00:15:49,000
+on the social network, good chances that we will announce at some point that the videos
+
+132
+00:15:49,000 --> 00:15:56,080
+are live. You can already find one, which is the one about the pre-matomo camp event.
+
+133
+00:15:56,080 --> 00:16:05,800
+And if you have some time, I invite you to break meet.matomocamp.org, which is the based
+
+134
+00:16:05,800 --> 00:16:12,320
+on work adventure, which is a social place on which you can move and meet the different
+
+135
+00:16:12,320 --> 00:16:17,520
+people who are connected on the platform and then interact with them in real time in video
+
+136
+00:16:17,520 --> 00:16:18,520
+and webcam.
+
+137
+00:16:18,520 --> 00:16:24,400
+And I'm going to go there in something like two minutes once I finish this slide. And
+
+138
+00:16:24,400 --> 00:16:29,080
+I really hope that I will have the opportunity to meet some of you guys there and to connect
+
+139
+00:16:29,080 --> 00:16:37,040
+a little bit more like if we were in a physical presence. Lucas, Valentin, do you have any
+
+140
+00:16:37,040 --> 00:16:43,040
+any things left that you would like to say before we close officially the event?
+
+141
+00:16:43,040 --> 00:16:48,640
+Nothing major for me. Just thanks everyone for making this event possible and such a
+
+142
+00:16:48,640 --> 00:16:51,480
+huge success as it was.
+
+143
+00:16:51,480 --> 00:16:57,640
+Same for me. Just thank you for your time. All of your speakers and Lucas, especially.
+
+144
+00:16:57,640 --> 00:17:04,880
+Perfect. Thank you guys. Take care of you. Have a good weekend. And for the one who still
+
+145
+00:17:04,880 --> 00:17:12,160
+have time, just go on meet.matomocamp.org and we will be there in order to party. Have
+
+146
+00:17:12,160 --> 00:17:28,760
+a great weekend and thanks for spending some time with us at Matomocamp. Bye.
+

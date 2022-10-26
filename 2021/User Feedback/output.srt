@@ -1,0 +1,1868 @@
+1
+00:00:00,000 --> 00:00:11,480
+So, hello everyone, thank you for joining this second day of the MatomoCam.
+
+2
+00:00:11,480 --> 00:00:20,440
+We are very excited to start this second day with a session from Thomas Pearson, who is
+
+3
+00:00:20,440 --> 00:00:26,000
+a business developer at Digitalist Sweden.
+
+4
+00:00:26,000 --> 00:00:33,360
+Thomas has worked with tracking digital analytics since 2010 and has been a contributor to open
+
+5
+00:00:33,360 --> 00:00:36,040
+source since 2007.
+
+6
+00:00:36,040 --> 00:00:41,840
+In this talk, Introduction to the Matomo User Feedback Plugin, he will demo the functionality
+
+7
+00:00:41,840 --> 00:00:45,920
+of this form builder plugin in Matomo.
+
+8
+00:00:45,920 --> 00:00:48,920
+So I'm giving the word to you now, Thomas.
+
+9
+00:00:48,920 --> 00:00:51,640
+Okay, thank you very much.
+
+10
+00:00:51,640 --> 00:00:58,320
+I'm just going to wait a few seconds because I see that people have problems with the stream
+
+11
+00:00:58,320 --> 00:01:00,280
+now and it seems to work better now.
+
+12
+00:01:00,280 --> 00:01:03,520
+All right, so thanks for the introduction.
+
+13
+00:01:03,520 --> 00:01:11,000
+Yes, so this has been my pet for about a year or actually longer than that, but it's been
+
+14
+00:01:11,000 --> 00:01:19,280
+something I've been working on weekends and evenings as you know, you do when you have
+
+15
+00:01:19,280 --> 00:01:20,280
+some passion.
+
+16
+00:01:20,280 --> 00:01:26,000
+But today I'll be really happy to present it to a larger audience.
+
+17
+00:01:26,000 --> 00:01:34,600
+So as you see, this is a plugin for Matomo and we'll get to the demo part pretty soon.
+
+18
+00:01:34,600 --> 00:01:43,560
+I got a slight introduction, but I'm Thomas, I'm a generalist when it comes to the web.
+
+19
+00:01:43,560 --> 00:01:50,240
+I've been programming, I've been project manager and today I'm more of a business developer
+
+20
+00:01:50,240 --> 00:01:59,840
+but I still actually do programming and I love Matomo, has been part of my life 24-7
+
+21
+00:01:59,840 --> 00:02:02,000
+for the last four years almost.
+
+22
+00:02:02,000 --> 00:02:07,960
+So I'm starting to learn Matomo pretty well these days.
+
+23
+00:02:07,960 --> 00:02:14,080
+I work for Digitalist, we're a digital product agency and we really love open source.
+
+24
+00:02:14,080 --> 00:02:20,720
+We've been contributing to open source for a really long time and we will continue doing
+
+25
+00:02:20,720 --> 00:02:27,680
+so and Matomo is where I work today, but my background has been within the Drupal community.
+
+26
+00:02:27,680 --> 00:02:36,880
+I started contributing to Drupal in different ways around 2005, 2006, somewhere around that.
+
+27
+00:02:36,880 --> 00:02:41,320
+But working with Matomo for the last four years at least.
+
+28
+00:02:41,320 --> 00:02:43,600
+So why are we here?
+
+29
+00:02:43,600 --> 00:02:47,760
+Well, why are we at the Matomo camp at all?
+
+30
+00:02:47,760 --> 00:02:55,800
+William Edwin Stemming is actually my favorite quote guy, so we'll start the day with a quote.
+
+31
+00:02:55,800 --> 00:03:03,680
+So why are we using web analytics at all and what is he saying about this?
+
+32
+00:03:03,680 --> 00:03:07,600
+Well, because I need to create reports, right?
+
+33
+00:03:07,600 --> 00:03:15,560
+Or maybe not, because this is maybe not why we're using web analytics.
+
+34
+00:03:15,560 --> 00:03:21,200
+His real quote is actually without data, just another guy with opinions and I think this
+
+35
+00:03:21,200 --> 00:03:27,640
+sums up why you should use web analytics, even though the first row is probably what
+
+36
+00:03:27,640 --> 00:03:33,080
+most people use a tool like Google Analytics because their boss told them they need to
+
+37
+00:03:33,080 --> 00:03:36,320
+create reports for their organization.
+
+38
+00:03:36,320 --> 00:03:43,120
+But if you think about it, it's the second quote, the real quote that is hopefully why
+
+39
+00:03:43,120 --> 00:03:50,000
+you're collecting data about your applications because you want to make decisions that are
+
+40
+00:03:50,000 --> 00:03:53,040
+not based on opinions.
+
+41
+00:03:53,040 --> 00:03:59,800
+So if we take a little deeper look at this, I usually talk about maturity for organizations
+
+42
+00:03:59,800 --> 00:04:08,000
+when we work with web analytics and I usually divide these into three different categories.
+
+43
+00:04:08,000 --> 00:04:13,720
+We have the reporting as I joked about in the first step.
+
+44
+00:04:13,720 --> 00:04:19,560
+So reporting is really about making data readable for humans.
+
+45
+00:04:19,560 --> 00:04:27,740
+We have a lot of data in our servers or in the Matomo database, but to make it possible
+
+46
+00:04:27,740 --> 00:04:34,360
+for me or you to understand the data, we need to visualize it, create a table, create a pie
+
+47
+00:04:34,360 --> 00:04:38,600
+chart or whatever so that we can start to understand the data.
+
+48
+00:04:38,600 --> 00:04:45,040
+The second step, when we do have the reporting, we can start to analyze the data, creating
+
+49
+00:04:45,040 --> 00:04:52,200
+insights basically, or actually trying to create insights because when we do analysis,
+
+50
+00:04:52,200 --> 00:04:55,880
+sometimes we can actually come up with an insight.
+
+51
+00:04:55,880 --> 00:05:02,320
+So if we break it down again, the first step is about making data readable for humans so
+
+52
+00:05:02,320 --> 00:05:03,960
+we can start analyzing.
+
+53
+00:05:03,960 --> 00:05:11,340
+That's the only value we add to the organization when we start or when we do reporting.
+
+54
+00:05:11,340 --> 00:05:16,560
+We make it possible for people to do analysis.
+
+55
+00:05:16,560 --> 00:05:20,000
+The analysis step is really about understanding data.
+
+56
+00:05:20,000 --> 00:05:21,780
+This is where we start to ask why.
+
+57
+00:05:21,780 --> 00:05:30,400
+When we see the page views report, for instance, we really need to...
+
+58
+00:05:30,400 --> 00:05:31,400
+So where were we?
+
+59
+00:05:31,400 --> 00:05:34,600
+I was talking about reporting.
+
+60
+00:05:34,600 --> 00:05:40,880
+The only value of reporting is actually making data readable for humans.
+
+61
+00:05:40,880 --> 00:05:44,840
+So when we have the reporting in place, we can start to do analyzes.
+
+62
+00:05:44,840 --> 00:05:51,280
+We can try to understand the data and this is the step where we ask why repeatedly.
+
+63
+00:05:51,280 --> 00:05:56,360
+Why do we have more page views this week than last week, et cetera, et cetera.
+
+64
+00:05:56,360 --> 00:06:02,400
+When we start to ask these questions and maybe dig into other types of data or when we start
+
+65
+00:06:02,400 --> 00:06:08,440
+to do combined data, we apply the dimensions we have to the data and twist and turn the
+
+66
+00:06:08,440 --> 00:06:11,400
+data so that we learn about what we're actually seeing.
+
+67
+00:06:11,400 --> 00:06:15,360
+We can start to see patterns in the data.
+
+68
+00:06:15,360 --> 00:06:21,580
+When we see patterns in the data, sometimes this leads us to insights and with these insights,
+
+69
+00:06:21,580 --> 00:06:25,680
+we can hopefully start to make data-driven decisions.
+
+70
+00:06:25,680 --> 00:06:28,440
+So think about it again.
+
+71
+00:06:28,440 --> 00:06:33,520
+When you're just sending email reports around to your organization, what value are you actually
+
+72
+00:06:33,520 --> 00:06:35,000
+giving the organization?
+
+73
+00:06:35,000 --> 00:06:38,360
+Well, not a lot, I would say.
+
+74
+00:06:38,360 --> 00:06:43,360
+We really need to get away from this behavior to just create email reports and send them
+
+75
+00:06:43,360 --> 00:06:50,200
+around because to be honest, the people here at Matomo Camp are probably pretty good at
+
+76
+00:06:50,200 --> 00:06:52,200
+the step two and three.
+
+77
+00:06:52,200 --> 00:07:00,240
+We work with data for a really long time, but sending the page view report to a person
+
+78
+00:07:00,240 --> 00:07:07,160
+that is not used to working with data, they will come up with bad understandings of the
+
+79
+00:07:07,160 --> 00:07:08,440
+data.
+
+80
+00:07:08,440 --> 00:07:13,000
+The most common example is probably when we see that page views has raised and people
+
+81
+00:07:13,000 --> 00:07:20,440
+get really happy, but that is for me, the only thing I would do when I see that the
+
+82
+00:07:20,440 --> 00:07:26,920
+page views has doubled from one week to another is to really be suspicious.
+
+83
+00:07:26,920 --> 00:07:30,640
+Something must be wrong here, right?
+
+84
+00:07:30,640 --> 00:07:36,980
+That's the natural behavior of data scientists or data analysts to really start to ask the
+
+85
+00:07:36,980 --> 00:07:38,800
+question why.
+
+86
+00:07:38,800 --> 00:07:47,440
+So why am I talking about this when I'm supposed to present a plugin for Matomo?
+
+87
+00:07:47,440 --> 00:07:56,200
+Well, it leads us because I really want us to start creating better decisions, basically.
+
+88
+00:07:56,200 --> 00:08:05,480
+The thing that we're missing in a tool like Matomo is the qualitative data.
+
+89
+00:08:05,480 --> 00:08:14,560
+This is really about getting the full understanding of our users, so we need both of these to
+
+90
+00:08:14,560 --> 00:08:21,760
+make really good decisions, and I will try to explain why, because the quantitative data,
+
+91
+00:08:21,760 --> 00:08:27,760
+the numbers that we collect, they really tell us things like, okay, we got more page views
+
+92
+00:08:27,760 --> 00:08:32,080
+or more people converted on our site.
+
+93
+00:08:32,080 --> 00:08:39,040
+We can really validate behaviors or maybe find problems, like if the page views doubled
+
+94
+00:08:39,040 --> 00:08:44,480
+from last week, maybe we have a problem, maybe we have spam bots getting to our websites
+
+95
+00:08:44,480 --> 00:08:47,840
+or I don't know, it could be anything.
+
+96
+00:08:47,840 --> 00:08:53,680
+But to really understand that, we often need qualitative data to understand why people
+
+97
+00:08:53,680 --> 00:08:59,320
+are angry or yes, they signed up, but were they happy when they did so.
+
+98
+00:08:59,320 --> 00:09:04,440
+So we really need to understand behaviors or problems, and that we can do with qualitative
+
+99
+00:09:04,440 --> 00:09:05,440
+data.
+
+100
+00:09:05,440 --> 00:09:11,680
+And qualitative data is, of course, when we get emotions or text feedback or whatever.
+
+101
+00:09:11,680 --> 00:09:16,440
+So this has actually been the reason why I created this plugin, because working with
+
+102
+00:09:16,440 --> 00:09:23,760
+analytics or websites as a product owner, you really start to understand that you need
+
+103
+00:09:23,760 --> 00:09:31,400
+more than just the numbers coming from a tool like Matomo or a Web Analytics tool.
+
+104
+00:09:31,400 --> 00:09:34,560
+So that leads us to my vision for this plugin.
+
+105
+00:09:34,560 --> 00:09:39,720
+It's been my little baby for, I think I came up with the idea five years ago, and not really
+
+106
+00:09:39,720 --> 00:09:47,720
+in a Matomo context, but more in a general Web Analytics context where I, of course,
+
+107
+00:09:47,720 --> 00:09:54,600
+wasn't using survey tools available online, but I really wanted to have data in combination
+
+108
+00:09:54,600 --> 00:09:56,480
+with my Web Analytics data.
+
+109
+00:09:56,480 --> 00:10:02,480
+And the vision here is really to add qualitative data to Matomo so that we can help users to
+
+110
+00:10:02,480 --> 00:10:05,280
+make data-driven decisions.
+
+111
+00:10:05,280 --> 00:10:13,000
+And that we can do only if we start to combine the qualitative and quantitative data fully.
+
+112
+00:10:13,000 --> 00:10:17,420
+And hopefully that's something we can do with this plugin.
+
+113
+00:10:17,420 --> 00:10:23,160
+So the basic concepts of the plugin is that we can create forms.
+
+114
+00:10:23,160 --> 00:10:28,880
+There's a form builder in the tool, of course, so we can do this, of course, demo this soon.
+
+115
+00:10:28,880 --> 00:10:34,600
+And the next step is that we can publish these forms on our websites, of course, and we do
+
+116
+00:10:34,600 --> 00:10:38,640
+have a great tool for doing so in Matomo already.
+
+117
+00:10:38,640 --> 00:10:46,560
+So we built this solution around the Tag Manager, so you use the Tag Manager and the knowledge
+
+118
+00:10:46,560 --> 00:10:51,680
+we already have to publish this service or forms into our website.
+
+119
+00:10:51,680 --> 00:10:57,720
+And we can also style them within the Tag Manager to decide how the look and feel should
+
+120
+00:10:57,720 --> 00:10:58,720
+be.
+
+121
+00:10:58,720 --> 00:11:05,000
+And last but not least, we can actually collect the data within Matomo and we can use the
+
+122
+00:11:05,000 --> 00:11:09,340
+standard reporting and we're looking into that soon.
+
+123
+00:11:09,340 --> 00:11:14,180
+So now I think it's about time to demo this.
+
+124
+00:11:14,180 --> 00:11:18,840
+So let's look at how this type of feedback can look like.
+
+125
+00:11:18,840 --> 00:11:25,480
+So what we're looking at right now is our website, digitalist.se, and here on a page,
+
+126
+00:11:25,480 --> 00:11:31,640
+I have a little question, did you find what you were looking for?
+
+127
+00:11:31,640 --> 00:11:36,480
+We have a yes, no partly, and we can also rate this page and I can send this feedback
+
+128
+00:11:36,480 --> 00:11:40,480
+and I get a feedback saying thank you for testing.
+
+129
+00:11:40,480 --> 00:11:48,920
+This form here comes from the user feedback survey tool within Matomo and I will soon
+
+130
+00:11:48,920 --> 00:11:55,560
+show you how the backend interface works.
+
+131
+00:11:55,560 --> 00:12:01,800
+So going into our Tag Manager, or actually when you install the plugin, you will get
+
+132
+00:12:01,800 --> 00:12:05,000
+a new menu up here saying user feedback.
+
+133
+00:12:05,000 --> 00:12:08,760
+So when I click on that, we get more menu items.
+
+134
+00:12:08,760 --> 00:12:16,040
+So on this page, we can see that all the forms that I created on the site, the concept right
+
+135
+00:12:16,040 --> 00:12:28,960
+now is that we can create templates and the template basically defines the structure of
+
+136
+00:12:28,960 --> 00:12:29,960
+the form.
+
+137
+00:12:29,960 --> 00:12:35,400
+As you can see here, it looks pretty techy if I click edit on this one, you will see
+
+138
+00:12:35,400 --> 00:12:43,000
+that you will get a JSON file defining the fields and the widgets that the form contains.
+
+139
+00:12:43,000 --> 00:12:46,680
+This is actually something we're rebuilding right now.
+
+140
+00:12:46,680 --> 00:12:51,120
+So when I release the full version, we will actually not have the templates, but we will
+
+141
+00:12:51,120 --> 00:12:53,400
+look into that later on.
+
+142
+00:12:53,400 --> 00:12:57,680
+So how I do this right now is that I create a new form.
+
+143
+00:12:57,680 --> 00:13:09,160
+You can call it Thomas demo form.
+
+144
+00:13:09,160 --> 00:13:14,760
+Let's give it the description and then I select the template I want to use.
+
+145
+00:13:14,760 --> 00:13:17,920
+So I will use this one.
+
+146
+00:13:17,920 --> 00:13:24,440
+And based on what template I select, I get a different set of configurations.
+
+147
+00:13:24,440 --> 00:13:30,720
+In my template, I can also define the default values for these fields.
+
+148
+00:13:30,720 --> 00:13:37,200
+So this one is actually a radio widget with three values that I can display to the users.
+
+149
+00:13:37,200 --> 00:13:46,800
+So we can change this to, do you like that or no?
+
+150
+00:13:46,800 --> 00:13:47,800
+That's no park.
+
+151
+00:13:47,800 --> 00:13:52,200
+It's probably a pretty good answer, right?
+
+152
+00:13:52,200 --> 00:14:04,800
+We can add another options.
+
+153
+00:14:04,800 --> 00:14:11,560
+We can force the users to write this and then we have this break this page.
+
+154
+00:14:11,560 --> 00:14:24,400
+So great how much you like Matomo, right?
+
+155
+00:14:24,400 --> 00:14:27,200
+And we have five stars to do that.
+
+156
+00:14:27,200 --> 00:14:39,400
+And then we have send feedback and thank you for your feedback on Matomo is what I will
+
+157
+00:14:39,400 --> 00:14:44,280
+respond to the users after submitting.
+
+158
+00:14:44,280 --> 00:14:50,160
+So by doing so, I have created a new form, Thomas demo form.
+
+159
+00:14:50,160 --> 00:14:56,240
+And after having this form in place, I can go to the tag manager and publish this on
+
+160
+00:14:56,240 --> 00:15:00,780
+my site or we go to the tag manager.
+
+161
+00:15:00,780 --> 00:15:08,280
+So having this plugin installed, I can just click on create a new tag, scroll down and
+
+162
+00:15:08,280 --> 00:15:11,960
+select the user feedback tag.
+
+163
+00:15:11,960 --> 00:15:15,600
+And in this, you have a lot of configuration options.
+
+164
+00:15:15,600 --> 00:15:19,160
+The first one is to select the form that you want to display.
+
+165
+00:15:19,160 --> 00:15:23,840
+So down here, I have my demo form.
+
+166
+00:15:23,840 --> 00:15:29,520
+The second option is that I can decide how to display this.
+
+167
+00:15:29,520 --> 00:15:31,720
+I will show all these examples pretty soon.
+
+168
+00:15:31,720 --> 00:15:33,800
+The first one is a model.
+
+169
+00:15:33,800 --> 00:15:42,600
+I will just bring up a model on top of the page and I will not do much more than this.
+
+170
+00:15:42,600 --> 00:15:47,240
+The second thing is that I need to decide the trigger.
+
+171
+00:15:47,240 --> 00:15:49,600
+So what will trigger this feedback form?
+
+172
+00:15:49,600 --> 00:15:55,480
+So I will actually, let's see if I have some good ones here.
+
+173
+00:15:55,480 --> 00:15:57,640
+I will create a new trigger actually.
+
+174
+00:15:57,640 --> 00:16:02,000
+I will do it pretty simple.
+
+175
+00:16:02,000 --> 00:16:13,440
+I will do it on a page view where the page URL contains question mark equals demo.
+
+176
+00:16:13,440 --> 00:16:17,360
+I will explain why I do this.
+
+177
+00:16:17,360 --> 00:16:28,720
+So creating this trigger, I should probably name it better, page view demo.
+
+178
+00:16:28,720 --> 00:16:32,400
+We're actually live changing our website right now.
+
+179
+00:16:32,400 --> 00:16:44,240
+So after this, I will, of course, publish a new version, create a new version and publish.
+
+180
+00:16:44,240 --> 00:16:47,520
+And then I can go back to my site.
+
+181
+00:16:47,520 --> 00:16:51,200
+And what I added was page view trigger.
+
+182
+00:16:51,200 --> 00:16:53,360
+So I will actually look at this URL parameter.
+
+183
+00:16:53,360 --> 00:17:01,800
+So if I have the URL parameter, question mark equals demo, this will actually trigger this
+
+184
+00:17:01,800 --> 00:17:02,800
+service.
+
+185
+00:17:02,800 --> 00:17:15,560
+And this one is a bit slow on our side, so we'll just make sure it works.
+
+186
+00:17:15,560 --> 00:17:20,840
+It's actually an issue we have in this particular installation that I need to look into.
+
+187
+00:17:20,840 --> 00:17:21,840
+That's another question.
+
+188
+00:17:21,840 --> 00:17:34,200
+Let's see if it's loaded, sorry, I lost it.
+
+189
+00:17:34,200 --> 00:17:35,200
+Let's see.
+
+190
+00:17:35,200 --> 00:17:38,720
+Let's see if it's published as well.
+
+191
+00:17:38,720 --> 00:17:45,120
+So let's go back again, reload the page.
+
+192
+00:17:45,120 --> 00:17:52,880
+Okay, so that didn't work.
+
+193
+00:17:52,880 --> 00:17:59,680
+I think we can go to another page demo.
+
+194
+00:17:59,680 --> 00:18:06,560
+Sometimes there is caching going on here.
+
+195
+00:18:06,560 --> 00:18:07,920
+Or I did something wrong.
+
+196
+00:18:07,920 --> 00:18:09,640
+That might be true as well.
+
+197
+00:18:09,640 --> 00:18:14,080
+Let's go back to the tag manager and see what I did.
+
+198
+00:18:14,080 --> 00:18:18,040
+So we have a tag with the demo form.
+
+199
+00:18:18,040 --> 00:18:20,720
+Oh, I know what I did.
+
+200
+00:18:20,720 --> 00:18:28,720
+I didn't save, I didn't save it, I think, no, I didn't.
+
+201
+00:18:28,720 --> 00:18:32,400
+This is something I usually forget.
+
+202
+00:18:32,400 --> 00:18:42,000
+I'd never saved the actual tag, so I wonder why it didn't work.
+
+203
+00:18:42,000 --> 00:18:48,960
+Hit view demo, and I selected the form called Thomas demo form.
+
+204
+00:18:48,960 --> 00:18:52,360
+So what I actually forgot was to do the create tag.
+
+205
+00:18:52,360 --> 00:19:11,080
+I only created the trigger before, so let's publish it.
+
+206
+00:19:11,080 --> 00:19:20,120
+So meanwhile, we're waiting for our slow tag manager publishing.
+
+207
+00:19:20,120 --> 00:19:23,880
+I can answer the first question I see in the chat.
+
+208
+00:19:23,880 --> 00:19:27,920
+So how accessible are these forms?
+
+209
+00:19:27,920 --> 00:19:31,800
+Well, we tried to look into accessibility.
+
+210
+00:19:31,800 --> 00:19:41,040
+Accessibility is quite hard for us to control 100% because we're injecting code into a website
+
+211
+00:19:41,040 --> 00:19:43,360
+and we're not fully owning this.
+
+212
+00:19:43,360 --> 00:19:53,320
+But the way we try to do it, at least, is to apply as little CSS as possible.
+
+213
+00:19:53,320 --> 00:20:00,840
+We apply some CSS styling just to make it readable.
+
+214
+00:20:00,840 --> 00:20:06,640
+So when I've been building this, I've been trying to test it from an accessibility perspective.
+
+215
+00:20:06,640 --> 00:20:14,440
+We also had some accessibility consultants looking into the actual results of the forms.
+
+216
+00:20:14,440 --> 00:20:15,440
+All right.
+
+217
+00:20:15,440 --> 00:20:17,280
+So now it should be published.
+
+218
+00:20:17,280 --> 00:20:20,800
+Let's go back to the site and reload and hope yes.
+
+219
+00:20:20,800 --> 00:20:21,800
+So do you like Matomo?
+
+220
+00:20:21,800 --> 00:20:22,800
+Yes, no, partly.
+
+221
+00:20:22,800 --> 00:20:28,720
+Of course, I like Matomo, and how much do I like it very much?
+
+222
+00:20:28,720 --> 00:20:29,720
+Sending the feedback.
+
+223
+00:20:29,720 --> 00:20:32,960
+So it seemed to work now.
+
+224
+00:20:32,960 --> 00:20:37,800
+So this is the basic concept of how to do this.
+
+225
+00:20:37,800 --> 00:20:41,880
+So we have the form and we have the tags.
+
+226
+00:20:41,880 --> 00:20:48,760
+And if you know your way around tag managers, you understand how powerful this is.
+
+227
+00:20:48,760 --> 00:20:57,440
+We can come up with pretty awesome rules on how to display these forms on a website.
+
+228
+00:20:57,440 --> 00:21:08,280
+I will also show you some other examples of how we can display these forms.
+
+229
+00:21:08,280 --> 00:21:09,840
+Actually, I do have...
+
+230
+00:21:09,840 --> 00:21:19,480
+Let's go back to the form I just created.
+
+231
+00:21:19,480 --> 00:21:20,960
+There we go.
+
+232
+00:21:20,960 --> 00:21:28,000
+So the first option here was to display this form as a model taking over the page.
+
+233
+00:21:28,000 --> 00:21:32,840
+But maybe I want to display this as a feedback button instead.
+
+234
+00:21:32,840 --> 00:21:40,200
+So selecting this option gives me the option to control this button.
+
+235
+00:21:40,200 --> 00:21:47,920
+And the default text here is just feedback, but that's called feedback on Matomo instead.
+
+236
+00:21:47,920 --> 00:21:52,840
+I want to display this on the right side of the page, and we'll just go with the default
+
+237
+00:21:52,840 --> 00:21:58,280
+options of black text and a grayish background color.
+
+238
+00:21:58,280 --> 00:22:09,320
+And I'll update this and publishing again.
+
+239
+00:22:09,320 --> 00:22:21,080
+Let's see, a bit slow.
+
+240
+00:22:21,080 --> 00:22:22,080
+So we have time.
+
+241
+00:22:22,080 --> 00:22:26,120
+Please ask questions in the chat if you have them.
+
+242
+00:22:26,120 --> 00:22:33,760
+We'll actually do this faster next time.
+
+243
+00:22:33,760 --> 00:22:37,560
+We don't have to wait for the publishing.
+
+244
+00:22:37,560 --> 00:23:00,880
+Maybe someone have a solution to why our tag manager is slow.
+
+245
+00:23:00,880 --> 00:23:03,600
+This is frustrating.
+
+246
+00:23:03,600 --> 00:23:06,600
+Okay.
+
+247
+00:23:06,600 --> 00:23:13,600
+So let's reload the page, and now you can see that we've got a feedback button coming
+
+248
+00:23:13,600 --> 00:23:14,600
+up on the right.
+
+249
+00:23:14,600 --> 00:23:19,440
+So instead of having the overlay, I'm just displaying this as a feedback button and clicking
+
+250
+00:23:19,440 --> 00:23:22,440
+on that, we bring the form up.
+
+251
+00:23:22,440 --> 00:23:25,320
+And of course, we continue to click yes.
+
+252
+00:23:25,320 --> 00:23:29,440
+And right now I'm a bit frustrated because of the slow tag management publishing.
+
+253
+00:23:29,440 --> 00:23:31,040
+So we'll do three.
+
+254
+00:23:31,040 --> 00:23:32,040
+So send feedback.
+
+255
+00:23:32,040 --> 00:23:33,040
+Okay.
+
+256
+00:23:33,040 --> 00:23:35,000
+So that's great.
+
+257
+00:23:35,000 --> 00:23:37,640
+You can see that we can display them in different ways.
+
+258
+00:23:37,640 --> 00:23:42,000
+I will show the last example later on.
+
+259
+00:23:42,000 --> 00:23:46,080
+But before that, we go into the actual reporting.
+
+260
+00:23:46,080 --> 00:23:51,240
+So when you have user feedback installed, you will actually have a new report in your
+
+261
+00:23:51,240 --> 00:23:55,240
+reporting interface displaying the summits.
+
+262
+00:23:55,240 --> 00:24:00,280
+So as we built it right now, it's quite techy.
+
+263
+00:24:00,280 --> 00:24:05,960
+So we will only get information on where this happened on the page URL.
+
+264
+00:24:05,960 --> 00:24:09,920
+You will get the information about which form we submitted.
+
+265
+00:24:09,920 --> 00:24:11,520
+This is a form ID.
+
+266
+00:24:11,520 --> 00:24:14,040
+We also collect the visitor ID.
+
+267
+00:24:14,040 --> 00:24:23,800
+This gives us the option to actually apply segments on top of our form submits.
+
+268
+00:24:23,800 --> 00:24:28,440
+So having a lot of form feedback on your site.
+
+269
+00:24:28,440 --> 00:24:32,280
+If you're rating the page or whatever, you can actually start applying.
+
+270
+00:24:32,280 --> 00:24:33,280
+Okay.
+
+271
+00:24:33,280 --> 00:24:41,880
+I want to see only the visitors with Firefox or maybe from a customer segment coming from
+
+272
+00:24:41,880 --> 00:24:43,680
+a custom dimension or whatever.
+
+273
+00:24:43,680 --> 00:24:49,120
+This is actually one of the nicest things about combining the qualitative and quantitative
+
+274
+00:24:49,120 --> 00:24:50,560
+data within Matomo.
+
+275
+00:24:50,560 --> 00:24:56,320
+You can apply the segments on top of your feedback service.
+
+276
+00:24:56,320 --> 00:25:03,720
+The results you can see here, so what's coming in is actually the name of the field and the
+
+277
+00:25:03,720 --> 00:25:05,040
+data coming in.
+
+278
+00:25:05,040 --> 00:25:11,920
+This is obviously something that will work to create more visually attractive interface
+
+279
+00:25:11,920 --> 00:25:13,840
+in the long run.
+
+280
+00:25:13,840 --> 00:25:22,360
+So adding more widgets to display this and even have custom reports coming for the dashboard
+
+281
+00:25:22,360 --> 00:25:28,120
+where you can select an individual form and present that in different ways.
+
+282
+00:25:28,120 --> 00:25:31,160
+But for now, we have it in this format.
+
+283
+00:25:31,160 --> 00:25:37,040
+What's really nice is that you can actually export this data already by clicking here
+
+284
+00:25:37,040 --> 00:25:47,440
+and use the API of Matomo to add this feedback data into Excel or whatever.
+
+285
+00:25:47,440 --> 00:25:52,800
+Yes, a question here, can you filter out based on the responses?
+
+286
+00:25:52,800 --> 00:26:02,480
+So maybe I just want to have people that answered three or lower on this to only get the unhappy
+
+287
+00:26:02,480 --> 00:26:03,800
+users.
+
+288
+00:26:03,800 --> 00:26:06,600
+So you can't do it right now in the interface.
+
+289
+00:26:06,600 --> 00:26:12,440
+We have been playing around with that and it's definitely a feature we plan to release,
+
+290
+00:26:12,440 --> 00:26:19,160
+but right now you basically have to export the data and do that in an external tool.
+
+291
+00:26:19,160 --> 00:26:25,600
+But it's definitely something we played around with, but it's been a bit harder than we thought
+
+292
+00:26:25,600 --> 00:26:29,040
+in the beginning to achieve.
+
+293
+00:26:29,040 --> 00:26:36,200
+But it's still quite powerful to have it in this way.
+
+294
+00:26:36,200 --> 00:26:42,960
+Another thing is that why can I create a segment based on the rating of the page?
+
+295
+00:26:42,960 --> 00:26:48,560
+So maybe I want to create a segment based on everyone that voted lower than three to
+
+296
+00:26:48,560 --> 00:26:52,740
+just segment out unhappy users to start analyzing that.
+
+297
+00:26:52,740 --> 00:26:58,000
+That's also a feature that we plan to build, of course, not implemented right now, but
+
+298
+00:26:58,000 --> 00:27:04,160
+it's definitely possible since we're connecting data to visitors and it's more about building
+
+299
+00:27:04,160 --> 00:27:05,160
+that interface.
+
+300
+00:27:05,160 --> 00:27:11,280
+But as you start to understand what it's really, really powerful when you start to combine
+
+301
+00:27:11,280 --> 00:27:18,840
+these data sets with each other to be able to do those things.
+
+302
+00:27:18,840 --> 00:27:19,840
+What else?
+
+303
+00:27:19,840 --> 00:27:22,200
+Let's look at the last option.
+
+304
+00:27:22,200 --> 00:27:29,200
+Actually if we go back to this page and we scroll down here, you can see that this form
+
+305
+00:27:29,200 --> 00:27:33,400
+is actually displayed within the markup of the page.
+
+306
+00:27:33,400 --> 00:27:38,240
+And this is actually the last display type we have.
+
+307
+00:27:38,240 --> 00:27:53,640
+So going back to the Tag Manager, I will actually look at, let's see if I think it's this one.
+
+308
+00:27:53,640 --> 00:27:54,820
+Yes.
+
+309
+00:27:54,820 --> 00:27:58,520
+So the styling is called raw inline.
+
+310
+00:27:58,520 --> 00:28:04,600
+And when I select that, I can also check this one, show advanced display controls.
+
+311
+00:28:04,600 --> 00:28:16,960
+And when I do so, it's getting pretty techy, but I can actually select the query.
+
+312
+00:28:16,960 --> 00:28:18,140
+It's a query selector.
+
+313
+00:28:18,140 --> 00:28:29,320
+So if I go back to my page and we inspect here and actually see that we have a div called
+
+314
+00:28:29,320 --> 00:28:34,840
+Feedback Form Demo, and I think this is the one that I use.
+
+315
+00:28:34,840 --> 00:28:35,840
+Yes.
+
+316
+00:28:35,840 --> 00:28:42,440
+So I'm having a query selected with the Feedback Form Demo, and this means that the form will
+
+317
+00:28:42,440 --> 00:28:46,600
+be injected into that div.
+
+318
+00:28:46,600 --> 00:28:49,040
+That could be anything on the page.
+
+319
+00:28:49,040 --> 00:28:54,640
+I could go down to the footer and add it to the contact section or whatever.
+
+320
+00:28:54,640 --> 00:28:59,560
+If you know your JavaScript around, this is pretty simple.
+
+321
+00:28:59,560 --> 00:29:07,280
+What you can also control is whether you want to append it on the end of this element or
+
+322
+00:29:07,280 --> 00:29:08,320
+on the beginning.
+
+323
+00:29:08,320 --> 00:29:11,120
+So this is again JavaScript.
+
+324
+00:29:11,120 --> 00:29:16,320
+So you can decide if you add it to the body feed, for instance, of the page.
+
+325
+00:29:16,320 --> 00:29:21,560
+You can decide whether to append it in the beginning, before all other elements, or in
+
+326
+00:29:21,560 --> 00:29:24,680
+the end.
+
+327
+00:29:24,680 --> 00:29:28,760
+We can also add styling to these forms.
+
+328
+00:29:28,760 --> 00:29:35,120
+So in this case, I wanted a particular background color.
+
+329
+00:29:35,120 --> 00:29:39,760
+But the nice thing is that we're actually inheriting styles from the site.
+
+330
+00:29:39,760 --> 00:29:48,680
+So since we're adding it to the page, we're actually inheriting fonts and whatever from
+
+331
+00:29:48,680 --> 00:29:49,680
+the site.
+
+332
+00:29:49,680 --> 00:29:58,000
+So there are a lot of ways that we can actually add style sheets to our own CMS and just inherit
+
+333
+00:29:58,000 --> 00:30:05,160
+that to all the forms, which is, of course, a nice feature.
+
+334
+00:30:05,160 --> 00:30:09,320
+What we also implemented is that we can add event tracking.
+
+335
+00:30:09,320 --> 00:30:14,600
+So maybe I want to have an event when someone submits this form.
+
+336
+00:30:14,600 --> 00:30:18,360
+This would, of course, be pretty easy to do directly through the Tag Manager.
+
+337
+00:30:18,360 --> 00:30:21,480
+But for some people, it might be a bit tricky to do so.
+
+338
+00:30:21,480 --> 00:30:31,320
+So by just checking this one, I get a pre-filled options to add an event category, action,
+
+339
+00:30:31,320 --> 00:30:33,280
+description, and name and value.
+
+340
+00:30:33,280 --> 00:30:39,840
+So it would basically just send an event when this happens.
+
+341
+00:30:39,840 --> 00:30:42,000
+I don't want this in this case.
+
+342
+00:30:42,000 --> 00:30:46,280
+So that's this demo.
+
+343
+00:30:46,280 --> 00:30:51,080
+And I think that pretty much sums up.
+
+344
+00:30:51,080 --> 00:30:58,040
+We also have, if you go back to the user feedback interface, because this can be pretty sensitive,
+
+345
+00:30:58,040 --> 00:30:59,040
+this data.
+
+346
+00:30:59,040 --> 00:31:02,560
+So we have the submissions here.
+
+347
+00:31:02,560 --> 00:31:06,440
+What you see was just want to delete a feedback.
+
+348
+00:31:06,440 --> 00:31:11,480
+So this page actually displays the collected feedback.
+
+349
+00:31:11,480 --> 00:31:15,800
+And I can go in and just delete a single record like this.
+
+350
+00:31:15,800 --> 00:31:21,120
+And here, we can actually filter out.
+
+351
+00:31:21,120 --> 00:31:29,600
+This is actually collecting all the feedback, so I can filter out in different ways and
+
+352
+00:31:29,600 --> 00:31:46,440
+even search for, like, rate this page equals 3, as we have here.
+
+353
+00:31:46,440 --> 00:31:56,040
+This is just for deleting data, so I can do that easily.
+
+354
+00:31:56,040 --> 00:32:01,360
+Yes, great.
+
+355
+00:32:01,360 --> 00:32:14,440
+To get feedback that you can help me with the segmentation, that sounds super awesome.
+
+356
+00:32:14,440 --> 00:32:15,440
+Thank you for this, Stefan.
+
+357
+00:32:15,440 --> 00:32:19,920
+I will definitely contact you about that.
+
+358
+00:32:19,920 --> 00:32:20,920
+What else?
+
+359
+00:32:20,920 --> 00:32:30,160
+One important thing is, of course, that since we are collecting sensitive data, we add permissions
+
+360
+00:32:30,160 --> 00:32:32,520
+to the feedback module.
+
+361
+00:32:32,520 --> 00:32:49,980
+So just to be able to see these reports, you can, on a user level, let's see.
+
+362
+00:32:49,980 --> 00:32:56,320
+So if I want to give this user some permissions on a particular website, I can actually add
+
+363
+00:32:56,320 --> 00:33:02,620
+the capability of being a form manager, a form user, and a template manager.
+
+364
+00:33:02,620 --> 00:33:12,900
+So template manager is, of course, adding a template to the site.
+
+365
+00:33:12,900 --> 00:33:16,420
+Form manager is, of course, creating the form.
+
+366
+00:33:16,420 --> 00:33:24,000
+And then the form user for actually viewing the data on a particular site.
+
+367
+00:33:24,000 --> 00:33:26,240
+So with both of these things as well.
+
+368
+00:33:26,240 --> 00:33:33,560
+And of course, tag manager capabilities, if you're going to publish something to the site,
+
+369
+00:33:33,560 --> 00:33:34,960
+you need to have that.
+
+370
+00:33:34,960 --> 00:33:38,760
+But that comes from that plugin, of course.
+
+371
+00:33:38,760 --> 00:33:39,760
+All right.
+
+372
+00:33:39,760 --> 00:33:45,200
+So that's actually what I was supposed to demo here.
+
+373
+00:33:45,200 --> 00:33:48,560
+Let's look at the next thing.
+
+374
+00:33:48,560 --> 00:33:53,240
+So we're actually building this as a premium plugin.
+
+375
+00:33:53,240 --> 00:34:01,000
+So right now, the pricing is 300 euros per month.
+
+376
+00:34:01,000 --> 00:34:08,640
+And we plan to release this on the marketplace, but we need to do some code evaluation.
+
+377
+00:34:08,640 --> 00:34:15,560
+If you're a client to Digitalist buying our sauce, the pricing may go down a thousand
+
+378
+00:34:15,560 --> 00:34:16,560
+euros.
+
+379
+00:34:16,560 --> 00:34:17,560
+But yeah.
+
+380
+00:34:17,560 --> 00:34:24,440
+So the roadmap right now is to release it in Q4.
+
+381
+00:34:24,440 --> 00:34:27,980
+What we're doing right now is actually refactoring it a bit.
+
+382
+00:34:27,980 --> 00:34:36,000
+So we're actually skipping the parts I displayed with the form template.
+
+383
+00:34:36,000 --> 00:34:41,320
+So we'll actually demo what we're working on right now pretty soon.
+
+384
+00:34:41,320 --> 00:34:50,740
+But the release is about creating forms, displaying form, data collection, and simple reporting.
+
+385
+00:34:50,740 --> 00:34:54,040
+We plan to continuously release new versions.
+
+386
+00:34:54,040 --> 00:35:01,800
+So as a client, you will probably get updates every month or so based on feedback from our
+
+387
+00:35:01,800 --> 00:35:05,400
+users.
+
+388
+00:35:05,400 --> 00:35:16,320
+As part next summer, I think we'll release the first widgets to get more graphical bells
+
+389
+00:35:16,320 --> 00:35:19,720
+and whistles, so to speak.
+
+390
+00:35:19,720 --> 00:35:21,680
+And then of course, it's an ongoing thing.
+
+391
+00:35:21,680 --> 00:35:27,800
+So based on feedback, we'll continue to release more nice things.
+
+392
+00:35:27,800 --> 00:35:35,200
+So let's look at the new form creation tool I'm playing around with.
+
+393
+00:35:35,200 --> 00:35:40,560
+So instead of having the templates, the plan is to make it look like this, just to have
+
+394
+00:35:40,560 --> 00:35:44,120
+forms and the ability to create form.
+
+395
+00:35:44,120 --> 00:35:53,800
+So instead of having this really techy JSON file, we plan to do it as this.
+
+396
+00:35:53,800 --> 00:36:05,960
+So just adding, dragging, and dropping fields to your form like this, and being able to
+
+397
+00:36:05,960 --> 00:36:08,720
+drag them around.
+
+398
+00:36:08,720 --> 00:36:20,600
+Let's add the header again.
+
+399
+00:36:20,600 --> 00:36:31,280
+So being able to do it in a much nicer way, as you see, it's pretty nice to do this.
+
+400
+00:36:31,280 --> 00:36:39,880
+We're actually using an external library to do this, but it gives us really nice ways
+
+401
+00:36:39,880 --> 00:36:42,480
+for users to understand it.
+
+402
+00:36:42,480 --> 00:36:49,460
+So after publishing this, I will go to the Tag Manager and just display it on the side.
+
+403
+00:36:49,460 --> 00:36:51,240
+So let's look at some questions.
+
+404
+00:36:51,240 --> 00:37:00,000
+I think this is about it for now.
+
+405
+00:37:00,000 --> 00:37:06,480
+Yes, we have Max writing from experience of working with similar tools in Google Analytics
+
+406
+00:37:06,480 --> 00:37:07,480
+and Google Timer.
+
+407
+00:37:07,480 --> 00:37:12,480
+I think the extra quality data adds an extra dimension when analyzing.
+
+408
+00:37:12,480 --> 00:37:13,480
+So great.
+
+409
+00:37:13,480 --> 00:37:16,480
+Thanks for this.
+
+410
+00:37:16,480 --> 00:37:21,360
+Yes, Stefan.
+
+411
+00:37:21,360 --> 00:37:30,600
+I think that would be awesome to have a workshop around combining this data with dimensions.
+
+412
+00:37:30,600 --> 00:37:34,680
+That's really, really, really nice, and thank you for reaching out there.
+
+413
+00:37:34,680 --> 00:37:43,520
+And Michael said that with event tracking, you should be able to filter out segments.
+
+414
+00:37:43,520 --> 00:37:49,720
+Yes, the problem is that the way we implemented the events right now is that there are actually
+
+415
+00:37:49,720 --> 00:37:56,240
+no connection to the actual user feedback sent in.
+
+416
+00:37:56,240 --> 00:38:13,560
+So that's something we would need to work on.
+
+417
+00:38:13,560 --> 00:38:14,560
+Yes, another question.
+
+418
+00:38:14,560 --> 00:38:21,360
+Can I use the form analytics to analyze how users are using forms, or can I get that data
+
+419
+00:38:21,360 --> 00:38:25,560
+from your plugin?
+
+420
+00:38:25,560 --> 00:38:36,640
+The only thing we have right now is the event tracking built in.
+
+421
+00:38:36,640 --> 00:38:44,900
+But you could use the form analytics plugin and probably listen to the user feedback forms
+
+422
+00:38:44,900 --> 00:38:52,920
+to get a more detailed analysis of the form usage there, which I think is nice.
+
+423
+00:38:52,920 --> 00:38:59,680
+But you can also set up manual events on, for instance, if someone starts to interact
+
+424
+00:38:59,680 --> 00:39:01,880
+with the form.
+
+425
+00:39:01,880 --> 00:39:08,160
+I have that as an idea to add that type of events as well, but I don't know how much
+
+426
+00:39:08,160 --> 00:39:11,920
+I want to build into the plugin directly.
+
+427
+00:39:11,920 --> 00:39:26,760
+But if you go to the plugin, go to the tag manager, and at this one, enable event tracking
+
+428
+00:39:26,760 --> 00:39:32,640
+of feedback forms, I could actually add a button saying enable event tracking for form
+
+429
+00:39:32,640 --> 00:39:37,720
+interaction and start collecting that as well.
+
+430
+00:39:37,720 --> 00:39:39,920
+Right now, we decided to just do this.
+
+431
+00:39:39,920 --> 00:39:42,160
+It's definitely possible to do it manually.
+
+432
+00:39:42,160 --> 00:39:43,160
+All right.
+
+433
+00:39:43,160 --> 00:39:51,960
+So, another question was, is it possible to use the feedback forms as segment or reports
+
+434
+00:39:51,960 --> 00:39:55,200
+for users that gave good, bad ratings or similar?
+
+435
+00:39:55,200 --> 00:39:58,360
+Yeah, we talked about that already.
+
+436
+00:39:58,360 --> 00:40:01,640
+Let's see.
+
+437
+00:40:01,640 --> 00:40:05,640
+I need feedback form after the 10th search result.
+
+438
+00:40:05,640 --> 00:40:12,720
+Is this possible to define a container in which the feedback form will be inserted?
+
+439
+00:40:12,720 --> 00:40:20,400
+I think that's really up to doing cool things with the tag manager.
+
+440
+00:40:20,400 --> 00:40:23,040
+And this is also why I really enjoy the tag manager.
+
+441
+00:40:23,040 --> 00:40:28,920
+One thing we didn't look into, which is pretty nice, is that maybe not asking the question
+
+442
+00:40:28,920 --> 00:40:33,440
+directly, but having this one in the tag manager by default is really, really nice.
+
+443
+00:40:33,440 --> 00:40:38,000
+We can actually decide how often this should be displayed to the visitors.
+
+444
+00:40:38,000 --> 00:40:44,040
+So, once per page view, once per 24-hour, or once in lifetime, or actually every time
+
+445
+00:40:44,040 --> 00:40:46,640
+someone sees the form.
+
+446
+00:40:46,640 --> 00:40:51,920
+So these type of great things with the tag manager.
+
+447
+00:40:51,920 --> 00:40:59,280
+But if you go back to the search results, so if you have a site and you want to display
+
+448
+00:40:59,280 --> 00:41:07,920
+this feedback after the 10th form result, I would use the one we looked into before,
+
+449
+00:41:07,920 --> 00:41:18,040
+the raw inline, that would make it possible to just inject the HTML of the form into your
+
+450
+00:41:18,040 --> 00:41:20,400
+search result list.
+
+451
+00:41:20,400 --> 00:41:28,800
+So I would say, yes, it's definitely possible, but you need to dig into how your search result
+
+452
+00:41:28,800 --> 00:41:36,240
+page, HTML looks like, but it would definitely be possible.
+
+453
+00:41:36,240 --> 00:41:44,640
+And the other things is like, okay, maybe you have, you can basically use any data on
+
+454
+00:41:44,640 --> 00:41:45,640
+the page.
+
+455
+00:41:45,640 --> 00:41:52,600
+So on the 10th page view, after submitting this form or whatever, you can come up with
+
+456
+00:41:52,600 --> 00:41:55,920
+any ideas of how to do this.
+
+457
+00:41:55,920 --> 00:41:56,920
+All right.
+
+458
+00:41:56,920 --> 00:42:00,640
+So we're actually running out of time.
+
+459
+00:42:00,640 --> 00:42:02,960
+Thank you for listening.
+
+460
+00:42:02,960 --> 00:42:09,360
+I hope you liked it, and feel free to continue to ask questions in this group.
+
+461
+00:42:09,360 --> 00:42:15,720
+I'll, yeah, I'll try to answer as much as possible.
+
+462
+00:42:15,720 --> 00:42:27,680
+Any thanks for your session, Thomas, of course, we can continue the conversation in the chat
+
+463
+00:42:27,680 --> 00:42:32,000
+for other questions that people might have.
+
+464
+00:42:32,000 --> 00:42:33,000
+Yep.
+
+465
+00:42:33,000 --> 00:42:34,000
+Sounds good.
+
+466
+00:42:34,000 --> 00:42:35,000
+Thank you, guys.
+
+467
+00:42:35,000 --> 00:42:53,640
+Thank you.
+

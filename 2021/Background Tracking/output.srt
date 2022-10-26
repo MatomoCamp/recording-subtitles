@@ -1,0 +1,1680 @@
+1
+00:00:00,000 --> 00:00:12,240
+Willkommen zum ersten Talk vom Matomo Camp, genau gesagt der einen der beiden ersten Talks,
+
+2
+00:00:12,240 --> 00:00:17,680
+aber hier sind wir im deutschsprachigen Talk. Also der Moderator hier ist Joachim Nickel,
+
+3
+00:00:17,680 --> 00:00:24,040
+nutzt Matomo und Biwik schon seit über zehn Jahren und engagiert sich auch in verschiedenen
+
+4
+00:00:24,040 --> 00:00:28,240
+Open-Source-Projekten, wie zum Beispiel vor allem den CMS Contao, von dem ihr vielleicht
+
+5
+00:00:28,240 --> 00:00:32,960
+schon gehört habt und von dessen Förderverein ist er Präsident. Und er wird euch jetzt ein
+
+6
+00:00:32,960 --> 00:00:38,200
+bisschen mehr darüber erzählen, wie man mit Background Tracking etwas mehr Daten erfahren
+
+7
+00:00:38,200 --> 00:00:44,120
+in Matomo bekommen kann und genau gesagt auch damit, welche Alternativen es zum klassischen
+
+8
+00:00:44,120 --> 00:00:49,520
+Matomo JavaScript Tracking gibt, welches jeder kennt. Damit, Joachim, kannst du anfangen.
+
+9
+00:00:49,520 --> 00:00:58,520
+Danke, Lukas. Ja, hallo. Fangen wir gleich an mit dem zweiten Slide bei mir. Lukas hat
+
+10
+00:00:58,520 --> 00:01:02,720
+im Endeffekt schon im Großteil gesagt, ich bin OMT-Botschafter. Auf das Thema OMT
+
+11
+00:01:02,720 --> 00:01:07,920
+komme ich ein bisschen später noch zum Tragen. Präsident der Contao Association und Matomo
+
+12
+00:01:07,920 --> 00:01:13,280
+halt eben seit mindestens 2010, wahrscheinlich sogar schon noch ein bisschen länger. Heute
+
+13
+00:01:13,280 --> 00:01:16,880
+geht es um die Frage erstmal grundsätzlich, kann ich den Zahlen überhaupt vertrauen,
+
+14
+00:01:16,880 --> 00:01:20,680
+die wir in Matomo oder halt eben auch irgendwo anders in irgendwelchen Statistiksoftware
+
+15
+00:01:20,680 --> 00:01:26,520
+in dieser Art tracken? Und kleiner Teaser an der Stelle, ich würde mal sagen, ganz klares
+
+16
+00:01:26,520 --> 00:01:31,800
+nein. Das hat mehrere Gründe, denn wenn wir uns mal angucken, wie das Standard Tracking
+
+17
+00:01:31,800 --> 00:01:35,560
+funktioniert, was wir in Matomo haben, sei es über den Tag Manager oder über das normale
+
+18
+00:01:35,560 --> 00:01:40,440
+JavaScript Tracking, dann kommt der Besucher auf unsere Webseite, holt sich die Daten im
+
+19
+00:01:40,440 --> 00:01:45,640
+Endeffekt ab und in der Webseite steht dieser kleine Code drin, der halt eben sagt, du Browser,
+
+20
+00:01:45,640 --> 00:01:50,440
+gib mal die Daten dahinten zu unserer Matomo Instance und tracke das Ganze. Und genau
+
+21
+00:01:50,440 --> 00:01:55,680
+da haben wir halt eben wirklich dieses riesengroße Problem mit der Datenweitergabe, denn zum
+
+22
+00:01:55,680 --> 00:02:00,440
+einen gibt es diese Tracking-Schutzgeschichten, ETP und ETP, wie sie nicht alle so schön
+
+23
+00:02:00,440 --> 00:02:05,080
+heißen. Zum anderen haben wir das große Problem, das User-Consent, den wir halt eben häufig
+
+24
+00:02:05,080 --> 00:02:10,600
+einsetzen müssen, in Verbindung auch mit den Do-Not-Track-Headern. Aber und ganz speziell
+
+25
+00:02:10,600 --> 00:02:16,640
+das Problem der Ad-Blocker. Für 2021 habe ich eine Statistik gefunden, die davon ausgeht,
+
+26
+00:02:16,640 --> 00:02:22,680
+dass in Deutschland rund 40 Prozent der Nutzer, die auf den Webseiten unterwegs sind, Ad-Blocker
+
+27
+00:02:22,680 --> 00:02:28,040
+einsetzen, weltweit über 42 Prozent. Diese Werte differieren immer unterschiedlich von
+
+28
+00:02:28,040 --> 00:02:31,840
+den Herstellern, die diese Statistiken halt eben herausgeben. Teilweise gehen die Werte
+
+29
+00:02:31,840 --> 00:02:37,800
+auf bis zu 50 Prozent hoch und es ist sehr, sehr unterschiedlich bei den einzelnen Webseiten,
+
+30
+00:02:37,800 --> 00:02:43,000
+da kommen wir gleich drauf. Dieser Fakt war für mich im Endeffekt der Grund, warum ich
+
+31
+00:02:43,000 --> 00:02:47,800
+gesagt habe, dieser Weg vorne, der ist vielleicht nicht unbedingt der beste, weil halt einfach
+
+32
+00:02:47,800 --> 00:02:51,880
+zu viele Daten verloren gehen und deswegen sage ich, okay, streichen wir den Weg und
+
+33
+00:02:51,880 --> 00:02:58,040
+gehen direkt aus der Anwendung in Matomo rein, denn Matomo hat etwas sehr Schönes, was andere
+
+34
+00:02:58,040 --> 00:03:03,000
+Systeme nicht in der Form anbieten, nämlich die Tracking-API. Der Nachteil bei der ganzen
+
+35
+00:03:03,000 --> 00:03:07,600
+Sache ist, die Umsetzung muss halt eben in der Anwendung erfolgen und wir müssen dort
+
+36
+00:03:07,600 --> 00:03:12,200
+wirklich alle Parameter, die wir benötigen für das Tracking, halt eben selber uns zusammensammeln.
+
+37
+00:03:12,200 --> 00:03:16,160
+Wir haben also nicht den schönen Fall wie im JavaScript-Tracking, dass einfach alles
+
+38
+00:03:16,160 --> 00:03:21,160
+schon mehr oder weniger out of the box zur Verfügung steht und müssen dann halt eben
+
+39
+00:03:21,160 --> 00:03:25,760
+gesammelt diese Daten an Matomo schicken. Die Aufgaben, die dabei entstehen, ist zum
+
+40
+00:03:25,760 --> 00:03:30,560
+einen klar, wir müssen das Thema Session Handling klären, das heißt, wie bekommen wir die einzelnen
+
+41
+00:03:30,560 --> 00:03:35,280
+Besucher-Sessions zusammen? Matomo kann diese Aufgabe an der Stelle für uns nicht übernehmen,
+
+42
+00:03:35,280 --> 00:03:40,040
+wir müssen diese Aufgabe halt eben übernehmen in der Anwendung. Wir müssen selber uns um
+
+43
+00:03:40,040 --> 00:03:44,720
+die Borderkennung zum Großteil kümmern, denn alles, was wir halt eben direkt gegen Matomo
+
+44
+00:03:44,720 --> 00:03:50,320
+werfen, wird dort halt im Endeffekt ausgewertet. Eine Borderkennung an der Stelle ist schwierig,
+
+45
+00:03:50,320 --> 00:03:54,160
+weil es halt eben nachgeschaltet ist und wir müssen immer berücksichtigen, dass wir eine
+
+46
+00:03:54,160 --> 00:03:59,320
+gewisse Latenz haben. Das heißt also, die Anwendung selber sollte den Request an Matomo
+
+47
+00:03:59,320 --> 00:04:03,360
+auch erst dann schicken, wenn im Endeffekt die Ausgabe an die Webseite, also an den Kunden,
+
+48
+00:04:03,360 --> 00:04:08,160
+an den Webbrowser, das Kunden ausgeliefert wurde. Aber auch dann ist es doof, wenn der
+
+49
+00:04:08,160 --> 00:04:13,520
+Prozess halt eben noch zu lange braucht, weil der Weg bis zum Matomo API halt eben zu lang ist
+
+50
+00:04:13,520 --> 00:04:18,120
+und von daher könnte man sich überlegen, halt eben das Ganze auch selber irgendwo lokal zu
+
+51
+00:04:18,120 --> 00:04:22,560
+cashen und dann nachträglich erst an Matomo zu übergeben. Wir müssen so oder so mit einem
+
+52
+00:04:22,560 --> 00:04:29,200
+entsprechenden API-Key arbeiten in der Matomo Instanz, die einen Schreibzugriff hat, um zum
+
+53
+00:04:29,200 --> 00:04:33,880
+Beispiel die IP-Adresse halt eben auch zu übergeben, entweder gekürzt schon oder halt eben auch im
+
+54
+00:04:33,880 --> 00:04:39,160
+Klartext, um halt eben dort die Geo-IP-Auflösung zu machen oder wir machen eine Geo-IP-Auflösung
+
+55
+00:04:39,160 --> 00:04:44,480
+direkt in der Anwendung, das geht natürlich auch. Und alle überein, wir haben natürlich das Thema
+
+56
+00:04:44,480 --> 00:04:49,040
+des Datenschutzes, das heißt, wir haben in der Anwendung natürlich untreifiele Daten,
+
+57
+00:04:49,040 --> 00:04:54,000
+wir können möglicherweise den Kunden direkt eins zu eins identifizieren und müssen dann halt
+
+58
+00:04:54,000 --> 00:04:58,000
+eben überlegen, welche Daten übergeben wird, hat Sache an Matomo, nicht, dass wir hinsichtlich
+
+59
+00:04:58,000 --> 00:05:04,120
+der Datenschutz-Grundverordnung dort dann entsprechende Probleme bekommen. Gucken wir uns
+
+60
+00:05:04,120 --> 00:05:09,040
+mal im Vergleich an. Ich habe hier zum einen einen Regionalversorger, den ich diesbezüglich
+
+61
+00:05:09,040 --> 00:05:14,320
+ausgestattet habe, mit dem Standard Tracking und im Background und wenn ich mir das Ganze
+
+62
+00:05:14,320 --> 00:05:20,080
+angucke, dann habe ich hier einen Unterschied von ungefähr 60 Prozent, 60 Prozent mehr Daten,
+
+63
+00:05:20,080 --> 00:05:25,320
+die ich im Background Tracking für diesen Kunden identifiziert bekomme. Wir sehen hier unten auch
+
+64
+00:05:25,320 --> 00:05:31,720
+die Abweichung der Mobiltypen, also das heißt also, ob das ein Desktop-System ist oder halt
+
+65
+00:05:31,720 --> 00:05:36,840
+eben ein Mobilsystem. Im Background Tracking haben wir wesentlich mehr Desktop-Systeme, was die
+
+66
+00:05:36,840 --> 00:05:43,080
+Wahrscheinlichkeit oder die Vermutung hoch liegt, dass die Ad-Blocker halt eben auf Desktop-Browsern
+
+67
+00:05:43,080 --> 00:05:47,160
+höher sind. Man muss dazu sagen, das war zu einer Zeit, wo man auch auf iOS noch nicht so ohne
+
+68
+00:05:47,160 --> 00:05:51,040
+weiteres den Standard-Browser ändern konnte. Das heißt, jetzt ist es alles schon ein bisschen
+
+69
+00:05:51,040 --> 00:05:57,920
+anders. Ich persönlich nutze zum Beispiel sowohl auf dem Desktop als auch auf dem Telefon halt
+
+70
+00:05:57,920 --> 00:06:02,960
+eben den Browser Brave. Der macht halt eben das Tracking schon mal grundsätzlich schwieriger,
+
+71
+00:06:02,960 --> 00:06:08,800
+aber an der Stelle gleich noch die Information mit Matomo und in Verbindung mit kuckielosem
+
+72
+00:06:08,800 --> 00:06:13,320
+Tracking, dass die Matomo Instance auch auf dem gleichen Domain ist. Dann kommt sogar das
+
+73
+00:06:13,320 --> 00:06:17,880
+JavaScript Tracking durch den Brave Browser hindurch, während andere Sachen halt nicht
+
+74
+00:06:17,880 --> 00:06:24,120
+abgekapselt werden. Gucken wir uns einen zweiten Vergleich an den Kfz-Online-Shop. Hier sieht das
+
+75
+00:06:24,120 --> 00:06:30,040
+Ganze so aus, dass wir ungefähr 30 Prozent mehr Visits haben, aber schon ungefähr 40 Prozent mehr
+
+76
+00:06:30,040 --> 00:06:35,520
+Pageviews. Wodurch kommt das zustande? Ganz klar, einfach aus der Situation heraus, bei einem
+
+77
+00:06:35,520 --> 00:06:40,720
+Online-Shop im Gegensatz zu einem Regionaleinbieter, wo ich halt sehr häufig nur One-Pager-Visits habe,
+
+78
+00:06:40,720 --> 00:06:45,360
+habe ich hier natürlich wesentlich längere Visits. Und wenn dann halt eben ein Nutzer,
+
+79
+00:06:45,360 --> 00:06:50,400
+der länger durch den Online-Shop durchgeht, dann einen Blocker hat, dann werden natürlich die
+
+80
+00:06:50,400 --> 00:06:55,360
+Differenz zwischen der Anzahl der Visits und der Pageviews anders. Und das ist jetzt der Punkt,
+
+81
+00:06:55,360 --> 00:07:00,560
+wo ich auch dann im weiteren Verlauf draufkomme. Also hier habe ich noch die Erwähnung kurz
+
+82
+00:07:00,560 --> 00:07:04,960
+hinsichtlich der Thematik der Mobilbrowser. Das heißt, wir hatten im Standard Tracking halt
+
+83
+00:07:04,960 --> 00:07:10,840
+eben 74 Prozent Mobilbrowser und im Background Tracking dann noch 67. Das heißt, der Anteil
+
+84
+00:07:10,840 --> 00:07:14,960
+am Desktop ist auch wieder hier gestiegen und diese Unterscheidung, die muss man halt eben auch
+
+85
+00:07:14,960 --> 00:07:19,160
+immer berücksichtigen, weil möglicherweise gibt es im Background Tracking dann so viele
+
+86
+00:07:19,160 --> 00:07:23,680
+unterschiedliche Daten von den Systemen, dass man sich überlegen muss, ob die Strategie,
+
+87
+00:07:23,680 --> 00:07:31,200
+die man eigentlich wählen wollte, wirklich die richtige ist. Ja, jetzt kommen wir zum OMT. Der
+
+88
+00:07:31,200 --> 00:07:38,680
+OMT ist eine Online-Plattform, der Treffpunkt für Weiterbildung und Netzwerken im Online-Marketing.
+
+89
+00:07:38,680 --> 00:07:45,360
+Der Claim vom OMT ist, lebenslang voneinander lernen. Ich bin auch Botschafter der OMT und hatte
+
+90
+00:07:45,360 --> 00:07:50,120
+halt eben die Chance, diese Seite auch auszuwerten. Hier hatten wir eine Installation mit Google
+
+91
+00:07:50,120 --> 00:07:56,520
+Analytics. Im Parallelflug dann eine Matomo Standard Installation. Dort gab es mehr oder
+
+92
+00:07:56,520 --> 00:08:00,680
+weniger eigentlich kaum Abweichungen. Deswegen lasse ich das hier an der Stelle mit Google
+
+93
+00:08:00,680 --> 00:08:06,360
+Analytics im Vergleich weiter raus. Und dann hatten wir einen Uplift von 15 Prozent in den
+
+94
+00:08:06,360 --> 00:08:12,000
+Visits. Da war erst mal die große Enttäuschung von wegen, wow, der Unterschied ist ja doch relativ
+
+95
+00:08:12,000 --> 00:08:17,480
+wenig. Anscheinend nutzen gar nicht so sehr viele Leute hier auf dem System Adblocker. Und dann
+
+96
+00:08:17,480 --> 00:08:21,800
+guckte ich mir die Daten halt eben in den Pageviews an und stellte fest, okay, ich habe jetzt die
+
+97
+00:08:21,800 --> 00:08:26,040
+Google Analytics rausgelassen, weil das hat uns an der Stelle keine weiteren Punkte gebracht. Wir
+
+98
+00:08:26,040 --> 00:08:32,760
+haben hier doch ein paar ganz andere Daten und zwar wir haben 80 Prozent mehr Pageviews gegenüber den
+
+99
+00:08:32,760 --> 00:08:39,160
+Visits. Das heißt also 15 Prozent mehr Visits, aber 80 Prozent mehr Pageviews. Das wollte ich
+
+100
+00:08:39,160 --> 00:08:43,440
+mir dann halt immer ein bisschen genauer angucken, aber erst mal die Statistik angeguckt, das ist eine
+
+101
+00:08:43,440 --> 00:08:48,240
+Online-Lernplattform. Das heißt also, die Leute gehen wirklich häufig unter der Woche drauf. Das
+
+102
+00:08:48,240 --> 00:08:53,200
+heißt also, die Wochenend-Terminis, die sind einfach entsprechend viel, viel geringer und deshalb diese
+
+103
+00:08:53,200 --> 00:09:00,360
+Einbrüche an der Stelle. Auch hier, wir haben einen enorm hohen Anteil an Desktop-Nutzern. Das heißt
+
+104
+00:09:00,360 --> 00:09:05,760
+also, selbst im normalen Tracking haben wir 73 Prozent Desktop-User, während wir dann im
+
+105
+00:09:05,760 --> 00:09:11,720
+Background sogar schon auf 84 Prozent hochkommen. Die 73 bis 84 Prozent merken wir uns schon mal,
+
+106
+00:09:11,720 --> 00:09:16,560
+weil jetzt kommen wir mal ein bisschen weiter und gucken uns das Ganze in einer Differenzierung an.
+
+107
+00:09:16,560 --> 00:09:20,920
+Wir haben das Ganze jetzt mal segmentiert und zwar habe ich die ganzen Einzelpageviews
+
+108
+00:09:20,920 --> 00:09:26,680
+herausgelassen, um mal zu gucken, was dort halt eben passiert und habe halt eben festgestellt,
+
+109
+00:09:26,680 --> 00:09:34,120
+bei den Visits haben wir jetzt nicht mehr 15 Prozent, sondern schon 35 Prozent mehr und wenn wir
+
+110
+00:09:34,120 --> 00:09:39,760
+uns die Pageshoes an der Stelle angucken, dann kommen wir hier sogar auf 140 Prozent. Wir merken
+
+111
+00:09:39,760 --> 00:09:51,280
+vorher 15 Prozent zu 35 Prozent und 80 Prozent zu 180 Prozent und der Anteil der Nutzer im Desktop-
+
+112
+00:09:51,280 --> 00:09:59,280
+Bereich geht sogar hier mittlerweile auf 91 Prozent hoch. Die Datenbasis, die wir hier haben,
+
+113
+00:09:59,280 --> 00:10:06,720
+bei den Pageshoes mindestens zwei, sieht so aus. Wir haben also im Standard Tracking 24 Prozent der
+
+114
+00:10:06,720 --> 00:10:13,880
+Visits, die etwa 53 Prozent der Pageshoes generieren. Im Background Tracking sind das halt eben nur 5
+
+115
+00:10:13,880 --> 00:10:19,640
+Prozent mehr an Visits, aber wir haben 18 Prozent mehr an Pageshoes, die hier generiert werden. Das
+
+116
+00:10:19,640 --> 00:10:23,240
+heißt also, wir sehen hier ganz klar die Differenzierung, die Nutzer, die Adblocker
+
+117
+00:10:23,240 --> 00:10:29,320
+in dem Fall einsetzen, bringen hier in dem Fall eine wesentlich höhere Anzahl an Pageshoes mit
+
+118
+00:10:29,320 --> 00:10:34,800
+sich und wenn wir das Ganze auf die Pageshoes-Anzahl von mindestens vier anheben, dann ist diese
+
+119
+00:10:34,800 --> 00:10:43,640
+Differenz noch mal wesentlich höher. Ja, gucken wir uns ganz kurz die Technik an, von vorne und von
+
+120
+00:10:43,640 --> 00:10:50,160
+hinten. Von vorne ist halt eben klar die normale Standard Tracking Variante. Das Background Tracking
+
+121
+00:10:50,160 --> 00:10:55,840
+habe ich hier in der Mitte eingefügt und ganz unten zum Vergleich die Variante, wenn wir mit
+
+122
+00:10:55,840 --> 00:11:01,160
+Matomo Log File Analytics betreiben, dass man so ein bisschen was sehen kann, wie die uns in
+
+123
+00:11:01,160 --> 00:11:07,280
+Unterschiede sind. Ereignisse, sprich Event Tracking ist im Standard Tracking überhaupt kein Thema.
+
+124
+00:11:07,280 --> 00:11:11,160
+Über den Tag Manager, über die normale JavaScript Integration oder ähnliches,
+
+125
+00:11:11,160 --> 00:11:15,880
+perfekte Ausprägung, können wir alles machen. Im Background Tracking ist das per se erst einmal
+
+126
+00:11:15,880 --> 00:11:21,080
+von Hause aus gar nicht möglich, weil das Tracking erfolgt ja direkt aus der Anwendung
+
+127
+00:11:21,080 --> 00:11:26,640
+heraus, sprich in dem Augenblick, wenn das HTML generiert wird. Ich weiß also um die gesamten
+
+128
+00:11:26,640 --> 00:11:31,840
+Nutzerinteraktionen überhaupt nichts. Wenn ich das halt eben mit reinbringen wollte, müsste ich
+
+129
+00:11:31,840 --> 00:11:36,240
+mir eine eigene Schnittstelle bauen, mit der ich dann halt diese Daten zusätzlich über die
+
+130
+00:11:36,240 --> 00:11:41,640
+Tracking API innerhalb der Anwendung halt eben nach Matomo einspeise. Das ist ein bisschen komplizierter,
+
+131
+00:11:41,640 --> 00:11:46,480
+ist aber theoretisch denkbar. Innerhalb des Log File Trackings überhaupt keine Chance,
+
+132
+00:11:46,480 --> 00:11:52,000
+irgendetwas mit Ereignissen zu machen. Inhaltselemente Tracking, genau das Gleiche.
+
+133
+00:11:52,000 --> 00:11:56,320
+Standard vorhanden im Background Tracking eben nur über eine eigene Schnittstelle,
+
+134
+00:11:56,320 --> 00:12:00,560
+die wir schaffen müssen. Das Gleiche gilt auch für die Downloads, wobei die Downloads halt
+
+135
+00:12:00,560 --> 00:12:04,480
+eben im Log File Tracking halt vorhanden sind. Das heißt, da haben wir keine Probleme an der
+
+136
+00:12:04,480 --> 00:12:09,320
+Schnittstelle. Ebenfalls die ausgehenden Links, gleiche Variante über den Background Tracking,
+
+137
+00:12:09,320 --> 00:12:13,400
+ich muss das über eine eigene Sache lösen. Das sind ja alles Interaktionen innerhalb des Browsers,
+
+138
+00:12:13,400 --> 00:12:17,480
+die passieren, die kann ich so direkt nicht hinbekommen. Im Log File Tracking überhaupt
+
+139
+00:12:17,480 --> 00:12:23,160
+keine Chance, das Ganze zu regeln. E-Commerce Tracking ist im Background überhaupt kein Thema,
+
+140
+00:12:23,160 --> 00:12:28,320
+weil die Daten zu E-Commerce stehen halt sogar noch viel früher zur Verfügung, als sie halt
+
+141
+00:12:28,320 --> 00:12:32,560
+eben per JavaScript Tracking ganz normal zur Verfügung stehen würden. Auch hier im Log File
+
+142
+00:12:32,560 --> 00:12:37,960
+Tracking keine Chance da ranzukommen. Cookies können wir natürlich verwenden, um die Leute
+
+143
+00:12:37,960 --> 00:12:43,160
+wiederzuerkennen im Standard Tracking, inwieweit man das machen will, in Hinsicht auf die User
+
+144
+00:12:43,160 --> 00:12:47,920
+Consent freie Variante oder ob man dort ein Hybrid Tracking nutzt. Das sei halt eben selbst
+
+145
+00:12:47,920 --> 00:12:51,800
+überlassen. Im Background muss ich mir da halt eben schon ein bisschen was anderes überlegen,
+
+146
+00:12:51,800 --> 00:12:56,120
+wie ich den Nutzer halt eben dann da wieder erkennen kann. Ich kann natürlich auch aus der
+
+147
+00:12:56,120 --> 00:13:00,760
+Anwendung heraus einen lebenslangen Cookie setzen, mit dem ich den Nutzer dann nachträglich wieder
+
+148
+00:13:00,760 --> 00:13:05,200
+identifizieren kann, aber die Logik muss ich mir da natürlich wiederum in die Anwendung reinholen.
+
+149
+00:13:05,200 --> 00:13:11,080
+Adblocker werden halt beim Standard Tracking oder sind beim Standard Tracking genau das Problem,
+
+150
+00:13:11,080 --> 00:13:15,960
+weshalb ich ja dieses Background Tracking durchführen möchte. Im Background Tracking ist es
+
+151
+00:13:15,960 --> 00:13:20,680
+überhaupt kein Thema, da kommen alle Nutzer an Daten an und zwar eigentlich sogar schon viel zu
+
+152
+00:13:20,680 --> 00:13:26,280
+viele, denn auch die ganzen normalen Bots werden ja halt eben hiermit protokolliert, aber da gehe
+
+153
+00:13:26,280 --> 00:13:31,920
+ich gleich nochmal drauf ein. Im LogFi Tracking genau das gleiche und das Thema Caching möchte
+
+154
+00:13:31,920 --> 00:13:37,680
+ich hier in der Stelle kurz erwähnen. Das Standard Caching, also sprich HTTP Caching, ist mit dem
+
+155
+00:13:37,680 --> 00:13:43,560
+Standard Tracking überhaupt kein Thema. Wenn ich das aktiviere oder gar ein CDN verwende und das
+
+156
+00:13:43,560 --> 00:13:49,440
+Background Tracking nutzen möchte, habe ich dort Probleme, weil die Daten für das Tracking kommen
+
+157
+00:13:49,440 --> 00:13:53,960
+ja gar nicht mehr in der Endanwendung an, weil die Daten kommen ja direkt aus dem Caching-System,
+
+158
+00:13:53,960 --> 00:13:59,120
+aus dem CDN heraus und somit habe ich dort halt eben die entsprechenden Probleme, diese Daten zu
+
+159
+00:13:59,120 --> 00:14:05,480
+erfassen. Beim LogFi Geschichten müsste ich dann in dem Fall auf das Tracking aus dem CDN setzen,
+
+160
+00:14:05,480 --> 00:14:11,920
+nicht aus den einzelnen Server. Session Erkennung, klar, wenn ich halt eben nicht auf Cookies setze,
+
+161
+00:14:11,920 --> 00:14:15,680
+im Standard Tracking passiert das übers Fingerprinting. Im Background Tracking habe
+
+162
+00:14:15,680 --> 00:14:20,960
+ich das über das System. Meistens habe ich ja so oder so im System die Variante, dass ich zum
+
+163
+00:14:20,960 --> 00:14:25,640
+Beispiel eine Warenkopf-Funktionalität habe. Ich erkenne ja den Nutzer anhand der Session und
+
+164
+00:14:25,640 --> 00:14:29,360
+damit habe ich auch eine wesentlich genauere Session-Erkennung, als ich das jemals mit
+
+165
+00:14:29,360 --> 00:14:34,200
+Fingerprinting oder Ähnlichem hinbekommen könnte. Und beim LogFi Analytics, da brauchen wir gar nicht
+
+166
+00:14:34,200 --> 00:14:38,480
+drüber nachzudenken, da wird irgendwie versucht gemacht, aus der IP-Adresse dem User Agent
+
+167
+00:14:38,480 --> 00:14:44,160
+irgendwie grob herauszufinden, ob das eine zusammenhängende Session sein könnte oder nicht.
+
+168
+00:14:44,160 --> 00:14:48,880
+LogFi Tracking ist immer eine schöne Parallelvariante, um erstmal überhaupt Gefühle
+
+169
+00:14:48,880 --> 00:14:53,640
+für zu bekommen, was uns im Standard Tracking möglicherweise abhanden geht, um einfach eine
+
+170
+00:14:53,640 --> 00:14:58,760
+Größenordnung und Zielgrößenordnung halt eben mal zu ermitteln. Und das ohne den Aufwand zu
+
+171
+00:14:58,760 --> 00:15:03,640
+betreiben, das Ganze innerhalb des Systems möglicherweise zu integrieren. Integration,
+
+172
+00:15:03,640 --> 00:15:09,120
+klar, Standard JavaScript Code einfach einbinden, fertig ist die Laube. Bei dem Background Tracking
+
+173
+00:15:09,120 --> 00:15:15,120
+muss das in der Anwendung erfolgen. Ich habe ein fertiges Modul für das CMS Contaro entwickelt.
+
+174
+00:15:15,120 --> 00:15:20,920
+Für WordPress bin ich ja relativ weit. Da müssen noch ein paar Tests gemacht werden.
+
+175
+00:15:20,920 --> 00:15:26,360
+Da sind so viele Unwägbarkeiten mit Erweiterungen, die reinkommen, die dann halt in diese Erweiterung
+
+176
+00:15:26,360 --> 00:15:30,840
+von mir, die ich entwickelt habe, stören könnten. Da müssen wir halt noch ein paar Tests machen.
+
+177
+00:15:30,840 --> 00:15:35,520
+Wer Interesse an dieser Erweiterung hat, kann sich gerne bei mir melden. Dann können wir mal
+
+178
+00:15:35,520 --> 00:15:41,000
+gucken, dass wir da einen kleinen Test mitmachen. Und beim LogFi Importing, klar, da muss das Ganze
+
+179
+00:15:41,000 --> 00:15:46,600
+halt im Lokal aufgesetzt werden, dass die LogFi Importing wird. Kommen wir zu dem wichtigen
+
+180
+00:15:46,600 --> 00:15:52,920
+Punkt der Erkennung der Bots. Wir haben erstmal grundsätzlich die Situation, innerhalb des
+
+181
+00:15:52,920 --> 00:15:58,480
+Webs kommen gerade mal so um die 50 Prozent, vielleicht auch 60 Prozent des Traffic, der
+
+182
+00:15:58,480 --> 00:16:05,080
+echt durch Menschen erfolgt. Ein großer Anteil von 22, 25 Prozent sowas in den Dreh kommt von
+
+183
+00:16:05,080 --> 00:16:09,680
+unschädlichen Bots. Unschädliche Bots sind also zum Beispiel der Google Bot selber, der Bing Bot,
+
+184
+00:16:09,680 --> 00:16:14,680
+Yandex und wie sie nicht alle heißen, aber auch die ganzen anderen Dienste wie SysTricks, wie
+
+185
+00:16:14,680 --> 00:16:20,200
+Ksovi oder anderen Diensten, die halt eben die Webseiten durchkennen oder halt und auch wir selber
+
+186
+00:16:20,200 --> 00:16:25,680
+im Zweifelsfall mit Screaming Frog oder sowas. All die Bots, die sich halt eben selber anhand des
+
+187
+00:16:25,680 --> 00:16:30,880
+User Agent Strings identifizierbar machen, dass sie halt eben Bots sind, können wir als unschädliche
+
+188
+00:16:30,880 --> 00:16:35,960
+Bots identifizieren oder auswerten in der Form, dass wir sagen, ja, wir können die halt sowieso
+
+189
+00:16:35,960 --> 00:16:42,920
+sofort ausfiltern und wir wissen, was dort passiert und alles ist gut. Der große Punkt, der wichtig ist,
+
+190
+00:16:42,920 --> 00:16:47,440
+den wir kennen sollten, der aber grundsätzlich, egal ob bei Google Analytics, Matomo, Standard
+
+191
+00:16:47,440 --> 00:16:52,880
+Tracking oder ähnlichem ist, das sind diese Impersonator Bots. Das sind etwa 25, 26 Prozent
+
+192
+00:16:52,880 --> 00:16:59,280
+sowas in den Dreh des Traffics, gehen auf solche Bots. Die tun so, als wenn sie echte, ja, Menschen
+
+193
+00:16:59,280 --> 00:17:03,680
+wären, die die Webseiten absuchen. Das heißt, der User Agent ist gefälscht logischerweise,
+
+194
+00:17:03,680 --> 00:17:09,400
+als wäre es halt eben ein normaler Windows Rechner mit einem Chrome Browser und ähnlichen Geschichten.
+
+195
+00:17:09,400 --> 00:17:14,280
+Er akzeptiert auch Cookies, Obsession Cookies, auch Langzeit Cookies. Diese Cookies werden
+
+196
+00:17:14,280 --> 00:17:19,760
+teilweise auch über die Instanzen hinweg geteilt. Ich habe also teilweise Sachen gesehen, wo ich
+
+197
+00:17:19,760 --> 00:17:23,760
+sagte so, dass diesen Menschen möchte ich echt gerne mal kennenlernen, der innerhalb von gerade
+
+198
+00:17:23,760 --> 00:17:30,200
+mal 15 Minuten einmal aus Asien, einmal aus USA und einmal aus Schweden auf die Webseite zugreift
+
+199
+00:17:30,200 --> 00:17:33,760
+und jedes Mal immer nur eine und dieselbe Seite und zwar nicht die Startseite, sondern irgendeine
+
+200
+00:17:33,760 --> 00:17:39,760
+Unterseite. Und daran erkennen wir halt eben ganz klar, das sind halt eben diese Impersonator Bots,
+
+201
+00:17:39,760 --> 00:17:45,240
+die so tun, als wenn sie Menschen wären, die machen auch Scroll-Events aus, die lösen auch
+
+202
+00:17:45,240 --> 00:17:50,840
+Lesezeit-Trigger und solche Geschichten aus. Die klicken auch tatsächlich halt eben auf Buttons
+
+203
+00:17:50,840 --> 00:17:58,520
+und lösen CTAs aus. Das heißt also, wir erkennen anhand des Verhaltens dieser Bots nicht, ob das
+
+204
+00:17:58,520 --> 00:18:03,920
+wirklich Menschen sind oder ob das eben Bots sind. Die machen wirklich einen verdammt guten Job und
+
+205
+00:18:03,920 --> 00:18:09,640
+die nerven uns in den Statistiken. Ich habe hier von 2020 noch mal eine etwas aktualisierte Version
+
+206
+00:18:09,640 --> 00:18:14,280
+von einem anderen Anbieter. Der geht halt eben davon aus, dass wir ebenfalls so um die 25 Prozent
+
+207
+00:18:14,280 --> 00:18:20,680
+Bad Bots haben. Hier geht man von etwa 60 Prozent Humans aus. Die Werte, muss man jetzt immer wieder
+
+208
+00:18:20,680 --> 00:18:25,760
+sagen, solche Statistiken sind immer gefärbt. Je nachdem, was für Zugriffe die Anbieter der
+
+209
+00:18:25,760 --> 00:18:30,520
+Statistiken haben, sind die unterschiedlich. Deswegen, es kommt immer darauf an, schlussendlich,
+
+210
+00:18:30,520 --> 00:18:36,560
+was auf eurer eigenen Webseite, die ihr überwachen wollt, identifizierbar ist und getrackt werden kann
+
+211
+00:18:36,560 --> 00:18:41,280
+und dann muss man halt eben die Sachen machen. Ich habe hier mal einen kleinen Vergleich mitgebracht,
+
+212
+00:18:41,280 --> 00:18:46,840
+was das Thema Impersonator Bots angeht. Dieser Vergleich ist ein bisschen unfair. Das ist meine
+
+213
+00:18:46,840 --> 00:18:53,400
+eigene Webseite, die ich vom 31. August bis zum 19. September mal im Parallel-Tracking hatte,
+
+214
+00:18:53,400 --> 00:19:00,760
+und zwar mit einer Matomo-Instanz, wo keinerlei Bot-Erkennung in den Griff war und eine Instanz,
+
+215
+00:19:00,760 --> 00:19:06,520
+in der ich halt eben alles drin hatte, was ich auffahren konnte, eine manuell gepflegte IP-Adress-
+
+216
+00:19:06,520 --> 00:19:13,320
+Ausschlussliste von Bot-Netzwerken und Ähnlichem. Der Unterschied sieht halt so aus. Die Kurve ist
+
+217
+00:19:13,320 --> 00:19:19,400
+identisch, aber die Anzahl halt nicht. Ich habe also fast die Hälfte nur an realen Zugriffen,
+
+218
+00:19:19,400 --> 00:19:24,840
+die ich halt eben identifizieren konnte, dass das halt wirklich Menschen waren. Der Rest sind
+
+219
+00:19:24,840 --> 00:19:30,280
+tatsächlich halt eben solche Impersonator Bots gewesen, und die produzieren halt eben auch in
+
+220
+00:19:30,280 --> 00:19:35,760
+den Seitenansichten gänzlich andere Werte für mich. Das heißt, die Daten, die ich hier habe,
+
+221
+00:19:35,760 --> 00:19:43,160
+hinsichtlich Lesezeit, hinsichtlich Absprungrate und Ähnlichem, die sind komplett aus dem Ruder
+
+222
+00:19:43,160 --> 00:19:48,760
+gelaufen, weil ich so viele Impersonator Bots darauf habe. Warum habe ich bei mir so viele? Das
+
+223
+00:19:48,760 --> 00:19:53,840
+ist ja fast das Doppelte von dem, was ich an normalen Besuchern habe. Ich sagte, wie gesagt,
+
+224
+00:19:53,840 --> 00:19:58,920
+dieser Vergleich ist so ein bisschen gemein. Bei meiner Webseite www.job.de verwende ich auch
+
+225
+00:19:58,920 --> 00:20:03,560
+gleichzeitig als Weiterleitungsziel von über 100 anderen Domains, teilweise abgelaufenen
+
+226
+00:20:03,560 --> 00:20:09,400
+Expired Domains, teilweise Domains, die ich halt eben selber mal von Projekten hatte, aber auch
+
+227
+00:20:09,400 --> 00:20:14,200
+bestimmt an die 30, 40 Domains, die noch nie irgendwo in Erscheinung getreten sind,
+
+228
+00:20:14,200 --> 00:20:18,600
+die ich mal registriert habe, die aber ansonsten nie irgendwo in Erscheinung getreten sind. Und
+
+229
+00:20:18,600 --> 00:20:23,800
+trotzdem bekommen diese Domains massenhaft Besucher von Bots. Und deswegen nutze ich diese
+
+230
+00:20:23,800 --> 00:20:28,000
+Webseite so ein bisschen als meinen kleinen Honeypot und kann darüber sehr schön halt eben
+
+231
+00:20:28,000 --> 00:20:33,000
+IP-Adress-Segmente identifizieren, die ich halt eben dann zum Beispiel über WhoIs-Analysen und
+
+232
+00:20:33,000 --> 00:20:38,320
+Ähnlichem herausfinde, ob diese Daten-Segmente oder diese IP-Adress-Segmente halt eben zu eher
+
+233
+00:20:38,320 --> 00:20:45,600
+Netzwerkbetreibern dient oder nicht. Thema Erkennung der Bots allgemein. User-Agent ist halt eben eine
+
+234
+00:20:45,600 --> 00:20:49,920
+freiwillige Angabe, das heißt, die kann definitiv gefälscht sein, darauf sollte ich mich nicht
+
+235
+00:20:49,920 --> 00:20:56,400
+verlassen. Die Akzeptanz als Session-Cookies zu nutzen ist schwierig, weil erst beim zweiten
+
+236
+00:20:56,400 --> 00:21:01,960
+Zugriff kann diese Variante halt eben geträgt werden, aber auch Bad-Bots akzeptieren wie gesagt
+
+237
+00:21:01,960 --> 00:21:06,520
+diese Cookies und scheren die Cookies, verteilen diese Cookies über ihr gesamtes Netzwerk-Segment
+
+238
+00:21:06,520 --> 00:21:12,000
+und schlussendlich bleibt uns nur die IP-Adresse und da müssen wir halt eben gucken, dass wir dort
+
+239
+00:21:12,000 --> 00:21:16,400
+eigenständige Filter aufbauen. Problem an der Stelle ist, wir können halt eben die innen und
+
+240
+00:21:16,400 --> 00:21:21,080
+statische IP-Adress-Segmente nicht so wirklich identifizieren und alles läuft im Endeffekt
+
+241
+00:21:21,080 --> 00:21:25,400
+darauf hinaus, wenn ich so ein Background-Tracking machen will und die Daten sauber haben will. Ich
+
+242
+00:21:25,400 --> 00:21:30,440
+muss immer wieder selber auf die Suche nach manuellen Mustererkennungen gehen, um das Ganze zu
+
+243
+00:21:30,440 --> 00:21:37,200
+handhaben. An der Stelle möchte ich eine Erweiterung von Matomo ins Licht des Fokus richten, weil wenn
+
+244
+00:21:37,200 --> 00:21:43,020
+ich mir die Downloads-Anzahl von der Tracking Spam Prevention angucke, die lediglich bei 1.828
+
+245
+00:21:43,020 --> 00:21:47,880
+lag jüngst, als ich diesen Screenshot gemacht habe, dann ist das schon extrem wenig. Diese
+
+246
+00:21:47,880 --> 00:21:53,240
+Erweiterung sollte eigentlich meiner Ansicht nach wirklich jeder in seiner Matomo Instanz installieren,
+
+247
+00:21:53,240 --> 00:21:58,800
+weil ich habe hier nicht nur die Möglichkeit zu sagen, ich möchte IP-Adress-Segmente ausschließen,
+
+248
+00:21:58,800 --> 00:22:09,360
+die beispielsweise von bekannten Cloud-Anbietern wie Oracle, Amazon, Azure Cloud und Ähnliches sind,
+
+249
+00:22:09,360 --> 00:22:14,960
+da werden Listen automatisiert heruntergeladen. Die sind nicht vollständig, muss ich ganz klar
+
+250
+00:22:14,960 --> 00:22:19,720
+dazu sagen, aber es ist erstmal schon mal ein sehr, sehr guter Ansatz. Und ich habe aber hier die
+
+251
+00:22:19,720 --> 00:22:26,200
+Möglichkeit, über Exclude Countries etwas zu machen, um die Datenqualität zu erhöhen. Wenn ich
+
+252
+00:22:26,200 --> 00:22:30,120
+zum Beispiel eine Webseite habe, wo es mich überhaupt nicht interessiert, ob die Nutzer
+
+253
+00:22:30,120 --> 00:22:37,000
+aus China, aus den USA, aus Schweden oder Ähnlichem kommen, dann sollten wir aber gucken,
+
+254
+00:22:37,000 --> 00:22:43,120
+dass diese Sache hier möglicherweise in die Exclude Countries eben mit aufgenommen wird.
+
+255
+00:22:43,120 --> 00:22:48,000
+Alternativ die Variante, das Ganze umzudrehen, wenn ich sage, mich interessieren wirklich nur
+
+256
+00:22:48,000 --> 00:22:52,840
+die Nutzer aus dem deutschsprachigen Raum, aus dem Dachraum, dann füge ich möglicherweise einfach
+
+257
+00:22:52,840 --> 00:22:59,320
+nur hier in Deutschland, Österreich und Schweiz hinzu, möglicherweise noch Frankreich und England
+
+258
+00:22:59,320 --> 00:23:03,000
+und ähnliche Geschichten, die halt so ein bisschen mehr reinkommen. Aber das sind die Kunden, die
+
+259
+00:23:03,000 --> 00:23:07,760
+mich interessieren in meinem Logging und ich kann damit schon mal enorm viele log-volle Einträge
+
+260
+00:23:07,760 --> 00:23:14,120
+halt eben eliminieren, basierend darauf, dass halt eben diese Geo-IP-Datenbank verhältnismäßig
+
+261
+00:23:14,120 --> 00:23:18,280
+aktuell ist und halt eben verhältnismäßig gut funktioniert. Man muss dazu sagen, diese
+
+262
+00:23:18,280 --> 00:23:23,480
+kostenfreie Datenbank von der BWIP, die standardmäßig bei Matomo mitinstalliert wird,
+
+263
+00:23:23,480 --> 00:23:28,320
+beziehungsweise halt angeboten wird, ist aufgrund der Tatsache, es ist eine kostenfreie Variante,
+
+264
+00:23:28,320 --> 00:23:32,840
+nicht immer hundertprozentig aktuell. Es gibt eine kostenpflichtige Variante, die ist wesentlich
+
+265
+00:23:32,840 --> 00:23:37,360
+aktueller. Es gibt auch den Dienst von MaxMind, die ist auch wesentlich aktueller. Für die
+
+266
+00:23:37,360 --> 00:23:42,000
+Country-Erkennung ist meiner Ansicht nach diese kostenfreie Variante aber mehr als ausrangig.
+
+267
+00:23:42,000 --> 00:23:48,720
+Und die zweite Variante ist halt eben die Liste der global ignorierten IP-Adressen halt wirklich
+
+268
+00:23:48,720 --> 00:23:54,000
+selber zu pflegen. Ich habe hier an der Stelle wirklich mittlerweile eine Liste von über 1400
+
+269
+00:23:54,000 --> 00:23:59,400
+IP-Adress-Segmenten, die ich identifiziert habe, die ich hier reinwerfe. Aber man muss dazu sagen,
+
+270
+00:23:59,400 --> 00:24:03,680
+wenn ich so viele Daten hier drin habe, ist natürlich die Last von Matomo noch einen ganzen
+
+271
+00:24:03,680 --> 00:24:08,960
+Ticken höher, weil bei jedem einzelnen Abruf muss ja geprüft werden, habe ich einen Blacklist-Ausschluss
+
+272
+00:24:08,960 --> 00:24:14,440
+oder nicht. Schlussendlich, die manuelle Mustererkennung ist mit eines der wichtigsten
+
+273
+00:24:14,440 --> 00:24:19,520
+Dingen. Wir müssen dann die IP-Adresse überprüfen und die Bereinigung der Log-Daten durchführen. Da
+
+274
+00:24:19,520 --> 00:24:26,400
+hilft uns Matomo, indem wir halt eben diese DSGVO oder GDPR-Segmentbereinigung haben, wo ich dann
+
+275
+00:24:26,400 --> 00:24:31,960
+sagen kann, ok, dieses IP-Adress-Segment möchte ich bitte löschen und dann werden diese gesamten
+
+276
+00:24:31,960 --> 00:24:37,200
+Daten aus Matomo rausgenommen und ich kann damit halt entsprechend weitergehen. Dann sollte ich
+
+277
+00:24:37,200 --> 00:24:42,600
+die Liste logischerweise aktualisieren und dieses IP-Segment dann entsprechend mit aufnehmen als
+
+278
+00:24:42,600 --> 00:24:48,800
+Ausschlussvariante und in dem Zusammenhang möchte ich ganz kurz auf die Anonymisierung von IP-Adressen
+
+279
+00:24:48,800 --> 00:24:54,720
+eingehen, denn wir müssen mal ganz kurz nachgucken, welche Einstellung hier für diesen Fall, dass ich
+
+280
+00:24:54,720 --> 00:24:59,120
+so eine manuelle Mustererkennung machen möchte und die Daten auch bereinigen möchte, was ich
+
+281
+00:24:59,120 --> 00:25:04,800
+für eine Einstellung nutzen wollte. Wenn ich ein Byte anonymisiere, dann packe ich im Endeffekt
+
+282
+00:25:04,800 --> 00:25:12,960
+ein Cluster von 254 IP-Adressen zusammen und ich kann noch relativ genau sagen, ok, dieses IP-Adress-Segment
+
+283
+00:25:12,960 --> 00:25:18,240
+liegt mit hoher Wahrscheinlichkeit nur im Einzugsbereich eines Dienstanbieters, eines
+
+284
+00:25:18,240 --> 00:25:24,040
+Providers. Gerade bei Cloud-Anbietern, die haben meistens mindestens ein Class-C-Netz, also sprich
+
+285
+00:25:24,040 --> 00:25:30,960
+254 IP-Adressen, die kann ich halt eben darüber relativ gut identifizieren, selbst wenn ich halt
+
+286
+00:25:30,960 --> 00:25:35,520
+hinten die Variante mit der Null verwende, beziehungsweise ich gucke dann eben nach, wer
+
+287
+00:25:35,520 --> 00:25:39,720
+gehörte in dieses gesamte IP-Adress-Segment und dann kann ich schon so ein bisschen darüber mehr
+
+288
+00:25:39,720 --> 00:25:44,600
+Informationen bekommen. Wenn ich die Standardvariante, die empfohlen ist, bei Matomo belasse, das heißt
+
+289
+00:25:44,600 --> 00:25:52,360
+diese 2-Byte-Variante, dann packe ich in dieses Cluster 65.000 IP-Adressen. Das ist definitiv zu
+
+290
+00:25:52,360 --> 00:25:57,840
+viel. Also wenn ich diese Einstellung verwende in Matomo, kann ich es knicken, irgendwie versuchen
+
+291
+00:25:57,840 --> 00:26:05,720
+zu wollen, zu identifizieren, ob dieser Zugriff aus einem IP-Adress-Segment gekommen ist,
+
+292
+00:26:05,720 --> 00:26:10,960
+was zu einem Netzwerk-Providerdienst oder Ähnlichem, oder ob es ein Dial-In-Netzwerk ist, kann ich an
+
+293
+00:26:10,960 --> 00:26:14,680
+der Stelle vollends vergessen. Und wenn wir auf 3-Byte gehen, da braucht man gar nicht drüber zu
+
+294
+00:26:14,680 --> 00:26:19,360
+sprechen, das sind lieber 16 Millionen IP-Adressen, dann kann ich auch eigentlich diese
+
+295
+00:26:19,360 --> 00:26:25,240
+Lockfall-Analytics-Geschichte bezogen auf die Besuchervarianten komplett integrieren.
+
+296
+00:26:25,240 --> 00:26:31,960
+Die Datenschutzgeschichte hier unten, also in dem Fall jetzt für unsere Identifizierung für Bots
+
+297
+00:26:31,960 --> 00:26:37,320
+und Ähnlichem, eher wenig interessant. Und worum geht es im Endeffekt? Im Endeffekt muss man halt
+
+298
+00:26:37,320 --> 00:26:42,080
+in dieser manuellen Erkennung durch das Besucher-Lock durchgehen und schaut sich dann halt eben hier
+
+299
+00:26:42,080 --> 00:26:47,960
+diese IP-Adress-Segmente an und nimmt die Würfte gegen die US-Datenbank und schaut sich das Ganze
+
+300
+00:26:47,960 --> 00:26:56,960
+dann entsprechend an. Ja, damit komme ich eigentlich auch schon zum Resümee meines Vortrags. Wenn wir
+
+301
+00:26:56,960 --> 00:27:01,680
+halt eben wirklich vollständige Besucher-Daten haben wollen, müssen wir auf das Background-Tracking
+
+302
+00:27:01,680 --> 00:27:07,040
+setzen. Alternativ, mit einer geringeren Einstiegshürde, um erstmal zu gucken, was geht
+
+303
+00:27:07,040 --> 00:27:13,720
+uns an Adblockern möglicherweise verloren, ist halt die Lockfall-Analytics. Problem an der Stelle,
+
+304
+00:27:13,720 --> 00:27:18,520
+wenn ich die Lockfiles zu sehr anonymisiert habe von der IP-Adresse, das heißt also auch mehr als
+
+305
+00:27:18,520 --> 00:27:23,080
+dieses Class-C-Segment, dann kann ich auch Matomo an der Stelle nicht die Chance überlassen,
+
+306
+00:27:23,080 --> 00:27:29,480
+bestimmte Daten halt eben rauszufiltern anhand von dieser Tracking-Spam-Prevention-Variante oder halt
+
+307
+00:27:29,480 --> 00:27:34,880
+eben auch der eigenen IP-Adress-Filtergeschichte. Wenn da halt eben ein Class-C-Netz oder ein
+
+308
+00:27:34,880 --> 00:27:40,160
+Class-B-Netz halt eben nur anonymisiert ist, dann kann ich das mit den Lockfiles vergessen,
+
+309
+00:27:40,160 --> 00:27:45,560
+um dann wirklich die Daten zu bereinigen. Ich werde Insights bekommen, ohne Frage,
+
+310
+00:27:45,560 --> 00:27:50,240
+aber ich werde nicht wirklich identifizieren können, ob das halt eben normale User-Zugriffe
+
+311
+00:27:50,240 --> 00:27:57,480
+waren, ohne halt eben eher Zugriffe aus Bordnetzwerken. Dadurch kann ich halt eben,
+
+312
+00:27:57,480 --> 00:28:00,680
+wenn ich das mache, mit dem Background-Tracking oder Lockfile-Geschichten halt eben die Adblocker
+
+313
+00:28:00,680 --> 00:28:05,640
+umgehen und muss aber gucken, wie sieht es dann halt eben mit den Anwendungsebenen aus, also sprich
+
+314
+00:28:05,640 --> 00:28:11,080
+mit dem HTTP- und User-Caching, Anwendungscaching allgemein, das heißt, wo kann ich da halt überhaupt
+
+315
+00:28:11,080 --> 00:28:15,720
+ansetzen, bringt mir das überhaupt was, dieses Background-Tracking zu entwickeln? Ich muss halt
+
+316
+00:28:15,720 --> 00:28:20,240
+eben eine gute Strategie haben hinsichtlich der Borderkennung, die, wie ich schon gesagt habe,
+
+317
+00:28:20,240 --> 00:28:26,240
+zum Großteil halt über IP-Adress-Filter läuft und meine Empfehlung an der Stelle immer paralleles
+
+318
+00:28:26,240 --> 00:28:31,680
+Tracking von vorne, also sprich normales Tracking per JavaScript und das Tracking von hinten parallel
+
+319
+00:28:31,680 --> 00:28:36,720
+durchführen, weil von vorne bekomme ich Insights, die ich nur mit erheblichem Aufwand durch das
+
+320
+00:28:36,720 --> 00:28:41,280
+Background-Tracking bekomme. Es geht mir hier im Background-Tracking wirklich darüber oder
+
+321
+00:28:41,280 --> 00:28:47,080
+vorrangig darum, mal für die jeweilige Webseite herauszufinden, was haben wir denn für einen
+
+322
+00:28:47,080 --> 00:28:52,200
+Verlust in dem normalen Tracking, um gegebenenfalls das normale Tracking halt eben einfach mit dem
+
+323
+00:28:52,200 --> 00:28:58,120
+entsprechenden Faktor x uns ein bisschen schön zu rechnen und dadurch trotzdem halt eben bessere
+
+324
+00:28:58,120 --> 00:29:02,040
+Insights an der Stelle zu bekommen. Wir müssen auch wieder sagen, wenn ich die Sache von OMT
+
+325
+00:29:02,040 --> 00:29:08,600
+mir angeguckt habe, dort ist keine Möglichkeit zu sagen, ich nehme jetzt einfach den Faktor 1,5,
+
+326
+00:29:08,600 --> 00:29:15,400
+um halt eben dann zu berechnen, was ich an Nutzern hätte. Mir gehen wirklich viel,
+
+327
+00:29:15,400 --> 00:29:21,200
+viele Fakten verloren, die gerade im Bereich des Conversions oder auch des Performance-Marketings
+
+328
+00:29:21,200 --> 00:29:27,440
+relevant sind, weil wenn ich wirklich den Benutzer verliere, der sehr viel mehr Page-Fuse generiert,
+
+329
+00:29:27,440 --> 00:29:32,160
+der halt eben Umsatz generiert, der halt eben die Käufe macht, wenn ich den im Standard-Tracking
+
+330
+00:29:32,160 --> 00:29:37,200
+nicht drin habe, aber ich kann den im Background-Tracking erfassen, dann ist das eine ganz andere
+
+331
+00:29:37,200 --> 00:29:42,720
+Thematik, auf der ich dann halt eben auch meine Google-Ads-Investitionen halt eben anders
+
+332
+00:29:42,720 --> 00:29:48,440
+steuern könnte, weil ich vielleicht wirklich sehe, dass die Anzeige A gänzlich besser performt,
+
+333
+00:29:48,440 --> 00:29:53,240
+als die Anzeige B, wie ich es normal aus dem Standard-Tracking herausnehmen könnte. Also von
+
+334
+00:29:53,240 --> 00:29:59,480
+daher gucken, wie sieht es aus. Dann halt ganz klar das Thema Privacy by Design durchführen,
+
+335
+00:29:59,480 --> 00:30:03,680
+wie sieht es mit dem User-Consent aus, dass wir halt eben die Daten wirklich vollständig
+
+336
+00:30:03,680 --> 00:30:08,160
+anonymisieren und natürlich klar unseren Matomo-Instance auf einem eigenen Server
+
+337
+00:30:08,160 --> 00:30:12,560
+betreiben und dann könnte das Ganze, je nachdem, wie wir es halt eben mit unserem
+
+338
+00:30:12,560 --> 00:30:18,520
+Datenschutzbeauftragten besprechen, dann halt auch gut funktionieren. Ja, ich würde mal sagen,
+
+339
+00:30:18,520 --> 00:30:22,800
+halbe Stunde Talk, halbe Stunde Punktlandung und von daher sage ich an der Stelle schon mal,
+
+340
+00:30:22,800 --> 00:30:27,560
+meinen herzlichen Dank und ja, freue mich jetzt auf Fragen, die reinkommen würden.
+
+341
+00:30:27,560 --> 00:30:32,840
+Genau, jetzt wäre der Zeitpunkt für alle, falls ihr irgendwelche Fragen, Kommentare,
+
+342
+00:30:32,840 --> 00:30:37,240
+sonstige Dinge zu dem Thema habt. Eine Frage-Diskussion hat es schon gegeben,
+
+343
+00:30:37,240 --> 00:30:41,480
+die hätte ich ja auch gestellt, ansonsten, damit könnte man vielleicht gleich mal anfangen,
+
+344
+00:30:41,480 --> 00:30:47,080
+ist ein bisschen das Thema Datenschutz, Opt-out und so weiter. Das Problem ist ja,
+
+345
+00:30:47,080 --> 00:30:51,840
+mit der normalen JavaScript-Rap-King ist es relativ simpel, ein Opt-out zu machen,
+
+346
+00:30:51,840 --> 00:30:57,400
+weil man setzt ein Cookie, das funktioniert einfach mit der Matomo-Funktion und damit ist es
+
+347
+00:30:57,400 --> 00:31:01,960
+relativ straight forward. Beim Background-Tracking muss man das ja mehr oder weniger selber
+
+348
+00:31:01,960 --> 00:31:06,680
+implementieren, wie wir das uns dann vorstellen. Im Background-Tracking muss so oder so alles
+
+349
+00:31:06,680 --> 00:31:10,600
+selber integriert werden, aber genau dort kann ich natürlich auch selbst auf den JavaScript
+
+350
+00:31:10,600 --> 00:31:15,560
+gesetzten Cookie halt eben zurückgreifen und interpretieren, ob ich das halt eben nutzen darf,
+
+351
+00:31:15,560 --> 00:31:21,320
+nutzen will. An der Stelle muss man aber natürlich auch sagen, dass das Background-Tracking ist eine
+
+352
+00:31:21,320 --> 00:31:28,760
+rein technische Ansatz, der prinzipiell die Daten erst mal zur Verfügung stellt. Wie wir das Ganze
+
+353
+00:31:28,760 --> 00:31:32,720
+hinsichtlich des Datenschutzes dann handhaben, das ist immer noch eine zweite Frage. Ich wollte
+
+354
+00:31:32,720 --> 00:31:36,880
+jetzt erst mal nur die grundsätzliche Idee, dass das Background-Tracking halt eben der
+
+355
+00:31:36,880 --> 00:31:41,720
+Möglichkeit an Daten herankommen präsentieren. Aber ja, wenn wir wirklich über ein Opt-out
+
+356
+00:31:41,720 --> 00:31:47,960
+sprechen und halt eben diese Daten wirklich benötigen oder das nötigerweise umsetzen müssen,
+
+357
+00:31:47,960 --> 00:31:51,160
+dann ist es richtig, dann kann man das über ein Cookie machen und den kann ich in der
+
+358
+00:31:51,160 --> 00:32:02,520
+Anwendung dann auch beliebig auswählen. Okay. Ja, wenn es keine weiteren Fragen gibt...
+
+359
+00:32:02,520 --> 00:32:07,480
+Wir lassen den Leuten mal ein bisschen Zeit, das ist ein bisschen Verzögerung zwischen dem,
+
+360
+00:32:07,480 --> 00:32:16,280
+was wir hier reden, bis die Leute das sehen. Ja. Entweder habe ich alles so wunderschön
+
+361
+00:32:16,280 --> 00:32:21,360
+erklärt oder keiner traut sich. Ach doch, da tippt jemand. Ah ja, perfekt.
+
+362
+00:32:21,360 --> 00:32:31,000
+Auch ansonsten, ihr könnt mich gerne bei LinkedIn und Facebook kontaktieren und da auch jederzeit
+
+363
+00:32:31,000 --> 00:32:37,160
+gerne Fragen stellen. Ich stehe da gerne mit Rat und Tat zur Verfügung. Genau. Und falls ihr in den
+
+364
+00:32:37,160 --> 00:32:41,120
+nächsten Stunden auf irgendwas draufkommt, der Chatraum bleibt da offen, da ist nur für den einen
+
+365
+00:32:41,120 --> 00:32:49,760
+Talk, da kann man während des ganzen Matomo-Camps einfach weiter reden. Genau. Eine Frage aus dem
+
+366
+00:32:49,760 --> 00:32:56,800
+Chatraum. Gerade hast du Erfahrungen mit Hybridansätzen? Ja, ich habe zwei Ansätze
+
+367
+00:32:56,800 --> 00:33:03,160
+jetzt momentan gerade in der Vorplanung, wo wir halt eben das normale Tracking ohne User-Consent
+
+368
+00:33:03,160 --> 00:33:08,040
+umsetzen wollen und zusätzlich dann halt eben den entsprechenden User-Cookie setzen wollen,
+
+369
+00:33:08,040 --> 00:33:12,000
+wenn der User-Consent vorhanden ist, ist in der Planung, aber ich habe da noch keine Erfahrungswerte.
+
+370
+00:33:12,000 --> 00:33:19,160
+Tracking für die MP3-Abrufe. Das wird mehr oder weniger wahrscheinlich eher nur eine Variante
+
+371
+00:33:19,160 --> 00:33:27,480
+sein, das entweder über Lockfall Analytics zu lösen oder aber du schaltest die Analyse oder
+
+372
+00:33:27,480 --> 00:33:32,680
+besser die Bereitstellung der MP3-Geschichten, zum Beispiel über einen PHP-Redirector, der halt
+
+373
+00:33:32,680 --> 00:33:38,760
+eben an sich als virtuelles Verzeichnis quasi funktioniert und dann die Daten halt eben in
+
+374
+00:33:38,760 --> 00:33:43,440
+Empfang nimmt, die Abrufe in Empfang nimmt, die Requests und das dann halt eben auch dann genauso
+
+375
+00:33:43,440 --> 00:33:48,400
+an die Matomo-RPI schickt als entsprechenden Request. Das lässt sich also problemlos lösen.
+
+376
+00:33:48,400 --> 00:33:56,800
+Können wir gerne mal drüber sprechen. Genau, ein Proxy-Script. Genau. Genau, so etwas hätte ich auch
+
+377
+00:33:56,800 --> 00:34:03,120
+vorgeschlagen. Eine Frage ist mir auch noch gekommen, die jetzt nicht im Chat gestellt wurde und zwar
+
+378
+00:34:03,120 --> 00:34:08,960
+der ein Problem, was ich bei Background-Tracking ein bisschen sehe, ist, wenn wir zum Beispiel eine
+
+379
+00:34:08,960 --> 00:34:14,120
+ganz normale, ganz simple PHP-Seite haben, dann würde das heißen, jedes Mal, wenn diese PHP-Seite
+
+380
+00:34:14,120 --> 00:34:21,480
+aufgerufen wird, wird eine Anfrage an Matomo-Server geschickt und das Problem ist, im Gegensatz zum
+
+381
+00:34:21,480 --> 00:34:27,400
+JavaScript-Tracking heißt es, wenn man das jetzt falsch programmiert, dass der Background-Server wartet,
+
+382
+00:34:27,400 --> 00:34:32,960
+bis er die Antwort von Matomo bekommt und erst dann die Anfrage an den Benutzer fertig schickt und
+
+383
+00:34:32,960 --> 00:34:39,040
+somit eigentlich der Seitenaufruf etwas langsamer wird. Ja, das ist die Standard-Fehlerproblematik an dem
+
+384
+00:34:39,040 --> 00:34:44,360
+Thema, aber man kann das Ganze insofern umgehen. Das mache ich zumindest so, dass ich die
+
+385
+00:34:44,360 --> 00:34:50,480
+Datensammlung innerhalb des Standard-Prozesses für die Seitengenerierung mache, aber erst nachdem im
+
+386
+00:34:50,480 --> 00:34:56,400
+Endeffekt der, ja, ob Flash funktioniert, das heißt also die gesamte HTML-Ausgabe an den Kunden
+
+387
+00:34:56,400 --> 00:35:04,280
+ausgeliefert wurde, kommt dann im Endeffekt als letzter Task der API Connect zum Matomo. Variante 1,
+
+388
+00:35:04,280 --> 00:35:08,160
+dann habe ich im Endeffekt die Situation, dass zwar der Prozess noch ein tippen länger läuft,
+
+389
+00:35:08,160 --> 00:35:13,080
+aber die Session zum Browser ist bereits eben geschlossen und dementsprechend bekommt der
+
+390
+00:35:13,080 --> 00:35:17,800
+Nutzer von diesem Request nicht mehr mit. Die zweite Variante ist es, diese gesamten Daten,
+
+391
+00:35:17,800 --> 00:35:22,400
+also die gesamten Tracking-Informationen selber sich in eine Datenbank zu schreiben. Da bin ich
+
+392
+00:35:22,400 --> 00:35:29,440
+gerade dabei, das mal durchzuspielen und dann mit einem separaten Prozess die Daten aus der
+
+393
+00:35:29,440 --> 00:35:33,480
+Datenbank zu nehmen und dann gegen Matomo zu werfen. Dadurch, dass ich sowieso mit einem
+
+394
+00:35:33,480 --> 00:35:38,360
+Schreibzugriff arbeiten muss, mit dem API-Key, kann ich ja auch die Uhrzeit des Zugriffes
+
+395
+00:35:38,360 --> 00:35:43,000
+nachträglich setzen, habe dann zwar einen griffelsten zeitlichen Verzug, habe keine Echtzeitanalyse an
+
+396
+00:35:43,000 --> 00:35:48,280
+der Stelle in Matomo, sondern halt eben ein, zwei Minuten verzögert, aber das scheint mir gerade
+
+397
+00:35:48,280 --> 00:35:53,520
+für High-Traffic-Seiten die elegantere Variante, dass ich wirklich mein Logging im Endeffekt nur
+
+398
+00:35:53,520 --> 00:35:59,560
+in eine lokale MySQL-Datenbank oder wie auch immer Datenbank halt eben speichere und von dort aus das
+
+399
+00:35:59,560 --> 00:36:06,320
+Ganze wieder raushole und gegen Matomo werfe. Eine Lösung, die ich dann auch noch hätte,
+
+400
+00:36:06,320 --> 00:36:10,800
+das geht in PHP leider relativ schlecht, aber in anderen Programmiersprachen wäre es zum
+
+401
+00:36:10,800 --> 00:36:16,440
+Beispiel auch eine Möglichkeit, einfach wirklich, dass das Server mehrere Prozesse hat und dann
+
+402
+00:36:16,440 --> 00:36:21,480
+einfach das Abschicken der Daten an Matomo in einem separaten Thread auslagert und dann halt
+
+403
+00:36:21,480 --> 00:36:25,720
+wirklich komplett unabhängig von der Anfrage an den Benutzern ist. Weil der muss ja nicht warten,
+
+404
+00:36:25,720 --> 00:36:30,440
+weil man braucht die Informationen davon ja nicht, um den Benutzern seine Daten schicken zu können.
+
+405
+00:36:30,440 --> 00:36:34,120
+Genau, aber das kann man in PHP genauso machen, da kann ich auch ein Thread einfach auslagern.
+
+406
+00:36:34,120 --> 00:36:37,120
+Genau.
+
+407
+00:36:37,120 --> 00:36:44,960
+Ja, wie gesagt, wenn noch weitere Fragen sind, gerne jederzeit Kontakt aufnehmen bei LinkedIn,
+
+408
+00:36:44,960 --> 00:36:49,200
+Facebook oder über meine Webseite selber. Gerne auch auf meiner Webseite einen Termin
+
+409
+00:36:49,200 --> 00:36:54,320
+buchen für eine Besprechung, dann können wir uns halt eben individuell euren Bedarf auch gerne ansehen.
+
+410
+00:36:54,320 --> 00:37:03,800
+Ansonsten, falls es keine Fragen mehr gibt und es zu Ende kommt, kann ich mal kurz ankündigen,
+
+411
+00:37:03,800 --> 00:37:09,760
+was es um 11 Uhr gibt. Um 11 Uhr haben wir wieder zwei Events. Einerseits könnt ihr
+
+412
+00:37:09,760 --> 00:37:17,200
+in Livestream Raum 1 wechseln, wo Jörg Paul das darüber reden wird, wie man sehr,
+
+413
+00:37:17,200 --> 00:37:21,400
+sehr große Matomo-Instanzen, also wirklich aus der Sicht von Schweden,
+
+414
+00:37:21,400 --> 00:37:26,400
+schwedische Steuerbehörde oder solche, also wirklich Matomo-Instanzen, die viele Millionen
+
+415
+00:37:26,400 --> 00:37:32,040
+Seitenaufrufe im Monat bekommen, wie man das selberseitig trotzdem noch händeln kann,
+
+416
+00:37:32,040 --> 00:37:39,560
+dass man die Last schafft. Oder ihr wechselt zu dem interaktiven Workshop von Thomas Zeithammel
+
+417
+00:37:39,560 --> 00:37:44,280
+im Workshop Raum. Da geht es auf Deutsch weiter und ihr könnt darüber reden,
+
+418
+00:37:44,280 --> 00:37:49,920
+wie man Matomo richtig für Search Engine Optimization nutzt. Das wären jetzt um 11 Uhr
+
+419
+00:37:49,920 --> 00:37:55,080
+die zwei Möglichkeiten. Ansonsten, danke, Jachim, für den netten Vortrag.
+
+420
+00:37:55,080 --> 00:38:02,080
+Gerne. Und ja, noch viel Spaß bei Matologen.
+

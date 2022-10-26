@@ -1,0 +1,2320 @@
+1
+00:00:00,000 --> 00:00:10,640
+Okay, so I guess we are good to go.
+
+2
+00:00:10,640 --> 00:00:16,520
+So first of all, thank you very much for choosing this conference.
+
+3
+00:00:16,520 --> 00:00:20,480
+Thank you very much, Aurélie, for being with us today.
+
+4
+00:00:20,480 --> 00:00:27,440
+I have to say that Aurélie has been the first speaker that I asked to come to MatoboCamp
+
+5
+00:00:27,440 --> 00:00:30,120
+who directly accepted.
+
+6
+00:00:30,120 --> 00:00:35,040
+So I would like to thank you once more for being so, let's say, reactive, so positive
+
+7
+00:00:35,040 --> 00:00:39,420
+and to have the will of being with us today.
+
+8
+00:00:39,420 --> 00:00:44,520
+This conference is a bit different than the different one that we got over the last hours
+
+9
+00:00:44,520 --> 00:00:48,040
+because this conference is an interview.
+
+10
+00:00:48,040 --> 00:00:53,880
+So it's probably the only one in addition to the roundtable that we had yesterday with
+
+11
+00:00:53,880 --> 00:00:56,120
+the different Matobo experts.
+
+12
+00:00:56,120 --> 00:00:59,560
+So the concept of an interview, of course, is to ask some questions.
+
+13
+00:00:59,560 --> 00:01:04,520
+I already prepared some questions that I will ask to Aurélie today.
+
+14
+00:01:04,520 --> 00:01:10,340
+So those questions will be shown on the screen as you can see it right now.
+
+15
+00:01:10,340 --> 00:01:11,880
+Those slides are done by myself.
+
+16
+00:01:11,880 --> 00:01:14,600
+Okay, those are not done by Aurélie.
+
+17
+00:01:14,600 --> 00:01:19,280
+So that's why you will see that they are not that much beautiful.
+
+18
+00:01:19,280 --> 00:01:24,060
+It's just that I'm not an artist when I design the slides.
+
+19
+00:01:24,060 --> 00:01:31,920
+If you would like to ask any questions to Aurélie, please use chat.matobocamp.org.
+
+20
+00:01:31,920 --> 00:01:36,360
+And you will have the possibility to ask directly your questions to Aurélie, so I will look
+
+21
+00:01:36,360 --> 00:01:43,000
+at them, pick them up and ask them to Aurélie once I finish to present the different questions
+
+22
+00:01:43,000 --> 00:01:44,000
+that I prepared.
+
+23
+00:01:44,000 --> 00:01:45,000
+Once more.
+
+24
+00:01:45,000 --> 00:01:46,000
+Thank you.
+
+25
+00:01:46,000 --> 00:01:52,760
+Thank you for having me, first of all, as well, Renaud, and I'm excited about all the
+
+26
+00:01:52,760 --> 00:02:01,680
+conversations also taking place around GDPR compliance, PII, personal data, and privacy.
+
+27
+00:02:01,680 --> 00:02:04,080
+I think it's an important topic.
+
+28
+00:02:04,080 --> 00:02:11,120
+And so I wanted to share a bit visions of the future as well, discussions about risk.
+
+29
+00:02:11,120 --> 00:02:14,120
+So let's go.
+
+30
+00:02:14,120 --> 00:02:15,860
+Let's go.
+
+31
+00:02:15,860 --> 00:02:22,080
+So the topic name is how does risk for DPO differ from classical risk perception?
+
+32
+00:02:22,080 --> 00:02:27,960
+And the first question I would like to ask you, Aurélie, is the following one.
+
+33
+00:02:27,960 --> 00:02:33,800
+Could you please introduce yourself to our audience and explain what your job position
+
+34
+00:02:33,800 --> 00:02:35,720
+consists of?
+
+35
+00:02:35,720 --> 00:02:37,200
+Sure.
+
+36
+00:02:37,200 --> 00:02:42,360
+So introducing myself, you asked me the question where I came from.
+
+37
+00:02:42,360 --> 00:02:49,080
+I am Dutch, French speaking, have lived a long time in Brussels, where I did my economics,
+
+38
+00:02:49,080 --> 00:02:53,160
+econometric studies, and then moved to Spain.
+
+39
+00:02:53,160 --> 00:03:00,600
+I have been in the digital analytics sphere since around 2000, where Web Trends Log Analyzer
+
+40
+00:03:00,600 --> 00:03:03,240
+6 landed on my desk.
+
+41
+00:03:03,240 --> 00:03:11,520
+And I was asked to, well, find insights with that tool, with a lot of flash websites at
+
+42
+00:03:11,520 --> 00:03:12,520
+the time.
+
+43
+00:03:12,520 --> 00:03:16,320
+And it was also the time of ad servers.
+
+44
+00:03:16,320 --> 00:03:21,240
+DPO analytics came a lot later, at least for my career.
+
+45
+00:03:21,240 --> 00:03:27,160
+It was partially a game changer on different levels, but it also worried me in terms of
+
+46
+00:03:27,160 --> 00:03:35,040
+privacy and how much data we were collecting and also integrating stitching together.
+
+47
+00:03:35,040 --> 00:03:41,040
+And so I started looking also at privacy, certainly after we sold our startup in Belgium
+
+48
+00:03:41,040 --> 00:03:46,600
+called OIX2 to LBI Digitas in the UK.
+
+49
+00:03:46,600 --> 00:03:53,920
+And so once my children were small and I created a family, I started looking at this thing
+
+50
+00:03:53,920 --> 00:04:02,680
+called GDPR and following the progression of that legislation, it took five years, and
+
+51
+00:04:02,680 --> 00:04:07,640
+started also to understand how the lawyers were talking because I didn't have a legal
+
+52
+00:04:07,640 --> 00:04:10,080
+background at all.
+
+53
+00:04:10,080 --> 00:04:17,040
+I'm now very happy that I can actually quote certain articles of the GDPR out of my mind
+
+54
+00:04:17,040 --> 00:04:21,000
+directly because I use it so much.
+
+55
+00:04:21,000 --> 00:04:27,640
+And today I have my own consultancy and I have basically three pillars in there.
+
+56
+00:04:27,640 --> 00:04:33,960
+On the one hand side, I am a DPO official data protection officer for a customer data
+
+57
+00:04:33,960 --> 00:04:38,200
+platform called MParticle based out of New York.
+
+58
+00:04:38,200 --> 00:04:44,720
+On the other hand, I also teach DPO courses for different university of which the University
+
+59
+00:04:44,720 --> 00:04:50,960
+of Maastricht, where they also created the European Center for Privacy and Cybersecurity.
+
+60
+00:04:50,960 --> 00:04:55,280
+So it's not just me, it's a bunch of very smart people that all come with different
+
+61
+00:04:55,280 --> 00:04:59,860
+angles and we talk about digitization of our societies.
+
+62
+00:04:59,860 --> 00:05:06,920
+We teach in those courses and some of my colleagues from Maastricht University are this week in
+
+63
+00:05:06,920 --> 00:05:10,840
+Senegal to teach about GDPR.
+
+64
+00:05:10,840 --> 00:05:18,440
+So it's about making sure that this idea of privacy legislation enshrined within the GDPR
+
+65
+00:05:18,440 --> 00:05:25,400
+also influences global thinking and this is what we're seeing GDPR as a blueprint.
+
+66
+00:05:25,400 --> 00:05:30,160
+And my last pillar is I work for European institutions.
+
+67
+00:05:30,160 --> 00:05:37,040
+I worked on ethics for the European Data Protection Supervisor in their ethical advisory boards
+
+68
+00:05:37,040 --> 00:05:38,960
+back in 2016.
+
+69
+00:05:38,960 --> 00:05:45,600
+So when basically the ink was dry on the GDPR, European institutions were asking themselves
+
+70
+00:05:45,600 --> 00:05:47,400
+what's next.
+
+71
+00:05:47,400 --> 00:05:54,240
+And this is what we're seeing today with initiatives by, for example, Thierry Breton with the different
+
+72
+00:05:54,240 --> 00:06:02,160
+acronyms that are coming out, the Digital Services Act and other governance acts that
+
+73
+00:06:02,160 --> 00:06:07,880
+are currently being discussed on top of discussions about artificial intelligence.
+
+74
+00:06:07,880 --> 00:06:11,760
+And this while the supervisory authorities are ramping up to make sure that they can
+
+75
+00:06:11,760 --> 00:06:15,620
+enforce the GDPR, we're also seeing more complaints.
+
+76
+00:06:15,620 --> 00:06:19,240
+So these are basically the three pillars where I sit.
+
+77
+00:06:19,240 --> 00:06:23,720
+But my official job position as such that we're going to talk about here is as data
+
+78
+00:06:23,720 --> 00:06:29,320
+protection officer for a SaaS platform based out of the US.
+
+79
+00:06:29,320 --> 00:06:33,000
+OK, thank you very much.
+
+80
+00:06:33,000 --> 00:06:34,000
+I'm sorry.
+
+81
+00:06:34,000 --> 00:06:38,760
+There is one question that I didn't have planned, but just by the let's say the answer that
+
+82
+00:06:38,760 --> 00:06:42,880
+you gave to this question, make me think about.
+
+83
+00:06:42,880 --> 00:06:46,720
+So feel free, of course, to answer to it or not.
+
+84
+00:06:46,720 --> 00:06:47,720
+You mentioned web trends.
+
+85
+00:06:47,720 --> 00:06:54,880
+I just would like to know back in the days what happened in the way analytics solution
+
+86
+00:06:54,880 --> 00:07:02,200
+evolved, where you really realize that the privacy concerns started.
+
+87
+00:07:02,200 --> 00:07:08,480
+I mean, at which point did the solution evolve that much that it started to be a privacy
+
+88
+00:07:08,480 --> 00:07:11,480
+concern?
+
+89
+00:07:11,480 --> 00:07:13,520
+I'm sorry, I have to rephrase it.
+
+90
+00:07:13,520 --> 00:07:19,800
+But according to you, when are the years at which, let's say, citizens or let's say governments
+
+91
+00:07:19,800 --> 00:07:23,680
+started to start to care about privacy?
+
+92
+00:07:23,680 --> 00:07:28,320
+Because I guess that back in the day in web trends, people were not thinking it much as
+
+93
+00:07:28,320 --> 00:07:34,040
+a, let's say, surveillance or analytics system or anything like this, but just for them like
+
+94
+00:07:34,040 --> 00:07:40,800
+a software for the IT guys, let's say, but not for marketers and not maybe used in terms
+
+95
+00:07:40,800 --> 00:07:45,520
+of analyzing what citizens are doing.
+
+96
+00:07:45,520 --> 00:07:51,480
+And at what point did you realize that there is clearly a privacy concern which is rising?
+
+97
+00:07:51,480 --> 00:07:52,480
+That's my question.
+
+98
+00:07:52,480 --> 00:07:58,880
+Well, I think generally speaking, there's a difference between me and then the public
+
+99
+00:07:58,880 --> 00:08:00,720
+in general.
+
+100
+00:08:00,720 --> 00:08:09,040
+I remember back in 2000, reading newspaper articles, I think it was in New York Times
+
+101
+00:08:09,040 --> 00:08:14,360
+that talked about this idea that cookies could be shared between websites.
+
+102
+00:08:14,360 --> 00:08:21,280
+And so that profiles could be built and the fact that advertisers could target people
+
+103
+00:08:21,280 --> 00:08:29,000
+that are interested in, I think it was the NBA, but also read financial reports.
+
+104
+00:08:29,000 --> 00:08:34,800
+And so this idea of profiling was starting to kind of arise for those who are paying
+
+105
+00:08:34,800 --> 00:08:35,800
+attention.
+
+106
+00:08:35,800 --> 00:08:42,760
+This market share in advertising for digital took a long time to evolve.
+
+107
+00:08:42,760 --> 00:08:49,960
+And so if we're talking about the early 2000s, where also we had the dot com bust, we're
+
+108
+00:08:49,960 --> 00:08:55,840
+not talking about a broad range of surveillance mechanisms because basically not a lot of
+
+109
+00:08:55,840 --> 00:08:59,480
+people were actually online.
+
+110
+00:08:59,480 --> 00:09:00,840
+So that's one part.
+
+111
+00:09:00,840 --> 00:09:07,000
+So these issues have risen certainly for the last 20 years.
+
+112
+00:09:07,000 --> 00:09:08,000
+This is not new.
+
+113
+00:09:08,000 --> 00:09:17,240
+I think the biggest, how should I say, alarm bell that was really, I think, something important
+
+114
+00:09:17,240 --> 00:09:23,240
+that was not noticed a lot, but is referred to very often and more recently in the last
+
+115
+00:09:23,240 --> 00:09:28,520
+three years is the acquisition of DoubleClick by Google.
+
+116
+00:09:28,520 --> 00:09:38,200
+And I think this really had an important consequence that we see today because it's not just about
+
+117
+00:09:38,200 --> 00:09:39,200
+privacy.
+
+118
+00:09:39,200 --> 00:09:41,500
+It's certainly about the market share.
+
+119
+00:09:41,500 --> 00:09:43,420
+It's about antitrust legislation.
+
+120
+00:09:43,420 --> 00:09:45,440
+It's about competition.
+
+121
+00:09:45,440 --> 00:09:51,880
+And there was actually a dissenting opinion for the acquisition of DoubleClick by Google
+
+122
+00:09:51,880 --> 00:09:57,000
+by somebody called Pamela Harbor, which you can still find online today.
+
+123
+00:09:57,000 --> 00:10:03,400
+And when you read that document from 2007, so almost 15 years ago, you realize that basically
+
+124
+00:10:03,400 --> 00:10:07,800
+she's describing what we are witnessing today.
+
+125
+00:10:07,800 --> 00:10:09,600
+And so privacy is one part of this.
+
+126
+00:10:09,600 --> 00:10:12,920
+The GDPR is one part of this accountability.
+
+127
+00:10:12,920 --> 00:10:18,040
+But antitrust and competition are going to play increasing roles.
+
+128
+00:10:18,040 --> 00:10:22,720
+Last week, I was also at the University of Toulouse because I worked for the European
+
+129
+00:10:22,720 --> 00:10:28,080
+institutions and the observatory of the platform economy.
+
+130
+00:10:28,080 --> 00:10:36,840
+And what we are witnessing today is platformization of services where certain of the actors have
+
+131
+00:10:36,840 --> 00:10:40,400
+very important market share and influence other actors.
+
+132
+00:10:40,400 --> 00:10:43,200
+And the question is, OK, what are we going to do about that?
+
+133
+00:10:43,200 --> 00:10:46,160
+Because these are going to be the next challenges.
+
+134
+00:10:46,160 --> 00:10:48,840
+So they're not new questions.
+
+135
+00:10:48,840 --> 00:10:55,640
+The GDPR doesn't solve for everything, but it's a milestone in a road towards trying
+
+136
+00:10:55,640 --> 00:11:04,380
+to balance out the use of data, the digitalization of our societies, together with the opportunities
+
+137
+00:11:04,380 --> 00:11:11,580
+that are there for the businesses, but also making sure that fundamental rights are respected.
+
+138
+00:11:11,580 --> 00:11:17,600
+Whether that fundamental right is privacy, the right, the freedom of expression, there
+
+139
+00:11:17,600 --> 00:11:21,800
+are different rights also battling in this change in our society.
+
+140
+00:11:21,800 --> 00:11:24,220
+So it's a journey.
+
+141
+00:11:24,220 --> 00:11:27,120
+We are not done yet, and we'll see where we go.
+
+142
+00:11:27,120 --> 00:11:28,120
+OK.
+
+143
+00:11:28,120 --> 00:11:30,120
+Thank you very much.
+
+144
+00:11:30,120 --> 00:11:35,160
+I repeat it for our audience, but if some of you guys would like to ask some questions
+
+145
+00:11:35,160 --> 00:11:41,400
+to Aurélie, please feel free to go on chat.matumocamp.org, select the room which corresponds to this
+
+146
+00:11:41,400 --> 00:11:47,320
+conference and ask directly your questions to Aurélie, and I will pick them up.
+
+147
+00:11:47,320 --> 00:11:54,160
+This question is, let's say, one of the arts of the question of the topic today.
+
+148
+00:11:54,160 --> 00:11:59,220
+Could you please explain to our audience what a DPO, so I'm not going to give the definition
+
+149
+00:11:59,220 --> 00:12:03,320
+on purpose here, what a DPO is about?
+
+150
+00:12:03,320 --> 00:12:04,680
+Yes.
+
+151
+00:12:04,680 --> 00:12:15,960
+So a DPO is a role that has been brought to life through the GDPR and is actually described
+
+152
+00:12:15,960 --> 00:12:25,000
+between Article 37 and 39 of the GDPR, where Article 37 talks about when a company needs
+
+153
+00:12:25,000 --> 00:12:31,480
+to designate a data protection officer, then what their position is and what the tasks
+
+154
+00:12:31,480 --> 00:12:34,480
+of the data protection officer are.
+
+155
+00:12:34,480 --> 00:12:45,080
+And so in that sense, privacy questions inside companies can emanate from the technical teams,
+
+156
+00:12:45,080 --> 00:12:49,120
+the legal teams, the customer support teams.
+
+157
+00:12:49,120 --> 00:12:54,560
+And what is really interesting with the GDPR is that they created this obligation of a
+
+158
+00:12:54,560 --> 00:13:00,180
+centralizing role that basically takes on, I call it the hot potatoes.
+
+159
+00:13:00,180 --> 00:13:06,960
+So I am a hot potato taker for anything where we have questions about does this make sense?
+
+160
+00:13:06,960 --> 00:13:11,760
+Does this support a fundamental right to privacy or is this a problem?
+
+161
+00:13:11,760 --> 00:13:14,040
+So the GDPR basically defines this.
+
+162
+00:13:14,040 --> 00:13:18,920
+Companies have a choice to decide whether they appoint one or not.
+
+163
+00:13:18,920 --> 00:13:22,880
+It's finding itself also inside more legislations.
+
+164
+00:13:22,880 --> 00:13:28,160
+I was reading about Singapore last night and Singapore also talks about data protection
+
+165
+00:13:28,160 --> 00:13:30,200
+officers.
+
+166
+00:13:30,200 --> 00:13:37,240
+So these people are basically bridges between different departments to make sure that the
+
+167
+00:13:37,240 --> 00:13:43,380
+way data is being treated is as balanced as possible between opportunities for business
+
+168
+00:13:43,380 --> 00:13:46,480
+and fundamental rights to privacy.
+
+169
+00:13:46,480 --> 00:13:54,600
+The specific I think position also of a DPO is that you give recommendations, but it doesn't
+
+170
+00:13:54,600 --> 00:13:56,840
+always mean that the company follows it.
+
+171
+00:13:56,840 --> 00:14:01,000
+You're not a decision maker.
+
+172
+00:14:01,000 --> 00:14:07,640
+You represent the fundamental rights of data subjects and looking at the systems, the data
+
+173
+00:14:07,640 --> 00:14:15,200
+flows, the processes, you make recommendations with respect to how the system should work.
+
+174
+00:14:15,200 --> 00:14:22,240
+After that, depending on who the DPO reports to, it's a risk-based analysis from the company
+
+175
+00:14:22,240 --> 00:14:29,200
+to say I agree or I don't agree or I come with something else in order to mitigate the
+
+176
+00:14:29,200 --> 00:14:36,040
+potential issue that was raised by the DPO.
+
+177
+00:14:36,040 --> 00:14:39,200
+Thank you.
+
+178
+00:14:39,200 --> 00:14:45,520
+I think the next question is really as well a curiosity question.
+
+179
+00:14:45,520 --> 00:14:54,280
+It's like when we hear you, we have the feeling that the data protection officer is like a
+
+180
+00:14:54,280 --> 00:14:58,400
+sheep with five, six legs.
+
+181
+00:14:58,400 --> 00:15:05,400
+Could you please tell us a bit more about the background that most of your colleagues,
+
+182
+00:15:05,400 --> 00:15:10,920
+let's say, or people that you are seeing on the field who are DPO like you have, or could
+
+183
+00:15:10,920 --> 00:15:19,280
+you as well explain to us how did you succeed to come to take this position as well?
+
+184
+00:15:19,280 --> 00:15:23,240
+What motivated you in taking this position?
+
+185
+00:15:23,240 --> 00:15:27,520
+Are you learning every day?
+
+186
+00:15:27,520 --> 00:15:34,160
+Are you sometimes scared or stressed of having new techie stuff to learn which are brand
+
+187
+00:15:34,160 --> 00:15:38,240
+new which, of course, could raise more complexity?
+
+188
+00:15:38,240 --> 00:15:43,000
+Maybe you may realize that, okay, I have those new information systems coming within my risk
+
+189
+00:15:43,000 --> 00:15:48,040
+assessment and I don't know them and I don't have the time to investigate them because
+
+190
+00:15:48,040 --> 00:15:53,960
+I just have one week and three and all those questions are just coming to my head and the
+
+191
+00:15:53,960 --> 00:15:58,760
+general one that I succeeded to draft is could you please tell us a bit more about the background
+
+192
+00:15:58,760 --> 00:16:02,600
+that DPO must have to embrace this position?
+
+193
+00:16:02,600 --> 00:16:09,120
+Yeah, and I see there's also a question about that in the chat.
+
+194
+00:16:09,120 --> 00:16:13,440
+Yes, that was basically the next question.
+
+195
+00:16:13,440 --> 00:16:19,520
+Yeah, so it's interesting to note that, for example, there's an association called the
+
+196
+00:16:19,520 --> 00:16:25,400
+IAPP, International Association of Privacy Professionals, and they do surveys to see
+
+197
+00:16:25,400 --> 00:16:28,080
+who their members are.
+
+198
+00:16:28,080 --> 00:16:32,600
+And I remember early on because they were like the first lawyers I started talking to
+
+199
+00:16:32,600 --> 00:16:38,960
+because it's like they were there, so it sounded like the best place to go.
+
+200
+00:16:38,960 --> 00:16:48,680
+When they surveyed their members and not all of them had been appointed, DPO, but the majority
+
+201
+00:16:48,680 --> 00:16:51,440
+had the legal background.
+
+202
+00:16:51,440 --> 00:16:58,040
+And so there were also recommendations, certainly in the early days of the GDPR by different
+
+203
+00:16:58,040 --> 00:17:05,400
+authorities to consider that DPO should have a legal background.
+
+204
+00:17:05,400 --> 00:17:13,840
+Now I do understand that, but I tend not to agree because I think that, as you said, it's
+
+205
+00:17:13,840 --> 00:17:19,200
+a mouton à cinq pattes, it's a sheep with five legs.
+
+206
+00:17:19,200 --> 00:17:23,960
+We used to say that about Web Analytics as well many years ago, so that's always funny
+
+207
+00:17:23,960 --> 00:17:28,000
+because those parallels that actually come back.
+
+208
+00:17:28,000 --> 00:17:36,400
+But as you're a bridge builder between certainly the technical teams and certainly as a DPO
+
+209
+00:17:36,400 --> 00:17:43,840
+for a data platform, you need to have some understanding also of technology, of data,
+
+210
+00:17:43,840 --> 00:17:47,040
+and also be able to interpret the law.
+
+211
+00:17:47,040 --> 00:17:50,920
+So my background is econometrics and statistics.
+
+212
+00:17:50,920 --> 00:17:55,700
+I know digital because I've basically been in there for the last 20 years and curious
+
+213
+00:17:55,700 --> 00:17:57,200
+about it.
+
+214
+00:17:57,200 --> 00:18:04,620
+And I learned the legal path and keep talking to the lawyers about the interpretation.
+
+215
+00:18:04,620 --> 00:18:09,960
+What does certain words mean inside certain court decisions?
+
+216
+00:18:09,960 --> 00:18:16,040
+And this is where I think it's also important to have like a network of individuals that
+
+217
+00:18:16,040 --> 00:18:22,720
+can bring their thoughts and reflections about the interpretation of legislation.
+
+218
+00:18:22,720 --> 00:18:32,720
+So most DPOs, I would say either they have been appointed as an additional task to their
+
+219
+00:18:32,720 --> 00:18:39,760
+job by bigger companies because somebody had to be the DPO because of the GDPR as of the
+
+220
+00:18:39,760 --> 00:18:41,360
+enforcements.
+
+221
+00:18:41,360 --> 00:18:43,640
+I've seen different types of DPOs.
+
+222
+00:18:43,640 --> 00:18:48,440
+I've seen really legal, legal people who do not touch upon digital at all and don't understand
+
+223
+00:18:48,440 --> 00:18:50,040
+how it works.
+
+224
+00:18:50,040 --> 00:18:51,720
+And these people even work at Facebook.
+
+225
+00:18:51,720 --> 00:18:54,600
+So it's sometimes a bit scary.
+
+226
+00:18:54,600 --> 00:19:02,780
+I've seen people who are very technical and very pragmatic and talk about processes.
+
+227
+00:19:02,780 --> 00:19:06,240
+As I've seen more junior people.
+
+228
+00:19:06,240 --> 00:19:12,720
+What worries me the most, I have to confess, but it's maturing is that DPOs circling in
+
+229
+00:19:12,720 --> 00:19:15,480
+the beginning were very young.
+
+230
+00:19:15,480 --> 00:19:19,760
+So it's like, oh, we have to appoint somebody, you know, to take the hot potato.
+
+231
+00:19:19,760 --> 00:19:22,440
+And to be honest, you get pushed around.
+
+232
+00:19:22,440 --> 00:19:27,640
+You get pushed around by the CTO, by, you know, you have to ask questions to understand
+
+233
+00:19:27,640 --> 00:19:29,500
+how the systems work.
+
+234
+00:19:29,500 --> 00:19:34,840
+And if you're not like, you know, persistent, and I typically use my gray hair and say,
+
+235
+00:19:34,840 --> 00:19:38,560
+you know, I'm really silly, I'm really stupid, but I don't understand what you guys are talking
+
+236
+00:19:38,560 --> 00:19:45,120
+about, then I'm not sure you're very effective as a DPO.
+
+237
+00:19:45,120 --> 00:19:53,800
+So it's the maturity and I think you're also the experience of different specialization
+
+238
+00:19:53,800 --> 00:19:57,480
+that makes for a good DPO.
+
+239
+00:19:57,480 --> 00:19:59,620
+But it's a new type of title.
+
+240
+00:19:59,620 --> 00:20:03,600
+So it still needs to evolve, but there's less lawyers in there.
+
+241
+00:20:03,600 --> 00:20:10,880
+The IPP did another survey and realized that this percentage of lawyers of about 80% went
+
+242
+00:20:10,880 --> 00:20:12,320
+back to 40.
+
+243
+00:20:12,320 --> 00:20:22,920
+So other types of profiles are also starting to apply to data protection officer jobs.
+
+244
+00:20:22,920 --> 00:20:27,400
+Often they come from privacy homes or things like that, or they just went through certain
+
+245
+00:20:27,400 --> 00:20:31,720
+trainings and this is what they want to do.
+
+246
+00:20:31,720 --> 00:20:33,680
+Okay, thank you.
+
+247
+00:20:33,680 --> 00:20:38,880
+I have another curiosity question, which just came to my mind, which links back to something
+
+248
+00:20:38,880 --> 00:20:45,960
+that you that you said some minutes ago about, okay, you provide recommendation and then
+
+249
+00:20:45,960 --> 00:20:52,200
+the CEO of the company or let's say the stakeholders are deciding to go either this way, either
+
+250
+00:20:52,200 --> 00:20:56,640
+to go another way or either to not follow those recommendations at all.
+
+251
+00:20:56,640 --> 00:21:02,920
+And within GDPR, what is really famous or at least how the press has spread the word
+
+252
+00:21:02,920 --> 00:21:09,000
+about is those 4% of turnover, let's say penalties.
+
+253
+00:21:09,000 --> 00:21:15,400
+If someone is not respecting, let's say GDPR, I would like to say, does it work for real
+
+254
+00:21:15,400 --> 00:21:16,400
+on the field?
+
+255
+00:21:16,400 --> 00:21:23,000
+I mean, this threat of, hey guys, if you don't follow my recommendation, you may be subject
+
+256
+00:21:23,000 --> 00:21:31,080
+to 4% of penalty of turnover of your company, or is it in fact something that the company,
+
+257
+00:21:31,080 --> 00:21:36,520
+they don't even care about because they think that it will never happen because they are
+
+258
+00:21:36,520 --> 00:21:43,440
+too powerful on the market and of course they will use some other ways of saying, okay,
+
+259
+00:21:43,440 --> 00:21:50,480
+you cannot put me 4% because if so, I will decide to outsource all my companies somewhere.
+
+260
+00:21:50,480 --> 00:21:56,680
+And finally, no one has got this 4%, let's say, penalty.
+
+261
+00:21:56,680 --> 00:22:03,200
+So I would probably got maybe five or six warnings before the play it and I would probably
+
+262
+00:22:03,200 --> 00:22:07,440
+act on the third warning or something like this.
+
+263
+00:22:07,440 --> 00:22:10,320
+Feel free to answer to this question and say, okay, this is confidential.
+
+264
+00:22:10,320 --> 00:22:14,280
+I prefer to not answer, but I'm just curious about this point.
+
+265
+00:22:14,280 --> 00:22:20,760
+Does it work, this 4% threat of penalty?
+
+266
+00:22:20,760 --> 00:22:30,320
+I think as we are beyond a couple of years of enforcement of the GDPR, I think initially
+
+267
+00:22:30,320 --> 00:22:31,320
+it did.
+
+268
+00:22:31,320 --> 00:22:37,000
+It did scare a lot of people because you have to understand that prior to the GDPR, the
+
+269
+00:22:37,000 --> 00:22:44,160
+data protection directive only allowed two countries to fine around half a million euros
+
+270
+00:22:44,160 --> 00:22:48,120
+and that was the UK and Spain.
+
+271
+00:22:48,120 --> 00:22:53,160
+And so I remember talking to somebody in digital analytics a couple of years back before the
+
+272
+00:22:53,160 --> 00:23:01,440
+GDPR and I think that person was in the Czech Republic and that person said, you know, if
+
+273
+00:23:01,440 --> 00:23:06,640
+anybody gets fined under the data protection directive, it's like, what is it, 500 euros?
+
+274
+00:23:06,640 --> 00:23:08,400
+Who cares?
+
+275
+00:23:08,400 --> 00:23:09,640
+It doesn't matter.
+
+276
+00:23:09,640 --> 00:23:15,720
+It's just doing business and as I'm based in Spain, I know that companies like Telefonica,
+
+277
+00:23:15,720 --> 00:23:21,680
+they basically had a budget for data protection fines under the directive.
+
+278
+00:23:21,680 --> 00:23:28,760
+So initially, I think it was really a good wake-up call to say, hey guys, 2% to 4% of
+
+279
+00:23:28,760 --> 00:23:35,760
+global turnover or 20 million euros, whichever is higher, is your financial risk.
+
+280
+00:23:35,760 --> 00:23:39,240
+And it did serve as a wake-up call.
+
+281
+00:23:39,240 --> 00:23:44,320
+That's why all these data protection officers have been appointed and things like that.
+
+282
+00:23:44,320 --> 00:23:49,140
+I today think this is starting to backfire.
+
+283
+00:23:49,140 --> 00:23:50,960
+Why am I saying that?
+
+284
+00:23:50,960 --> 00:23:58,160
+Well, because what basically happened to the larger players whose business model depends
+
+285
+00:23:58,160 --> 00:24:05,560
+on personal data is that they hired a lot of very smart privacy professionals before
+
+286
+00:24:05,560 --> 00:24:12,440
+the enforcement of the GDPR and clearly had a strategy of what I call lawyering up.
+
+287
+00:24:12,440 --> 00:24:19,760
+If I get fined, let's imagine 50 million euros by CNIL, I will go to the courts and fight
+
+288
+00:24:19,760 --> 00:24:20,760
+it.
+
+289
+00:24:20,760 --> 00:24:28,400
+And ideally, that fine will disappear, which is what happened to the 50 million euros from
+
+290
+00:24:28,400 --> 00:24:30,680
+CNIL.
+
+291
+00:24:30,680 --> 00:24:34,640
+So in that sense, it's a good thing because it woke up the markets.
+
+292
+00:24:34,640 --> 00:24:40,960
+It's not ideal because it doesn't align all the players into making sure that they do
+
+293
+00:24:40,960 --> 00:24:48,040
+the right thing because they're using the legal system to basically escalate.
+
+294
+00:24:48,040 --> 00:24:53,620
+Now this has a certain time and what we're seeing is that more and more of these questions
+
+295
+00:24:53,620 --> 00:24:58,040
+are actually now coming to the European Court of Justice.
+
+296
+00:24:58,040 --> 00:25:04,360
+So it's a matter of maturity where the market needs to evolve in a certain direction, where
+
+297
+00:25:04,360 --> 00:25:12,000
+certain new ways of thinking around data needs to take root and be accepted.
+
+298
+00:25:12,000 --> 00:25:13,840
+And that takes time.
+
+299
+00:25:13,840 --> 00:25:18,240
+We used to be in a time of let's collect everything and see what happens.
+
+300
+00:25:18,240 --> 00:25:24,640
+We are now in a time of let's use the data, but maybe not start deleting and not use everything
+
+301
+00:25:24,640 --> 00:25:27,240
+and data minimization and things like that.
+
+302
+00:25:27,240 --> 00:25:33,400
+So we're becoming more prudent with what we're using and asking more questions.
+
+303
+00:25:33,400 --> 00:25:40,080
+And as I mentioned, there are other acronyms after the GDPR, the Data Governance Act, the
+
+304
+00:25:40,080 --> 00:25:42,080
+Digital Services Act.
+
+305
+00:25:42,080 --> 00:25:47,400
+We're not done yet in terms of making sure this goes in the right direction.
+
+306
+00:25:47,400 --> 00:25:51,560
+So the risk of these fines is there.
+
+307
+00:25:51,560 --> 00:25:53,600
+It's not ideal.
+
+308
+00:25:53,600 --> 00:25:59,840
+And certain supervisory authorities have started to play in a very smart way with that in the
+
+309
+00:25:59,840 --> 00:26:10,320
+sense that their fines are not huge, but their requirements for compliance do have a significant
+
+310
+00:26:10,320 --> 00:26:12,640
+cost effect.
+
+311
+00:26:12,640 --> 00:26:19,360
+And this means that there's, for example, a ruling in Belgium where a bank needs to
+
+312
+00:26:19,360 --> 00:26:27,560
+pay around 200 euros in fines, which is nothing, but they need to change their systems behind.
+
+313
+00:26:27,560 --> 00:26:33,760
+And this is the iceberg nobody seems to see are all the powers that the supervisory authority
+
+314
+00:26:33,760 --> 00:26:40,240
+have to, for example, stop data flows and say, you're not allowed to pass that data
+
+315
+00:26:40,240 --> 00:26:47,120
+from here to there, or you need to delete everything that's there in a surgical manner.
+
+316
+00:26:47,120 --> 00:26:53,760
+And this is the real risk of the GDPR, are these inherent costs because we have been
+
+317
+00:26:53,760 --> 00:26:58,960
+used to collecting everything, and that if something goes wrong, we will have to start
+
+318
+00:26:58,960 --> 00:27:00,880
+cleaning up.
+
+319
+00:27:00,880 --> 00:27:06,400
+And that is going to be like the biggest challenge in the longer term.
+
+320
+00:27:06,400 --> 00:27:11,760
+Other challenges are also arising if we're thinking about it from a global perspective.
+
+321
+00:27:11,760 --> 00:27:17,160
+Class actions are typically not things that exist in Europe.
+
+322
+00:27:17,160 --> 00:27:21,520
+So class actions is when people come together and they go against a company.
+
+323
+00:27:21,520 --> 00:27:27,400
+The best example I've found so far is the movie Erin Brockovich, where she goes after
+
+324
+00:27:27,400 --> 00:27:29,640
+a chemical company.
+
+325
+00:27:29,640 --> 00:27:31,000
+But these are rising.
+
+326
+00:27:31,000 --> 00:27:35,920
+There are class actions against Salesforce and Oracle in the Netherlands.
+
+327
+00:27:35,920 --> 00:27:41,720
+There's a lot of discussions in Australia in terms of evolutions of class actions.
+
+328
+00:27:41,720 --> 00:27:46,840
+So this is another risk that is not directly, it's enshrined within the GDPR.
+
+329
+00:27:46,840 --> 00:27:48,720
+It's testing things out.
+
+330
+00:27:48,720 --> 00:27:53,560
+It will take time, but potentially it will come, that risk will come from other countries,
+
+331
+00:27:53,560 --> 00:27:55,840
+maybe even the US.
+
+332
+00:27:55,840 --> 00:28:03,480
+Okay, so here we can start to make a link with analytics, like someone alone who claimed
+
+333
+00:28:03,480 --> 00:28:09,360
+that someone is not using that solution properly has no, let's say, real power.
+
+334
+00:28:09,360 --> 00:28:16,400
+But if you can find an online service who easily gather the list, I mean, all the people
+
+335
+00:28:16,400 --> 00:28:22,560
+who find this non-conventional and would like to attack the company could easily gather
+
+336
+00:28:22,560 --> 00:28:27,760
+all around and just in a couple of clicks could do a class action.
+
+337
+00:28:27,760 --> 00:28:30,280
+That's typically what you are thinking of, right?
+
+338
+00:28:30,280 --> 00:28:31,880
+Yeah, yeah, absolutely.
+
+339
+00:28:31,880 --> 00:28:34,680
+I think that's the direction this might take.
+
+340
+00:28:34,680 --> 00:28:39,240
+And what's interesting also is that certain venture capitalists, certainly in France,
+
+341
+00:28:39,240 --> 00:28:41,040
+are backing that up.
+
+342
+00:28:41,040 --> 00:28:42,040
+Okay.
+
+343
+00:28:42,040 --> 00:28:47,560
+So here on the screen, we probably have the ugliest slide of the Matthew McCamp that I
+
+344
+00:28:47,560 --> 00:28:49,360
+did myself.
+
+345
+00:28:49,360 --> 00:28:54,600
+The question is just the following, that the topic submission that you make for Matthew
+
+346
+00:28:54,600 --> 00:29:01,000
+McCamp is, how does risk for DPO differ from classical risk perception?
+
+347
+00:29:01,000 --> 00:29:05,800
+And I just would like to know, why did you decide to submit this topic?
+
+348
+00:29:05,800 --> 00:29:10,280
+I mean, what was the main message that you would like to give us?
+
+349
+00:29:10,280 --> 00:29:14,600
+Because I guess that's when you choose it, you had something in mind.
+
+350
+00:29:14,600 --> 00:29:19,760
+And I really would like to leave you the floor here and to have the possibility to express
+
+351
+00:29:19,760 --> 00:29:23,560
+everything that you had in mind for this given topic.
+
+352
+00:29:23,560 --> 00:29:24,560
+Sure.
+
+353
+00:29:24,560 --> 00:29:31,000
+So I talked a bit about risk before, this notion of fines, what is underneath the iceberg
+
+354
+00:29:31,000 --> 00:29:38,280
+of the fines that we don't see those hidden costs that will certainly influence the way
+
+355
+00:29:38,280 --> 00:29:42,560
+we treat data, whether it's personal or not.
+
+356
+00:29:42,560 --> 00:29:49,280
+But what I also realized, working certainly with compliance teams that go through certifications
+
+357
+00:29:49,280 --> 00:29:56,120
+and talk about, okay, our requirements in terms of compliance, is that when these compliance
+
+358
+00:29:56,120 --> 00:30:04,840
+teams talk about risk, they talk about risk specifically for the company.
+
+359
+00:30:04,840 --> 00:30:11,760
+And as I mentioned before, a data protection officer typically is an independent and external
+
+360
+00:30:11,760 --> 00:30:14,920
+advisor to a company.
+
+361
+00:30:14,920 --> 00:30:21,640
+And if you enshrine this within the logic of the GDPR, what the DPO does is they represents
+
+362
+00:30:21,640 --> 00:30:26,140
+the fundamental right to privacy of data subjects.
+
+363
+00:30:26,140 --> 00:30:32,520
+So when a DPO talks about risk, and when you say, hey, you know, Mr. Company, this is not
+
+364
+00:30:32,520 --> 00:30:38,480
+good, you should not be doing that because, because, because, then the company will take
+
+365
+00:30:38,480 --> 00:30:45,000
+a risk assessment of their own to decide whether yes or no, they are going to pursue or do
+
+366
+00:30:45,000 --> 00:30:46,840
+something else.
+
+367
+00:30:46,840 --> 00:30:57,760
+But the risk perception when a DPO flags something is this external vision of risk to data subjects.
+
+368
+00:30:57,760 --> 00:31:02,060
+Compliance people talk about risk for the company.
+
+369
+00:31:02,060 --> 00:31:08,720
+So these visions align to a certain point, but not totally.
+
+370
+00:31:08,720 --> 00:31:12,880
+And so this is something that is, I think, important to understand.
+
+371
+00:31:12,880 --> 00:31:18,600
+Also, from a semantic perspective, because I see that so many times, I use same words
+
+372
+00:31:18,600 --> 00:31:22,160
+as the security people, but we don't mean the same thing.
+
+373
+00:31:22,160 --> 00:31:28,440
+When I talk about risk, I talk about risk to society, to people outside of the company.
+
+374
+00:31:28,440 --> 00:31:33,920
+The compliance people talk about risk to the company, our financial consequences of the
+
+375
+00:31:33,920 --> 00:31:36,200
+choices we make.
+
+376
+00:31:36,200 --> 00:31:39,240
+And I think this will continue to evolve.
+
+377
+00:31:39,240 --> 00:31:45,160
+But what surprises me is that, first of all, the understanding of what a DPO is or is supposed
+
+378
+00:31:45,160 --> 00:31:46,160
+to be.
+
+379
+00:31:46,160 --> 00:31:54,100
+A DPO is not the same thing as Privacy Council, because a Privacy Council works for a company.
+
+380
+00:31:54,100 --> 00:31:58,200
+And if, for example, a supervisory authority knocks on the door of a company and talks
+
+381
+00:31:58,200 --> 00:32:04,280
+to the Privacy Council, the Privacy Council has obligations of confidentiality.
+
+382
+00:32:04,280 --> 00:32:12,920
+A DPO's role, as defined within also Article 39 of the GDPR, is actually to talk to supervisory
+
+383
+00:32:12,920 --> 00:32:14,840
+authorities.
+
+384
+00:32:14,840 --> 00:32:23,480
+So once companies also understand this, it also means that this role of DPO is challenging,
+
+385
+00:32:23,480 --> 00:32:30,200
+because it basically, you bring in a risk of having somebody external looking at what
+
+386
+00:32:30,200 --> 00:32:35,440
+you're doing and being able to talk to supervisory authorities.
+
+387
+00:32:35,440 --> 00:32:38,880
+So it's a challenging position to build trust.
+
+388
+00:32:38,880 --> 00:32:44,700
+And I think after three and a half years at M Particle, we are, this is what is existing.
+
+389
+00:32:44,700 --> 00:32:45,700
+This is what's there.
+
+390
+00:32:45,700 --> 00:32:53,320
+I typically spy on the teams and give my comments, but it took time for this trust to be built.
+
+391
+00:32:53,320 --> 00:32:58,440
+And as you mentioned before, Ronan, yeah, I have sleepless nights because I'm worried
+
+392
+00:32:58,440 --> 00:33:04,960
+about the system or because there is a team that's building something that I don't think
+
+393
+00:33:04,960 --> 00:33:07,820
+goes in the right direction.
+
+394
+00:33:07,820 --> 00:33:15,920
+But I think it's in the interest, long-term interest of companies to bring in DPO's and
+
+395
+00:33:15,920 --> 00:33:22,840
+build this trust to make sure that what they build today and for the future goes in line
+
+396
+00:33:22,840 --> 00:33:26,960
+with how privacy legislation evolves.
+
+397
+00:33:26,960 --> 00:33:32,480
+And so I'm always a bit worried, as I mentioned before, young DPO's, they get pushed around
+
+398
+00:33:32,480 --> 00:33:33,480
+and things like that.
+
+399
+00:33:33,480 --> 00:33:40,120
+But the presence of mind is always, I look at society, what are the consequences of what
+
+400
+00:33:40,120 --> 00:33:43,920
+you're doing and where could this go?
+
+401
+00:33:43,920 --> 00:33:50,720
+Nobody thoughts about the issues that bigger players today bring about for the democracies
+
+402
+00:33:50,720 --> 00:33:54,800
+of our societies or the stability.
+
+403
+00:33:54,800 --> 00:33:59,520
+And this is what all these DPO's need to do is to make sure that this goes basically in
+
+404
+00:33:59,520 --> 00:34:01,600
+the right direction.
+
+405
+00:34:01,600 --> 00:34:08,800
+So this is why I wanted to bring this to the table because it's, you know, the European
+
+406
+00:34:08,800 --> 00:34:14,480
+institutions like to talk about risk and GDPR being a risk-based assessment.
+
+407
+00:34:14,480 --> 00:34:21,060
+And I agree, but risk for who and for what is often the first starting point of any kind
+
+408
+00:34:21,060 --> 00:34:26,080
+of privacy engineering discussion, say, okay, what are we talking about?
+
+409
+00:34:26,080 --> 00:34:27,880
+What is the context?
+
+410
+00:34:27,880 --> 00:34:33,240
+And how do I see harm and how can we find balance within the data flows to make sure
+
+411
+00:34:33,240 --> 00:34:42,240
+that everybody that is impacted by this, not only actors like Matomo and the company using
+
+412
+00:34:42,240 --> 00:34:45,960
+them, but also all the data subjects behind?
+
+413
+00:34:45,960 --> 00:34:50,320
+Okay, thank you.
+
+414
+00:34:50,320 --> 00:34:52,680
+That's perfect.
+
+415
+00:34:52,680 --> 00:34:55,240
+It's currently 2.36.
+
+416
+00:34:55,240 --> 00:35:03,760
+I'm going to enter within the topic, which is about the link between DPO and Matomo.
+
+417
+00:35:03,760 --> 00:35:10,800
+So I really would like to know if web analytics tracking tools like Matomo, so let's say web
+
+418
+00:35:10,800 --> 00:35:17,480
+analytics in general, okay, could say Google Analytics, IT, Internet, whatever, are taken
+
+419
+00:35:17,480 --> 00:35:20,800
+seriously by DPO.
+
+420
+00:35:20,800 --> 00:35:27,720
+So I will say like information system who could contain personal data, or are they considered
+
+421
+00:35:27,720 --> 00:35:31,120
+as optional information system to look at?
+
+422
+00:35:31,120 --> 00:35:36,760
+Precise a little bit more about my question is that within the scope of a DPO, you probably
+
+423
+00:35:36,760 --> 00:35:44,440
+got the CRM, which contains far more personal data than the web analytics system, newsletter
+
+424
+00:35:44,440 --> 00:35:54,240
+databases, you probably have other information system out there, just emails, for example,
+
+425
+00:35:54,240 --> 00:36:01,600
+and just would like to know where are in the scope of the DPO mind, the location of web
+
+426
+00:36:01,600 --> 00:36:03,920
+analytics system.
+
+427
+00:36:03,920 --> 00:36:14,520
+Okay, so typically when we talk about the obligations of a DPO, it sits within roles
+
+428
+00:36:14,520 --> 00:36:16,160
+of the company.
+
+429
+00:36:16,160 --> 00:36:19,500
+So what kind of role does that company play?
+
+430
+00:36:19,500 --> 00:36:25,560
+It is a data controller for its own marketing operations, and then it might be a data processor
+
+431
+00:36:25,560 --> 00:36:29,920
+for other things, it depends on what the company does.
+
+432
+00:36:29,920 --> 00:36:36,040
+So in that sense, typically, I think systems, but I might be wrong, like Matomo, Digital
+
+433
+00:36:36,040 --> 00:36:45,600
+Analytics, DMPs, CDPs play a role for marketing operations, ideally more, honestly, I would
+
+434
+00:36:45,600 --> 00:36:51,480
+like to see a bit more, but apparently this is still like the big game here.
+
+435
+00:36:51,480 --> 00:37:00,320
+And unfortunately, there are a plethora of tools being used by marketing departments.
+
+436
+00:37:00,320 --> 00:37:05,940
+And these tools also change every two, three years.
+
+437
+00:37:05,940 --> 00:37:15,360
+And in that sense, I think certainly DPOs that are not technical minded, have issues
+
+438
+00:37:15,360 --> 00:37:19,280
+understanding how all these systems interact.
+
+439
+00:37:19,280 --> 00:37:26,240
+What is clear is that since certainly the GDPR, as these systems act as data processors
+
+440
+00:37:26,240 --> 00:37:34,000
+for marketing, I think the minimal requirements are typically around this idea of having a
+
+441
+00:37:34,000 --> 00:37:39,520
+contract or a data protection agreement, and making sure that these international data
+
+442
+00:37:39,520 --> 00:37:42,060
+flows work well.
+
+443
+00:37:42,060 --> 00:37:46,520
+It also depends, I mean, Matomo is a very specific tool in the sense that it's not a
+
+444
+00:37:46,520 --> 00:37:53,760
+SaaS solution, and in that sense, it also depends whether there's an appetite from the
+
+445
+00:37:53,760 --> 00:38:00,400
+company to actually invest resources and making sure that they can set this up and have this
+
+446
+00:38:00,400 --> 00:38:03,440
+up and running inside their systems.
+
+447
+00:38:03,440 --> 00:38:08,600
+So I think for DPOs, if I had to answer this question from that specific angle, do they
+
+448
+00:38:08,600 --> 00:38:10,120
+care?
+
+449
+00:38:10,120 --> 00:38:17,160
+If they understand what's going on in marketing and start digging a bit, probably yes.
+
+450
+00:38:17,160 --> 00:38:26,680
+Does it facilitate, do certain stances with respect to privacy facilitates the audit and
+
+451
+00:38:26,680 --> 00:38:33,440
+the audit passing by a privacy office of a tool like Matomo, certainly, but it's not
+
+452
+00:38:33,440 --> 00:38:34,660
+the only aspect.
+
+453
+00:38:34,660 --> 00:38:43,280
+So how much does this weigh in the risk exercise of the company is a big question.
+
+454
+00:38:43,280 --> 00:38:45,680
+Does that answer your question kind of?
+
+455
+00:38:45,680 --> 00:38:47,680
+Yeah, yeah, absolutely.
+
+456
+00:38:47,680 --> 00:38:48,680
+Absolutely.
+
+457
+00:38:48,680 --> 00:38:49,680
+I have many others in mind.
+
+458
+00:38:49,680 --> 00:38:56,840
+I'm just trying to look at the time and think about the number of slides that we have left
+
+459
+00:38:56,840 --> 00:39:04,840
+and as well leaving some space for the audience to ask some questions.
+
+460
+00:39:04,840 --> 00:39:13,440
+That's answering a question, but it's raising so many in my head that it's a challenge.
+
+461
+00:39:13,440 --> 00:39:17,360
+Next question is about this one.
+
+462
+00:39:17,360 --> 00:39:23,120
+I think it's really linked to the answer that you already provided us, which is, do DPOs
+
+463
+00:39:23,120 --> 00:39:29,360
+make a difference between proprietary software and free software because us, let's say within
+
+464
+00:39:29,360 --> 00:39:35,440
+the Matomo community, make clearly a difference between the two, but I really, in fact, it's
+
+465
+00:39:35,440 --> 00:39:39,200
+really linked with what you just said with data flows, but I really would like you to
+
+466
+00:39:39,200 --> 00:39:40,200
+answer to this one.
+
+467
+00:39:40,200 --> 00:39:44,560
+Do they make a difference between proprietary software and free software?
+
+468
+00:39:44,560 --> 00:39:52,160
+Well, I think our last interaction on Twitter clearly shows that certain DPOs like me think
+
+469
+00:39:52,160 --> 00:40:01,880
+in terms of SaaS and then it's like, all right, free software, that's totally different ballgame
+
+470
+00:40:01,880 --> 00:40:07,520
+because what I mentioned before was like, what would your DPO ask from any SaaS tool
+
+471
+00:40:07,520 --> 00:40:12,640
+is I want a data protection agreement and I want to make sure that there are standard
+
+472
+00:40:12,640 --> 00:40:18,880
+contractual clauses to make sure that my international data transfer are as local as possible.
+
+473
+00:40:18,880 --> 00:40:23,760
+Use in free software, self-hosted, where you want.
+
+474
+00:40:23,760 --> 00:40:30,160
+So a standard contractual clause doesn't make sense and a DPA doesn't really make sense
+
+475
+00:40:30,160 --> 00:40:33,920
+anymore either because there's no intermediary.
+
+476
+00:40:33,920 --> 00:40:40,760
+The question I think that will start to arise, however, here and it's also the case for SaaS,
+
+477
+00:40:40,760 --> 00:40:47,720
+but privacy by design functionalities, what is needed and this is also what I've done
+
+478
+00:40:47,720 --> 00:40:55,560
+most over the last certainly 18 months for complex systems is as this is a system that
+
+479
+00:40:55,560 --> 00:41:04,520
+helps the data controller, what does that system need to do to assure that it supports
+
+480
+00:41:04,520 --> 00:41:09,920
+the compliance obligations of the data controller, so the matter more customers.
+
+481
+00:41:09,920 --> 00:41:18,400
+A typical example would be certainly also following Apple's ATT consent status.
+
+482
+00:41:18,400 --> 00:41:23,520
+Does it actually upload the lawful basis for processing and the fact that yes or no, we
+
+483
+00:41:23,520 --> 00:41:29,240
+agreed we didn't agree those terrible banners for a privacy and things like that.
+
+484
+00:41:29,240 --> 00:41:30,520
+Does it define purpose?
+
+485
+00:41:30,520 --> 00:41:36,200
+Do we know what that specific data point is about and certainly if we want to do more
+
+486
+00:41:36,200 --> 00:41:41,200
+with that data, can we use these fields to pass them on?
+
+487
+00:41:41,200 --> 00:41:46,680
+I think these are kind of the conversations that need to happen today focusing on privacy
+
+488
+00:41:46,680 --> 00:41:53,400
+by design because also Matomo doesn't exist in a vacuum, it is part of something that
+
+489
+00:41:53,400 --> 00:41:59,520
+is then doing something else and so these conversations about what do I need inside
+
+490
+00:41:59,520 --> 00:42:09,120
+my tool to make sure that I interface correctly with how data subjects exercise their choices
+
+491
+00:42:09,120 --> 00:42:14,880
+and also making sure that through the pipeline of the data these choices are respected and
+
+492
+00:42:14,880 --> 00:42:20,820
+if at the same time data subjects exercise their rights which is kind of the big one
+
+493
+00:42:20,820 --> 00:42:26,680
+in the GDPR, it's not new but it's bigger, I also have the capabilities of doing that.
+
+494
+00:42:26,680 --> 00:42:35,600
+I think this is the big challenge for most companies, SaaS or free software is to start
+
+495
+00:42:35,600 --> 00:42:41,640
+looking at what does privacy by design mean and what do I need to do for my customers.
+
+496
+00:42:41,640 --> 00:42:48,000
+You mentioned other tools out there, other French tools, they take different stances
+
+497
+00:42:48,000 --> 00:42:50,200
+than others.
+
+498
+00:42:50,200 --> 00:42:56,200
+So you could imagine for example a tool saying I do not forward this data if there is no
+
+499
+00:42:56,200 --> 00:42:58,160
+consent.
+
+500
+00:42:58,160 --> 00:43:02,280
+Is that the choice of the tool to say that or is it up to the customer?
+
+501
+00:43:02,280 --> 00:43:10,820
+So these kind of discussions and stances are taking place depending on the risk appetite
+
+502
+00:43:10,820 --> 00:43:15,280
+of the company, how their contracts are being set up and things like that but these are
+
+503
+00:43:15,280 --> 00:43:21,400
+kind of the conversations that a tool also needs to decide to say okay where do I position
+
+504
+00:43:21,400 --> 00:43:27,760
+myself, do I want to be extremely strict in terms of privacy or do I prefer not to cut
+
+505
+00:43:27,760 --> 00:43:35,160
+myself off from other business opportunities leaving more responsibility to my customers.
+
+506
+00:43:35,160 --> 00:43:44,040
+These are more ethical discussions to be had but they need to take place.
+
+507
+00:43:44,040 --> 00:43:45,040
+Thank you very much.
+
+508
+00:43:45,040 --> 00:43:51,280
+I'm looking at how many okay I just have one question left which is great because we have
+
+509
+00:43:51,280 --> 00:43:54,760
+five minutes left.
+
+510
+00:43:54,760 --> 00:43:59,560
+What are the risks of personal data infringement for an entity?
+
+511
+00:43:59,560 --> 00:44:00,920
+Did I write this question?
+
+512
+00:44:00,920 --> 00:44:03,640
+I cannot even understand it myself.
+
+513
+00:44:03,640 --> 00:44:07,600
+What are the risks for an entity?
+
+514
+00:44:07,600 --> 00:44:10,760
+Do you understand this question because I don't understand it myself?
+
+515
+00:44:10,760 --> 00:44:20,480
+I should have proofread it without the risk of personal infringement for an entity.
+
+516
+00:44:20,480 --> 00:44:27,120
+We talked a bit about the notion of risk and the underlying bits of the iceberg with respect
+
+517
+00:44:27,120 --> 00:44:32,960
+to certain data subject rights.
+
+518
+00:44:32,960 --> 00:44:40,200
+Well yeah I think I don't know I had something in mind when I wrote it and I didn't proofread
+
+519
+00:44:40,200 --> 00:44:41,200
+this question.
+
+520
+00:44:41,200 --> 00:44:47,280
+I just would like to be sure that the audience got the opportunity to ask questions so I
+
+521
+00:44:47,280 --> 00:44:55,160
+will let the chat go on for the next 30 seconds so I can see that we have different people
+
+522
+00:44:55,160 --> 00:44:56,160
+in the chat.
+
+523
+00:44:56,160 --> 00:45:00,640
+We have Marcus, we have Silva, we have many other people.
+
+524
+00:45:00,640 --> 00:45:08,480
+If you have any questions please feel free to ask one or either already do you have any
+
+525
+00:45:08,480 --> 00:45:13,120
+questions that you expected me to ask you or that you would like the audience to ask
+
+526
+00:45:13,120 --> 00:45:19,400
+you about specific things?
+
+527
+00:45:19,400 --> 00:45:27,280
+No not specifically I think we ran through.
+
+528
+00:45:27,280 --> 00:45:28,280
+We got one?
+
+529
+00:45:28,280 --> 00:45:29,280
+Yeah.
+
+530
+00:45:29,280 --> 00:45:30,280
+Oh great.
+
+531
+00:45:30,280 --> 00:45:34,360
+Advice for people who are willing to pursue a career as DPO.
+
+532
+00:45:34,360 --> 00:45:38,440
+It depends a bit on your background I think.
+
+533
+00:45:38,440 --> 00:45:47,000
+There are more and more job offers out there but they often require some form of either
+
+534
+00:45:47,000 --> 00:45:53,800
+a certification or experience.
+
+535
+00:45:53,800 --> 00:45:57,840
+So there are certifications out there.
+
+536
+00:45:57,840 --> 00:46:07,400
+The IAPP has a couple of them and they often find themselves inside the job offers that
+
+537
+00:46:07,400 --> 00:46:09,000
+I read.
+
+538
+00:46:09,000 --> 00:46:16,000
+As I mentioned also I teach at Maastricht University they do DPO certifications.
+
+539
+00:46:16,000 --> 00:46:21,080
+I'm hiring as well so I'm looking for people so if you're interested I'm happy to have
+
+540
+00:46:21,080 --> 00:46:24,080
+the chats.
+
+541
+00:46:24,080 --> 00:46:33,000
+I think more job offers for DPO's but it's about getting your foot in the door and start
+
+542
+00:46:33,000 --> 00:46:39,520
+building some form of a knowledge around the topic as well.
+
+543
+00:46:39,520 --> 00:46:48,360
+If you're a lawyer it actually helps so I'm happy to help as well.
+
+544
+00:46:48,360 --> 00:46:54,440
+Okay I cannot see any any questions left.
+
+545
+00:46:54,440 --> 00:46:58,320
+There's another one actually.
+
+546
+00:46:58,320 --> 00:46:59,320
+Personal responsibility.
+
+547
+00:46:59,320 --> 00:47:01,700
+Oh yeah sorry.
+
+548
+00:47:01,700 --> 00:47:10,680
+It's a very good question that was often debated and actually if you look at the GDPR there
+
+549
+00:47:10,680 --> 00:47:17,600
+is another role which is the role of representative and a representative you have to look it up
+
+550
+00:47:17,600 --> 00:47:18,600
+in the GDPR.
+
+551
+00:47:18,600 --> 00:47:24,480
+I don't remember the article but is the person that's going to represent a company if they
+
+552
+00:47:24,480 --> 00:47:31,440
+don't have a foothold basically inside a certain country.
+
+553
+00:47:31,440 --> 00:47:39,080
+There's more discussions about legal responsibility for representatives than for DPO's and I think
+
+554
+00:47:39,080 --> 00:47:46,880
+it would be also counterproductive to talk about potential responsibility for DPO's because
+
+555
+00:47:46,880 --> 00:47:51,640
+I've seen the conversations about representatives and people are just walking away they say
+
+556
+00:47:51,640 --> 00:47:58,040
+I don't want that liability I don't want it but I don't think that as such DPO's have
+
+557
+00:47:58,040 --> 00:48:03,840
+some form of a responsibility or liability but on the other hand they are responsible
+
+558
+00:48:03,840 --> 00:48:08,640
+in front of the supervisory authorities to answer any kinds of questions.
+
+559
+00:48:08,640 --> 00:48:15,320
+This is still in discussion and in making I think if we're talking about some form of
+
+560
+00:48:15,320 --> 00:48:22,680
+a responsibility or certainly liability there is conversations about more civil liability
+
+561
+00:48:22,680 --> 00:48:29,000
+for decision makers so CEOs and things like that or criminal liability I think the conversation
+
+562
+00:48:29,000 --> 00:48:35,160
+will go there not DPO's because that would be kind of shooting this objective in the
+
+563
+00:48:35,160 --> 00:48:39,840
+foot but we'll see.
+
+564
+00:48:39,840 --> 00:48:47,960
+Perfect, Antoine thank you very much Aurélie for being with us today to spend some time
+
+565
+00:48:47,960 --> 00:48:53,640
+just to let you know that the room with all the different questions will be on until the
+
+566
+00:48:53,640 --> 00:48:59,480
+end of the event so let's say this evening so if you have some free time left feel free
+
+567
+00:48:59,480 --> 00:49:06,720
+to have a look at it maybe some new questions will come if you don't have time which I totally
+
+568
+00:49:06,720 --> 00:49:14,600
+understand of course feel free to leave it and I will send you the questions by email
+
+569
+00:49:14,600 --> 00:49:21,480
+if I got them. For the audience I remember that the speaker was Aurélie Pauls and that
+
+570
+00:49:21,480 --> 00:49:28,000
+you can easily find her on a very famous search engine because she's kind of the expert in
+
+571
+00:49:28,000 --> 00:49:36,080
+the world dealing with privacy concerns. Thank you very much Aurélie, thank you for everything.
+
+572
+00:49:36,080 --> 00:49:41,620
+Thank you for having me, thank you for listening and if there are any questions this is also
+
+573
+00:49:41,620 --> 00:49:48,520
+how we all learn please feel free keep in touch and have a good conference and thank
+
+574
+00:49:48,520 --> 00:49:49,920
+you for having me.
+
+575
+00:49:49,920 --> 00:49:56,280
+Thank you, next conference will be in nine minutes from now there is only one on the
+
+576
+00:49:56,280 --> 00:50:03,760
+schedule that I can see this one will be made by Katie Nubay and myself even if I will have
+
+577
+00:50:03,760 --> 00:50:10,560
+just the minor roles in it it's about using MatMo to collect data on intervention engagement
+
+578
+00:50:10,560 --> 00:50:17,920
+within the research tree also it's a use case from a client of mine so the clients will
+
+579
+00:50:17,920 --> 00:50:23,120
+talk about this project and I will come within the conference and explain how we deal with
+
+580
+00:50:23,120 --> 00:50:40,720
+the project management part we've met. See you soon.
+

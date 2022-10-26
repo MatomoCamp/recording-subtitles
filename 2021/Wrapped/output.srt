@@ -1,0 +1,2508 @@
+1
+00:00:00,000 --> 00:00:07,200
+Hello, everyone.
+
+2
+00:00:07,200 --> 00:00:09,280
+Nice to meet you all again.
+
+3
+00:00:09,280 --> 00:00:11,480
+It's currently 3.02.
+
+4
+00:00:11,480 --> 00:00:15,160
+And we will conduct a conference today.
+
+5
+00:00:15,160 --> 00:00:21,920
+So continue by who is here with me and myself.
+
+6
+00:00:21,920 --> 00:00:28,320
+So the idea of this conference is to do something which is kind of unusual.
+
+7
+00:00:28,320 --> 00:00:30,000
+So we're going to do a use case.
+
+8
+00:00:30,000 --> 00:00:35,080
+And most of the time, when a use case is presented by an analyst, it's most of the time, like
+
+9
+00:00:35,080 --> 00:00:39,440
+three-quarter of the time, the analyst who is speaking and then a quarter of the time
+
+10
+00:00:39,440 --> 00:00:40,440
+with the client.
+
+11
+00:00:40,440 --> 00:00:44,520
+Here, this is going to be the reverse mode.
+
+12
+00:00:44,520 --> 00:00:51,280
+So I will leave the floor in a couple of minutes to Cathy, who is a client of mine.
+
+13
+00:00:51,280 --> 00:00:58,640
+And the idea is that Cathy can introduce you to the project that she's working on.
+
+14
+00:00:58,640 --> 00:01:07,640
+And I will explain how I decided to deal with the project management of including Matomo
+
+15
+00:01:07,640 --> 00:01:11,800
+within this given project.
+
+16
+00:01:11,800 --> 00:01:17,520
+So I leave now the floor to Cathy, and I will interact only dealing with my part of the
+
+17
+00:01:17,520 --> 00:01:18,520
+slides.
+
+18
+00:01:18,520 --> 00:01:19,520
+OK.
+
+19
+00:01:19,520 --> 00:01:20,520
+Thanks, Ronan.
+
+20
+00:01:20,520 --> 00:01:21,520
+I'll just share my slides.
+
+21
+00:01:21,520 --> 00:01:34,040
+Can I just check that you can see that, Ronan?
+
+22
+00:01:34,040 --> 00:01:39,280
+Yes, it looks great.
+
+23
+00:01:39,280 --> 00:01:40,280
+OK.
+
+24
+00:01:40,280 --> 00:01:41,280
+Lovely.
+
+25
+00:01:41,280 --> 00:01:42,280
+Thank you.
+
+26
+00:01:42,280 --> 00:01:43,280
+Right.
+
+27
+00:01:43,280 --> 00:01:47,920
+So myself and Ronan are going to, as he said, share the presentation today.
+
+28
+00:01:47,920 --> 00:01:53,680
+And the presentation is on using Matomo to collect data on intervention engagement within
+
+29
+00:01:53,680 --> 00:01:59,880
+a research trial, and the case study is a project called WRAPT.
+
+30
+00:01:59,880 --> 00:02:05,880
+So the overview of the presentation is that I'll firstly talk about why I think it's important
+
+31
+00:02:05,880 --> 00:02:10,240
+to measure intervention engagement within a research trial.
+
+32
+00:02:10,240 --> 00:02:14,040
+I will tell you a bit about the WRAPT research project as well.
+
+33
+00:02:14,040 --> 00:02:19,120
+And then Ronan's going to talk about how we use Matomo within the project to collect individual
+
+34
+00:02:19,120 --> 00:02:21,800
+level data on engagement.
+
+35
+00:02:21,800 --> 00:02:25,320
+Then I'll present some early insights from our analytics data, and then there'll be a
+
+36
+00:02:25,320 --> 00:02:30,080
+chance for some questions at the end.
+
+37
+00:02:30,080 --> 00:02:35,240
+So first of all, why it's important to measure intervention engagement within a research
+
+38
+00:02:35,240 --> 00:02:36,240
+trial.
+
+39
+00:02:36,240 --> 00:02:38,000
+Well, there are two reasons.
+
+40
+00:02:38,000 --> 00:02:42,040
+One is to minimize something called non-usage attrition.
+
+41
+00:02:42,040 --> 00:02:44,760
+And I'll go on to explain a bit about what that is.
+
+42
+00:02:44,760 --> 00:02:49,600
+And then also to examine and control for intervention dose.
+
+43
+00:02:49,600 --> 00:02:53,080
+So firstly, on to minimizing non-usage attrition.
+
+44
+00:02:53,080 --> 00:02:58,920
+So when we are testing whether a new intervention works, then we typically do something called
+
+45
+00:02:58,920 --> 00:03:00,640
+a randomized control trial.
+
+46
+00:03:00,640 --> 00:03:06,300
+And many of you will be aware of what randomized control trials are already, maybe.
+
+47
+00:03:06,300 --> 00:03:08,960
+But they are, I'll just share my next slide.
+
+48
+00:03:08,960 --> 00:03:14,680
+So they are used all the time in a clinical context to test the effectiveness of something.
+
+49
+00:03:14,680 --> 00:03:20,120
+So that something could be a new drug or a new vaccine, as is the case for the COVID
+
+50
+00:03:20,120 --> 00:03:21,120
+vaccine.
+
+51
+00:03:21,120 --> 00:03:27,400
+Or in my case, and I'm a health psychologist, I develop interventions that try to encourage
+
+52
+00:03:27,400 --> 00:03:29,160
+people to change their health behavior.
+
+53
+00:03:29,160 --> 00:03:32,680
+So that could be, for example, to persuade people to use the COVID vaccine.
+
+54
+00:03:32,680 --> 00:03:37,000
+So the intervention itself is not a drug or a vaccine or something like that.
+
+55
+00:03:37,000 --> 00:03:40,840
+It tends to be a behavior change intervention.
+
+56
+00:03:40,840 --> 00:03:43,320
+But the principle of testing it is exactly the same.
+
+57
+00:03:43,320 --> 00:03:47,040
+So we would also run a randomized control trial.
+
+58
+00:03:47,040 --> 00:03:51,200
+And in randomized control trials, we take a sample population.
+
+59
+00:03:51,200 --> 00:03:56,600
+So this is a smaller group of the wider population we're interested in testing the intervention
+
+60
+00:03:56,600 --> 00:03:57,600
+on.
+
+61
+00:03:57,600 --> 00:04:00,360
+And we'll randomly assign them to two groups.
+
+62
+00:04:00,360 --> 00:04:06,040
+So like the flip of a coin or a roll of a dice or more commonly using sort of internet
+
+63
+00:04:06,040 --> 00:04:07,560
+based randomization tools.
+
+64
+00:04:07,560 --> 00:04:12,120
+But the idea is the same, which is randomly assigning to one group or the other.
+
+65
+00:04:12,120 --> 00:04:17,520
+And in the one group, which here we have as group one, all the people in that group that
+
+66
+00:04:17,520 --> 00:04:22,640
+have been randomly assigned to it will get the new drug or treatment.
+
+67
+00:04:22,640 --> 00:04:27,480
+And then we'll measure afterwards how they fare, what the outcomes were for them.
+
+68
+00:04:27,480 --> 00:04:29,640
+And then in the other group, they'll get the control.
+
+69
+00:04:29,640 --> 00:04:34,360
+So if it is a drug, it might be something like a sugar pill that has no active ingredients.
+
+70
+00:04:34,360 --> 00:04:36,640
+And again, we'll measure the outcome for them.
+
+71
+00:04:36,640 --> 00:04:40,520
+And the important point with the randomization is that by the end, we should have balance
+
+72
+00:04:40,520 --> 00:04:41,520
+in the two groups.
+
+73
+00:04:41,520 --> 00:04:45,960
+So just by chance, we should have approximately even numbers of people of different genders
+
+74
+00:04:45,960 --> 00:04:52,440
+and ethnicities or with similar levels of health need or health condition.
+
+75
+00:04:52,440 --> 00:04:57,080
+And that's important to make sure that we control for any sort of confounding factors
+
+76
+00:04:57,080 --> 00:04:59,320
+that might also have an effect on the outcome.
+
+77
+00:04:59,320 --> 00:05:04,880
+And they should then be evenly spread between the two groups.
+
+78
+00:05:04,880 --> 00:05:09,080
+So in a clinical context, when a new drug is being tested, adherence to the drug is
+
+79
+00:05:09,080 --> 00:05:14,640
+not usually a big problem, although something still to be mindful of.
+
+80
+00:05:14,640 --> 00:05:19,840
+And this is because the drug is prescribed by a clinician, and the participants are usually
+
+81
+00:05:19,840 --> 00:05:21,400
+very closely supervised.
+
+82
+00:05:21,400 --> 00:05:26,760
+So you would be asked to go into a clinical context, for example, and you'd be passed
+
+83
+00:05:26,760 --> 00:05:31,880
+the pill on a tray with a cup of water and watched by a research nurse taking it, who
+
+84
+00:05:31,880 --> 00:05:36,160
+then recalled that you'd taken it, and that would likely be for every dose.
+
+85
+00:05:36,160 --> 00:05:40,600
+And also, as a research participant, you may well, especially if you're in an intervention
+
+86
+00:05:40,600 --> 00:05:45,240
+condition, experience observable and immediate health benefits of taking that drug, assuming
+
+87
+00:05:45,240 --> 00:05:49,960
+that it's effective, also potentially in the control condition due to placebo effects.
+
+88
+00:05:49,960 --> 00:05:56,400
+So there's lots of things that could be meaning that adherence to that drug within an intervention
+
+89
+00:05:56,400 --> 00:06:00,440
+and trial context is not too much of a problem.
+
+90
+00:06:00,440 --> 00:06:04,280
+It's usually, it's usually reasonably high.
+
+91
+00:06:04,280 --> 00:06:11,720
+However, in contract, adherence is a major problem when we're testing e-health interventions.
+
+92
+00:06:11,720 --> 00:06:14,360
+So I mentioned briefly about the kind of work that I do.
+
+93
+00:06:14,360 --> 00:06:19,920
+So to test health behavior change interventions, and also almost all of the interventions that
+
+94
+00:06:19,920 --> 00:06:22,460
+I develop and test are of the e-health type.
+
+95
+00:06:22,460 --> 00:06:25,400
+So they're interventions delivered via the internet.
+
+96
+00:06:25,400 --> 00:06:32,360
+So here, the intervention is neither prescribed nor critical to well-being.
+
+97
+00:06:32,360 --> 00:06:41,000
+And this graph, I think, demonstrates quite nicely typical attrition from e-health interventions.
+
+98
+00:06:41,000 --> 00:06:46,320
+So on the y-axis going up the left, you can see at the very top, there's a 1, and that
+
+99
+00:06:46,320 --> 00:06:53,080
+reflects 100% of users of the intervention going down to 90, 80, 70, et cetera, right
+
+100
+00:06:53,080 --> 00:06:54,960
+down to 0 at the bottom.
+
+101
+00:06:54,960 --> 00:06:59,800
+And then across the bottom on the x-axis, we've got time and modules.
+
+102
+00:06:59,800 --> 00:07:08,200
+So if we take the blue line to start with, the study by Farrell Dunn, this was a 12-week
+
+103
+00:07:08,200 --> 00:07:12,920
+program of internet delivery of an intervention.
+
+104
+00:07:12,920 --> 00:07:17,920
+So it's supposed to engage for 12 weeks in total to have had the full dose of the intervention.
+
+105
+00:07:17,920 --> 00:07:22,740
+But you can see after a couple of weeks, we've already got less than 50% of people still
+
+106
+00:07:22,740 --> 00:07:29,080
+using that website, going down to less than 20% at week 3.
+
+107
+00:07:29,080 --> 00:07:33,200
+And you can see by the end, in fact, it was less than 1% of people still using or still
+
+108
+00:07:33,200 --> 00:07:37,480
+completing the intervention right at the very end.
+
+109
+00:07:37,480 --> 00:07:43,240
+And then for the dashed black line, this was an intervention called Mood Gym.
+
+110
+00:07:43,240 --> 00:07:44,880
+And it's in a trial context again.
+
+111
+00:07:44,880 --> 00:07:47,920
+And there were five modules here for this intervention.
+
+112
+00:07:47,920 --> 00:07:54,440
+You can see that less than 70% did module 2, and then module 3, less than 60%, and so
+
+113
+00:07:54,440 --> 00:07:58,520
+on, down to just over 20% doing all five modules.
+
+114
+00:07:58,520 --> 00:08:01,680
+And then the solid black line is also Mood Gym.
+
+115
+00:08:01,680 --> 00:08:04,920
+But in this context, it wasn't in a trial.
+
+116
+00:08:04,920 --> 00:08:09,100
+It was just people allowed to have access to it, then see who engaged with it and carried
+
+117
+00:08:09,100 --> 00:08:11,640
+on engaging with it.
+
+118
+00:08:11,640 --> 00:08:16,680
+So outside the context of a trial in which people might be incentivized to use the intervention
+
+119
+00:08:16,680 --> 00:08:22,720
+and also encouraged and reminded by researchers to do so, you can see that engagement is even
+
+120
+00:08:22,720 --> 00:08:26,200
+less.
+
+121
+00:08:26,200 --> 00:08:33,320
+So non-use of nutrition, so participants ceasing to use the intervention in a trial context,
+
+122
+00:08:33,320 --> 00:08:37,200
+is obviously a big problem for us.
+
+123
+00:08:37,200 --> 00:08:41,880
+And if participants are not using intervention in a trial context, it makes it really difficult
+
+124
+00:08:41,880 --> 00:08:46,080
+to test whether the intervention actually works or not.
+
+125
+00:08:46,080 --> 00:08:55,200
+So in trials, regardless of, sorry, in trials, the outcome data for every participant is
+
+126
+00:08:55,200 --> 00:08:57,760
+randomized and included in the analysis.
+
+127
+00:08:57,760 --> 00:09:04,200
+So if we have people in that, if you remember that first diagram I showed you of a randomized
+
+128
+00:09:04,200 --> 00:09:05,200
+controls trial.
+
+129
+00:09:05,200 --> 00:09:09,160
+So we've got people randomized to the two groups, and in that top arm, we've got people
+
+130
+00:09:09,160 --> 00:09:11,480
+who received the intervention itself.
+
+131
+00:09:11,480 --> 00:09:15,100
+If you've only got a small proportion of those who are actually using intervention of four,
+
+132
+00:09:15,100 --> 00:09:19,760
+you might be thinking to yourself, well, just analyze data from those people who use the
+
+133
+00:09:19,760 --> 00:09:23,480
+intervention itself and ignore everyone else who didn't.
+
+134
+00:09:23,480 --> 00:09:27,720
+But that threatens the whole integrity of the trial design, which is the randomization
+
+135
+00:09:27,720 --> 00:09:29,760
+of people to one group or the other.
+
+136
+00:09:29,760 --> 00:09:34,240
+I explained earlier about how we randomize so we have balance between the two arms.
+
+137
+00:09:34,240 --> 00:09:39,800
+But if you're only including a subgroup of those people who have used the intervention
+
+138
+00:09:39,800 --> 00:09:44,480
+to a minimum extent and ignoring everybody else, then you remove that balance, which
+
+139
+00:09:44,480 --> 00:09:51,800
+is so important to that trial validity.
+
+140
+00:09:51,800 --> 00:09:59,680
+So the point of ensuring that everybody, regardless of whether they use the intervention or not
+
+141
+00:09:59,680 --> 00:10:02,440
+in a trial, it's called intention to treat analysis.
+
+142
+00:10:02,440 --> 00:10:07,920
+So if you randomize someone, you always analyze their data regardless to ensure you've got
+
+143
+00:10:07,920 --> 00:10:09,880
+this balance in design.
+
+144
+00:10:09,880 --> 00:10:13,760
+But the problem, of course, is if you've got a group of people in your intervention condition
+
+145
+00:10:13,760 --> 00:10:17,520
+that haven't used the intervention at all or not very much, then if your intervention
+
+146
+00:10:17,520 --> 00:10:22,240
+is indeed effective, then when you do the analysis, it has the effect of underestimating
+
+147
+00:10:22,240 --> 00:10:25,960
+the effect of the intervention because you're including in the analysis in that intervention
+
+148
+00:10:25,960 --> 00:10:30,600
+condition people who didn't even use it at all or didn't use it very much at all.
+
+149
+00:10:30,600 --> 00:10:36,120
+And remember that diagram of it dropping off steeply, that is often the case for us.
+
+150
+00:10:36,120 --> 00:10:40,960
+So it's really, really important that in a trial context that we do absolutely everything
+
+151
+00:10:40,960 --> 00:10:49,120
+that we can to minimize people not using that intervention or dropping off.
+
+152
+00:10:49,120 --> 00:10:54,760
+Now ahead of doing a main trial in which we test the effectiveness of the kind of intervention
+
+153
+00:10:54,760 --> 00:10:59,000
+that I've been talking about, we tend to do something called a feasibility randomized
+
+154
+00:10:59,000 --> 00:11:03,760
+control trial, which is exactly the same as a randomized control trial with this randomization
+
+155
+00:11:03,760 --> 00:11:05,160
+to the two groups.
+
+156
+00:11:05,160 --> 00:11:08,680
+The only thing that's different is it's with much fewer participants.
+
+157
+00:11:08,680 --> 00:11:12,760
+And the purpose of that kind of study is to help us to prepare for a full randomized control
+
+158
+00:11:12,760 --> 00:11:13,760
+trial.
+
+159
+00:11:13,760 --> 00:11:18,680
+And what we're trying to do is resolve or remove all the unknowns.
+
+160
+00:11:18,680 --> 00:11:24,200
+So for example, to help us to learn what the best methods for recruiting participants is,
+
+161
+00:11:24,200 --> 00:11:27,920
+what level of incentive we need to recruit people in the first place, but also to keep
+
+162
+00:11:27,920 --> 00:11:29,240
+them in the trial until the end.
+
+163
+00:11:29,240 --> 00:11:33,320
+So all those kinds of things are important for us to establish in this early phase before
+
+164
+00:11:33,320 --> 00:11:36,080
+we do the main thing.
+
+165
+00:11:36,080 --> 00:11:44,160
+But we can also use these feasibility randomized control trials, these preparation type trials,
+
+166
+00:11:44,160 --> 00:11:48,320
+is to examine non-nucid attrition, which we've been talking about.
+
+167
+00:11:48,320 --> 00:11:53,600
+So if we look at attrition in this early stage trial, it can tell us some important things
+
+168
+00:11:53,600 --> 00:11:58,040
+such as whether attrition is associated with particular demographic factors.
+
+169
+00:11:58,040 --> 00:12:01,560
+And of course, we're measuring those in the surveys that we give to people before they
+
+170
+00:12:01,560 --> 00:12:03,840
+have the intervention and then also afterwards.
+
+171
+00:12:03,840 --> 00:12:09,400
+And so if we can link that demographic data with the data about attrition, we can learn
+
+172
+00:12:09,400 --> 00:12:10,520
+some important things.
+
+173
+00:12:10,520 --> 00:12:14,720
+So if we found out that, for example, females in particular weren't using our intervention
+
+174
+00:12:14,720 --> 00:12:19,160
+or dropping off, then it would be important to maybe interview them as part of some later
+
+175
+00:12:19,160 --> 00:12:24,800
+studies to find out why that might be the case and to try and rectify that.
+
+176
+00:12:24,800 --> 00:12:28,600
+And when we look at the shape of that attrition curve, which we were just looking at before,
+
+177
+00:12:28,600 --> 00:12:32,600
+that can tell us something also important.
+
+178
+00:12:32,600 --> 00:12:38,320
+So if we had, should I get my mouse to do that?
+
+179
+00:12:38,320 --> 00:12:39,320
+Yeah.
+
+180
+00:12:39,320 --> 00:12:44,400
+So if we had a shape a bit sort of like really steep down like that, that would be a really
+
+181
+00:12:44,400 --> 00:12:49,840
+bad sign for our intervention, tell us that people were disengaging very quickly because
+
+182
+00:12:49,840 --> 00:12:52,080
+they just didn't like it.
+
+183
+00:12:52,080 --> 00:12:59,200
+And then this more kind of sigmoid style curve would tell us that we had some sort of initial
+
+184
+00:12:59,200 --> 00:13:03,560
+interest in it, which then dropped off, as you might imagine, then a bit of a steep drop
+
+185
+00:13:03,560 --> 00:13:08,120
+off in the middle, perhaps when there's less motivated people were leaving or possibly
+
+186
+00:13:08,120 --> 00:13:10,600
+representing some sort of usability style problems.
+
+187
+00:13:10,600 --> 00:13:14,520
+And then we've got a hardcore sort of set of users at the bottom.
+
+188
+00:13:14,520 --> 00:13:19,360
+So the style and shape, I suppose, of this curve can tell us some important things as
+
+189
+00:13:19,360 --> 00:13:24,680
+well if we're measuring attrition from our intervention during that feasibility randomized
+
+190
+00:13:24,680 --> 00:13:28,840
+control trial.
+
+191
+00:13:28,840 --> 00:13:35,480
+So it's not uncommon for feasibility randomized control trials of e-health interventions to
+
+192
+00:13:35,480 --> 00:13:42,000
+measure non-nucid attrition, but measures of engagement are usually quite limited, they're
+
+193
+00:13:42,000 --> 00:13:43,860
+not so fine grained.
+
+194
+00:13:43,860 --> 00:13:50,960
+So often it's about when people registering within the website itself, so we know who's
+
+195
+00:13:50,960 --> 00:13:54,720
+visiting and then we know when they stopped visiting and we might also be able to collect
+
+196
+00:13:54,720 --> 00:13:58,520
+data on whether they've completed modules within that website itself, but that tends
+
+197
+00:13:58,520 --> 00:14:03,320
+to be the limitation or the limits of it.
+
+198
+00:14:03,320 --> 00:14:07,960
+And the use of analytics data rarely happens at all, but I've sort of become increasingly
+
+199
+00:14:07,960 --> 00:14:13,320
+aware recently that analytics data can offer much greater insight into usability issues.
+
+200
+00:14:13,320 --> 00:14:19,960
+For example, are the particular points during the different stages in which people are going
+
+201
+00:14:19,960 --> 00:14:25,400
+through the intervention where they're experiencing some technical issues, it's not very nice,
+
+202
+00:14:25,400 --> 00:14:28,600
+the look and feel of people are dropping off because they're having problems with it.
+
+203
+00:14:28,600 --> 00:14:31,320
+And these are the kind of things that can be rectified, which if we don't collect this
+
+204
+00:14:31,320 --> 00:14:35,480
+kind of data, we won't know anything about.
+
+205
+00:14:35,480 --> 00:14:39,560
+And typically within feasibility randomized control trials, we tend to have a stage of
+
+206
+00:14:39,560 --> 00:14:43,360
+qualitative research, so we do interviews with our participants to find out more about
+
+207
+00:14:43,360 --> 00:14:47,840
+their experience of being a research participant and what we can learn to improve the trial.
+
+208
+00:14:47,840 --> 00:14:52,560
+And this would be a great stage at which to ask people to, so we can draw hypotheses from
+
+209
+00:14:52,560 --> 00:14:56,760
+these usability issues and then develop them further through those interviews to find out
+
+210
+00:14:56,760 --> 00:14:58,160
+more about people's experiences.
+
+211
+00:14:58,160 --> 00:15:03,960
+So those two things would dovetail really nicely together.
+
+212
+00:15:03,960 --> 00:15:10,920
+So yeah, we can do these feasibility randomized control trials and examine usability issues
+
+213
+00:15:10,920 --> 00:15:16,960
+with a view to properly preparing a much better and resolving any of these issues in preparation
+
+214
+00:15:16,960 --> 00:15:18,440
+for the main trial.
+
+215
+00:15:18,440 --> 00:15:24,640
+And I just want to make the point that I'm very aware that within the tech sort of web
+
+216
+00:15:24,640 --> 00:15:32,680
+industry sector, that usability and examining the sort of client or customer's use of websites
+
+217
+00:15:32,680 --> 00:15:36,720
+and all these friction points and things that are going wrong in order to maximize engagement
+
+218
+00:15:36,720 --> 00:15:41,640
+and getting people through to the end point, whatever that might be, like purchasing something,
+
+219
+00:15:41,640 --> 00:15:44,480
+is done really commonly and very well.
+
+220
+00:15:44,480 --> 00:15:49,160
+But really, in my field, it's rarely done at all, not very much at all.
+
+221
+00:15:49,160 --> 00:15:53,400
+And I just know there's a huge amount to be learned and gained from collaborating with
+
+222
+00:15:53,400 --> 00:15:56,920
+people who know much about this, and I'd be really interested in hearing from somebody
+
+223
+00:15:56,920 --> 00:16:03,720
+who would be interested in working with me in that kind of way.
+
+224
+00:16:03,720 --> 00:16:11,000
+So yeah, I've hopefully sort of made the case for why it's important to look at non user
+
+225
+00:16:11,000 --> 00:16:16,080
+attrition and for minimizing that in the trial, we know it's important to do that.
+
+226
+00:16:16,080 --> 00:16:19,720
+And running these types of feasibility randomized control trials, which are really common, is
+
+227
+00:16:19,720 --> 00:16:25,320
+a great opportunity to look at attrition and try and remedy it and do something about it.
+
+228
+00:16:25,320 --> 00:16:28,960
+And I'm really, and everyone else in my field, just at the beginning of trying to understand
+
+229
+00:16:28,960 --> 00:16:34,240
+how best to measure this type of attrition, to understand what all the measures and things
+
+230
+00:16:34,240 --> 00:16:38,840
+that we can collect are telling us, and also to make the right sort of changes so that
+
+231
+00:16:38,840 --> 00:16:42,480
+in the main trial, we can actually have as high an attrition as possible.
+
+232
+00:16:42,480 --> 00:16:46,480
+I mean, if people don't like the intervention, that's another thing we can't, that's a different
+
+233
+00:16:46,480 --> 00:16:47,480
+question to be answered.
+
+234
+00:16:47,480 --> 00:16:51,200
+But if it's to do with how the website itself is operating, I think there's lots we can
+
+235
+00:16:51,200 --> 00:16:53,680
+do about that.
+
+236
+00:16:53,680 --> 00:16:57,320
+And then the other issue, and I've only got two slides on this one, this is a much smaller
+
+237
+00:16:57,320 --> 00:17:05,100
+point really, but equally important is around examining and controlling for dose.
+
+238
+00:17:05,100 --> 00:17:11,280
+So the amount or dose of an intervention that a participant receives in a trial can affect
+
+239
+00:17:11,280 --> 00:17:13,120
+the strength of the outcome.
+
+240
+00:17:13,120 --> 00:17:18,280
+So again, back to that randomization that we talked about, so those in the top arm who
+
+241
+00:17:18,280 --> 00:17:21,900
+received the intervention, so we look to see what the outcomes are.
+
+242
+00:17:21,900 --> 00:17:26,880
+So if it's a stop smoking intervention, for example, we'll measure number of cigarettes
+
+243
+00:17:26,880 --> 00:17:31,080
+per day that I had before the intervention and afterwards, and then we'll compare the
+
+244
+00:17:31,080 --> 00:17:34,800
+two arms to look at the number of cigarettes smoked.
+
+245
+00:17:34,800 --> 00:17:39,440
+So we need to know the dose of that intervention.
+
+246
+00:17:39,440 --> 00:17:43,440
+So if it's a web intervention, we stop smoking, we need to know the amount of consumption
+
+247
+00:17:43,440 --> 00:17:44,440
+of that website.
+
+248
+00:17:44,440 --> 00:17:45,680
+Have they gone back a lot every day?
+
+249
+00:17:45,680 --> 00:17:49,240
+Have they reviewed everything, ordered everything they can, that sort of thing, to know the
+
+250
+00:17:49,240 --> 00:17:50,240
+dose.
+
+251
+00:17:50,240 --> 00:17:52,720
+And that way we can control for the analysis.
+
+252
+00:17:52,720 --> 00:17:58,000
+So we can just isolate the effect of the intervention and not the amount they're having, but then
+
+253
+00:17:58,000 --> 00:18:02,680
+also we can measure the correlation or the strength of relationship between dose and
+
+254
+00:18:02,680 --> 00:18:03,680
+outcome as well.
+
+255
+00:18:03,680 --> 00:18:09,060
+These are really important for us to understand, but you can't examine what you don't measure.
+
+256
+00:18:09,060 --> 00:18:12,560
+So we really need to understand what is the dose, the amount that people are having of
+
+257
+00:18:12,560 --> 00:18:19,000
+each of our interventions, and this is to do with the main trial itself.
+
+258
+00:18:19,000 --> 00:18:26,320
+So if we can measure dose and for this, it's really important that the outcomes are linked
+
+259
+00:18:26,320 --> 00:18:29,700
+to each individual participant in the study.
+
+260
+00:18:29,700 --> 00:18:34,480
+So if we can measure dose, then we can understand things such as, is there a linear relationship
+
+261
+00:18:34,480 --> 00:18:36,200
+between dose and outcome?
+
+262
+00:18:36,200 --> 00:18:41,120
+So in other words, the more of the intervention that somebody has, the greater the benefit.
+
+263
+00:18:41,120 --> 00:18:44,840
+Or is it there are non-linear relationships at the point of saturation, which doesn't
+
+264
+00:18:44,840 --> 00:18:47,420
+really make any difference whether you have any more or not?
+
+265
+00:18:47,420 --> 00:18:52,840
+Or is there minimum dose that everyone needs to have in order for an effect to be achieved?
+
+266
+00:18:52,840 --> 00:18:58,560
+And analytics data can also be used for this and can provide us with really precise and
+
+267
+00:18:58,560 --> 00:19:04,240
+detailed measures of the dose for each individual, such as which pages are accessed, how long
+
+268
+00:19:04,240 --> 00:19:10,720
+people spend on each page, which videos have been watched, and for how long.
+
+269
+00:19:10,720 --> 00:19:18,240
+So I'd now like to go on telling a little bit about an intervention that I developed
+
+270
+00:19:18,240 --> 00:19:19,240
+called RAPT.
+
+271
+00:19:19,240 --> 00:19:25,440
+And I say I, not me alone, me with a fantastic team of other researchers.
+
+272
+00:19:25,440 --> 00:19:29,320
+So first, just say a little bit about the study we're doing.
+
+273
+00:19:29,320 --> 00:19:33,680
+So we're at the stage of doing the feasibility randomized control trial, so the preparatory
+
+274
+00:19:33,680 --> 00:19:36,360
+study before the main trial.
+
+275
+00:19:36,360 --> 00:19:42,560
+And this aims to establish if the main randomized control trial is feasible and to inform our
+
+276
+00:19:42,560 --> 00:19:43,560
+preparations.
+
+277
+00:19:43,560 --> 00:19:49,440
+And we are using analytics data to better understand any possible usability issues so
+
+278
+00:19:49,440 --> 00:19:53,840
+that they can be addressed ahead of the trial, so to minimize the non-usage attrition that
+
+279
+00:19:53,840 --> 00:19:54,840
+I talked about.
+
+280
+00:19:54,840 --> 00:19:59,440
+But also to learn how best to measure dose in preparation for our main randomized control
+
+281
+00:19:59,440 --> 00:20:03,400
+trial.
+
+282
+00:20:03,400 --> 00:20:08,040
+So the RAPT intervention itself, I'm going to show you in a minute what the website looks
+
+283
+00:20:08,040 --> 00:20:11,040
+like, but just a little bit of information about it.
+
+284
+00:20:11,040 --> 00:20:16,900
+So it aims to increase condom use by addressing factors such as people's attitudes towards
+
+285
+00:20:16,900 --> 00:20:20,560
+condoms or whether they feel positively or negatively about them and the beliefs that
+
+286
+00:20:20,560 --> 00:20:26,440
+underlie that, people's self-efficacy for communicating about condoms and their use.
+
+287
+00:20:26,440 --> 00:20:31,600
+So this is about, broadly speaking, how confident you feel to raise condom use with a partner
+
+288
+00:20:31,600 --> 00:20:37,800
+for the first time and also how confident you feel in using them correctly.
+
+289
+00:20:37,800 --> 00:20:43,640
+And it's also about increasing access to condoms, so about making them more available to people
+
+290
+00:20:43,640 --> 00:20:47,680
+through a condom distribution scheme.
+
+291
+00:20:47,680 --> 00:20:53,000
+And there are six components in total which are tailored to individual need.
+
+292
+00:20:53,000 --> 00:20:58,480
+So at the very start of access to the website, we ask our users to answer some very quick
+
+293
+00:20:58,480 --> 00:21:02,640
+yes-no questions about their main barriers to condom use, and then they get allocated
+
+294
+00:21:02,640 --> 00:21:05,500
+between one and six of the components.
+
+295
+00:21:05,500 --> 00:21:11,800
+So the intervention itself, hopefully, is quite closely aligned to their needs and interests.
+
+296
+00:21:11,800 --> 00:21:16,600
+And there are three products which can be ordered, a trial pack of condoms, a condom
+
+297
+00:21:16,600 --> 00:21:22,400
+carrier, and access to a service which supplies condoms on a monthly basis.
+
+298
+00:21:22,400 --> 00:21:25,880
+And there are also three lots of videos.
+
+299
+00:21:25,880 --> 00:21:40,320
+So I'm just going to change my screen to show you the website itself.
+
+300
+00:21:40,320 --> 00:21:43,280
+So I'm going to just shout if you can't see this, otherwise I'll just show you that everybody
+
+301
+00:21:43,280 --> 00:21:44,280
+can.
+
+302
+00:21:44,280 --> 00:21:47,240
+So here is the wrapped website.
+
+303
+00:21:47,240 --> 00:21:50,400
+And after you've answered those few quick questions at the start, this is what you will
+
+304
+00:21:50,400 --> 00:21:51,800
+see.
+
+305
+00:21:51,800 --> 00:21:56,000
+And this person here has been assigned all six intervention components.
+
+306
+00:21:56,000 --> 00:21:59,920
+And these are represented by these blocks on the screen here.
+
+307
+00:21:59,920 --> 00:22:04,680
+So I won't show you all of it, but I'll just give you a bit of a flavor for it.
+
+308
+00:22:04,680 --> 00:22:09,120
+So with the sample pack here, if we click on that.
+
+309
+00:22:09,120 --> 00:22:12,360
+So here, people get the chance to customize the pack.
+
+310
+00:22:12,360 --> 00:22:14,600
+It's a box with a tray.
+
+311
+00:22:14,600 --> 00:22:19,120
+And then they can choose the color and an insert that goes inside it.
+
+312
+00:22:19,120 --> 00:22:27,120
+And then they get to, I just, yeah, choose that.
+
+313
+00:22:27,120 --> 00:22:28,640
+And then they get to order it.
+
+314
+00:22:28,640 --> 00:22:36,280
+And it has 12 different types of condoms and three sachets of flub inside there.
+
+315
+00:22:36,280 --> 00:22:39,240
+And then we've got videos as well.
+
+316
+00:22:39,240 --> 00:22:47,920
+So this one is about a video, and this is of young people demoing how to put on a condom
+
+317
+00:22:47,920 --> 00:22:49,880
+correctly without any errors.
+
+318
+00:22:49,880 --> 00:22:53,960
+And there are various other videos as one of the things to order.
+
+319
+00:22:53,960 --> 00:22:59,000
+That just gives you a bit of a flavor of the website and what it looks like.
+
+320
+00:22:59,000 --> 00:23:03,920
+So I'll just go back to the presentation again.
+
+321
+00:23:03,920 --> 00:23:13,800
+So in terms of data collection, the study requires participants in our feasibility randomized
+
+322
+00:23:13,800 --> 00:23:17,520
+control trial to complete activities over a 12-month period.
+
+323
+00:23:17,520 --> 00:23:21,240
+So they consent to the study and complete a survey.
+
+324
+00:23:21,240 --> 00:23:25,160
+And then they get directed to either, well, they're randomized.
+
+325
+00:23:25,160 --> 00:23:29,240
+They go into one arm, which is to receive the wrapped intervention website I've just
+
+326
+00:23:29,240 --> 00:23:33,560
+shown you, or they get randomized to a control website, which has the same branding and sort
+
+327
+00:23:33,560 --> 00:23:39,400
+of color and logos, but has very basic static information on condom use and sexually transmitted
+
+328
+00:23:39,400 --> 00:23:41,200
+infections.
+
+329
+00:23:41,200 --> 00:23:49,040
+And then they get sent another survey three months later, and also a test for an STI called
+
+330
+00:23:49,040 --> 00:23:55,320
+chlamydia, which gets sent, like a test gets sent in the post to them to complete.
+
+331
+00:23:55,320 --> 00:23:59,480
+And then at six months, another survey, and then at 12 months, another survey, and also
+
+332
+00:23:59,480 --> 00:24:03,680
+the same test for an STI.
+
+333
+00:24:03,680 --> 00:24:07,920
+So they've been asked to do quite a lot from us, and they're incentivized to complete those
+
+334
+00:24:07,920 --> 00:24:09,720
+different activities.
+
+335
+00:24:09,720 --> 00:24:15,720
+And we're using some database management software called RedCap to consent participants to prompt
+
+336
+00:24:15,720 --> 00:24:20,280
+them to complete all those different activities that I've just told you about and to record
+
+337
+00:24:20,280 --> 00:24:24,720
+their data so it sends out the surveys to them and we record their test results for
+
+338
+00:24:24,720 --> 00:24:26,720
+the STIs in there as well.
+
+339
+00:24:26,720 --> 00:24:33,440
+Now, RedCap used to direct participants to the two different websites, so there's an
+
+340
+00:24:33,440 --> 00:24:37,840
+automated email that goes out to people after they've been randomized, which has a link
+
+341
+00:24:37,840 --> 00:24:41,160
+into one of the two different websites, and they have to click on that, and then they'll
+
+342
+00:24:41,160 --> 00:24:44,720
+go to each of the two different websites.
+
+343
+00:24:44,720 --> 00:24:51,680
+And every activity that any participant in our study does is linked to a unique ID, so
+
+344
+00:24:51,680 --> 00:24:55,440
+everything they do is logged against that unique ID.
+
+345
+00:24:55,440 --> 00:25:02,760
+So we were going to be running this feasibility randomized control trial, and we knew that
+
+346
+00:25:02,760 --> 00:25:09,000
+we wanted to be able to measure attrition both broadly on an aggregate level, but also
+
+347
+00:25:09,000 --> 00:25:12,920
+individually, so we could look at things like demographic data and how that links to attrition,
+
+348
+00:25:12,920 --> 00:25:18,160
+but then also to work out how best to measure dose for our main trial so that we can understand
+
+349
+00:25:18,160 --> 00:25:21,960
+those important things about how dose relates to outcomes.
+
+350
+00:25:21,960 --> 00:25:24,160
+But we really didn't know how to go about doing this.
+
+351
+00:25:24,160 --> 00:25:29,880
+We wanted something more fine-grained than just the website itself could tell us, and
+
+352
+00:25:29,880 --> 00:25:36,240
+I was already beginning to become interested in analytics data, and through a bit of serendipity
+
+353
+00:25:36,240 --> 00:25:41,400
+came across Ronan, and we began working together on this project.
+
+354
+00:25:41,400 --> 00:25:47,520
+So over to Ronan to explain a bit about how you went about this, and I'm going to advance
+
+355
+00:25:47,520 --> 00:25:50,760
+the slides for you, Ronan, so just tell me, I'll go to the first one, then tell me when
+
+356
+00:25:50,760 --> 00:25:53,400
+to move along.
+
+357
+00:25:53,400 --> 00:25:54,400
+That's perfect.
+
+358
+00:25:54,400 --> 00:26:00,880
+Thank you very much, Cathy, for preparing all this work.
+
+359
+00:26:00,880 --> 00:26:05,800
+So yeah, there are many, many things to say here.
+
+360
+00:26:05,800 --> 00:26:12,840
+I think the first thing to mention is that this has been, to me, really a project that's
+
+361
+00:26:12,840 --> 00:26:19,080
+really motivated me a lot because it started by training, so the team of Cathy asked me
+
+362
+00:26:19,080 --> 00:26:27,240
+to come in the UK and come and train our full team, so I took my backpack, I fly from France
+
+363
+00:26:27,240 --> 00:26:31,280
+to the UK, and I trained our team for about three days.
+
+364
+00:26:31,280 --> 00:26:37,080
+I think it was three, I don't remember if it was three or five days, but it's the kind
+
+365
+00:26:37,080 --> 00:26:43,000
+of project which is really transforming you as an analyst because it's a project which
+
+366
+00:26:43,000 --> 00:26:45,440
+really doesn't look like any others.
+
+367
+00:26:45,440 --> 00:26:50,080
+It's not like a public website on which you can land on, and you can easily guess and
+
+368
+00:26:50,080 --> 00:26:54,200
+find what are the different data collection points that you need to implement.
+
+369
+00:26:54,200 --> 00:27:00,080
+Here in the case of the RAP project, the first thing I learned about is that it was using
+
+370
+00:27:00,080 --> 00:27:05,520
+a PHP framework that I didn't know, which was Codignitor.
+
+371
+00:27:05,520 --> 00:27:13,960
+The developer of the website is a third-party agency based in India, so it wasn't like I
+
+372
+00:27:13,960 --> 00:27:18,840
+was talking to Cathy straight away, and Cathy could implement the different tracking code
+
+373
+00:27:18,840 --> 00:27:19,840
+that I wanted.
+
+374
+00:27:19,840 --> 00:27:28,360
+It was really like a three-party project, so the technology is named Codignitor.
+
+375
+00:27:28,360 --> 00:27:32,960
+I wasn't really scared about the technology Codignitor that I didn't know, I just went
+
+376
+00:27:32,960 --> 00:27:36,840
+to the famous search engine and found out that it was a PHP framework.
+
+377
+00:27:36,840 --> 00:27:41,960
+From this, I knew already that it means a project that I could not put myself, my hands
+
+378
+00:27:41,960 --> 00:27:50,640
+on, but that I would have to give a recommendation to a third-party company, so to set up the
+
+379
+00:27:50,640 --> 00:27:56,320
+dev company, which means for me project management in terms of analytics projects.
+
+380
+00:27:56,320 --> 00:28:00,920
+It means that I really needed to well structure my project in order for them to know what
+
+381
+00:28:00,920 --> 00:28:08,840
+they need to implement, and I needed to ensure as well that Cathy and her team could clearly
+
+382
+00:28:08,840 --> 00:28:14,040
+understand what we're going to implement, and that it aligns with everything that Cathy
+
+383
+00:28:14,040 --> 00:28:19,120
+has mentioned before, which are the needs that they have in terms of data collection
+
+384
+00:28:19,120 --> 00:28:22,760
+for this research project.
+
+385
+00:28:22,760 --> 00:28:27,800
+The key aspect of the project, as Cathy showed to you, is a few pages.
+
+386
+00:28:27,800 --> 00:28:34,520
+I think it's a maximum of between 15 to 20 pages, so it seems like that's an easy project,
+
+387
+00:28:34,520 --> 00:28:39,720
+but with a lot in terms of data collection.
+
+388
+00:28:39,720 --> 00:28:46,200
+You have a lot of advanced tracking code, which were necessary, including the measurement
+
+389
+00:28:46,200 --> 00:28:56,000
+of events, including the use of custom dimensions to say level, visit level information data,
+
+390
+00:28:56,000 --> 00:29:04,240
+and as well, we quickly saw it user ID, so the possibility to know who is the individual,
+
+391
+00:29:04,240 --> 00:29:09,360
+let's say, who is making those different choices.
+
+392
+00:29:09,360 --> 00:29:15,320
+We make the choices to go for a data layer, so to use Matomo Tag Manager, because the
+
+393
+00:29:15,320 --> 00:29:22,200
+idea was to have something which was really consistent, because the thing is that we have
+
+394
+00:29:22,200 --> 00:29:29,520
+not many pages, but all those pages are critical, and if we were going without a data layer,
+
+395
+00:29:29,520 --> 00:29:36,080
+so to say, if I was taking in the project by just asking to add the container on all
+
+396
+00:29:36,080 --> 00:29:43,040
+the pages, and then decide to use by either scrapping or either use automatically, let's
+
+397
+00:29:43,040 --> 00:29:49,480
+say, the Tag Manager to collect the different data points, I chances that in the meantime,
+
+398
+00:29:49,480 --> 00:29:53,640
+the dev company would have made changes to the DOM of the page, and everything would
+
+399
+00:29:53,640 --> 00:29:57,320
+have exploded, and I would have to redo the full data collection.
+
+400
+00:29:57,320 --> 00:30:02,840
+So that's the reason why we designed a really consistent data layer, which had been implemented
+
+401
+00:30:02,840 --> 00:30:08,000
+directly by the dev company in order to ensure that if something breaks in terms of data
+
+402
+00:30:08,000 --> 00:30:13,320
+collection, I wasn't the person responsible of screwing up the data collection, and of
+
+403
+00:30:13,320 --> 00:30:23,260
+course, it gave more responsibility and involved more the dev team, which was really the right
+
+404
+00:30:23,260 --> 00:30:28,560
+solution in this specific project, because I couldn't have the end on the source code.
+
+405
+00:30:28,560 --> 00:30:36,640
+So those points are really critical, and this is more like a project management analytic
+
+406
+00:30:36,640 --> 00:30:46,000
+system rather than, let's say, an analyst doing all the work on the platform.
+
+407
+00:30:46,000 --> 00:30:55,400
+We really need, as well, to have a clear quality assessment process, because as Katie shows,
+
+408
+00:30:55,400 --> 00:31:01,160
+the RAP project is a place where people are ordering, so they're not making some purchase
+
+409
+00:31:01,160 --> 00:31:09,000
+because the products are for free, but they are making some orders, and once you make
+
+410
+00:31:09,000 --> 00:31:15,880
+an order, you cannot order back the different elements, so it means that we didn't want
+
+411
+00:31:15,880 --> 00:31:21,840
+all the time to go to Katie and say, okay, we make some order in order to test our data
+
+412
+00:31:21,840 --> 00:31:27,280
+collection, please, could you remove us from the system, and we have to make another order
+
+413
+00:31:27,280 --> 00:31:32,920
+again in order to test the platform, so that's why we needed to really have a clear project
+
+414
+00:31:32,920 --> 00:31:38,440
+management system in which we can ensure, okay, here the tracking code has been implemented
+
+415
+00:31:38,440 --> 00:31:42,920
+over here, we test it, it works, okay, so we tick in the box, it doesn't work, and then
+
+416
+00:31:42,920 --> 00:31:49,240
+we go back to the dev team in order to ask for a new implementation, and the other point
+
+417
+00:31:49,240 --> 00:31:56,240
+which was of critical importance was the use of custom dimension, so to say to add additional
+
+418
+00:31:56,240 --> 00:32:02,600
+data which were not collected by default within Matomo to each individual, so as the use of
+
+419
+00:32:02,600 --> 00:32:09,440
+the premium feature named custom report, which was one of critical importance because as
+
+420
+00:32:09,440 --> 00:32:17,800
+we just saw it, the need of data is big, and it has to be crossed with different dimensions,
+
+421
+00:32:17,800 --> 00:32:23,280
+so this is where the use of custom dimension was of critical importance.
+
+422
+00:32:23,280 --> 00:32:31,920
+I'm done for this slide, okay, so next one is the work that we decided to work, so this
+
+423
+00:32:31,920 --> 00:32:38,280
+is the project management part, this work has been reviewed by a colleague of mine that
+
+424
+00:32:38,280 --> 00:32:44,000
+you know who made a conference as well named Frédéric Forster, and this is the way we
+
+425
+00:32:44,000 --> 00:32:53,040
+work with the agency, so it consisted of myself drafting this document reviewed by my colleague
+
+426
+00:32:53,040 --> 00:33:00,120
+Frédéric in order to have a document which is listing what the data layer is about and
+
+427
+00:33:00,120 --> 00:33:07,080
+then showing this document to the team of Cathy to explain to the team of Cathy what
+
+428
+00:33:07,080 --> 00:33:10,680
+this is all about because that's clearly not the kind of thing that you see within the
+
+429
+00:33:10,680 --> 00:33:15,640
+Matomo's documentation, here we are more looking at the project management document made by
+
+430
+00:33:15,640 --> 00:33:23,240
+an analyst and which as well serve in terms of transparency with the techie team for them
+
+431
+00:33:23,240 --> 00:33:31,480
+in order to see if, okay, this is the engagement that we took together, you add the responsibility
+
+432
+00:33:31,480 --> 00:33:38,640
+of deploying the code which is on the column number let's say five for you which is named
+
+433
+00:33:38,640 --> 00:33:44,240
+code to push when the action is made, here as you can see you can clearly see the data
+
+434
+00:33:44,240 --> 00:33:50,520
+layer which was implemented, so in our case it was for every step of the order made by
+
+435
+00:33:50,520 --> 00:33:58,800
+the user we could push an event to Matomo and as I previously said we add for this tracking
+
+436
+00:33:58,800 --> 00:34:04,720
+code to be consistent so that's why we decided to use a data layer and in the last column
+
+437
+00:34:04,720 --> 00:34:09,080
+of this document you can clearly see that there is our recommendation which is in our
+
+438
+00:34:09,080 --> 00:34:16,960
+case that this data layer wasn't implemented properly so please review on this given page
+
+439
+00:34:16,960 --> 00:34:22,160
+that you have well included this given piece of code on the button when someone is pressing
+
+440
+00:34:22,160 --> 00:34:28,360
+it so really here to understand how to deal with such a big project it's really like project
+
+441
+00:34:28,360 --> 00:34:33,560
+management before all that that's the most that's the most important they have to precise
+
+442
+00:34:33,560 --> 00:34:39,640
+as well one thing that we make some choices with with Katy and her team not to go for
+
+443
+00:34:39,640 --> 00:34:44,000
+the e-commerce tracking code so just to let you know as well that when you deal with such
+
+444
+00:34:44,000 --> 00:34:50,360
+a project you have some choices to make because as we saw the user can make some orders but
+
+445
+00:34:50,360 --> 00:34:56,160
+those order are not paid orders so we had the choice to go either for e-commerce tracking
+
+446
+00:34:56,160 --> 00:35:00,840
+code or either to go for the event tracking code and we decided to go for the event one
+
+447
+00:35:00,840 --> 00:35:07,280
+because it was like more justified to go for it rather than having to create some additional
+
+448
+00:35:07,280 --> 00:35:14,360
+data who were not existing within the system such as let's say the the tax amount such
+
+449
+00:35:14,360 --> 00:35:22,920
+as the order price such as the transactional order that kind of thing I'm good for this
+
+450
+00:35:22,920 --> 00:35:34,920
+part next one is kind of the similar thing the big difference is that on the previous
+
+451
+00:35:34,920 --> 00:35:41,960
+slides that I was that we are showing it was about some variables that we are inserting
+
+452
+00:35:41,960 --> 00:35:47,040
+within the data layer on this one this is another method that we use with the tag manager
+
+453
+00:35:47,040 --> 00:35:52,720
+which is the push event method which consists of sending custom event to the data layer
+
+454
+00:35:52,720 --> 00:35:59,040
+in order for it to react on the interaction of the of the visitor and as well this is
+
+455
+00:35:59,040 --> 00:36:10,120
+how we succeed to handle it okay I'm good for this one okay and last but not least this
+
+456
+00:36:10,120 --> 00:36:17,440
+slide show in fact all the different variables so those are all the different needs that
+
+457
+00:36:17,440 --> 00:36:26,080
+we list with with Katy and ask for validation to see if there was any data which were missing
+
+458
+00:36:26,080 --> 00:36:33,160
+out of this list and once validated of course this is this is what we implemented but here
+
+459
+00:36:33,160 --> 00:36:37,800
+on small what we are showing is is really the project management part is like there
+
+460
+00:36:37,800 --> 00:36:42,400
+is a lot of needs from the client but we need at some point to put a limit and say okay
+
+461
+00:36:42,400 --> 00:36:50,760
+we don't need extra more data do we agree that this list is the limit and you all need
+
+462
+00:36:50,760 --> 00:36:57,720
+those and if yes of course this is kind of what is finally defining the final price that's
+
+463
+00:36:57,720 --> 00:37:03,920
+the analyst will put on on the quote let's say and as well yes I'm good with this slide
+
+464
+00:37:03,920 --> 00:37:11,720
+I think that was the last oh yeah oh and that's as well a critical part of the of the project
+
+465
+00:37:11,720 --> 00:37:19,040
+and that I really loved in it is that I during the training I showed to Katy and her team
+
+466
+00:37:19,040 --> 00:37:26,480
+how to deal with the custom reports feature of matmo and I've been surprised to see that's
+
+467
+00:37:26,480 --> 00:37:32,320
+when I came some days after or weeks after the implementation with the wrap project that
+
+468
+00:37:32,320 --> 00:37:38,000
+a lot of custom reports were created and that's a good sign of the training works and now
+
+469
+00:37:38,000 --> 00:37:43,240
+people have the solution well in end and they are creating as many custom reports as they
+
+470
+00:37:43,240 --> 00:37:51,880
+can and here you can clearly see how the custom reports really enhance the data which were
+
+471
+00:37:51,880 --> 00:37:57,200
+in the system of matmo because here we got the user ID with the different components
+
+472
+00:37:57,200 --> 00:38:05,880
+that it shows and the date at which the individual decided to pick up the product I think I have
+
+473
+00:38:05,880 --> 00:38:13,440
+one slide left yes and here is another one another report which is really showing for
+
+474
+00:38:13,440 --> 00:38:18,440
+each individual what are the different components and you can clearly see that on line number
+
+475
+00:38:18,440 --> 00:38:25,880
+one from line number one to line number four the individual decided to pick up all the
+
+476
+00:38:25,880 --> 00:38:31,480
+components but line number five for some reason this individual decided to not pick up all
+
+477
+00:38:31,480 --> 00:38:36,880
+the different components which was one of the needs which was requested from this research
+
+478
+00:38:36,880 --> 00:38:43,600
+which is about okay what are the different choices that people are making and I think
+
+479
+00:38:43,600 --> 00:38:51,800
+I'm good for my slides yep exactly okay thanks Ronan so in the last section before the Q&A
+
+480
+00:38:51,800 --> 00:38:57,260
+I'll just present some early insights from our data collection so from the custom reports
+
+481
+00:38:57,260 --> 00:39:01,720
+that Ronan was just talking about we've been able to learn a lot already we haven't finished
+
+482
+00:39:01,720 --> 00:39:07,160
+collecting our data yet we're just a few months into the project so we haven't learned everything
+
+483
+00:39:07,160 --> 00:39:13,240
+that we will be able to learn by the end but I'll show you what we've got so far so this
+
+484
+00:39:13,240 --> 00:39:20,200
+is just how I use the data and what's working best for me is to think about the flow of
+
+485
+00:39:20,200 --> 00:39:24,640
+people through the website in order to sort of see where the things going wrong within
+
+486
+00:39:24,640 --> 00:39:30,040
+the website and if something needs kind of attending to before our full trial so things
+
+487
+00:39:30,040 --> 00:39:34,800
+that might be leading people to drop out basically so the non-use usage attrition that I talked
+
+488
+00:39:34,800 --> 00:39:43,880
+about before so 91 people at the point at which I downloaded the data from the custom
+
+489
+00:39:43,880 --> 00:39:48,680
+reports had at that point been randomized to wrap so gone to that top of the two different
+
+490
+00:39:48,680 --> 00:39:56,680
+arms in the randomization and of those 56 people clicked on the link so I told you about
+
+491
+00:39:56,680 --> 00:40:03,520
+how our software RedCat sent an email invite to everybody inviting them to go to one of
+
+492
+00:40:03,520 --> 00:40:09,440
+the two different websites so this is 91 people sent the invite to wrapped and 56 of them
+
+493
+00:40:09,440 --> 00:40:13,080
+clicked on the link and went through to the website so not everybody's doing that despite
+
+494
+00:40:13,080 --> 00:40:21,960
+us incentivizing them with a voucher so we've lost 35 at that point and then we when I first
+
+495
+00:40:21,960 --> 00:40:31,400
+land on the website they have to create a profile and sort of register so and then they
+
+496
+00:40:31,400 --> 00:40:36,560
+also complete some tailoring questions so these are the ones that determine how many
+
+497
+00:40:36,560 --> 00:40:41,880
+of the components of the six components that they get so between them sort of landing on
+
+498
+00:40:41,880 --> 00:40:45,880
+the website and creating a profile we've lost just two people in that stage of completing
+
+499
+00:40:45,880 --> 00:40:50,120
+the tailoring questions so I was a little bit concerned I think there's 10 questions
+
+500
+00:40:50,120 --> 00:40:55,640
+in total at me people might get a little irritated by that sort of section but we've only lost
+
+501
+00:40:55,640 --> 00:41:01,680
+two there so that's quite a good sign for me and then we've got registration being complete
+
+502
+00:41:01,680 --> 00:41:09,840
+and then between that stage and oh sorry visiting the home page we've lost nobody so that's
+
+503
+00:41:09,840 --> 00:41:13,800
+another good sign that that whole stage is working well so our biggest concern really
+
+504
+00:41:13,800 --> 00:41:19,120
+is that email that's encouraging people to go visit in the first place perhaps is a bit
+
+505
+00:41:19,120 --> 00:41:24,240
+boring and doesn't sell the website very well although in a trial context it's kind of difficult
+
+506
+00:41:24,240 --> 00:41:27,080
+to do that because we can't spell out the things that are good about the intervention
+
+507
+00:41:27,080 --> 00:41:35,720
+website very easily in that context but we could perhaps try harder and then next slide
+
+508
+00:41:35,720 --> 00:41:42,880
+so Ronan was talking about people being assigned different components and I mentioned how there's
+
+509
+00:41:42,880 --> 00:41:48,120
+up to six different ones so we were interested in knowing about the proportion of people
+
+510
+00:41:48,120 --> 00:41:51,960
+that were going to get assigned the different numbers of them because when we started out
+
+511
+00:41:51,960 --> 00:41:56,520
+they said we really didn't know that so they answer these 10 questions at the start of
+
+512
+00:41:56,520 --> 00:42:01,040
+the website and depending on their answers they'll get assigned either all of the six
+
+513
+00:42:01,040 --> 00:42:06,160
+of them or just the one of them there's always a minimum of one and this is how it's worked
+
+514
+00:42:06,160 --> 00:42:10,360
+out so no one's had just one even though that's a possibility and then very few people have
+
+515
+00:42:10,360 --> 00:42:18,720
+had two three or four components most people have either been assigned five or six components
+
+516
+00:42:18,720 --> 00:42:22,040
+so that's useful in terms of helping us plan for the main trial it helps us to work out
+
+517
+00:42:22,040 --> 00:42:25,520
+resource need because some of the components at least where they're ordering something
+
+518
+00:42:25,520 --> 00:42:34,800
+has a cost associated that's really useful and then I explained that there were three
+
+519
+00:42:34,800 --> 00:42:38,240
+different things that people could order and I showed you the sample box that the website
+
+520
+00:42:38,240 --> 00:42:43,160
+page relating to that so this is the box with 12 different types of condoms to try out in
+
+521
+00:42:43,160 --> 00:42:49,920
+it so 54 people were assigned the sample box in total that's everyone who went to the website
+
+522
+00:42:49,920 --> 00:42:55,320
+because everyone gets the sample box by default so 54 were given that and then so on that
+
+523
+00:42:55,320 --> 00:43:00,040
+main page where you've got the six different boxes that you can click on or to take you
+
+524
+00:43:00,040 --> 00:43:05,200
+through to the relevant page 54 people have seen the one for the sample box and 48 of
+
+525
+00:43:05,200 --> 00:43:09,080
+them have actually clicked on that and gone to visit that page we've just lost six at
+
+526
+00:43:09,080 --> 00:43:15,800
+that point which is not bad and then between visiting that page and then placing an order
+
+527
+00:43:15,800 --> 00:43:20,400
+we've lost 11 people so that's 11 people maybe who just didn't like the look of it and just
+
+528
+00:43:20,400 --> 00:43:24,440
+thought that wasn't really for them but that's an assumption but something perhaps to speak
+
+529
+00:43:24,440 --> 00:43:29,800
+to people later on in the study when we come to our interviews and then those who then
+
+530
+00:43:29,800 --> 00:43:33,160
+clicked to go through to the next page they're sort of progressing with making an order they've
+
+531
+00:43:33,160 --> 00:43:37,320
+chosen what box they want what insert they want we've just lost one person and then we
+
+532
+00:43:37,320 --> 00:43:42,360
+lost two on the next page between the point to seeing that second page and actually placing
+
+533
+00:43:42,360 --> 00:43:47,720
+the order so yeah I was quite pleased that it shows to me that process of ordering is
+
+534
+00:43:47,720 --> 00:43:51,960
+quite smooth and straightforward and perhaps not no one's experiencing technical problems
+
+535
+00:43:51,960 --> 00:43:58,000
+or issues with usability around the ordering process and really it's the same picture with
+
+536
+00:43:58,000 --> 00:44:02,920
+condom ordering so 49 people ordered that I'm not going to go through all the numbers
+
+537
+00:44:02,920 --> 00:44:07,600
+on this one but it's the same pattern that we've lost just a handful at the start who
+
+538
+00:44:07,600 --> 00:44:12,760
+were never visiting that page and then the actual ordering seems to be fairly straightforward
+
+539
+00:44:12,760 --> 00:44:20,960
+for everybody and the same with ordering the condom carrier as well and then the three
+
+540
+00:44:20,960 --> 00:44:24,240
+different types of video that people can go and see I'm just going to do one slide on
+
+541
+00:44:24,240 --> 00:44:27,800
+one of the videos which is the demo demo video that I showed you it's a completely different
+
+542
+00:44:27,800 --> 00:44:35,440
+picture here so 47 people allocated this video but only 16 actually clicked on that box to
+
+543
+00:44:35,440 --> 00:44:40,400
+go and visit the demo page that's telling us that that home page is not selling this
+
+544
+00:44:40,400 --> 00:44:47,600
+demo video at all goodbye even going to click on it well only 16 of our 47 did and then
+
+545
+00:44:47,600 --> 00:44:53,080
+only of those 16 over only 7 actually then went ahead to click on the video and play
+
+546
+00:44:53,080 --> 00:44:58,440
+it and then nobody watched it in full and the meantime is about watching the video was
+
+547
+00:44:58,440 --> 00:45:03,920
+17 seconds so not attractive able to go and visit it when they do go and visit the page
+
+548
+00:45:03,920 --> 00:45:09,040
+not playing it very much not many people playing it and then when they do disengaging quite
+
+549
+00:45:09,040 --> 00:45:14,080
+quickly so we've got quite a bit of work to do on the video and the demo video but the
+
+550
+00:45:14,080 --> 00:45:21,320
+same picture is true of the other types of videos as well they all need looking at so
+
+551
+00:45:21,320 --> 00:45:26,320
+what we've learnt well we've learnt that we can use analytics data to gain some important
+
+552
+00:45:26,320 --> 00:45:30,680
+insights into non usage attrition and we've just started to kind of touch the surface
+
+553
+00:45:30,680 --> 00:45:34,520
+with the data we've got already and we're going to use this to make some improvements
+
+554
+00:45:34,520 --> 00:45:41,400
+so my conclusions I've kind of touched on touched upon already are that the home page
+
+555
+00:45:41,400 --> 00:45:45,480
+as attracting users to visit are the first three components the things that you can order
+
+556
+00:45:45,480 --> 00:45:50,680
+and once on those component pages there's good conversion to ordering there seems to
+
+557
+00:45:50,680 --> 00:45:55,400
+be no issues with the ordering process but the home page is not attracting people to
+
+558
+00:45:55,400 --> 00:46:03,000
+visit the video content and those video component pages are also not working very well to encourage
+
+559
+00:46:03,000 --> 00:46:05,920
+users to watch the videos when they're already there and then the videos aren't being watched
+
+560
+00:46:05,920 --> 00:46:11,400
+for very long so the first few seconds are encouraging people to carry on and we still
+
+561
+00:46:11,400 --> 00:46:15,960
+have lots and lots to learn about this field and what is really possible in terms of analytics
+
+562
+00:46:15,960 --> 00:46:28,080
+so I'm very much a newbie in this situation and our solution for linking individual level
+
+563
+00:46:28,080 --> 00:46:36,960
+the user ID that we're collecting in redcap for all our surveys and STI testing and linking
+
+564
+00:46:36,960 --> 00:46:41,520
+that to our individuals as they go through to the two different websites so we can collect
+
+565
+00:46:41,520 --> 00:46:47,240
+this analytics data that process that Ronan worked out for us by liaising with us and
+
+566
+00:46:47,240 --> 00:46:51,680
+also our development companies has worked really well has been successful had no problems
+
+567
+00:46:51,680 --> 00:46:57,480
+with gathering the unique user ID of everyone in Amatomo and seeing what they're all doing
+
+568
+00:46:57,480 --> 00:47:01,240
+creating these custom reports and gathering all that data from there that's all worked
+
+569
+00:47:01,240 --> 00:47:05,120
+really well and that means it's going to be possible for us to measure those in our main
+
+570
+00:47:05,120 --> 00:47:10,800
+trial and in quite a fine-grained way which is really useful and we're just beginning
+
+571
+00:47:10,800 --> 00:47:15,520
+to think about how we'll calculate a sort of standardized score for everybody in our
+
+572
+00:47:15,520 --> 00:47:20,760
+trial at an individual level based on the products that are allocated and ordered and
+
+573
+00:47:20,760 --> 00:47:30,280
+also which videos to watch and how long for so that's the end of the presentation so I'd
+
+574
+00:47:30,280 --> 00:47:34,160
+just like to acknowledge our funder the National Institute for Health Research and all of the
+
+575
+00:47:34,160 --> 00:47:38,920
+team working on this with me as well at the University of Hertfordshire and others and
+
+576
+00:47:38,920 --> 00:47:47,840
+yeah on to any questions thank you very much Katie thank you very much for this great presentation
+
+577
+00:47:47,840 --> 00:47:55,240
+I'm looking at the chat right now we have approximately let's say maximum five minutes
+
+578
+00:47:55,240 --> 00:48:00,440
+because after there's a other talker at 4 p.m. I'm just going to pick the first one which
+
+579
+00:48:00,440 --> 00:48:08,200
+is which was the most useful metamode tools used during this project?
+
+580
+00:48:08,200 --> 00:48:15,040
+Rony you might have a view on this but for me I suppose I might not be using the right
+
+581
+00:48:15,040 --> 00:48:22,400
+terms but it was the custom ID and then also the reports as well I mean the reports are
+
+582
+00:48:22,400 --> 00:48:28,160
+something I go into all the time now to look at to gather the data to help me understand
+
+583
+00:48:28,160 --> 00:48:33,240
+the usability of the website and on all the slides I've just presented with those flowcharts
+
+584
+00:48:33,240 --> 00:48:38,280
+all comes from those custom reports.
+
+585
+00:48:38,280 --> 00:48:43,240
+I'm looking at the chat there's another question with small linking with logistic which is
+
+586
+00:48:43,240 --> 00:48:48,760
+about will it be possible to download the presentation I mean will it be possible for
+
+587
+00:48:48,760 --> 00:48:54,640
+you to send it to I mean do you allow me to share it with the audience or would you like
+
+588
+00:48:54,640 --> 00:48:58,680
+to keep your presentation for yourself or can it be?
+
+589
+00:48:58,680 --> 00:49:05,080
+That's fine Rony yeah I'm happy for anyone to have it so I'll send it to you.
+
+590
+00:49:05,080 --> 00:49:11,440
+Yeah well I think I have it in my mailbox so I will just make it as a PDF and then and
+
+591
+00:49:11,440 --> 00:49:15,400
+then share it back.
+
+592
+00:49:15,400 --> 00:49:23,320
+I let the audience write down the last question we still have let's say four minutes left.
+
+593
+00:49:23,320 --> 00:49:28,160
+Do you have for example any questions Cathy that you would like me to ask you for the
+
+594
+00:49:28,160 --> 00:49:35,400
+audience or do you have any questions for you?
+
+595
+00:49:35,400 --> 00:49:39,720
+I mean do you have any questions that you would have expected the audience to ask you
+
+596
+00:49:39,720 --> 00:49:43,840
+and that you would like me to ask you?
+
+597
+00:49:43,840 --> 00:49:49,320
+Do I have any questions?
+
+598
+00:49:49,320 --> 00:49:58,560
+I suppose the thing that I'm still struggling with the most is linking all the data in the
+
+599
+00:49:58,560 --> 00:50:06,280
+custom report so each custom report I can download the data as an excel file so for
+
+600
+00:50:06,280 --> 00:50:09,880
+example if we're talking about the components allocated I can download it so I've got one
+
+601
+00:50:09,880 --> 00:50:14,920
+column which is the user ID and then you know did they have component one yes no component
+
+602
+00:50:14,920 --> 00:50:20,320
+two yes no I can create it like that then I can download another separate report that
+
+603
+00:50:20,320 --> 00:50:27,440
+says did they visit the sample pack page for example and that'll be a completely separate
+
+604
+00:50:27,440 --> 00:50:33,440
+one and so at the moment they're all very separate like that and then I have to combine
+
+605
+00:50:33,440 --> 00:50:43,840
+them all sort of together so I suppose oh and also every time I want to update the data
+
+606
+00:50:43,840 --> 00:50:49,880
+it's not easy I can use date I suppose but I can't just filter by everything since I
+
+607
+00:50:49,880 --> 00:50:53,880
+last looked and then download that and add it in I haven't just kept kind of keep manually
+
+608
+00:50:53,880 --> 00:51:00,480
+looking and then updating my excel data based on that so I don't know whether it's possible
+
+609
+00:51:00,480 --> 00:51:05,080
+this is more a question for you than the audience but this is something that I'm I'm struggling
+
+610
+00:51:05,080 --> 00:51:12,000
+most with at the moment and yeah I'd be keen to know about if there's a way to kind of
+
+611
+00:51:12,000 --> 00:51:17,280
+make that process a bit more straightforward I suppose but might be getting to the limits
+
+612
+00:51:17,280 --> 00:51:25,160
+of what Matomo can provide okay great yeah I don't have the yet the answer I think that
+
+613
+00:51:25,160 --> 00:51:32,760
+we are looking for custom reports with far more dimensions I guess that's the key thing
+
+614
+00:51:32,760 --> 00:51:39,880
+here the maximum is really three custom dimension and from what I remembered yeah every time
+
+615
+00:51:39,880 --> 00:51:46,040
+you asked something I did my best in terms of optimizations you can yeah you can just
+
+616
+00:51:46,040 --> 00:51:51,480
+put up to three custom dimension and then filter by some other custom dimension but
+
+617
+00:51:51,480 --> 00:51:56,240
+at the moment I'm not sure that there's plans to extend the number of custom dimension which
+
+618
+00:51:56,240 --> 00:52:01,320
+correspond more to what you would like like you extend if you export the full excel file
+
+619
+00:52:01,320 --> 00:52:05,000
+and you will get as many custom dimension as you need so in our case I don't remember
+
+620
+00:52:05,000 --> 00:52:13,880
+if we have up to five or ten but then you can refilter back in excel Alfonso says thank
+
+621
+00:52:13,880 --> 00:52:19,800
+you because you answered his question about which was the most useful Matomo tools and
+
+622
+00:52:19,800 --> 00:52:28,320
+we don't have any questions left so I guess that's the time to close the conference talk
+
+623
+00:52:28,320 --> 00:52:34,840
+once more thank you very much Katy for your time thank you very much for the presentation
+
+624
+00:52:34,840 --> 00:52:39,640
+and as well I would like to thank all the attendees of this conference and I wish you
+
+625
+00:52:39,640 --> 00:52:46,840
+all a great end of Matomo camp there's just one conference two conferences left starting
+
+626
+00:52:46,840 --> 00:52:54,200
+in five minutes and then we have the closing ceremony at in one hour so at five p.m. thank
+
+627
+00:52:54,200 --> 00:53:21,200
+you very much pleasure good luck with the rest of the conference thanks bye bye
+

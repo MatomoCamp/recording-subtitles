@@ -1,0 +1,1484 @@
+1
+00:00:00,000 --> 00:00:15,120
+Hi, everyone. Sorry for this small delay. So it's currently 14.04. The idea is to go
+
+2
+00:00:15,120 --> 00:00:24,640
+up to probably 14.50, something like this. Feel free to ask as many questions as you
+
+3
+00:00:24,640 --> 00:00:32,000
+can on chat.matamoochem.org. This presentation is a bit special because it's not oriented
+
+4
+00:00:32,000 --> 00:00:39,280
+towards, let's say, technical things about Matamoo, neither about the software. That's,
+
+5
+00:00:39,280 --> 00:00:46,240
+I guess, probably the only conference talk, which is about business. So you may say, oh,
+
+6
+00:00:46,240 --> 00:00:52,880
+okay, that's kind of a dirty subject and so on and so forth. But I really think that's,
+
+7
+00:00:52,880 --> 00:00:59,360
+let's say, one of the key issues which are dealing with Matamoo, which is about how to make
+
+8
+00:00:59,920 --> 00:01:06,240
+a community growing. And one key thing about making a community growing is, of course,
+
+9
+00:01:06,240 --> 00:01:12,800
+to get attention from the outside. And one, let's say, one big thing which is out of getting
+
+10
+00:01:12,800 --> 00:01:20,160
+attention is how you can make a living out of Matamoo and how some individuals can
+
+11
+00:01:20,160 --> 00:01:28,000
+make it more like a business job opportunity and then have good reasons to work on a day-to-day
+
+12
+00:01:28,000 --> 00:01:36,160
+basis on Matamoo. So let's say how they can move from their current job that they maybe
+
+13
+00:01:36,160 --> 00:01:43,040
+not love into a job that they love, dealing with free software, which was my case. Of
+
+14
+00:01:43,040 --> 00:01:48,080
+course, when I started as an analyst, I was mostly working with proprietary solutions,
+
+15
+00:01:48,080 --> 00:01:55,680
+such, of course, as the one of Google. But thanks to the business opportunities I got,
+
+16
+00:01:55,680 --> 00:02:02,640
+I got the possibility to switch from Google Analytics Solutions and others to a full
+
+17
+00:02:02,640 --> 00:02:07,600
+activity around Matamoo. And that's really what this conference is about. It's about
+
+18
+00:02:07,600 --> 00:02:14,480
+my feedback, about how I succeeded in developing business opportunities based on Matamoo,
+
+19
+00:02:14,480 --> 00:02:19,440
+and as well what I observed on the field about what other companies are doing, what it works,
+
+20
+00:02:19,440 --> 00:02:26,720
+and what doesn't. And that, of course, you as an individual or your company can take an advantage
+
+21
+00:02:26,720 --> 00:02:32,400
+from and maybe, thanks to this feedback, help to develop more products and services based on
+
+22
+00:02:32,400 --> 00:02:41,280
+Matamoo and have as well afterwards contribution to the Matamoo community. So about myself, my
+
+23
+00:02:41,280 --> 00:02:50,240
+name is Ronan Chardonneau. I'm a digital marketing trainer at Matamoo Analytics since 2010. Back at
+
+24
+00:02:50,240 --> 00:02:58,880
+the time, more than a decade ago, Matamoo wasn't the software that it is today. So I have to say
+
+25
+00:02:58,880 --> 00:03:05,360
+that I've been probably one of the pioneer who bets on Matamoo. It's a few weeks at that time,
+
+26
+00:03:05,360 --> 00:03:11,040
+in order to start develop a business on it. I made the choice of not developing an agency,
+
+27
+00:03:11,040 --> 00:03:17,680
+of still staying a one-man business in order to not, let's say, be trapped into a system,
+
+28
+00:03:17,680 --> 00:03:23,680
+into an environment in which I won't have any control over my company anymore. I had the chance
+
+29
+00:03:23,680 --> 00:03:29,840
+to write five books about digital analytics. To be honest, I wrote three about Google Analytics,
+
+30
+00:03:29,840 --> 00:03:35,840
+one about Google Tag Manager, and one about Pewik. Pewik being one of the first that I published.
+
+31
+00:03:35,840 --> 00:03:44,080
+It unfortunately did not get the attention that I expected back then. And now, I mean, the attention
+
+32
+00:03:44,080 --> 00:03:50,240
+that it was in 2011 when I wrote it wasn't the same as today. I guess that today, probably, if I
+
+33
+00:03:50,240 --> 00:03:55,840
+have to write it, it will be, of course, far more consequent and will probably get far more
+
+34
+00:03:55,840 --> 00:04:04,080
+attention than it got back then. I'm associate professor in digital marketing at ERE Angers,
+
+35
+00:04:04,080 --> 00:04:11,760
+which is a university in France. I'm professor since more than a decade ago. I'm one of the few
+
+36
+00:04:11,760 --> 00:04:18,960
+Matamoo analytics certified professional when this certification was still on. You can still
+
+37
+00:04:18,960 --> 00:04:26,160
+find this certification on the project that I'm holding on a URL named FlossMarketingSchool.com,
+
+38
+00:04:26,160 --> 00:04:33,120
+on which I got the agreement from the Matamoo team to get the list of questions and revamp the
+
+39
+00:04:33,120 --> 00:04:38,800
+certification program in order to make it more like a free and accessible program to everyone.
+
+40
+00:04:38,800 --> 00:04:46,240
+So you can easily go on FlossMarketingSchool.com and look at the certification program and
+
+41
+00:04:46,240 --> 00:04:52,240
+answer to the different questions and get a certificate which is issued by the FlossMarketingSchool.com,
+
+42
+00:04:52,240 --> 00:05:00,240
+which has not much value, but which is here in order to test your knowledge about Matamoo analytics.
+
+43
+00:05:00,240 --> 00:05:05,200
+And yeah, I already mentioned it in the previous conference. I worked for Matamoo,
+
+44
+00:05:05,200 --> 00:05:13,680
+let's say the InnoCraft company, from July 2017 to July 2019. The purpose of this
+
+45
+00:05:13,680 --> 00:05:18,960
+talk, the following one, is to really give you some feedback about how to make a living
+
+46
+00:05:18,960 --> 00:05:24,720
+from Matamoo analytics. So make a living, I mean, it's like how you can make your first euros out of
+
+47
+00:05:24,720 --> 00:05:32,160
+it, but as well how you can fully live on Matamoo. It took me a lot of time in order to make it.
+
+48
+00:05:32,160 --> 00:05:40,800
+It took me about five years in order to make it, but I succeeded. And of course, it wasn't like
+
+49
+00:05:40,800 --> 00:05:47,920
+five years in which I wasn't working at all. I had my first and second employer who were, of course,
+
+50
+00:05:47,920 --> 00:05:56,000
+making me my main living and on my spare time, I was doing from here and then some extra services
+
+51
+00:05:56,000 --> 00:06:02,960
+on Matamoo, which give me some, let's say, trust in, okay, definitely there are some space in order
+
+52
+00:06:02,960 --> 00:06:08,720
+to build something up, but just to let you know that I didn't jump out into the late,
+
+53
+00:06:08,720 --> 00:06:14,080
+straight away took me up to five years in order to feel confident enough that there was enough
+
+54
+00:06:14,080 --> 00:06:21,040
+markets in order to provide Matamoo analytics products and services. But remember that it was
+
+55
+00:06:21,040 --> 00:06:27,200
+back then in 2010, so the market wasn't the one which is nowadays, which is, of course, far more
+
+56
+00:06:27,200 --> 00:06:36,080
+flourishing. This talk is mainly for one-man business that I call freelancers here and agencies.
+
+57
+00:06:36,080 --> 00:06:44,720
+And this is a business oriented talk, so I'm not going to talk about techy stuff or anything like
+
+58
+00:06:44,720 --> 00:06:52,080
+this. It's really more about business. My business history is the following one. Here, of course,
+
+59
+00:06:52,080 --> 00:07:01,040
+business history means Matamoo analytics history. So, in 2010, I got my first client sign for
+
+60
+00:07:01,040 --> 00:07:08,560
+training thanks to a landing page. So, in fact, my history with P-Week back then at that time
+
+61
+00:07:08,560 --> 00:07:16,000
+really started because I was a SEO practitioner, so search engine optimizer, and I was working for
+
+62
+00:07:16,000 --> 00:07:25,120
+a web agency which was providing free software website creation services. So, to say a web agency
+
+63
+00:07:25,120 --> 00:07:31,920
+which was providing the creation of website with jumla technologies, WordPress technologies.
+
+64
+00:07:32,640 --> 00:07:39,120
+At that time, it was named Magento as well, PrestaShop, all that kind of free software
+
+65
+00:07:39,120 --> 00:07:48,080
+technologies. And as a, let's say, web marketing specialist, I just was a bit curious that, okay,
+
+66
+00:07:48,080 --> 00:07:57,840
+we are all the time creating all those websites, including Google Analytics within those. And I was
+
+67
+00:07:57,840 --> 00:08:04,160
+wondering, okay, is there another technology on earth which may be a free software, not
+
+68
+00:08:04,160 --> 00:08:09,520
+proprietary software that we can embed on the website that we deliver in order to be more,
+
+69
+00:08:09,520 --> 00:08:16,160
+let's say, privacy compliant or in order to align with the mission of what free software is about.
+
+70
+00:08:16,160 --> 00:08:20,880
+This is where I discovered that there was a technology which was named P-Week. I had at
+
+71
+00:08:20,880 --> 00:08:25,680
+that time people within the web agency which were passionate enough in order to deploy
+
+72
+00:08:26,480 --> 00:08:33,680
+a P-Week instance, so to say, a server running P-Week on it. And then because we had this server
+
+73
+00:08:33,680 --> 00:08:38,400
+and because we were starting to deliver some website with P-Week included within it,
+
+74
+00:08:38,400 --> 00:08:42,960
+that I got the idea because I was also in charge of publishing content on the
+
+75
+00:08:42,960 --> 00:08:50,480
+web agency's website. Okay, why not just creating a landing page in which I will announce that we
+
+76
+00:08:50,480 --> 00:08:56,880
+are delivering a training about P-Week Analytics that at that time I didn't even know about.
+
+77
+00:08:56,880 --> 00:09:03,760
+So we just start with a bet that we just sent in the lake in order to say something which
+
+78
+00:09:03,760 --> 00:09:10,480
+wasn't true, I have to say now, that, hey, we are an agency and we deliver trainings about
+
+79
+00:09:10,480 --> 00:09:18,000
+Matomo Analytics. And I did that with several technologies. I did it with AWStats. I did it
+
+80
+00:09:18,000 --> 00:09:25,360
+with Open Web Analytics, which for some time has been a competitor of Matomo Analytics. And one
+
+81
+00:09:25,360 --> 00:09:32,240
+day the phone rang and it was one of the biggest companies in France who was on the phone. We were
+
+82
+00:09:32,240 --> 00:09:41,600
+really a small agency. We were dealing with really small clients in my hometown. And this
+
+83
+00:09:41,600 --> 00:09:48,160
+French multinational company just called us and said, okay, we saw on your page that you are
+
+84
+00:09:48,160 --> 00:09:54,080
+delivering P-Week Analytics training. We want you on board. We want you to come in Paris La
+
+85
+00:09:54,080 --> 00:10:00,800
+Défense, which is the biggest business center in France. You go in this tower on the fifth floor,
+
+86
+00:10:00,800 --> 00:10:07,440
+on the 50th floor, and you go and make the training. Wow. I don't know for you guys,
+
+87
+00:10:07,440 --> 00:10:15,440
+for the people who know what Matomo looks like more than 10 years ago, but it was not like the
+
+88
+00:10:15,440 --> 00:10:20,800
+fanciest product to show on Earth. And they had to deliver a training about it. And the thing is
+
+89
+00:10:20,800 --> 00:10:26,480
+that during the training what was even funnier is that we didn't even have an internet connection.
+
+90
+00:10:26,480 --> 00:10:33,680
+And the training that I did was probably one of the worst that I ever delivered. But the thing is
+
+91
+00:10:33,680 --> 00:10:42,560
+that I stressed so much about it that I over trained myself on the P-Week Analytics documentation,
+
+92
+00:10:44,560 --> 00:10:50,320
+that I got enough in order to write a full book about it. And then I went to a publishing house
+
+93
+00:10:50,320 --> 00:10:56,080
+edition that I already worked with, and I said, okay, look, I have all this content material. I
+
+94
+00:10:56,080 --> 00:11:02,720
+can make a book out of it. And this is how the story starts. So, I just start with a bit, with a
+
+95
+00:11:02,720 --> 00:11:10,640
+big client, big pressure, big contract, and then enough, let's say, money in order to take a risk,
+
+96
+00:11:10,640 --> 00:11:21,520
+which is about publishing the content that I wrote, that I made over my weekend's periods.
+
+97
+00:11:21,520 --> 00:11:28,960
+So, this is how it works. Then I got this book, which, of course, in the mind of people makes you
+
+98
+00:11:28,960 --> 00:11:35,120
+like a superstar, whereas I have to say that I didn't get many sales, probably around a thousand
+
+99
+00:11:35,120 --> 00:11:43,280
+of books have been sold dealing with P-Week Analytics. And then what I did from 2012 to
+
+100
+00:11:43,280 --> 00:11:50,240
+2014, you know, I was still working with proprietary solution, and I was still frustrated
+
+101
+00:11:50,240 --> 00:11:57,120
+that P-Week was not, let's say, getting that much attention. So, I decided to create two websites
+
+102
+00:11:57,120 --> 00:12:04,000
+in order to attract some leads. It started to work. I gave some conferences here and there.
+
+103
+00:12:04,000 --> 00:12:10,000
+It helped me make me more confident about talking about the software. I started to link a bit more
+
+104
+00:12:10,000 --> 00:12:14,880
+with the community. I've been involved into a measure camp. I don't know if you know measure
+
+105
+00:12:14,880 --> 00:12:20,720
+camp. It's kind of the biggest analytics community that you can find on Earth. I started to spread
+
+106
+00:12:20,720 --> 00:12:30,080
+the word about that measure camp. And I started to have more leads dealing with the time it was
+
+107
+00:12:30,080 --> 00:12:36,960
+in P-Week. And it was really making me confident. And it was really the kind of leads that I wanted,
+
+108
+00:12:36,960 --> 00:12:44,880
+like they were overseas. The projects were very empowering. And every lead that I got made me
+
+109
+00:12:46,000 --> 00:12:51,280
+even more comfortable and really made me realize that proprietary solutions are just not
+
+110
+00:12:52,000 --> 00:12:57,600
+showing you the full story and not helping you to educate yourself better. And that free software
+
+111
+00:12:57,600 --> 00:13:04,240
+is like offering you far more possibilities in terms of learning and education, which makes them
+
+112
+00:13:04,240 --> 00:13:11,760
+really great opportunities. And in 2015, I felt enough confident in order to say, okay,
+
+113
+00:13:12,960 --> 00:13:20,000
+what do I want to do in my life? And this is where I really saw that the mission of a free
+
+114
+00:13:20,000 --> 00:13:26,000
+software and mathematics in particular really align with what I want to do for my future.
+
+115
+00:13:26,000 --> 00:13:33,360
+And this is where I said, okay, I'm going to invest some money in order to join an accelerator.
+
+116
+00:13:33,360 --> 00:13:39,600
+We call it also an incubator in order to have some mentors, people who can tell me if my project,
+
+117
+00:13:40,400 --> 00:13:47,280
+so to say, to create a full company based on mathematics services is reliable or not.
+
+118
+00:13:47,840 --> 00:13:52,880
+And it just took me, in fact, three months. So I hired two interns in order to build up
+
+119
+00:13:52,880 --> 00:13:59,280
+a new website, in order to test some stuff around tools around Matomo and so on and so forth.
+
+120
+00:13:59,280 --> 00:14:04,960
+And in three months, that was it. In three months, I got enough contracts in order to
+
+121
+00:14:04,960 --> 00:14:11,840
+make one year living. When I say one year living, I'm not talking about millions of euros here.
+
+122
+00:14:11,840 --> 00:14:22,800
+I'm talking about the time in 2015. I'm talking about a limit of 30,000 to 35,000 euros of turnover
+
+123
+00:14:22,800 --> 00:14:31,040
+for a one-man business. So I'm not talking here about a high-paid person. I'm really talking about
+
+124
+00:14:31,040 --> 00:14:37,520
+what is making enough for one person to live only on Matomo analytics services.
+
+125
+00:14:37,520 --> 00:14:41,600
+And I reached, in three months, I got the contract for 12 months
+
+126
+00:14:41,600 --> 00:14:49,760
+lengths of 30,000 to 35,000 euros of turnover. I have to say today, I prefer to disclose the
+
+127
+00:14:49,760 --> 00:14:56,800
+information right now that I'm making still as a one-man business 70,000 euros a year.
+
+128
+00:14:56,800 --> 00:15:02,240
+I don't want to make more because if I go more, I definitely go for a limited company,
+
+129
+00:15:02,240 --> 00:15:06,080
+which is not the thing that I want. But I can tell you that right now on the market,
+
+130
+00:15:06,080 --> 00:15:11,760
+if you are good enough, if you know how to be a good salesperson, if you are ready to go
+
+131
+00:15:11,760 --> 00:15:18,800
+international, that's the key thing. Most of my turnover, 60%, closely to 60% of my turnover
+
+132
+00:15:18,800 --> 00:15:22,880
+is not on the national market, which is France. It's on the international market.
+
+133
+00:15:24,080 --> 00:15:29,680
+From 2017 to 2019, I joined the InnoCraft team. So let's say it's the first
+
+134
+00:15:31,360 --> 00:15:37,200
+maintainer, the first contributor to the Matomo analytics project. That has been probably one of
+
+135
+00:15:37,200 --> 00:15:45,200
+the greatest experience that I got in my career. I got many, but this one really helped me a lot.
+
+136
+00:15:45,200 --> 00:15:50,160
+This morning we got Richard Stark, who gave a conference to which I asked what it is to
+
+137
+00:15:50,160 --> 00:15:57,920
+work at InnoCraft and really what he said aligned with what I said. I haven't been fired by the
+
+138
+00:15:57,920 --> 00:16:06,640
+company because you can see here that I left the company in 2019. It's just that InnoCraft is based
+
+139
+00:16:06,640 --> 00:16:13,520
+in New Zealand, so it's a 12-hour time zone of delay. And it was very exhausting on both sides.
+
+140
+00:16:13,520 --> 00:16:23,600
+I mean, like attending the conference by 9 p.m. in like once or twice a week is really
+
+141
+00:16:23,600 --> 00:16:30,160
+dramatic in terms of family life balance. And I came to a point of doing it for like two years
+
+142
+00:16:30,160 --> 00:16:35,840
+working with 12 hours time of delay. I just said, okay, I cannot continue. I'm destroying my family
+
+143
+00:16:35,840 --> 00:16:41,040
+life. It was a bit the same thing for them. So that's why I decided to say, okay, I'm probably
+
+144
+00:16:41,040 --> 00:16:48,080
+more helpful staying in Europe, helping from Europe, developing the Matomo Analytics community to
+
+145
+00:16:48,880 --> 00:16:54,640
+expand rather than being within the InnoCraft team. But I have to say that those two years have been
+
+146
+00:16:55,200 --> 00:17:03,280
+extraordinary in order to understand what is the responsibility of holding a software such as
+
+147
+00:17:03,280 --> 00:17:11,280
+Matomo is. And from 2019 to now, this is what I said here, I succeed to double my revenues, so to say
+
+148
+00:17:11,280 --> 00:17:18,320
+70,000 euros. And I'm now, in fact, helping partners around the world to as well make a
+
+149
+00:17:18,320 --> 00:17:24,720
+living out of Matomo. This is the list of the different services that I identified by which
+
+150
+00:17:25,520 --> 00:17:31,680
+you can make a living out of Matomo. I'm not providing all of them, but I have some partners
+
+151
+00:17:31,680 --> 00:17:38,560
+who are delivering them. So I can, of course, say a couple of words about it. So first one is about
+
+152
+00:17:38,560 --> 00:17:45,840
+web hosting, which is mostly what big agencies are providing. Then you get the consulting part,
+
+153
+00:17:45,840 --> 00:17:53,840
+which is probably well as a lot to do, which is about solving complex issues. By solving complex
+
+154
+00:17:53,840 --> 00:18:01,840
+issues, I mean measurement plan, support any issues, analytics things like creating reports
+
+155
+00:18:01,840 --> 00:18:08,400
+and that kind of thing. Training. So training is really the thing that I'm known for, that I like
+
+156
+00:18:08,400 --> 00:18:14,960
+the most to do. But this is a small personal thing, which is about sharing knowledge about
+
+157
+00:18:14,960 --> 00:18:22,960
+how to use Matomo. Then the first one that I identify is translation. It hardly ever happened
+
+158
+00:18:22,960 --> 00:18:28,960
+to me, but that's possible to do. It's about translating Matomo. And trust me, there are a
+
+159
+00:18:28,960 --> 00:18:34,480
+lot to do because it's a software which is evolving a lot and which is supporting almost
+
+160
+00:18:34,480 --> 00:18:40,720
+all the languages on Earth. Custom development, which is about how to create something which
+
+161
+00:18:40,720 --> 00:18:46,400
+does not exist yet within Matomo. And the sixth one, which is about writing documentation,
+
+162
+00:18:46,400 --> 00:18:53,760
+which happen far more than we can expect. So those are, let's say like six different services
+
+163
+00:18:53,760 --> 00:18:59,200
+that I identify. And the idea is to give you some feedback about those so that you can identify a
+
+164
+00:18:59,200 --> 00:19:04,400
+little bit more about what you could do if you would like to expand your set of services or if
+
+165
+00:19:04,400 --> 00:19:12,080
+you would like to sell services based on Matomo. That's web hosting. This is really what I said
+
+166
+00:19:12,080 --> 00:19:17,760
+most of agencies are doing. What is great with web hosting is that it brings constant revenue.
+
+167
+00:19:17,760 --> 00:19:26,960
+So that's of course the most obvious thing. It's like you deliver websites. Why not you add to it
+
+168
+00:19:28,160 --> 00:19:36,080
+the possibility to as well offer when you sell your website to sell a web analytics package.
+
+169
+00:19:36,080 --> 00:19:42,480
+It brings a lot of opportunity to sell other services. And I'm quite amazed to see that a lot
+
+170
+00:19:42,480 --> 00:19:50,320
+of agencies which are already delivering websites with Matomo including are only ever taking this
+
+171
+00:19:50,320 --> 00:19:57,520
+opportunity to sell more services on top of it like consulting. Because you don't really need to
+
+172
+00:19:57,520 --> 00:20:03,040
+be like, I mean, you don't need to have followed some analytics studies. I mean, I did it myself,
+
+173
+00:20:03,040 --> 00:20:08,880
+I mean, I did it myself, but most of the time when a client has an issue, they more have an issue
+
+174
+00:20:08,880 --> 00:20:14,800
+with not about understanding the data, but which is more about how the software is working, how the
+
+175
+00:20:14,800 --> 00:20:21,440
+UI is working, which means that agencies think that they cannot easily sell consulting services
+
+176
+00:20:21,440 --> 00:20:26,240
+because they think they don't have the expertise. Whereas definitely they could because they have a
+
+177
+00:20:26,240 --> 00:20:31,520
+lot of different clients in which they deploy Matomo. So it means that they probably already
+
+178
+00:20:31,520 --> 00:20:35,840
+have the knowledge that their own clients need, but it's just that their own clients
+
+179
+00:20:36,480 --> 00:20:42,080
+do not really know how to express themselves in order to say, hey, I need some help. So I really
+
+180
+00:20:42,080 --> 00:20:52,240
+think that web hosting is in fact one very good way to sell consulting services. The disadvantage
+
+181
+00:20:52,240 --> 00:21:00,720
+of web hosting is that scaling Matomo is far more complex than it seems. And that's probably the
+
+182
+00:21:00,720 --> 00:21:08,400
+issue that most of the clients that I'm training do not realize that they just think that Matomo
+
+183
+00:21:08,400 --> 00:21:15,040
+is like Google Analytics and they totally forgot that they need to have a system administrator on
+
+184
+00:21:15,040 --> 00:21:20,880
+board. And as they never know about, as they never heard about what is a system administrator, because
+
+185
+00:21:20,880 --> 00:21:24,880
+when you use a Google Analytics solution, you don't have to care about this part.
+
+186
+00:21:24,880 --> 00:21:30,240
+Well, they don't know that they need a profile for it and they don't know how complex it can be to
+
+187
+00:21:30,800 --> 00:21:39,040
+host and manage a database which is growing day after day. So this is clearly the thing that
+
+188
+00:21:39,920 --> 00:21:44,560
+you need to take into consideration if you provide web hosting is that if your client
+
+189
+00:21:44,560 --> 00:21:51,440
+has a lot of visit, it means a lot of trouble. Not as well that this part is really the bring
+
+190
+00:21:51,440 --> 00:21:57,520
+a lot of opportunity to sell other services is really now far more easier to do than the
+
+191
+00:21:57,520 --> 00:22:02,800
+Matomo team has developed a plugin specifically for WordPress, which means that in one click,
+
+192
+00:22:02,800 --> 00:22:08,880
+you can already deploy WordPress without taking care of the Matomo database installation,
+
+193
+00:22:08,880 --> 00:22:15,200
+which makes it of course very easy to handle a Matomo project.
+
+194
+00:22:15,200 --> 00:22:20,960
+Web hosting is of course not something that one man business can easily sell because you need
+
+195
+00:22:20,960 --> 00:22:27,920
+different expertise. That's more service for agencies. And as I just said, you need to have
+
+196
+00:22:27,920 --> 00:22:33,840
+a system administrator on board all the time, because if you have a complex installation,
+
+197
+00:22:33,840 --> 00:22:37,280
+so to say an installation which has a lot of traffic, you will need to have someone on board
+
+198
+00:22:37,280 --> 00:22:44,160
+in order to help you with this. The second service, which is consulting, the pros are
+
+199
+00:22:44,160 --> 00:22:49,840
+here. The pros are the following one is that it can bring you constant revenues if you can
+
+200
+00:22:49,840 --> 00:22:56,000
+take care of your clients. That's really a part which is important. In consulting, it's not really
+
+201
+00:22:56,000 --> 00:23:02,960
+about just delivering the thing. It's also about ensuring that the fix, that the support that you
+
+202
+00:23:02,960 --> 00:23:10,640
+provided help your clients to go further and go to another issue. Of course, an issue which will
+
+203
+00:23:10,640 --> 00:23:17,280
+come by him, but it's really important here to keep going on the contact with your client
+
+204
+00:23:17,280 --> 00:23:23,920
+if you want to have this constant revenue thing. It cannot work if your clients cannot find
+
+205
+00:23:23,920 --> 00:23:29,600
+the solution based on the data of Matomo, because you will see that most of the time when there is
+
+206
+00:23:29,600 --> 00:23:35,120
+a silence, it probably means that you don't know it, but your client has an issue with Matomo,
+
+207
+00:23:35,120 --> 00:23:47,440
+probably a server issue, or probably the answer that you give them. Let's say he lost hope in you,
+
+208
+00:23:47,440 --> 00:23:54,720
+let's say. Let's say silences are not good at all. If you want to keep selling consulting,
+
+209
+00:23:54,720 --> 00:23:59,840
+you have to ensure that your clients got the answer thanks to the solution that you provided them.
+
+210
+00:23:59,840 --> 00:24:08,240
+If you are a good salesperson, and this is clearly what is happening for my company and as well my
+
+211
+00:24:08,240 --> 00:24:15,920
+partners, is that you can sell big contracts. What we call by big contracts is big clients,
+
+212
+00:24:15,920 --> 00:24:21,520
+and those big clients have a lot of needs dealing with measurement plan. As measurement plans are
+
+213
+00:24:21,520 --> 00:24:30,000
+very complex, as it implies a lot of different meetings. Let's say high expectations in terms
+
+214
+00:24:30,000 --> 00:24:35,760
+of project management. This is where big contracts are coming, and this is where you can start to
+
+215
+00:24:35,760 --> 00:24:41,440
+save your company. This is where you can save your year. This is where you get the most interesting
+
+216
+00:24:41,440 --> 00:24:49,920
+project, because it's highly motivating. You can clearly see that you have enough to eat for the
+
+217
+00:24:49,920 --> 00:24:59,040
+next two years, and those are really the biggest, probably the greatest thing in order to start to
+
+218
+00:25:00,000 --> 00:25:05,440
+build a business based on that. It's really to find those consulting projects which are very
+
+219
+00:25:05,440 --> 00:25:12,720
+close to what we sell in analytics in general. Let's say measurement plan, meetings, helping
+
+220
+00:25:12,720 --> 00:25:18,560
+the company to grow and learn in terms of knowledge, and those are really the most important
+
+221
+00:25:18,560 --> 00:25:25,120
+thing. The disadvantage is that they can be super complex, so here this is where you need to be very
+
+222
+00:25:25,120 --> 00:25:32,640
+careful, because Matomo can be embedded into a very complex information system on which the
+
+223
+00:25:32,640 --> 00:25:40,080
+expertise is very rare. Here I'm thinking, for example, about companies or institutions who are
+
+224
+00:25:40,080 --> 00:25:47,680
+deploying, for example, Matomo and Microsoft SharePoint, and here in order to find out the
+
+225
+00:25:47,680 --> 00:25:53,360
+people who have the expertise about Microsoft SharePoint. Wow, there are not that many people.
+
+226
+00:25:53,360 --> 00:25:58,880
+Probably those people are as well very busy, so it's really hard because there are not that
+
+227
+00:25:58,880 --> 00:26:03,600
+much documentation. You need to test a lot, and there are some places in which you cannot embed
+
+228
+00:26:03,600 --> 00:26:08,320
+the tracking code, and so on and so forth. Of course, if your client is disappointed,
+
+229
+00:26:10,400 --> 00:26:16,720
+it's a complicated project. You get some gray hair, and so on and so forth. This is where you
+
+230
+00:26:16,720 --> 00:26:22,400
+need to really well identify before starting the project how complex it's going to be.
+
+231
+00:26:23,120 --> 00:26:27,760
+Tomorrow I will have a great conference that I will add with a client of mine,
+
+232
+00:26:28,800 --> 00:26:38,880
+Katie Newby, on a project that I didn't know, so I fully recommend you to assist to this conference
+
+233
+00:26:38,880 --> 00:26:44,400
+in which I will explain the way we decided to work, but just to let you know, well study your
+
+234
+00:26:44,400 --> 00:26:53,280
+project before saying yes. Of course, this is the work of meetings that you do prior starting the
+
+235
+00:26:53,280 --> 00:26:59,600
+project in order to see if you feel confident to do it. Sometimes it's hard to get your money back.
+
+236
+00:26:59,600 --> 00:27:07,520
+It goes back to the super complex project that you can get or the wrong subcontractor that you hire.
+
+237
+00:27:07,520 --> 00:27:14,320
+People will not make a measurement plan which is really reliable or even submit. It happens a lot
+
+238
+00:27:14,320 --> 00:27:21,920
+on longer projects. The people that you get in contact with are finally laid off or at least
+
+239
+00:27:21,920 --> 00:27:31,680
+who have some issues, and then your project starts to be late, and this is where you get
+
+240
+00:27:31,680 --> 00:27:37,840
+your money back a little bit late, so this is where you really need to rely on more than one
+
+241
+00:27:37,840 --> 00:27:44,960
+client in consulting if you want to make a proper living. Training is definitely the thing that I
+
+242
+00:27:44,960 --> 00:27:50,320
+love to do the most and that I'm doing as well the most. What I really like in training is that it
+
+243
+00:27:50,320 --> 00:27:57,200
+brings you high revenue in a short period of time. There is a lot of demand, far more than what we
+
+244
+00:27:57,200 --> 00:28:01,840
+can expect because there are of course the people who are searching for it, but there is as well the
+
+245
+00:28:01,840 --> 00:28:07,760
+people who would like to have one but who has not yet expressed that they would like to have one.
+
+246
+00:28:07,760 --> 00:28:14,400
+It's all about knowing who is using Matamor and once you know it, it's really easy when you get a niche
+
+247
+00:28:14,400 --> 00:28:20,320
+market, for example the educational market, let's say the universities, when you know that
+
+248
+00:28:20,320 --> 00:28:27,680
+there is at least one demand from one guy and that the other universities are using Matamor,
+
+249
+00:28:27,680 --> 00:28:34,080
+it's kind of easy to knock at the other door and say, hey, by the way, are you interested in training about Matamor?
+
+250
+00:28:34,080 --> 00:28:44,800
+When I do the training, even if I'm not overselling myself here, clearly I'm getting a lot of consulting demands.
+
+251
+00:28:44,800 --> 00:28:52,640
+I think here, the key thing here is that when you do training, just don't be the guy who is here in order to
+
+252
+00:28:52,640 --> 00:29:02,080
+just deliver something and then run away. It's always good to show, of course, with let's say hiding the name
+
+253
+00:29:02,080 --> 00:29:09,920
+of the other client, but to show how you are working and the way you work as a consultant is very interesting
+
+254
+00:29:09,920 --> 00:29:17,600
+because then you are showing them that you have an organization and what kind of services that you are providing
+
+255
+00:29:17,600 --> 00:29:23,840
+or your partners are providing and then they feel very confident. You can do as well cross-selling.
+
+256
+00:29:23,840 --> 00:29:30,000
+This is definitely what I'm doing here with some other people who are at Matamor camp today,
+
+257
+00:29:30,000 --> 00:29:37,040
+such as Enprunt Digital and Digitalist AB or even the Matamor team itself is recommending premium features
+
+258
+00:29:37,040 --> 00:29:43,840
+or talking about one specific cloud infrastructure and so on and so forth.
+
+259
+00:29:43,840 --> 00:29:50,560
+That's really something that you can do. In fact, the attendees of the training are looking for as well.
+
+260
+00:29:50,560 --> 00:29:54,960
+They are not just interested in your training themselves. They are interested in the possibilities
+
+261
+00:29:54,960 --> 00:30:02,160
+that one can have with the product and services. The cons of the training is just one short revenue.
+
+262
+00:30:02,160 --> 00:30:09,600
+Most of the time, it's hardly ever the case that the company will take a training from you
+
+263
+00:30:09,600 --> 00:30:16,560
+unless it's a very big company will take another one. It happens in some cases when the company is growing
+
+264
+00:30:16,560 --> 00:30:22,400
+and they get new employees and they want those employees to get trained and they know that you have done a good job
+
+265
+00:30:22,400 --> 00:30:30,400
+the first time, but most of the times they hardly ever come back for a training.
+
+266
+00:30:30,400 --> 00:30:37,760
+The second cons that I put here is more for agencies. Most of the time, an agency will spend a lot of time
+
+267
+00:30:37,760 --> 00:30:43,920
+in training one specific employee or this employee a bit special because he succeeded or she succeeded
+
+268
+00:30:43,920 --> 00:30:52,080
+in training herself or herself and decided now to go on its own. Then it's really hard to find a resource back,
+
+269
+00:30:52,080 --> 00:30:59,520
+someone who is motivated. I think here, if you are an agency, it's always good to secure this resource
+
+270
+00:30:59,520 --> 00:31:04,880
+by making him a stakeholder or something like this because this resource within your company
+
+271
+00:31:04,880 --> 00:31:10,400
+is really of high value. Just to let you know that it takes a lot of time to train a trainer.
+
+272
+00:31:11,440 --> 00:31:16,560
+Google Analytics, for example, in six months, you can succeed in having a beginner trainer.
+
+273
+00:31:17,440 --> 00:31:24,240
+In Matomo, even after a decade, I still don't know everything about Matomo. Just to let you know
+
+274
+00:31:24,240 --> 00:31:29,120
+that it takes a lot of time because it's a lot of concepts. It's not really about the solution
+
+275
+00:31:29,120 --> 00:31:34,640
+in itself, which is complicated. It's about understanding what is the free software philosophy,
+
+276
+00:31:34,640 --> 00:31:40,480
+what it implies, and to not be scared of the techy part. That's server, deploying something on a
+
+277
+00:31:40,480 --> 00:31:46,400
+server, SSH, all that kind of thing. That's the kind of thing you need to have an interest in
+
+278
+00:31:46,400 --> 00:31:51,520
+in order to understand how the solution is working because probably the trainer will be as well
+
+279
+00:31:51,520 --> 00:31:57,280
+the middleman for all your different projects. The guy talking with the developers, with the analyst,
+
+280
+00:31:57,280 --> 00:32:03,680
+with the salesperson, with the system administrator, with the client. That's where it
+
+281
+00:32:03,680 --> 00:32:08,800
+takes a lot of time in order to understand all the expectations from one another.
+
+282
+00:32:10,560 --> 00:32:16,240
+The fourth service that I'm thinking of is translation. I haven't yet received any
+
+283
+00:32:16,880 --> 00:32:22,960
+demand for money for that, but I can clearly see that there are some demands because Matomo is
+
+284
+00:32:22,960 --> 00:32:28,560
+evolving a lot with new plugins, and those plugins do not get translated sometimes,
+
+285
+00:32:28,560 --> 00:32:35,120
+or at least not in some specific languages, which means that when you have big companies,
+
+286
+00:32:35,120 --> 00:32:42,080
+let's say, for example, a company based in Japan, in Taiwan, or even in, I don't know,
+
+287
+00:32:42,080 --> 00:32:47,760
+in Venezuela or in Norway, just imagine that those guys, when they install those premium
+
+288
+00:32:47,760 --> 00:32:55,200
+features on those two plugins, they've got a UI of Matomo, which is Norwegian and then English,
+
+289
+00:32:55,200 --> 00:33:05,360
+or Japanese and then English. It's like a two-sided person and a two-sided coin in one,
+
+290
+00:33:05,360 --> 00:33:10,000
+and it doesn't make sense. This is where they look at the software and they say,
+
+291
+00:33:10,000 --> 00:33:15,840
+okay, you recommended me to install this software, and it's not even fully translated, so you are
+
+292
+00:33:15,840 --> 00:33:22,560
+just giving me half of the software. Could you fix that? This is where you can definitely
+
+293
+00:33:23,200 --> 00:33:28,880
+find the people to translate it. The translation service, which has been recently put
+
+294
+00:33:29,680 --> 00:33:35,680
+on Matomo, is very instinctive and helps you in translating it straight away. You also have some
+
+295
+00:33:35,680 --> 00:33:44,000
+plugins which are specific, which allow you to make some extra translation. Here, I think that
+
+296
+00:33:44,000 --> 00:33:50,080
+there is a lot of business opportunities to sell translation services for Matomo for your
+
+297
+00:33:50,080 --> 00:33:57,120
+end-customer. It's just that I never succeeded in selling one yet. Custom development is one of the
+
+298
+00:33:57,120 --> 00:34:07,840
+sexiest services to sell. The problem is that it's very, very, very long. The pros of it is that it's
+
+299
+00:34:07,840 --> 00:34:16,160
+very exciting. It's a non-project. You can really empower Matomo, but the cons is that it requires
+
+300
+00:34:16,160 --> 00:34:24,640
+a lot of expertise and energy in order to kickstart the project. Here, I'm not talking about
+
+301
+00:34:24,640 --> 00:34:32,320
+one-man business or an agency who will create the custom plugin itself, but more like an agency or
+
+302
+00:34:32,320 --> 00:34:38,560
+one-man business who is chasing, finding out the profile, who is able to create the Matomo
+
+303
+00:34:38,560 --> 00:34:45,200
+plugin. Those developers exist. You can easily find them on the community. I'm thinking here of
+
+304
+00:34:45,200 --> 00:34:51,280
+Peter. I'm thinking here of Stefan. I'm thinking here of maybe Lucas. There are some people within
+
+305
+00:34:51,280 --> 00:34:58,160
+the community who can develop those plugins for you. It's just that you will be the middleman
+
+306
+00:34:58,160 --> 00:35:05,760
+in charge of listening to your client, writing the spec document, and then on-link it to the
+
+307
+00:35:06,880 --> 00:35:14,080
+web developer. What I found out within those custom development project issues is that,
+
+308
+00:35:14,080 --> 00:35:19,200
+in my case, I'm working a lot with French institutions, is that when you work with a
+
+309
+00:35:19,200 --> 00:35:26,240
+French institution, it's not that easy to hire a resource from the outside. Let's say outside of
+
+310
+00:35:26,240 --> 00:35:32,000
+your own country, so France, which, of course, makes the process even more complicated.
+
+311
+00:35:34,960 --> 00:35:40,960
+You need to find the right profile to ensure that, according to the law or according to the
+
+312
+00:35:40,960 --> 00:35:45,440
+constraints which are given to you by your clients, you can find the right profile.
+
+313
+00:35:45,440 --> 00:35:52,480
+Then you need to not screw up when you write out the spec document. Then you need to ensure that
+
+314
+00:35:52,480 --> 00:35:58,560
+the spec of the client corresponds to what the developer is able to provide because of the core
+
+315
+00:35:58,560 --> 00:36:06,160
+of Matomo. It's a really exciting project, but it's really hard to start to kick it to get paid.
+
+316
+00:36:07,520 --> 00:36:13,520
+Something which could, by the developer, be issued in three weeks will probably take
+
+317
+00:36:14,800 --> 00:36:20,800
+one year or two years in order to be delivered. Just to let you know that custom
+
+318
+00:36:20,800 --> 00:36:29,040
+development is, as well, a complex project. Last but not least, a service that I'm thinking of,
+
+319
+00:36:29,040 --> 00:36:36,880
+which is, to me, as well, very exciting, which is writing documentation. It happens quite a lot,
+
+320
+00:36:36,880 --> 00:36:44,000
+mostly by institutions who do not want to rely on the documentation of Matomo.org, which,
+
+321
+00:36:44,720 --> 00:36:48,880
+by the way, is really well done, but they want something which is more specific,
+
+322
+00:36:48,880 --> 00:36:54,240
+with words which are different, with screenshots which are using their own data, with probably
+
+323
+00:36:54,240 --> 00:37:01,120
+another language. That's really great. This is how you can develop your skills dealing with
+
+324
+00:37:01,120 --> 00:37:06,880
+marketing materials. As I said, there's a lot of demand. It's just that those demands are mostly
+
+325
+00:37:06,880 --> 00:37:14,400
+coming from big clients, not small ones, which, of course, make it more like a niche project.
+
+326
+00:37:14,400 --> 00:37:20,320
+The only issue that I can see here, which is, of course, subject to discussion, is that the
+
+327
+00:37:20,320 --> 00:37:25,680
+licenses on which you are writing those documentation can be restrictive. Maybe you're
+
+328
+00:37:25,680 --> 00:37:33,520
+not going to be able to use those documentation that you write for, let's say, a public project,
+
+329
+00:37:33,520 --> 00:37:42,160
+which, of course, is a bit heartbreaking, but that's part of the game. You get money for,
+
+330
+00:37:42,160 --> 00:37:47,280
+and this money that you get for, you are under restrictions. Most of the time, it's under
+
+331
+00:37:49,280 --> 00:37:54,880
+a closed license. The biggest mistake that I'm seeing on the field dealing with businesses
+
+332
+00:37:55,440 --> 00:38:00,800
+is that you cannot know everything as a one-man business. You will have to learn about
+
+333
+00:38:00,800 --> 00:38:05,760
+subcontracting. Really, at the beginning, I thought that I could be able to handle all the
+
+334
+00:38:05,760 --> 00:38:12,960
+parts of Matomo, and I just find out that it's just too big, that I cannot be good in everything.
+
+335
+00:38:12,960 --> 00:38:18,640
+So, you need to have a network. It's not like tomorrow you can decide to create your own
+
+336
+00:38:18,640 --> 00:38:23,280
+business based on Matomo. No, you need to have a network. You need to have guys who are good on
+
+337
+00:38:23,280 --> 00:38:29,680
+board. Definitely, those guys, you can find them on chat.matomocamp.com, because people
+
+338
+00:38:29,680 --> 00:38:36,000
+who are attending today are probably already familiar with Matomo Analytics, and probably are
+
+339
+00:38:36,000 --> 00:38:42,400
+familiar with it. You can find them as well on forum.matomo.org, but it's all about network.
+
+340
+00:38:42,400 --> 00:38:47,440
+I cannot deliver all the products and services that I'm saying today if I don't have my network.
+
+341
+00:38:47,440 --> 00:38:52,880
+Matomo is not Google Analytics. That's the biggest mistake that most agencies are doing.
+
+342
+00:38:52,880 --> 00:38:57,600
+So, just think that it's a clone of Google Analytics. Even if it's the mission of Matomo
+
+343
+00:38:57,600 --> 00:39:04,240
+to have Google Analytics as a free software through Matomo, that's not at all the same thing.
+
+344
+00:39:04,240 --> 00:39:10,960
+Matomo is a free software. With this, it embraces the free software philosophy, which means that
+
+345
+00:39:10,960 --> 00:39:17,360
+even if people will correct me about it, it's a techie solution. If it's a techie solution,
+
+346
+00:39:17,360 --> 00:39:22,080
+you need to be at least techie in order to understand the heart of it, how it's working,
+
+347
+00:39:22,080 --> 00:39:27,680
+and, of course, how to sell it afterward. You have to understand the free software philosophy, and
+
+348
+00:39:27,680 --> 00:39:33,920
+it's a huge piece. It's a long-term return on investment. As I said, it took me five years in
+
+349
+00:39:33,920 --> 00:39:41,120
+order to be able to make a living out of it, but it's really worth it. You cannot succeed if you
+
+350
+00:39:41,120 --> 00:39:46,880
+don't love the software. That's the thing. Don't blame the software. Blame yourself if there's
+
+351
+00:39:46,880 --> 00:39:51,040
+something which is not working, because if there's something which is not working, it probably means
+
+352
+00:39:51,040 --> 00:39:55,440
+that there is something that you are missing somewhere along the education of the software.
+
+353
+00:39:56,640 --> 00:40:01,360
+How to promote your Matomo services? This is the list of things that I'm doing which are
+
+354
+00:40:01,920 --> 00:40:08,400
+working, but all together. It's not just one single thing. Writing books, tutorials, publishing
+
+355
+00:40:08,400 --> 00:40:14,640
+marketing materials, or education materials is working. I have about 500 videos running on the
+
+356
+00:40:14,640 --> 00:40:19,760
+internet, and it really helps. People are not coming straight to us thanks to those videos.
+
+357
+00:40:19,760 --> 00:40:25,840
+It happens sometimes, but it's making you visible, which is the most important thing. People can put
+
+358
+00:40:25,840 --> 00:40:33,920
+a face on your name, and then they can rely on you if they have any questions. Other websites or
+
+359
+00:40:33,920 --> 00:40:40,480
+several websites introducing your services. I have about close to 300 websites talking about what
+
+360
+00:40:40,480 --> 00:40:46,720
+I'm doing, which helps a lot. Give talks and conferences, share with the community, have a
+
+361
+00:40:46,720 --> 00:40:52,560
+network, and then create your own network. That's as well one of the reasons why I was
+
+362
+00:40:52,560 --> 00:40:58,800
+interested in setting up this Matomo camp. That was about opening all the possibilities of connecting
+
+363
+00:40:58,800 --> 00:41:07,600
+with other people, finding people who can be subcontractors of my project if I have too many
+
+364
+00:41:07,600 --> 00:41:12,560
+demands, or if I cannot do something, or as well potential clients, and so on and so forth. That's
+
+365
+00:41:12,560 --> 00:41:19,120
+the way it works. Mention it to your existing clients. Do not forget to always be on social
+
+366
+00:41:19,120 --> 00:41:27,280
+networks. Connect with those clients of yours, and tell them about the changes which occur on
+
+367
+00:41:27,280 --> 00:41:32,000
+Matomo recently. Involve yourself within free software projects. That's as well very important
+
+368
+00:41:32,000 --> 00:41:39,200
+to understand the free software philosophy. That's it for this conference. I really hope
+
+369
+00:41:39,200 --> 00:41:46,400
+that you enjoy it and that you have plenty of questions. Okay, Lucas. Well, I guess
+
+370
+00:41:47,440 --> 00:41:53,200
+we don't have any questions for this talk. I hope everything was clear. Thank you,
+
+371
+00:41:53,200 --> 00:42:09,680
+once more, for choosing this conference, and hope you are all having a great Matomo camp. Thank you.
+

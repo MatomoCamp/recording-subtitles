@@ -1,0 +1,1304 @@
+1
+00:00:00,000 --> 00:00:07,600
+Okay, now all looks good.
+
+2
+00:00:07,600 --> 00:00:10,160
+Thank you for joining us today, Frederick.
+
+3
+00:00:10,160 --> 00:00:12,280
+The floor is yours.
+
+4
+00:00:12,280 --> 00:00:13,280
+Thanks.
+
+5
+00:00:13,280 --> 00:00:15,440
+So thanks, everyone, for being here.
+
+6
+00:00:15,440 --> 00:00:21,320
+My name is Frederick, and I'm going to talk about Matamu, Converged Generated Simulation
+
+7
+00:00:21,320 --> 00:00:24,600
+today.
+
+8
+00:00:24,600 --> 00:00:33,920
+Just as a reminder, you are able to join the chat room on the matamucamp.org website.
+
+9
+00:00:33,920 --> 00:00:43,440
+Just go into the talk card, and you have the link to join the chat, if you ever have some
+
+10
+00:00:43,440 --> 00:00:46,080
+questions, I can answer it.
+
+11
+00:00:46,080 --> 00:00:49,420
+Okay, so here is what we're going to talk about today.
+
+12
+00:00:49,420 --> 00:00:53,680
+First of all, I'm going to introduce myself, then we're going to talk about the prerequisites
+
+13
+00:00:53,680 --> 00:00:57,200
+for doing Converged Generated Simulation with Matamu.
+
+14
+00:00:57,200 --> 00:01:02,600
+Then we will talk about how you can find your first optimization ideas, then how you can
+
+15
+00:01:02,600 --> 00:01:11,040
+prioritize these ideas using some CRO frameworks, then how you can use Matamu UX analytics features
+
+16
+00:01:11,040 --> 00:01:18,160
+in the process, how to write your testing hypothesis, and how to make an A-B test using
+
+17
+00:01:18,160 --> 00:01:23,200
+Matamu testing features.
+
+18
+00:01:23,200 --> 00:01:28,000
+So I'm a digital analytics and CRO consultant.
+
+19
+00:01:28,000 --> 00:01:36,000
+I've been working with several companies and several organizations in the public sector.
+
+20
+00:01:36,000 --> 00:01:41,800
+I am specializing in open source web analytics for about two years now.
+
+21
+00:01:41,800 --> 00:01:52,400
+And I also was a pedagogical director of a digital marketing master, so I'm quite used
+
+22
+00:01:52,400 --> 00:01:59,440
+to teaching and building teaching programs.
+
+23
+00:01:59,440 --> 00:02:04,400
+Here you can find my LinkedIn if you are interested.
+
+24
+00:02:04,400 --> 00:02:13,080
+Okay, so what do we need to do Conversion Rate Optimization with Matamu?
+
+25
+00:02:13,080 --> 00:02:17,560
+The first thing we need to do is to define what performance is.
+
+26
+00:02:17,560 --> 00:02:20,280
+So I have a definition here.
+
+27
+00:02:20,280 --> 00:02:26,440
+Performance expresses the level of achievement of the objective's pursuit.
+
+28
+00:02:26,440 --> 00:02:33,000
+So here is really something important to be able to know what we're talking about because
+
+29
+00:02:33,000 --> 00:02:38,800
+we're talking about something which is performance and it's really important to know what we
+
+30
+00:02:38,800 --> 00:02:42,760
+are meaning when we say performance.
+
+31
+00:02:42,760 --> 00:02:49,040
+So now we need to define the objectives, which means the business goal.
+
+32
+00:02:49,040 --> 00:02:52,840
+First of all, I'm going to give you an example.
+
+33
+00:02:52,840 --> 00:02:57,040
+You may want to increase the part of people who will purchase one of your products if
+
+34
+00:02:57,040 --> 00:02:59,960
+you are an e-commerce website.
+
+35
+00:02:59,960 --> 00:03:05,560
+And then you need to define the level of achievement, which means the indicators, the thresholds
+
+36
+00:03:05,560 --> 00:03:06,880
+and the segments.
+
+37
+00:03:06,880 --> 00:03:12,480
+So for instance, for the e-commerce conversion rate, the indicator would be e-commerce conversion
+
+38
+00:03:12,480 --> 00:03:13,480
+rate.
+
+39
+00:03:13,480 --> 00:03:18,200
+We could decide that the threshold is two persons and we could decide that this threshold
+
+40
+00:03:18,200 --> 00:03:21,000
+is for all users.
+
+41
+00:03:21,000 --> 00:03:27,400
+And to keep going through this process, we will use two main tools.
+
+42
+00:03:27,400 --> 00:03:30,000
+The first one is the KPI framework.
+
+43
+00:03:30,000 --> 00:03:34,640
+And the second one is the measurement plan and the tagging plan.
+
+44
+00:03:34,640 --> 00:03:44,280
+When you want to do optimization on analytics with tools like Matomu, you need to have as
+
+45
+00:03:44,280 --> 00:03:48,920
+many data as possible to have a granular analysis.
+
+46
+00:03:48,920 --> 00:03:55,540
+So it's really important to have a proper tagging plan and proper KPI.
+
+47
+00:03:55,540 --> 00:03:59,160
+So what is a KPI framework?
+
+48
+00:03:59,160 --> 00:04:07,760
+Basically, it's a document that explains how you're going to measure performance through
+
+49
+00:04:07,760 --> 00:04:12,640
+different level of engagement from a user point of view.
+
+50
+00:04:12,640 --> 00:04:20,040
+So you start, you always start with your business goal and in the scope of reach, the first
+
+51
+00:04:20,040 --> 00:04:24,960
+level of engagement, you want to increase the visibility of your sites.
+
+52
+00:04:24,960 --> 00:04:31,840
+On the level of engagement, you want to increase the number of qualified users on the platforms.
+
+53
+00:04:31,840 --> 00:04:37,400
+You may also want to engage the audience and you may want to develop the visitor base within
+
+54
+00:04:37,400 --> 00:04:41,360
+the digital ecosystem if you have several websites or apps.
+
+55
+00:04:41,360 --> 00:04:46,240
+On the conversion level, you want to facilitate, develop the realization of actions having
+
+56
+00:04:46,240 --> 00:04:49,320
+a direct impact on the business.
+
+57
+00:04:49,320 --> 00:04:53,600
+And on the advocacy level, you may want to maintain and develop the relationship with
+
+58
+00:04:53,600 --> 00:04:57,840
+the site's audience, increase the number of contacts in the CRM, develop visitors from
+
+59
+00:04:57,840 --> 00:05:04,840
+social networks, and develop interactions on the community on social networks.
+
+60
+00:05:04,840 --> 00:05:12,360
+So for each of these business goals, here we are on a KPI level, which means macro indicators.
+
+61
+00:05:12,360 --> 00:05:15,000
+You have, you define here indicators.
+
+62
+00:05:15,000 --> 00:05:20,120
+So for instance, for reach and increase the availability of websites, you want to increase
+
+63
+00:05:20,120 --> 00:05:21,760
+traffic volume.
+
+64
+00:05:21,760 --> 00:05:27,400
+Then you have the description of the metric, you have the Matomo metric, you have the threshold
+
+65
+00:05:27,400 --> 00:05:30,120
+and you have the source.
+
+66
+00:05:30,120 --> 00:05:36,240
+So here we're going to take a look at this part here, but it's really, it's really important
+
+67
+00:05:36,240 --> 00:05:45,240
+to have all the levels of customer engagement so that you know if your preferences is good
+
+68
+00:05:45,240 --> 00:05:49,480
+or not, for instance, on a monthly basis.
+
+69
+00:05:49,480 --> 00:05:55,120
+And here you also, you can see that sometimes you have a Matomo as the main source of data
+
+70
+00:05:55,120 --> 00:06:05,000
+and you also sometimes have external tools such as SEO tools and sometimes social media.
+
+71
+00:06:05,000 --> 00:06:12,640
+On this document, there are some things that are missing, but I just wanted to show you
+
+72
+00:06:12,640 --> 00:06:14,200
+a big picture of it.
+
+73
+00:06:14,200 --> 00:06:23,900
+What is missing is the segment and what is missing is also the calculation of the indicator.
+
+74
+00:06:23,900 --> 00:06:29,960
+What you need after that is the measurement plan and the measurement plan is the document
+
+75
+00:06:29,960 --> 00:06:37,400
+where you explain what are all the actions you're going to track with Matomo, mainly
+
+76
+00:06:37,400 --> 00:06:40,280
+using event tags.
+
+77
+00:06:40,280 --> 00:06:46,160
+So for instance, here you have the page template and all the actions that the users can do
+
+78
+00:06:46,160 --> 00:06:48,920
+on this specific page template.
+
+79
+00:06:48,920 --> 00:06:55,720
+The type of tag feature you're going to use in Matomo and then the architecture of your
+
+80
+00:06:55,720 --> 00:06:59,600
+event category, action, and name.
+
+81
+00:06:59,600 --> 00:07:05,960
+So this is really important also because we are talking about KPIs, which means we are
+
+82
+00:07:05,960 --> 00:07:10,680
+talking about indicators that we will give to the top management, but sometimes you have
+
+83
+00:07:10,680 --> 00:07:20,320
+also marketing teams that want to increase the level of engagement and the level of some
+
+84
+00:07:20,320 --> 00:07:25,440
+events, some realization of events, so it's important that you list everything here and
+
+85
+00:07:25,440 --> 00:07:31,560
+that you can have that in your Matomo instance.
+
+86
+00:07:31,560 --> 00:07:37,400
+And once you have your measurement plan, then you can go on and write down your tagging
+
+87
+00:07:37,400 --> 00:07:38,400
+plan.
+
+88
+00:07:38,400 --> 00:07:44,800
+So here, this is the technical part where you tell the dev teams what type of codes
+
+89
+00:07:44,800 --> 00:07:47,160
+to push on the page.
+
+90
+00:07:47,160 --> 00:07:53,640
+So here we have the data layer for the events, and here you can see the tracking code and
+
+91
+00:07:53,640 --> 00:08:01,960
+all the different values that are pushed to the data layer.
+
+92
+00:08:01,960 --> 00:08:08,840
+And then last but not least, you also have to add all the different values you will be
+
+93
+00:08:08,840 --> 00:08:12,760
+using as custom dimensions.
+
+94
+00:08:12,760 --> 00:08:19,400
+This is really important also to have a really granular analysis and to be able to segment
+
+95
+00:08:19,400 --> 00:08:23,480
+all your optimizations.
+
+96
+00:08:23,480 --> 00:08:30,800
+Okay, now you have your KPI framework, you have your tagging plan.
+
+97
+00:08:30,800 --> 00:08:32,160
+You can start optimizing.
+
+98
+00:08:32,160 --> 00:08:36,440
+So we defined what performance is.
+
+99
+00:08:36,440 --> 00:08:41,840
+Now what we're going to do is define what conversion rate optimization is.
+
+100
+00:08:41,840 --> 00:08:44,600
+It's the name of what we are doing.
+
+101
+00:08:44,600 --> 00:08:55,320
+You probably know search engine optimization, all kind of stuff doing optimization, but
+
+102
+00:08:55,320 --> 00:09:00,720
+it's quite specific here because CRO is, I have a definition also, it's the practice
+
+103
+00:09:00,720 --> 00:09:05,800
+of increasing the percentage of user who perform the desired action on the website.
+
+104
+00:09:05,800 --> 00:09:12,000
+But I have a problem with this definition because I give an example below.
+
+105
+00:09:12,000 --> 00:09:24,720
+If you suddenly drop your prices by, let's say, 90%, you will have a really good positive
+
+106
+00:09:24,720 --> 00:09:26,880
+impact on your conversion rates.
+
+107
+00:09:26,880 --> 00:09:33,360
+But that's not what you want because only increasing the conversion rate is not enough.
+
+108
+00:09:33,360 --> 00:09:39,760
+That's why I think we should talk about conversion volume and value optimization and not only
+
+109
+00:09:39,760 --> 00:09:43,880
+conversion rate optimization.
+
+110
+00:09:43,880 --> 00:09:50,840
+Okay, now we have defined what we will be doing.
+
+111
+00:09:50,840 --> 00:09:54,200
+How can we find our first optimization ideas?
+
+112
+00:09:54,200 --> 00:10:01,440
+I took the example of an e-commerce website because this is really an example where we're
+
+113
+00:10:01,440 --> 00:10:02,800
+talking about money.
+
+114
+00:10:02,800 --> 00:10:07,640
+So performance here is really simple to understand.
+
+115
+00:10:07,640 --> 00:10:12,920
+So when you have your indicators, you can compare the metrics between the different
+
+116
+00:10:12,920 --> 00:10:15,440
+segments and audiences.
+
+117
+00:10:15,440 --> 00:10:23,480
+For instance, we decided that our average conversion rate should be, let's say, 2%.
+
+118
+00:10:23,480 --> 00:10:30,880
+And when we compare the conversion rates by mobile desktop tablets, we see that there
+
+119
+00:10:30,880 --> 00:10:33,800
+are huge differences.
+
+120
+00:10:33,800 --> 00:10:41,340
+So now we should ask ourselves questions, which will be, why is there such differences
+
+121
+00:10:41,340 --> 00:10:44,120
+between devices?
+
+122
+00:10:44,120 --> 00:10:52,160
+In the real world, we know that most of the time, people make their first visits with
+
+123
+00:10:52,160 --> 00:10:58,320
+a mobile device and then finish the order on a laptop or desktop.
+
+124
+00:10:58,320 --> 00:11:04,400
+But here for the example, we will assume that people start their session, their visits on
+
+125
+00:11:04,400 --> 00:11:11,160
+the device and finish or don't finish the purchase process.
+
+126
+00:11:11,160 --> 00:11:16,440
+So here we see a huge difference between desktop and mobile.
+
+127
+00:11:16,440 --> 00:11:17,540
+What should we do?
+
+128
+00:11:17,540 --> 00:11:26,200
+We should go and look into the e-commerce sales funnel to see if we can see any difference
+
+129
+00:11:26,200 --> 00:11:31,180
+in the checkout steps between the different devices.
+
+130
+00:11:31,180 --> 00:11:38,400
+So what you're going to do is you're going to go in the funnel reports.
+
+131
+00:11:38,400 --> 00:11:40,120
+And here you have the different steps.
+
+132
+00:11:40,120 --> 00:11:47,240
+So here is authentication, sign up, payment, and conversion.
+
+133
+00:11:47,240 --> 00:11:53,480
+And what you want to do here is to use segments within Matomo and see if you see any difference.
+
+134
+00:11:53,480 --> 00:12:05,120
+And if you see any difference, then you may want to try to optimize.
+
+135
+00:12:05,120 --> 00:12:12,840
+If you see a huge difference, for instance, at the payment information step, let's say
+
+136
+00:12:12,840 --> 00:12:17,880
+for mobile users, you may want to investigate further.
+
+137
+00:12:17,880 --> 00:12:25,360
+But this is not what we are going to do now because we're going to see that at step four,
+
+138
+00:12:25,360 --> 00:12:28,260
+how to use Matomo UX analytics features.
+
+139
+00:12:28,260 --> 00:12:36,080
+Now we're going to continue and talk about conversion rate optimization frameworks.
+
+140
+00:12:36,080 --> 00:12:40,560
+Because we need to structure our approach doing optimization.
+
+141
+00:12:40,560 --> 00:12:46,160
+We could do what we call heuristic analysis.
+
+142
+00:12:46,160 --> 00:12:50,040
+Just a few words about what heuristic analysis is.
+
+143
+00:12:50,040 --> 00:12:55,960
+It's just you go through your websites, through your conversion journey, and you take notes
+
+144
+00:12:55,960 --> 00:12:59,800
+on what's wrong from your point of view.
+
+145
+00:12:59,800 --> 00:13:05,760
+You might say on the product page, I find that pictures are too small.
+
+146
+00:13:05,760 --> 00:13:10,040
+I think that the app to cover is not prominent enough.
+
+147
+00:13:10,040 --> 00:13:14,400
+It's below the fold, stuff like that.
+
+148
+00:13:14,400 --> 00:13:21,160
+You can also do some kind of benchmark with competitors saying, yes, on the product page
+
+149
+00:13:21,160 --> 00:13:23,160
+they do stuff that we don't.
+
+150
+00:13:23,160 --> 00:13:26,480
+And I think this could be a good idea.
+
+151
+00:13:26,480 --> 00:13:31,480
+But it's quite risky because, once again, this would be your own opinion.
+
+152
+00:13:31,480 --> 00:13:38,080
+And we are doing marketing, so our own opinion should not wait that much in our decision.
+
+153
+00:13:38,080 --> 00:13:44,760
+So that's the reason why we should rely on data and on frameworks.
+
+154
+00:13:44,760 --> 00:13:53,240
+So I gave you here, I'm not sure, three or four examples of CRO framework.
+
+155
+00:13:53,240 --> 00:14:00,240
+The first one is PIE, which is a model done by wider funnel.
+
+156
+00:14:00,240 --> 00:14:08,320
+In fact, you have marks here for every lift optimization zones.
+
+157
+00:14:08,320 --> 00:14:15,920
+And you have three items, the potential of the change, the importance of the changes
+
+158
+00:14:15,920 --> 00:14:18,920
+and the ease of the changes.
+
+159
+00:14:18,920 --> 00:14:25,760
+And then you will have a score here, and the higher the score is, the first the optimization
+
+160
+00:14:25,760 --> 00:14:29,920
+should be done.
+
+161
+00:14:29,920 --> 00:14:38,120
+Then you have another example of CRO framework, which is the ICE model, which was created
+
+162
+00:14:38,120 --> 00:14:40,640
+by Sean Ellis.
+
+163
+00:14:40,640 --> 00:14:47,640
+Here again, you have three items, the impact, what will be the impact if this works, confidence,
+
+164
+00:14:47,640 --> 00:14:55,360
+how confident am I that this will work in ease, what is the ease of implementation.
+
+165
+00:14:55,360 --> 00:15:03,040
+But this here, I have a problem with it, how confident am I, since it's something that
+
+166
+00:15:03,040 --> 00:15:11,760
+I'm going to propose, I think that I will be confident in it, but confidence is not
+
+167
+00:15:11,760 --> 00:15:15,240
+something really scientific.
+
+168
+00:15:15,240 --> 00:15:25,080
+So this exists, so this is good to know that it exists, but it's not something that I would
+
+169
+00:15:25,080 --> 00:15:29,000
+recommend to use.
+
+170
+00:15:29,000 --> 00:15:37,480
+You have also another model done by Hotwire, and here you have one point or zero point
+
+171
+00:15:37,480 --> 00:15:39,380
+for each item.
+
+172
+00:15:39,380 --> 00:15:49,160
+So let's say this optimization idea will support the companion main metrics, yes or no, one
+
+173
+00:15:49,160 --> 00:16:00,640
+or zero, with the test as changed on the results of many pages, yes or no, again, one or zero.
+
+174
+00:16:00,640 --> 00:16:03,280
+Is it a change above the fold or below the fold?
+
+175
+00:16:03,280 --> 00:16:09,280
+Okay, I'm not going to explain everything, but you understand the principle, one or zero,
+
+176
+00:16:09,280 --> 00:16:15,200
+and the higher the note, the quicker the test should be run.
+
+177
+00:16:15,200 --> 00:16:25,480
+And the last one, it's the PXL framework proposed by Conversion XL, and again, it's a mark notation
+
+178
+00:16:25,480 --> 00:16:35,720
+system with one, zero, or two, and the higher the note, the most important, the test.
+
+179
+00:16:35,720 --> 00:16:42,360
+So what you have to do when you want to do optimization is to go through the data, go
+
+180
+00:16:42,360 --> 00:16:49,320
+through the websites, and look for huge differences.
+
+181
+00:16:49,320 --> 00:16:57,760
+And once you find those huge differences, then you have to investigate further.
+
+182
+00:16:57,760 --> 00:17:03,000
+And when you want to investigate further, that's when UX analytics features come into
+
+183
+00:17:03,000 --> 00:17:08,080
+place.
+
+184
+00:17:08,080 --> 00:17:14,360
+You saw that in the checkout step payment info, it's really lower for mobile users,
+
+185
+00:17:14,360 --> 00:17:20,640
+but you don't know exactly what the issue is when you only look at statistical data
+
+186
+00:17:20,640 --> 00:17:22,240
+within Matomo.
+
+187
+00:17:22,240 --> 00:17:35,080
+So you may have an idea, but you have to confirm that your idea goes in the right direction.
+
+188
+00:17:35,080 --> 00:17:40,600
+So here is what you can use as features in Matomo.
+
+189
+00:17:40,600 --> 00:17:48,040
+Here it is examples taken from the Matomo demo website.
+
+190
+00:17:48,040 --> 00:17:53,400
+I think that you all are aware of what Session Recording is, but I'm going to just re-explain
+
+191
+00:17:53,400 --> 00:17:55,360
+it just in case.
+
+192
+00:17:55,360 --> 00:18:02,580
+What it does is that it takes video snapshots of users' journey on the website.
+
+193
+00:18:02,580 --> 00:18:10,560
+So it allows you to watch video playbacks of users' journeys on the website.
+
+194
+00:18:10,560 --> 00:18:17,800
+So for instance, on the example I took on the payment info, you see that mobile users
+
+195
+00:18:17,800 --> 00:18:21,720
+don't go through and don't finalize their purchase.
+
+196
+00:18:21,720 --> 00:18:31,440
+So you can ask Matomo to record this behavior, and then you can watch the playback just to
+
+197
+00:18:31,440 --> 00:18:39,600
+confirm your hypothesis that might be, I don't know, it's not mobile friendly or I don't
+
+198
+00:18:39,600 --> 00:18:40,600
+know what.
+
+199
+00:18:40,600 --> 00:18:46,480
+You can watch the videos just to confirm the idea you have about why it's not working as
+
+200
+00:18:46,480 --> 00:18:49,480
+it should.
+
+201
+00:18:49,480 --> 00:18:53,680
+So here just, again, a screenshot of what it does.
+
+202
+00:18:53,680 --> 00:19:03,240
+You have here the movement of the mouse on the page.
+
+203
+00:19:03,240 --> 00:19:12,280
+What you can use also as Matomo features for just to confirm your idea is to use the Itmaps
+
+204
+00:19:12,280 --> 00:19:14,900
+feature.
+
+205
+00:19:14,900 --> 00:19:22,000
+So imagine that you have this payment info page and you should click on the accept the
+
+206
+00:19:22,000 --> 00:19:29,960
+terms of sales, and you see that people don't click on it because it's not that visible.
+
+207
+00:19:29,960 --> 00:19:36,800
+So here the Itmaps will help you to confirm the fact that people don't click on it because
+
+208
+00:19:36,800 --> 00:19:41,360
+it's, let's say it's below the fold, it's not visible enough.
+
+209
+00:19:41,360 --> 00:19:47,520
+So that's the reason why people can go through the purchase process and maybe they don't
+
+210
+00:19:47,520 --> 00:19:52,440
+see it and they can click on the next button, so that's the explanation you have and it's
+
+211
+00:19:52,440 --> 00:20:00,440
+confirmed by the Itmaps.
+
+212
+00:20:00,440 --> 00:20:08,000
+Another interesting feature that you can use in Matomo is the form analytics feature, especially
+
+213
+00:20:08,000 --> 00:20:16,640
+when you are talking about checkout processes, just to make sure that there is no issue with
+
+214
+00:20:16,640 --> 00:20:20,200
+some specific fields.
+
+215
+00:20:20,200 --> 00:20:28,360
+For instance, you may see that some fields are left blank or there are some format issues
+
+216
+00:20:28,360 --> 00:20:29,840
+with some fields.
+
+217
+00:20:29,840 --> 00:20:40,440
+Here it's interesting to have also the information on the different forms and what type of issues
+
+218
+00:20:40,440 --> 00:20:47,720
+can occur on the different forms.
+
+219
+00:20:47,720 --> 00:20:52,000
+Last but not least, the user feedback plugin.
+
+220
+00:20:52,000 --> 00:20:57,000
+It's a quite new feature.
+
+221
+00:20:57,000 --> 00:21:01,100
+It allows you to ask feedbacks to users using the Tag Manager.
+
+222
+00:21:01,100 --> 00:21:08,520
+So if you have that user or mobile user that's in the payment page, payment info, who is
+
+223
+00:21:08,520 --> 00:21:18,480
+about to leave, you can use an exit page trigger and then present to this person this model,
+
+224
+00:21:18,480 --> 00:21:23,080
+saying, okay, what went wrong on this page?
+
+225
+00:21:23,080 --> 00:21:26,880
+What could have we done to make it work?
+
+226
+00:21:26,880 --> 00:21:31,840
+This is quite interesting.
+
+227
+00:21:31,840 --> 00:21:45,000
+There was, I guess it was this morning at 9, there was a conference held by Thomas Pearson.
+
+228
+00:21:45,000 --> 00:21:53,440
+I encourage you to watch the playback of this session because this is really interesting
+
+229
+00:21:53,440 --> 00:21:56,160
+because it's all in Matomo.
+
+230
+00:21:56,160 --> 00:21:57,600
+It's not an external tool.
+
+231
+00:21:57,600 --> 00:22:00,360
+You have all the feedbacks in Matomo.
+
+232
+00:22:00,360 --> 00:22:06,960
+You have the completion of the feedbacks that can be sent as events.
+
+233
+00:22:06,960 --> 00:22:13,240
+So this is really something you could take advantage of to better understand what's going
+
+234
+00:22:13,240 --> 00:22:16,920
+wrong on our pages.
+
+235
+00:22:16,920 --> 00:22:23,800
+Okay, so now you have your optimization ideas.
+
+236
+00:22:23,800 --> 00:22:26,560
+You have sorted them by priority.
+
+237
+00:22:26,560 --> 00:22:31,400
+You have collected more info with UX analytics features and you can describe the issue more
+
+238
+00:22:31,400 --> 00:22:33,360
+accurately.
+
+239
+00:22:33,360 --> 00:22:39,280
+So as I said before, for mobile users in the payment info, the accept terms of stay button
+
+240
+00:22:39,280 --> 00:22:40,960
+is not visible enough.
+
+241
+00:22:40,960 --> 00:22:47,200
+You saw that on the session recording because you saw that the mouse moving and not clicking
+
+242
+00:22:47,200 --> 00:22:48,560
+the button.
+
+243
+00:22:48,560 --> 00:22:53,320
+You saw that also with the events you prepared on your tagging plan for mobile users to see
+
+244
+00:22:53,320 --> 00:22:58,480
+the click rate of this button is really low.
+
+245
+00:22:58,480 --> 00:23:03,480
+You also see with the hit maps, you also saw, sorry, with the maps that people don't click
+
+246
+00:23:03,480 --> 00:23:07,160
+on it, which makes the next button inefficient.
+
+247
+00:23:07,160 --> 00:23:14,360
+You can click on next to go through the purchase process.
+
+248
+00:23:14,360 --> 00:23:19,480
+So these users don't understand what's wrong and they leave the page.
+
+249
+00:23:19,480 --> 00:23:24,560
+So now you are able to write down your test type of this, and this is really important
+
+250
+00:23:24,560 --> 00:23:27,640
+when you want to do A-B testing.
+
+251
+00:23:27,640 --> 00:23:32,800
+You should use this pattern if I, and here you describe what you are going to do on the
+
+252
+00:23:32,800 --> 00:23:43,480
+page, then users will, and then you describe the change you expect in user's behavior.
+
+253
+00:23:43,480 --> 00:23:53,600
+So here, if I make the accept terms of sales button more visible in checkout step payment
+
+254
+00:23:53,600 --> 00:24:01,120
+info for mobile users, then they will click on it and be able to go to next steps and
+
+255
+00:24:01,120 --> 00:24:03,080
+complete their purchase.
+
+256
+00:24:03,080 --> 00:24:09,920
+This is what you think is going to happen when you make the change.
+
+257
+00:24:09,920 --> 00:24:22,800
+Once you decide that it's your hypothesis, you will design a page and you will redirect
+
+258
+00:24:22,800 --> 00:24:29,880
+a certain amount of people to this page and the other will go through the regular page.
+
+259
+00:24:29,880 --> 00:24:34,760
+You will want to check if there is any difference in the performance, the performance being
+
+260
+00:24:34,760 --> 00:24:43,680
+the E-commerce conversion rates, and you can start configuring your Matomo A-B test feature.
+
+261
+00:24:43,680 --> 00:24:53,760
+But before that, you should use a simple size and duration calculators because if we want
+
+262
+00:24:53,760 --> 00:25:03,320
+tests to be statistically significant, we need to make sure that we have some requirements.
+
+263
+00:25:03,320 --> 00:25:11,760
+For instance, here, with 3% conversion rate with 95% confidence level, 80% statistical
+
+264
+00:25:11,760 --> 00:25:20,800
+power, and minimum 50% conversion rate lift and three variants, the calculator says, okay,
+
+265
+00:25:20,800 --> 00:25:32,440
+if you want that to be statistically significant, you need to have at least 23,000 sample size
+
+266
+00:25:32,440 --> 00:25:34,280
+per variant.
+
+267
+00:25:34,280 --> 00:25:44,960
+And also here it gives you the length that the test should be and here for the minimal
+
+268
+00:25:44,960 --> 00:25:50,800
+detectable effect you would see in the duration of the test.
+
+269
+00:25:50,800 --> 00:25:59,120
+So once you have this, you know that you have, you need to have this level of sample size,
+
+270
+00:25:59,120 --> 00:26:05,420
+this test duration, then you can go on and start configuring your A-B tests.
+
+271
+00:26:05,420 --> 00:26:11,440
+So I recommend that you follow each step on the Matomo interface for that.
+
+272
+00:26:11,440 --> 00:26:14,240
+Okay, you give a name to your test.
+
+273
+00:26:14,240 --> 00:26:19,120
+Here you write down your test hypothesis.
+
+274
+00:26:19,120 --> 00:26:26,640
+Here just the description of the test and the number of variation that you will have
+
+275
+00:26:26,640 --> 00:26:31,560
+and then again the target pages.
+
+276
+00:26:31,560 --> 00:26:39,800
+Then you, sorry, I guess it's the same, no, it's not the same.
+
+277
+00:26:39,800 --> 00:26:43,000
+Here you go through the success metrics.
+
+278
+00:26:43,000 --> 00:26:49,040
+Matomo will suggest you some metrics that you could use as a success metrics, but you
+
+279
+00:26:49,040 --> 00:26:54,760
+can decide to use totally different metrics.
+
+280
+00:26:54,760 --> 00:26:57,160
+Here you give the success conditions.
+
+281
+00:26:57,160 --> 00:27:03,040
+So here the minimum detectable effects you want to have.
+
+282
+00:27:03,040 --> 00:27:11,000
+By default it's 15%, but you can write a different number, but it's, yes, it's a minimum.
+
+283
+00:27:11,000 --> 00:27:18,160
+The confidence threshold is most of the time for all A-B tests, so it's about around 95%.
+
+284
+00:27:18,160 --> 00:27:21,320
+So just leave it as it is most of the time.
+
+285
+00:27:21,320 --> 00:27:22,320
+It's okay.
+
+286
+00:27:22,320 --> 00:27:29,240
+It's just something that says it's the probability that the result will be the same over the
+
+287
+00:27:29,240 --> 00:27:30,520
+time.
+
+288
+00:27:30,520 --> 00:27:39,400
+It says, okay, this is not due to a random result.
+
+289
+00:27:39,400 --> 00:27:42,400
+Here you have the target pages.
+
+290
+00:27:42,400 --> 00:27:52,280
+A visitor will enter the A-B test when and a visitor will not enter the test when.
+
+291
+00:27:52,280 --> 00:27:54,120
+Here you have the traffic allocation.
+
+292
+00:27:54,120 --> 00:28:04,000
+So here you have 100% of people going through the test, but it's not, it won't be that level
+
+293
+00:28:04,000 --> 00:28:06,000
+most of the time.
+
+294
+00:28:06,000 --> 00:28:16,040
+Here you have the, again, the traffic allocation for each variation, each, let's say, template
+
+295
+00:28:16,040 --> 00:28:21,200
+page template in the test.
+
+296
+00:28:21,200 --> 00:28:30,800
+And here you have the URLs of the different pages.
+
+297
+00:28:30,800 --> 00:28:39,240
+Here you have the start and the end of the page, of the test, sorry, and the code you
+
+298
+00:28:39,240 --> 00:28:47,120
+have to put in your page to make the test active.
+
+299
+00:28:47,120 --> 00:28:59,260
+And here I put a screenshot of an A-B test example coming from the Matomo demo website.
+
+300
+00:28:59,260 --> 00:29:10,120
+So when you wrote down the hypothesis in the interface, here it's going to be reproduced.
+
+301
+00:29:10,120 --> 00:29:17,760
+Here you have the description and all the performance metrics.
+
+302
+00:29:17,760 --> 00:29:23,240
+Since how long the test has been running.
+
+303
+00:29:23,240 --> 00:29:26,540
+And here you have the overview of the test.
+
+304
+00:29:26,540 --> 00:29:35,360
+So you have the conversion rate for each variation, the original and they apply now.
+
+305
+00:29:35,360 --> 00:29:37,360
+So we have an average conversion rate.
+
+306
+00:29:37,360 --> 00:29:44,720
+And here we have the difference between the two of them and the detected lift.
+
+307
+00:29:44,720 --> 00:29:51,320
+So here, since we have the statistical significance of 100%, we have a clear winner, which means
+
+308
+00:29:51,320 --> 00:29:59,280
+that on this test, when you say if we change the top CTAs on the individual job page to
+
+309
+00:29:59,280 --> 00:30:03,280
+be an action about the job, more users will apply to the job.
+
+310
+00:30:03,280 --> 00:30:11,760
+So the hypothesis was good because we see here that there is a real difference in the
+
+311
+00:30:11,760 --> 00:30:18,800
+way people acted over that call to action.
+
+312
+00:30:18,800 --> 00:30:24,400
+Okay, so I'm done.
+
+313
+00:30:24,400 --> 00:30:31,000
+Maybe I was a bit quick, I don't know, it's 1.35.
+
+314
+00:30:31,000 --> 00:30:36,720
+So if you have any questions, just feel free to ask them on the chat.
+
+315
+00:30:36,720 --> 00:30:51,240
+I'll be happy to answer.
+
+316
+00:30:51,240 --> 00:31:12,880
+Okay, so I don't see any questions.
+
+317
+00:31:12,880 --> 00:31:25,560
+So since there is no question, I propose to stop the recording and to end the session.
+
+318
+00:31:25,560 --> 00:31:30,400
+Many thank you for this interesting session, Frederick.
+
+319
+00:31:30,400 --> 00:31:36,600
+I guess people might be feeling a little bit shy now, but of course, the chat room will
+
+320
+00:31:36,600 --> 00:31:37,980
+be open.
+
+321
+00:31:37,980 --> 00:31:45,520
+So everyone, you can also continue the conversation there if you want to discuss further with
+
+322
+00:31:45,520 --> 00:31:50,720
+Frederick about this session and what was discussed here.
+
+323
+00:31:50,720 --> 00:31:55,920
+So Frederick, once again, many thanks for attending Matomo Camp.
+
+324
+00:31:55,920 --> 00:31:56,920
+Thank you.
+
+325
+00:31:56,920 --> 00:31:57,920
+Bye.
+
+326
+00:31:57,920 --> 00:32:08,640
+Transcribed by https://otter.ai
+

@@ -1,0 +1,1260 @@
+1
+00:00:00,000 --> 00:00:07,360
+Hello everyone, my name is Christian. I'm greeting you from the city of Halle an der Saale in the
+
+2
+00:00:07,360 --> 00:00:15,840
+beautiful country of Germany and well straight to topic we are going to talk more or less exactly
+
+3
+00:00:15,840 --> 00:00:25,680
+about that. We or to be more specific I am seated in Germany, in Europe, in the European Union
+
+4
+00:00:25,680 --> 00:00:30,880
+where we are in GDPR country. So the general data protection regulation
+
+5
+00:00:33,280 --> 00:00:43,360
+in effect since 2018 has changed some things to be a little understated in this case and we're
+
+6
+00:00:43,360 --> 00:00:49,520
+looking about the public reaction. So Matomo and the masses. Do the people really care about GDPR
+
+7
+00:00:49,520 --> 00:00:59,120
+compliance? This is one of the big USPs, one of the big unique selling points of Matomo in general.
+
+8
+00:00:59,840 --> 00:01:09,200
+It's well in very big letters on the home page as well that Matomo is a data secure alternative
+
+9
+00:01:09,200 --> 00:01:15,840
+to Google Analytics and to other in this case not open but closed source
+
+10
+00:01:15,840 --> 00:01:25,920
+software. So is this even a good selling point in this case? So what do the people think about
+
+11
+00:01:25,920 --> 00:01:35,520
+data security, about data privacy? So to be a starter here if you can't see the infographics
+
+12
+00:01:35,520 --> 00:01:43,520
+that well we can provide you with the presentation afterwards. This is no problem. Anyway this is
+
+13
+00:01:43,520 --> 00:01:54,160
+here, sorry if I'm not having the exact words in any case, but we were asking some people or in
+
+14
+00:01:54,160 --> 00:02:02,800
+this case Statista. So how have the new data protection regulations, the GDPR impacted on
+
+15
+00:02:02,800 --> 00:02:16,480
+your sense of security? Did anything change after the GDPR came into effect?
+
+16
+00:02:16,480 --> 00:02:24,240
+This was asked in this case to be exactly in Sweden. So we are in northern Europe and according to the
+
+17
+00:02:24,240 --> 00:02:32,720
+survey 75% said well no difference in any way. So most of the people well before GDPR and after
+
+18
+00:02:32,720 --> 00:02:42,560
+GDPR no difference at all. 14% at least said I feel more secure now. So the GDPR at least
+
+19
+00:02:42,560 --> 00:02:49,760
+for around every sixth person did make a positive difference, had a positive impact.
+
+20
+00:02:50,480 --> 00:03:00,560
+For 4% not so much they said I feel less secure and well 7% do not know anything about it or didn't
+
+21
+00:03:00,560 --> 00:03:14,720
+care. But in this case so sorry in this case so the majority well didn't think there was a big
+
+22
+00:03:14,720 --> 00:03:23,840
+difference before and after the GDPR and at least 14-15% around about feel more secure through the
+
+23
+00:03:23,840 --> 00:03:32,800
+GDPR. So in this case most people had at least in Sweden it's seen as a having a positive impact.
+
+24
+00:03:32,800 --> 00:03:42,880
+So the GDPR as a force of good if you want to say. But how is it done on the well more
+
+25
+00:03:42,880 --> 00:03:50,400
+regional or state level in this case? So another survey about GDPR enforcement. So the data
+
+26
+00:03:50,400 --> 00:04:00,400
+protection authorities this case lack of expertise. So most public administration
+
+27
+00:04:01,600 --> 00:04:10,000
+is not really ready for GDPR enforcement. But one second I've got a question from Ronan. Have you
+
+28
+00:04:10,000 --> 00:04:15,600
+ever heard of German citizens suing any websites because of a misuse of a web analytics solution?
+
+29
+00:04:15,600 --> 00:04:24,560
+I will come to that in a moment. But regarding the public authorities in this case you well they
+
+30
+00:04:24,560 --> 00:04:32,960
+aren't seen as that fit for the digital age in this case. Mostly because we have for example in
+
+31
+00:04:32,960 --> 00:04:41,040
+Germany which is this case the country on the far left side. We have around 700 people in personnel
+
+32
+00:04:41,040 --> 00:04:48,960
+doing non-technical stuff and only about 100. So one in seven people is a technical expert.
+
+33
+00:04:49,680 --> 00:04:57,440
+In this case everyone else not so much. In other countries it's sometimes even more extreme.
+
+34
+00:04:57,440 --> 00:05:05,040
+For example UK which isn't part of the European Union anymore. But there we have 22 technical
+
+35
+00:05:05,040 --> 00:05:14,160
+experts regarding to 658 non-technical personnel. So this is a bit more extreme in this case. So the
+
+36
+00:05:14,160 --> 00:05:22,240
+public authorities are very dependent on the populace to well talk to them regarding
+
+37
+00:05:23,440 --> 00:05:30,240
+well data breaches. And to come into Ronan's question yeah I have heard of German citizens
+
+38
+00:05:30,240 --> 00:05:38,800
+suing well not the website themselves. In Germany you can't sue a website because of a data privacy
+
+39
+00:05:38,800 --> 00:05:46,080
+breach. You have to make an amend to the local authority in this case to the well data protection
+
+40
+00:05:46,080 --> 00:05:56,400
+authority. In Germany data protection is a thing for the specific German states. For example in my
+
+41
+00:05:56,400 --> 00:06:02,800
+case I'm living in a state of Saxony-Anhalt in Germany. And just recently I'm working as a data
+
+42
+00:06:02,800 --> 00:06:09,920
+protection officer as well. And just recently I've actually had a case where an online shop was sued
+
+43
+00:06:11,600 --> 00:06:17,440
+by a person who wasn't a client from that shop. Because the shop well did
+
+44
+00:06:17,440 --> 00:06:27,120
+well did had some settings that weren't exactly GDPR conform. So
+
+45
+00:06:29,920 --> 00:06:35,760
+it happens but you can't sue, at least in Germany, you can't sue a website directly.
+
+46
+00:06:36,480 --> 00:06:44,400
+But you can make an inquiry with your local data protection authority. So this has happened.
+
+47
+00:06:44,400 --> 00:06:52,880
+This happens sometimes a lot but not so much in Germany as it is in some other countries. For
+
+48
+00:06:52,880 --> 00:07:01,040
+example many complaints were made in Italy and Spain if I recall correctly. Surprisingly not so
+
+49
+00:07:01,040 --> 00:07:13,200
+much in Germany where as regarding stereotypes we Germans have a bit of an image
+
+50
+00:07:13,200 --> 00:07:21,760
+as the big complainers. But in other countries it was well far worse to be put in brackets in
+
+51
+00:07:21,760 --> 00:07:31,040
+this case. But to be answering that shortly, yes it happens, yes it happened. And this is not so
+
+52
+00:07:31,040 --> 00:07:37,520
+much the fault in this case of the web analytics solution itself but of the company who uses
+
+53
+00:07:37,520 --> 00:07:46,800
+this solution. For example when you normally use Google Analytics in the general setting when you
+
+54
+00:07:46,800 --> 00:07:56,640
+just implement Google Analytics but Matomo as well with the well default settings they aren't GDPR
+
+55
+00:07:56,640 --> 00:08:04,080
+compliant. You need to put them in some kind of a sandbox, the typical cookie banners in this case.
+
+56
+00:08:04,080 --> 00:08:13,920
+And you have to ask your customers or your users, your website users before you track anything from
+
+57
+00:08:13,920 --> 00:08:22,320
+them. You have to ask them if they are okay with that and you have to have an explicit yes and no
+
+58
+00:08:22,320 --> 00:08:29,600
+button on this cookie banner. And when you do that you're fine. When you do it not, well up until
+
+59
+00:08:29,600 --> 00:08:37,600
+this year maybe there wasn't a data protection authority who was complaining about it but it
+
+60
+00:08:37,600 --> 00:08:45,200
+happens rarely. But beginning at least in Germany beginning with next year the public authorities
+
+61
+00:08:45,200 --> 00:08:53,440
+declared that they would control these well for example websites or businesses or companies or
+
+62
+00:08:53,440 --> 00:09:04,000
+whatever. But it would control the GDPR compliancy far more thoroughly. So some things at least
+
+63
+00:09:04,000 --> 00:09:11,760
+will change in 2022. And this case but moving on I hope I answered your question.
+
+64
+00:09:13,760 --> 00:09:20,080
+Well for gathering these facts at least so not much has changed in everyday lives of the people.
+
+65
+00:09:20,080 --> 00:09:28,960
+Maybe that some people are complaining about having to click on so many cookie banners on websites.
+
+66
+00:09:28,960 --> 00:09:36,800
+At least that's what I get in Germany that people like to complain that with the GDPR everything is
+
+67
+00:09:36,800 --> 00:09:43,520
+far more complicated and you well at least that's what I'm saying. They are complaining about having
+
+68
+00:09:43,520 --> 00:09:55,280
+to make a decision. So I guess this will become a far more used to in coming years. But right now
+
+69
+00:09:55,280 --> 00:10:04,080
+we putting aside this nuisance in this case not much has changed. At least the public sees it that
+
+70
+00:10:04,080 --> 00:10:10,080
+way as well that the authorities across countries don't have much expertise in the topic.
+
+71
+00:10:10,080 --> 00:10:19,600
+So in essence why should the populace care about using data friendly solutions.
+
+72
+00:10:20,880 --> 00:10:27,200
+Right now it's a bit of a nuisance. In some countries data protection is even seen as
+
+73
+00:10:27,840 --> 00:10:38,400
+well kind of an hindering stone for innovation or for other things. So why should the populace care?
+
+74
+00:10:38,400 --> 00:10:45,280
+In this case sorry for the German speaking part in this case but I will translate.
+
+75
+00:10:46,240 --> 00:10:54,640
+Well one big part could be Corona pandemic in this case and the use of the
+
+76
+00:10:54,640 --> 00:11:00,240
+German we called home office. No offense to the Brits in this case. So the home office the remote
+
+77
+00:11:00,240 --> 00:11:09,680
+working situations we have at least since March 2020. Different in many countries but at least in
+
+78
+00:11:09,680 --> 00:11:20,000
+Germany there was a survey made by the BVDW. This is a German
+
+79
+00:11:20,000 --> 00:11:35,360
+association for the digital business economics. So they did a survey anyway regarding
+
+80
+00:11:37,120 --> 00:11:46,160
+can you imagine working in home office working remotely because of COVID or after that as well.
+
+81
+00:11:46,160 --> 00:11:55,200
+In this case around three quarters 75.4 percent said yeah I can imagine working from now on
+
+82
+00:11:56,080 --> 00:12:07,280
+remotely. 66 percent even expect their employers to have an appropriate technical as well other
+
+83
+00:12:07,280 --> 00:12:16,080
+kind of solution for working remotely and 58 percent even said that they want to have the explicit
+
+84
+00:12:16,080 --> 00:12:26,400
+possibility of working remotely. In this case in Germany we had some not laws but some
+
+85
+00:12:27,200 --> 00:12:36,080
+guidances that came to effect during the lockdown phases of the pandemic but they were well they
+
+86
+00:12:36,080 --> 00:12:43,600
+were running out during the way of the summer so they are no longer in effect in Germany. However
+
+87
+00:12:43,600 --> 00:12:50,320
+in neighboring Austria since April they even have home office laws so in this case remote working
+
+88
+00:12:50,320 --> 00:12:57,680
+laws. So very different situation depending on the country but at least the German populace wishes to
+
+89
+00:12:57,680 --> 00:13:05,360
+have more home office possibilities but they doubt as with the public authorities they doubt that
+
+90
+00:13:05,360 --> 00:13:14,400
+their employers are ready for that. So in this case the white the right survey was asking questions
+
+91
+00:13:14,400 --> 00:13:22,560
+is your employer well technically ready so have they the do they have the technical infrastructure
+
+92
+00:13:23,440 --> 00:13:32,800
+to enable you to work remotely and this case 54 percent said yes but also 45 percent said no
+
+93
+00:13:32,800 --> 00:13:41,440
+and regarding the mistrust of an employer this is even higher. So this for once. Also regarding
+
+94
+00:13:41,440 --> 00:13:47,280
+the lockdown phases maybe some of you experienced this in your countries as well when you had
+
+95
+00:13:47,280 --> 00:13:56,240
+lockdowns. I've here had some newspaper clippings regarding the consequences of lockdown. For
+
+96
+00:13:56,240 --> 00:14:10,080
+example in Cologne there even was an app developed regarding the well corona regulations chaos that
+
+97
+00:14:10,080 --> 00:14:18,640
+ensued because every state made more or less their own rules. There was a bit of chaos there also
+
+98
+00:14:18,640 --> 00:14:28,320
+regarding the so-called home schooling so the lockdown school school stuff sorry
+
+99
+00:14:29,520 --> 00:14:38,320
+which was also a big mess at least in Germany. So the typical joke was going on yeah what do we
+
+100
+00:14:38,320 --> 00:14:46,160
+expect only teachers working in school they don't have a clue about IT infrastructure.
+
+101
+00:14:46,160 --> 00:14:52,640
+So of course for example when in December in a hard lockdown was set in Germany and first day of
+
+102
+00:14:52,640 --> 00:15:02,480
+so-called home schooling was done of course every server was well stressed to the seams and broke
+
+103
+00:15:02,480 --> 00:15:11,920
+down. So in this case regarding corona and lockdown situation people are on one hand
+
+104
+00:15:11,920 --> 00:15:21,680
+a bit in mistrust regarding data protection but on the other hand see well digitalization as a
+
+105
+00:15:21,680 --> 00:15:31,920
+necessity at least and maybe in combination of the two and well populace will develop the
+
+106
+00:15:32,960 --> 00:15:40,000
+perspective that I'm working more and more in the digital realm that who
+
+107
+00:15:40,000 --> 00:15:49,280
+controls my employer that he's not sniffing after me that he's not trying to survey me to spy on me.
+
+108
+00:15:50,880 --> 00:15:58,800
+And at least in Germany I've got here some paper clippings as well regarding the well general
+
+109
+00:15:59,840 --> 00:16:06,080
+well the general outlook for example especially no not for example especially in regards to the
+
+110
+00:16:06,080 --> 00:16:14,320
+gayfam economy so Google, Amazon, Facebook, Meta, Apple, Microsoft, etc. They are well
+
+111
+00:16:15,840 --> 00:16:23,600
+general in mistrust I especially like that one thing that said well regarding Google Pay and Co.
+
+112
+00:16:24,640 --> 00:16:34,080
+They are warning once again of them so even the journalists are getting tired of well
+
+113
+00:16:34,080 --> 00:16:40,000
+well reporting about data protection incidents with Facebook, with Google, with everyone else.
+
+114
+00:16:40,880 --> 00:16:45,920
+So on the one hand people don't really like data protection because well it's
+
+115
+00:16:46,960 --> 00:16:56,720
+hindrance, it's nuisance, it's well stuff to do that I don't want to do. But on the other hand
+
+116
+00:16:56,720 --> 00:17:06,640
+we are at least when regarding Germany we are a very mistrustful folk regarding big corporations.
+
+117
+00:17:06,640 --> 00:17:13,840
+It has a lot to do with our history regarding kings and queens doing as they please regarding
+
+118
+00:17:13,840 --> 00:17:19,520
+the national socialist regime in the 1930s and 40s regarding the star sea and the German
+
+119
+00:17:19,520 --> 00:17:28,320
+democratic republic and the Iron Curtain stuff that happened. So we value on one hand at least
+
+120
+00:17:28,320 --> 00:17:38,640
+in Germany we value our privacy very high but data protection is for many seen as some kind of
+
+121
+00:17:38,640 --> 00:17:45,600
+nuisance so this is a bit schizophrenic in this case but that's the situation at least in Germany
+
+122
+00:17:45,600 --> 00:17:54,720
+where we are. And to summarize this one so remote work is more prevalent the dangers for
+
+123
+00:17:54,720 --> 00:18:01,440
+data privacy are more apparent. One thing that works in Germany very very good is the stuff
+
+124
+00:18:01,440 --> 00:18:08,160
+think about the children for example in school when you have to work with for example Zoom with
+
+125
+00:18:08,160 --> 00:18:16,560
+Microsoft Teams with whatever. Often it's the case that teachers as well as parents as well
+
+126
+00:18:16,560 --> 00:18:22,880
+as the general populace they say well if it works it works and it's free so it's okay.
+
+127
+00:18:23,920 --> 00:18:31,040
+That's the one hand but on the other hand the well safety of children of families
+
+128
+00:18:31,040 --> 00:18:39,840
+as well as the general safety is stressed very highly. So as I said a bit of a schizophrenic
+
+129
+00:18:39,840 --> 00:18:50,720
+situation in this case but something at least the German speaking countries have at least some kind
+
+130
+00:18:50,720 --> 00:18:58,240
+of well sensibility in this case. So they say we well we have to do something to keep us safe.
+
+131
+00:18:58,240 --> 00:19:06,320
+What? I don't know that's the general thing in this case but authorities are controlling more
+
+132
+00:19:06,320 --> 00:19:14,000
+often as I said in beginning in 2022 the German data protection authorities said that they
+
+133
+00:19:14,000 --> 00:19:24,320
+want and will control more frequently. So what can we do regarding Matomo? So what strategies
+
+134
+00:19:24,320 --> 00:19:32,480
+could we apply? For once we need to look more abroad. In this case we need to look at other
+
+135
+00:19:32,480 --> 00:19:41,360
+countries when we are living in Europe. The GDPR is often seen as some kind of nuisance at least.
+
+136
+00:19:42,080 --> 00:19:50,160
+Regarding international situations these countries that are on this map green they were
+
+137
+00:19:50,160 --> 00:19:58,400
+implementing laws in recent years that had the GDPR as a template, as an explicit template.
+
+138
+00:19:59,280 --> 00:20:05,760
+Some countries are not doing so well regarding data protection for example in Brazil and
+
+139
+00:20:06,480 --> 00:20:13,440
+also in Australia. This is well not that good of a situation but this is because there are
+
+140
+00:20:13,440 --> 00:20:20,160
+other laws like in the United States for example the state of California implemented a specific
+
+141
+00:20:20,160 --> 00:20:28,160
+law that was modeled after the GDPR. But unfortunately California is part of the United States in this
+
+142
+00:20:28,160 --> 00:20:38,560
+case and the United States have laws like the US Freedom Act, the US Cloud Act and other laws
+
+143
+00:20:38,560 --> 00:20:49,760
+that are above the Californian law and enable public administration. In this case specific
+
+144
+00:20:49,760 --> 00:20:57,520
+offices like the National Security Agency, the NSA and other well security organs of the state
+
+145
+00:20:57,520 --> 00:21:09,760
+to spy out everything that is saved on a server even if it's in Europe. The US Cloud Act which
+
+146
+00:21:09,760 --> 00:21:17,280
+came into effect in 2018 explicitly states that in regards of homeland security and stuff like that
+
+147
+00:21:17,280 --> 00:21:27,680
+that the public authorities are enabled to control every person, corporation etc.
+
+148
+00:21:29,360 --> 00:21:35,680
+and the stuff that they are having for example they can control everything that is saved on
+
+149
+00:21:35,680 --> 00:21:43,200
+any Microsoft service because Microsoft has its seat in the United States even if the server is
+
+150
+00:21:43,200 --> 00:21:47,360
+in Germany. The company is in the United States and that's the general problem in this case.
+
+151
+00:21:48,480 --> 00:21:58,320
+So on the one hand the GDPR is a template, is a model for well similar laws in the world
+
+152
+00:21:58,320 --> 00:22:04,400
+but on the other hand we have I don't want to call a loophole but we have another situation
+
+153
+00:22:04,400 --> 00:22:17,280
+where we have other countries that are well GDPR compliant without having the GDPR as a law in their
+
+154
+00:22:17,280 --> 00:22:26,080
+country. So on the one hand we can look into countries that are having laws specifically
+
+155
+00:22:26,080 --> 00:22:32,960
+made after the GDPR for for example for marketing and stuff like that so there we could market
+
+156
+00:22:32,960 --> 00:22:43,040
+Matomo as a good alternative. Also in these countries that are here labeled green we can
+
+157
+00:22:43,040 --> 00:22:55,360
+also have the GDPR as a some kind of a quality seal because Matomo is open source and everything
+
+158
+00:22:55,360 --> 00:23:03,360
+open source and everything else. It's a good starting point for having a well GDPR compliant
+
+159
+00:23:03,360 --> 00:23:12,800
+tool and these countries here Canada well for commercial organizations at least so Canada is
+
+160
+00:23:12,800 --> 00:23:19,520
+half and half in this case regarded safe but the states or the countries of Switzerland,
+
+161
+00:23:19,520 --> 00:23:30,800
+of Norway, of Iceland, of Argentina, Uruguay, New Zealand, South Korea, Japan, Israel and
+
+162
+00:23:31,360 --> 00:23:40,640
+well some other countries as well like the Channel Isles so these specific constituency
+
+163
+00:23:40,640 --> 00:23:51,200
+that are and are not part of Great Britain as well as some other parts of Black Faroe Islands
+
+164
+00:23:51,200 --> 00:23:57,760
+in the Northern Sea they have a specific situation regarding their legal status so they are part of
+
+165
+00:23:57,760 --> 00:24:05,520
+it as well and the fun stuff actually is since Brexit Great Britain officially became at least
+
+166
+00:24:05,520 --> 00:24:13,440
+for three years GDPR compliant again but I would call this more like a political dealing than
+
+167
+00:24:13,440 --> 00:24:21,840
+real well real legislation in this case but the Channel Islands in this case like the Isle of
+
+168
+00:24:21,840 --> 00:24:29,040
+Guernsey or the Isle of Man there are more GDPR compliant than the whole of the UK in this case
+
+169
+00:24:29,040 --> 00:24:36,000
+because they have a so-called adequacy decision from the European Commission so this is some kind
+
+170
+00:24:36,000 --> 00:24:47,040
+of well you apply for that there's some kind of application there's a multi-step and a multi-year
+
+171
+00:24:47,040 --> 00:24:54,160
+inspection of the laws and of the practices in the specific countries that are applying for these
+
+172
+00:24:54,160 --> 00:25:04,000
+adequacy decisions and for example in June 2021 South Korea was admitted after three years being
+
+173
+00:25:04,000 --> 00:25:12,080
+observed and well applying for the status of an adequacy decision GDPR compliant whatever you want
+
+174
+00:25:12,080 --> 00:25:22,080
+to call it country so these countries have laws in effect that are on the same level as the GDPR
+
+175
+00:25:22,080 --> 00:25:30,160
+in the European Union so in this case every company every citizen every corporation
+
+176
+00:25:30,160 --> 00:25:39,440
+every entity in this country have has to have well technical solutions tools software that is
+
+177
+00:25:39,440 --> 00:25:51,760
+in essence GDPR compliant so Matomo could look into these countries regarding getting a foothold and
+
+178
+00:25:51,760 --> 00:25:58,800
+they are in this case to differentiate it more clearly from tools like Google Analytics and stuff
+
+179
+00:25:58,800 --> 00:26:03,760
+because you could at least in these countries the blue ones are part of the European Union the green
+
+180
+00:26:03,760 --> 00:26:11,520
+ones are safe in this case because in this these countries you can argue with legal consequences
+
+181
+00:26:11,520 --> 00:26:18,560
+when you use Google Analytics in these countries and you don't do it right you can get well sued
+
+182
+00:26:18,560 --> 00:26:28,160
+or have to pay a fine or whatever and regarding the GDPR the fine can go up to 20 million euros
+
+183
+00:26:28,160 --> 00:26:39,680
+per case or risk case scenario four percent of your of your global revenue no sorry global income
+
+184
+00:26:41,280 --> 00:26:51,440
+so the gross income to be exact for example in 2019 Google was sentenced in France to pay a fine
+
+185
+00:26:51,440 --> 00:27:01,440
+of 50 million euros and just this year Amazon was in I think was Sweden Spain somewhere in the
+
+186
+00:27:01,440 --> 00:27:09,760
+European Union I have to look it up where exactly but Amazon had to pay a fine for some of 700
+
+187
+00:27:09,760 --> 00:27:22,400
+million euros because every one of these companies they were well violating data protection so in
+
+188
+00:27:22,400 --> 00:27:29,360
+worst case scenario Google is fined and you have to pay a fine as well because you are using Google
+
+189
+00:27:29,360 --> 00:27:40,880
+you are using an illegal software and at least regarding to Germany we have the we have the
+
+190
+00:27:40,880 --> 00:27:48,240
+local authorities as I said the data protection in Germany is part as a matter for the states
+
+191
+00:27:48,240 --> 00:27:55,200
+so not the federal government is doing the data protection but every state has a specific office
+
+192
+00:27:55,200 --> 00:28:03,360
+and the states officials are meeting at least once a year for so-called federal data protection
+
+193
+00:28:03,360 --> 00:28:13,600
+meetings and at least in September 2020 the conference data protection conference in Germany
+
+194
+00:28:13,600 --> 00:28:25,920
+they said that American specifically US American companies are not legal in Germany
+
+195
+00:28:27,360 --> 00:28:37,360
+they explicitly mentioned Microsoft 365 and just in February this year the data protection
+
+196
+00:28:37,360 --> 00:28:44,720
+authority in the state of Berlin said that for example Cisco WebEx was illegal so in this case
+
+197
+00:28:44,720 --> 00:28:52,000
+Cisco WebEx was mentioned specifically but among others like zoom as well this case the state of
+
+198
+00:28:52,000 --> 00:28:59,760
+Baden-Württemberg which is in the south west one of the richest richest states in Germany
+
+199
+00:28:59,760 --> 00:29:09,040
+they well more or less outlawed zoom in 2020 in March 2020 then zoom did some paperwork and the
+
+200
+00:29:10,240 --> 00:29:18,880
+outlawing was well was reversed and just a well general warning label that every United States
+
+201
+00:29:18,880 --> 00:29:27,280
+company has in Germany was applied but in any case the at least the public authorities have a very
+
+202
+00:29:27,280 --> 00:29:38,480
+very very or putting very strict eye on every United States based company on this case on every
+
+203
+00:29:38,480 --> 00:29:50,480
+non-EU based company okay so and regarding once again the well this case companies but also part
+
+204
+00:29:50,480 --> 00:29:55,760
+they are part of the general populace so they should count that well as well this case French
+
+205
+00:29:55,760 --> 00:30:05,040
+companies were asked so what are the implications of the GDPR according to well French data driven
+
+206
+00:30:05,040 --> 00:30:13,840
+and non-data driven companies so in essence the light blue ones are regarding data driven
+
+207
+00:30:13,840 --> 00:30:22,880
+companies the dark blue ones are non-data driven companies so in general IT digital internet
+
+208
+00:30:22,880 --> 00:30:28,320
+based companies on one hand and more or less traditional companies on the other hand
+
+209
+00:30:30,080 --> 00:30:35,760
+and in general the traditional companies see the GDPR more as a constraint
+
+210
+00:30:37,280 --> 00:30:45,360
+whereas the data driven companies so the more or less IT based companies see the GDPR well in
+
+211
+00:30:45,360 --> 00:30:51,200
+this case as a guideline to improve marketing strategies as well as an opportunity for customer
+
+212
+00:30:51,200 --> 00:31:00,160
+relationship some also see it as a constraint but in this case more data driven companies see
+
+213
+00:31:00,720 --> 00:31:08,320
+the GDPR as a general good thing for well developing their marketing strategies as well
+
+214
+00:31:08,320 --> 00:31:17,120
+as the customer relationship so they see it as an opportunity so in this case to make the best out
+
+215
+00:31:17,120 --> 00:31:26,480
+of the law this best case scenario even to make it as a part of an USP in this case the unique
+
+216
+00:31:26,480 --> 00:31:34,720
+selling point could be we are GDPR compliant we value your privacy something that Matomo already
+
+217
+00:31:34,720 --> 00:31:45,120
+does so nothing new for you guys at least but something that also many companies see so in this
+
+218
+00:31:45,120 --> 00:31:57,840
+case the public opinion at least in well IT centric industries is more pro GDPR than contra GDPR
+
+219
+00:31:58,640 --> 00:32:07,520
+because the sorry because the companies are already working with data they are
+
+220
+00:32:07,520 --> 00:32:18,320
+fluent in this field etc so a company could in best case scenario could use the GDPR and GDPR
+
+221
+00:32:18,320 --> 00:32:26,640
+compliant tools in this case as an advantage in contrast to their opposition to the
+
+222
+00:32:28,800 --> 00:32:34,000
+to the other parts of the branch sorry I don't have the right words right now
+
+223
+00:32:34,000 --> 00:32:40,720
+and one company that does it is actually my my own company but I'll come to that in a minute
+
+224
+00:32:40,720 --> 00:32:47,440
+but data-driven companies are for example these ones some of them you have heard some maybe not
+
+225
+00:32:47,440 --> 00:32:54,720
+Trello maybe you heard of them they are part of Atlassian now so they are Australia based
+
+226
+00:32:54,720 --> 00:33:01,760
+and others like monday.com like Dropbox, Asana, Evernote they are US based the ones on the bottom
+
+227
+00:33:01,760 --> 00:33:09,520
+Meister and Meister task they are an Austrian based company so they are on the standard
+
+228
+00:33:09,520 --> 00:33:19,280
+settings GDPR friendly because they must be they have to be it's law so for example these are some
+
+229
+00:33:20,000 --> 00:33:26,320
+but when you look at other companies that are mostly in the well communications sector
+
+230
+00:33:26,320 --> 00:33:32,320
+some of them are very very good regarding GDPR compliance for example when you look at
+
+231
+00:33:32,320 --> 00:33:39,760
+messengers like Signal like Threema also open source stuff like Jitsi or right now we are using
+
+232
+00:33:39,760 --> 00:33:50,480
+big blue button these are okay but some have a bit of well mixed image in this case when you look at
+
+233
+00:33:50,480 --> 00:33:56,560
+image in this case when you look at zoom they are a big winner of the pandemic you have to admit that
+
+234
+00:33:56,560 --> 00:34:05,760
+at least and many many that are using zoom they think well it's such a great service it's reliant
+
+235
+00:34:05,760 --> 00:34:15,360
+it's blah blah blah whereas zoom is actually a very data hungry service also a very dirty service
+
+236
+00:34:15,360 --> 00:34:25,120
+as well there is a website called website carbon.com where you can put in domains and they will well
+
+237
+00:34:25,120 --> 00:34:37,280
+count how much co2 how much gram co2 does it cost in well energy in an energy production when you
+
+238
+00:34:38,000 --> 00:34:44,560
+want to look up that site and for example i once tested that one with with my own site we came
+
+239
+00:34:44,560 --> 00:34:57,200
+around 0.69 gram per website use where zoom has around eight or nine gram so tenfold
+
+240
+00:34:59,040 --> 00:35:04,080
+the stuff so in this case when you use an external service in this case when
+
+241
+00:35:04,080 --> 00:35:15,120
+us based also you have to have taken to account the environmental friendliness so how
+
+242
+00:35:15,120 --> 00:35:22,400
+i don't have the word right now sorry but well how good for the environment how reliable how
+
+243
+00:35:24,480 --> 00:35:30,640
+sorry how sustainable how sustainable is the service as well this is one thing that
+
+244
+00:35:30,640 --> 00:35:36,800
+that comes more into effect right now for example when you look at for as for future and other
+
+245
+00:35:36,800 --> 00:35:46,000
+movements so in this case matomo can make points as well regarding well you can install matomo on
+
+246
+00:35:46,000 --> 00:35:52,000
+your own service so you can decide how environmentally friendly it will become but also how
+
+247
+00:35:52,560 --> 00:35:58,720
+regional the service will be you don't have to communicate all the time with the united states
+
+248
+00:35:58,720 --> 00:36:07,440
+or other countries where the servers are so you can decide in this case also another thing that's
+
+249
+00:36:07,440 --> 00:36:15,360
+the service on the right bottom that's cisco webex or the old logo of cisco webex and for example
+
+250
+00:36:15,360 --> 00:36:26,800
+cisco has a seal made that at least was one time i did a seminar for a federal agency and i also
+
+251
+00:36:26,800 --> 00:36:33,280
+warned about matomo sorry i warned about cisco and stuff cisco webex and stuff not matomo
+
+252
+00:36:33,280 --> 00:36:39,120
+matomo is all right and fine but webex i warned about them because well they are us based
+
+253
+00:36:40,240 --> 00:36:44,320
+but then the federal agency told me no no no but it's all right we haven't
+
+254
+00:36:45,360 --> 00:36:50,320
+this case we have we have a seal made by the german bundesamt für sicherheit in
+
+255
+00:36:50,320 --> 00:36:58,720
+der informationstechnik or transcendent federal agency for safety in the digital infrastructure
+
+256
+00:37:00,240 --> 00:37:10,800
+but the well the bad point is that this seal i looked up they have this seal but well it's
+
+257
+00:37:10,800 --> 00:37:17,920
+not something that the federal agency itself makes but you more or less can ask your tax advisor to
+
+258
+00:37:17,920 --> 00:37:25,840
+uh give it to you because they are well they um they make an audit at at your company and
+
+259
+00:37:25,840 --> 00:37:32,880
+they say well everything seems fine and now i will get my payment so many many marketing
+
+260
+00:37:32,880 --> 00:37:39,840
+jargon going on here but that could be something as well all these companies have sometimes very
+
+261
+00:37:39,840 --> 00:37:48,320
+sometimes very flimsy excuses where they say but we are gdp are compliant we are safe we are looking
+
+262
+00:37:48,320 --> 00:37:54,160
+out after human rights and stuff like that and here's our seal of approval for from the federal
+
+263
+00:37:54,160 --> 00:38:00,400
+government and stuff like that so something that you could acquire very easily with matomo as well
+
+264
+00:38:00,400 --> 00:38:09,600
+so to put yourself on at least the same level of trust that these companies say that they have or
+
+265
+00:38:09,600 --> 00:38:17,840
+say that they are okay and other companies as well regarding data drivenness when you look at
+
+266
+00:38:17,840 --> 00:38:25,680
+microsoft 365 or google workspace they are in general not gdpr compliant but when you look at
+
+267
+00:38:25,680 --> 00:38:32,480
+other companies like next cloud that is a german-based company and cloud service i guess
+
+268
+00:38:32,480 --> 00:38:38,880
+some of you may have heard of it or own cloud that wasn't uh is what was a part of next cloud
+
+269
+00:38:38,880 --> 00:38:44,000
+this is with all open source it was next cloud is essentially a fork of own cloud like with
+
+270
+00:38:44,000 --> 00:38:52,080
+open office and libre library office also another company der seminar that is my own for full
+
+271
+00:38:52,080 --> 00:39:00,880
+enclosure we are working with some api with some api from next cloud we are also working with a
+
+272
+00:39:00,880 --> 00:39:09,200
+big blue button for our video conferencing and at least we ourselves are marketing
+
+273
+00:39:10,800 --> 00:39:17,600
+the use of open source products we also use matomo for our statistics and we market that as well we
+
+274
+00:39:17,600 --> 00:39:25,680
+are using for example an app called tomorrow that is essentially green and sustainable banking in
+
+275
+00:39:25,680 --> 00:39:32,880
+this case and we position ourselves with that so when we for example are looking at our campus
+
+276
+00:39:33,680 --> 00:39:42,080
+our campus this is some kind of an office cloud like with microsoft 365 we say in german that you
+
+277
+00:39:42,080 --> 00:39:49,920
+can work there collaboratively and also secure in the cloud because we are using an open source
+
+278
+00:39:49,920 --> 00:39:57,360
+solution we are in we are based in germany and stuff like that also with a talk plus that
+
+279
+00:39:57,360 --> 00:40:05,440
+essentially is big blue button but well we market it in another way also with other products we have
+
+280
+00:40:05,440 --> 00:40:12,240
+in this case our media library and everything in this case we will say it's well regional based
+
+281
+00:40:12,240 --> 00:40:21,120
+so the service on germany companies in germany we are sustainable because we look that we only
+
+282
+00:40:22,160 --> 00:40:32,720
+have the energy sources well one case regional but also we only use well eco energy for this is
+
+283
+00:40:32,720 --> 00:40:42,560
+this is one big big stepping stone that our partners our it partners our infrastructure partners
+
+284
+00:40:42,560 --> 00:40:49,600
+have to make that they can guarantee and also then that they can prove that they
+
+285
+00:40:50,640 --> 00:40:58,880
+use the data centers that they power the data centers only with sustainable energy also regarding
+
+286
+00:40:58,880 --> 00:41:06,960
+security because we are based in gdpr country also with the data protection as well that we have
+
+287
+00:41:07,600 --> 00:41:18,400
+well the regarded that we have some dean or eso norms the iso 27000 and one is for example one
+
+288
+00:41:18,400 --> 00:41:26,000
+regarding data security data privacy in this case stuff like that for well this case one specific
+
+289
+00:41:26,000 --> 00:41:36,080
+company with the er seminar we even market more or less we market the gdpr as a unique selling
+
+290
+00:41:36,080 --> 00:41:44,240
+point of our company and we specifically target in this case for example lawyers or doctors or
+
+291
+00:41:44,800 --> 00:41:52,720
+other in germany you wouldn't you would call it a professional secret carrier so the most nearest
+
+292
+00:41:52,720 --> 00:42:01,440
+translation would be you are secret keepers based on your job when you are a lawyer you
+
+293
+00:42:01,440 --> 00:42:08,800
+are forbidden in germany you are forbidden to use messengers like whatsapp or skype etc
+
+294
+00:42:08,800 --> 00:42:17,360
+you have to use secure messengers in this case like threema or like signal or the messengers
+
+295
+00:42:17,360 --> 00:42:23,120
+like with elements which are you which are using the matrix standard stuff like that
+
+296
+00:42:23,920 --> 00:42:28,800
+lawyers in germany have normally at least legally have to use it as well
+
+297
+00:42:32,800 --> 00:42:42,640
+so this could be a good entry point for matomo as well that you can contact or that you can market
+
+298
+00:42:42,640 --> 00:42:51,120
+yourself for example for companies or for public authorities public authorities have to have even
+
+299
+00:42:51,120 --> 00:42:59,440
+more scrutiny rules to follow regarding data protection okay but what we take from here is
+
+300
+00:42:59,440 --> 00:43:06,880
+well remote work is more prevalent the dangers for data privacy are more apparent and well
+
+301
+00:43:06,880 --> 00:43:14,880
+fact how do we approach the matter so in this case we can do it regarding the gdpr compliance
+
+302
+00:43:14,880 --> 00:43:26,080
+that we put the gdpr as well the biggest selling point for matomo also that companies can check
+
+303
+00:43:26,080 --> 00:43:34,000
+for themselves what matomo collects from data and also that they when they used not an on-premise
+
+304
+00:43:34,000 --> 00:43:39,440
+but download variant of matomo that they have total control over their data
+
+305
+00:43:41,600 --> 00:43:46,480
+okay and with more or less good landing in this case sorry
+
+306
+00:43:48,960 --> 00:43:56,800
+i'm at the end of my talk and well if we have still time left for q&a please everyone shoot
+
+307
+00:43:56,800 --> 00:44:05,440
+in any case i thank you very much and well stay good stay healthy and much success in every part
+
+308
+00:44:05,440 --> 00:44:12,480
+of your life okay but if there are any q&a stuff going on any questions please
+
+309
+00:44:12,480 --> 00:44:23,920
+please okay i guess that was silence also no question from silver so i guess we're through
+
+310
+00:44:23,920 --> 00:44:33,440
+in this case yes there are no further questions in the chat so i'd simply invite people to continue
+
+311
+00:44:33,440 --> 00:44:40,480
+the conversation there if some other question related to christians.com or something like that
+
+312
+00:44:40,480 --> 00:44:46,560
+related to christian's topic comes up thank you for your talk it was very interesting
+
+313
+00:44:48,560 --> 00:44:55,680
+uh well thank you as well for having me here all right so good luck everyone
+
+314
+00:44:55,680 --> 00:45:01,920
+and if there are any questions you can contact me anytime just google my name you can find me
+
+315
+00:45:01,920 --> 00:45:11,280
+all right so have a nice day everyone bye thank you
+

@@ -1,0 +1,1104 @@
+1
+00:00:00,000 --> 00:00:11,200
+Okay, and with that, I'd like to start the next talk.
+
+2
+00:00:11,200 --> 00:00:15,440
+It is once again going to be a talk by Thomas Persson, and I'm once again going to do a
+
+3
+00:00:15,440 --> 00:00:16,440
+small introduction.
+
+4
+00:00:16,440 --> 00:00:22,600
+He is a business developer at Digitalist Sweden, and he has worked with Tracking Digital Analytics
+
+5
+00:00:22,600 --> 00:00:28,720
+since 2010, and has been a contributor to open source since 2007.
+
+6
+00:00:28,720 --> 00:00:33,040
+Tracking SBA applications is something that often leads to bad data and frustrations.
+
+7
+00:00:33,040 --> 00:00:39,840
+In his talk, Tracking SBA Applications with Matomo, Thomas wishes best practices and demo
+
+8
+00:00:39,840 --> 00:00:41,520
+how to make it work.
+
+9
+00:00:41,520 --> 00:00:42,520
+Thank you.
+
+10
+00:00:42,520 --> 00:00:47,520
+All right, thanks.
+
+11
+00:00:47,520 --> 00:00:56,720
+Let's see how this goes, fourth presentation for two days now, hope my voice don't crack
+
+12
+00:00:56,720 --> 00:00:57,720
+too much.
+
+13
+00:00:57,720 --> 00:01:07,160
+All right, so yeah, generalists and working for Digitalist, we are an open source loving
+
+14
+00:01:07,160 --> 00:01:14,640
+organizations that provides expertise around Matomo, for instance, we sell a SaaS service
+
+15
+00:01:14,640 --> 00:01:19,760
+and help our clients with consulting around Matomo.
+
+16
+00:01:19,760 --> 00:01:24,040
+We're also developing plugins for Matomo.
+
+17
+00:01:24,040 --> 00:01:32,000
+So in this presentation, I will talk about single page applications, and let's start
+
+18
+00:01:32,000 --> 00:01:37,720
+by answering the question, or actually, it's not me answering, I think it's a Google in
+
+19
+00:01:37,720 --> 00:01:42,880
+this case, or a Wikipedia descriptions, but what is a single page application?
+
+20
+00:01:42,880 --> 00:01:47,800
+So let me read it out loud, a single page application is a web application or a website
+
+21
+00:01:47,800 --> 00:01:53,920
+that interacts with the user dynamically, rewriting the current web page with new data
+
+22
+00:01:53,920 --> 00:02:00,000
+from the web server, instead of the default method of a web browser loading entirely new
+
+23
+00:02:00,000 --> 00:02:01,160
+pages.
+
+24
+00:02:01,160 --> 00:02:05,680
+So what does this really mean?
+
+25
+00:02:05,680 --> 00:02:07,560
+Let's look at the next page.
+
+26
+00:02:07,560 --> 00:02:17,640
+And hopefully, we can see a little bit of an example of this little video we play.
+
+27
+00:02:17,640 --> 00:02:25,200
+So in this case, this is a single page application, and what's significant here is that we're
+
+28
+00:02:25,200 --> 00:02:32,560
+rewriting the page in comparison to this one, you can see that the whole page is reloading
+
+29
+00:02:32,560 --> 00:02:37,720
+and you can see that little refresh, I'm going to do it again.
+
+30
+00:02:37,720 --> 00:02:43,080
+So up on the left hand, you can see that now we're not reloading the page, we're just quickly
+
+31
+00:02:43,080 --> 00:02:49,480
+rewriting the URL, but it's not really happening, but when I switch to the Matoma org website,
+
+32
+00:02:49,480 --> 00:02:53,680
+we can see that the actual whole page gets refreshed.
+
+33
+00:02:53,680 --> 00:02:58,840
+So that's the main difference where we're dynamically loading data into the browser
+
+34
+00:02:58,840 --> 00:03:05,020
+without actually refreshing the browser in the traditional way.
+
+35
+00:03:05,020 --> 00:03:13,280
+So examples of frameworks for single page applications are Angular or React or Vue.js,
+
+36
+00:03:13,280 --> 00:03:19,700
+there are a lot more examples, but these are probably the biggest three frameworks.
+
+37
+00:03:19,700 --> 00:03:27,440
+As you might know, Angular is used in Matoma to create the widgets and we're actually switching
+
+38
+00:03:27,440 --> 00:03:31,960
+over to Vue now, which I think is a nice move.
+
+39
+00:03:31,960 --> 00:03:38,080
+So I think that is supported from 4.5 and I've seen that the interface has been starting
+
+40
+00:03:38,080 --> 00:03:39,840
+to be rewritten in Matoma.
+
+41
+00:03:39,840 --> 00:03:45,880
+So actually when you go into the Matoma interface to load different reports, you can actually
+
+42
+00:03:45,880 --> 00:03:48,840
+see a single page application in place.
+
+43
+00:03:48,840 --> 00:03:55,400
+We are refreshing Matoma's interface without actually reloading the whole page.
+
+44
+00:03:55,400 --> 00:04:06,080
+All right, so when it comes to tracking these applications or working with them in general,
+
+45
+00:04:06,080 --> 00:04:13,480
+it requires us to, because page views is kind of the fundament of web analytics or the internet
+
+46
+00:04:13,480 --> 00:04:20,840
+or the web, I should say, not the internet, but the web is basically based on page views
+
+47
+00:04:20,840 --> 00:04:27,160
+and links and since we don't really have that, we need to fake these page views.
+
+48
+00:04:27,160 --> 00:04:33,760
+Normally, when you refresh a page, you have a browser event called page view and that's
+
+49
+00:04:33,760 --> 00:04:38,720
+actually what we refer to when we track page views.
+
+50
+00:04:38,720 --> 00:04:47,800
+So instead of doing that, we need to use another event happening in the browser when we reload
+
+51
+00:04:47,800 --> 00:04:48,800
+the page.
+
+52
+00:04:48,800 --> 00:04:54,240
+So if I go back to this little page and I click on the link, we can still see that this
+
+53
+00:04:54,240 --> 00:04:56,040
+one has changed the URL.
+
+54
+00:04:56,040 --> 00:05:02,920
+So we are having an event called history change and that's the event we will start using instead
+
+55
+00:05:02,920 --> 00:05:06,200
+of the traditional page view event.
+
+56
+00:05:06,200 --> 00:05:09,880
+Yeah, an application can look like this.
+
+57
+00:05:09,880 --> 00:05:17,120
+You start to create a URL structure that matches a real website, but you're not really refreshing
+
+58
+00:05:17,120 --> 00:05:18,120
+the website.
+
+59
+00:05:18,120 --> 00:05:28,240
+One example is to add the hash sign and then apply new URLs and it's more correct to call
+
+60
+00:05:28,240 --> 00:05:34,280
+it a context in the application than a real URL, but in this case, we're not having the
+
+61
+00:05:34,280 --> 00:05:42,720
+hash but we're actually rewriting the URL so it looks like a real URL.
+
+62
+00:05:42,720 --> 00:05:48,820
+So basic tracking in Matomo has to be done differently.
+
+63
+00:05:48,820 --> 00:05:53,680
+So instead of using the traditional page view event in the Tag Manager, we need to use the
+
+64
+00:05:53,680 --> 00:05:55,480
+history change event.
+
+65
+00:05:55,480 --> 00:05:59,720
+I will demo this soon as well.
+
+66
+00:05:59,720 --> 00:06:05,760
+And of course, you will need to add the Tag Manager script to your application and then
+
+67
+00:06:05,760 --> 00:06:11,800
+you create the standard tag of the type page view, but you use the history event instead
+
+68
+00:06:11,800 --> 00:06:13,220
+of the page view event.
+
+69
+00:06:13,220 --> 00:06:18,800
+So let's have a look at how that might be displayed.
+
+70
+00:06:18,800 --> 00:06:22,040
+So I actually have both examples here in this setup.
+
+71
+00:06:22,040 --> 00:06:27,760
+I have this one which I call the just page view and we have a trigger called page view
+
+72
+00:06:27,760 --> 00:06:33,840
+on this one and then I have the virtual page views or virtual page views and here I'm using
+
+73
+00:06:33,840 --> 00:06:37,760
+the trigger called history change.
+
+74
+00:06:37,760 --> 00:06:42,640
+So if you're familiar with the Tag Manager, you can go into the traditional one and we're
+
+75
+00:06:42,640 --> 00:06:50,200
+having a trigger here and if I edit this trigger, it's of the type page view and nothing really
+
+76
+00:06:50,200 --> 00:06:51,200
+different there.
+
+77
+00:06:51,200 --> 00:07:04,880
+But for this page view, I'm having the history change event and let's go and look instead.
+
+78
+00:07:04,880 --> 00:07:07,800
+Let's just start from scratch.
+
+79
+00:07:07,800 --> 00:07:12,880
+If you have an empty container, you need to click this one and you actually have an event
+
+80
+00:07:12,880 --> 00:07:17,800
+further down here prepared in the Matomo tag when you call the history change.
+
+81
+00:07:17,800 --> 00:07:22,120
+So you can just use that, give it a name and start using it.
+
+82
+00:07:22,120 --> 00:07:27,720
+I want to create a duplicate here because I already have it in place, but that's basically
+
+83
+00:07:27,720 --> 00:07:30,920
+what you need to do.
+
+84
+00:07:30,920 --> 00:07:37,360
+Depending on how well your single page application is written, you might end up in different
+
+85
+00:07:37,360 --> 00:07:43,320
+problems and I will talk a little bit more about that, but first look at the example
+
+86
+00:07:43,320 --> 00:07:45,500
+we have here.
+
+87
+00:07:45,500 --> 00:07:50,840
+So I actually have the tracking going on under the hood.
+
+88
+00:07:50,840 --> 00:07:58,360
+So when I click on different URLs here, you can see in my network console that I'm actually
+
+89
+00:07:58,360 --> 00:08:00,520
+sending data to Matomo.
+
+90
+00:08:00,520 --> 00:08:02,920
+So let's see what happens.
+
+91
+00:08:02,920 --> 00:08:07,460
+I will refresh and look at the visitor log for my particular instance.
+
+92
+00:08:07,460 --> 00:08:13,920
+So what you can see here is that I'm actually getting the full URLs and it seems like I
+
+93
+00:08:13,920 --> 00:08:20,600
+get the tracking going on when I just switched the context and I also have some title coming
+
+94
+00:08:20,600 --> 00:08:21,600
+in here.
+
+95
+00:08:21,600 --> 00:08:29,520
+So depending on what I'm looking for, beach, beach pictures seems to be matching this and
+
+96
+00:08:29,520 --> 00:08:30,520
+the URL.
+
+97
+00:08:30,520 --> 00:08:35,920
+So that seems to correct, but actually this application wasn't really written in a correct
+
+98
+00:08:35,920 --> 00:08:37,840
+way from a web perspective.
+
+99
+00:08:37,840 --> 00:08:45,280
+So I had to do some customizations to get this to work and we look into what that is.
+
+100
+00:08:45,280 --> 00:08:55,760
+So by default, when I send the page view, you can, yeah, actually the first page view
+
+101
+00:08:55,760 --> 00:09:02,760
+is the normal tracking and let's have a look at that, the page view and oh, sorry, I should
+
+102
+00:09:02,760 --> 00:09:05,880
+look at the tag.
+
+103
+00:09:05,880 --> 00:09:13,000
+So looking at the page view, you can see that the title and the URL is something we can
+
+104
+00:09:13,000 --> 00:09:22,160
+tweak, but I don't do that right now and that means that by default, Matomo will just fetch
+
+105
+00:09:22,160 --> 00:09:29,040
+the page title, which is a head attribute up here.
+
+106
+00:09:29,040 --> 00:09:35,160
+So the page title is SPA demo, which is this one up here.
+
+107
+00:09:35,160 --> 00:09:41,520
+But when I click the different URLs, it seems like the page title is never changed.
+
+108
+00:09:41,520 --> 00:09:45,700
+It's constantly saying just SPA demo.
+
+109
+00:09:45,700 --> 00:09:53,440
+So to manage that and to get correct reporting, as I actually have down here, you can see
+
+110
+00:09:53,440 --> 00:09:55,800
+that the title is likely changing.
+
+111
+00:09:55,800 --> 00:10:02,200
+I have to do some custom configurations because the application is not correctly written.
+
+112
+00:10:02,200 --> 00:10:07,720
+The correct way for the developers to do this would actually be to rewrite the page title
+
+113
+00:10:07,720 --> 00:10:13,120
+on every new load, but that doesn't happen.
+
+114
+00:10:13,120 --> 00:10:23,400
+So in my virtual page view, I fix this by having a look, I've created a custom variable
+
+115
+00:10:23,400 --> 00:10:30,560
+and I actually read the H2 element into that variable instead.
+
+116
+00:10:30,560 --> 00:10:35,800
+We also have to fix this in a virtual page view.
+
+117
+00:10:35,800 --> 00:10:41,720
+We have to fetch an element called the history hash new URL.
+
+118
+00:10:41,720 --> 00:10:46,560
+And this is actually a built-in variable in the Matomo Tag Manager.
+
+119
+00:10:46,560 --> 00:10:52,920
+Further down here, you have a lot of history related variables that you can use.
+
+120
+00:10:52,920 --> 00:11:02,680
+So in this case, the hash new URL, this one, I think it is, history new URL, yes, actually
+
+121
+00:11:02,680 --> 00:11:05,640
+contains the new rewritten URL.
+
+122
+00:11:05,640 --> 00:11:08,160
+So that's nice.
+
+123
+00:11:08,160 --> 00:11:16,520
+If I don't have anything, sometimes I've seen applications where you don't really have a
+
+124
+00:11:16,520 --> 00:11:21,480
+correct title that you can actually read or an element on the page.
+
+125
+00:11:21,480 --> 00:11:27,560
+One thing you might want to do is to just get the last piece of the URL and send that
+
+126
+00:11:27,560 --> 00:11:28,560
+as a title.
+
+127
+00:11:28,560 --> 00:11:34,880
+So you at least get something more correctly describing the page.
+
+128
+00:11:34,880 --> 00:11:41,040
+And to do so, you would create another variable and read the last part of the URL and send
+
+129
+00:11:41,040 --> 00:11:42,040
+that instead.
+
+130
+00:11:42,040 --> 00:11:47,920
+But in this case, I could use the H2 tag.
+
+131
+00:11:47,920 --> 00:11:51,800
+We can have a look at that one as well.
+
+132
+00:11:51,800 --> 00:11:56,840
+So I'm creating a variable of the type DOM.
+
+133
+00:11:56,840 --> 00:12:02,520
+And with a CSS selector, I can just pick H2 and it will read it out.
+
+134
+00:12:02,520 --> 00:12:07,560
+You obviously have to test this for your site because actually a page can have multiple
+
+135
+00:12:07,560 --> 00:12:08,560
+H2.
+
+136
+00:12:08,560 --> 00:12:12,680
+So it could be a bit dangerous to just do it that way.
+
+137
+00:12:12,680 --> 00:12:18,200
+But for this particular case, it works pretty well.
+
+138
+00:12:18,200 --> 00:12:27,760
+So common challenges, as I said, the new page title is not set on history change.
+
+139
+00:12:27,760 --> 00:12:31,800
+Sometimes we don't even have URLs rewritten at all.
+
+140
+00:12:31,800 --> 00:12:36,240
+You might have single page applications that doesn't rewrite the URL.
+
+141
+00:12:36,240 --> 00:12:41,040
+But you still want tracking.
+
+142
+00:12:41,040 --> 00:12:47,680
+Maybe the only thing being rewritten here is the H2.
+
+143
+00:12:47,680 --> 00:12:52,040
+In that case, you could actually fake that as well.
+
+144
+00:12:52,040 --> 00:12:58,400
+I would go to the tag because sometimes you just want to understand how users behave even
+
+145
+00:12:58,400 --> 00:13:00,640
+though your application is poorly written.
+
+146
+00:13:00,640 --> 00:13:07,280
+So in that case, you could go in here, you could use the H2 and send that in as a URL,
+
+147
+00:13:07,280 --> 00:13:12,480
+for instance, to at least fake or simulate that you're tracking the correct behavior.
+
+148
+00:13:12,480 --> 00:13:16,920
+The best way is, of course, to ask the developers to rebuild the applications.
+
+149
+00:13:16,920 --> 00:13:22,280
+But sometimes that will take time or be able to do in a few months or something like that.
+
+150
+00:13:22,280 --> 00:13:29,800
+So it can be a quick workaround to actually set it up in your application.
+
+151
+00:13:29,800 --> 00:13:40,160
+Another thing that can be a bit tricky is event tracking because sometimes these applications
+
+152
+00:13:40,160 --> 00:13:47,600
+are dynamically reloading and it's hard to do it in a traditional way.
+
+153
+00:13:47,600 --> 00:13:57,200
+So in more advanced examples, I've actually been setting up, let's see, let's see where
+
+154
+00:13:57,200 --> 00:14:06,960
+I have that, these are the configurations, yes.
+
+155
+00:14:06,960 --> 00:14:10,560
+So this was actually written in Swedish, but that doesn't matter.
+
+156
+00:14:10,560 --> 00:14:22,320
+But you can actually do that by pushing, this requires more advanced setups, but in some
+
+157
+00:14:22,320 --> 00:14:27,960
+cases, you have so much logic going on in your single page application.
+
+158
+00:14:27,960 --> 00:14:35,240
+So instead of controlling all these things in the Tag Manager, you rather set up custom
+
+159
+00:14:35,240 --> 00:14:44,360
+events in the Tag Manager and just waits for your application to send events like this
+
+160
+00:14:44,360 --> 00:14:50,960
+on the left side and push data into your single application.
+
+161
+00:14:50,960 --> 00:14:56,600
+This is also the way to do it with custom events.
+
+162
+00:14:56,600 --> 00:15:02,560
+So if you're, for instance, having forms submitted in your application or something like that,
+
+163
+00:15:02,560 --> 00:15:09,760
+you can actually ask your developers to use this MTM push event, custom event, it would
+
+164
+00:15:09,760 --> 00:15:16,800
+say, and then you would send event category name and actions and value into Matomo and
+
+165
+00:15:16,800 --> 00:15:19,240
+pick it up and post that.
+
+166
+00:15:19,240 --> 00:15:23,960
+I've been doing a few of those implementations as well.
+
+167
+00:15:23,960 --> 00:15:35,240
+Yeah, so let's see, no, that's not the correct description.
+
+168
+00:15:35,240 --> 00:15:40,800
+But actually, it was quite fast, this presentation.
+
+169
+00:15:40,800 --> 00:15:49,640
+Let's see if there are questions and open up for that.
+
+170
+00:15:49,640 --> 00:15:51,960
+Yeah, thank you.
+
+171
+00:15:51,960 --> 00:16:04,640
+So if there are any questions, please type them up now.
+
+172
+00:16:04,640 --> 00:16:27,200
+I hope that was to some use, at least I'm pretty sure it was.
+
+173
+00:16:27,200 --> 00:16:32,480
+There seem to be no questions though, at least up until now.
+
+174
+00:16:32,480 --> 00:16:37,480
+So let's do it the traditional way, I will be checking the chat.
+
+175
+00:16:37,480 --> 00:16:47,120
+So please write questions there and I will have a look and try to write it down.
+
+176
+00:16:47,120 --> 00:16:53,440
+The last tip could maybe be to, there is actually a single page application tracking guide,
+
+177
+00:16:53,440 --> 00:16:56,320
+because it can be pretty complicated.
+
+178
+00:16:56,320 --> 00:17:00,720
+Okay, so now we got one.
+
+179
+00:17:00,720 --> 00:17:17,200
+Ask the tag manager to capture custom variables, I guess, or I don't really, I don't know if
+
+180
+00:17:17,200 --> 00:17:28,200
+I want to capture custom variables, you shouldn't actually use custom variables, but I'll show
+
+181
+00:17:28,200 --> 00:17:34,640
+you what to do in the configuration variable, you have something called custom dimensions.
+
+182
+00:17:34,640 --> 00:17:38,520
+That's actually the feature you should use instead of custom variables.
+
+183
+00:17:38,520 --> 00:17:42,360
+Custom variables are deprecated in Matomo.
+
+184
+00:17:42,360 --> 00:17:49,680
+So what you can do here is if you have a custom dimension, you basically set the index number
+
+185
+00:17:49,680 --> 00:17:56,360
+you have from creating it, and then you use the variable here to send whatever data you
+
+186
+00:17:56,360 --> 00:17:57,360
+want to send.
+
+187
+00:17:57,360 --> 00:18:03,840
+So if you have some meta tags on the page containing the tag of the page or whatever,
+
+188
+00:18:03,840 --> 00:18:07,800
+you can set custom dimensions this way.
+
+189
+00:18:07,800 --> 00:18:12,840
+So I hope that answers that.
+
+190
+00:18:12,840 --> 00:18:17,640
+He did add something to it, he said, to me, it looks like you're pushing custom variables
+
+191
+00:18:17,640 --> 00:18:18,640
+to tag manager.
+
+192
+00:18:18,640 --> 00:18:20,640
+So I don't know if that's specific.
+
+193
+00:18:20,640 --> 00:18:32,640
+But then I think I know what he means, because we're pushing to, how should I explain this?
+
+194
+00:18:32,640 --> 00:18:41,640
+You can, maybe I should actually do some drawing here too, but I don't.
+
+195
+00:18:41,640 --> 00:18:47,840
+So there are two ways to tag manager can actually, let's check, I can maybe do this example.
+
+196
+00:18:47,840 --> 00:18:52,360
+Let's create a custom event.
+
+197
+00:18:52,360 --> 00:19:04,960
+We create a custom event called test, and we're actually getting the way to send custom events
+
+198
+00:19:04,960 --> 00:19:06,320
+down here.
+
+199
+00:19:06,320 --> 00:19:08,440
+So we can use this code.
+
+200
+00:19:08,440 --> 00:19:21,040
+So if we have the custom event called test, create a new trigger, and we can then execute
+
+201
+00:19:21,040 --> 00:19:23,700
+some code when this happens.
+
+202
+00:19:23,700 --> 00:19:42,560
+So let's create a custom HTML tag, and it's important in your coding, sorry, we should
+
+203
+00:19:42,560 --> 00:19:59,600
+do this, then we do that on the custom event called test, and we create a new tag.
+
+204
+00:19:59,600 --> 00:20:06,320
+So I'm just trying to explain the basic here.
+
+205
+00:20:06,320 --> 00:20:14,640
+So I will do that, I will go to the application, and I will open the console.
+
+206
+00:20:14,640 --> 00:20:21,440
+And now I can send this custom event, and we call it test.
+
+207
+00:20:21,440 --> 00:20:26,360
+And hopefully this will trigger my code firing the alert.
+
+208
+00:20:26,360 --> 00:20:32,480
+So in this case, I didn't send any data to Motomo, but we can actually use the custom
+
+209
+00:20:32,480 --> 00:20:37,800
+events here to send whatever data into Motomo and handle it.
+
+210
+00:20:37,800 --> 00:20:44,080
+So this would actually be what your single page applications fire under the hood.
+
+211
+00:20:44,080 --> 00:20:55,360
+So if you go back and look at my application here, I would do something like this.
+
+212
+00:20:55,360 --> 00:21:10,000
+So in this case, I have a custom event called custom page view, and I'm setting these two,
+
+213
+00:21:10,000 --> 00:21:13,680
+I need to create these variables to catch this.
+
+214
+00:21:13,680 --> 00:21:24,120
+But I can fire this to Motomo, and then I need to have a custom event, custom page view event,
+
+215
+00:21:24,120 --> 00:21:30,560
+and then I can set up two variables that with data layer variables called custom URL.
+
+216
+00:21:30,560 --> 00:21:33,480
+Let's try this and see if I can do this.
+
+217
+00:21:33,480 --> 00:21:42,160
+Let's create a custom variable called, it should be of the type data layer, custom URL
+
+218
+00:21:42,160 --> 00:21:56,520
+like that, and then we need to create a custom title, so I will create a data layer variable.
+
+219
+00:21:56,520 --> 00:22:01,200
+Where do we have it?
+
+220
+00:22:01,200 --> 00:22:02,200
+Here we go.
+
+221
+00:22:02,200 --> 00:22:03,200
+Custom URL.
+
+222
+00:22:03,200 --> 00:22:04,200
+Okay.
+
+223
+00:22:04,200 --> 00:22:14,040
+Oh yeah, I did not already create it.
+
+224
+00:22:14,040 --> 00:22:20,640
+I forgot that it was a title I was supposed to, okay, it didn't copy and paste correctly.
+
+225
+00:22:20,640 --> 00:22:25,400
+Do it again.
+
+226
+00:22:25,400 --> 00:22:31,000
+Custom title, now it's correct, variable.
+
+227
+00:22:31,000 --> 00:22:39,400
+So now we have these, we have a trigger, we need to create the trigger called custom page
+
+228
+00:22:39,400 --> 00:22:55,040
+view, so create a new trigger of the type custom event like this, or custom page view.
+
+229
+00:22:55,040 --> 00:22:59,800
+So now I have a trigger that can listen to this.
+
+230
+00:22:59,800 --> 00:23:07,920
+And lastly, now I want to set up a new analytics type, I will send a page view, I will pick
+
+231
+00:23:07,920 --> 00:23:19,480
+up my custom title and my custom URL, and I will fire it on the custom page view event
+
+232
+00:23:19,480 --> 00:23:41,400
+that I will manually fire, create this tag, publish it, and then I will go to my page
+
+233
+00:23:41,400 --> 00:23:46,320
+and just reload it so I get the new version of the Tag Manager, and then let's just go
+
+234
+00:23:46,320 --> 00:23:50,600
+back to history and let's see if this works.
+
+235
+00:23:50,600 --> 00:24:00,160
+If I go to the network console now, I should have something collecting this, maybe I didn't,
+
+236
+00:24:00,160 --> 00:24:03,760
+oh yeah, there it is.
+
+237
+00:24:03,760 --> 00:24:05,720
+Let's look at the tracking later on as well.
+
+238
+00:24:05,720 --> 00:24:08,280
+My URL and my title.
+
+239
+00:24:08,280 --> 00:24:15,040
+So going to the single page application now, I've been actually able to, yes.
+
+240
+00:24:15,040 --> 00:24:17,120
+So here we have it.
+
+241
+00:24:17,120 --> 00:24:30,080
+So looking at the application again, this is what you would do, you will have your single
+
+242
+00:24:30,080 --> 00:24:34,880
+page application control this instead of doing it in the Tag Manager basically.
+
+243
+00:24:34,880 --> 00:24:39,160
+So you're just having this middle layer taking care of the data and sending it.
+
+244
+00:24:39,160 --> 00:24:44,400
+The same solution would work for event tracking.
+
+245
+00:24:44,400 --> 00:24:53,760
+In that case, you would create another tag of the type Matomo and you would go to event
+
+246
+00:24:53,760 --> 00:25:00,560
+and then create variables to contain category, action, name, and value, and then of course
+
+247
+00:25:00,560 --> 00:25:05,240
+create another event to listen to it.
+
+248
+00:25:05,240 --> 00:25:09,720
+That was maybe the more advanced example, but sometimes this is actually what you want
+
+249
+00:25:09,720 --> 00:25:18,520
+to do because single page application are often maintained and quite tricky and sometimes
+
+250
+00:25:18,520 --> 00:25:25,480
+you simply have better control of the event handling and the data in the application.
+
+251
+00:25:25,480 --> 00:25:29,840
+Usually in an application you have something called routing, for instance, and then it's
+
+252
+00:25:29,840 --> 00:25:36,200
+pretty easy to attach these functions into the application to get the page tracking correctly.
+
+253
+00:25:36,200 --> 00:25:42,760
+You could actually send page view data directly to your Matomo, you don't have to use the
+
+254
+00:25:42,760 --> 00:25:43,760
+Tag Manager.
+
+255
+00:25:43,760 --> 00:25:50,480
+However, I prefer using the Tag Manager as a middle layer here because that gives us
+
+256
+00:25:50,480 --> 00:25:57,920
+the option to actually manage things in between, even though it's possible to directly send
+
+257
+00:25:57,920 --> 00:26:03,520
+page view data in, it's actually pretty nice to have this middleman because then if there
+
+258
+00:26:03,520 --> 00:26:10,280
+are problems, for instance, you can start writing exceptions or blocking things or whatever.
+
+259
+00:26:10,280 --> 00:26:14,880
+It's pretty nice actually to do it that way.
+
+260
+00:26:14,880 --> 00:26:15,880
+Any other questions?
+
+261
+00:26:15,880 --> 00:26:16,880
+Okay.
+
+262
+00:26:16,880 --> 00:26:17,880
+Thank you.
+
+263
+00:26:17,880 --> 00:26:26,680
+We've got one more, which is, is the SPA event recorded as a page view?
+
+264
+00:26:26,680 --> 00:26:36,200
+The SPA event, okay, I think that was what I showed.
+
+265
+00:26:36,200 --> 00:26:44,440
+I hope that, so the event tracking was what was just displayed.
+
+266
+00:26:44,440 --> 00:26:45,440
+Okay.
+
+267
+00:26:45,440 --> 00:26:50,440
+Then hopefully it was answered correctly.
+
+268
+00:26:50,440 --> 00:26:54,480
+If there's still a question open, I'm pretty sure it's going to be asked again soon.
+
+269
+00:26:54,480 --> 00:26:59,160
+Yeah, there are new questions coming in now, so hang on.
+
+270
+00:26:59,160 --> 00:27:00,160
+Yeah.
+
+271
+00:27:00,160 --> 00:27:04,160
+Yes, seems to be the case.
+
+272
+00:27:04,160 --> 00:27:08,880
+Just a bit more typing.
+
+273
+00:27:08,880 --> 00:27:09,880
+Nope.
+
+274
+00:27:09,880 --> 00:27:16,480
+If that's all the questions, then I would like to thank you once again for another great
+
+275
+00:27:16,480 --> 00:27:17,480
+talk.
+
+276
+00:27:17,480 --> 00:27:24,480
+Thanks.
+

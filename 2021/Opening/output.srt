@@ -1,0 +1,576 @@
+1
+00:00:00,000 --> 00:00:16,560
+Okay, so it's currently 9.00 CST time and we are ready to start this historical moment
+
+2
+00:00:16,560 --> 00:00:24,640
+which is the first Matomo camp ever. Welcome to the Matomo camp opening ceremony. My name
+
+3
+00:00:24,640 --> 00:00:33,280
+is Renan and I'm here with Lucas Winkler. Lucas, can you hear us? Yes, I can hear you fine
+
+4
+00:00:33,280 --> 00:00:42,800
+and welcome to everyone here. So this Matomo camp opening ceremony will last about 30 minutes in
+
+5
+00:00:42,800 --> 00:00:48,800
+which we will explain to you what this Matomo camp is about, how you can take part of it as well
+
+6
+00:00:48,800 --> 00:00:56,160
+as presenting the different organizers, so as the different speakers that we will have during
+
+7
+00:00:56,160 --> 00:01:04,000
+the next two days. So what this event is about, this event is about spreading the knowledge
+
+8
+00:01:04,000 --> 00:01:11,760
+about Matomo Analytics which is the number one free software web analytics platform which of course
+
+9
+00:01:11,760 --> 00:01:19,920
+that most of you guys know which gives you 100% data ownership. If you don't know yet
+
+10
+00:01:19,920 --> 00:01:25,760
+Matomo, please do not hesitate to scan the QR code which is on this slide which will make you
+
+11
+00:01:25,760 --> 00:01:32,720
+land on matomo.org and you can as well already have a look at the solution if you just type
+
+12
+00:01:32,720 --> 00:01:43,600
+within your URL bar demove.matomo.cloud. So what is the history of the event? Why are we
+
+13
+00:01:43,600 --> 00:01:52,400
+holding it today? So in fact it just started with a bunch of Matomo passionate talking,
+
+14
+00:01:53,120 --> 00:02:02,480
+Lucas, myself and other guys and that's not probably the best storytelling ever that we're
+
+15
+00:02:02,480 --> 00:02:07,440
+going to have here but it's just like people talking together and saying hey why don't we
+
+16
+00:02:07,440 --> 00:02:17,200
+create a Matomo camp and here we are. So it's not about great ideas coming, it's just the fact that
+
+17
+00:02:17,200 --> 00:02:23,840
+we realized that it was probably the good time to organize one because we started to have a lot of
+
+18
+00:02:23,840 --> 00:02:30,320
+people from around the world asking a lot of questions, setting up businesses about Matomo
+
+19
+00:02:30,320 --> 00:02:37,280
+and then this is where we say okay we have a high interest of communicating together, of spreading
+
+20
+00:02:37,280 --> 00:02:44,800
+knowledge or helping our businesses, companies to grow, helping Matomo to develop and so on and so
+
+21
+00:02:44,800 --> 00:02:50,720
+forth and that's the reason why we decided to create an ambitious project which is a Matomo
+
+22
+00:02:50,720 --> 00:02:55,360
+camp which consists of spreading knowledge between all the people around the world.
+
+23
+00:02:55,360 --> 00:03:03,680
+We wanted when we created this event to keep the free software philosophy by saying that and mean
+
+24
+00:03:03,680 --> 00:03:10,000
+that we are excluding in organizing this event all the proprietary solution, all the proprietary
+
+25
+00:03:10,000 --> 00:03:18,320
+software in order to organize it and we decided to really challenge ourselves by using only
+
+26
+00:03:18,320 --> 00:03:26,080
+free software technology. So instead of taking just one technology which is gathering everything
+
+27
+00:03:26,080 --> 00:03:33,600
+that we needed, we take the bet that we could organize a quality event by just taking free
+
+28
+00:03:33,600 --> 00:03:40,240
+software pieces. So of course we would like to thank the community and of course the different
+
+29
+00:03:40,240 --> 00:03:46,480
+software editor of those free software platforms that we are using for this event. Of course by
+
+30
+00:03:46,480 --> 00:03:53,760
+starting by Matomo, Matomatics which is the number one free software web analytics platform,
+
+31
+00:03:53,760 --> 00:03:59,920
+then BigBlueButton which is the video conference software that we are using right now with Lucas
+
+32
+00:03:59,920 --> 00:04:07,840
+in order to make this conference. During all the event long you will have the possibility to chat
+
+33
+00:04:07,840 --> 00:04:15,760
+with all the communities through Element which is an instant chat messaging system. The different
+
+34
+00:04:15,760 --> 00:04:23,600
+files that we use for the organization of the events so as many different applications have
+
+35
+00:04:23,600 --> 00:04:32,560
+been used thanks to a solution which is named Nextcloud. Most of the servers which are running
+
+36
+00:04:32,560 --> 00:04:44,960
+the different apps that we have now are using an Nginx software platform. Lucas you can correct me
+
+37
+00:04:44,960 --> 00:04:51,680
+if I'm wrong but KDNLive is the software which is used in order to make the streaming part am I
+
+38
+00:04:51,680 --> 00:04:59,040
+right? And no it's a video editing software we will be using in the next weeks to edit together
+
+39
+00:04:59,040 --> 00:05:06,320
+all the recordings before we can publish them on the website. Oh great thanks. Before the event
+
+40
+00:05:06,320 --> 00:05:12,720
+we created a survey over the summer in order to know what were the expectations of the Matomo
+
+41
+00:05:12,720 --> 00:05:20,160
+community. We used for that a survey software named LimeSurvey. In order to organize the schedule,
+
+42
+00:05:20,160 --> 00:05:24,560
+gather all the different needs from the speakers, their presentation and so on and so forth.
+
+43
+00:05:25,360 --> 00:05:34,560
+We use a great software named Pretalks. In order to add the matomocamp.org website we use a famous
+
+44
+00:05:34,560 --> 00:05:42,960
+CMS named WordPress. In order to send the newsletter by which we collected the different
+
+45
+00:05:42,960 --> 00:05:51,440
+emails from matomocamp.org we used a software named PHPList. And as well in order to make people
+
+46
+00:05:51,440 --> 00:05:57,840
+interactive and more during the event we are using a software named WorkAdventure and I precise
+
+47
+00:05:57,840 --> 00:06:03,840
+that no free software were harmed during this organization. Maybe the logos when I try to
+
+48
+00:06:03,840 --> 00:06:10,320
+resize them for this given slide. And I apologize as well for all the other free software that we
+
+49
+00:06:10,320 --> 00:06:15,280
+may have used along the process but that I may have forgotten to add within these slides.
+
+50
+00:06:16,320 --> 00:06:24,000
+I would like to thank our partners for the event. This event is mostly relying on a very low budget
+
+51
+00:06:24,000 --> 00:06:30,480
+and as well on the best effort system which means that it's mostly relying on the time and energy
+
+52
+00:06:30,480 --> 00:06:35,920
+that each individual of the organizing team are putting on it. But I really would like to thank
+
+53
+00:06:35,920 --> 00:06:44,960
+in particular the Matomo team who accepted for us to use a logo which is similar to the one of
+
+54
+00:06:46,080 --> 00:06:54,640
+the Matomo. As well I would like to say huge thanks to Empreinte Digital who is the company
+
+55
+00:06:54,640 --> 00:07:00,560
+who is let's say running all the streaming infrastructure and who is putting a lot of human
+
+56
+00:07:00,560 --> 00:07:08,240
+resources and energy in holding this event. I would like as well to thank Mist Analytics who
+
+57
+00:07:08,240 --> 00:07:16,720
+invested some time and budget in order to create the logo. I would like as well to thank the Sonora
+
+58
+00:07:16,720 --> 00:07:27,200
+company who as well put some energy in it so as purchasing the domain name of matomocamp.org.
+
+59
+00:07:27,200 --> 00:07:31,760
+And as well I would like to thank Stairs for the investment that they make within the template of
+
+60
+00:07:31,760 --> 00:07:37,040
+the WordPress website. So to say we are really running this event with a very small budget
+
+61
+00:07:38,960 --> 00:07:45,840
+and I really would like to thank all the different individuals who are the organizers of the Matomo
+
+62
+00:07:45,840 --> 00:07:53,680
+Camp event because they gave a lot of their time. Mostly those are women and men business
+
+63
+00:07:54,480 --> 00:08:00,480
+and they really spent a lot of energies in this event on their working time.
+
+64
+00:08:01,440 --> 00:08:07,600
+About the organizing team, you will have the possibility to see all of them either as speakers
+
+65
+00:08:07,600 --> 00:08:14,160
+or as moderators. So I would like to thank Onsmore Lucas-Krinkler for all the involvement that he put
+
+66
+00:08:14,160 --> 00:08:21,520
+within the event, myself, so Renan Chardonneau. Silva Harapi, she's been the one in charge of
+
+67
+00:08:21,520 --> 00:08:26,800
+all the communication that you may have seen either on the website or either on the social network.
+
+68
+00:08:27,440 --> 00:08:34,240
+Peter Bolk who is the guy who deals with all the system administration part with the help of Lucas.
+
+69
+00:08:34,800 --> 00:08:41,440
+Frédéric Cain that you will have the chance to see as a moderator for the French speaking conferences
+
+70
+00:08:41,440 --> 00:08:47,520
+so as a speaker. Joachim Nichel as well who helped us in organizing the event.
+
+71
+00:08:48,160 --> 00:08:55,600
+Stefan Koning that you will have the chance to see during the Q&A session. Thomas Zeitnamer from
+
+72
+00:08:55,600 --> 00:09:04,720
+Germany, Thomas Pearson, Jorge Fabian and Mats from the Digitalist AB team in Sweden. Stefan
+
+73
+00:09:04,720 --> 00:09:11,680
+Gill from the Netherlands, Thomas Schoening from Germany and as well Guangri Li who helped us for the
+
+74
+00:09:11,680 --> 00:09:19,920
+sponsor part. I hope I did not forget anyone. Dealing with the speakers part, they are really
+
+75
+00:09:19,920 --> 00:09:24,800
+coming from all over the world and I really would like to thank them on small for taking part
+
+76
+00:09:24,800 --> 00:09:33,840
+of this event. So you will see Lucas, you will see myself. Joachim Richard-Stark will take the talk
+
+77
+00:09:33,840 --> 00:09:39,920
+in I think at 10 a.m. today who is from the InnoCraft team. So let's say the private entity
+
+78
+00:09:39,920 --> 00:09:47,120
+behind Matomo Analytics. You will get as well Nathan Freitas, you will get as well
+
+79
+00:09:47,680 --> 00:09:51,760
+the let's say I'm gonna call it like this the Italian team are represented by
+
+80
+00:09:52,400 --> 00:09:59,360
+Davide, Pierre Luigi and Claudio. We will have the chance as well to have Christian Alner,
+
+81
+00:09:59,360 --> 00:10:05,680
+Valentin Bares from Empreinte Digital, Bati Steven from Open Source Politics, Victor Vexjai
+
+82
+00:10:05,680 --> 00:10:12,720
+for a talk about privacy, Boris Boudini, Aurélie Pauls, Katie Newbay from the UK and Ronan Hello
+
+83
+00:10:12,720 --> 00:10:17,600
+from France. Once more I would like to thank all those speakers that we are going to have the
+
+84
+00:10:17,600 --> 00:10:30,000
+chance to have today from 9 a.m. to 5 p.m. and as well tomorrow from 9 to 5 p.m. CST time. Lucas,
+
+85
+00:10:30,640 --> 00:10:39,440
+I can give you the floor now. Yes, so I will be talking a bit about how you can participate
+
+86
+00:10:39,440 --> 00:10:44,880
+in the event. So of course most of you have already seen our nice schedule where you have a
+
+87
+00:10:44,880 --> 00:10:51,840
+nice time overview when which talk or workshop will take place to day and tomorrow. You might
+
+88
+00:10:52,720 --> 00:10:58,400
+probably have also seen our live streaming page live.motomocamp.org where all of our
+
+89
+00:10:59,440 --> 00:11:06,240
+talks are streamed live into two rooms at the same time and there you can also join the workshops
+
+90
+00:11:06,880 --> 00:11:14,240
+and can you go to the next slide please. And so if you want to participate in the event you can
+
+91
+00:11:14,240 --> 00:11:22,560
+watch all of the talks on live.motomocamp.org you can see the live streams there. If you want to
+
+92
+00:11:22,560 --> 00:11:30,320
+ask questions to the speakers we have a chat room for every single talk on chat.motomocamp.org or
+
+93
+00:11:31,200 --> 00:11:40,080
+the chat room is also visible below the live stream. And you can also find on chat.motomocamp.org
+
+94
+00:11:40,080 --> 00:11:47,280
+you can find multiple chat rooms where you can talk to other participants about Matomo,
+
+95
+00:11:47,280 --> 00:11:55,040
+about Matomo business related things and other topics. And as a slight bonus in case you don't
+
+96
+00:11:55,040 --> 00:12:01,680
+really care that much about the talks themselves and are more interested in meeting up with other
+
+97
+00:12:01,680 --> 00:12:09,120
+Matomo users and want to know their experience, talk to them, we have a work adventure platform
+
+98
+00:12:09,120 --> 00:12:17,840
+on meet.motomocamp.org and there you can join and talk to other people in groups or together
+
+99
+00:12:18,560 --> 00:12:26,560
+in a voice or video chat. So if you're interested in talking to other people you can go to meet.motomocamp.org
+
+100
+00:12:26,560 --> 00:12:33,520
+and one more note at the end the whole event is planned in central european time so at the moment
+
+101
+00:12:33,520 --> 00:12:41,440
+that's central that's UTC plus one hour. So if you are not from central europe please stay keep
+
+102
+00:12:41,440 --> 00:12:47,840
+that in mind whenever you look at the schedule and other things just so you don't arrive at the wrong
+
+103
+00:12:47,840 --> 00:12:58,080
+hour. So thanks that's it for me back to Renat. Okay yeah I just would like to precise just one
+
+104
+00:12:58,080 --> 00:13:04,240
+tiny thing is that you don't need to register to anything in order to attend the event you just
+
+105
+00:13:04,240 --> 00:13:13,200
+need to go on live.matomocamp.org and from the time schedule which will start in 10 am so in 45
+
+106
+00:13:13,200 --> 00:13:18,320
+minutes from now you will have the possibility to pick up either room number one or either room
+
+107
+00:13:18,320 --> 00:13:24,080
+number two so you just need to go on live.matomocamp.org and make the choice in order to see the
+
+108
+00:13:24,080 --> 00:13:30,160
+conference that you want to attend to. If you would like during this conference to ask questions
+
+109
+00:13:30,160 --> 00:13:36,160
+to the speaker the only thing that you need to do is that you need to go and chat.matomocamp.org
+
+110
+00:13:36,160 --> 00:13:44,000
+and here you will need to register to this platform and once you register to the platform
+
+111
+00:13:44,000 --> 00:13:49,040
+you will have the possibility to ask as many questions as you want to any conference that
+
+112
+00:13:49,040 --> 00:13:56,880
+you are looking at and or interact with any other Matomo users let's say attendees to the events
+
+113
+00:13:56,880 --> 00:14:03,040
+by using this platform so of course that's a great place in order to connect. Let's imagine that
+
+114
+00:14:03,040 --> 00:14:09,760
+you are looking for someone in order to help you about some Matomo issues that you are facing on
+
+115
+00:14:09,760 --> 00:14:15,920
+a day-to-day basis that's typically the place where you cannot do it but if you would like to
+
+116
+00:14:15,920 --> 00:14:22,560
+have more interaction like seeing the person that you like to discuss with in face-to-face
+
+117
+00:14:22,560 --> 00:14:30,000
+you can use this platform which is meet.matomocamp.org which does not require much registration as you
+
+118
+00:14:30,000 --> 00:14:37,440
+just need to put a nickname and you are ready to go so just to let you know that live.matomocamp.org
+
+119
+00:14:37,440 --> 00:14:43,600
+won't allow you to interact with the speakers that's through chat.matomocamp.org that you
+
+120
+00:14:43,600 --> 00:14:50,400
+can do it and that you can interact with other either through chat.matomocamp.org by text message
+
+121
+00:14:50,400 --> 00:14:59,680
+or either by video cam system on meet.matomocamp.org. And one more thing related to this if you have any
+
+122
+00:14:59,680 --> 00:15:07,920
+questions to ask the organizers have any troubles or unsure about how something works correctly
+
+123
+00:15:07,920 --> 00:15:14,640
+on chat.matomocamp.org we also have an info desk chat room where you can write something and we
+
+124
+00:15:14,640 --> 00:15:21,200
+will see it immediately and in case if something is broken enough that you can't even connect to
+
+125
+00:15:21,200 --> 00:15:28,640
+the chat you can also find the contact form on the Matomocamp website where you can send us a message
+
+126
+00:15:28,640 --> 00:15:39,040
+and we will reply via email. So we are a bit ahead of this time schedule we planned this opening
+
+127
+00:15:39,040 --> 00:15:46,480
+ceremony to be 30 minutes long and we made it in 15 minutes that's great because it gives you some
+
+128
+00:15:46,480 --> 00:15:54,880
+time to go on chat.matomocamp.org to already test the platform to see if you can register to it
+
+129
+00:15:54,880 --> 00:16:00,080
+easily to already start to connect with other attendees. You can of course go as well on
+
+130
+00:16:00,080 --> 00:16:08,160
+meet.matomocamp.org and start to connect with other people. Just to let you know that the
+
+131
+00:16:08,160 --> 00:16:15,360
+first session of today will start in 45 minutes from now so let's say 10 a.m. There's no reason
+
+132
+00:16:15,360 --> 00:16:22,800
+why they won't start on time so I think that at 10 a.m. it will be good. Probably out of the main
+
+133
+00:16:22,800 --> 00:16:32,080
+questions that you're going to ask is will those talk will be recorded? The answer is yes of course
+
+134
+00:16:32,080 --> 00:16:38,080
+we have some moderators and moderators have the responsibility to record each session and when
+
+135
+00:16:38,080 --> 00:16:44,720
+the sessions will be available well we may need of course to make some cut some adjustment within
+
+136
+00:16:44,720 --> 00:16:52,160
+the recording but they will probably arrive just some days after the event. Just to let you know
+
+137
+00:16:52,160 --> 00:17:00,560
+that one month before we created a pre-matomocamp event which was for topic the matomo tag manager
+
+138
+00:17:00,560 --> 00:17:07,440
+so it was a 45 minutes conference and this recording has been put online probably like
+
+139
+00:17:07,440 --> 00:17:13,360
+two or three days just after it so you can expect just a one week delay in order to have the recording
+
+140
+00:17:13,360 --> 00:17:19,520
+online it's not going to take like like a month. Lucas do you have anything that you would like to
+
+141
+00:17:19,520 --> 00:17:27,760
+add or say to our attendees today? No nothing for my end apart from of course wishing everyone a
+
+142
+00:17:27,760 --> 00:17:37,040
+nice matomocamp today and tomorrow. Okay that's great so yes welcome everyone to a matomocamp
+
+143
+00:17:37,040 --> 00:17:43,760
+enjoy it as much as you can. Next session will start at 10 a.m so in the meantime you can relax
+
+144
+00:17:43,760 --> 00:17:52,880
+and just create an account on chat.matomocamp.org. See you in 45 minutes for the first talks.
+
