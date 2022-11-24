@@ -17,9 +17,9 @@ replacements = {
     "Matamow": "Matomo",
     "Matahomo": "Matomo",
     "Matomo Camp": "MatomoCamp",
-    "matamocamp":"matomocamp",
-    "matumocamp":"matomocamp",
-    "motomocamp":"matomocamp",
+    "matamocamp": "matomocamp",
+    "matumocamp": "matomocamp",
+    "motomocamp": "matomocamp",
     "Big Blue Button": "BigBlueButton",
     "Lucas": "Lukas"
 }

@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:12,240
-Willkommen zum ersten Talk vom MatomoCamp, genau gesagt der einen der beiden ersten Talks,
+Willkommen zum ersten Talk vom Matomo Camp, genau gesagt der einen der beiden ersten Talks,
 
 2
 00:00:12,240 --> 00:00:17,680
