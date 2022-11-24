@@ -1,0 +1,5060 @@
+1
+00:00:00,000 --> 00:00:18,000
+Hello everyone, it is currently 13h00 and I am ready to start the conference that I had planned for today, which is called How to configure Matomo in the respect of the RGPD.
+
+2
+00:00:18,000 --> 00:00:24,000
+Before starting, I just want to make sure that the sound is ok. Frédéric, do you hear me correctly?
+
+3
+00:00:24,000 --> 00:00:26,000
+Yes, perfectly.
+
+4
+00:00:26,000 --> 00:00:42,000
+I am going to start this conference, which is scheduled from 13h00 to 13h45, including the different questions and answers that each of you may have in relation to this issue.
+
+5
+00:00:42,000 --> 00:00:55,000
+Do not hesitate to go to chat.matomocamp.org to register if you have not already done so, and once there, do not hesitate to ask questions in the room that is scheduled for this event.
+
+6
+00:00:55,000 --> 00:01:07,000
+Frédéric, who is the moderator of this conference, will ask these questions, either directly or at the end of the conference.
+
+7
+00:01:07,000 --> 00:01:21,000
+You can also ask questions throughout the MatomoCamp on this particular issue, whether today or tomorrow, since the Q&A room remains open.
+
+8
+00:01:21,000 --> 00:01:29,000
+I will perhaps, for the needs of the conference, keep a little more of a passing band and stop my camera.
+
+9
+00:01:29,000 --> 00:01:39,000
+The idea in this conference is first that I introduce myself, then that I present to you the objectives of this conference,
+
+10
+00:01:39,000 --> 00:01:48,000
+then to give you a definition of what the audience analysis is, since in a way it is what we are talking about today within the framework of the RGPD.
+
+11
+00:01:48,000 --> 00:01:53,000
+Then I will go over a definition of what personal data is in the sense of the RGPD.
+
+12
+00:01:53,000 --> 00:02:06,000
+Then I will deal with the exemption of consent with Matomo, which concerns the majority of the cases for which people will use Matomo and how to do that in respect of the RGPD.
+
+13
+00:02:06,000 --> 00:02:10,000
+Then I will address a part that we see quite few.
+
+14
+00:02:10,000 --> 00:02:18,000
+How do we do when we want to deal with personal data with Matomo and that we must recover the consent of the user?
+
+15
+00:02:18,000 --> 00:02:23,000
+And I will conclude this conference.
+
+16
+00:02:23,000 --> 00:02:29,000
+To introduce myself quickly, my name is Ronan Chardonneau.
+
+17
+00:02:29,000 --> 00:02:35,000
+I was lucky and honored to work for the Matomo team.
+
+18
+00:02:35,000 --> 00:02:38,000
+When we say the Matomo team, it means a lot of things.
+
+19
+00:02:38,000 --> 00:02:49,000
+I mainly worked for Inocraft from 2017 to 2019, which is the private company that is the main contributor to the development of Matomo.
+
+20
+00:02:49,000 --> 00:02:54,000
+In fact, it is not exactly true that I worked for the Matomo team, I worked for the Inocraft team.
+
+21
+00:02:54,000 --> 00:03:02,000
+But the Inocraft team being the main contributor to the Matomo project, in a way, through my work that I was able to do within the Inocraft company,
+
+22
+00:03:02,000 --> 00:03:12,000
+I was able to contribute to the development of the Matomo software and the Matomo software, in a way, I contributed a lot as a volunteer,
+
+23
+00:03:12,000 --> 00:03:17,000
+especially through the dissemination of knowledge, of tutorials that you can find on the Internet,
+
+24
+00:03:17,000 --> 00:03:24,000
+either on my Pertube channel, either on my YouTube channel, or also on different MOOCs that I was able to create,
+
+25
+00:03:24,000 --> 00:03:32,000
+including that of the Floss Marketing School, or also a MOOC that I was able to create on the Zest platform of knowledge, which is an association for non-profit purposes,
+
+26
+00:03:32,000 --> 00:03:39,000
+which releases tutorials, knowledge around different technologies or other knowledge.
+
+27
+00:03:39,000 --> 00:03:45,000
+What is interesting is that when I worked for Inocraft, from 2017 to 2019,
+
+28
+00:03:45,000 --> 00:03:53,000
+I was the person who was in charge of the implementation of the RGPD within the company.
+
+29
+00:03:53,000 --> 00:03:56,000
+And that allowed me to see a lot of things.
+
+30
+00:03:56,000 --> 00:04:03,000
+And the idea is, through this conference, and also the experience that I was able to have after leaving Inocraft,
+
+31
+00:04:03,000 --> 00:04:07,000
+to be able to share a little bit of all this in today's conference.
+
+32
+00:04:07,000 --> 00:04:14,000
+I am a trainee and independent consultant on Matomo, formerly it was not Matomo, it was called P-Week.
+
+33
+00:04:14,000 --> 00:04:25,000
+Since 2010, I have been one of the very first people to have a certain way to bet on P-Week, on Matomo,
+
+34
+00:04:25,000 --> 00:04:32,000
+and to have decided to build a whole structure, a whole business around that,
+
+35
+00:04:32,000 --> 00:04:39,000
+which is in particular the subject of a conference that will take place just after, from 2pm to 3pm, which I will do in English,
+
+36
+00:04:39,000 --> 00:04:44,000
+where I will explain how to develop an economic activity around Matomo.
+
+37
+00:04:44,000 --> 00:04:49,000
+This is my main job, I have been a trainee and independent consultant on Matomo since 2010,
+
+38
+00:04:49,000 --> 00:04:56,000
+and I am also the head of social and e-danger conferences that I have been in digital marketing,
+
+39
+00:04:56,000 --> 00:05:01,000
+now we call it digital marketing, since 2012.
+
+40
+00:05:01,000 --> 00:05:09,000
+In fact, I am training students in digital marketing, and for the past few years now,
+
+41
+00:05:09,000 --> 00:05:14,000
+I have been trying to bring them knowledge in digital marketing using free software,
+
+42
+00:05:14,000 --> 00:05:20,000
+and Matomo is naturally the one I am going to talk about the most.
+
+43
+00:05:20,000 --> 00:05:27,000
+I have a third activity that is quite recent, which is that I am an international expert on the subject of free software
+
+44
+00:05:27,000 --> 00:05:31,000
+from the Ministry of Higher Education, Research and Innovation,
+
+45
+00:05:31,000 --> 00:05:34,000
+on the subject of open science.
+
+46
+00:05:34,000 --> 00:05:42,000
+It consists of going abroad and being the spokesperson, the ambassador of the government
+
+47
+00:05:42,000 --> 00:05:47,000
+to explain what the government's policy is in terms of open science,
+
+48
+00:05:47,000 --> 00:05:51,000
+and in particular what is the policy that is carried out by the government
+
+49
+00:05:51,000 --> 00:05:56,000
+around the release of software produced by researchers
+
+50
+00:05:56,000 --> 00:06:02,000
+that in a certain way must be in free access and under license.
+
+51
+00:06:02,000 --> 00:06:04,000
+So this is a project that is brand new for me,
+
+52
+00:06:04,000 --> 00:06:08,000
+I may have the opportunity to talk about it in other conferences later.
+
+53
+00:06:08,000 --> 00:06:13,000
+And I am also the creator of a platform called Flossmarketingschool.com
+
+54
+00:06:13,000 --> 00:06:17,000
+that I strongly advise you to go and consult,
+
+55
+00:06:17,000 --> 00:06:24,000
+it is an internet site on which I actually release all the courses that I provide at e-danger,
+
+56
+00:06:24,000 --> 00:06:29,000
+these are courses in free access, you have tutorials,
+
+57
+00:06:29,000 --> 00:06:34,000
+textual explanations, you also have exercises,
+
+58
+00:06:34,000 --> 00:06:42,000
+and it's really great if you want to educate yourself in free software and digital marketing.
+
+59
+00:06:42,000 --> 00:06:47,000
+So the objective of the conference will be the following,
+
+60
+00:06:47,000 --> 00:07:00,000
+is that you discover how to learn how to get in concrete conformity with Matomo for the RGPD,
+
+61
+00:07:00,000 --> 00:07:03,000
+so I will share my screen, I will show you the different contents,
+
+62
+00:07:03,000 --> 00:07:06,000
+I will show you the back-end of Matomo,
+
+63
+00:07:06,000 --> 00:07:14,000
+what are the options through which you have to navigate to be in conformity.
+
+64
+00:07:14,000 --> 00:07:20,000
+If you have any questions, feel free to go to chat.matomocamp.org
+
+65
+00:07:20,000 --> 00:07:26,000
+and ask your questions, since it is through this intermediary that I will be able to help you even more,
+
+66
+00:07:26,000 --> 00:07:29,000
+to be closer to your needs.
+
+67
+00:07:29,000 --> 00:07:35,000
+So I will now advance a little, I will come back to this link a little later,
+
+68
+00:07:35,000 --> 00:07:40,000
+which is actually the key to the conference,
+
+69
+00:07:40,000 --> 00:07:49,000
+it is a guide that LACNIL has put online and which explains why in a certain way
+
+70
+00:07:49,000 --> 00:07:53,000
+and how software editors can be exempt from consent,
+
+71
+00:07:53,000 --> 00:07:57,000
+so it will be very interesting since it is a list of factors that are indicated
+
+72
+00:07:57,000 --> 00:08:02,000
+that explains how a software editor can be exempt from consent
+
+73
+00:08:02,000 --> 00:08:06,000
+and how we can collect data on users directly
+
+74
+00:08:06,000 --> 00:08:11,000
+without having offered them an acceptance list.
+
+75
+00:08:11,000 --> 00:08:15,000
+So the prerequisites for following this conference are the following.
+
+76
+00:08:15,000 --> 00:08:20,000
+I consider that for this conference, most of you already know the RGPD,
+
+77
+00:08:20,000 --> 00:08:27,000
+so if this is not the case, I strongly encourage you to go to the official link,
+
+78
+00:08:27,000 --> 00:08:30,000
+eur-lex.europa.eu,
+
+79
+00:08:30,000 --> 00:08:36,000
+on which you will find the official text of the RGPD which is 88 pages long.
+
+80
+00:08:36,000 --> 00:08:39,000
+Its reading and comprehension, to have it done,
+
+81
+00:08:39,000 --> 00:08:45,000
+require half a day of work or at least time to reflect, to read.
+
+82
+00:08:45,000 --> 00:08:51,000
+It is worth the investment in time, since it also allows you to be well educated,
+
+83
+00:08:51,000 --> 00:08:54,000
+well trained, what is the RGPD.
+
+84
+00:08:54,000 --> 00:08:59,000
+One of the basic rules of the RGPD is that the text must be readable and understandable to all,
+
+85
+00:08:59,000 --> 00:09:06,000
+so we are not on a document that needs to be BAC plus 15 to be able to read it.
+
+86
+00:09:06,000 --> 00:09:10,000
+And it's really very interesting because it allows you to see everything in the RGPD,
+
+87
+00:09:10,000 --> 00:09:14,000
+although not everything is concerned with everything that the RGPD says,
+
+88
+00:09:14,000 --> 00:09:19,000
+but it allows you to know what the RGPD is by a source of information
+
+89
+00:09:19,000 --> 00:09:23,000
+that has not been interpreted by a third that comes directly from the EU.
+
+90
+00:09:23,000 --> 00:09:27,000
+And that has its advantage.
+
+91
+00:09:27,000 --> 00:09:37,000
+Then I strongly recommend you to follow MOOCs that are related to the RGPD application or the RGPD in general.
+
+92
+00:09:37,000 --> 00:09:41,000
+Unfortunately, the MOOC edited by Acneel is currently in the process of reissue,
+
+93
+00:09:41,000 --> 00:09:45,000
+so if you go to it, it's a shame because the old version was very well done,
+
+94
+00:09:45,000 --> 00:09:47,000
+I think it could have gone online.
+
+95
+00:09:47,000 --> 00:09:51,000
+You will find it on this link because there is one day or the other where they will update it,
+
+96
+00:09:51,000 --> 00:09:57,000
+but it is good to know that they are in the process of renovation.
+
+97
+00:09:57,000 --> 00:10:00,000
+However, I know that when I started to educate myself on the RGPD,
+
+98
+00:10:00,000 --> 00:10:03,000
+Acneel had not yet released its online MOOC.
+
+99
+00:10:03,000 --> 00:10:06,000
+I had followed a training course by a Dutch university
+
+100
+00:10:06,000 --> 00:10:10,000
+which also apparently reviewed its MOOC.
+
+101
+00:10:10,000 --> 00:10:12,000
+It seems to me that it was this one, but I'm not sure.
+
+102
+00:10:12,000 --> 00:10:14,000
+I put the link there as an indicator.
+
+103
+00:10:14,000 --> 00:10:21,000
+I think you can easily type MOOC RGPD on a very well-known research engine
+
+104
+00:10:21,000 --> 00:10:23,000
+and easily find other MOOCs,
+
+105
+00:10:23,000 --> 00:10:26,000
+but I assume that to follow this conference,
+
+106
+00:10:26,000 --> 00:10:30,000
+you already know what a MINIMA is than the RGPD.
+
+107
+00:10:30,000 --> 00:10:38,000
+Before directly attacking the conformity of Matomo in the RGPD framework,
+
+108
+00:10:38,000 --> 00:10:43,000
+let's go back to the fundamentals and basically explain what we are talking about.
+
+109
+00:10:43,000 --> 00:10:45,000
+We are talking about Matomo.
+
+110
+00:10:45,000 --> 00:10:49,000
+What is Matomo? It is a solution in audience analysis.
+
+111
+00:10:49,000 --> 00:10:53,000
+The big question is what is a solution in audience analysis?
+
+112
+00:10:53,000 --> 00:10:59,000
+A solution in audience analysis is nothing more or less than a system of information.
+
+113
+00:10:59,000 --> 00:11:01,000
+It is just a database.
+
+114
+00:11:01,000 --> 00:11:04,000
+You have to understand what Matomo is.
+
+115
+00:11:04,000 --> 00:11:06,000
+It is a database.
+
+116
+00:11:06,000 --> 00:11:08,000
+It is a place that stores data.
+
+117
+00:11:08,000 --> 00:11:10,000
+What does it contain?
+
+118
+00:11:10,000 --> 00:11:14,000
+It contains traces of exchange between two computers,
+
+119
+00:11:14,000 --> 00:11:16,000
+between the computer that will be the client,
+
+120
+00:11:16,000 --> 00:11:18,000
+that is to say the visitor or the user,
+
+121
+00:11:18,000 --> 00:11:21,000
+if you have a mobile application, if you have an internet.
+
+122
+00:11:21,000 --> 00:11:23,000
+Taking a website is perhaps much simpler.
+
+123
+00:11:23,000 --> 00:11:27,000
+You have a visitor who arrives on your website.
+
+124
+00:11:27,000 --> 00:11:29,000
+Your website is hosted on what?
+
+125
+00:11:29,000 --> 00:11:31,000
+It is hosted on what is called a server.
+
+126
+00:11:31,000 --> 00:11:36,000
+You have a request that is made by a computer, that is to say a client,
+
+127
+00:11:36,000 --> 00:11:40,000
+and you have in front of you another computer that responds to it, which is called the server.
+
+128
+00:11:40,000 --> 00:11:43,000
+These two entities communicate via what?
+
+129
+00:11:43,000 --> 00:11:46,000
+They communicate via what we call HTTP requests.
+
+130
+00:11:46,000 --> 00:11:49,000
+What do these HTTP requests contain?
+
+131
+00:11:49,000 --> 00:11:57,000
+They contain information that is standard in communications between two computers,
+
+132
+00:11:57,000 --> 00:12:01,000
+which are the IP address of the client computer,
+
+133
+00:12:01,000 --> 00:12:04,000
+the time and date at which the request is made,
+
+134
+00:12:04,000 --> 00:12:07,000
+the page that is requested,
+
+135
+00:12:07,000 --> 00:12:09,000
+so the page that is requested is also a URL,
+
+136
+00:12:09,000 --> 00:12:12,000
+and via the URL the title of the page is also recovered.
+
+137
+00:12:12,000 --> 00:12:17,000
+The way in which the user came to the site,
+
+138
+00:12:17,000 --> 00:12:19,000
+how he or she knew it in a certain way,
+
+139
+00:12:19,000 --> 00:12:22,000
+which is called the URL reference,
+
+140
+00:12:22,000 --> 00:12:26,000
+is also transmitted behind everything that is going to be screen resolution.
+
+141
+00:12:26,000 --> 00:12:30,000
+Also through what is called the user agent,
+
+142
+00:12:30,000 --> 00:12:33,000
+the language of the browser is also transmitted.
+
+143
+00:12:33,000 --> 00:12:36,000
+And behind a little more information on the browser,
+
+144
+00:12:36,000 --> 00:12:40,000
+such as its version or the operating system on which it is used.
+
+145
+00:12:40,000 --> 00:12:44,000
+All this to tell you that this information is stored in a database.
+
+146
+00:12:44,000 --> 00:12:49,000
+I will maybe share my screen, it may be more explicit directly,
+
+147
+00:12:49,000 --> 00:12:53,000
+and that's why I think that Matomo is pretty great.
+
+148
+00:12:53,000 --> 00:12:56,000
+At least at Matomo you see what the database looks like.
+
+149
+00:12:56,000 --> 00:13:00,000
+Frédéric, do you see my screen well, what I share?
+
+150
+00:13:00,000 --> 00:13:02,000
+Yes, absolutely.
+
+151
+00:13:02,000 --> 00:13:06,000
+Typically, this is the database of Matomo.
+
+152
+00:13:06,000 --> 00:13:12,000
+This is what you have to install the day you install Matomo on the server of your choice.
+
+153
+00:13:12,000 --> 00:13:14,000
+We must not forget that Matomo, what makes it strong,
+
+154
+00:13:14,000 --> 00:13:16,000
+compared to all the other software on the market,
+
+155
+00:13:16,000 --> 00:13:18,000
+is that it is a free software.
+
+156
+00:13:18,000 --> 00:13:21,000
+It is a software that you directly recover on a site,
+
+157
+00:13:21,000 --> 00:13:23,000
+namely matomo.org.
+
+158
+00:13:23,000 --> 00:13:25,000
+Then, once you have this software,
+
+159
+00:13:25,000 --> 00:13:27,000
+you decide on the server on which you are going to install it.
+
+160
+00:13:27,000 --> 00:13:29,000
+And when you install it on a server,
+
+161
+00:13:29,000 --> 00:13:33,000
+you have to install what is called a database and it is there, our database.
+
+162
+00:13:33,000 --> 00:13:36,000
+This is where you have these famous HTTP requests
+
+163
+00:13:36,000 --> 00:13:39,000
+which contain data that have been extracted
+
+164
+00:13:39,000 --> 00:13:42,000
+and which have then been inserted into the database.
+
+165
+00:13:42,000 --> 00:13:46,000
+This is where we see, for example, the identifier of the visit,
+
+166
+00:13:46,000 --> 00:13:50,000
+the site on which you deployed Matomo.
+
+167
+00:13:50,000 --> 00:13:54,000
+You will then have everything that will be the IP address of the user.
+
+168
+00:13:54,000 --> 00:13:58,000
+You will have the location that will be represented here.
+
+169
+00:13:58,000 --> 00:14:01,000
+The information that we see here is not necessarily the most explicit,
+
+170
+00:14:01,000 --> 00:14:04,000
+but if we go a little more to the right,
+
+171
+00:14:04,000 --> 00:14:08,000
+we have directly information that we are more used to seeing,
+
+172
+00:14:08,000 --> 00:14:13,000
+namely the reference, namely the language of the navigator,
+
+173
+00:14:13,000 --> 00:14:18,000
+namely what type of engine is used,
+
+174
+00:14:18,000 --> 00:14:22,000
+basically which navigator, the version of the navigator, etc.
+
+175
+00:14:22,000 --> 00:14:28,000
+In the end, everything is recorded here in this famous database.
+
+176
+00:14:33,000 --> 00:14:37,000
+A solution for audience analysis, I remind you,
+
+177
+00:14:37,000 --> 00:14:41,000
+is just a database that contains the basic information
+
+178
+00:14:41,000 --> 00:14:47,000
+that has exchanges between a navigator, a client computer, and a server.
+
+179
+00:14:47,000 --> 00:14:54,000
+To make it simple, what are the personal data collected by default in Matomo?
+
+180
+00:14:54,000 --> 00:15:00,000
+In reality, in these famous personal data that we have, we don't have much.
+
+181
+00:15:00,000 --> 00:15:05,000
+Probably the most intrusive that we can have is the famous IP address
+
+182
+00:15:05,000 --> 00:15:10,000
+which also allows us to identify generally a home,
+
+183
+00:15:10,000 --> 00:15:14,000
+since the IP address is provided by your Internet access provider.
+
+184
+00:15:14,000 --> 00:15:17,000
+But in reality, it is especially dangerous if within a database,
+
+185
+00:15:17,000 --> 00:15:20,000
+you only have one person, since in this case,
+
+186
+00:15:20,000 --> 00:15:23,000
+it would mean that this IP address, at least one person,
+
+187
+00:15:23,000 --> 00:15:26,000
+your Internet access provider can know who is behind,
+
+188
+00:15:26,000 --> 00:15:31,000
+which is naturally less the case when in a database you have more individuals.
+
+189
+00:15:31,000 --> 00:15:34,000
+All this to tell you that already, in Matomo,
+
+190
+00:15:34,000 --> 00:15:39,000
+you don't have any information that is very personal.
+
+191
+00:15:39,000 --> 00:15:44,000
+Now, however, what you need to know is that in Matomo,
+
+192
+00:15:44,000 --> 00:15:50,000
+you can extend its data collection power with specific monitoring codes,
+
+193
+00:15:50,000 --> 00:15:56,000
+which are the object of a documentation found on developer.matomo.org,
+
+194
+00:15:56,000 --> 00:16:00,000
+which is represented by, for example, personalized dimensions,
+
+195
+00:16:00,000 --> 00:16:07,000
+which will be information, data that you can assign to your visitors,
+
+196
+00:16:07,000 --> 00:16:09,000
+which allows you to know more about them.
+
+197
+00:16:09,000 --> 00:16:12,000
+These data do not come from the Holy Spirit, naturally,
+
+198
+00:16:12,000 --> 00:16:16,000
+they come because they are already probably present on your website.
+
+199
+00:16:16,000 --> 00:16:22,000
+For example, you have an e-commerce site,
+
+200
+00:16:22,000 --> 00:16:26,000
+and on your e-commerce site, a person, when creating an account,
+
+201
+00:16:26,000 --> 00:16:29,000
+will indicate, for example, his name and first name.
+
+202
+00:16:29,000 --> 00:16:32,000
+This information is stored in the database linked to your website,
+
+203
+00:16:32,000 --> 00:16:35,000
+and you can, through personalized dimensions,
+
+204
+00:16:35,000 --> 00:16:38,000
+come and collect, for example, this data,
+
+205
+00:16:38,000 --> 00:16:40,000
+and match it with the visit.
+
+206
+00:16:40,000 --> 00:16:44,000
+But this will really be an action that will be done by the website editor,
+
+207
+00:16:44,000 --> 00:16:46,000
+the person who controls it on the source code,
+
+208
+00:16:46,000 --> 00:16:49,000
+and who will decide, of his own free will, to be able to put this personal data.
+
+209
+00:16:49,000 --> 00:16:52,000
+Same thing with the user ID.
+
+210
+00:16:52,000 --> 00:16:53,000
+This is the same.
+
+211
+00:16:53,000 --> 00:16:59,000
+This is a code that specifically allows you to recognize the user.
+
+212
+00:16:59,000 --> 00:17:00,000
+But this is the same.
+
+213
+00:17:00,000 --> 00:17:04,000
+You can recognize the user only if he or she has given you the information.
+
+214
+00:17:04,000 --> 00:17:09,000
+This will typically be the case when a person is going to log in on a site.
+
+215
+00:17:09,000 --> 00:17:11,000
+I take for example the example of an e-commerce site.
+
+216
+00:17:11,000 --> 00:17:13,000
+If a person logs in on an e-commerce site,
+
+217
+00:17:13,000 --> 00:17:18,000
+it is that at some point, he or she will decide to create an account on your platform,
+
+218
+00:17:18,000 --> 00:17:21,000
+and when the person creates an account,
+
+219
+00:17:21,000 --> 00:17:24,000
+she will give you, or in any case you,
+
+220
+00:17:24,000 --> 00:17:27,000
+you will make a kind of system to be able to put an ID.
+
+221
+00:17:27,000 --> 00:17:31,000
+Generally, the ID will be the nickname,
+
+222
+00:17:31,000 --> 00:17:36,000
+that the person will have decided to create when he or she has created the account,
+
+223
+00:17:36,000 --> 00:17:39,000
+which will be used to create the user ID.
+
+224
+00:17:39,000 --> 00:17:42,000
+After that, this is more of a point of surveillance.
+
+225
+00:17:42,000 --> 00:17:46,000
+Be careful because the way you integrate the code into Matomo
+
+226
+00:17:46,000 --> 00:17:49,000
+can be done through plugins.
+
+227
+00:17:49,000 --> 00:17:51,000
+This is especially the case when you use, for example,
+
+228
+00:17:51,000 --> 00:17:55,000
+plugins already developed for WordPress to integrate Matomo,
+
+229
+00:17:55,000 --> 00:17:59,000
+or PrestaShop, or whatever you want.
+
+230
+00:17:59,000 --> 00:18:03,000
+In fact, these plugins, you have to imagine that you have integration teams,
+
+231
+00:18:03,000 --> 00:18:07,000
+you have developers who create specific features
+
+232
+00:18:07,000 --> 00:18:10,000
+that are often very requested for these CMS,
+
+233
+00:18:10,000 --> 00:18:14,000
+and which can automatically include the collection of personal data.
+
+234
+00:18:14,000 --> 00:18:18,000
+You can imagine, typically, the case of e-commerce.
+
+235
+00:18:18,000 --> 00:18:21,000
+You develop a store on PrestaShop,
+
+236
+00:18:21,000 --> 00:18:25,000
+or you develop a store on WordPress.
+
+237
+00:18:25,000 --> 00:18:27,000
+Naturally, if you put Matomo,
+
+238
+00:18:27,000 --> 00:18:30,000
+you are waiting for Matomo to collect information
+
+239
+00:18:30,000 --> 00:18:33,000
+about e-commerce, shopping cart, etc.
+
+240
+00:18:33,000 --> 00:18:35,000
+By using these plugins,
+
+241
+00:18:35,000 --> 00:18:37,000
+it is not said that by default,
+
+242
+00:18:37,000 --> 00:18:41,000
+these plugins do not directly integrate the functions of this e-commerce,
+
+243
+00:18:41,000 --> 00:18:43,000
+which can be considered,
+
+244
+00:18:43,000 --> 00:18:46,000
+in any case, this is the case, we will come back to it later,
+
+245
+00:18:46,000 --> 00:18:49,000
+by LACNIL as being intrusive data,
+
+246
+00:18:49,000 --> 00:18:53,000
+in any case, which requires the user's prior agreement to be able to collect,
+
+247
+00:18:53,000 --> 00:18:56,000
+since naturally, through an electronic transaction,
+
+248
+00:18:56,000 --> 00:19:02,000
+we can indirectly know who is the person who is hiding behind the command.
+
+249
+00:19:02,000 --> 00:19:05,000
+And then, naturally, in Matomo,
+
+250
+00:19:05,000 --> 00:19:09,000
+we can find personal data that comes up when your site is poorly designed.
+
+251
+00:19:09,000 --> 00:19:14,000
+We can imagine, for example, a website for which you have URLs,
+
+252
+00:19:14,000 --> 00:19:19,000
+and the URLs in question contain the name and first name of an individual,
+
+253
+00:19:19,000 --> 00:19:22,000
+or an identifier, something like that.
+
+254
+00:19:22,000 --> 00:19:26,000
+This is especially the case on certain sites,
+
+255
+00:19:26,000 --> 00:19:28,000
+when you connect to a back-office,
+
+256
+00:19:28,000 --> 00:19:34,000
+sometimes the developers had the bad idea of putting the user's identifier in the URL,
+
+257
+00:19:34,000 --> 00:19:37,000
+and when this is the case, naturally, when this URL is loaded,
+
+258
+00:19:37,000 --> 00:19:40,000
+it sends the information directly to Matomo.
+
+259
+00:19:40,000 --> 00:19:42,000
+But by default, normally, in Matomo,
+
+260
+00:19:42,000 --> 00:19:45,000
+the most intrusive information that you are going to get,
+
+261
+00:19:45,000 --> 00:19:47,000
+it will be the IP address.
+
+262
+00:19:47,000 --> 00:19:50,000
+All this to say that by default,
+
+263
+00:19:50,000 --> 00:19:54,000
+there is not much you should be afraid of
+
+264
+00:19:54,000 --> 00:19:56,000
+to be in compliance with the RGPD,
+
+265
+00:19:56,000 --> 00:19:58,000
+even if we will see it just after,
+
+266
+00:19:58,000 --> 00:20:00,000
+there are still a few little things that will have to be done.
+
+267
+00:20:00,000 --> 00:20:04,000
+On the other hand, where you should be well concerned with this RGPD problem,
+
+268
+00:20:04,000 --> 00:20:08,000
+this is all the diapo that I have just gone through.
+
+269
+00:20:08,000 --> 00:20:10,000
+Naturally, if you have specific codes,
+
+270
+00:20:10,000 --> 00:20:12,000
+there you get personal data,
+
+271
+00:20:12,000 --> 00:20:16,000
+and there you risk much more my opinion of the law,
+
+272
+00:20:16,000 --> 00:20:19,000
+if there are things that are...
+
+273
+00:20:19,000 --> 00:20:21,000
+My data is controlled by you.
+
+274
+00:20:21,000 --> 00:20:24,000
+So, to remember that it is very important,
+
+275
+00:20:24,000 --> 00:20:29,000
+in France, the RGPD application is done via the ACNIL authority.
+
+276
+00:20:29,000 --> 00:20:31,000
+This is not a small information,
+
+277
+00:20:31,000 --> 00:20:34,000
+that is to say that I made the choice today to do this conference in French,
+
+278
+00:20:34,000 --> 00:20:36,000
+simply because for me it is quite simple
+
+279
+00:20:36,000 --> 00:20:40,000
+to be able to verify the ACNIL doc and present it to you.
+
+280
+00:20:40,000 --> 00:20:43,000
+However, what I am telling you here for France,
+
+281
+00:20:43,000 --> 00:20:45,000
+it does not work naturally if you have a website
+
+282
+00:20:45,000 --> 00:20:47,000
+that is for a country abroad,
+
+283
+00:20:47,000 --> 00:20:50,000
+since when it comes to abroad,
+
+284
+00:20:50,000 --> 00:20:52,000
+there is no longer the ACNIL that is cold,
+
+285
+00:20:52,000 --> 00:20:54,000
+so you have to look at each time
+
+286
+00:20:54,000 --> 00:20:57,000
+which is the equivalent of the private life commission
+
+287
+00:20:57,000 --> 00:20:59,000
+in the country you are aiming for.
+
+288
+00:20:59,000 --> 00:21:01,000
+We can imagine a French company
+
+289
+00:21:01,000 --> 00:21:04,000
+that develops a site for Germany,
+
+290
+00:21:04,000 --> 00:21:07,000
+there it goes that it is not the ACNIL rule
+
+291
+00:21:07,000 --> 00:21:10,000
+that will have to be followed to put Matomo in conformity,
+
+292
+00:21:10,000 --> 00:21:13,000
+it will be directly that of the German authority.
+
+293
+00:21:13,000 --> 00:21:15,000
+Hence the interest during the Matomo camp
+
+294
+00:21:15,000 --> 00:21:18,000
+to be able to exchange with people from Germany,
+
+295
+00:21:18,000 --> 00:21:21,000
+it allows you to know a little more about what is being done.
+
+296
+00:21:21,000 --> 00:21:26,000
+For this conference, I will just talk about the Franco-French market.
+
+297
+00:21:26,000 --> 00:21:28,000
+So, what does ACNIL say
+
+298
+00:21:28,000 --> 00:21:32,000
+in relation to the conformity of Matomo with the RGPD?
+
+299
+00:21:32,000 --> 00:21:36,000
+If you do not collect personal data,
+
+300
+00:21:36,000 --> 00:21:41,000
+then you can benefit from what is called an exemption of consent,
+
+301
+00:21:41,000 --> 00:21:45,000
+that is to say that you are not obliged to have explicitly
+
+302
+00:21:45,000 --> 00:21:48,000
+a user who comes to the site,
+
+303
+00:21:48,000 --> 00:21:50,000
+sees a banner that says,
+
+304
+00:21:50,000 --> 00:21:52,000
+do you accept that your data is collected?
+
+305
+00:21:52,000 --> 00:21:55,000
+No, you can do without it.
+
+306
+00:21:55,000 --> 00:21:57,000
+This is the main reason
+
+307
+00:21:57,000 --> 00:22:02,000
+why webmasters come to choose Matomo.
+
+308
+00:22:02,000 --> 00:22:06,000
+Note here that you can benefit from an exemption.
+
+309
+00:22:06,000 --> 00:22:08,000
+The can is very important,
+
+310
+00:22:08,000 --> 00:22:12,000
+since naturally it will imply that the exemption is not automatic.
+
+311
+00:22:12,000 --> 00:22:15,000
+It will be necessary to do things to be able to benefit
+
+312
+00:22:15,000 --> 00:22:17,000
+from this authorization of data collection
+
+313
+00:22:17,000 --> 00:22:20,000
+without the user's prior agreement.
+
+314
+00:22:20,000 --> 00:22:24,000
+If you ever want to use Matomo to collect personal data,
+
+315
+00:22:24,000 --> 00:22:26,000
+so here we will see more of the case of the kind,
+
+316
+00:22:26,000 --> 00:22:29,000
+but in fact, I put Matomo on my site,
+
+317
+00:22:29,000 --> 00:22:32,000
+but in fact I want to collect personal data,
+
+318
+00:22:32,000 --> 00:22:34,000
+such as the one I presented to you earlier,
+
+319
+00:22:34,000 --> 00:22:36,000
+transactions and trade.
+
+320
+00:22:36,000 --> 00:22:38,000
+It can be information on the individual,
+
+321
+00:22:38,000 --> 00:22:40,000
+as I told you earlier,
+
+322
+00:22:40,000 --> 00:22:43,000
+it can be his IP address in full,
+
+323
+00:22:43,000 --> 00:22:45,000
+there you have no choice.
+
+324
+00:22:45,000 --> 00:22:48,000
+You will also have to obtain the consent of the users.
+
+325
+00:22:48,000 --> 00:22:50,000
+Here on solution number 2,
+
+326
+00:22:50,000 --> 00:22:55,000
+you are at the same level as if you were using Google Analytics
+
+327
+00:22:55,000 --> 00:23:00,000
+or any other solution that specifically needs the user's agreement.
+
+328
+00:23:00,000 --> 00:23:05,000
+As far as what you need to know and how to get along,
+
+329
+00:23:05,000 --> 00:23:07,000
+it is directly posted on the Acnil website,
+
+330
+00:23:07,000 --> 00:23:10,000
+on acnil.fr slash fr cookie autotraceur.
+
+331
+00:23:10,000 --> 00:23:13,000
+I will talk about it in a few minutes
+
+332
+00:23:13,000 --> 00:23:16,000
+and then show you a little bit more concretely what it looks like.
+
+333
+00:23:16,000 --> 00:23:18,000
+Just the troll moment of the day,
+
+334
+00:23:18,000 --> 00:23:20,000
+be very careful at Acnil,
+
+335
+00:23:20,000 --> 00:23:23,000
+be vigilant when we talk about RGPD or others,
+
+336
+00:23:23,000 --> 00:23:27,000
+since this is a message that I sent,
+
+337
+00:23:27,000 --> 00:23:30,000
+this answer is the continuation of a message
+
+338
+00:23:30,000 --> 00:23:32,000
+that I sent about 80 days ago.
+
+339
+00:23:32,000 --> 00:23:35,000
+At Acnil, I agree to say that they are not a lot of staff
+
+340
+00:23:35,000 --> 00:23:38,000
+and that they put time before answering.
+
+341
+00:23:38,000 --> 00:23:42,000
+They indicate well on their site that they currently have a lot of requests
+
+342
+00:23:42,000 --> 00:23:45,000
+and that they need an average of 60 days to be able to answer,
+
+343
+00:23:45,000 --> 00:23:49,000
+but I was quite surprised to see that I wrote to them about 80 days ago.
+
+344
+00:23:49,000 --> 00:23:51,000
+I received an answer on Tuesday, October 26,
+
+345
+00:23:51,000 --> 00:23:53,000
+my question was the following,
+
+346
+00:23:53,000 --> 00:23:57,000
+I did not see that Matomo was listed as an example of consent solution,
+
+347
+00:23:57,000 --> 00:23:59,000
+and I simply asked them
+
+348
+00:23:59,000 --> 00:24:04,000
+what date Matomo will be listed as consent,
+
+349
+00:24:04,000 --> 00:24:06,000
+and I received the answer on Tuesday, October 26,
+
+350
+00:24:06,000 --> 00:24:08,000
+thank you for contacting me,
+
+351
+00:24:08,000 --> 00:24:11,000
+I would like to inform you that the Matomo tool
+
+352
+00:24:11,000 --> 00:24:13,000
+no longer appears in the list of solutions
+
+353
+00:24:13,000 --> 00:24:15,000
+without the consent of the internet users.
+
+354
+00:24:15,000 --> 00:24:17,000
+Indeed, this tool has been removed
+
+355
+00:24:17,000 --> 00:24:20,000
+due to the lack of conformity in the new recommendations of Acnil.
+
+356
+00:24:20,000 --> 00:24:25,000
+Fortunately, I did my job correctly,
+
+357
+00:24:25,000 --> 00:24:31,000
+it turns out that it was at least a good week that Matomo was listed as consent,
+
+358
+00:24:31,000 --> 00:24:34,000
+there was a conformity guide that was on the Acnil website,
+
+359
+00:24:34,000 --> 00:24:37,000
+but it's just that the person who answered me
+
+360
+00:24:37,000 --> 00:24:44,000
+had not even been on the Acnil website to check the information,
+
+361
+00:24:44,000 --> 00:24:46,000
+so it's pretty crazy to say wow,
+
+362
+00:24:46,000 --> 00:24:48,000
+they took 80 days to answer,
+
+363
+00:24:48,000 --> 00:24:50,000
+and in addition when you need an answer, it's not good.
+
+364
+00:24:50,000 --> 00:24:53,000
+All this to tell you that what is called the DPO,
+
+365
+00:24:53,000 --> 00:24:55,000
+the Data Protection Officer,
+
+366
+00:24:55,000 --> 00:24:58,000
+the person in charge of respecting the private life
+
+367
+00:24:58,000 --> 00:25:00,000
+of users in your infrastructure,
+
+368
+00:25:00,000 --> 00:25:02,000
+in your institution, in your company,
+
+369
+00:25:02,000 --> 00:25:05,000
+you will always have to check by yourself,
+
+370
+00:25:05,000 --> 00:25:08,000
+there is a role of continuous surveillance
+
+371
+00:25:08,000 --> 00:25:12,000
+and to always dig and look for new information.
+
+372
+00:25:12,000 --> 00:25:14,000
+So that's all to tell you,
+
+373
+00:25:14,000 --> 00:25:17,000
+beware of Acnil too,
+
+374
+00:25:17,000 --> 00:25:21,000
+since unfortunately I think they have a lot of requests
+
+375
+00:25:21,000 --> 00:25:24,000
+and they don't have the opportunity to follow all the files,
+
+376
+00:25:24,000 --> 00:25:27,000
+but Matomo is well exempt from consent
+
+377
+00:25:27,000 --> 00:25:30,000
+and that's exactly what we're going to see now.
+
+378
+00:25:30,000 --> 00:25:35,000
+So, I'm going to share my screen,
+
+379
+00:25:35,000 --> 00:25:39,000
+so I'm going to have to ask the same question again, I'm sorry.
+
+380
+00:25:39,000 --> 00:25:42,000
+Frédéric, do you see my screen well?
+
+381
+00:25:42,000 --> 00:25:44,000
+Yes, actually.
+
+382
+00:25:44,000 --> 00:25:47,000
+We are on the Acnil website, on your side?
+
+383
+00:25:47,000 --> 00:25:48,000
+Yes, exactly.
+
+384
+00:25:48,000 --> 00:25:50,000
+Great, thank you very much.
+
+385
+00:25:50,000 --> 00:25:53,000
+So, the Acnil website is very well done.
+
+386
+00:25:53,000 --> 00:25:55,000
+You have two parts here,
+
+387
+00:25:55,000 --> 00:25:57,000
+I am a specialist and I am a professional.
+
+388
+00:25:57,000 --> 00:26:00,000
+The one that interests us is the one called I am a professional,
+
+389
+00:26:00,000 --> 00:26:01,000
+so you click here.
+
+390
+00:26:01,000 --> 00:26:03,000
+Then you go to technology
+
+391
+00:26:03,000 --> 00:26:06,000
+and what will interest us is Cookie and other tracers.
+
+392
+00:26:06,000 --> 00:26:08,000
+You click on it.
+
+393
+00:26:08,000 --> 00:26:10,000
+Once you are there,
+
+394
+00:26:10,000 --> 00:26:13,000
+you have different information blocks that are listed.
+
+395
+00:26:13,000 --> 00:26:16,000
+The one that interests us is the one called Cookie Solutions
+
+396
+00:26:16,000 --> 00:26:18,000
+for audience measurement tools.
+
+397
+00:26:18,000 --> 00:26:22,000
+I strongly encourage you to regularly check the Acnil website,
+
+398
+00:26:22,000 --> 00:26:24,000
+which has evolved quite a bit.
+
+399
+00:26:24,000 --> 00:26:27,000
+It's also the same on the Matomo.org website.
+
+400
+00:26:27,000 --> 00:26:30,000
+The RGPD, even if it dates back to 2018,
+
+401
+00:26:30,000 --> 00:26:32,000
+and we talked about it before,
+
+402
+00:26:32,000 --> 00:26:34,000
+we have information that goes on.
+
+403
+00:26:34,000 --> 00:26:36,000
+So, don't hesitate every time.
+
+404
+00:26:36,000 --> 00:26:39,000
+What was true yesterday may not necessarily be true today,
+
+405
+00:26:39,000 --> 00:26:41,000
+or in any case has been updated.
+
+406
+00:26:41,000 --> 00:26:43,000
+And there, on the Acnil website,
+
+407
+00:26:43,000 --> 00:26:48,000
+we have the list of different audience measurement solutions
+
+408
+00:26:48,000 --> 00:26:50,000
+that are exempted.
+
+409
+00:26:50,000 --> 00:26:52,000
+So here, I'm going to zoom in a little bit.
+
+410
+00:26:52,000 --> 00:26:56,000
+There, you have the list of the different solutions that are available.
+
+411
+00:26:56,000 --> 00:27:01,000
+And there, you have the solution of Matomo Analytics version 4.
+
+412
+00:27:01,000 --> 00:27:03,000
+This can also be important,
+
+413
+00:27:03,000 --> 00:27:05,000
+that you need version 4 to be able to be exempted.
+
+414
+00:27:05,000 --> 00:27:07,000
+And the configuration guide that is present here.
+
+415
+00:27:07,000 --> 00:27:10,000
+I'm not going to go straight into the configuration guide.
+
+416
+00:27:10,000 --> 00:27:13,000
+I will first present, in my opinion, what is most important.
+
+417
+00:27:13,000 --> 00:27:15,000
+It's the file.
+
+418
+00:27:15,000 --> 00:27:17,000
+That is to say, what Acnil asks for
+
+419
+00:27:17,000 --> 00:27:20,000
+for a software editor to be exempt from consent.
+
+420
+00:27:20,000 --> 00:27:23,000
+For me, it's important that you know,
+
+421
+00:27:23,000 --> 00:27:26,000
+because otherwise we don't necessarily understand
+
+422
+00:27:26,000 --> 00:27:28,000
+why certain solutions are put forward,
+
+423
+00:27:28,000 --> 00:27:31,000
+why some are exempted from consent and not others.
+
+424
+00:27:31,000 --> 00:27:35,000
+So that's the form that the software editors have to fill in.
+
+425
+00:27:35,000 --> 00:27:37,000
+So, AT-Internet, Matomo,
+
+426
+00:27:37,000 --> 00:27:39,000
+any other solution you might have in mind
+
+427
+00:27:39,000 --> 00:27:43,000
+to be able to have the right to be exempted from consent from users.
+
+428
+00:27:43,000 --> 00:27:46,000
+So you have a list of nine points to respect
+
+429
+00:27:46,000 --> 00:27:49,000
+to be able to edit the famous configuration guide
+
+430
+00:27:49,000 --> 00:27:51,000
+that I showed you earlier.
+
+431
+00:27:51,000 --> 00:27:53,000
+And in fact, the most important, in my opinion,
+
+432
+00:27:53,000 --> 00:27:55,000
+is point number one,
+
+433
+00:27:55,000 --> 00:27:57,000
+which directly shows that solutions such as Google Analytics
+
+434
+00:27:57,000 --> 00:27:59,000
+are seen badly, how they could go.
+
+435
+00:27:59,000 --> 00:28:01,000
+So point number one,
+
+436
+00:28:01,000 --> 00:28:04,000
+is deactivation of any data processing for your account,
+
+437
+00:28:04,000 --> 00:28:07,000
+if necessary, and regardless of the purpose to follow.
+
+438
+00:28:07,000 --> 00:28:09,000
+So what does it mean?
+
+439
+00:28:09,000 --> 00:28:11,000
+It means that if you are a software editor,
+
+440
+00:28:11,000 --> 00:28:13,000
+you have no choice.
+
+441
+00:28:13,000 --> 00:28:15,000
+Either you are a free software,
+
+442
+00:28:15,000 --> 00:28:17,000
+that is to say that you are a common good,
+
+443
+00:28:17,000 --> 00:28:19,000
+and it's not a problem, people are free to use the software
+
+444
+00:28:19,000 --> 00:28:21,000
+at any time they want,
+
+445
+00:28:21,000 --> 00:28:23,000
+or you are obliged to be a software editor
+
+446
+00:28:23,000 --> 00:28:25,000
+who provides a service that is paying.
+
+447
+00:28:25,000 --> 00:28:27,000
+In fact, you have no choice,
+
+448
+00:28:27,000 --> 00:28:29,000
+because a company by definition is not there
+
+449
+00:28:29,000 --> 00:28:31,000
+to make money.
+
+450
+00:28:31,000 --> 00:28:33,000
+So that's condition number one,
+
+451
+00:28:33,000 --> 00:28:35,000
+which is really important,
+
+452
+00:28:35,000 --> 00:28:37,000
+in all cases, exit Google Analytics.
+
+453
+00:28:37,000 --> 00:28:39,000
+In fact, they just can't even go through,
+
+454
+00:28:39,000 --> 00:28:41,000
+here they can't be an example of consent,
+
+455
+00:28:41,000 --> 00:28:43,000
+since that would mean that they provide
+
+456
+00:28:43,000 --> 00:28:45,000
+the service for free,
+
+457
+00:28:45,000 --> 00:28:47,000
+which naturally costs a lot of money
+
+458
+00:28:47,000 --> 00:28:49,000
+in terms of storage and data,
+
+459
+00:28:49,000 --> 00:28:51,000
+and it's just not possible.
+
+460
+00:28:51,000 --> 00:28:53,000
+Then we have all the other conditions,
+
+461
+00:28:53,000 --> 00:28:55,000
+which will make us open our eyes
+
+462
+00:28:55,000 --> 00:28:57,000
+more on the features
+
+463
+00:28:57,000 --> 00:28:59,000
+that we are no longer entitled to use by default
+
+464
+00:28:59,000 --> 00:29:01,000
+without having the consent of the users.
+
+465
+00:29:01,000 --> 00:29:03,000
+So that's all that's going to be
+
+466
+00:29:03,000 --> 00:29:07,000
+the deactivation of the user's cohort,
+
+467
+00:29:07,000 --> 00:29:11,000
+the limit of the IP address collection,
+
+468
+00:29:11,000 --> 00:29:13,000
+so the fact that we can collect
+
+469
+00:29:13,000 --> 00:29:15,000
+an IP address in full,
+
+470
+00:29:15,000 --> 00:29:17,000
+we must pseudonymize it,
+
+471
+00:29:17,000 --> 00:29:21,000
+deactivation of any external data import function,
+
+472
+00:29:21,000 --> 00:29:23,000
+so it's not possible to do data crossings,
+
+473
+00:29:23,000 --> 00:29:25,000
+so to be able to inject, for example,
+
+474
+00:29:25,000 --> 00:29:27,000
+data by default from a CRM,
+
+475
+00:29:27,000 --> 00:29:29,000
+to be able to have more sense
+
+476
+00:29:29,000 --> 00:29:31,000
+on the data we have inside Matomo,
+
+477
+00:29:31,000 --> 00:29:35,000
+deactivation of data exports
+
+478
+00:29:35,000 --> 00:29:37,000
+containing unique identifiers
+
+479
+00:29:37,000 --> 00:29:39,000
+or non-aggregated data,
+
+480
+00:29:39,000 --> 00:29:41,000
+so that's the possibility,
+
+481
+00:29:41,000 --> 00:29:43,000
+a little bit the opposite of this one,
+
+482
+00:29:43,000 --> 00:29:45,000
+it's the possibility of being able to use
+
+483
+00:29:45,000 --> 00:29:47,000
+Matomo data to come behind,
+
+484
+00:29:47,000 --> 00:29:51,000
+transform other existing information systems
+
+485
+00:29:51,000 --> 00:29:53,000
+to be able to exploit personal data.
+
+486
+00:29:53,000 --> 00:29:55,000
+Limitation of the tracer warehouse
+
+487
+00:29:55,000 --> 00:29:57,000
+to a domain or mobile application,
+
+488
+00:29:57,000 --> 00:29:59,000
+so that's what we call cross-tracking,
+
+489
+00:29:59,000 --> 00:30:01,000
+it's the fact of not being able to follow
+
+490
+00:30:01,000 --> 00:30:03,000
+a user from one site to another,
+
+491
+00:30:03,000 --> 00:30:05,000
+so that's particularly useful
+
+492
+00:30:05,000 --> 00:30:07,000
+and we understand the interest
+
+493
+00:30:07,000 --> 00:30:09,000
+when you visit a cooking recipe site
+
+494
+00:30:09,000 --> 00:30:11,000
+and you visit a car site,
+
+495
+00:30:11,000 --> 00:30:13,000
+and the owner of these two sites is the same,
+
+496
+00:30:13,000 --> 00:30:15,000
+so the possibility of knowing more about you,
+
+497
+00:30:15,000 --> 00:30:19,000
+the possibility of being able to target you more,
+
+498
+00:30:19,000 --> 00:30:21,000
+and share data between the different information systems,
+
+499
+00:30:21,000 --> 00:30:23,000
+even though you don't know
+
+500
+00:30:23,000 --> 00:30:25,000
+that it belongs to the same company behind.
+
+501
+00:30:25,000 --> 00:30:31,000
+Deactivation, the ability to visualize a single browser in the tool,
+
+502
+00:30:31,000 --> 00:30:35,000
+so that's at its point in Matomo,
+
+503
+00:30:35,000 --> 00:30:37,000
+that's all that's going to be the visit journal.
+
+504
+00:30:37,000 --> 00:30:39,000
+Any marking that allows you to retrieve personal information,
+
+505
+00:30:39,000 --> 00:30:41,000
+so that's going to be all identifiable,
+
+506
+00:30:41,000 --> 00:30:43,000
+that you can go and retrieve,
+
+507
+00:30:43,000 --> 00:30:45,000
+and the existence of a tool
+
+508
+00:30:45,000 --> 00:30:47,000
+of position functionality in the cooking,
+
+509
+00:30:47,000 --> 00:30:49,000
+of audience measurement,
+
+510
+00:30:49,000 --> 00:30:51,000
+so that's what we call Locked Out,
+
+511
+00:30:51,000 --> 00:30:53,000
+which probably some of you already know,
+
+512
+00:30:53,000 --> 00:30:55,000
+you didn't give your consent,
+
+513
+00:30:55,000 --> 00:30:57,000
+even if your solution is exempt from consent,
+
+514
+00:30:57,000 --> 00:31:01,000
+you still have to provide a mechanism of opposition.
+
+515
+00:31:01,000 --> 00:31:07,000
+So let's now go to Matomo specifically,
+
+516
+00:31:07,000 --> 00:31:11,000
+what it is for the confirmation with the RGPD,
+
+517
+00:31:11,000 --> 00:31:13,000
+so we have the little configuration guide
+
+518
+00:31:13,000 --> 00:31:15,000
+that we find here,
+
+519
+00:31:15,000 --> 00:31:17,000
+which is rather well done,
+
+520
+00:31:17,000 --> 00:31:19,000
+even though most of us
+
+521
+00:31:19,000 --> 00:31:21,000
+have minds that are always a little bit tortured,
+
+522
+00:31:21,000 --> 00:31:23,000
+we are always going to dig,
+
+523
+00:31:23,000 --> 00:31:25,000
+dig, dig even more,
+
+524
+00:31:25,000 --> 00:31:27,000
+but in the state it is really,
+
+525
+00:31:27,000 --> 00:31:31,000
+it already gives the right directives to follow.
+
+526
+00:31:31,000 --> 00:31:35,000
+So there they tell us two things,
+
+527
+00:31:35,000 --> 00:31:37,000
+Matomo in self-guided mode,
+
+528
+00:31:37,000 --> 00:31:39,000
+or Matomo in cloud mode,
+
+529
+00:31:39,000 --> 00:31:41,000
+for this presentation I will just consider
+
+530
+00:31:41,000 --> 00:31:43,000
+the self-guided part,
+
+531
+00:31:43,000 --> 00:31:45,000
+not the cloud part.
+
+532
+00:31:45,000 --> 00:31:47,000
+What changes,
+
+533
+00:31:47,000 --> 00:31:49,000
+and if there is the cloud part,
+
+534
+00:31:49,000 --> 00:31:51,000
+your DPO has above all the responsibility
+
+535
+00:31:51,000 --> 00:31:53,000
+to link here what we call the DPA.
+
+536
+00:31:53,000 --> 00:31:55,000
+This cloud version,
+
+537
+00:31:55,000 --> 00:31:57,000
+it is specific to the cloud
+
+538
+00:31:57,000 --> 00:31:59,000
+that the Matomo team proposes,
+
+539
+00:31:59,000 --> 00:32:01,000
+so matomo.cloud,
+
+540
+00:32:01,000 --> 00:32:03,000
+and naturally does not concern
+
+541
+00:32:03,000 --> 00:32:05,000
+other hosts that you could use,
+
+542
+00:32:05,000 --> 00:32:07,000
+such as Ghandi Le Fay,
+
+543
+00:32:07,000 --> 00:32:09,000
+Emprunt Digital Le Fay,
+
+544
+00:32:09,000 --> 00:32:11,000
+Digitalista B which is also in Matomo Camp,
+
+545
+00:32:11,000 --> 00:32:13,000
+Le Fay,
+
+546
+00:32:13,000 --> 00:32:15,000
+so that's why I'm not going to talk too much
+
+547
+00:32:15,000 --> 00:32:17,000
+about part B,
+
+548
+00:32:17,000 --> 00:32:19,000
+I'm going to talk more about classic relationships
+
+549
+00:32:19,000 --> 00:32:21,000
+that a host can have.
+
+550
+00:32:21,000 --> 00:32:23,000
+I think that on the contrary,
+
+551
+00:32:23,000 --> 00:32:25,000
+what interests us more here is really
+
+552
+00:32:25,000 --> 00:32:27,000
+the self-guided part,
+
+553
+00:32:27,000 --> 00:32:29,000
+that is, it is you who choose the server.
+
+554
+00:32:29,000 --> 00:32:31,000
+So, in the things to know,
+
+555
+00:32:31,000 --> 00:32:33,000
+to be in conformity with the new
+
+556
+00:32:33,000 --> 00:32:35,000
+ACNIL directive,
+
+557
+00:32:35,000 --> 00:32:37,000
+so this conformity guide
+
+558
+00:32:37,000 --> 00:32:39,000
+has nothing to do with the old one
+
+559
+00:32:39,000 --> 00:32:41,000
+which was on the ACNIL site
+
+560
+00:32:41,000 --> 00:32:43,000
+and which was mainly talking about
+
+561
+00:32:43,000 --> 00:32:45,000
+the old name of the solution,
+
+562
+00:32:45,000 --> 00:32:47,000
+certainly things that were already present
+
+563
+00:32:47,000 --> 00:32:49,000
+in the old guide, but there are new things
+
+564
+00:32:49,000 --> 00:32:51,000
+that came to be added.
+
+565
+00:32:51,000 --> 00:32:53,000
+So one of these things is
+
+566
+00:32:53,000 --> 00:32:55,000
+the deactivation of export
+
+567
+00:32:55,000 --> 00:32:57,000
+features.
+
+568
+00:32:57,000 --> 00:32:59,000
+So these export features are
+
+569
+00:32:59,000 --> 00:33:01,000
+relative to the little link that allows you to export
+
+570
+00:33:01,000 --> 00:33:03,000
+data, but also above all
+
+571
+00:33:03,000 --> 00:33:05,000
+it is the fact that we will no longer
+
+572
+00:33:05,000 --> 00:33:07,000
+have the right to use
+
+573
+00:33:07,000 --> 00:33:09,000
+by default the use
+
+574
+00:33:09,000 --> 00:33:11,000
+of the visitor's journal. This can be very annoying,
+
+575
+00:33:11,000 --> 00:33:13,000
+especially for analysts who do
+
+576
+00:33:13,000 --> 00:33:15,000
+a bit of debugging like me.
+
+577
+00:33:15,000 --> 00:33:17,000
+You can only have this function
+
+578
+00:33:17,000 --> 00:33:19,000
+if you are a super user.
+
+579
+00:33:19,000 --> 00:33:21,000
+So in my case, I am
+
+580
+00:33:21,000 --> 00:33:23,000
+a super user, so there is no problem.
+
+581
+00:33:23,000 --> 00:33:25,000
+So here I am in my Tomo.
+
+582
+00:33:25,000 --> 00:33:27,000
+If I want to respect the first
+
+583
+00:33:27,000 --> 00:33:29,000
+instruction that ACNIL gives me,
+
+584
+00:33:29,000 --> 00:33:31,000
+I will have to go here in system,
+
+585
+00:33:31,000 --> 00:33:33,000
+click here in general settings
+
+586
+00:33:33,000 --> 00:33:35,000
+and once I am in
+
+587
+00:33:35,000 --> 00:33:37,000
+general settings, click on
+
+588
+00:33:37,000 --> 00:33:39,000
+deactivate the visitor's journal
+
+589
+00:33:39,000 --> 00:33:41,000
+that I will find
+
+590
+00:33:41,000 --> 00:33:43,000
+here.
+
+591
+00:33:43,000 --> 00:33:45,000
+So I will have to check
+
+592
+00:33:45,000 --> 00:33:47,000
+these boxes.
+
+593
+00:33:47,000 --> 00:33:49,000
+I will first show you what the visitor's journal is
+
+594
+00:33:49,000 --> 00:33:51,000
+for those who do not
+
+595
+00:33:51,000 --> 00:33:53,000
+identify what it is.
+
+596
+00:33:53,000 --> 00:33:55,000
+The visitor's journal is a
+
+597
+00:33:55,000 --> 00:33:57,000
+super great feature that allows you
+
+598
+00:33:57,000 --> 00:33:59,000
+to see
+
+599
+00:33:59,000 --> 00:34:01,000
+what actions
+
+600
+00:34:01,000 --> 00:34:03,000
+the users perform.
+
+601
+00:34:03,000 --> 00:34:05,000
+So you have the right
+
+602
+00:34:05,000 --> 00:34:07,000
+to use it by default,
+
+603
+00:34:07,000 --> 00:34:09,000
+if you want to be exempt from consent.
+
+604
+00:34:09,000 --> 00:34:11,000
+I think it is rather understandable
+
+605
+00:34:11,000 --> 00:34:13,000
+the idea that a user who comes back
+
+606
+00:34:13,000 --> 00:34:15,000
+several times, who has a certain behavior,
+
+607
+00:34:15,000 --> 00:34:17,000
+we will be able to
+
+608
+00:34:17,000 --> 00:34:19,000
+identify him
+
+609
+00:34:19,000 --> 00:34:21,000
+and potentially identify
+
+610
+00:34:21,000 --> 00:34:23,000
+who he is, if we have another source of information
+
+611
+00:34:23,000 --> 00:34:25,000
+that tells us that someone
+
+612
+00:34:25,000 --> 00:34:27,000
+is outside our website, for example.
+
+613
+00:34:27,000 --> 00:34:29,000
+So to respect
+
+614
+00:34:29,000 --> 00:34:31,000
+the first criterion,
+
+615
+00:34:31,000 --> 00:34:33,000
+you will have to check here.
+
+616
+00:34:33,000 --> 00:34:35,000
+Click on
+
+617
+00:34:35,000 --> 00:34:37,000
+I hope it's this address.
+
+618
+00:34:37,000 --> 00:34:39,000
+No, it was not the right one.
+
+619
+00:34:39,000 --> 00:34:41,000
+Sorry, I go back
+
+620
+00:34:41,000 --> 00:34:43,000
+to where I was.
+
+621
+00:34:43,000 --> 00:34:45,000
+I will pass my story.
+
+622
+00:34:45,000 --> 00:34:47,000
+Registered.
+
+623
+00:34:47,000 --> 00:34:49,000
+It must be this one.
+
+624
+00:34:49,000 --> 00:34:51,000
+So there we are.
+
+625
+00:34:51,000 --> 00:34:53,000
+Consequences, what will it be?
+
+626
+00:34:53,000 --> 00:34:55,000
+It says that now that this box
+
+627
+00:34:55,000 --> 00:34:57,000
+is checked, Abracadabra,
+
+628
+00:34:57,000 --> 00:34:59,000
+the visitor's journal has disappeared.
+
+629
+00:34:59,000 --> 00:35:01,000
+The visitor's journal has disappeared
+
+630
+00:35:01,000 --> 00:35:03,000
+from this screen.
+
+631
+00:35:03,000 --> 00:35:05,000
+It is also the same
+
+632
+00:35:05,000 --> 00:35:07,000
+for the segmented log.
+
+633
+00:35:07,000 --> 00:35:09,000
+So if I am going to consult an archived report
+
+634
+00:35:09,000 --> 00:35:11,000
+and I am going to ask, for example,
+
+635
+00:35:11,000 --> 00:35:13,000
+here what are the users who come from Serbia,
+
+636
+00:35:13,000 --> 00:35:15,000
+you see that the little icon of the segmented log
+
+637
+00:35:15,000 --> 00:35:17,000
+has disappeared.
+
+638
+00:35:17,000 --> 00:35:19,000
+This is the first criterion.
+
+639
+00:35:19,000 --> 00:35:21,000
+Second thing to know.
+
+640
+00:35:21,000 --> 00:35:23,000
+Allow visitors
+
+641
+00:35:23,000 --> 00:35:25,000
+to refuse to be followed.
+
+642
+00:35:25,000 --> 00:35:27,000
+What is called Locked Out.
+
+643
+00:35:27,000 --> 00:35:29,000
+There is no secret about the old Matomo guide.
+
+644
+00:35:29,000 --> 00:35:31,000
+It has always been the case.
+
+645
+00:35:31,000 --> 00:35:33,000
+Even if you are exempt from consent,
+
+646
+00:35:33,000 --> 00:35:35,000
+you have to offer
+
+647
+00:35:35,000 --> 00:35:37,000
+a mechanism of opposition
+
+648
+00:35:37,000 --> 00:35:39,000
+to your visitor.
+
+649
+00:35:39,000 --> 00:35:41,000
+This is what we will find on the
+
+650
+00:35:41,000 --> 00:35:43,000
+Privacy Policy page,
+
+651
+00:35:43,000 --> 00:35:45,000
+a confidentiality page for private lives.
+
+652
+00:35:45,000 --> 00:35:47,000
+You have to provide
+
+653
+00:35:47,000 --> 00:35:49,000
+clear information
+
+654
+00:35:49,000 --> 00:35:51,000
+to your users.
+
+655
+00:35:51,000 --> 00:35:53,000
+You have to be able to offer
+
+656
+00:35:53,000 --> 00:35:55,000
+a mechanism of opposition.
+
+657
+00:35:55,000 --> 00:35:57,000
+On this confidentiality page,
+
+658
+00:35:57,000 --> 00:35:59,000
+you have to explain what Matomo is,
+
+659
+00:35:59,000 --> 00:36:01,000
+what it is used for, what data is collected.
+
+660
+00:36:01,000 --> 00:36:03,000
+You also have to offer the possibility
+
+661
+00:36:03,000 --> 00:36:05,000
+to the user, even if you collect
+
+662
+00:36:05,000 --> 00:36:07,000
+anonymous data on me,
+
+663
+00:36:07,000 --> 00:36:09,000
+I don't want you to collect it and oppose it.
+
+664
+00:36:09,000 --> 00:36:11,000
+It's not hard to set it up.
+
+665
+00:36:11,000 --> 00:36:13,000
+You just have to go here
+
+666
+00:36:13,000 --> 00:36:15,000
+in Matomo,
+
+667
+00:36:15,000 --> 00:36:17,000
+you have private life,
+
+668
+00:36:17,000 --> 00:36:19,000
+private life, you have users' inscriptions
+
+669
+00:36:19,000 --> 00:36:21,000
+and there you have a small iframe
+
+670
+00:36:21,000 --> 00:36:23,000
+that you can copy and paste.
+
+671
+00:36:23,000 --> 00:36:25,000
+If you think it's not super sexy,
+
+672
+00:36:25,000 --> 00:36:27,000
+because after all we are talking about an iframe,
+
+673
+00:36:27,000 --> 00:36:29,000
+so it's always a little annoying,
+
+674
+00:36:29,000 --> 00:36:31,000
+but you have the possibility
+
+675
+00:36:31,000 --> 00:36:33,000
+to use personalized HTML.
+
+676
+00:36:33,000 --> 00:36:35,000
+I don't remember
+
+677
+00:36:35,000 --> 00:36:37,000
+where we found it.
+
+678
+00:36:37,000 --> 00:36:39,000
+Implement a custom without
+
+679
+00:36:39,000 --> 00:36:41,000
+using JavaScript.
+
+680
+00:36:41,000 --> 00:36:43,000
+They put a complete example
+
+681
+00:36:43,000 --> 00:36:45,000
+that allows you to have the script
+
+682
+00:36:45,000 --> 00:36:47,000
+with the look and feel of your website.
+
+683
+00:36:47,000 --> 00:36:49,000
+It's generally more aesthetic.
+
+684
+00:36:49,000 --> 00:36:51,000
+When we have a little time to spare,
+
+685
+00:36:51,000 --> 00:36:53,000
+we prefer to take this solution
+
+686
+00:36:53,000 --> 00:36:55,000
+rather than the iframe
+
+687
+00:36:55,000 --> 00:36:57,000
+directly from Matomo.
+
+688
+00:36:57,000 --> 00:36:59,000
+Next point on our to-do list.
+
+689
+00:36:59,000 --> 00:37:01,000
+Check that the default parameters
+
+690
+00:37:01,000 --> 00:37:03,000
+of Matomo are still in place.
+
+691
+00:37:03,000 --> 00:37:05,000
+By default, Matomo will set up
+
+692
+00:37:05,000 --> 00:37:07,000
+the anonymization of the IP address.
+
+693
+00:37:07,000 --> 00:37:09,000
+Here we say that
+
+694
+00:37:09,000 --> 00:37:11,000
+check that the default parameters
+
+695
+00:37:11,000 --> 00:37:13,000
+are still in place because
+
+696
+00:37:13,000 --> 00:37:15,000
+it is not said that you do not take the baby
+
+697
+00:37:15,000 --> 00:37:17,000
+to someone, so the project to someone,
+
+698
+00:37:17,000 --> 00:37:19,000
+and that this person can have,
+
+699
+00:37:19,000 --> 00:37:21,000
+for X or Y reasons,
+
+700
+00:37:21,000 --> 00:37:23,000
+a default functioning Matomo.
+
+701
+00:37:23,000 --> 00:37:25,000
+At the top, you have to look
+
+702
+00:37:25,000 --> 00:37:27,000
+that you are at least
+
+703
+00:37:27,000 --> 00:37:29,000
+on this level of anonymization
+
+704
+00:37:29,000 --> 00:37:31,000
+and that you are not on someone
+
+705
+00:37:31,000 --> 00:37:33,000
+who has changed this box
+
+706
+00:37:33,000 --> 00:37:35,000
+and who has recovered the entire IP address.
+
+707
+00:37:35,000 --> 00:37:37,000
+By default, there is little chance
+
+708
+00:37:37,000 --> 00:37:39,000
+that it will move, but it never happens.
+
+709
+00:37:39,000 --> 00:37:41,000
+I don't know, someone wanted to debunk it,
+
+710
+00:37:41,000 --> 00:37:43,000
+to use it more on users.
+
+711
+00:37:43,000 --> 00:37:45,000
+Make sure that third-party cookies
+
+712
+00:37:45,000 --> 00:37:47,000
+and cross-domain cookies are not used.
+
+713
+00:37:47,000 --> 00:37:49,000
+By default, Matomo uses only
+
+714
+00:37:49,000 --> 00:37:51,000
+the first-party cookies, so there is no need
+
+715
+00:37:51,000 --> 00:37:53,000
+to take care of it.
+
+716
+00:37:53,000 --> 00:37:55,000
+Normally, by default,
+
+717
+00:37:55,000 --> 00:37:57,000
+you should not have it.
+
+718
+00:37:57,000 --> 00:37:59,000
+Here we reach the point
+
+719
+00:37:59,000 --> 00:38:01,000
+that we just mentioned.
+
+720
+00:38:01,000 --> 00:38:03,000
+Maybe someone did some work before you
+
+721
+00:38:03,000 --> 00:38:05,000
+and put in place the cross-domain
+
+722
+00:38:05,000 --> 00:38:07,000
+and put in place the third-party cookie part.
+
+723
+00:38:07,000 --> 00:38:09,000
+I will not go into too much detail.
+
+724
+00:38:09,000 --> 00:38:11,000
+It will be about mechanics
+
+725
+00:38:11,000 --> 00:38:13,000
+that you will find inside
+
+726
+00:38:13,000 --> 00:38:15,000
+the Matomo config file,
+
+727
+00:38:15,000 --> 00:38:17,000
+where it will be clearly indicated here.
+
+728
+00:38:17,000 --> 00:38:19,000
+For that, you have to access the server,
+
+729
+00:38:19,000 --> 00:38:21,000
+access the config.ini.php file,
+
+730
+00:38:21,000 --> 00:38:23,000
+if it is not there,
+
+731
+00:38:23,000 --> 00:38:25,000
+well, there is no need
+
+732
+00:38:25,000 --> 00:38:27,000
+to torture yourself.
+
+733
+00:38:27,000 --> 00:38:29,000
+There is no third-party cookie
+
+734
+00:38:29,000 --> 00:38:31,000
+feature that has been put in place.
+
+735
+00:38:31,000 --> 00:38:33,000
+Same thing for cross-domain tracking.
+
+736
+00:38:33,000 --> 00:38:35,000
+This is something that we will see
+
+737
+00:38:35,000 --> 00:38:37,000
+directly in Matomo's follow-up code.
+
+738
+00:38:37,000 --> 00:38:39,000
+It is a line that adds
+
+739
+00:38:39,000 --> 00:38:41,000
+more other things.
+
+740
+00:38:41,000 --> 00:38:43,000
+These are things that are rather visible,
+
+741
+00:38:43,000 --> 00:38:45,000
+so we can see quickly if we want to
+
+742
+00:38:45,000 --> 00:38:47,000
+if we are on a custom interface.
+
+743
+00:38:47,000 --> 00:38:49,000
+Most of the time, you will not have to
+
+744
+00:38:49,000 --> 00:38:51,000
+check all the same,
+
+745
+00:38:51,000 --> 00:38:53,000
+but in most of the Matomo that we recover,
+
+746
+00:38:53,000 --> 00:38:55,000
+we never have things like that.
+
+747
+00:38:55,000 --> 00:38:57,000
+Make sure that the user ID measure
+
+748
+00:38:57,000 --> 00:38:59,000
+is not used.
+
+749
+00:38:59,000 --> 00:39:01,000
+User ID, I had already mentioned it
+
+750
+00:39:01,000 --> 00:39:03,000
+in the introduction, which allows you to know
+
+751
+00:39:03,000 --> 00:39:05,000
+who the user is behind.
+
+752
+00:39:05,000 --> 00:39:07,000
+This will be installed when you have
+
+753
+00:39:07,000 --> 00:39:09,000
+internet or e-commerce sites.
+
+754
+00:39:09,000 --> 00:39:11,000
+It is the same, it is not installed
+
+755
+00:39:11,000 --> 00:39:13,000
+like that by the Holy Spirit.
+
+756
+00:39:13,000 --> 00:39:15,000
+It is that there will be a mechanic
+
+757
+00:39:15,000 --> 00:39:17,000
+that has been put in place.
+
+758
+00:39:17,000 --> 00:39:19,000
+You have to imagine that you are not allowed
+
+759
+00:39:19,000 --> 00:39:21,000
+to collect this data.
+
+760
+00:39:21,000 --> 00:39:23,000
+You will have to ask for the user's agreement
+
+761
+00:39:23,000 --> 00:39:25,000
+and if you have the user's agreement,
+
+762
+00:39:25,000 --> 00:39:27,000
+then you can use it.
+
+763
+00:39:27,000 --> 00:39:29,000
+We will necessarily have to call
+
+764
+00:39:29,000 --> 00:39:31,000
+an integration team to
+
+765
+00:39:31,000 --> 00:39:33,000
+set up a consent mode
+
+766
+00:39:33,000 --> 00:39:35,000
+so that people can
+
+767
+00:39:35,000 --> 00:39:37,000
+give their agreement
+
+768
+00:39:37,000 --> 00:39:39,000
+to have this data collected.
+
+769
+00:39:39,000 --> 00:39:41,000
+Point number D was a bit of a surprise.
+
+770
+00:39:41,000 --> 00:39:43,000
+We did not expect it.
+
+771
+00:39:43,000 --> 00:39:45,000
+It is the fact that e-commerce
+
+772
+00:39:45,000 --> 00:39:47,000
+cannot be used by default
+
+773
+00:39:47,000 --> 00:39:49,000
+without having the user's agreement.
+
+774
+00:39:49,000 --> 00:39:51,000
+You will have to deactivate
+
+775
+00:39:51,000 --> 00:39:53,000
+this option as long as
+
+776
+00:39:53,000 --> 00:39:55,000
+you do not have the user's agreement.
+
+777
+00:39:55,000 --> 00:39:57,000
+We are joining
+
+778
+00:39:57,000 --> 00:39:59,000
+what is mentioned here
+
+779
+00:39:59,000 --> 00:40:01,000
+for the user ID.
+
+780
+00:40:01,000 --> 00:40:03,000
+We will have to have a pop-up
+
+781
+00:40:03,000 --> 00:40:05,000
+or a information banner to say
+
+782
+00:40:05,000 --> 00:40:07,000
+do you accept to have information
+
+783
+00:40:07,000 --> 00:40:09,000
+that is collected regarding
+
+784
+00:40:09,000 --> 00:40:11,000
+e-commerce.
+
+785
+00:40:11,000 --> 00:40:13,000
+Point number E, same thing.
+
+786
+00:40:13,000 --> 00:40:15,000
+It is a bit of a surprise to see it
+
+787
+00:40:15,000 --> 00:40:17,000
+because Matomo has premium plugins
+
+788
+00:40:17,000 --> 00:40:19,000
+including the heat card
+
+789
+00:40:19,000 --> 00:40:21,000
+and the session recording
+
+790
+00:40:21,000 --> 00:40:23,000
+that we call
+
+791
+00:40:23,000 --> 00:40:25,000
+hitmap and session recording.
+
+792
+00:40:25,000 --> 00:40:27,000
+By default,
+
+793
+00:40:27,000 --> 00:40:29,000
+you have to deactivate them.
+
+794
+00:40:29,000 --> 00:40:31,000
+I think it is an interpretation
+
+795
+00:40:31,000 --> 00:40:33,000
+that is too intrusive
+
+796
+00:40:33,000 --> 00:40:35,000
+even if it does not collect personal data.
+
+797
+00:40:35,000 --> 00:40:37,000
+Let's know that Matomo
+
+798
+00:40:37,000 --> 00:40:39,000
+has already provided mechanisms
+
+799
+00:40:39,000 --> 00:40:41,000
+that allow you to remove
+
+800
+00:40:41,000 --> 00:40:43,000
+personal data when
+
+801
+00:40:43,000 --> 00:40:45,000
+you use them.
+
+802
+00:40:45,000 --> 00:40:47,000
+But apparently,
+
+803
+00:40:47,000 --> 00:40:49,000
+by default,
+
+804
+00:40:49,000 --> 00:40:51,000
+you have to deactivate them
+
+805
+00:40:51,000 --> 00:40:53,000
+as long as you do not have the user's agreement.
+
+806
+00:40:53,000 --> 00:40:55,000
+Point number 4 is the one
+
+807
+00:40:55,000 --> 00:40:57,000
+that I mentioned in the introduction.
+
+808
+00:40:57,000 --> 00:40:59,000
+If your site is poorly designed
+
+809
+00:40:59,000 --> 00:41:01,000
+and you have URLs
+
+810
+00:41:01,000 --> 00:41:03,000
+that already collect personal data,
+
+811
+00:41:03,000 --> 00:41:05,000
+you will have to put them
+
+812
+00:41:05,000 --> 00:41:07,000
+in conformity.
+
+813
+00:41:07,000 --> 00:41:09,000
+You modify your follow-up code
+
+814
+00:41:09,000 --> 00:41:11,000
+so that it does not collect
+
+815
+00:41:11,000 --> 00:41:13,000
+these identifiers in the URLs.
+
+816
+00:41:13,000 --> 00:41:15,000
+By chance, Matomo
+
+817
+00:41:15,000 --> 00:41:17,000
+provides a tool
+
+818
+00:41:17,000 --> 00:41:19,000
+that allows you to anonymize
+
+819
+00:41:19,000 --> 00:41:21,000
+the data of the past.
+
+820
+00:41:21,000 --> 00:41:23,000
+We can decide
+
+821
+00:41:23,000 --> 00:41:25,000
+to delete
+
+822
+00:41:25,000 --> 00:41:27,000
+data that is in the past,
+
+823
+00:41:27,000 --> 00:41:29,000
+in particular,
+
+824
+00:41:29,000 --> 00:41:31,000
+URLs
+
+825
+00:41:31,000 --> 00:41:33,000
+that would contain
+
+826
+00:41:33,000 --> 00:41:35,000
+personal data.
+
+827
+00:41:35,000 --> 00:41:37,000
+I do not know
+
+828
+00:41:37,000 --> 00:41:39,000
+if it is exactly
+
+829
+00:41:39,000 --> 00:41:41,000
+the URLs that
+
+830
+00:41:41,000 --> 00:41:43,000
+anonymize the reference.
+
+831
+00:41:43,000 --> 00:41:45,000
+The request parameters
+
+832
+00:41:45,000 --> 00:41:47,000
+on the URLs,
+
+833
+00:41:47,000 --> 00:41:49,000
+I think
+
+834
+00:41:49,000 --> 00:41:51,000
+it would be necessary
+
+835
+00:41:51,000 --> 00:41:53,000
+to delete them.
+
+836
+00:41:53,000 --> 00:41:55,000
+I'm not sure if you
+
+837
+00:41:55,000 --> 00:41:57,000
+can analyze
+
+838
+00:41:57,000 --> 00:41:59,000
+TracroData
+
+839
+00:41:59,000 --> 00:42:01,000
+when I look at it.
+
+840
+00:42:01,000 --> 00:42:03,000
+You can still
+
+841
+00:42:03,000 --> 00:42:05,000
+question certain columns
+
+842
+00:42:05,000 --> 00:42:07,000
+and analyze them.
+
+843
+00:42:07,000 --> 00:42:09,000
+That was what I wanted to show you
+
+844
+00:42:09,000 --> 00:42:11,000
+on how to put Matomo
+
+845
+00:42:11,000 --> 00:42:13,000
+in conformity
+
+846
+00:42:13,000 --> 00:42:15,000
+with the RGPD.
+
+847
+00:42:15,000 --> 00:42:17,000
+I see that it is already 13h42
+
+848
+00:42:17,000 --> 00:42:19,000
+on the diapos that I have left.
+
+849
+00:42:23,000 --> 00:42:25,000
+I have not yet spoken
+
+850
+00:42:25,000 --> 00:42:27,000
+about the consent collection.
+
+851
+00:42:27,000 --> 00:42:29,000
+If you collect personal data,
+
+852
+00:42:29,000 --> 00:42:31,000
+what should you do?
+
+853
+00:42:31,000 --> 00:42:33,000
+You have a doc
+
+854
+00:42:33,000 --> 00:42:35,000
+on Matomo
+
+855
+00:42:35,000 --> 00:42:37,000
+that is rarely used
+
+856
+00:42:37,000 --> 00:42:39,000
+because in the end,
+
+857
+00:42:39,000 --> 00:42:41,000
+people prefer to use Matomo
+
+858
+00:42:41,000 --> 00:42:43,000
+with the consent exemption
+
+859
+00:42:43,000 --> 00:42:45,000
+to collect data.
+
+860
+00:42:59,000 --> 00:43:01,000
+You have a line of code
+
+861
+00:43:01,000 --> 00:43:03,000
+to add,
+
+862
+00:43:03,000 --> 00:43:05,000
+user for consent,
+
+863
+00:43:05,000 --> 00:43:07,000
+how to not track,
+
+864
+00:43:07,000 --> 00:43:09,000
+let user opt out.
+
+865
+00:43:11,000 --> 00:43:13,000
+I just need to find
+
+866
+00:43:13,000 --> 00:43:15,000
+the URL
+
+867
+00:43:15,000 --> 00:43:17,000
+that I wanted.
+
+868
+00:43:17,000 --> 00:43:19,000
+I will not be able to find it in time.
+
+869
+00:43:21,000 --> 00:43:23,000
+Matomo consent type
+
+870
+00:43:25,000 --> 00:43:27,000
+Matomo get consent
+
+871
+00:43:27,000 --> 00:43:29,000
+developer
+
+872
+00:43:33,000 --> 00:43:35,000
+That's it.
+
+873
+00:43:35,000 --> 00:43:37,000
+These are the lines of code
+
+874
+00:43:37,000 --> 00:43:39,000
+that you will have to use
+
+875
+00:43:39,000 --> 00:43:41,000
+if you want to collect
+
+876
+00:43:41,000 --> 00:43:43,000
+the consent of the user
+
+877
+00:43:43,000 --> 00:43:45,000
+to have the right to collect
+
+878
+00:43:45,000 --> 00:43:47,000
+personal data on Hulu.
+
+879
+00:43:47,000 --> 00:43:49,000
+Typically, this will be the case when you
+
+880
+00:43:49,000 --> 00:43:51,000
+develop e-commerce tracking,
+
+881
+00:43:51,000 --> 00:43:53,000
+when you put the user ID in place,
+
+882
+00:43:53,000 --> 00:43:55,000
+etc.
+
+883
+00:43:55,000 --> 00:43:57,000
+As I was saying,
+
+884
+00:43:57,000 --> 00:43:59,000
+we are on much more advanced projects
+
+885
+00:43:59,000 --> 00:44:01,000
+that will be much more technical.
+
+886
+00:44:01,000 --> 00:44:03,000
+We will have to apply
+
+887
+00:44:03,000 --> 00:44:05,000
+in development.
+
+888
+00:44:05,000 --> 00:44:07,000
+There will be even more work
+
+889
+00:44:07,000 --> 00:44:09,000
+if you find
+
+890
+00:44:09,000 --> 00:44:11,000
+different data collection purposes.
+
+891
+00:44:11,000 --> 00:44:13,000
+For e-commerce tracking,
+
+892
+00:44:13,000 --> 00:44:15,000
+it is quite easy to justify
+
+893
+00:44:15,000 --> 00:44:17,000
+why you need to collect this data.
+
+894
+00:44:17,000 --> 00:44:19,000
+When we use the user ID,
+
+895
+00:44:19,000 --> 00:44:21,000
+directly tracking the user
+
+896
+00:44:21,000 --> 00:44:23,000
+personally,
+
+897
+00:44:23,000 --> 00:44:25,000
+the purposes will probably be different.
+
+898
+00:44:25,000 --> 00:44:27,000
+This means that you will probably have to
+
+899
+00:44:27,000 --> 00:44:29,000
+collect several consents,
+
+900
+00:44:29,000 --> 00:44:31,000
+one for each of the actions,
+
+901
+00:44:31,000 --> 00:44:33,000
+and which will probably
+
+902
+00:44:33,000 --> 00:44:35,000
+be asked at different places.
+
+903
+00:44:39,000 --> 00:44:41,000
+That was what I wanted to present to you.
+
+904
+00:44:43,000 --> 00:44:45,000
+We are at the end of this presentation.
+
+905
+00:44:45,000 --> 00:44:47,000
+I'm sorry, I overworked a little.
+
+906
+00:44:47,000 --> 00:44:49,000
+Frédéric, I don't know if there are
+
+907
+00:44:49,000 --> 00:44:53,000
+any questions in the chat.
+
+908
+00:44:53,000 --> 00:44:55,000
+At the moment, no,
+
+909
+00:44:55,000 --> 00:44:57,000
+but I will invite everyone
+
+910
+00:44:57,000 --> 00:44:59,000
+who has questions
+
+911
+00:44:59,000 --> 00:45:01,000
+to ask them in the chat.
+
+912
+00:45:05,000 --> 00:45:07,000
+I hope that
+
+913
+00:45:07,000 --> 00:45:09,000
+I was clear with the presentation.
+
+914
+00:45:09,000 --> 00:45:11,000
+What you need to remember
+
+915
+00:45:11,000 --> 00:45:13,000
+is that in France,
+
+916
+00:45:13,000 --> 00:45:15,000
+it is clearly the CNIL
+
+917
+00:45:15,000 --> 00:45:17,000
+that we must follow.
+
+918
+00:45:17,000 --> 00:45:19,000
+We apply it.
+
+919
+00:45:19,000 --> 00:45:21,000
+It is a very interesting security
+
+920
+00:45:21,000 --> 00:45:23,000
+because the day we get
+
+921
+00:45:23,000 --> 00:45:25,000
+something wrong,
+
+922
+00:45:25,000 --> 00:45:27,000
+you can take out the guide
+
+923
+00:45:27,000 --> 00:45:29,000
+that I showed you earlier
+
+924
+00:45:29,000 --> 00:45:31,000
+and say, look, I have everything
+
+925
+00:45:31,000 --> 00:45:33,000
+applied to the letter.
+
+926
+00:45:33,000 --> 00:45:35,000
+Then, what you need to understand
+
+927
+00:45:35,000 --> 00:45:37,000
+is that for the other case,
+
+928
+00:45:37,000 --> 00:45:39,000
+which is the second,
+
+929
+00:45:39,000 --> 00:45:41,000
+which I presented at the end
+
+930
+00:45:41,000 --> 00:45:43,000
+of the conference,
+
+931
+00:45:43,000 --> 00:45:45,000
+it is a little more delicate
+
+932
+00:45:45,000 --> 00:45:47,000
+than the integration to do
+
+933
+00:45:47,000 --> 00:45:49,000
+when we will have the interactions.
+
+934
+00:45:49,000 --> 00:45:51,000
+There is a question
+
+935
+00:45:51,000 --> 00:45:53,000
+that I put in the chat.
+
+936
+00:45:53,000 --> 00:45:55,000
+First of all, thank you
+
+937
+00:45:55,000 --> 00:45:57,000
+for asking a question.
+
+938
+00:45:57,000 --> 00:45:59,000
+It's super nice
+
+939
+00:45:59,000 --> 00:46:01,000
+and hello to you.
+
+940
+00:46:01,000 --> 00:46:03,000
+The question is the following.
+
+941
+00:46:03,000 --> 00:46:05,000
+I understand that with this configuration,
+
+942
+00:46:05,000 --> 00:46:07,000
+we cover the exempted measure
+
+943
+00:46:07,000 --> 00:46:09,000
+and the right to opposition.
+
+944
+00:46:09,000 --> 00:46:11,000
+In any case,
+
+945
+00:46:11,000 --> 00:46:13,000
+with this configuration,
+
+946
+00:46:13,000 --> 00:46:15,000
+the configuration
+
+947
+00:46:15,000 --> 00:46:17,000
+that I presented
+
+948
+00:46:17,000 --> 00:46:19,000
+also includes what I explained
+
+949
+00:46:19,000 --> 00:46:21,000
+in the introduction.
+
+950
+00:46:21,000 --> 00:46:23,000
+I will not talk about the RGPD
+
+951
+00:46:23,000 --> 00:46:25,000
+specifically in this conference.
+
+952
+00:46:25,000 --> 00:46:27,000
+The right to opposition is one of the
+
+953
+00:46:27,000 --> 00:46:29,000
+considerations in the RGPD,
+
+954
+00:46:29,000 --> 00:46:31,000
+but there are many others.
+
+955
+00:46:31,000 --> 00:46:33,000
+What I showed is just to have
+
+956
+00:46:33,000 --> 00:46:35,000
+the right to be exempted,
+
+957
+00:46:35,000 --> 00:46:37,000
+but it does not exempt you from
+
+958
+00:46:37,000 --> 00:46:39,000
+respecting all other rights of the RGPD,
+
+959
+00:46:39,000 --> 00:46:41,000
+which are the right to access information
+
+960
+00:46:41,000 --> 00:46:43,000
+and the right to export data.
+
+961
+00:46:43,000 --> 00:46:45,000
+It is a user who
+
+962
+00:46:45,000 --> 00:46:47,000
+asks for data portability,
+
+963
+00:46:47,000 --> 00:46:49,000
+who asks if you export the data.
+
+964
+00:46:49,000 --> 00:46:51,000
+There are many other aspects
+
+965
+00:46:51,000 --> 00:46:53,000
+that I did not mention
+
+966
+00:46:53,000 --> 00:46:55,000
+that are linked to the RGPD in general
+
+967
+00:46:55,000 --> 00:46:57,000
+and to Matomo.
+
+968
+00:46:57,000 --> 00:46:59,000
+I will talk more about the implementation
+
+969
+00:46:59,000 --> 00:47:01,000
+of Matomo to be exempted from consent.
+
+970
+00:47:01,000 --> 00:47:03,000
+The question continues.
+
+971
+00:47:03,000 --> 00:47:05,000
+What is the personalized classic measure
+
+972
+00:47:05,000 --> 00:47:07,000
+when users give their consent?
+
+973
+00:47:07,000 --> 00:47:09,000
+The classic measure
+
+974
+00:47:09,000 --> 00:47:11,000
+I call it
+
+975
+00:47:11,000 --> 00:47:13,000
+personalized measure.
+
+976
+00:47:13,000 --> 00:47:15,000
+We will collect
+
+977
+00:47:15,000 --> 00:47:17,000
+personal data
+
+978
+00:47:17,000 --> 00:47:19,000
+on the users.
+
+979
+00:47:19,000 --> 00:47:21,000
+It does not change much.
+
+980
+00:47:21,000 --> 00:47:23,000
+What changes is the code
+
+981
+00:47:23,000 --> 00:47:25,000
+that you have to add
+
+982
+00:47:25,000 --> 00:47:27,000
+to recover their consent.
+
+983
+00:47:27,000 --> 00:47:29,000
+It is just that it is
+
+984
+00:47:29,000 --> 00:47:31,000
+much more technical.
+
+985
+00:47:31,000 --> 00:47:33,000
+There will be two consequences.
+
+986
+00:47:33,000 --> 00:47:35,000
+The first consequence is that
+
+987
+00:47:35,000 --> 00:47:37,000
+as soon as it lands on your website,
+
+988
+00:47:37,000 --> 00:47:39,000
+you do not recover the data.
+
+989
+00:47:39,000 --> 00:47:41,000
+You do not have the right to recover it
+
+990
+00:47:41,000 --> 00:47:43,000
+until they give their consent.
+
+991
+00:47:43,000 --> 00:47:45,000
+Now they will give their consent.
+
+992
+00:47:45,000 --> 00:47:47,000
+To give their consent,
+
+993
+00:47:47,000 --> 00:47:49,000
+you have to add specific
+
+994
+00:47:49,000 --> 00:47:51,000
+follow-up code.
+
+995
+00:47:51,000 --> 00:47:53,000
+You will have to deploy efforts
+
+996
+00:47:53,000 --> 00:47:55,000
+to have this follow-up code
+
+997
+00:47:55,000 --> 00:47:57,000
+put in place.
+
+998
+00:47:57,000 --> 00:47:59,000
+For the rest, it does not change.
+
+999
+00:47:59,000 --> 00:48:01,000
+For the rest, it is like for the
+
+1000
+00:48:01,000 --> 00:48:03,000
+exemption process of consent.
+
+1001
+00:48:03,000 --> 00:48:05,000
+You have data collected in Matomo.
+
+1002
+00:48:05,000 --> 00:48:07,000
+You have the right to information.
+
+1003
+00:48:07,000 --> 00:48:09,000
+You have a data confidentiality page
+
+1004
+00:48:09,000 --> 00:48:11,000
+that explains what is Matomo,
+
+1005
+00:48:11,000 --> 00:48:13,000
+what it does, etc.
+
+1006
+00:48:13,000 --> 00:48:15,000
+You have the right to opposition.
+
+1007
+00:48:15,000 --> 00:48:17,000
+You do not have the right to portability.
+
+1008
+00:48:17,000 --> 00:48:19,000
+You do not have the right to delete data.
+
+1009
+00:48:19,000 --> 00:48:21,000
+This is more the classic RGPD
+
+1010
+00:48:21,000 --> 00:48:23,000
+where you have to have your procedure
+
+1011
+00:48:23,000 --> 00:48:25,000
+which is only in case of control
+
+1012
+00:48:25,000 --> 00:48:27,000
+or in case of demand by a data subject,
+
+1013
+00:48:27,000 --> 00:48:29,000
+by an individual.
+
+1014
+00:48:29,000 --> 00:48:31,000
+You have to respect the procedure.
+
+1015
+00:48:31,000 --> 00:48:33,000
+So, the question continues.
+
+1016
+00:48:33,000 --> 00:48:35,000
+We start another tracker
+
+1017
+00:48:35,000 --> 00:48:37,000
+that would contain the advanced features,
+
+1018
+00:48:37,000 --> 00:48:39,000
+user ID, e-commerce, etc.
+
+1019
+00:48:39,000 --> 00:48:41,000
+at the time of consent.
+
+1020
+00:48:41,000 --> 00:48:43,000
+Yes, that's exactly it.
+
+1021
+00:48:43,000 --> 00:48:45,000
+That's exactly it.
+
+1022
+00:48:45,000 --> 00:48:47,000
+You understood everything in the question.
+
+1023
+00:48:47,000 --> 00:48:49,000
+This is my question mark
+
+1024
+00:48:49,000 --> 00:48:51,000
+and more behind on
+
+1025
+00:48:51,000 --> 00:48:53,000
+is your follow-up code
+
+1026
+00:48:53,000 --> 00:48:55,000
+there you have the right to
+
+1027
+00:48:55,000 --> 00:48:57,000
+trigger everything at once.
+
+1028
+00:48:57,000 --> 00:48:59,000
+In fact, it depends especially on what you put
+
+1029
+00:48:59,000 --> 00:49:01,000
+in the information bannier.
+
+1030
+00:49:01,000 --> 00:49:03,000
+In fact, the RGPD says that
+
+1031
+00:49:03,000 --> 00:49:05,000
+you have to provide clear and precise information.
+
+1032
+00:49:05,000 --> 00:49:07,000
+So, you can not say
+
+1033
+00:49:07,000 --> 00:49:09,000
+in a global way
+
+1034
+00:49:09,000 --> 00:49:11,000
+that you authorize me to collect everything on you.
+
+1035
+00:49:11,000 --> 00:49:13,000
+In fact, your user ID has a purpose.
+
+1036
+00:49:13,000 --> 00:49:15,000
+Your follow-up e-commerce has a purpose.
+
+1037
+00:49:15,000 --> 00:49:17,000
+Your personalized dimensions
+
+1038
+00:49:17,000 --> 00:49:19,000
+probably have another purpose.
+
+1039
+00:49:19,000 --> 00:49:21,000
+Maybe the purpose is the same
+
+1040
+00:49:21,000 --> 00:49:23,000
+but there is nothing that says it.
+
+1041
+00:49:23,000 --> 00:49:25,000
+Anyway, it's up to you
+
+1042
+00:49:25,000 --> 00:49:27,000
+to ask yourself the question,
+
+1043
+00:49:27,000 --> 00:49:29,000
+with a third of what they think.
+
+1044
+00:49:29,000 --> 00:49:31,000
+And from there,
+
+1045
+00:49:31,000 --> 00:49:33,000
+to decide to make a global message
+
+1046
+00:49:33,000 --> 00:49:35,000
+and the person gives you his authorization
+
+1047
+00:49:35,000 --> 00:49:37,000
+and you send everything at once.
+
+1048
+00:49:37,000 --> 00:49:39,000
+Or is it better to divide them?
+
+1049
+00:49:39,000 --> 00:49:41,000
+As the RGPD says,
+
+1050
+00:49:41,000 --> 00:49:43,000
+it's always good sense
+
+1051
+00:49:43,000 --> 00:49:45,000
+and analysis.
+
+1052
+00:49:45,000 --> 00:49:47,000
+For me, e-commerce clearly has
+
+1053
+00:49:47,000 --> 00:49:49,000
+a purpose that is very different
+
+1054
+00:49:49,000 --> 00:49:51,000
+from that of user ID.
+
+1055
+00:49:51,000 --> 00:49:53,000
+For me, the purpose is to improve the business number
+
+1056
+00:49:53,000 --> 00:49:55,000
+of your company.
+
+1057
+00:49:55,000 --> 00:49:57,000
+And with user ID,
+
+1058
+00:49:57,000 --> 00:49:59,000
+you are clearly on a functionality
+
+1059
+00:49:59,000 --> 00:50:01,000
+that is much more intrusive.
+
+1060
+00:50:01,000 --> 00:50:03,000
+Follow the user in a certain way
+
+1061
+00:50:03,000 --> 00:50:05,000
+to know what's going on.
+
+1062
+00:50:05,000 --> 00:50:07,000
+Then you can always justify it
+
+1063
+00:50:07,000 --> 00:50:09,000
+in another way by saying
+
+1064
+00:50:09,000 --> 00:50:11,000
+I don't use user ID,
+
+1065
+00:50:11,000 --> 00:50:13,000
+I use user ID as a pseudonym
+
+1066
+00:50:13,000 --> 00:50:15,000
+so I don't necessarily want to know
+
+1067
+00:50:15,000 --> 00:50:17,000
+who is the person behind it.
+
+1068
+00:50:17,000 --> 00:50:19,000
+All this is discussed and analyzed.
+
+1069
+00:50:19,000 --> 00:50:21,000
+I also invite you to ask
+
+1070
+00:50:21,000 --> 00:50:23,000
+all the other people
+
+1071
+00:50:23,000 --> 00:50:25,000
+present at MatomoCamp
+
+1072
+00:50:25,000 --> 00:50:27,000
+who are doing contests
+
+1073
+00:50:27,000 --> 00:50:29,000
+around privacy
+
+1074
+00:50:29,000 --> 00:50:31,000
+because they may have a vision
+
+1075
+00:50:31,000 --> 00:50:33,000
+that is completely different
+
+1076
+00:50:33,000 --> 00:50:35,000
+from the one I present.
+
+1077
+00:50:35,000 --> 00:50:37,000
+In any case, it's the one I have at first
+
+1078
+00:50:37,000 --> 00:50:39,000
+when I read the questions
+
+1079
+00:50:39,000 --> 00:50:41,000
+and the answers that come to mind.
+
+1080
+00:50:41,000 --> 00:50:43,000
+I have another question
+
+1081
+00:50:43,000 --> 00:50:45,000
+from Abdel
+
+1082
+00:50:45,000 --> 00:50:47,000
+that I also greet
+
+1083
+00:50:47,000 --> 00:50:49,000
+and thank you for asking this question.
+
+1084
+00:50:49,000 --> 00:50:51,000
+You mentioned that e-commerce
+
+1085
+00:50:51,000 --> 00:50:53,000
+follows consent.
+
+1086
+00:50:53,000 --> 00:50:55,000
+I was surprised to see it
+
+1087
+00:50:55,000 --> 00:50:57,000
+and that in the new guide
+
+1088
+00:50:57,000 --> 00:50:59,000
+of the CNIL,
+
+1089
+00:50:59,000 --> 00:51:01,000
+it's not me who says it directly,
+
+1090
+00:51:01,000 --> 00:51:03,000
+it's just that it's written
+
+1091
+00:51:03,000 --> 00:51:05,000
+directly in the CNIL.
+
+1092
+00:51:05,000 --> 00:51:07,000
+I would have preferred it not to be the case,
+
+1093
+00:51:07,000 --> 00:51:09,000
+but they wrote it.
+
+1094
+00:51:09,000 --> 00:51:11,000
+The CNIL therefore considers
+
+1095
+00:51:11,000 --> 00:51:13,000
+that it is a personal data.
+
+1096
+00:51:13,000 --> 00:51:15,000
+In any case, the CNIL considers
+
+1097
+00:51:15,000 --> 00:51:17,000
+that it is necessary to have
+
+1098
+00:51:17,000 --> 00:51:19,000
+the consent of the user
+
+1099
+00:51:19,000 --> 00:51:21,000
+of the e-commerce follow-up code.
+
+1100
+00:51:21,000 --> 00:51:23,000
+When we think about
+
+1101
+00:51:25,000 --> 00:51:27,000
+what's behind it,
+
+1102
+00:51:27,000 --> 00:51:29,000
+when we visualize the Matomo code,
+
+1103
+00:51:29,000 --> 00:51:31,000
+what do we need the Matomo code
+
+1104
+00:51:31,000 --> 00:51:33,000
+to trigger?
+
+1105
+00:51:33,000 --> 00:51:35,000
+We keep in the Matomo doc
+
+1106
+00:51:35,000 --> 00:51:37,000
+on the e-commerce follow-up
+
+1107
+00:51:37,000 --> 00:51:39,000
+and in the e-commerce follow-up,
+
+1108
+00:51:39,000 --> 00:51:41,000
+one of the information it needs is
+
+1109
+00:51:41,000 --> 00:51:43,000
+the e-commerce order ID,
+
+1110
+00:51:43,000 --> 00:51:45,000
+the order number.
+
+1111
+00:51:45,000 --> 00:51:47,000
+It is clear that in the database
+
+1112
+00:51:47,000 --> 00:51:49,000
+and you know that
+
+1113
+00:51:49,000 --> 00:51:51,000
+it is Abdelte
+
+1114
+00:51:51,000 --> 00:51:53,000
+who bought
+
+1115
+00:51:53,000 --> 00:51:55,000
+such a pair of shoes,
+
+1116
+00:51:55,000 --> 00:51:57,000
+it is by definition
+
+1117
+00:51:57,000 --> 00:51:59,000
+a personal data.
+
+1118
+00:51:59,000 --> 00:52:01,000
+It is in the scope
+
+1119
+00:52:01,000 --> 00:52:03,000
+that we need
+
+1120
+00:52:03,000 --> 00:52:05,000
+the consent of the user
+
+1121
+00:52:05,000 --> 00:52:07,000
+to collect this personal data.
+
+1122
+00:52:07,000 --> 00:52:09,000
+Even if the order is not linked
+
+1123
+00:52:09,000 --> 00:52:11,000
+to a specific ID,
+
+1124
+00:52:11,000 --> 00:52:13,000
+do you think it can evolve?
+
+1125
+00:52:13,000 --> 00:52:15,000
+I also think that
+
+1126
+00:52:15,000 --> 00:52:17,000
+it is a good question
+
+1127
+00:52:17,000 --> 00:52:19,000
+that you ask
+
+1128
+00:52:19,000 --> 00:52:21,000
+and I was a little surprised
+
+1129
+00:52:21,000 --> 00:52:23,000
+by the fact that it was in the guide
+
+1130
+00:52:23,000 --> 00:52:25,000
+because when you look
+
+1131
+00:52:25,000 --> 00:52:27,000
+at what Matomo says,
+
+1132
+00:52:27,000 --> 00:52:29,000
+in any case in the features
+
+1133
+00:52:29,000 --> 00:52:31,000
+that Matomo offers,
+
+1134
+00:52:31,000 --> 00:52:33,000
+you have this possibility.
+
+1135
+00:52:33,000 --> 00:52:35,000
+Frédéric, do you see my screen well?
+
+1136
+00:52:37,000 --> 00:52:39,000
+Yes, I see it.
+
+1137
+00:52:39,000 --> 00:52:41,000
+What we have here is
+
+1138
+00:52:41,000 --> 00:52:43,000
+anonymizing the order ID.
+
+1139
+00:52:43,000 --> 00:52:45,000
+We have it here in Matomo
+
+1140
+00:52:45,000 --> 00:52:47,000
+and generally
+
+1141
+00:52:47,000 --> 00:52:49,000
+in private life,
+
+1142
+00:52:49,000 --> 00:52:51,000
+we identify well
+
+1143
+00:52:51,000 --> 00:52:53,000
+the notion of pseudonym
+
+1144
+00:52:53,000 --> 00:52:55,000
+which is still a personal data
+
+1145
+00:52:55,000 --> 00:52:57,000
+of anonymization which is not a personal data.
+
+1146
+00:52:57,000 --> 00:52:59,000
+I am quite surprised
+
+1147
+00:52:59,000 --> 00:53:01,000
+that this functionality
+
+1148
+00:53:01,000 --> 00:53:03,000
+would not have been
+
+1149
+00:53:03,000 --> 00:53:05,000
+retained by Acne
+
+1150
+00:53:05,000 --> 00:53:07,000
+and the fact that
+
+1151
+00:53:07,000 --> 00:53:09,000
+there is no
+
+1152
+00:53:09,000 --> 00:53:11,000
+that in the end
+
+1153
+00:53:11,000 --> 00:53:13,000
+Acne considers
+
+1154
+00:53:13,000 --> 00:53:15,000
+that it is not enough.
+
+1155
+00:53:15,000 --> 00:53:17,000
+I think that in my opinion,
+
+1156
+00:53:17,000 --> 00:53:19,000
+the question to be asked,
+
+1157
+00:53:19,000 --> 00:53:21,000
+we saw it in four days
+
+1158
+00:53:21,000 --> 00:53:23,000
+to have an answer for an answer
+
+1159
+00:53:23,000 --> 00:53:25,000
+that falls aside,
+
+1160
+00:53:25,000 --> 00:53:27,000
+I think that what is more interesting
+
+1161
+00:53:27,000 --> 00:53:29,000
+is to contact the Matomo team directly.
+
+1162
+00:53:29,000 --> 00:53:31,000
+I found something
+
+1163
+00:53:31,000 --> 00:53:33,000
+that was quite great
+
+1164
+00:53:33,000 --> 00:53:35,000
+in the Matomo team doc
+
+1165
+00:53:35,000 --> 00:53:37,000
+on the RGPD part.
+
+1166
+00:53:37,000 --> 00:53:39,000
+Fred, excuse me,
+
+1167
+00:53:39,000 --> 00:53:41,000
+do you still see my screen?
+
+1168
+00:53:41,000 --> 00:53:43,000
+Yes, I confirm.
+
+1169
+00:53:43,000 --> 00:53:45,000
+Basically, when we are in charge of the RGPD
+
+1170
+00:53:45,000 --> 00:53:47,000
+and we are a company,
+
+1171
+00:53:47,000 --> 00:53:49,000
+we are obliged
+
+1172
+00:53:49,000 --> 00:53:51,000
+to have a DPO
+
+1173
+00:53:51,000 --> 00:53:53,000
+and the Matomo team has a DPO.
+
+1174
+00:53:53,000 --> 00:53:55,000
+I think that your question is very interesting
+
+1175
+00:53:55,000 --> 00:53:57,000
+and that we will have to request
+
+1176
+00:53:57,000 --> 00:53:59,000
+the DPO of the Matomo team.
+
+1177
+00:53:59,000 --> 00:54:01,000
+They have an EU representative
+
+1178
+00:54:01,000 --> 00:54:03,000
+who is
+
+1179
+00:54:03,000 --> 00:54:05,000
+I think his name is Christian
+
+1180
+00:54:05,000 --> 00:54:07,000
+no, Christophe, Christophe Boer.
+
+1181
+00:54:07,000 --> 00:54:09,000
+They really have
+
+1182
+00:54:09,000 --> 00:54:11,000
+a dedicated person
+
+1183
+00:54:11,000 --> 00:54:13,000
+who is there to answer this type of question.
+
+1184
+00:54:13,000 --> 00:54:15,000
+I think it can be
+
+1185
+00:54:15,000 --> 00:54:17,000
+really the subject of a great question.
+
+1186
+00:54:17,000 --> 00:54:19,000
+Thank you for asking me.
+
+1187
+00:54:19,000 --> 00:54:21,000
+To write to him and say
+
+1188
+00:54:21,000 --> 00:54:23,000
+you write to privacyatmatomo.org
+
+1189
+00:54:23,000 --> 00:54:25,000
+and he says hello, hello Christophe.
+
+1190
+00:54:25,000 --> 00:54:27,000
+I do not understand.
+
+1191
+00:54:27,000 --> 00:54:29,000
+Normally, if we anonymize
+
+1192
+00:54:29,000 --> 00:54:31,000
+the thing, we should
+
+1193
+00:54:31,000 --> 00:54:33,000
+and the idea is to see
+
+1194
+00:54:33,000 --> 00:54:35,000
+what is behind it.
+
+1195
+00:54:35,000 --> 00:54:37,000
+Honestly, I think that legally,
+
+1196
+00:54:37,000 --> 00:54:39,000
+you do not risk much
+
+1197
+00:54:39,000 --> 00:54:41,000
+because you can clearly show a blank page
+
+1198
+00:54:41,000 --> 00:54:43,000
+and say, look, it's anonymized,
+
+1199
+00:54:43,000 --> 00:54:45,000
+it's not pseudonymized,
+
+1200
+00:54:45,000 --> 00:54:47,000
+but it's still better to have
+
+1201
+00:54:47,000 --> 00:54:49,000
+an answer from someone
+
+1202
+00:54:49,000 --> 00:54:51,000
+who has more of a legal background.
+
+1203
+00:54:51,000 --> 00:54:53,000
+So that's why, in my opinion,
+
+1204
+00:54:53,000 --> 00:54:55,000
+I think it's maybe the reflex to have.
+
+1205
+00:54:55,000 --> 00:54:57,000
+After the question, why didn't I do it?
+
+1206
+00:54:57,000 --> 00:54:59,000
+Because I don't have time,
+
+1207
+00:54:59,000 --> 00:55:01,000
+I just have to do it.
+
+1208
+00:55:01,000 --> 00:55:03,000
+Yeah, great.
+
+1209
+00:55:03,000 --> 00:55:05,000
+Well, listen, I'm going to take
+
+1210
+00:55:05,000 --> 00:55:07,000
+the last question and then
+
+1211
+00:55:07,000 --> 00:55:09,000
+after, I'll have two minutes
+
+1212
+00:55:09,000 --> 00:55:11,000
+to breathe and do the last one.
+
+1213
+00:55:11,000 --> 00:55:13,000
+A question from Adama.
+
+1214
+00:55:13,000 --> 00:55:15,000
+Will Matomo not become paying in the future?
+
+1215
+00:55:15,000 --> 00:55:17,000
+No, because by definition,
+
+1216
+00:55:17,000 --> 00:55:19,000
+Matomo is a free software
+
+1217
+00:55:19,000 --> 00:55:21,000
+that lives thanks to the confidence
+
+1218
+00:55:21,000 --> 00:55:23,000
+that the community has given him.
+
+1219
+00:55:23,000 --> 00:55:25,000
+So anyway, they, next to Matomo,
+
+1220
+00:55:25,000 --> 00:55:27,000
+they already have their business model in place,
+
+1221
+00:55:27,000 --> 00:55:29,000
+which is cloud, which works well,
+
+1222
+00:55:29,000 --> 00:55:31,000
+which are the premium features
+
+1223
+00:55:31,000 --> 00:55:33,000
+which also work well.
+
+1224
+00:55:33,000 --> 00:55:35,000
+You have to imagine that from the moment
+
+1225
+00:55:35,000 --> 00:55:37,000
+when you have a stab in your community,
+
+1226
+00:55:37,000 --> 00:55:39,000
+which would be, finally, guys,
+
+1227
+00:55:39,000 --> 00:55:41,000
+now we're making a paid software,
+
+1228
+00:55:41,000 --> 00:55:43,000
+there you lose your value proposal,
+
+1229
+00:55:43,000 --> 00:55:45,000
+well, you basically lose
+
+1230
+00:55:45,000 --> 00:55:47,000
+the added value of everything
+
+1231
+00:55:47,000 --> 00:55:49,000
+that has been renamed.
+
+1232
+00:55:49,000 --> 00:55:51,000
+Anyway, we see it.
+
+1233
+00:55:51,000 --> 00:55:53,000
+There is a pack of competitors
+
+1234
+00:55:53,000 --> 00:55:55,000
+that we also tried to present
+
+1235
+00:55:55,000 --> 00:55:57,000
+as an alternative to Matomo
+
+1236
+00:55:57,000 --> 00:55:59,000
+by saying, hey, we have a free software.
+
+1237
+00:55:59,000 --> 00:56:01,000
+Well, from the moment they have a minimum
+
+1238
+00:56:01,000 --> 00:56:03,000
+of popularity, what did they do?
+
+1239
+00:56:03,000 --> 00:56:05,000
+They said, well, finally, we have a proprietary software.
+
+1240
+00:56:05,000 --> 00:56:07,000
+We close our source code and become paying.
+
+1241
+00:56:07,000 --> 00:56:09,000
+So what's going on?
+
+1242
+00:56:09,000 --> 00:56:11,000
+Their software fell into oblivion
+
+1243
+00:56:11,000 --> 00:56:13,000
+because they killed their added value.
+
+1244
+00:56:13,000 --> 00:56:15,000
+So in any case, I'm not
+
+1245
+00:56:15,000 --> 00:56:17,000
+one who's on it.
+
+1246
+00:56:17,000 --> 00:56:19,000
+And then I also think that
+
+1247
+00:56:19,000 --> 00:56:21,000
+they have already proven it in the past.
+
+1248
+00:56:21,000 --> 00:56:23,000
+In particular,
+
+1249
+00:56:23,000 --> 00:56:25,000
+if you look historically,
+
+1250
+00:56:25,000 --> 00:56:27,000
+it's a story around P-Week Pro
+
+1251
+00:56:27,000 --> 00:56:29,000
+and formerly P-Week.
+
+1252
+00:56:29,000 --> 00:56:31,000
+It is precisely in this spirit
+
+1253
+00:56:31,000 --> 00:56:33,000
+that everything has been,
+
+1254
+00:56:33,000 --> 00:56:35,000
+that I think Matomo has already proved
+
+1255
+00:56:35,000 --> 00:56:37,000
+that they are a free software,
+
+1256
+00:56:37,000 --> 00:56:39,000
+they remain since the people behind
+
+1257
+00:56:39,000 --> 00:56:41,000
+in this life.
+
+1258
+00:56:41,000 --> 00:56:43,000
+It is currently 13h57.
+
+1259
+00:56:43,000 --> 00:56:45,000
+I thank you very much to all of you for having
+
+1260
+00:56:45,000 --> 00:56:47,000
+attended this conference.
+
+1261
+00:56:47,000 --> 00:56:49,000
+And then I'll see you in three minutes for a new conference
+
+1262
+00:56:49,000 --> 00:56:51,000
+on how to develop a whole business with Matomo
+
+1263
+00:56:51,000 --> 00:56:53,000
+which will be a conference in English.
+
+1264
+00:56:53,000 --> 00:56:55,000
+Thank you to Frédéric for moderating this conference.
+
+1265
+00:56:55,000 --> 00:57:23,000
+See you soon.
+

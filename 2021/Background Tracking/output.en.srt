@@ -1,0 +1,4452 @@
+1
+00:00:00,000 --> 00:00:10,000
+Welcome to the first day of the Matomo camp,
+
+2
+00:00:10,000 --> 00:00:12,000
+or rather one of the first two days.
+
+3
+00:00:12,000 --> 00:00:14,000
+But here we are in a German-speaking day.
+
+4
+00:00:14,000 --> 00:00:18,000
+So the moderator here is Joachim Nickel,
+
+5
+00:00:18,000 --> 00:00:22,000
+who has been using Matomo and Biwik for over 10 years
+
+6
+00:00:22,000 --> 00:00:25,000
+and also engages in various open-source projects,
+
+7
+00:00:25,000 --> 00:00:28,000
+such as, for example, especially the CMS Contao,
+
+8
+00:00:28,000 --> 00:00:30,000
+which you may have already heard of,
+
+9
+00:00:30,000 --> 00:00:32,000
+and of which the funding association is the president.
+
+10
+00:00:32,000 --> 00:00:35,000
+And he will now tell you a little more about
+
+11
+00:00:35,000 --> 00:00:37,000
+how to get a little more data experience in Matomo
+
+12
+00:00:37,000 --> 00:00:40,000
+with background tracking
+
+13
+00:00:40,000 --> 00:00:43,000
+and, in general, also with which alternatives
+
+14
+00:00:43,000 --> 00:00:46,000
+there are for classic Matomo JavaScript tracking,
+
+15
+00:00:46,000 --> 00:00:48,000
+which everyone knows.
+
+16
+00:00:48,000 --> 00:00:50,000
+With that, Joachim, you can start.
+
+17
+00:00:50,000 --> 00:00:52,000
+Thank you, Lukas.
+
+18
+00:00:52,000 --> 00:00:53,000
+Yes, hello.
+
+19
+00:00:53,000 --> 00:00:58,000
+Let's start with the second slide with me.
+
+20
+00:00:58,000 --> 00:01:00,000
+In the end, Lukas has already said a large part.
+
+21
+00:01:00,000 --> 00:01:02,000
+I am an OMT ambassador.
+
+22
+00:01:02,000 --> 00:01:05,000
+I will come to the OMT topic a little later.
+
+23
+00:01:05,000 --> 00:01:07,000
+President of the Contao Association
+
+24
+00:01:07,000 --> 00:01:10,000
+and Matomo for at least 2010,
+
+25
+00:01:10,000 --> 00:01:13,000
+probably even a little longer.
+
+26
+00:01:13,000 --> 00:01:15,000
+Today it's about the question, first of all,
+
+27
+00:01:15,000 --> 00:01:17,000
+can I trust the numbers at all
+
+28
+00:01:17,000 --> 00:01:20,000
+that we track in Matomo or anywhere else
+
+29
+00:01:20,000 --> 00:01:23,000
+in this type of tracking?
+
+30
+00:01:23,000 --> 00:01:25,000
+And a little teaser at this point,
+
+31
+00:01:25,000 --> 00:01:28,000
+I would say a very clear no.
+
+32
+00:01:28,000 --> 00:01:30,000
+That has several reasons.
+
+33
+00:01:30,000 --> 00:01:33,000
+Because if we take a look at how standard tracking works,
+
+34
+00:01:33,000 --> 00:01:34,000
+what we have in Matomo,
+
+35
+00:01:34,000 --> 00:01:35,000
+either via the Tag Manager
+
+36
+00:01:35,000 --> 00:01:37,000
+or via normal JavaScript tracking,
+
+37
+00:01:37,000 --> 00:01:40,000
+then the visitor comes to our website,
+
+38
+00:01:40,000 --> 00:01:42,000
+gets the data, in the end,
+
+39
+00:01:42,000 --> 00:01:44,000
+and in the website there is this little code
+
+40
+00:01:44,000 --> 00:01:46,000
+that just says, you browser,
+
+41
+00:01:46,000 --> 00:01:48,000
+give me the data back there to our Matomo
+
+42
+00:01:48,000 --> 00:01:50,000
+and track the whole thing.
+
+43
+00:01:50,000 --> 00:01:52,000
+And that's where we really have
+
+44
+00:01:52,000 --> 00:01:55,000
+this huge problem with the data pass-on.
+
+45
+00:01:55,000 --> 00:01:57,000
+Because on the one hand there are these
+
+46
+00:01:57,000 --> 00:01:58,000
+tracking protection stories,
+
+47
+00:01:58,000 --> 00:02:01,000
+ETP and ETP, as they are not all so nice.
+
+48
+00:02:01,000 --> 00:02:03,000
+On the other hand, we have the big problem
+
+49
+00:02:03,000 --> 00:02:04,000
+of the user consent,
+
+50
+00:02:04,000 --> 00:02:06,000
+which we have to use often
+
+51
+00:02:06,000 --> 00:02:09,000
+in connection with the Do Not Track headers.
+
+52
+00:02:09,000 --> 00:02:11,000
+But, and very specifically,
+
+53
+00:02:11,000 --> 00:02:13,000
+the problem of the ad blocker.
+
+54
+00:02:13,000 --> 00:02:16,000
+For 2021 I found a statistic
+
+55
+00:02:16,000 --> 00:02:18,000
+that suggests that in Germany
+
+56
+00:02:18,000 --> 00:02:20,000
+around 40% of users
+
+57
+00:02:20,000 --> 00:02:22,000
+who are on the website
+
+58
+00:02:22,000 --> 00:02:24,000
+use ad blockers.
+
+59
+00:02:24,000 --> 00:02:26,000
+Over 42% worldwide.
+
+60
+00:02:26,000 --> 00:02:28,000
+These values always differ
+
+61
+00:02:28,000 --> 00:02:30,000
+differently from the manufacturers
+
+62
+00:02:30,000 --> 00:02:32,000
+who give these statistics out.
+
+63
+00:02:32,000 --> 00:02:34,000
+Some of them go up to 50%
+
+64
+00:02:34,000 --> 00:02:36,000
+and it is very, very different
+
+65
+00:02:36,000 --> 00:02:38,000
+with the individual websites,
+
+66
+00:02:38,000 --> 00:02:40,000
+but we'll get to that in a moment.
+
+67
+00:02:40,000 --> 00:02:42,000
+This fact was, in the end,
+
+68
+00:02:42,000 --> 00:02:44,000
+the reason why I said
+
+69
+00:02:44,000 --> 00:02:46,000
+that this path ahead
+
+70
+00:02:46,000 --> 00:02:48,000
+is perhaps not necessarily the best,
+
+71
+00:02:48,000 --> 00:02:50,000
+because too much data is lost.
+
+72
+00:02:50,000 --> 00:02:52,000
+And that's why I say, okay,
+
+73
+00:02:52,000 --> 00:02:54,000
+let's draw the path and go directly
+
+74
+00:02:54,000 --> 00:02:56,000
+from the application to Matomo.
+
+75
+00:02:56,000 --> 00:02:58,000
+Because Matomo has something very nice
+
+76
+00:02:58,000 --> 00:03:00,000
+that other systems do not offer in this form,
+
+77
+00:03:00,000 --> 00:03:02,000
+namely the Tracking API.
+
+78
+00:03:02,000 --> 00:03:04,000
+The disadvantage with the whole thing
+
+79
+00:03:04,000 --> 00:03:06,000
+is that the implementation
+
+80
+00:03:06,000 --> 00:03:08,000
+has to take place in the application
+
+81
+00:03:08,000 --> 00:03:10,000
+and we really have to collect
+
+82
+00:03:10,000 --> 00:03:12,000
+all the parameters we need
+
+83
+00:03:12,000 --> 00:03:14,000
+and we don't have the nice case
+
+84
+00:03:14,000 --> 00:03:16,000
+like in JavaScript Tracking,
+
+85
+00:03:16,000 --> 00:03:18,000
+that everything is already
+
+86
+00:03:18,000 --> 00:03:20,000
+more or less out of the box
+
+87
+00:03:20,000 --> 00:03:22,000
+and then we just have to collect
+
+88
+00:03:22,000 --> 00:03:24,000
+these data and send it to Matomo.
+
+89
+00:03:24,000 --> 00:03:26,000
+The tasks that arise with it
+
+90
+00:03:26,000 --> 00:03:28,000
+are, on the one hand, clear.
+
+91
+00:03:28,000 --> 00:03:30,000
+We have to clarify the topic of session handling,
+
+92
+00:03:30,000 --> 00:03:32,000
+that is, how do we get the individual
+
+93
+00:03:32,000 --> 00:03:34,000
+visitor sessions together?
+
+94
+00:03:34,000 --> 00:03:36,000
+Matomo cannot take on this task
+
+95
+00:03:36,000 --> 00:03:38,000
+for us at this point.
+
+96
+00:03:38,000 --> 00:03:40,000
+We just have to take on this task
+
+97
+00:03:40,000 --> 00:03:42,000
+and take care of the bot recognition
+
+98
+00:03:42,000 --> 00:03:44,000
+for the most part, because everything
+
+99
+00:03:44,000 --> 00:03:46,000
+that we throw directly against Matomo
+
+100
+00:03:46,000 --> 00:03:48,000
+is ultimately evaluated there.
+
+101
+00:03:48,000 --> 00:03:50,000
+Bot recognition at this point is
+
+102
+00:03:50,000 --> 00:03:52,000
+difficult, because it is switched off.
+
+103
+00:03:52,000 --> 00:03:54,000
+And we always have to take into account
+
+104
+00:03:54,000 --> 00:03:56,000
+that we have a certain latency.
+
+105
+00:03:56,000 --> 00:03:58,000
+That means that the application itself
+
+106
+00:03:58,000 --> 00:04:00,000
+should send the request to Matomo
+
+107
+00:04:00,000 --> 00:04:02,000
+only when the output is
+
+108
+00:04:02,000 --> 00:04:04,000
+delivered to the web browser
+
+109
+00:04:04,000 --> 00:04:06,000
+of the customer.
+
+110
+00:04:06,000 --> 00:04:08,000
+But even then it's stupid
+
+111
+00:04:08,000 --> 00:04:10,000
+if the process just takes too long,
+
+112
+00:04:10,000 --> 00:04:12,000
+because the way to Matomo API
+
+113
+00:04:12,000 --> 00:04:14,000
+is just too long.
+
+114
+00:04:14,000 --> 00:04:16,000
+And so you could think about
+
+115
+00:04:16,000 --> 00:04:18,000
+just getting the whole thing
+
+116
+00:04:18,000 --> 00:04:20,000
+somewhere locally yourself
+
+117
+00:04:20,000 --> 00:04:22,000
+and then first hand it over to Matomo.
+
+118
+00:04:22,000 --> 00:04:24,000
+We have to work with a corresponding
+
+119
+00:04:24,000 --> 00:04:26,000
+API key in the Matomo instance
+
+120
+00:04:26,000 --> 00:04:28,000
+that has a writing access
+
+121
+00:04:28,000 --> 00:04:30,000
+to, for example,
+
+122
+00:04:30,000 --> 00:04:32,000
+hand over the IP address,
+
+123
+00:04:32,000 --> 00:04:34,000
+either shortened or
+
+124
+00:04:34,000 --> 00:04:36,000
+in plain text, to
+
+125
+00:04:36,000 --> 00:04:38,000
+do the geo-IP resolution,
+
+126
+00:04:38,000 --> 00:04:40,000
+or we do the geo-IP resolution
+
+127
+00:04:40,000 --> 00:04:42,000
+directly in the application.
+
+128
+00:04:42,000 --> 00:04:44,000
+And of course everyone agrees
+
+129
+00:04:44,000 --> 00:04:46,000
+that the topic is data protection.
+
+130
+00:04:46,000 --> 00:04:48,000
+That means we have a lot of data
+
+131
+00:04:48,000 --> 00:04:50,000
+in the application.
+
+132
+00:04:50,000 --> 00:04:52,000
+We can possibly identify the customer
+
+133
+00:04:52,000 --> 00:04:54,000
+one-to-one directly
+
+134
+00:04:54,000 --> 00:04:56,000
+and then have to think about
+
+135
+00:04:56,000 --> 00:04:58,000
+which data will be handed over.
+
+136
+00:04:58,000 --> 00:05:00,000
+It's up to Matomo not to get
+
+137
+00:05:00,000 --> 00:05:02,000
+problems there in terms of
+
+138
+00:05:02,000 --> 00:05:04,000
+data protection.
+
+139
+00:05:04,000 --> 00:05:06,000
+Let's take a look at the comparison.
+
+140
+00:05:06,000 --> 00:05:08,000
+On the one hand, I have a
+
+141
+00:05:08,000 --> 00:05:10,000
+regional provider that I have
+
+142
+00:05:10,000 --> 00:05:12,000
+equipped with standard tracking
+
+143
+00:05:12,000 --> 00:05:14,000
+and in the background.
+
+144
+00:05:14,000 --> 00:05:16,000
+And when I look at the whole thing,
+
+145
+00:05:16,000 --> 00:05:18,000
+then I have a difference of
+
+146
+00:05:18,000 --> 00:05:20,000
+about 60 percent,
+
+147
+00:05:20,000 --> 00:05:22,000
+60 percent more data that I can
+
+148
+00:05:22,000 --> 00:05:24,000
+identify in background tracking
+
+149
+00:05:24,000 --> 00:05:26,000
+for these customers.
+
+150
+00:05:26,000 --> 00:05:28,000
+We also see the deviation
+
+151
+00:05:28,000 --> 00:05:30,000
+of the mobile types down here.
+
+152
+00:05:30,000 --> 00:05:32,000
+That means whether it's a desktop system
+
+153
+00:05:32,000 --> 00:05:34,000
+or a mobile system.
+
+154
+00:05:34,000 --> 00:05:36,000
+In background tracking, we have
+
+155
+00:05:36,000 --> 00:05:38,000
+much more desktop systems,
+
+156
+00:05:38,000 --> 00:05:40,000
+which raises the probability
+
+157
+00:05:40,000 --> 00:05:42,000
+or the assumption
+
+158
+00:05:42,000 --> 00:05:44,000
+that the ad blocks are higher
+
+159
+00:05:44,000 --> 00:05:46,000
+on desktop browsers.
+
+160
+00:05:46,000 --> 00:05:48,000
+You have to say that was a time
+
+161
+00:05:48,000 --> 00:05:50,000
+when you couldn't change the standard
+
+162
+00:05:50,000 --> 00:05:52,000
+browser on iOS.
+
+163
+00:05:52,000 --> 00:05:54,000
+Now everything is a bit different.
+
+164
+00:05:54,000 --> 00:05:56,000
+Personally, I use both
+
+165
+00:05:56,000 --> 00:05:58,000
+on the desktop and on the phone
+
+166
+00:05:58,000 --> 00:06:00,000
+the browser Brave.
+
+167
+00:06:00,000 --> 00:06:02,000
+It makes the tracking
+
+168
+00:06:02,000 --> 00:06:04,000
+more difficult.
+
+169
+00:06:04,000 --> 00:06:06,000
+But at the same time, the information
+
+170
+00:06:06,000 --> 00:06:08,000
+with Matomo and in connection
+
+171
+00:06:08,000 --> 00:06:10,000
+with cookie-free tracking,
+
+172
+00:06:10,000 --> 00:06:12,000
+that the Matomo instance is on the same domain,
+
+173
+00:06:12,000 --> 00:06:14,000
+then the JavaScript tracking
+
+174
+00:06:14,000 --> 00:06:16,000
+comes through the Brave browser
+
+175
+00:06:16,000 --> 00:06:18,000
+while other things are kept
+
+176
+00:06:18,000 --> 00:06:20,000
+and decoupled.
+
+177
+00:06:20,000 --> 00:06:22,000
+Let's take a second look at
+
+178
+00:06:22,000 --> 00:06:24,000
+the KFZ online shop.
+
+179
+00:06:24,000 --> 00:06:26,000
+Here it looks like we have
+
+180
+00:06:26,000 --> 00:06:28,000
+about 30 percent more visits,
+
+181
+00:06:28,000 --> 00:06:30,000
+but already about 40 percent
+
+182
+00:06:30,000 --> 00:06:32,000
+more page views.
+
+183
+00:06:32,000 --> 00:06:34,000
+How does this come about?
+
+184
+00:06:34,000 --> 00:06:36,000
+From the situation,
+
+185
+00:06:36,000 --> 00:06:38,000
+in contrast to a regional provider,
+
+186
+00:06:38,000 --> 00:06:40,000
+where I very often only have
+
+187
+00:06:40,000 --> 00:06:42,000
+one-pager visits,
+
+188
+00:06:42,000 --> 00:06:44,000
+I have much longer visits.
+
+189
+00:06:44,000 --> 00:06:46,000
+And if a user
+
+190
+00:06:46,000 --> 00:06:48,000
+who goes through the online shop
+
+191
+00:06:48,000 --> 00:06:50,000
+has a blocker,
+
+192
+00:06:50,000 --> 00:06:52,000
+then the difference between
+
+193
+00:06:52,000 --> 00:06:54,000
+the number of visits and the page views
+
+194
+00:06:54,000 --> 00:06:56,000
+will be different.
+
+195
+00:06:56,000 --> 00:06:58,000
+I'll come back to that later.
+
+196
+00:06:58,000 --> 00:07:00,000
+Here I have the
+
+197
+00:07:00,000 --> 00:07:02,000
+short-term view of the telematics
+
+198
+00:07:02,000 --> 00:07:04,000
+of the mobile browser.
+
+199
+00:07:04,000 --> 00:07:06,000
+That means we had 74 percent
+
+200
+00:07:06,000 --> 00:07:08,000
+mobile browser in standard tracking
+
+201
+00:07:08,000 --> 00:07:10,000
+and 67 percent in background tracking.
+
+202
+00:07:10,000 --> 00:07:12,000
+That means the number of desktops
+
+203
+00:07:12,000 --> 00:07:14,000
+has also increased again.
+
+204
+00:07:14,000 --> 00:07:16,000
+You always have to consider
+
+205
+00:07:16,000 --> 00:07:18,000
+this distinction, because
+
+206
+00:07:18,000 --> 00:07:20,000
+there may be so much
+
+207
+00:07:20,000 --> 00:07:22,000
+different data in background tracking
+
+208
+00:07:22,000 --> 00:07:24,000
+that you have to consider
+
+209
+00:07:24,000 --> 00:07:26,000
+whether you actually wanted to choose
+
+210
+00:07:26,000 --> 00:07:28,000
+the right one.
+
+211
+00:07:28,000 --> 00:07:30,000
+Now we come to the OMT.
+
+212
+00:07:30,000 --> 00:07:32,000
+The OMT is
+
+213
+00:07:32,000 --> 00:07:34,000
+an online platform
+
+214
+00:07:34,000 --> 00:07:36,000
+that is the meeting point for
+
+215
+00:07:36,000 --> 00:07:38,000
+further education and networks
+
+216
+00:07:38,000 --> 00:07:40,000
+in online marketing.
+
+217
+00:07:40,000 --> 00:07:42,000
+The claim of the OMT is
+
+218
+00:07:42,000 --> 00:07:44,000
+to learn from each other all your life.
+
+219
+00:07:44,000 --> 00:07:46,000
+I am also the ambassador of the OMT
+
+220
+00:07:46,000 --> 00:07:48,000
+and had the chance
+
+221
+00:07:48,000 --> 00:07:50,000
+to evaluate this page.
+
+222
+00:07:50,000 --> 00:07:52,000
+Here we had an installation
+
+223
+00:07:52,000 --> 00:07:54,000
+of a Matomo standard.
+
+224
+00:07:54,000 --> 00:07:56,000
+There were
+
+225
+00:07:56,000 --> 00:07:58,000
+almost no deviations.
+
+226
+00:07:58,000 --> 00:08:00,000
+That's why I leave that
+
+227
+00:08:00,000 --> 00:08:02,000
+out here with Google Analytics
+
+228
+00:08:02,000 --> 00:08:04,000
+in comparison.
+
+229
+00:08:04,000 --> 00:08:06,000
+Then we had an uplift of
+
+230
+00:08:06,000 --> 00:08:08,000
+15 percent in the visits.
+
+231
+00:08:08,000 --> 00:08:10,000
+That was the big disappointment
+
+232
+00:08:10,000 --> 00:08:12,000
+because the difference is
+
+233
+00:08:12,000 --> 00:08:14,000
+relatively small.
+
+234
+00:08:14,000 --> 00:08:16,000
+Apparently, not so many people
+
+235
+00:08:16,000 --> 00:08:18,000
+use the system adblocker.
+
+236
+00:08:18,000 --> 00:08:20,000
+Then I looked at the data
+
+237
+00:08:20,000 --> 00:08:22,000
+and realized that I had
+
+238
+00:08:22,000 --> 00:08:24,000
+left out Google Analytics
+
+239
+00:08:24,000 --> 00:08:26,000
+because that did not give us
+
+240
+00:08:26,000 --> 00:08:28,000
+any further points.
+
+241
+00:08:28,000 --> 00:08:30,000
+We have 80 percent more
+
+242
+00:08:30,000 --> 00:08:32,000
+page views
+
+243
+00:08:32,000 --> 00:08:34,000
+compared to the visits.
+
+244
+00:08:34,000 --> 00:08:36,000
+That means 15 percent more visits
+
+245
+00:08:36,000 --> 00:08:38,000
+but 80 percent more page views.
+
+246
+00:08:38,000 --> 00:08:40,000
+I wanted to take a closer look
+
+247
+00:08:40,000 --> 00:08:42,000
+at that.
+
+248
+00:08:42,000 --> 00:08:44,000
+But first I looked at the statistics.
+
+249
+00:08:44,000 --> 00:08:46,000
+This is an online learning platform.
+
+250
+00:08:46,000 --> 00:08:48,000
+That means that people go
+
+251
+00:08:48,000 --> 00:08:50,000
+there every week.
+
+252
+00:08:50,000 --> 00:08:52,000
+That means that the weekend
+
+253
+00:08:52,000 --> 00:08:54,000
+dates are much lower
+
+254
+00:08:54,000 --> 00:08:56,000
+and that's why we have these
+
+255
+00:08:56,000 --> 00:08:58,000
+interruptions.
+
+256
+00:08:58,000 --> 00:09:00,000
+Here, too, we have a huge
+
+257
+00:09:00,000 --> 00:09:02,000
+share of desktop users.
+
+258
+00:09:02,000 --> 00:09:04,000
+That means that even in normal
+
+259
+00:09:04,000 --> 00:09:06,000
+tracking we have 73 percent
+
+260
+00:09:06,000 --> 00:09:08,000
+desktop users while in
+
+261
+00:09:08,000 --> 00:09:10,000
+the background we even
+
+262
+00:09:10,000 --> 00:09:12,000
+reach 84 percent.
+
+263
+00:09:12,000 --> 00:09:14,000
+We already remember the
+
+264
+00:09:14,000 --> 00:09:16,000
+73 to 84 percent because now
+
+265
+00:09:16,000 --> 00:09:18,000
+we have a big difference.
+
+266
+00:09:18,000 --> 00:09:20,000
+We have segmented the whole thing.
+
+267
+00:09:20,000 --> 00:09:22,000
+I have left out all the
+
+268
+00:09:22,000 --> 00:09:24,000
+individual page views to
+
+269
+00:09:24,000 --> 00:09:26,000
+see what happens there.
+
+270
+00:09:26,000 --> 00:09:28,000
+I have found out that
+
+271
+00:09:28,000 --> 00:09:30,000
+with the visits we have
+
+272
+00:09:30,000 --> 00:09:32,000
+no longer 15 percent but
+
+273
+00:09:32,000 --> 00:09:34,000
+already 35 percent more.
+
+274
+00:09:34,000 --> 00:09:36,000
+If we take a look at the
+
+275
+00:09:36,000 --> 00:09:38,000
+page views at that point we
+
+276
+00:09:38,000 --> 00:09:40,000
+even reach 140 percent.
+
+277
+00:09:40,000 --> 00:09:42,000
+Before we had 15 percent
+
+278
+00:09:42,000 --> 00:09:44,000
+to 35 percent
+
+279
+00:09:44,000 --> 00:09:46,000
+and 80 percent
+
+280
+00:09:46,000 --> 00:09:48,000
+to 180 percent.
+
+281
+00:09:48,000 --> 00:09:50,000
+The share of users
+
+282
+00:09:50,000 --> 00:09:52,000
+in the desktop area
+
+283
+00:09:52,000 --> 00:09:54,000
+goes up to 91 percent
+
+284
+00:09:54,000 --> 00:09:56,000
+by now.
+
+285
+00:09:56,000 --> 00:09:58,000
+The database
+
+286
+00:09:58,000 --> 00:10:00,000
+that we have here,
+
+287
+00:10:00,000 --> 00:10:02,000
+with the page views at least
+
+288
+00:10:02,000 --> 00:10:04,000
+two, looks like this.
+
+289
+00:10:04,000 --> 00:10:06,000
+In standard tracking we have
+
+290
+00:10:06,000 --> 00:10:08,000
+24 percent of visits that
+
+291
+00:10:08,000 --> 00:10:10,000
+generate about 53 percent of page views.
+
+292
+00:10:10,000 --> 00:10:12,000
+In background tracking
+
+293
+00:10:12,000 --> 00:10:14,000
+we only have 5 percent
+
+294
+00:10:14,000 --> 00:10:16,000
+more visits.
+
+295
+00:10:16,000 --> 00:10:18,000
+But we have 18 percent more
+
+296
+00:10:18,000 --> 00:10:20,000
+page views that are generated here.
+
+297
+00:10:20,000 --> 00:10:22,000
+We clearly see the difference.
+
+298
+00:10:22,000 --> 00:10:24,000
+The users, the app blockers
+
+299
+00:10:24,000 --> 00:10:26,000
+in this case,
+
+300
+00:10:26,000 --> 00:10:28,000
+bring a much higher number
+
+301
+00:10:28,000 --> 00:10:30,000
+of page views.
+
+302
+00:10:30,000 --> 00:10:32,000
+If we increase the whole thing to
+
+303
+00:10:32,000 --> 00:10:34,000
+the number of page views of at least
+
+304
+00:10:34,000 --> 00:10:36,000
+four, then this difference
+
+305
+00:10:36,000 --> 00:10:38,000
+is much higher.
+
+306
+00:10:38,000 --> 00:10:40,000
+Yes.
+
+307
+00:10:40,000 --> 00:10:42,000
+Let's take a quick look at the
+
+308
+00:10:42,000 --> 00:10:44,000
+technology from the front and from the back.
+
+309
+00:10:44,000 --> 00:10:46,000
+From the front is
+
+310
+00:10:46,000 --> 00:10:48,000
+clearly the normal standard
+
+311
+00:10:48,000 --> 00:10:50,000
+tracking variant.
+
+312
+00:10:50,000 --> 00:10:52,000
+The background tracking I have here in the middle
+
+313
+00:10:52,000 --> 00:10:54,000
+and at the very bottom
+
+314
+00:10:54,000 --> 00:10:56,000
+to compare the variant, if we
+
+315
+00:10:56,000 --> 00:10:58,000
+run log file analytics with Matomo,
+
+316
+00:10:58,000 --> 00:11:00,000
+so that you can see
+
+317
+00:11:00,000 --> 00:11:02,000
+what the differences are.
+
+318
+00:11:02,000 --> 00:11:04,000
+Events,
+
+319
+00:11:04,000 --> 00:11:06,000
+i.e. event tracking, are not a
+
+320
+00:11:06,000 --> 00:11:08,000
+topic at all.
+
+321
+00:11:08,000 --> 00:11:10,000
+About the Tag Manager, about the normal JavaScript integration
+
+322
+00:11:10,000 --> 00:11:12,000
+or the like,
+
+323
+00:11:12,000 --> 00:11:14,000
+we can do everything perfectly.
+
+324
+00:11:14,000 --> 00:11:16,000
+In background tracking, this is not possible
+
+325
+00:11:16,000 --> 00:11:18,000
+from home at first.
+
+326
+00:11:18,000 --> 00:11:20,000
+Because the tracking
+
+327
+00:11:20,000 --> 00:11:22,000
+comes directly from the application,
+
+328
+00:11:22,000 --> 00:11:24,000
+i.e. at the moment when the HTML
+
+329
+00:11:24,000 --> 00:11:26,000
+is generated.
+
+330
+00:11:26,000 --> 00:11:28,000
+So I don't know anything about the entire user interaction.
+
+331
+00:11:28,000 --> 00:11:30,000
+If I
+
+332
+00:11:30,000 --> 00:11:32,000
+wanted to bring that in,
+
+333
+00:11:32,000 --> 00:11:34,000
+I would have to build my own interface
+
+334
+00:11:34,000 --> 00:11:36,000
+with this data
+
+335
+00:11:36,000 --> 00:11:38,000
+in addition to the tracking API
+
+336
+00:11:38,000 --> 00:11:40,000
+within the application,
+
+337
+00:11:40,000 --> 00:11:42,000
+using Matomo.
+
+338
+00:11:42,000 --> 00:11:44,000
+This is a bit more complicated,
+
+339
+00:11:44,000 --> 00:11:46,000
+but theoretically understandable.
+
+340
+00:11:46,000 --> 00:11:48,000
+Within log file tracking, there is no chance
+
+341
+00:11:48,000 --> 00:11:50,000
+to do anything with events at all.
+
+342
+00:11:50,000 --> 00:11:52,000
+Internal elements tracking,
+
+343
+00:11:52,000 --> 00:11:54,000
+exactly the same.
+
+344
+00:11:54,000 --> 00:11:56,000
+Standard available in background tracking
+
+345
+00:11:56,000 --> 00:11:58,000
+only via an own interface
+
+346
+00:11:58,000 --> 00:12:00,000
+that we have to create.
+
+347
+00:12:00,000 --> 00:12:02,000
+The same applies to the downloads,
+
+348
+00:12:02,000 --> 00:12:04,000
+which are already available.
+
+349
+00:12:04,000 --> 00:12:06,000
+That means we don't have any problems there.
+
+350
+00:12:06,000 --> 00:12:08,000
+Also the outgoing links,
+
+351
+00:12:08,000 --> 00:12:10,000
+the same variant over background tracking.
+
+352
+00:12:10,000 --> 00:12:12,000
+I have to solve this on my own.
+
+353
+00:12:12,000 --> 00:12:14,000
+These are all interactions within the browser
+
+354
+00:12:14,000 --> 00:12:16,000
+that happen,
+
+355
+00:12:16,000 --> 00:12:18,000
+which I can't get right away.
+
+356
+00:12:18,000 --> 00:12:20,000
+In log file tracking, there is no chance
+
+357
+00:12:20,000 --> 00:12:22,000
+to manage the whole thing at all.
+
+358
+00:12:22,000 --> 00:12:24,000
+E-commerce tracking is not an issue at all
+
+359
+00:12:24,000 --> 00:12:26,000
+in the background,
+
+360
+00:12:26,000 --> 00:12:28,000
+because the data about e-commerce
+
+361
+00:12:28,000 --> 00:12:30,000
+is even much earlier available
+
+362
+00:12:30,000 --> 00:12:32,000
+than it would normally be.
+
+363
+00:12:32,000 --> 00:12:34,000
+Also here in log file tracking,
+
+364
+00:12:34,000 --> 00:12:36,000
+there is no chance to get there.
+
+365
+00:12:36,000 --> 00:12:38,000
+Of course, we can use cookies
+
+366
+00:12:38,000 --> 00:12:40,000
+to recognize the user again
+
+367
+00:12:40,000 --> 00:12:42,000
+in standard tracking,
+
+368
+00:12:42,000 --> 00:12:44,000
+in terms of how far you want to do it
+
+369
+00:12:44,000 --> 00:12:46,000
+in terms of the user consent-free variant
+
+370
+00:12:46,000 --> 00:12:48,000
+or whether you use hybrid tracking there.
+
+371
+00:12:48,000 --> 00:12:50,000
+That is up to everyone.
+
+372
+00:12:50,000 --> 00:12:52,000
+In the background, I have to think
+
+373
+00:12:52,000 --> 00:12:54,000
+about something else
+
+374
+00:12:54,000 --> 00:12:56,000
+how I can recognize the user again.
+
+375
+00:12:56,000 --> 00:12:58,000
+Of course, I can also set a lifelong cookie
+
+376
+00:12:58,000 --> 00:13:00,000
+with which I can identify the user
+
+377
+00:13:00,000 --> 00:13:02,000
+afterwards,
+
+378
+00:13:02,000 --> 00:13:04,000
+but I have to get the logic
+
+379
+00:13:04,000 --> 00:13:06,000
+into the application.
+
+380
+00:13:06,000 --> 00:13:08,000
+Adblockers are
+
+381
+00:13:08,000 --> 00:13:10,000
+exactly the problem
+
+382
+00:13:10,000 --> 00:13:12,000
+when it comes to standard tracking,
+
+383
+00:13:12,000 --> 00:13:14,000
+which is why I want to do this background tracking.
+
+384
+00:13:14,000 --> 00:13:16,000
+In background tracking,
+
+385
+00:13:16,000 --> 00:13:18,000
+it is not an issue at all.
+
+386
+00:13:18,000 --> 00:13:20,000
+All user data are coming in,
+
+387
+00:13:20,000 --> 00:13:22,000
+even far too many,
+
+388
+00:13:22,000 --> 00:13:24,000
+because all the normal bots
+
+389
+00:13:24,000 --> 00:13:26,000
+are being protocolized here,
+
+390
+00:13:26,000 --> 00:13:28,000
+but I'll get back to that in a moment.
+
+391
+00:13:28,000 --> 00:13:30,000
+The same is true for lockfile tracking.
+
+392
+00:13:30,000 --> 00:13:32,000
+I would like to briefly mention
+
+393
+00:13:32,000 --> 00:13:34,000
+the topic of caching here.
+
+394
+00:13:34,000 --> 00:13:36,000
+Standard caching,
+
+395
+00:13:36,000 --> 00:13:38,000
+that is, HTTP caching,
+
+396
+00:13:38,000 --> 00:13:40,000
+is not an issue with standard tracking at all.
+
+397
+00:13:40,000 --> 00:13:42,000
+If I activate it
+
+398
+00:13:42,000 --> 00:13:44,000
+or even use a CDN
+
+399
+00:13:44,000 --> 00:13:46,000
+and want to use background tracking,
+
+400
+00:13:46,000 --> 00:13:48,000
+I have problems there,
+
+401
+00:13:48,000 --> 00:13:50,000
+because the data for the tracking
+
+402
+00:13:50,000 --> 00:13:52,000
+no longer appears in the end application,
+
+403
+00:13:52,000 --> 00:13:54,000
+because the data comes directly
+
+404
+00:13:54,000 --> 00:13:56,000
+from the CDN,
+
+405
+00:13:56,000 --> 00:13:58,000
+and so I have the problems
+
+406
+00:13:58,000 --> 00:14:00,000
+to capture this data there.
+
+407
+00:14:00,000 --> 00:14:02,000
+In the case of lockfile tracking,
+
+408
+00:14:02,000 --> 00:14:04,000
+I would have to use
+
+409
+00:14:04,000 --> 00:14:06,000
+the CDN tracking
+
+410
+00:14:06,000 --> 00:14:08,000
+and not the individual server.
+
+411
+00:14:08,000 --> 00:14:10,000
+Session recognition,
+
+412
+00:14:10,000 --> 00:14:12,000
+of course, if I don't use cookies
+
+413
+00:14:12,000 --> 00:14:14,000
+in standard tracking,
+
+414
+00:14:14,000 --> 00:14:16,000
+it happens via fingerprinting.
+
+415
+00:14:16,000 --> 00:14:18,000
+In background tracking,
+
+416
+00:14:18,000 --> 00:14:20,000
+I have that via the system.
+
+417
+00:14:20,000 --> 00:14:22,000
+Most of the time,
+
+418
+00:14:22,000 --> 00:14:24,000
+I recognize the user
+
+419
+00:14:24,000 --> 00:14:26,000
+during the session,
+
+420
+00:14:26,000 --> 00:14:28,000
+and with that I have a much more accurate
+
+421
+00:14:28,000 --> 00:14:30,000
+session recognition than I would have
+
+422
+00:14:30,000 --> 00:14:32,000
+with fingerprinting or the like.
+
+423
+00:14:32,000 --> 00:14:34,000
+When it comes to lockfile analytics,
+
+424
+00:14:34,000 --> 00:14:36,000
+we don't have to think about it at all.
+
+425
+00:14:36,000 --> 00:14:38,000
+Someone tried to find out from the IP address
+
+426
+00:14:38,000 --> 00:14:40,000
+of the user agent
+
+427
+00:14:40,000 --> 00:14:42,000
+whether it could be
+
+428
+00:14:42,000 --> 00:14:44,000
+a coherent session or not.
+
+429
+00:14:44,000 --> 00:14:46,000
+Lockfile tracking is always
+
+430
+00:14:46,000 --> 00:14:48,000
+a nice parallel variant
+
+431
+00:14:48,000 --> 00:14:50,000
+to get a feeling
+
+432
+00:14:50,000 --> 00:14:52,000
+of what is going on
+
+433
+00:14:52,000 --> 00:14:54,000
+in standard tracking
+
+434
+00:14:54,000 --> 00:14:56,000
+in order to detect
+
+435
+00:14:56,000 --> 00:14:58,000
+a size and target size.
+
+436
+00:14:58,000 --> 00:15:00,000
+And that without the effort
+
+437
+00:15:00,000 --> 00:15:02,000
+to integrate the whole thing
+
+438
+00:15:02,000 --> 00:15:04,000
+within the system.
+
+439
+00:15:04,000 --> 00:15:06,000
+Integration, of course,
+
+440
+00:15:06,000 --> 00:15:08,000
+standard JavaScript code,
+
+441
+00:15:08,000 --> 00:15:10,000
+simply bind in, and that's it.
+
+442
+00:15:10,000 --> 00:15:12,000
+With background tracking,
+
+443
+00:15:12,000 --> 00:15:14,000
+it has to take place in the application.
+
+444
+00:15:14,000 --> 00:15:16,000
+I have developed a finished module
+
+445
+00:15:16,000 --> 00:15:18,000
+for the CMS Contao.
+
+446
+00:15:18,000 --> 00:15:20,000
+It's relatively wide.
+
+447
+00:15:20,000 --> 00:15:22,000
+A few more tests have to be done.
+
+448
+00:15:22,000 --> 00:15:24,000
+There are too many vulnerabilities
+
+449
+00:15:24,000 --> 00:15:26,000
+with extensions that come in
+
+450
+00:15:26,000 --> 00:15:28,000
+that could interfere with
+
+451
+00:15:28,000 --> 00:15:30,000
+the extensions I have developed.
+
+452
+00:15:30,000 --> 00:15:32,000
+We just have to do a few more tests.
+
+453
+00:15:32,000 --> 00:15:34,000
+If you are interested in these extensions,
+
+454
+00:15:34,000 --> 00:15:36,000
+feel free to contact me.
+
+455
+00:15:36,000 --> 00:15:38,000
+Then we can take a look
+
+456
+00:15:38,000 --> 00:15:40,000
+and do a little test.
+
+457
+00:15:40,000 --> 00:15:42,000
+And with lockfile importing,
+
+458
+00:15:42,000 --> 00:15:44,000
+of course, the whole thing has to be set up locally
+
+459
+00:15:44,000 --> 00:15:46,000
+so that the lockfiles are imported.
+
+460
+00:15:46,000 --> 00:15:48,000
+Let's get to the important point
+
+461
+00:15:48,000 --> 00:15:50,000
+of recognizing bots.
+
+462
+00:15:50,000 --> 00:15:52,000
+We basically have the situation
+
+463
+00:15:52,000 --> 00:15:54,000
+within the web,
+
+464
+00:15:54,000 --> 00:15:56,000
+just about 50 percent,
+
+465
+00:15:56,000 --> 00:15:58,000
+maybe even 60 percent of the traffic
+
+466
+00:15:58,000 --> 00:16:00,000
+that really follows by humans.
+
+467
+00:16:00,000 --> 00:16:02,000
+A large part of 22,
+
+468
+00:16:02,000 --> 00:16:04,000
+25 percent of such a thing
+
+469
+00:16:04,000 --> 00:16:06,000
+in the shoot comes from harmless bots.
+
+470
+00:16:06,000 --> 00:16:08,000
+Harmless bots are, for example,
+
+471
+00:16:08,000 --> 00:16:10,000
+the Google bot itself, the Bing bot,
+
+472
+00:16:10,000 --> 00:16:12,000
+Yandex and whatever they're called,
+
+473
+00:16:12,000 --> 00:16:14,000
+but also all the other services
+
+474
+00:16:14,000 --> 00:16:16,000
+like SysTrix, like Ksovi,
+
+475
+00:16:16,000 --> 00:16:18,000
+or other services that know
+
+476
+00:16:18,000 --> 00:16:20,000
+the websites, or even
+
+477
+00:16:20,000 --> 00:16:22,000
+we ourselves, for example,
+
+478
+00:16:22,000 --> 00:16:24,000
+Screaming Frog or something like that.
+
+479
+00:16:24,000 --> 00:16:26,000
+All the bots that identify themselves
+
+480
+00:16:26,000 --> 00:16:28,000
+based on the user agent string
+
+481
+00:16:28,000 --> 00:16:30,000
+that they are bots,
+
+482
+00:16:30,000 --> 00:16:32,000
+we can identify as harmless bots
+
+483
+00:16:32,000 --> 00:16:34,000
+or evaluate in the form
+
+484
+00:16:34,000 --> 00:16:36,000
+that we say, yes, we can
+
+485
+00:16:36,000 --> 00:16:38,000
+filter them out anyway
+
+486
+00:16:38,000 --> 00:16:40,000
+and we know what happens there
+
+487
+00:16:40,000 --> 00:16:42,000
+and everything is fine.
+
+488
+00:16:42,000 --> 00:16:44,000
+And the important thing
+
+489
+00:16:44,000 --> 00:16:46,000
+that we should know,
+
+490
+00:16:46,000 --> 00:16:48,000
+which is basically,
+
+491
+00:16:48,000 --> 00:16:50,000
+whether it's Google Analytics,
+
+492
+00:16:50,000 --> 00:16:52,000
+Matomo, Standard Tracking,
+
+493
+00:16:52,000 --> 00:16:54,000
+or something like that,
+
+494
+00:16:54,000 --> 00:16:56,000
+are these impersonator bots.
+
+495
+00:16:56,000 --> 00:16:58,000
+That's about 25, 26 percent
+
+496
+00:16:58,000 --> 00:17:00,000
+of the traffic goes to such bots.
+
+497
+00:17:00,000 --> 00:17:02,000
+They act as if they were real people
+
+498
+00:17:02,000 --> 00:17:04,000
+who search the websites.
+
+499
+00:17:04,000 --> 00:17:06,000
+That means the user agent is
+
+500
+00:17:06,000 --> 00:17:08,000
+falsely, logically,
+
+501
+00:17:08,000 --> 00:17:10,000
+as if it were a normal Windows
+
+502
+00:17:10,000 --> 00:17:12,000
+that accepts cookies, obsession cookies,
+
+503
+00:17:12,000 --> 00:17:14,000
+long-term cookies.
+
+504
+00:17:14,000 --> 00:17:16,000
+These cookies are sometimes
+
+505
+00:17:16,000 --> 00:17:18,000
+divided over the instances.
+
+506
+00:17:18,000 --> 00:17:20,000
+So I've seen things
+
+507
+00:17:20,000 --> 00:17:22,000
+where I said, I really want to get to know
+
+508
+00:17:22,000 --> 00:17:24,000
+these people who,
+
+509
+00:17:24,000 --> 00:17:26,000
+within just 15 minutes,
+
+510
+00:17:26,000 --> 00:17:28,000
+once from Asia, once from the USA
+
+511
+00:17:28,000 --> 00:17:30,000
+and once from Sweden,
+
+512
+00:17:30,000 --> 00:17:32,000
+access the website and every time
+
+513
+00:17:32,000 --> 00:17:34,000
+only one and the same page,
+
+514
+00:17:34,000 --> 00:17:36,000
+not the start page, but some sub-page.
+
+515
+00:17:36,000 --> 00:17:38,000
+And we clearly recognize that
+
+516
+00:17:38,000 --> 00:17:40,000
+these impersonator bots
+
+517
+00:17:40,000 --> 00:17:42,000
+act as if they were real people.
+
+518
+00:17:42,000 --> 00:17:44,000
+They also do scroll,
+
+519
+00:17:44,000 --> 00:17:46,000
+they also do scroll events,
+
+520
+00:17:46,000 --> 00:17:48,000
+they also solve reading time triggers
+
+521
+00:17:48,000 --> 00:17:50,000
+and stuff like that.
+
+522
+00:17:50,000 --> 00:17:52,000
+They actually click on buttons
+
+523
+00:17:52,000 --> 00:17:54,000
+and solve CTAs.
+
+524
+00:17:54,000 --> 00:17:56,000
+That means we recognize
+
+525
+00:17:56,000 --> 00:17:58,000
+based on the behavior of these bots
+
+526
+00:17:58,000 --> 00:18:00,000
+not whether they are real people
+
+527
+00:18:00,000 --> 00:18:02,000
+or whether they are bots.
+
+528
+00:18:02,000 --> 00:18:04,000
+They really do a damn good job
+
+529
+00:18:04,000 --> 00:18:06,000
+and they annoy us in the statistics.
+
+530
+00:18:06,000 --> 00:18:08,000
+I have an updated version
+
+531
+00:18:08,000 --> 00:18:10,000
+from 2020
+
+532
+00:18:10,000 --> 00:18:12,000
+from another provider.
+
+533
+00:18:12,000 --> 00:18:14,000
+It assumes that we also
+
+534
+00:18:14,000 --> 00:18:16,000
+have about 25% of web bots.
+
+535
+00:18:16,000 --> 00:18:18,000
+Here you assume about 60% of humans.
+
+536
+00:18:18,000 --> 00:18:20,000
+The values,
+
+537
+00:18:20,000 --> 00:18:22,000
+you have to say again and again,
+
+538
+00:18:22,000 --> 00:18:24,000
+such statistics are always colored.
+
+539
+00:18:24,000 --> 00:18:26,000
+Depending on what kind of access
+
+540
+00:18:26,000 --> 00:18:28,000
+the providers of the statistics have,
+
+541
+00:18:28,000 --> 00:18:30,000
+they are different.
+
+542
+00:18:30,000 --> 00:18:32,000
+That's why it always comes down to
+
+543
+00:18:32,000 --> 00:18:34,000
+what is identifiable on your own website
+
+544
+00:18:34,000 --> 00:18:36,000
+and can be tracked.
+
+545
+00:18:36,000 --> 00:18:38,000
+Then you just have to do the things.
+
+546
+00:18:38,000 --> 00:18:40,000
+I've brought you a little comparison
+
+547
+00:18:40,000 --> 00:18:42,000
+with regards to impersonator bots.
+
+548
+00:18:42,000 --> 00:18:44,000
+This comparison is a bit unfair.
+
+549
+00:18:44,000 --> 00:18:46,000
+This is my own website
+
+550
+00:18:46,000 --> 00:18:48,000
+that I had from August 31
+
+551
+00:18:48,000 --> 00:18:50,000
+to September 19
+
+552
+00:18:50,000 --> 00:18:52,000
+in parallel tracking
+
+553
+00:18:52,000 --> 00:18:54,000
+with an automo instance
+
+554
+00:18:54,000 --> 00:18:56,000
+where no bot recognition
+
+555
+00:18:56,000 --> 00:18:58,000
+was in the grip
+
+556
+00:18:58,000 --> 00:19:00,000
+and an instance
+
+557
+00:19:00,000 --> 00:19:02,000
+in which I had everything
+
+558
+00:19:02,000 --> 00:19:04,000
+that I could drive.
+
+559
+00:19:04,000 --> 00:19:06,000
+A manually managed IP address
+
+560
+00:19:06,000 --> 00:19:08,000
+list of bot networks
+
+561
+00:19:08,000 --> 00:19:10,000
+and the like.
+
+562
+00:19:10,000 --> 00:19:12,000
+The difference looks like this.
+
+563
+00:19:12,000 --> 00:19:14,000
+The curve is identical,
+
+564
+00:19:14,000 --> 00:19:16,000
+but not the number.
+
+565
+00:19:16,000 --> 00:19:18,000
+I have almost half
+
+566
+00:19:18,000 --> 00:19:20,000
+of real accesses
+
+567
+00:19:20,000 --> 00:19:22,000
+that I could identify
+
+568
+00:19:22,000 --> 00:19:24,000
+that they were really humans.
+
+569
+00:19:24,000 --> 00:19:26,000
+The rest are actually
+
+570
+00:19:26,000 --> 00:19:28,000
+such impersonator bots
+
+571
+00:19:28,000 --> 00:19:30,000
+and they also produce
+
+572
+00:19:30,000 --> 00:19:32,000
+completely different values
+
+573
+00:19:32,000 --> 00:19:34,000
+for me in terms of pages.
+
+574
+00:19:34,000 --> 00:19:36,000
+That means the data
+
+575
+00:19:36,000 --> 00:19:38,000
+that I have here,
+
+576
+00:19:38,000 --> 00:19:40,000
+reading time,
+
+577
+00:19:40,000 --> 00:19:42,000
+jump rate and the like,
+
+578
+00:19:42,000 --> 00:19:44,000
+are completely out of order
+
+579
+00:19:44,000 --> 00:19:46,000
+because I have so many
+
+580
+00:19:46,000 --> 00:19:48,000
+impersonator bots on it.
+
+581
+00:19:48,000 --> 00:19:50,000
+Why do I have so many?
+
+582
+00:19:50,000 --> 00:19:52,000
+That's almost twice
+
+583
+00:19:52,000 --> 00:19:54,000
+what I have on normal visitors.
+
+584
+00:19:54,000 --> 00:19:56,000
+This comparison is a bit mean
+
+585
+00:19:56,000 --> 00:19:58,000
+because I use my website www.job.de
+
+586
+00:19:58,000 --> 00:20:00,000
+at the same time
+
+587
+00:20:00,000 --> 00:20:02,000
+as a forwarding target
+
+588
+00:20:02,000 --> 00:20:04,000
+of over 100 other domains,
+
+589
+00:20:04,000 --> 00:20:06,000
+partly expired domains,
+
+590
+00:20:06,000 --> 00:20:08,000
+partly domains that I had
+
+591
+00:20:08,000 --> 00:20:10,000
+before projects myself,
+
+592
+00:20:10,000 --> 00:20:12,000
+but also certainly of the 30-40 domains
+
+593
+00:20:12,000 --> 00:20:14,000
+that have never appeared anywhere
+
+594
+00:20:14,000 --> 00:20:16,000
+that I have registered,
+
+595
+00:20:16,000 --> 00:20:18,000
+but that have never appeared anywhere
+
+596
+00:20:18,000 --> 00:20:20,000
+and still get these domains
+
+597
+00:20:20,000 --> 00:20:22,000
+in large numbers from bots.
+
+598
+00:20:22,000 --> 00:20:24,000
+That's why I use this website
+
+599
+00:20:24,000 --> 00:20:26,000
+a bit like my little honeypot
+
+600
+00:20:26,000 --> 00:20:28,000
+and can identify
+
+601
+00:20:28,000 --> 00:20:30,000
+IP address segments
+
+602
+00:20:30,000 --> 00:20:32,000
+that I then find out
+
+603
+00:20:32,000 --> 00:20:34,000
+about whois analysis and the like,
+
+604
+00:20:34,000 --> 00:20:36,000
+whether these data segments
+
+605
+00:20:36,000 --> 00:20:38,000
+or these IP address segments
+
+606
+00:20:38,000 --> 00:20:40,000
+serve network operators
+
+607
+00:20:40,000 --> 00:20:42,000
+or not.
+
+608
+00:20:42,000 --> 00:20:44,000
+Topic recognition of bots in general.
+
+609
+00:20:44,000 --> 00:20:46,000
+User Agent is a voluntary
+
+610
+00:20:46,000 --> 00:20:48,000
+application, that means it can
+
+611
+00:20:48,000 --> 00:20:50,000
+definitely be faked. I shouldn't
+
+612
+00:20:50,000 --> 00:20:52,000
+rely on that.
+
+613
+00:20:52,000 --> 00:20:54,000
+It's difficult to use
+
+614
+00:20:54,000 --> 00:20:56,000
+because only with the second
+
+615
+00:20:56,000 --> 00:20:58,000
+access this variant can
+
+616
+00:20:58,000 --> 00:21:00,000
+be tracked,
+
+617
+00:21:00,000 --> 00:21:02,000
+but also bots accept
+
+618
+00:21:02,000 --> 00:21:04,000
+these cookies and share
+
+619
+00:21:04,000 --> 00:21:06,000
+the cookies, distribute these cookies
+
+620
+00:21:06,000 --> 00:21:08,000
+over their entire network segment
+
+621
+00:21:08,000 --> 00:21:10,000
+and finally only the IP address
+
+622
+00:21:10,000 --> 00:21:12,000
+remains and we have to
+
+623
+00:21:12,000 --> 00:21:14,000
+build our own filter there.
+
+624
+00:21:14,000 --> 00:21:16,000
+The problem at this point is
+
+625
+00:21:16,000 --> 00:21:18,000
+we can't really identify
+
+626
+00:21:18,000 --> 00:21:20,000
+die-in and static IP address segments
+
+627
+00:21:20,000 --> 00:21:22,000
+and everything ends up
+
+628
+00:21:22,000 --> 00:21:24,000
+in the background tracking.
+
+629
+00:21:24,000 --> 00:21:26,000
+I have to go back
+
+630
+00:21:26,000 --> 00:21:28,000
+and forth to search for
+
+631
+00:21:28,000 --> 00:21:30,000
+manual pattern recognition
+
+632
+00:21:30,000 --> 00:21:32,000
+in order to handle the whole thing.
+
+633
+00:21:32,000 --> 00:21:34,000
+At this point I want to focus on
+
+634
+00:21:34,000 --> 00:21:36,000
+an expansion of Matomo
+
+635
+00:21:36,000 --> 00:21:38,000
+because when I look at the
+
+636
+00:21:38,000 --> 00:21:40,000
+downloads of the tracking spam
+
+637
+00:21:40,000 --> 00:21:42,000
+prevention, which was only
+
+638
+00:21:42,000 --> 00:21:44,000
+at 1,828 when I
+
+639
+00:21:44,000 --> 00:21:46,000
+made this screenshot,
+
+640
+00:21:46,000 --> 00:21:48,000
+then that's extremely little.
+
+641
+00:21:48,000 --> 00:21:50,000
+This expansion should
+
+642
+00:21:50,000 --> 00:21:52,000
+be installed by everyone
+
+643
+00:21:52,000 --> 00:21:54,000
+in their Matomo instance
+
+644
+00:21:54,000 --> 00:21:56,000
+because I don't only have
+
+645
+00:21:56,000 --> 00:21:58,000
+the possibility to say I want
+
+646
+00:21:58,000 --> 00:22:00,000
+to exclude IP address segments
+
+647
+00:22:00,000 --> 00:22:02,000
+which are for example
+
+648
+00:22:02,000 --> 00:22:04,000
+downloaded from well-known
+
+649
+00:22:04,000 --> 00:22:06,000
+cloud providers like
+
+650
+00:22:06,000 --> 00:22:08,000
+Oracle, Amazon,
+
+651
+00:22:08,000 --> 00:22:10,000
+Azure Cloud and the like.
+
+652
+00:22:10,000 --> 00:22:12,000
+Lists are automatically downloaded.
+
+653
+00:22:12,000 --> 00:22:14,000
+They are not complete.
+
+654
+00:22:14,000 --> 00:22:16,000
+I have to say that very clearly,
+
+655
+00:22:16,000 --> 00:22:18,000
+but it's a very good approach.
+
+656
+00:22:18,000 --> 00:22:20,000
+But here I have the
+
+657
+00:22:20,000 --> 00:22:22,000
+possibility to do something
+
+658
+00:22:22,000 --> 00:22:24,000
+about exclude countries
+
+659
+00:22:24,000 --> 00:22:26,000
+to improve the data quality.
+
+660
+00:22:26,000 --> 00:22:28,000
+For example, if I have a website
+
+661
+00:22:28,000 --> 00:22:30,000
+where I am not at all interested
+
+662
+00:22:30,000 --> 00:22:32,000
+in whether users from China,
+
+663
+00:22:32,000 --> 00:22:34,000
+the USA, Sweden or the like
+
+664
+00:22:34,000 --> 00:22:36,000
+should come,
+
+665
+00:22:36,000 --> 00:22:38,000
+then we should see
+
+666
+00:22:38,000 --> 00:22:40,000
+that this thing is
+
+667
+00:22:40,000 --> 00:22:42,000
+possibly recorded
+
+668
+00:22:42,000 --> 00:22:44,000
+in the exclude countries.
+
+669
+00:22:44,000 --> 00:22:46,000
+Alternatively, to turn the whole thing
+
+670
+00:22:46,000 --> 00:22:48,000
+around, if I say that I am really
+
+671
+00:22:48,000 --> 00:22:50,000
+only interested in users from
+
+672
+00:22:50,000 --> 00:22:52,000
+the German-speaking room, from the roof room,
+
+673
+00:22:52,000 --> 00:22:54,000
+then I might just add
+
+674
+00:22:54,000 --> 00:22:56,000
+Germany, Austria and Switzerland
+
+675
+00:22:56,000 --> 00:22:58,000
+to it, possibly also France
+
+676
+00:22:58,000 --> 00:23:00,000
+and England and similar things
+
+677
+00:23:00,000 --> 00:23:02,000
+that come in a little bit.
+
+678
+00:23:02,000 --> 00:23:04,000
+But these are the customers
+
+679
+00:23:04,000 --> 00:23:06,000
+that interest me in my logging
+
+680
+00:23:06,000 --> 00:23:08,000
+and I can eliminate
+
+681
+00:23:08,000 --> 00:23:10,000
+an enormous number of log-in entries
+
+682
+00:23:10,000 --> 00:23:12,000
+based on the fact that
+
+683
+00:23:12,000 --> 00:23:14,000
+this geo-IP database is relatively
+
+684
+00:23:14,000 --> 00:23:16,000
+up-to-date and works
+
+685
+00:23:16,000 --> 00:23:18,000
+quite well.
+
+686
+00:23:18,000 --> 00:23:20,000
+You have to say that this free
+
+687
+00:23:20,000 --> 00:23:22,000
+database of a geo-IP that is
+
+688
+00:23:22,000 --> 00:23:24,000
+installed or offered
+
+689
+00:23:24,000 --> 00:23:26,000
+as standard at Matomo
+
+690
+00:23:26,000 --> 00:23:28,000
+is not always 100%
+
+691
+00:23:28,000 --> 00:23:30,000
+up-to-date due to the fact
+
+692
+00:23:30,000 --> 00:23:32,000
+that it is a free variant.
+
+693
+00:23:32,000 --> 00:23:34,000
+There is a cost-effective variant,
+
+694
+00:23:34,000 --> 00:23:36,000
+which is much more up-to-date.
+
+695
+00:23:36,000 --> 00:23:38,000
+There is also the MaxMind service,
+
+696
+00:23:38,000 --> 00:23:40,000
+which is also much more up-to-date.
+
+697
+00:23:40,000 --> 00:23:42,000
+In my opinion, this free variant
+
+698
+00:23:42,000 --> 00:23:44,000
+is much more up-to-date.
+
+699
+00:23:44,000 --> 00:23:46,000
+And the second variant is
+
+700
+00:23:46,000 --> 00:23:48,000
+to take care of the list of
+
+701
+00:23:48,000 --> 00:23:50,000
+globally ignored IP addresses
+
+702
+00:23:50,000 --> 00:23:52,000
+by yourself.
+
+703
+00:23:52,000 --> 00:23:54,000
+At this point, I have a list
+
+704
+00:23:54,000 --> 00:23:56,000
+of over 1,400 IP address segments
+
+705
+00:23:56,000 --> 00:23:58,000
+that I have identified
+
+706
+00:23:58,000 --> 00:24:00,000
+and that I throw in here.
+
+707
+00:24:00,000 --> 00:24:02,000
+But you have to say,
+
+708
+00:24:02,000 --> 00:24:04,000
+if I have so much data in here,
+
+709
+00:24:04,000 --> 00:24:06,000
+the load of Matomo is of course
+
+710
+00:24:06,000 --> 00:24:08,000
+still quite a bit higher,
+
+711
+00:24:08,000 --> 00:24:10,000
+because every single call
+
+712
+00:24:10,000 --> 00:24:12,000
+is a bit higher.
+
+713
+00:24:12,000 --> 00:24:14,000
+Finally, the manual pattern recognition
+
+714
+00:24:14,000 --> 00:24:16,000
+is one of the most important things.
+
+715
+00:24:16,000 --> 00:24:18,000
+We then have to check the IP address
+
+716
+00:24:18,000 --> 00:24:20,000
+and carry out the cleaning of the log data.
+
+717
+00:24:20,000 --> 00:24:22,000
+Matomo helps us
+
+718
+00:24:22,000 --> 00:24:24,000
+by having this DSGVO
+
+719
+00:24:24,000 --> 00:24:26,000
+or GDPR segment cleaning
+
+720
+00:24:26,000 --> 00:24:28,000
+where I can say,
+
+721
+00:24:28,000 --> 00:24:30,000
+OK, I would like to delete
+
+722
+00:24:30,000 --> 00:24:32,000
+this IP address segment
+
+723
+00:24:32,000 --> 00:24:34,000
+and then all this data
+
+724
+00:24:34,000 --> 00:24:36,000
+will be taken out of Matomo
+
+725
+00:24:36,000 --> 00:24:38,000
+and I can continue with it.
+
+726
+00:24:38,000 --> 00:24:40,000
+I can also update it
+
+727
+00:24:40,000 --> 00:24:42,000
+and then record this IP segment
+
+728
+00:24:42,000 --> 00:24:44,000
+as an exclusion variant.
+
+729
+00:24:44,000 --> 00:24:46,000
+In this context,
+
+730
+00:24:46,000 --> 00:24:48,000
+I would like to briefly
+
+731
+00:24:48,000 --> 00:24:50,000
+talk about the anonymization
+
+732
+00:24:50,000 --> 00:24:52,000
+of IP addresses,
+
+733
+00:24:52,000 --> 00:24:54,000
+because we have to briefly
+
+734
+00:24:54,000 --> 00:24:56,000
+look at which settings
+
+735
+00:24:56,000 --> 00:24:58,000
+I would like to make
+
+736
+00:24:58,000 --> 00:25:00,000
+for this case,
+
+737
+00:25:00,000 --> 00:25:02,000
+that I would like to make
+
+738
+00:25:02,000 --> 00:25:04,000
+a manual pattern recognition
+
+739
+00:25:04,000 --> 00:25:06,000
+and clean the data
+
+740
+00:25:06,000 --> 00:25:08,000
+of the 254 IP addresses
+
+741
+00:25:08,000 --> 00:25:10,000
+together.
+
+742
+00:25:10,000 --> 00:25:12,000
+And I can say relatively precisely,
+
+743
+00:25:12,000 --> 00:25:14,000
+OK, this IP address segment
+
+744
+00:25:14,000 --> 00:25:16,000
+is most likely
+
+745
+00:25:16,000 --> 00:25:18,000
+only in the input area
+
+746
+00:25:18,000 --> 00:25:20,000
+of a service provider.
+
+747
+00:25:20,000 --> 00:25:22,000
+Especially with cloud providers,
+
+748
+00:25:22,000 --> 00:25:24,000
+they usually have at least
+
+749
+00:25:24,000 --> 00:25:26,000
+this class 10,
+
+750
+00:25:26,000 --> 00:25:28,000
+i.e. 254 IP addresses,
+
+751
+00:25:28,000 --> 00:25:30,000
+which I can identify
+
+752
+00:25:30,000 --> 00:25:32,000
+relatively well about,
+
+753
+00:25:32,000 --> 00:25:34,000
+even if I use the variant
+
+754
+00:25:34,000 --> 00:25:36,000
+in addition to that,
+
+755
+00:25:36,000 --> 00:25:38,000
+I can just look at how this entire IP address segment
+
+756
+00:25:38,000 --> 00:25:40,000
+belongs and then I can get a little bit
+
+757
+00:25:40,000 --> 00:25:42,000
+more information about it.
+
+758
+00:25:42,000 --> 00:25:44,000
+If I leave the standard variant,
+
+759
+00:25:44,000 --> 00:25:46,000
+which is recommended for Matomo,
+
+760
+00:25:46,000 --> 00:25:48,000
+i.e. this two-byte variant,
+
+761
+00:25:48,000 --> 00:25:50,000
+then I pack 65,000 IP addresses
+
+762
+00:25:50,000 --> 00:25:52,000
+into this cluster.
+
+763
+00:25:52,000 --> 00:25:54,000
+That's definitely too much.
+
+764
+00:25:54,000 --> 00:25:56,000
+So if I use this setting in Matomo,
+
+765
+00:25:56,000 --> 00:25:58,000
+I can bend it,
+
+766
+00:25:58,000 --> 00:26:00,000
+somehow trying to identify
+
+767
+00:26:00,000 --> 00:26:02,000
+whether this data
+
+768
+00:26:02,000 --> 00:26:04,000
+or whether this access
+
+769
+00:26:04,000 --> 00:26:06,000
+came from an IP address segment
+
+770
+00:26:06,000 --> 00:26:08,000
+which is a network provider service
+
+771
+00:26:08,000 --> 00:26:10,000
+or something like that, or whether it is
+
+772
+00:26:10,000 --> 00:26:12,000
+a dial-in network, then I can completely
+
+773
+00:26:12,000 --> 00:26:14,000
+forget about it. And if we go to 3-byte,
+
+774
+00:26:14,000 --> 00:26:16,000
+then we don't even need to talk about it,
+
+775
+00:26:16,000 --> 00:26:18,000
+that's rather 16 million IP addresses.
+
+776
+00:26:18,000 --> 00:26:20,000
+Then I can actually
+
+777
+00:26:20,000 --> 00:26:22,000
+completely ignore this lockfall analytics
+
+778
+00:26:22,000 --> 00:26:24,000
+related to the visitor variants.
+
+779
+00:26:26,000 --> 00:26:28,000
+The data protection history down here,
+
+780
+00:26:28,000 --> 00:26:30,000
+in this case for our
+
+781
+00:26:30,000 --> 00:26:32,000
+certification for bots and the like,
+
+782
+00:26:32,000 --> 00:26:34,000
+is rather not very interesting.
+
+783
+00:26:34,000 --> 00:26:36,000
+And what is it all about in the end?
+
+784
+00:26:36,000 --> 00:26:38,000
+In the end, you just have to go through
+
+785
+00:26:38,000 --> 00:26:40,000
+the visitor log in this manual recognition
+
+786
+00:26:40,000 --> 00:26:42,000
+and then just look at
+
+787
+00:26:42,000 --> 00:26:44,000
+these IP address segments
+
+788
+00:26:44,000 --> 00:26:46,000
+and take a look at
+
+789
+00:26:46,000 --> 00:26:48,000
+the whole thing
+
+790
+00:26:48,000 --> 00:26:50,000
+according to the UIS database.
+
+791
+00:26:50,000 --> 00:26:52,000
+Yes, that actually
+
+792
+00:26:52,000 --> 00:26:54,000
+brings me to the summary
+
+793
+00:26:54,000 --> 00:26:56,000
+of my lecture.
+
+794
+00:26:56,000 --> 00:26:58,000
+If we really want to have
+
+795
+00:26:58,000 --> 00:27:00,000
+complete visitor data,
+
+796
+00:27:00,000 --> 00:27:02,000
+we have to rely on the background tracking.
+
+797
+00:27:02,000 --> 00:27:04,000
+Alternatively, with a
+
+798
+00:27:04,000 --> 00:27:06,000
+lower entry threshold,
+
+799
+00:27:06,000 --> 00:27:08,000
+to first look at what is going on
+
+800
+00:27:08,000 --> 00:27:10,000
+with ad blockers, possibly lost,
+
+801
+00:27:10,000 --> 00:27:12,000
+is the lockfall analytics.
+
+802
+00:27:12,000 --> 00:27:14,000
+The problem at this point,
+
+803
+00:27:14,000 --> 00:27:16,000
+if I have too much anonymized
+
+804
+00:27:16,000 --> 00:27:18,000
+the lockfiles from the IP address,
+
+805
+00:27:18,000 --> 00:27:20,000
+that is, even more than this class C segment,
+
+806
+00:27:20,000 --> 00:27:22,000
+then I can not leave Matomo
+
+807
+00:27:22,000 --> 00:27:24,000
+the chance to filter out
+
+808
+00:27:24,000 --> 00:27:26,000
+certain data
+
+809
+00:27:26,000 --> 00:27:28,000
+in this tracking spam prevention
+
+810
+00:27:28,000 --> 00:27:30,000
+variant or
+
+811
+00:27:30,000 --> 00:27:32,000
+the own IP address filter
+
+812
+00:27:32,000 --> 00:27:34,000
+history.
+
+813
+00:27:34,000 --> 00:27:36,000
+If a class C net or a class B net
+
+814
+00:27:36,000 --> 00:27:38,000
+is only anonymized,
+
+815
+00:27:38,000 --> 00:27:40,000
+then I can forget about the lockfiles
+
+816
+00:27:40,000 --> 00:27:42,000
+to really clean up the data.
+
+817
+00:27:42,000 --> 00:27:44,000
+I will get insights
+
+818
+00:27:44,000 --> 00:27:46,000
+without question,
+
+819
+00:27:46,000 --> 00:27:48,000
+but I will not be able to
+
+820
+00:27:48,000 --> 00:27:50,000
+identify whether these were
+
+821
+00:27:50,000 --> 00:27:52,000
+normal user accesses
+
+822
+00:27:52,000 --> 00:27:54,000
+or rather accesses
+
+823
+00:27:54,000 --> 00:27:56,000
+from on-board networks.
+
+824
+00:27:56,000 --> 00:27:58,000
+By doing this,
+
+825
+00:27:58,000 --> 00:28:00,000
+I can deal with the background tracking
+
+826
+00:28:00,000 --> 00:28:02,000
+or lockfile stories with the ad blocker
+
+827
+00:28:02,000 --> 00:28:04,000
+and have to see how it is
+
+828
+00:28:04,000 --> 00:28:06,000
+with the application levels,
+
+829
+00:28:06,000 --> 00:28:08,000
+i.e. with the HTTP and user caching.
+
+830
+00:28:08,000 --> 00:28:10,000
+Application caching in general,
+
+831
+00:28:10,000 --> 00:28:12,000
+i.e. where can I use it?
+
+832
+00:28:12,000 --> 00:28:14,000
+Does it even help me to develop
+
+833
+00:28:14,000 --> 00:28:16,000
+this background tracking?
+
+834
+00:28:16,000 --> 00:28:18,000
+I just have to have a good strategy
+
+835
+00:28:18,000 --> 00:28:20,000
+in terms of onboard recognition,
+
+836
+00:28:20,000 --> 00:28:22,000
+which, as I said,
+
+837
+00:28:22,000 --> 00:28:24,000
+has an IP address filter,
+
+838
+00:28:24,000 --> 00:28:26,000
+and my recommendation at this point
+
+839
+00:28:26,000 --> 00:28:28,000
+is always to carry out
+
+840
+00:28:28,000 --> 00:28:30,000
+parallel tracking from the front,
+
+841
+00:28:30,000 --> 00:28:32,000
+i.e. normal tracking by JavaScript,
+
+842
+00:28:32,000 --> 00:28:34,000
+and the tracking from the back
+
+843
+00:28:34,000 --> 00:28:36,000
+in parallel, because from the front
+
+844
+00:28:36,000 --> 00:28:38,000
+I get insights that I only get
+
+845
+00:28:38,000 --> 00:28:40,000
+with considerable effort through
+
+846
+00:28:40,000 --> 00:28:42,000
+the background tracking.
+
+847
+00:28:42,000 --> 00:28:44,000
+Here in the background tracking,
+
+848
+00:28:44,000 --> 00:28:46,000
+I really want to find out
+
+849
+00:28:46,000 --> 00:28:48,000
+what kind of loss
+
+850
+00:28:48,000 --> 00:28:50,000
+we have in normal tracking
+
+851
+00:28:50,000 --> 00:28:52,000
+i.e. the normal tracking
+
+852
+00:28:52,000 --> 00:28:54,000
+with the corresponding factor x
+
+853
+00:28:54,000 --> 00:28:56,000
+to calculate us a little nicely
+
+854
+00:28:56,000 --> 00:28:58,000
+and to get better insights
+
+855
+00:28:58,000 --> 00:29:00,000
+at this point.
+
+856
+00:29:00,000 --> 00:29:02,000
+We have to say that
+
+857
+00:29:02,000 --> 00:29:04,000
+when I looked at the OMT thing,
+
+858
+00:29:04,000 --> 00:29:06,000
+there is no way to say
+
+859
+00:29:06,000 --> 00:29:08,000
+I'll just take the factor 1.5
+
+860
+00:29:08,000 --> 00:29:10,000
+to calculate
+
+861
+00:29:10,000 --> 00:29:12,000
+what I would have
+
+862
+00:29:12,000 --> 00:29:14,000
+on users.
+
+863
+00:29:14,000 --> 00:29:16,000
+I really lose a lot of
+
+864
+00:29:16,000 --> 00:29:18,000
+facts that, especially in the
+
+865
+00:29:18,000 --> 00:29:20,000
+convergence or performance marketing,
+
+866
+00:29:20,000 --> 00:29:22,000
+are relevant.
+
+867
+00:29:22,000 --> 00:29:24,000
+Because if I really lose
+
+868
+00:29:24,000 --> 00:29:26,000
+the user who generates
+
+869
+00:29:26,000 --> 00:29:28,000
+much more page views,
+
+870
+00:29:28,000 --> 00:29:30,000
+who generates revenue,
+
+871
+00:29:30,000 --> 00:29:32,000
+who makes the purchases,
+
+872
+00:29:32,000 --> 00:29:34,000
+if I don't have it in standard tracking,
+
+873
+00:29:34,000 --> 00:29:36,000
+but I can capture it in background tracking,
+
+874
+00:29:36,000 --> 00:29:38,000
+then that's a completely different topic
+
+875
+00:29:38,000 --> 00:29:40,000
+on which I could then
+
+876
+00:29:40,000 --> 00:29:42,000
+control my Google Ads
+
+877
+00:29:42,000 --> 00:29:44,000
+investments differently.
+
+878
+00:29:44,000 --> 00:29:46,000
+Because I really see
+
+879
+00:29:46,000 --> 00:29:48,000
+that the display A performs
+
+880
+00:29:48,000 --> 00:29:50,000
+much better than the display B,
+
+881
+00:29:50,000 --> 00:29:52,000
+how I could normally take it out of standard tracking.
+
+882
+00:29:52,000 --> 00:29:54,000
+So from there
+
+883
+00:29:54,000 --> 00:29:56,000
+look, what does it look like?
+
+884
+00:29:56,000 --> 00:29:58,000
+Then just clearly the topic
+
+885
+00:29:58,000 --> 00:30:00,000
+of privacy by design,
+
+886
+00:30:00,000 --> 00:30:02,000
+what about user consent
+
+887
+00:30:02,000 --> 00:30:04,000
+that we really completely
+
+888
+00:30:04,000 --> 00:30:06,000
+anonymize the data
+
+889
+00:30:06,000 --> 00:30:08,000
+and of course run our Matomo instance
+
+890
+00:30:08,000 --> 00:30:10,000
+on our own server.
+
+891
+00:30:10,000 --> 00:30:12,000
+And then the whole thing could,
+
+892
+00:30:12,000 --> 00:30:14,000
+depending on how we deal with our data protection
+
+893
+00:30:14,000 --> 00:30:16,000
+then also work well.
+
+894
+00:30:16,000 --> 00:30:18,000
+Yes, I would say
+
+895
+00:30:18,000 --> 00:30:20,000
+half an hour talk, half an hour
+
+896
+00:30:20,000 --> 00:30:22,000
+point landing and from there I say
+
+897
+00:30:22,000 --> 00:30:24,000
+thank you very much
+
+898
+00:30:24,000 --> 00:30:26,000
+and yes, I am now looking forward
+
+899
+00:30:26,000 --> 00:30:28,000
+to questions that may come in.
+
+900
+00:30:28,000 --> 00:30:30,000
+Exactly, now would be the time
+
+901
+00:30:30,000 --> 00:30:32,000
+for any questions,
+
+902
+00:30:32,000 --> 00:30:34,000
+comments, other things
+
+903
+00:30:34,000 --> 00:30:36,000
+about the topic.
+
+904
+00:30:36,000 --> 00:30:38,000
+There has already been a question discussion,
+
+905
+00:30:38,000 --> 00:30:40,000
+which I would have asked, otherwise
+
+906
+00:30:40,000 --> 00:30:42,000
+you could maybe start right away,
+
+907
+00:30:42,000 --> 00:30:44,000
+a little bit about data protection,
+
+908
+00:30:44,000 --> 00:30:46,000
+opt-out and so on.
+
+909
+00:30:46,000 --> 00:30:48,000
+The problem is with the normal
+
+910
+00:30:48,000 --> 00:30:50,000
+JavaScript tracking it is relatively
+
+911
+00:30:50,000 --> 00:30:52,000
+simple to make an opt-out,
+
+912
+00:30:52,000 --> 00:30:54,000
+because you put a cookie,
+
+913
+00:30:54,000 --> 00:30:56,000
+it just works with the Matomo function
+
+914
+00:30:56,000 --> 00:30:58,000
+and with that it is relatively
+
+915
+00:30:58,000 --> 00:31:00,000
+straightforward. With a
+
+916
+00:31:00,000 --> 00:31:02,000
+background tracking you have to more or less
+
+917
+00:31:02,000 --> 00:31:04,000
+implement it yourself.
+
+918
+00:31:04,000 --> 00:31:06,000
+In the background tracking everything
+
+919
+00:31:06,000 --> 00:31:08,000
+has to be integrated by itself,
+
+920
+00:31:08,000 --> 00:31:10,000
+but right there I can of course also
+
+921
+00:31:10,000 --> 00:31:12,000
+take back a JavaScript-based cookie
+
+922
+00:31:12,000 --> 00:31:14,000
+and interpret whether
+
+923
+00:31:14,000 --> 00:31:16,000
+I can use it,
+
+924
+00:31:16,000 --> 00:31:18,000
+want to use it. At this point
+
+925
+00:31:18,000 --> 00:31:20,000
+you have to say, of course, that
+
+926
+00:31:20,000 --> 00:31:22,000
+background tracking is a purely
+
+927
+00:31:22,000 --> 00:31:24,000
+technical approach,
+
+928
+00:31:24,000 --> 00:31:26,000
+which in principle first of all
+
+929
+00:31:26,000 --> 00:31:28,000
+makes the data available.
+
+930
+00:31:28,000 --> 00:31:30,000
+How we handle the whole data protection
+
+931
+00:31:30,000 --> 00:31:32,000
+is still a second question.
+
+932
+00:31:32,000 --> 00:31:34,000
+I just wanted the basic idea
+
+933
+00:31:34,000 --> 00:31:36,000
+that the background tracking
+
+934
+00:31:36,000 --> 00:31:38,000
+and the possibility of data
+
+935
+00:31:38,000 --> 00:31:40,000
+coming in and presenting,
+
+936
+00:31:40,000 --> 00:31:42,000
+but yes, if we really talk about an opt-out
+
+937
+00:31:42,000 --> 00:31:44,000
+and really need this
+
+938
+00:31:44,000 --> 00:31:46,000
+data or
+
+939
+00:31:46,000 --> 00:31:48,000
+have to implement it in the necessary way,
+
+940
+00:31:48,000 --> 00:31:50,000
+then it's right, then you can do it
+
+941
+00:31:50,000 --> 00:31:52,000
+with a cookie and I can use it
+
+942
+00:31:52,000 --> 00:31:54,000
+in the application.
+
+943
+00:32:00,000 --> 00:32:02,000
+If there are no further questions,
+
+944
+00:32:02,000 --> 00:32:04,000
+let's leave
+
+945
+00:32:04,000 --> 00:32:06,000
+the people a little bit of time,
+
+946
+00:32:06,000 --> 00:32:08,000
+there is a bit of delay between
+
+947
+00:32:08,000 --> 00:32:10,000
+what we are talking about here until
+
+948
+00:32:10,000 --> 00:32:12,000
+the people see it.
+
+949
+00:32:14,000 --> 00:32:16,000
+Either I have explained everything
+
+950
+00:32:16,000 --> 00:32:18,000
+so beautifully or no one
+
+951
+00:32:18,000 --> 00:32:20,000
+dares to. Oh, someone is typing.
+
+952
+00:32:20,000 --> 00:32:22,000
+Yes, perfect.
+
+953
+00:32:26,000 --> 00:32:28,000
+Otherwise, you are welcome to contact me
+
+954
+00:32:28,000 --> 00:32:30,000
+at LinkedIn and Facebook
+
+955
+00:32:30,000 --> 00:32:32,000
+and feel free to ask questions
+
+956
+00:32:32,000 --> 00:32:34,000
+at any time. I am happy to
+
+957
+00:32:34,000 --> 00:32:36,000
+be at your disposal.
+
+958
+00:32:36,000 --> 00:32:38,000
+Exactly, and if you come up with anything
+
+959
+00:32:38,000 --> 00:32:40,000
+in the next few hours, the chat room
+
+960
+00:32:40,000 --> 00:32:42,000
+will remain open, it is only for one talk,
+
+961
+00:32:42,000 --> 00:32:44,000
+you can just continue
+
+962
+00:32:44,000 --> 00:32:46,000
+during the whole MatomoCamps.
+
+963
+00:32:48,000 --> 00:32:50,000
+A question from the chat room.
+
+964
+00:32:50,000 --> 00:32:52,000
+Do you have any experience
+
+965
+00:32:52,000 --> 00:32:54,000
+with hybrid applications?
+
+966
+00:32:54,000 --> 00:32:56,000
+Yes, I have two
+
+967
+00:32:56,000 --> 00:32:58,000
+applications currently
+
+968
+00:32:58,000 --> 00:33:00,000
+in the pre-planning, where we
+
+969
+00:33:00,000 --> 00:33:02,000
+want to implement the normal tracking
+
+970
+00:33:02,000 --> 00:33:04,000
+of the user consent
+
+971
+00:33:04,000 --> 00:33:06,000
+and then also
+
+972
+00:33:06,000 --> 00:33:08,000
+set the appropriate user cookie
+
+973
+00:33:08,000 --> 00:33:10,000
+if the user consent is available,
+
+974
+00:33:10,000 --> 00:33:12,000
+is in the planning, but I don't have any
+
+975
+00:33:12,000 --> 00:33:14,000
+experience with it yet.
+
+976
+00:33:14,000 --> 00:33:16,000
+Tracking for the MP3 calls,
+
+977
+00:33:16,000 --> 00:33:18,000
+that would more or less
+
+978
+00:33:18,000 --> 00:33:20,000
+be more or less only a variant
+
+979
+00:33:20,000 --> 00:33:22,000
+that can be solved either via
+
+980
+00:33:22,000 --> 00:33:24,000
+lockfile analytics or
+
+981
+00:33:24,000 --> 00:33:26,000
+but you switch
+
+982
+00:33:26,000 --> 00:33:28,000
+the analysis or rather
+
+983
+00:33:28,000 --> 00:33:30,000
+the provision of the MP3
+
+984
+00:33:30,000 --> 00:33:32,000
+via, for example, a PHP
+
+985
+00:33:32,000 --> 00:33:34,000
+Redirector, which works
+
+986
+00:33:34,000 --> 00:33:36,000
+virtually as a virtual
+
+987
+00:33:36,000 --> 00:33:38,000
+directory and then
+
+988
+00:33:38,000 --> 00:33:40,000
+takes the data in reception,
+
+989
+00:33:40,000 --> 00:33:42,000
+takes the calls in reception, the requests
+
+990
+00:33:42,000 --> 00:33:44,000
+and then also sends it
+
+991
+00:33:44,000 --> 00:33:46,000
+to the Matomo API
+
+992
+00:33:46,000 --> 00:33:48,000
+as a corresponding request.
+
+993
+00:33:48,000 --> 00:33:50,000
+So it can be solved without any problems.
+
+994
+00:33:50,000 --> 00:33:52,000
+We can talk about it again.
+
+995
+00:33:52,000 --> 00:33:54,000
+Exactly, a proxy script, exactly.
+
+996
+00:33:56,000 --> 00:33:58,000
+Exactly, something like that I would have also
+
+997
+00:33:58,000 --> 00:34:00,000
+asked myself,
+
+998
+00:34:00,000 --> 00:34:02,000
+which was not asked in the chat
+
+999
+00:34:02,000 --> 00:34:04,000
+and the one problem
+
+1000
+00:34:04,000 --> 00:34:06,000
+that I see a bit
+
+1001
+00:34:06,000 --> 00:34:08,000
+with background tracking is,
+
+1002
+00:34:08,000 --> 00:34:10,000
+for example, if we have a very normal,
+
+1003
+00:34:10,000 --> 00:34:12,000
+very simple PHP page, then
+
+1004
+00:34:12,000 --> 00:34:14,000
+that would mean that every time this PHP
+
+1005
+00:34:14,000 --> 00:34:16,000
+page is called,
+
+1006
+00:34:16,000 --> 00:34:18,000
+a beginner is sent to the Matomo server
+
+1007
+00:34:18,000 --> 00:34:20,000
+and the problem
+
+1008
+00:34:20,000 --> 00:34:22,000
+is, in contrast to JavaScript
+
+1009
+00:34:22,000 --> 00:34:24,000
+tracking, if you program it wrong,
+
+1010
+00:34:24,000 --> 00:34:26,000
+that the background
+
+1011
+00:34:26,000 --> 00:34:28,000
+server waits until it gets the answer
+
+1012
+00:34:28,000 --> 00:34:30,000
+from Matomo and only then
+
+1013
+00:34:30,000 --> 00:34:32,000
+sends the request to the user
+
+1014
+00:34:32,000 --> 00:34:34,000
+and thus actually the
+
+1015
+00:34:34,000 --> 00:34:36,000
+side call becomes a bit slower.
+
+1016
+00:34:36,000 --> 00:34:38,000
+Yes, that's the standard error
+
+1017
+00:34:38,000 --> 00:34:40,000
+problem on the topic, but
+
+1018
+00:34:40,000 --> 00:34:42,000
+you can do the whole thing in this respect,
+
+1019
+00:34:42,000 --> 00:34:44,000
+at least I do, that I
+
+1020
+00:34:44,000 --> 00:34:46,000
+collect the data
+
+1021
+00:34:46,000 --> 00:34:48,000
+within the standard process for the
+
+1022
+00:34:48,000 --> 00:34:50,000
+page generation, but only
+
+1023
+00:34:50,000 --> 00:34:52,000
+after, in the end,
+
+1024
+00:34:52,000 --> 00:34:54,000
+yes, if Flash works,
+
+1025
+00:34:54,000 --> 00:34:56,000
+that is, the entire HTML output
+
+1026
+00:34:56,000 --> 00:34:58,000
+delivered to the customer
+
+1027
+00:34:58,000 --> 00:35:00,000
+is then, in the end,
+
+1028
+00:35:00,000 --> 00:35:02,000
+the last task of the
+
+1029
+00:35:02,000 --> 00:35:04,000
+API Connect to Matomo.
+
+1030
+00:35:04,000 --> 00:35:06,000
+Variant 1, then I have, in the end,
+
+1031
+00:35:06,000 --> 00:35:08,000
+the situation that the process
+
+1032
+00:35:08,000 --> 00:35:10,000
+runs a little longer, but the
+
+1033
+00:35:10,000 --> 00:35:12,000
+session to the browser is already
+
+1034
+00:35:12,000 --> 00:35:14,000
+closed and, accordingly, the user
+
+1035
+00:35:14,000 --> 00:35:16,000
+does not receive this request anymore.
+
+1036
+00:35:16,000 --> 00:35:18,000
+The second variant is
+
+1037
+00:35:18,000 --> 00:35:20,000
+to write all the tracking
+
+1038
+00:35:20,000 --> 00:35:22,000
+information into the database
+
+1039
+00:35:22,000 --> 00:35:24,000
+and then play it
+
+1040
+00:35:24,000 --> 00:35:26,000
+through, and then
+
+1041
+00:35:26,000 --> 00:35:28,000
+take the data
+
+1042
+00:35:28,000 --> 00:35:30,000
+from the database
+
+1043
+00:35:30,000 --> 00:35:32,000
+in a separate process and then
+
+1044
+00:35:32,000 --> 00:35:34,000
+send it to Matomo.
+
+1045
+00:35:34,000 --> 00:35:36,000
+Since I have to work with
+
+1046
+00:35:36,000 --> 00:35:38,000
+a writing access anyway,
+
+1047
+00:35:38,000 --> 00:35:40,000
+with the API Key, I can also
+
+1048
+00:35:40,000 --> 00:35:42,000
+set the time of the access later.
+
+1049
+00:35:42,000 --> 00:35:44,000
+Then I have a temporary delay,
+
+1050
+00:35:44,000 --> 00:35:46,000
+but no real-time analysis at this point
+
+1051
+00:35:46,000 --> 00:35:48,000
+in Matomo, but just 1-2 minutes
+
+1052
+00:35:48,000 --> 00:35:50,000
+delayed, but that seems
+
+1053
+00:35:50,000 --> 00:35:52,000
+to be a more elegant variant,
+
+1054
+00:35:52,000 --> 00:35:54,000
+that I really log in, in the end,
+
+1055
+00:35:54,000 --> 00:35:56,000
+only to a local MySQL database
+
+1056
+00:35:56,000 --> 00:35:58,000
+or, as always, the database
+
+1057
+00:35:58,000 --> 00:36:00,000
+just save and from there
+
+1058
+00:36:00,000 --> 00:36:02,000
+get the whole thing out and
+
+1059
+00:36:02,000 --> 00:36:04,000
+throw it to Matomo.
+
+1060
+00:36:04,000 --> 00:36:06,000
+A solution that I then also
+
+1061
+00:36:06,000 --> 00:36:08,000
+would have, which unfortunately goes
+
+1062
+00:36:08,000 --> 00:36:10,000
+relatively badly in PHP, but in other
+
+1063
+00:36:10,000 --> 00:36:12,000
+programming languages, for example,
+
+1064
+00:36:12,000 --> 00:36:14,000
+it would also be a possibility
+
+1065
+00:36:14,000 --> 00:36:16,000
+that the server has multiple processes
+
+1066
+00:36:16,000 --> 00:36:18,000
+and then simply sending
+
+1067
+00:36:18,000 --> 00:36:20,000
+the data to Matomo in a separate thread
+
+1068
+00:36:20,000 --> 00:36:22,000
+and then really completely
+
+1069
+00:36:22,000 --> 00:36:24,000
+independent of the application
+
+1070
+00:36:24,000 --> 00:36:26,000
+of a user, because you don't have to wait,
+
+1071
+00:36:26,000 --> 00:36:28,000
+because you need the information
+
+1072
+00:36:28,000 --> 00:36:30,000
+not to be able to send the user
+
+1073
+00:36:30,000 --> 00:36:32,000
+his data. But you can do the same
+
+1074
+00:36:32,000 --> 00:36:34,000
+in PHP, I can also just
+
+1075
+00:36:34,000 --> 00:36:36,000
+load a thread.
+
+1076
+00:36:40,000 --> 00:36:42,000
+So, as I said, if there are more
+
+1077
+00:36:42,000 --> 00:36:44,000
+questions, feel free to contact
+
+1078
+00:36:44,000 --> 00:36:46,000
+me at any time, linked in Facebook
+
+1079
+00:36:46,000 --> 00:36:48,000
+or my website itself,
+
+1080
+00:36:48,000 --> 00:36:50,000
+also on my website, book an appointment
+
+1081
+00:36:50,000 --> 00:36:52,000
+for a meeting, then we can
+
+1082
+00:36:52,000 --> 00:36:54,000
+like to see your individual needs.
+
+1083
+00:36:58,000 --> 00:37:00,000
+Otherwise, if there are no more questions,
+
+1084
+00:37:00,000 --> 00:37:02,000
+then it comes to an end.
+
+1085
+00:37:02,000 --> 00:37:04,000
+I can briefly announce
+
+1086
+00:37:04,000 --> 00:37:06,000
+what happens at 11 o'clock.
+
+1087
+00:37:06,000 --> 00:37:08,000
+At 11 o'clock we have two events again.
+
+1088
+00:37:08,000 --> 00:37:10,000
+On the one hand, you can
+
+1089
+00:37:10,000 --> 00:37:12,000
+change to live stream room 1,
+
+1090
+00:37:12,000 --> 00:37:14,000
+where Jörg Paul will talk about it,
+
+1091
+00:37:14,000 --> 00:37:16,000
+in a very, very large
+
+1092
+00:37:16,000 --> 00:37:18,000
+Matomo instance,
+
+1093
+00:37:18,000 --> 00:37:20,000
+from the point of view
+
+1094
+00:37:20,000 --> 00:37:22,000
+of the Swedish tax agency
+
+1095
+00:37:22,000 --> 00:37:24,000
+or something like that.
+
+1096
+00:37:24,000 --> 00:37:26,000
+So really Matomo instances,
+
+1097
+00:37:26,000 --> 00:37:28,000
+which get millions of pages a month,
+
+1098
+00:37:28,000 --> 00:37:30,000
+how you can still handle it
+
+1099
+00:37:30,000 --> 00:37:32,000
+on the server side,
+
+1100
+00:37:32,000 --> 00:37:34,000
+that you can do the load.
+
+1101
+00:37:34,000 --> 00:37:36,000
+Or you can change to
+
+1102
+00:37:36,000 --> 00:37:38,000
+the interactive workshop
+
+1103
+00:37:38,000 --> 00:37:40,000
+of Thomas Zeithammel
+
+1104
+00:37:40,000 --> 00:37:42,000
+in the workshop room.
+
+1105
+00:37:42,000 --> 00:37:44,000
+Then it goes on in German
+
+1106
+00:37:44,000 --> 00:37:46,000
+and he can talk about how to use Matomo
+
+1107
+00:37:46,000 --> 00:37:48,000
+properly for such engine optimization.
+
+1108
+00:37:48,000 --> 00:37:50,000
+That would be the two possibilities
+
+1109
+00:37:50,000 --> 00:37:52,000
+at 11 o'clock.
+
+1110
+00:37:52,000 --> 00:37:54,000
+Otherwise, thank you, Joachim,
+
+1111
+00:37:54,000 --> 00:37:56,000
+for the nice lecture.
+
+1112
+00:37:56,000 --> 00:37:58,000
+My pleasure.
+
+1113
+00:37:58,000 --> 00:38:12,000
+Have fun with Matomo.
+

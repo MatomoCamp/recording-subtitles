@@ -1,0 +1,1572 @@
+1
+00:00:00,000 --> 00:00:11,880
+Thank you once again for coming for the last talk of the day, at least for you.
+
+2
+00:00:11,880 --> 00:00:17,840
+With me, Thomas Persson, he's a business developer at Digitalist Sweden, he has worked with tracking
+
+3
+00:00:17,840 --> 00:00:25,380
+digital analytics since 2010 and has been a contributor to open source since 2007.
+
+4
+00:00:25,380 --> 00:00:28,920
+What happens under the hood when you visit a website and what data is actually shared
+
+5
+00:00:28,920 --> 00:00:31,720
+about you and who can actually access this data?
+
+6
+00:00:31,720 --> 00:00:34,720
+In this talk, Thomas will answer these questions.
+
+7
+00:00:34,720 --> 00:00:35,720
+Please begin.
+
+8
+00:00:35,720 --> 00:00:36,720
+All right.
+
+9
+00:00:36,720 --> 00:00:37,720
+Thank you.
+
+10
+00:00:37,720 --> 00:00:42,520
+Yeah, I'm getting a bit tired now.
+
+11
+00:00:42,520 --> 00:00:50,680
+Last session, for me at least, for this day, I'm really looking forward to having a long
+
+12
+00:00:50,680 --> 00:00:56,600
+weekend after this, but let's push it over the finish line.
+
+13
+00:00:56,600 --> 00:01:04,760
+So in this presentation, I will talk a little bit more on a higher level about privacy on
+
+14
+00:01:04,760 --> 00:01:11,040
+the web and what type of data and try to explain what happens under the hood when we're visiting
+
+15
+00:01:11,040 --> 00:01:20,320
+websites and also talk about personal identifying information in relation to web analytics and
+
+16
+00:01:20,320 --> 00:01:27,000
+then finally give you some examples of how to manage this in Atom.
+
+17
+00:01:27,000 --> 00:01:29,240
+So let's get started.
+
+18
+00:01:29,240 --> 00:01:37,320
+Let's see if I can just find that correct window.
+
+19
+00:01:37,320 --> 00:01:41,400
+So yeah, I got the presentation already, so I will skip that.
+
+20
+00:01:41,400 --> 00:01:48,720
+You probably know Digitalist at the time, so I will skip that so we can move forward.
+
+21
+00:01:48,720 --> 00:01:55,520
+But here's the kind of issues we have right now with privacy and the reason why I think
+
+22
+00:01:55,520 --> 00:02:01,560
+a lot of organizations are moving away from tools like Google Analytics, but basically
+
+23
+00:02:01,560 --> 00:02:12,320
+any cloud provider that is not provided by the EU and trying to do the simple explanation
+
+24
+00:02:12,320 --> 00:02:13,440
+here at least.
+
+25
+00:02:13,440 --> 00:02:15,160
+So this is me.
+
+26
+00:02:15,160 --> 00:02:16,920
+I'm a citizen in Sweden.
+
+27
+00:02:16,920 --> 00:02:19,080
+I live in Stockholm.
+
+28
+00:02:19,080 --> 00:02:28,400
+So if I go to stockholm.se where I can find a lot of information to me as a citizen.
+
+29
+00:02:28,400 --> 00:02:35,440
+I live in Sweden, so that means that we have a law in Sweden called OSL.
+
+30
+00:02:35,440 --> 00:02:41,400
+It's a Swedish law about publicity and secrecy.
+
+31
+00:02:41,400 --> 00:02:46,040
+It's been in place for quite some time and that law applies to me as a Swedish citizen.
+
+32
+00:02:46,040 --> 00:02:50,480
+And it applies to the organization running stockholm.se.
+
+33
+00:02:50,480 --> 00:02:56,200
+We also have GDPR, which is a European law and that applies to both of us as well since
+
+34
+00:02:56,200 --> 00:03:04,840
+EU is the level above us, so to speak.
+
+35
+00:03:04,840 --> 00:03:10,800
+To provide this service, stockholm.se probably has a lot of service providers.
+
+36
+00:03:10,800 --> 00:03:15,840
+They probably have a company doing their hosting, their development and so on.
+
+37
+00:03:15,840 --> 00:03:17,880
+Maybe design work or whatever.
+
+38
+00:03:17,880 --> 00:03:24,520
+So a lot of actors are involved in this work and they all apply to these laws.
+
+39
+00:03:24,520 --> 00:03:30,680
+So when stockholm.se write an agreement with these companies, these laws apply.
+
+40
+00:03:30,680 --> 00:03:34,200
+OSL and GDPR applies to these contracts.
+
+41
+00:03:34,200 --> 00:03:38,960
+The problem though is that when you start to write contracts with companies that are
+
+42
+00:03:38,960 --> 00:03:45,800
+not part of the European Union, like for instance if you use Office 365 or if you sign up for
+
+43
+00:03:45,800 --> 00:03:54,040
+Google Analytics on your site, the problem here is that Microsoft or Google or other
+
+44
+00:03:54,040 --> 00:04:01,760
+companies or basically any cloud provider, they live under other laws.
+
+45
+00:04:01,760 --> 00:04:09,680
+And in this particular example, we have something called the FISA 702 and that means that even
+
+46
+00:04:09,680 --> 00:04:15,920
+though we write a contract with Microsoft, these laws will override that and Microsoft
+
+47
+00:04:15,920 --> 00:04:19,400
+can't do anything about that, even though they would like to.
+
+48
+00:04:19,400 --> 00:04:26,960
+So this is kind of the main problem with using cloud services and what FISA 702 actually
+
+49
+00:04:26,960 --> 00:04:39,640
+says here is that if any American governmental institution basically requests for data, they
+
+50
+00:04:39,640 --> 00:04:47,760
+in a Microsoft facility, they have to give it to that organization and they can't stop
+
+51
+00:04:47,760 --> 00:04:51,640
+that in any way, at least not right now.
+
+52
+00:04:51,640 --> 00:04:57,400
+So this means that any data that is stored in a facility owned by Microsoft or Google
+
+53
+00:04:57,400 --> 00:05:06,120
+or whatever, and it doesn't matter if their physical servers are in Europe, you have to
+
+54
+00:05:06,120 --> 00:05:13,180
+think about it as if it's readable by the American public organizations and we'll look
+
+55
+00:05:13,180 --> 00:05:17,880
+into a little bit more about the problems with this later on.
+
+56
+00:05:17,880 --> 00:05:22,360
+So we will also look into the actual details.
+
+57
+00:05:22,360 --> 00:05:27,320
+So Google Analytics is obviously what we discuss when we talk about Matomo.
+
+58
+00:05:27,320 --> 00:05:32,880
+So yes, we need to think about when you use Google Analytics that we are leaking data
+
+59
+00:05:32,880 --> 00:05:41,120
+to foreign powers like NSA and so on.
+
+60
+00:05:41,120 --> 00:05:46,320
+We also have to think about that we're actually leaking personal data without having a consent
+
+61
+00:05:46,320 --> 00:05:50,080
+and this is an issue with GDPR in Europe.
+
+62
+00:05:50,080 --> 00:05:55,840
+We're also selling data about our visitors and that's more related to Google specifically.
+
+63
+00:05:55,840 --> 00:06:03,800
+But historically, this started with quite big, when the whistleblower Edward Snowden
+
+64
+00:06:03,800 --> 00:06:10,040
+with that didn't start though then, but it actually got really, really clear to us that
+
+65
+00:06:10,040 --> 00:06:19,960
+when he shared the NSA documents about what was happening, people started to realize how
+
+66
+00:06:19,960 --> 00:06:22,200
+big this really was.
+
+67
+00:06:22,200 --> 00:06:29,040
+So we talked about the law called FISA, it's actually called Foreign Intelligence Violence
+
+68
+00:06:29,040 --> 00:06:30,040
+Act.
+
+69
+00:06:30,040 --> 00:06:38,320
+It was a law created in the USA to actually protect the American citizen because there
+
+70
+00:06:38,320 --> 00:06:44,760
+has been a lot of surveillance going on, phone surveillance mainly and other things without
+
+71
+00:06:44,760 --> 00:06:47,360
+any regulations in the United States.
+
+72
+00:06:47,360 --> 00:06:50,960
+It was actually created to protect American citizens.
+
+73
+00:06:50,960 --> 00:07:00,640
+9-11 was the event that happened and that really changed how the American states started
+
+74
+00:07:00,640 --> 00:07:02,200
+to act differently.
+
+75
+00:07:02,200 --> 00:07:08,320
+So people at NSA has described this in many, many places that there is a time before and
+
+76
+00:07:08,320 --> 00:07:13,560
+after 9-11 and we'll see a little bit more about the statistics.
+
+77
+00:07:13,560 --> 00:07:22,240
+They basically changed the laws to make it even easier to supervise the society and in
+
+78
+00:07:22,240 --> 00:07:26,680
+particular people that are not members of the United States.
+
+79
+00:07:26,680 --> 00:07:30,160
+So Europe is a target market for this.
+
+80
+00:07:30,160 --> 00:07:33,560
+There are a lot of systems in place at NSA.
+
+81
+00:07:33,560 --> 00:07:39,960
+Some examples are systems called Upstream or Prism and Treasure Map.
+
+82
+00:07:39,960 --> 00:07:48,680
+This is basically systems that are snooping on internet traffic, phones, and etc.
+
+83
+00:07:48,680 --> 00:07:53,920
+And they have direct access to data centers at Google, Microsoft, Amazon, etc.
+
+84
+00:07:53,920 --> 00:07:58,400
+So it's really a large scale.
+
+85
+00:07:58,400 --> 00:08:06,400
+Also we have to know that internet traffic is passing through United American borders
+
+86
+00:08:06,400 --> 00:08:11,760
+and this means that it often gets stuck in this system called Upstream.
+
+87
+00:08:11,760 --> 00:08:17,720
+We'll look into more details about how easily this actually happens and what type of data
+
+88
+00:08:17,720 --> 00:08:20,320
+they can actually tap into.
+
+89
+00:08:20,320 --> 00:08:25,680
+So is this really a problem in a country like Sweden?
+
+90
+00:08:25,680 --> 00:08:33,360
+Is this really something that government agencies use to approach Swedish citizens?
+
+91
+00:08:33,360 --> 00:08:36,000
+So Sweden is a rather small country in Europe.
+
+92
+00:08:36,000 --> 00:08:39,680
+We have about 10 million citizens.
+
+93
+00:08:39,680 --> 00:08:46,000
+But the interesting part here is that Google, Amazon, Microsoft, and a lot of other companies,
+
+94
+00:08:46,000 --> 00:08:51,000
+I think it was about 50 companies in the beginning after the Snowden incident, have started to
+
+95
+00:08:51,000 --> 00:09:01,880
+report how often they leave data to public agencies in the States.
+
+96
+00:09:01,880 --> 00:09:04,240
+So this is the data from Google.
+
+97
+00:09:04,240 --> 00:09:08,820
+And as you can see, the growth here is pretty massive.
+
+98
+00:09:08,820 --> 00:09:21,920
+So they have left out information about 235,000 accounts the first six months of 2020.
+
+99
+00:09:21,920 --> 00:09:27,600
+The data is a bit lacking behind, but the numbers are actually growing.
+
+100
+00:09:27,600 --> 00:09:33,960
+So the same period in Sweden, we had 370 cases from Google where they handed out information
+
+101
+00:09:33,960 --> 00:09:40,200
+and you can think about this as, okay, maybe this is information that the Swedish police
+
+102
+00:09:40,200 --> 00:09:43,160
+is asking from NSA to give them.
+
+103
+00:09:43,160 --> 00:09:46,400
+But that data is actually not included here.
+
+104
+00:09:46,400 --> 00:09:54,140
+This is only data requested that American organizations ask for.
+
+105
+00:09:54,140 --> 00:09:59,480
+So we don't know what this is and it's totally out of our control.
+
+106
+00:09:59,480 --> 00:10:07,760
+I did a research and checked for Google, Microsoft, and Apple and as you can see, there's quite
+
+107
+00:10:07,760 --> 00:10:10,120
+a lot of information handed out.
+
+108
+00:10:10,120 --> 00:10:16,600
+And if you summarize this, it's actually eight times a day data is requested about Swedish
+
+109
+00:10:16,600 --> 00:10:19,320
+citizens from these four companies.
+
+110
+00:10:19,320 --> 00:10:24,720
+So there's no doubt that this is a huge, huge problem.
+
+111
+00:10:24,720 --> 00:10:31,400
+And because of this, we need to change the way, and I think this is extra critical if
+
+112
+00:10:31,400 --> 00:10:40,520
+you're a public organization handling citizen data or whatever, it goes for private companies
+
+113
+00:10:40,520 --> 00:10:43,320
+as well, but super important.
+
+114
+00:10:43,320 --> 00:10:52,520
+So what I usually say is that the public sector needs to secure our infrastructure.
+
+115
+00:10:52,520 --> 00:10:59,280
+We need to use open technologies such as Matomo, but that's just one thing of the problem.
+
+116
+00:10:59,280 --> 00:11:04,000
+We need to secure the traffic between the residents and the authorities so it never
+
+117
+00:11:04,000 --> 00:11:05,000
+leaves Europe.
+
+118
+00:11:05,000 --> 00:11:10,720
+This is another problem that we saw that if the internet traffic just passes through United
+
+119
+00:11:10,720 --> 00:11:25,240
+States, it's much probable that it gets stuck in this surveillance network.
+
+120
+00:11:25,240 --> 00:11:29,880
+So let's go into details of the web.
+
+121
+00:11:29,880 --> 00:11:34,560
+So what happens when I visit five websites under the hood?
+
+122
+00:11:34,560 --> 00:11:40,640
+So I did a little animation with a plugin called Lightbeam for Firefox.
+
+123
+00:11:40,640 --> 00:11:46,400
+So what we're seeing here is what happens, these are requests that's happened under the
+
+124
+00:11:46,400 --> 00:11:54,240
+hood, and this is actually public sector websites are related in Sweden, and you can see the
+
+125
+00:11:54,240 --> 00:12:01,480
+spider diagram on the left that all of them under the hood request information from Google
+
+126
+00:12:01,480 --> 00:12:02,480
+in this case.
+
+127
+00:12:02,480 --> 00:12:04,880
+They're using Google Analytics basically.
+
+128
+00:12:04,880 --> 00:12:12,720
+So that means that Google can profile all these visits not only on these particular
+
+129
+00:12:12,720 --> 00:12:23,160
+websites, but they can create profiles on individual level of pretty sensitive sites.
+
+130
+00:12:23,160 --> 00:12:27,880
+So yes, they use Google Analytics, and we need to remember that this is something that
+
+131
+00:12:27,880 --> 00:12:29,440
+Google sells, of course.
+
+132
+00:12:29,440 --> 00:12:37,040
+The 3% of the revenue two years ago, I think, was coming from ad sales basically.
+
+133
+00:12:37,040 --> 00:12:41,700
+So it's a huge problem.
+
+134
+00:12:41,700 --> 00:12:47,640
+So it's not just about the privacy and that they're leaking data, we're actually selling
+
+135
+00:12:47,640 --> 00:12:50,920
+their behavior to Google.
+
+136
+00:12:50,920 --> 00:12:54,800
+And Google is just one part of the problem.
+
+137
+00:12:54,800 --> 00:12:58,800
+You need to be aware of everything you do on your website.
+
+138
+00:12:58,800 --> 00:13:04,520
+So this is another Swedish, it's actually the government website in Sweden, and I've
+
+139
+00:13:04,520 --> 00:13:08,240
+been picking on them for a few years now.
+
+140
+00:13:08,240 --> 00:13:11,240
+The good thing is that they have actually changed this now.
+
+141
+00:13:11,240 --> 00:13:16,520
+So if you go to this site, they actually change how it works, and I think I affected them
+
+142
+00:13:16,520 --> 00:13:17,920
+a bit.
+
+143
+00:13:17,920 --> 00:13:20,160
+But the example is still good.
+
+144
+00:13:20,160 --> 00:13:26,800
+So if you go to a page called contact on the Swedish government site, and you look under
+
+145
+00:13:26,800 --> 00:13:33,240
+the hood, you do a request in your browser, and it's sent to their server, and back we
+
+146
+00:13:33,240 --> 00:13:34,240
+get HTML.
+
+147
+00:13:34,240 --> 00:13:35,240
+You all know this.
+
+148
+00:13:35,240 --> 00:13:44,040
+And in this HTML, we're actually requesting 33 other resources from six different domains.
+
+149
+00:13:44,040 --> 00:13:50,160
+And for each of these requests, the way internet works is actually we're sending my IP address
+
+150
+00:13:50,160 --> 00:13:52,680
+from my browser to every server.
+
+151
+00:13:52,680 --> 00:14:00,560
+And if we dig down in this and look into a specific one of these requests, it's a little
+
+152
+00:14:00,560 --> 00:14:09,240
+JavaScript called find.js, and it's coming from this domain, dl.episerver.net.
+
+153
+00:14:09,240 --> 00:14:15,280
+And what's interesting here is that with this request, we're actually also sending something
+
+154
+00:14:15,280 --> 00:14:17,000
+called the header.
+
+155
+00:14:17,000 --> 00:14:21,880
+The header contains another information that is called the referrer.
+
+156
+00:14:21,880 --> 00:14:27,720
+We're also having information such as the language in my browser.
+
+157
+00:14:27,720 --> 00:14:33,360
+We can see what browser I have in the user agent, et cetera, et cetera.
+
+158
+00:14:33,360 --> 00:14:39,880
+So basically the information shared with this server, dl.episerver.net, is the same kind
+
+159
+00:14:39,880 --> 00:14:46,120
+of information that you use when you track data in Matomo, meaning all the sites that
+
+160
+00:14:46,120 --> 00:14:51,760
+we request for information just to present our website is basically able to do the same
+
+161
+00:14:51,760 --> 00:14:56,780
+profiling that we can do with Matomo or any other tool on our website.
+
+162
+00:14:56,780 --> 00:15:03,120
+So you really need to control what type of resources you include on your websites, and
+
+163
+00:15:03,120 --> 00:15:08,120
+they have to be within the European Union if you're a European company.
+
+164
+00:15:08,120 --> 00:15:09,440
+All right.
+
+165
+00:15:09,440 --> 00:15:16,200
+So there are some web standards where you can actually try to block this.
+
+166
+00:15:16,200 --> 00:15:23,960
+There's something called the referrer policy, and if you set this to no referrer, you actually
+
+167
+00:15:23,960 --> 00:15:27,480
+can block sending the referrer information.
+
+168
+00:15:27,480 --> 00:15:34,080
+The problem though is that this standard is not respected by Microsoft, so all Microsoft
+
+169
+00:15:34,080 --> 00:15:40,720
+browsers will send that anyway, and it's also not respected by iPhones.
+
+170
+00:15:40,720 --> 00:15:45,640
+So Safari and iPhones will send that even though you try to block it, meaning quite
+
+171
+00:15:45,640 --> 00:15:55,080
+a few percentages of the visitors you will have on your website since it's quite common
+
+172
+00:15:55,080 --> 00:15:57,760
+software combinations or hardware combinations.
+
+173
+00:15:57,760 --> 00:15:58,760
+All right.
+
+174
+00:15:58,760 --> 00:16:02,880
+So to summarize, we do 26 calls.
+
+175
+00:16:02,880 --> 00:16:09,960
+Eight of these calls goes to four different domains in the United States, and in all these
+
+176
+00:16:09,960 --> 00:16:15,480
+we share the IP address and the URL, meaning that all these domains can basically start
+
+177
+00:16:15,480 --> 00:16:18,480
+profiling our visitors.
+
+178
+00:16:18,480 --> 00:16:21,800
+All right.
+
+179
+00:16:21,800 --> 00:16:29,180
+So the next thing, because that's really about the URLs and the IP addresses that are sensitive
+
+180
+00:16:29,180 --> 00:16:34,940
+information that we need to manage and handle in our Matomo installation, for instance.
+
+181
+00:16:34,940 --> 00:16:39,400
+But what about personal data in general?
+
+182
+00:16:39,400 --> 00:16:45,680
+So personal data can be defined as simple things as IP addresses, as we mentioned before,
+
+183
+00:16:45,680 --> 00:16:51,680
+email addresses, zip codes, social security numbers, et cetera, et cetera.
+
+184
+00:16:51,680 --> 00:16:53,900
+This list you've probably seen.
+
+185
+00:16:53,900 --> 00:16:59,640
+This means that when we're setting up tracking, we do not want to store these things in Matomo.
+
+186
+00:16:59,640 --> 00:17:07,800
+And usually this is not something people do, even though there are issues, of course, sometimes.
+
+187
+00:17:07,800 --> 00:17:17,320
+But more problematic is the thing, the fact that data in combination with other data that
+
+188
+00:17:17,320 --> 00:17:24,120
+identifies an individual is also to be considered as personal data.
+
+189
+00:17:24,120 --> 00:17:31,360
+And the best example I have on this is when you start to store location information.
+
+190
+00:17:31,360 --> 00:17:38,520
+So in this example, I have a little village in Sweden with 55th inhabitants.
+
+191
+00:17:38,520 --> 00:17:39,520
+It's called Lomtresk.
+
+192
+00:17:39,520 --> 00:17:43,160
+So now you know a bit of Swedish as well.
+
+193
+00:17:43,160 --> 00:17:48,400
+The interesting part here is if you store that dimension of data together with your
+
+194
+00:17:48,400 --> 00:17:53,200
+page views, you can start to get problems pretty quickly.
+
+195
+00:17:53,200 --> 00:18:00,480
+So think about the other meta information or metadata you store in analytics or in your
+
+196
+00:18:00,480 --> 00:18:03,600
+Matomo installation.
+
+197
+00:18:03,600 --> 00:18:10,680
+The first one would be, like, let's say we have a custom dimension with the profession.
+
+198
+00:18:10,680 --> 00:18:13,980
+Or maybe someone has been searching for a job.
+
+199
+00:18:13,980 --> 00:18:19,400
+Or something that we can identify a job role here.
+
+200
+00:18:19,400 --> 00:18:26,880
+Or we can identify that this is the language is Turkish in the browser.
+
+201
+00:18:26,880 --> 00:18:29,320
+And maybe we can identify that this is a woman.
+
+202
+00:18:29,320 --> 00:18:35,120
+We can think about how quickly, how easy it starts to get to identify this person just
+
+203
+00:18:35,120 --> 00:18:41,440
+from these quite anonymous combinations of data.
+
+204
+00:18:41,440 --> 00:18:45,160
+We can continue.
+
+205
+00:18:45,160 --> 00:18:51,360
+Just an unusual mobile phone would actually be a problematic thing here.
+
+206
+00:18:51,360 --> 00:18:56,760
+Maybe everyone in Lomtresk knows who has an iPhone of a specific model.
+
+207
+00:18:56,760 --> 00:19:04,640
+Or you can find that in an image on Facebook or whatever and start to identify visitors
+
+208
+00:19:04,640 --> 00:19:05,640
+here.
+
+209
+00:19:05,640 --> 00:19:11,320
+So that leads us to that personal data is not something fixed.
+
+210
+00:19:11,320 --> 00:19:19,600
+We need to continuously monitor this and we need to continuously be able to act.
+
+211
+00:19:19,600 --> 00:19:26,680
+And what we also need to know is that when we include other services on our website,
+
+212
+00:19:26,680 --> 00:19:29,760
+visitors sharing this information with them.
+
+213
+00:19:29,760 --> 00:19:36,840
+So if you add, most of them are big in Sweden, but it's a lot of things that you need to
+
+214
+00:19:36,840 --> 00:19:41,600
+look into and make sure that you're not sharing data with.
+
+215
+00:19:41,600 --> 00:19:44,320
+I actually created a little tool.
+
+216
+00:19:44,320 --> 00:19:45,520
+It's actually a JavaScript.
+
+217
+00:19:45,520 --> 00:19:52,720
+So if you go to my GitHub profile, what this one does is that I'm actually going to show
+
+218
+00:19:52,720 --> 00:19:54,480
+you.
+
+219
+00:19:54,480 --> 00:20:03,440
+So if I copy this code and I can basically do this on any website.
+
+220
+00:20:03,440 --> 00:20:12,120
+So let's do it on atomocamp.org and see if we are okay here.
+
+221
+00:20:12,120 --> 00:20:14,200
+I'm going to open the inspect.
+
+222
+00:20:14,200 --> 00:20:22,600
+We're going to just paste this little script and what it will do is to start a request.
+
+223
+00:20:22,600 --> 00:20:26,360
+Okay, this one was pretty good.
+
+224
+00:20:26,360 --> 00:20:33,600
+We only included one external script and the country it was requesting was Germany.
+
+225
+00:20:33,600 --> 00:20:43,480
+So let's do this at the Swedish government again and see how well they are behaving.
+
+226
+00:20:43,480 --> 00:20:49,880
+I'm going to go there and I'm going to paste the JavaScript and now we're requesting a
+
+227
+00:20:49,880 --> 00:20:57,040
+lot of websites and I can actually see that they improved since I picked on them.
+
+228
+00:20:57,040 --> 00:21:03,240
+From all of these sites, we are pulling different scripts and here you can see the country from
+
+229
+00:21:03,240 --> 00:21:04,960
+where they are requested.
+
+230
+00:21:04,960 --> 00:21:08,880
+So they did pretty good.
+
+231
+00:21:08,880 --> 00:21:14,720
+That was not the scenario six months ago and this is good because this means that even
+
+232
+00:21:14,720 --> 00:21:23,280
+though they share data with these players, they're even in Sweden here so if they have
+
+233
+00:21:23,280 --> 00:21:30,360
+a contract with them not to share data with anyone else, we're actually legally safe.
+
+234
+00:21:30,360 --> 00:21:38,440
+Which wouldn't be the case if the country of the scripts would be the United States
+
+235
+00:21:38,440 --> 00:21:44,560
+and one very common thing is to use CDN networks to load JavaScript for instance and that would
+
+236
+00:21:44,560 --> 00:21:50,120
+be a problem.
+
+237
+00:21:50,120 --> 00:21:54,520
+So what do we do when the accident occurs?
+
+238
+00:21:54,520 --> 00:22:00,960
+So since storing personal data is something you should actually plan for that you will
+
+239
+00:22:00,960 --> 00:22:07,360
+do, that's usually how I talk to my clients.
+
+240
+00:22:07,360 --> 00:22:11,320
+You can't really stop this from happening.
+
+241
+00:22:11,320 --> 00:22:15,400
+You need to plan for when it happens.
+
+242
+00:22:15,400 --> 00:22:24,080
+So you have to have routines in place to act when you find personal data in your analytics
+
+243
+00:22:24,080 --> 00:22:28,120
+and this is the action plan I usually show.
+
+244
+00:22:28,120 --> 00:22:32,200
+So first we need to assess how severe this is.
+
+245
+00:22:32,200 --> 00:22:38,260
+I mean how sensitive is the data that we have leaked?
+
+246
+00:22:38,260 --> 00:22:42,480
+As quickly as possible we prevent further collection.
+
+247
+00:22:42,480 --> 00:22:46,480
+So data is not collected more than necessary.
+
+248
+00:22:46,480 --> 00:22:55,000
+In Sweden we actually have to decide within 72 hours after the incident, we notice the
+
+249
+00:22:55,000 --> 00:23:05,600
+incident to our reporting organization basically for GDPR and data leakage.
+
+250
+00:23:05,600 --> 00:23:11,080
+What we need to do after this is of course to try to clear or anonymize the data.
+
+251
+00:23:11,080 --> 00:23:21,920
+We need to document the incident and potentially inform the victims like if users' data was
+
+252
+00:23:21,920 --> 00:23:27,920
+really sensitive we might have to contact them even and then I usually say that let's
+
+253
+00:23:27,920 --> 00:23:32,760
+have a retrospective to see if we can avoid that this happens again.
+
+254
+00:23:32,760 --> 00:23:40,880
+Maybe this is about training because most of these mistakes are personal but not always.
+
+255
+00:23:40,880 --> 00:23:44,000
+Sometimes there are technical solutions.
+
+256
+00:23:44,000 --> 00:23:52,500
+Clearing data though is something that we need to work pretty much with and that's actually
+
+257
+00:23:52,500 --> 00:23:59,400
+something that is possible if you're using Matomo but it's not necessarily easy just
+
+258
+00:23:59,400 --> 00:24:01,320
+because you can.
+
+259
+00:24:01,320 --> 00:24:04,520
+So deleting data in Matomo usually looks like this.
+
+260
+00:24:04,520 --> 00:24:09,680
+First of all you have to find the data, you have to identify the actual visitors and the
+
+261
+00:24:09,680 --> 00:24:10,680
+raw data.
+
+262
+00:24:10,680 --> 00:24:14,160
+So you have to find the visitor IDs that are affected.
+
+263
+00:24:14,160 --> 00:24:21,120
+You need to delete these visits, I will show you some examples soon and then you need to
+
+264
+00:24:21,120 --> 00:24:26,080
+reprocess your visitor log so that the aggregated data reports are updated.
+
+265
+00:24:26,080 --> 00:24:34,520
+So for instance if you find an email address in your page view report you would first need
+
+266
+00:24:34,520 --> 00:24:43,520
+to find the visitors that sent this data in and delete those and then you need to reprocess
+
+267
+00:24:43,520 --> 00:24:50,160
+your aggregated reports for the dates when that data was stored.
+
+268
+00:24:50,160 --> 00:24:58,240
+So that's quite a big job to do that.
+
+269
+00:24:58,240 --> 00:25:04,040
+One thing you can do to start monitoring this is actually to use a plugin called the alert
+
+270
+00:25:04,040 --> 00:25:13,680
+plugin and in that plugin you can start to set up rules to identify personal sensitive
+
+271
+00:25:13,680 --> 00:25:18,200
+information and I will show you an example of this.
+
+272
+00:25:18,200 --> 00:25:23,680
+So what you do is that you for instance if you want to start monitoring your page views
+
+273
+00:25:23,680 --> 00:25:27,920
+you can set up an alert and you can use the regular expression.
+
+274
+00:25:27,920 --> 00:25:36,040
+In the example here I'm matching a date but I will give you some and then if we have more
+
+275
+00:25:36,040 --> 00:25:43,840
+than one page view containing a date I will get an alarm or a report that at least highlights
+
+276
+00:25:43,840 --> 00:25:45,920
+that I need to look at this.
+
+277
+00:25:45,920 --> 00:25:50,880
+So an example here is that you can find a lot of regular expressions online.
+
+278
+00:25:50,880 --> 00:25:54,080
+So in this case I have the example of an email address.
+
+279
+00:25:54,080 --> 00:26:00,000
+So let's monitor if we have email addresses in our events or our page views and ping me
+
+280
+00:26:00,000 --> 00:26:04,800
+if that happens.
+
+281
+00:26:04,800 --> 00:26:10,080
+Finally you can combine these into a long string so you don't have to create individual
+
+282
+00:26:10,080 --> 00:26:14,440
+reports for every monitor you have.
+
+283
+00:26:14,440 --> 00:26:20,400
+The drawback of this is that the alert plugin will only process once a day or every night.
+
+284
+00:26:20,400 --> 00:26:28,560
+You can't do that more often and it's also hard to identify something like a name or
+
+285
+00:26:28,560 --> 00:26:29,560
+something like that.
+
+286
+00:26:29,560 --> 00:26:38,400
+So it's only data that is quite easy to identify that you can find this way.
+
+287
+00:26:38,400 --> 00:26:45,960
+Once you find it you can use a tool called GDPR tools and try to delete things that way.
+
+288
+00:26:45,960 --> 00:26:53,440
+You need to find the visitor ID and when you do so you can delete that.
+
+289
+00:26:53,440 --> 00:26:57,760
+You can also use the API, the example below.
+
+290
+00:26:57,760 --> 00:27:11,120
+If you have a lot of data you can create a script and call the API many times.
+
+291
+00:27:11,120 --> 00:27:14,440
+I can also show you what is a bit problematic.
+
+292
+00:27:14,440 --> 00:27:22,240
+So in this case I look at the pages report and now I'm just simulating but let's say
+
+293
+00:27:22,240 --> 00:27:27,460
+that this is my name on our site so it's not really personal data.
+
+294
+00:27:27,460 --> 00:27:33,520
+But what if I wanted to delete this information because it's sensitive?
+
+295
+00:27:33,520 --> 00:27:43,800
+So what I would do is to click on this one, segmented visitor log.
+
+296
+00:27:43,800 --> 00:27:51,200
+So when I click this one I will actually get the visits and in this case I even have a
+
+297
+00:27:51,200 --> 00:27:57,240
+little JavaScript in my browser so I actually have a little button here that allows me to
+
+298
+00:27:57,240 --> 00:27:59,320
+delete this directly.
+
+299
+00:27:59,320 --> 00:28:05,040
+But otherwise you can hover on the IP address and you can actually find the visitor ID up
+
+300
+00:28:05,040 --> 00:28:06,040
+there.
+
+301
+00:28:06,040 --> 00:28:07,600
+You can probably see it in the screen.
+
+302
+00:28:07,600 --> 00:28:15,360
+This is the information that you need to grab and then use in the GDPR tools and apply
+
+303
+00:28:15,360 --> 00:28:16,360
+it here.
+
+304
+00:28:16,360 --> 00:28:23,000
+It's called visitor ID.
+
+305
+00:28:23,000 --> 00:28:25,520
+You can actually steal this little number.
+
+306
+00:28:25,520 --> 00:28:29,280
+So as you see it's starting to get quite time consuming.
+
+307
+00:28:29,280 --> 00:28:35,560
+If you have a lot of personal data this is a terribly time consuming job.
+
+308
+00:28:35,560 --> 00:28:39,560
+This little JavaScript helps me.
+
+309
+00:28:39,560 --> 00:28:44,440
+What it actually does is that it calls the API.
+
+310
+00:28:44,440 --> 00:28:47,440
+I have just created a link to that.
+
+311
+00:28:47,440 --> 00:29:01,380
+It's actually this little line here and I automatically add the ID visit to delete it.
+
+312
+00:29:01,380 --> 00:29:10,640
+So the idea I have for the future is to actually build a PII monitoring plugin for Matomo.
+
+313
+00:29:10,640 --> 00:29:18,560
+That plugin would first of all set up some predefined rules to identify things like email
+
+314
+00:29:18,560 --> 00:29:24,800
+addresses, credit card numbers, et cetera, so that we have alarms.
+
+315
+00:29:24,800 --> 00:29:31,280
+I would also set it up to watch more types of data directly like events, page views,
+
+316
+00:29:31,280 --> 00:29:32,280
+refer URLs.
+
+317
+00:29:32,280 --> 00:29:36,720
+You can come up with a lot of ideas.
+
+318
+00:29:36,720 --> 00:29:40,600
+I would also make it possible to add exceptions.
+
+319
+00:29:40,600 --> 00:29:49,320
+After you try to identify something or identify something that is actually okay.
+
+320
+00:29:49,320 --> 00:29:52,280
+So we want to add an exception to that.
+
+321
+00:29:52,280 --> 00:29:56,960
+I would also like to make it easy to delete data so the report would actually give me
+
+322
+00:29:56,960 --> 00:30:04,520
+all the visitor IDs and make it possible to delete them directly.
+
+323
+00:30:04,520 --> 00:30:10,240
+I would also like to be possible to just anonymize the data and not maybe delete it.
+
+324
+00:30:10,240 --> 00:30:15,760
+So let's say I found a credit card number but I still want to have the traffic stored
+
+325
+00:30:15,760 --> 00:30:16,760
+in my website.
+
+326
+00:30:16,760 --> 00:30:25,880
+I just want to anonymize that information.
+
+327
+00:30:25,880 --> 00:30:31,200
+But that's not really possible today unless you write SQL scripts.
+
+328
+00:30:31,200 --> 00:30:40,720
+So these are kind of the ideas that I have around this plugin.
+
+329
+00:30:40,720 --> 00:30:43,160
+It shouldn't be too hard to do the basics.
+
+330
+00:30:43,160 --> 00:30:48,040
+The hard part is of course to start monitoring combinations of data.
+
+331
+00:30:48,040 --> 00:30:57,560
+Like it would be impossible almost to do what I showed you with the small village Lundträsk
+
+332
+00:30:57,560 --> 00:31:01,680
+and identify those individuals.
+
+333
+00:31:01,680 --> 00:31:07,560
+Alright, so the last slide actually or the second last slide.
+
+334
+00:31:07,560 --> 00:31:12,480
+But usually this is what I recommend people to look into if you want to secure your web
+
+335
+00:31:12,480 --> 00:31:14,000
+analysis.
+
+336
+00:31:14,000 --> 00:31:19,160
+So first of all collect consents from your visitor and inform them that you are tracking.
+
+337
+00:31:19,160 --> 00:31:22,080
+This is all from the GDPR.
+
+338
+00:31:22,080 --> 00:31:23,840
+Check your data collection.
+
+339
+00:31:23,840 --> 00:31:29,440
+Find the obvious collection of personal identification information and set up your Matomo instance
+
+340
+00:31:29,440 --> 00:31:30,800
+properly.
+
+341
+00:31:30,800 --> 00:31:39,200
+That means anonymizing IP addresses, not storing data longer than needed, etc, etc.
+
+342
+00:31:39,200 --> 00:31:43,280
+Also make sure to manage the quality of your application.
+
+343
+00:31:43,280 --> 00:31:49,920
+So they are not sending personal identification information because that's normally one of
+
+344
+00:31:49,920 --> 00:31:52,800
+the issues we have when we get bad data.
+
+345
+00:31:52,800 --> 00:31:56,280
+It's often the applications that are wrong.
+
+346
+00:31:56,280 --> 00:32:00,000
+Also make sure to secure your technical infrastructure.
+
+347
+00:32:00,000 --> 00:32:05,680
+The service has to be within Europe and it has to be owned by a European company.
+
+348
+00:32:05,680 --> 00:32:12,080
+You can't use cloud providers in Europe because you're invalidating GDPR by doing so.
+
+349
+00:32:12,080 --> 00:32:17,200
+Also make sure to limit the time for how long you store data.
+
+350
+00:32:17,200 --> 00:32:25,440
+Make sure to have processes in place to monitor data and make sure that you know how to act
+
+351
+00:32:25,440 --> 00:32:28,840
+when you find problems.
+
+352
+00:32:28,840 --> 00:32:31,920
+Alright, so that was the last slide.
+
+353
+00:32:31,920 --> 00:32:37,560
+I think it's time for questions.
+
+354
+00:32:37,560 --> 00:32:40,040
+Thank you for this very interesting talk.
+
+355
+00:32:40,040 --> 00:32:48,160
+If there are any questions, please post them or write them down in the corresponding chat.
+
+356
+00:32:48,160 --> 00:32:55,440
+There's been some small discussion of the privacy test and I will share it if it's alright
+
+357
+00:32:55,440 --> 00:32:56,440
+for you.
+
+358
+00:32:56,440 --> 00:32:57,440
+Yeah, I saw that.
+
+359
+00:32:57,440 --> 00:32:58,440
+Nice, Lukas.
+
+360
+00:32:58,440 --> 00:33:05,240
+That one, of course, is a good thing.
+
+361
+00:33:05,240 --> 00:33:09,520
+So who wants to help me write the PII plug-in, Lukas?
+
+362
+00:33:09,520 --> 00:33:17,960
+Are you ready to help?
+
+363
+00:33:17,960 --> 00:33:18,960
+Check my calendar.
+
+364
+00:33:18,960 --> 00:33:19,960
+Yeah, of course.
+
+365
+00:33:19,960 --> 00:33:22,960
+It's the same here, I think.
+
+366
+00:33:22,960 --> 00:33:28,640
+But it's definitely just something I think a lot of people would appreciate.
+
+367
+00:33:28,640 --> 00:33:35,720
+Alright, so if we don't have more questions, I'm going to say thank you for today and hope
+
+368
+00:33:35,720 --> 00:33:36,720
+you enjoyed it.
+
+369
+00:33:36,720 --> 00:33:41,400
+I'm pretty tired now, so I'm going to have a really nice weekend with my family, maybe
+
+370
+00:33:41,400 --> 00:33:48,880
+go out and pick some mushrooms and yeah, be outside.
+
+371
+00:33:48,880 --> 00:33:53,840
+There would be one last question that you would be willing to answer.
+
+372
+00:33:53,840 --> 00:33:59,280
+Is there any other kind of information apart from cookies and JavaScript code, codes sent
+
+373
+00:33:59,280 --> 00:34:02,480
+to third parties?
+
+374
+00:34:02,480 --> 00:34:10,800
+Anything you basically include, so it would be fonts, images, anything.
+
+375
+00:34:10,800 --> 00:34:15,600
+Anything you request might actually share that information.
+
+376
+00:34:15,600 --> 00:34:21,080
+Thank you for that.
+
+377
+00:34:21,080 --> 00:34:28,080
+And if there aren't any other questions, which I think there aren't, then yes, enjoy a long
+
+378
+00:34:28,080 --> 00:34:29,080
+weekend.
+
+379
+00:34:29,080 --> 00:34:30,080
+Yes, thank you.
+
+380
+00:34:30,080 --> 00:34:31,080
+Let's see.
+
+381
+00:34:31,080 --> 00:34:38,080
+Maybe more questions coming, we'll see.
+
+382
+00:34:38,080 --> 00:34:42,760
+Oh yeah, a ton of them.
+
+383
+00:34:42,760 --> 00:34:46,240
+Maybe they're just thanking you for the great talks.
+
+384
+00:34:46,240 --> 00:34:49,240
+We'll see.
+
+385
+00:34:49,240 --> 00:34:54,360
+Two seconds.
+
+386
+00:34:54,360 --> 00:34:58,160
+It seems to be the case that there aren't any more questions coming.
+
+387
+00:34:58,160 --> 00:34:59,160
+Let's have a nice weekend.
+
+388
+00:34:59,160 --> 00:35:00,160
+That sounds good.
+
+389
+00:35:00,160 --> 00:35:01,160
+So let's call it here.
+
+390
+00:35:01,160 --> 00:35:02,160
+Yeah.
+
+391
+00:35:02,160 --> 00:35:07,480
+As always, if there are any other questions, you can still be asked.
+
+392
+00:35:07,480 --> 00:35:10,600
+And yeah, have a great day, have a great weekend.
+
+393
+00:35:10,600 --> 00:35:30,920
+Thanks for your talks.
+
