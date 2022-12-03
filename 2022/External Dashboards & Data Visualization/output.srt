@@ -1,0 +1,1244 @@
+1
+00:00:00,000 --> 00:00:11,080
+All right, hello, and welcome, everyone, for our next presentation.
+
+2
+00:00:11,080 --> 00:00:15,400
+This will be given by our speaker, Michael Weber.
+
+3
+00:00:15,400 --> 00:00:21,440
+Michael Weber has been working in online marketing and analytics for over 20 years, and he's
+
+4
+00:00:21,440 --> 00:00:29,560
+the founder of Search VIU, which is a provider of data solutions, especially for SEO purposes.
+
+5
+00:00:29,560 --> 00:00:33,400
+And he has developed a Matomo Google Data Studio Connector.
+
+6
+00:00:33,400 --> 00:00:40,560
+Today, he will talk about looking at external data visualization solutions and how and,
+
+7
+00:00:40,560 --> 00:00:43,800
+if yes, they can be integrated with Matomo.
+
+8
+00:00:43,800 --> 00:00:50,080
+So, without further ado, I am looking forward to your presentation, Michael, and please
+
+9
+00:00:50,080 --> 00:00:51,080
+begin.
+
+10
+00:00:51,080 --> 00:00:52,080
+Thank you, Clemens.
+
+11
+00:00:52,080 --> 00:00:53,080
+Thank you for the introduction.
+
+12
+00:00:53,080 --> 00:01:06,040
+It is a pleasure to be here today and to talk about external data dashboards and data visualization.
+
+13
+00:01:06,040 --> 00:01:11,960
+So, yes, let's start with a little about me.
+
+14
+00:01:11,960 --> 00:01:22,840
+You have said all already, yes, I'm in online marketing, web analytics since 2001, worked
+
+15
+00:01:22,840 --> 00:01:33,520
+in agencies and in-house, yes, don't want to talk a long, long time about just one thing.
+
+16
+00:01:33,520 --> 00:01:41,400
+We have developed a Matomo Google Looker Studio Connector, just could be that in the presentation
+
+17
+00:01:41,400 --> 00:01:49,720
+I talk about Google Data Studio, Google has renamed it before some time, and yes, that's
+
+18
+00:01:49,720 --> 00:01:51,720
+about that.
+
+19
+00:01:51,720 --> 00:02:02,200
+What I will talk about today, a short look on why we do, why external data visualization
+
+20
+00:02:02,200 --> 00:02:12,080
+could be important, and a short look on what solutions are out there, it's just a short
+
+21
+00:02:12,080 --> 00:02:19,640
+look, we don't dig into the several things there.
+
+22
+00:02:19,640 --> 00:02:22,640
+And then we take a look on the data transfer options.
+
+23
+00:02:22,640 --> 00:02:31,920
+So what's linked with that is how we get the Matomo data into any sort of visualization
+
+24
+00:02:31,920 --> 00:02:40,120
+solution out there, and we dig a little bit deeper in how that works, how we work with
+
+25
+00:02:40,120 --> 00:02:49,120
+data, what we need to consider when we do that, and at the end, I think it's enough
+
+26
+00:02:49,120 --> 00:02:53,800
+time to answer some questions.
+
+27
+00:02:53,800 --> 00:03:05,600
+Yes, so why should you or should anybody use external data visualizations?
+
+28
+00:03:05,600 --> 00:03:15,440
+Matomo has pretty powerful dashboards, and for that, there are many widgets out there,
+
+29
+00:03:15,440 --> 00:03:21,120
+but yeah, it's a little bit limited in the visualization of the data.
+
+30
+00:03:21,120 --> 00:03:34,080
+The widgets are not as good in time series visualization of some data and other things.
+
+31
+00:03:34,080 --> 00:03:42,640
+That's one thing, the visualization of the data is important for several audiences.
+
+32
+00:03:42,640 --> 00:03:57,400
+If you want to build a management KPI dashboard, in addition for some other people in the business,
+
+33
+00:03:57,400 --> 00:04:02,880
+some other stakeholders in the business, in your company, it makes sense to build own
+
+34
+00:04:02,880 --> 00:04:11,720
+dashboards for them, filter it already down so the people don't have to click through
+
+35
+00:04:11,720 --> 00:04:18,240
+Matomo and find their reports and so on.
+
+36
+00:04:18,240 --> 00:04:27,880
+One other thing is that in the most visualization solutions out there, it's possible to connect
+
+37
+00:04:27,880 --> 00:04:34,360
+data at other data sources, so you could add, as an example, if you want to make a report
+
+38
+00:04:34,360 --> 00:04:47,400
+for the SCA BPC team, you can add data directly and other data from Matomo in one dashboard.
+
+39
+00:04:47,400 --> 00:04:55,560
+Also Matomo has some integrations, it's not as powerful as some other tool out there.
+
+40
+00:04:55,560 --> 00:05:04,120
+So yes, just a short look at our audience.
+
+41
+00:05:04,120 --> 00:05:13,800
+Is anybody of you using already an external visualization solution from Matomo data already?
+
+42
+00:05:13,800 --> 00:05:24,840
+I have created a poll in the chat if you want to answer, it would be great.
+
+43
+00:05:24,840 --> 00:05:35,840
+So give you two seconds to go into that.
+
+44
+00:05:35,840 --> 00:05:50,240
+As far as I can see, at the moment, the most people who have entered the poll haven't used
+
+45
+00:05:50,240 --> 00:05:51,240
+it already.
+
+46
+00:05:51,240 --> 00:06:00,600
+So yes, we will take a look.
+
+47
+00:06:00,600 --> 00:06:10,680
+What are data visualization solutions or what visualization solutions out there on the market?
+
+48
+00:06:10,680 --> 00:06:22,440
+Matomo is Lucas Studio or Google Data Studio, I think it's pretty known out there.
+
+49
+00:06:22,440 --> 00:06:30,440
+But there are other great solutions like Tableau, Power BI, CSEN, SOA Analytics, all the open
+
+50
+00:06:30,440 --> 00:06:40,360
+source solutions from Apache, SuperSet, but there are a wide range of other solutions.
+
+51
+00:06:40,360 --> 00:06:57,040
+So yes, it's something where data can be visualized.
+
+52
+00:06:57,040 --> 00:07:05,600
+Lucas Studio is for free and it's also a free host, SuperSet is also a free open source
+
+53
+00:07:05,600 --> 00:07:13,040
+tool, but you need some hosting there, and other tools are in the SOA Analytics is also
+
+54
+00:07:13,040 --> 00:07:21,360
+open source, as far as I know, the other solutions are paid versions with a different range to
+
+55
+00:07:21,360 --> 00:07:25,760
+you need to pay.
+
+56
+00:07:25,760 --> 00:07:33,000
+And yes, see some more people have voted in the poll.
+
+57
+00:07:33,000 --> 00:07:40,280
+And we have some people here who already have done data visualizations, that's great.
+
+58
+00:07:40,280 --> 00:07:46,320
+So perhaps they can add some information at the end.
+
+59
+00:07:46,320 --> 00:07:58,600
+So now, if we have a data visualization solution, we need the data from Matomo to get in that
+
+60
+00:07:58,600 --> 00:07:59,600
+visualization.
+
+61
+00:07:59,600 --> 00:08:04,120
+There are several options to transfer the data.
+
+62
+00:08:04,120 --> 00:08:15,280
+The one is the API, which Matomo provides, the other is to have access to the SQL database.
+
+63
+00:08:15,280 --> 00:08:25,360
+The most visualization tools have the possibility to add a SQL data source.
+
+64
+00:08:25,360 --> 00:08:34,080
+And one other solution is data transfer, so you export data from Matomo into an external
+
+65
+00:08:34,080 --> 00:08:40,000
+analytic database, as example, to analyze with them.
+
+66
+00:08:40,000 --> 00:08:51,120
+If we take a look on the API option, some benefits are that the data is up to date,
+
+67
+00:08:51,120 --> 00:08:59,600
+you just talk to Matomo with the API, it's mostly the easiest way to get access to the
+
+68
+00:08:59,600 --> 00:09:08,840
+data and you have no extra cost or maintenance of additional database or something like this.
+
+69
+00:09:08,840 --> 00:09:18,400
+The cons are that the connector, that there must be a connector to Matomo available in
+
+70
+00:09:18,400 --> 00:09:28,640
+the visualization solution, or you need to develop one, or it must be a workaround there,
+
+71
+00:09:28,640 --> 00:09:31,320
+we take a look at this later.
+
+72
+00:09:31,320 --> 00:09:41,240
+It could be slow, like other solutions, if you want to access wide range of data, also
+
+73
+00:09:41,240 --> 00:09:44,320
+we take a look at that.
+
+74
+00:09:44,320 --> 00:09:49,600
+And the API, that's something that needs to be mentioned.
+
+75
+00:09:49,600 --> 00:09:56,200
+Much people have worked with Google Analytics before, and perhaps they know the Data Studio
+
+76
+00:09:56,200 --> 00:10:04,560
+Connector from Google Analytics, and the Matomo API is not as flexible like the Google Analytics
+
+77
+00:10:04,560 --> 00:10:05,560
+API.
+
+78
+00:10:05,560 --> 00:10:13,000
+In Google Analytics, you say, I want to have that dimension with that metric and combine
+
+79
+00:10:13,000 --> 00:10:22,440
+them and use them, that's not so easy with the Matomo API.
+
+80
+00:10:22,440 --> 00:10:29,840
+Let's take a look on the SQL database access.
+
+81
+00:10:29,840 --> 00:10:35,440
+The pro is the most visualization solutions has a connector for MySQL, that's easy, so
+
+82
+00:10:35,440 --> 00:10:39,560
+you don't need to develop one or something like this.
+
+83
+00:10:39,560 --> 00:10:45,760
+And if you have access to the database, you also have access to the raw data from Google
+
+84
+00:10:45,760 --> 00:10:50,400
+Analytics to build reports which are based on that.
+
+85
+00:10:50,400 --> 00:10:59,280
+But the cons are that setting up a secure connection to the database from the visualization
+
+86
+00:10:59,280 --> 00:11:09,480
+solution could be difficult, because you need to be sure no other people out there can,
+
+87
+00:11:09,480 --> 00:11:14,000
+access your MySQL database.
+
+88
+00:11:14,000 --> 00:11:23,000
+And if you are using aggregated analytics data, so these predefined Matomo tables, the
+
+89
+00:11:23,000 --> 00:11:30,480
+same thing like in the API is that you don't have the flexibility like in Google Analytics.
+
+90
+00:11:30,480 --> 00:11:36,840
+And it can harm the data page performance if you try to use that raw locked data to
+
+91
+00:11:36,840 --> 00:11:39,120
+build the reports.
+
+92
+00:11:39,120 --> 00:11:41,800
+So you must be careful there.
+
+93
+00:11:41,800 --> 00:11:50,440
+One other con is that it's not available in the Matomo cloud, so you don't have access
+
+94
+00:11:50,440 --> 00:11:54,560
+to the SQL database there.
+
+95
+00:11:54,560 --> 00:12:02,680
+The other last option is to transfer data out of Matomo and save them in, as example,
+
+96
+00:12:02,680 --> 00:12:03,680
+Google BigQuery.
+
+97
+00:12:03,680 --> 00:12:13,600
+So you can use a service or a solution like Abyte, which is an ELT toolset, where you
+
+98
+00:12:13,600 --> 00:12:23,440
+can say, oh, grab the data from the raw Matomo API, put it into BigQuery, and make something
+
+99
+00:12:23,440 --> 00:12:26,440
+there.
+
+100
+00:12:26,440 --> 00:12:29,920
+If you want to do that, it has some pros.
+
+101
+00:12:29,920 --> 00:12:37,120
+So analytic database connectors are also available in the most visualization solutions.
+
+102
+00:12:37,120 --> 00:12:44,560
+You can work directly with the locked data because there's no restriction of some performance
+
+103
+00:12:44,560 --> 00:12:47,680
+hints if you work with them.
+
+104
+00:12:47,680 --> 00:12:55,520
+And you can combine metrics, dimensions in another way, like with the predefined data
+
+105
+00:12:55,520 --> 00:13:00,080
+sets on Matomo, and it's fast on large data sets.
+
+106
+00:13:00,080 --> 00:13:05,760
+Cons are, yeah, setting up the data transfer could be difficult.
+
+107
+00:13:05,760 --> 00:13:11,280
+You need to write some complex SQL queries.
+
+108
+00:13:11,280 --> 00:13:19,120
+And yeah, you can calculate additional codes for the data transfer from Matomo to the analytics
+
+109
+00:13:19,120 --> 00:13:23,360
+database, and you must pay the analytics database.
+
+110
+00:13:23,360 --> 00:13:25,680
+That is something.
+
+111
+00:13:25,680 --> 00:13:35,360
+So if we compare, the API is really easy, and the cost is minimal, or none, if you use
+
+112
+00:13:35,360 --> 00:13:36,360
+it.
+
+113
+00:13:36,360 --> 00:13:43,840
+And you have a little bit of restriction and flexibility compared to the other solutions.
+
+114
+00:13:43,840 --> 00:13:51,560
+The SQL database access, yes, not as easy to access as the API.
+
+115
+00:13:51,560 --> 00:13:57,200
+Most could be medium if you want to think, but if you want to, you have direct access
+
+116
+00:13:57,200 --> 00:14:01,400
+to the database, it's also small.
+
+117
+00:14:01,400 --> 00:14:06,760
+And you're a little more flexible, like the API solution.
+
+118
+00:14:06,760 --> 00:14:15,400
+Data transfer is really complex in most cases, the costs are higher, but it's more flexible.
+
+119
+00:14:15,400 --> 00:14:23,160
+So if you have some requirements, other solutions can't give you this, this could be a solution.
+
+120
+00:14:23,160 --> 00:14:31,200
+In the next slides, we won't take a deeper look at the data transfer part, because it's
+
+121
+00:14:31,200 --> 00:14:34,240
+much more complex.
+
+122
+00:14:34,240 --> 00:14:41,800
+We stay with the API or the SQL database access.
+
+123
+00:14:41,800 --> 00:14:53,880
+So if we have some people who have said that they are using an external visualization solution,
+
+124
+00:14:53,880 --> 00:14:56,720
+which data transfer option are you using?
+
+125
+00:14:56,720 --> 00:15:06,680
+Is it API, SQL, or transfer to external, just type in text to get an overview of what you
+
+126
+00:15:06,680 --> 00:15:10,360
+are using.
+
+127
+00:15:10,360 --> 00:15:18,240
+I will take a look at the chat later, and that would be great to get a look inside.
+
+128
+00:15:18,240 --> 00:15:28,200
+So now we talk about getting the data into the visualization solution a little bit based
+
+129
+00:15:28,200 --> 00:15:31,000
+on these transfer methods.
+
+130
+00:15:31,000 --> 00:15:36,280
+There are some options, so the one is the native connector.
+
+131
+00:15:36,280 --> 00:15:47,200
+So if a solution has a native connector to Matomo, you can use that, and it's the most
+
+132
+00:15:47,200 --> 00:15:49,620
+easiest way.
+
+133
+00:15:49,620 --> 00:16:00,120
+We take a look at a workaround with Google Sheets, where you can use the API to use that,
+
+134
+00:16:00,120 --> 00:16:10,760
+and we will take a look on the SQL connector, that's the most solutions.
+
+135
+00:16:10,760 --> 00:16:22,480
+So we have some answers in the chat, it's a wide range of these options, we have some
+
+136
+00:16:22,480 --> 00:16:29,720
+who are using the APIs, someone using the SQL database, I don't see someone who uses
+
+137
+00:16:29,720 --> 00:16:32,840
+data transfers in some way.
+
+138
+00:16:32,840 --> 00:16:44,920
+So API and SQL database is I think the most used options here for the most people.
+
+139
+00:16:44,920 --> 00:16:57,240
+So yes, to get data into a solution, it's mentioned Google Data Studio, but in the most
+
+140
+00:16:57,240 --> 00:17:02,960
+cases other solutions are also connected to Google Sheets.
+
+141
+00:17:02,960 --> 00:17:11,960
+So it could work also for other data visualization tools.
+
+142
+00:17:11,960 --> 00:17:20,720
+And the process is you have the possibility to, below each chart you have an option to
+
+143
+00:17:20,720 --> 00:17:29,480
+export data, and you have the option to export data and get the URL, and with a workaround
+
+144
+00:17:29,480 --> 00:17:34,280
+you can export the data in Google Sheets.
+
+145
+00:17:34,280 --> 00:17:39,840
+So the data is then in Google Sheets, and you can configure the visualization tool to
+
+146
+00:17:39,840 --> 00:17:42,720
+use that Google Sheets as data source.
+
+147
+00:17:42,720 --> 00:17:50,960
+You will find here two links where Matomo, there's some information on Matomo Org is
+
+148
+00:17:50,960 --> 00:17:56,960
+and some other who describes these process step by step.
+
+149
+00:17:56,960 --> 00:18:04,880
+The best, it's a free solution for getting Matomo data into a data visualization tool.
+
+150
+00:18:04,880 --> 00:18:11,360
+So that's a great benefit for that, but you need some time to set this up for different
+
+151
+00:18:11,360 --> 00:18:15,280
+charts and sources.
+
+152
+00:18:15,280 --> 00:18:24,080
+For each, not for each, but for each report you want to have to be shown as a data visualization
+
+153
+00:18:24,080 --> 00:18:30,920
+tool, you need to add one spreadsheet that you write in there and so on.
+
+154
+00:18:30,920 --> 00:18:38,080
+And there are some limits based on the data range, possibilities, filters, and segments
+
+155
+00:18:38,080 --> 00:18:44,400
+must be predefined and so on.
+
+156
+00:18:44,400 --> 00:18:56,080
+Then I've taken a look on the possibilities about connectors to the solutions out there.
+
+157
+00:18:56,080 --> 00:19:03,160
+The Looker Studio has a Matomo connector available, it's developed by us, so some advertising
+
+158
+00:19:03,160 --> 00:19:09,000
+here, but for the other solutions we haven't found some.
+
+159
+00:19:09,000 --> 00:19:12,640
+If someone knows it, it would be great, so we can add it here.
+
+160
+00:19:12,640 --> 00:19:22,040
+I've seen at 16 o'clock there is a session by Thomas Persson about open source dashboards
+
+161
+00:19:22,040 --> 00:19:24,760
+on top on Matomo with Apache superset.
+
+162
+00:19:24,760 --> 00:19:30,520
+I don't know what it is, I will take a look into it also, I think it's interesting for
+
+163
+00:19:30,520 --> 00:19:33,720
+all who participate here.
+
+164
+00:19:33,720 --> 00:19:44,320
+I think there's no connector, he uses the SQL access directly, but we will see later.
+
+165
+00:19:44,320 --> 00:19:53,320
+So yes, at the moment a native connector is only available for Looker Studio at the moment.
+
+166
+00:19:53,320 --> 00:20:04,680
+So what we need to know, I've mentioned it a little bit earlier, is what is the structure
+
+167
+00:20:04,680 --> 00:20:09,360
+of the Matomo data when we want to work with that.
+
+168
+00:20:09,360 --> 00:20:16,880
+You have different reports here on the left in the navigation of Matomo about visitors
+
+169
+00:20:16,880 --> 00:20:26,560
+behavior, accretion, and so on, and Matomo data is structured in that way that mostly
+
+170
+00:20:26,560 --> 00:20:37,280
+each of these reports has its own table in the database with the pre-processed data,
+
+171
+00:20:37,280 --> 00:20:39,680
+so the data can be loaded fast.
+
+172
+00:20:39,680 --> 00:20:45,280
+MySQL has no analytics database, so this pre-processing is needed.
+
+173
+00:20:45,280 --> 00:20:53,520
+And each report has its own API request and its own dimensions and metrics in combination.
+
+174
+00:20:53,520 --> 00:21:00,720
+You can't, if, as example, the campaign report has a campaign name, you can't add another
+
+175
+00:21:00,720 --> 00:21:02,680
+dimension because it's not pre-processed.
+
+176
+00:21:02,680 --> 00:21:15,600
+So you need to keep in mind regarding what solutions if connector, Google Sheets or SQL,
+
+177
+00:21:15,600 --> 00:21:23,040
+for each of these reports you need to create your own data source in most cases.
+
+178
+00:21:23,040 --> 00:21:31,000
+So you work later with different data sources, one for Geo, one for visitors, one for campaigns
+
+179
+00:21:31,000 --> 00:21:44,040
+if you want to build a dashboard, it's recommended to name them good so you find the data later.
+
+180
+00:21:44,040 --> 00:21:54,240
+So with that in mind, the steps for creating a chart are the same for different charts.
+
+181
+00:21:54,240 --> 00:22:01,080
+So the first thing is the configuration, you need to know which site, which report you
+
+182
+00:22:01,080 --> 00:22:08,400
+want to have, and also create segments of filters if needed.
+
+183
+00:22:08,400 --> 00:22:14,800
+And then you have configured it in the Data Studio Connector or the Looker Connector,
+
+184
+00:22:14,800 --> 00:22:17,680
+it looks like this.
+
+185
+00:22:17,680 --> 00:22:27,800
+In Matomo itself, you will see where the data is, grab that report and put, grab that table
+
+186
+00:22:27,800 --> 00:22:34,840
+or chart, et cetera, and copy the export URL.
+
+187
+00:22:34,840 --> 00:22:38,320
+Then you need to connect the data, that's the next step.
+
+188
+00:22:38,320 --> 00:22:48,880
+So if you have the API URL, import a spreadsheet, set up a schedule, and import the schema from
+
+189
+00:22:48,880 --> 00:22:54,440
+that, the same for the SQL database, you need to choose the table or use the connector.
+
+190
+00:22:54,440 --> 00:22:58,960
+After that, you have the schema for that data source and can work with the data.
+
+191
+00:22:58,960 --> 00:23:05,800
+And the last step is then, it's the same for all these solutions, is to visualize the data
+
+192
+00:23:05,800 --> 00:23:12,320
+so you have the possibility from range of dimensions and metrics to create time series,
+
+193
+00:23:12,320 --> 00:23:16,160
+bar charts, map charts, et cetera.
+
+194
+00:23:16,160 --> 00:23:25,240
+So that are the different steps to do that.
+
+195
+00:23:25,240 --> 00:23:36,840
+So one thing, if you want to work with, if you have some requirements to use real dimensions
+
+196
+00:23:36,840 --> 00:23:47,440
+and metrics who are not in one of these pre-prepared reports, you need to create a custom report.
+
+197
+00:23:47,440 --> 00:23:59,080
+So as an example, if you want to know what campaigns work in what countries, so you need
+
+198
+00:23:59,080 --> 00:24:07,520
+two dimensions, country and campaign, and you want to know what's the results, what's
+
+199
+00:24:07,520 --> 00:24:11,960
+the bounce rate and so on, you need to create a custom report on that.
+
+200
+00:24:11,960 --> 00:24:18,840
+This custom report, you can import in the data visualization tool like the other options
+
+201
+00:24:18,840 --> 00:24:26,600
+that after you have created it, it's the same process there, but that's the only way to
+
+202
+00:24:26,600 --> 00:24:37,200
+combine dimensions and metrics which are not in one of these default reports already combined.
+
+203
+00:24:37,200 --> 00:24:44,760
+If you work with the API or also SQL, there are some performance considerations, especially
+
+204
+00:24:44,760 --> 00:24:49,880
+if you work with some dashboards.
+
+205
+00:24:49,880 --> 00:24:57,680
+Loading data from a Tomo is fast in the normal dashboard settings, but it can also be slow.
+
+206
+00:24:57,680 --> 00:25:03,920
+Just a little example, if you request results over time over the last 12 months compared
+
+207
+00:25:03,920 --> 00:25:12,040
+with the previous period with the selected segment, you can take over 30 seconds or longer.
+
+208
+00:25:12,040 --> 00:25:19,640
+In that case, also in the Tomo Cloud for the demo side, out there, there are much bigger
+
+209
+00:25:19,640 --> 00:25:30,600
+size and data sets, so yeah, the loading can be really tough there.
+
+210
+00:25:30,600 --> 00:25:40,400
+If you have more data and requesting longer timeframes, add filter segments that can also
+
+211
+00:25:40,400 --> 00:25:45,600
+expand the loading time.
+
+212
+00:25:45,600 --> 00:25:58,440
+For that, here are some tips we have discovered while people working with our Data Studio
+
+213
+00:25:58,440 --> 00:26:02,600
+Connector.
+
+214
+00:26:02,600 --> 00:26:11,960
+If you use the spreadsheet solution, that's not the case in most parts because it's pre-processed,
+
+215
+00:26:11,960 --> 00:26:19,000
+but if you're using the Data Connector or MySQL Access, we recommend to use a smaller
+
+216
+00:26:19,000 --> 00:26:28,160
+date range in the default view of the dashboard, so just select the month and not three years.
+
+217
+00:26:28,160 --> 00:26:38,280
+Add a date range if needed, and add a date range control if someone wants to get a longer
+
+218
+00:26:38,280 --> 00:26:41,280
+date range there.
+
+219
+00:26:41,280 --> 00:26:42,960
+Avoid the main metrics report.
+
+220
+00:26:42,960 --> 00:26:55,600
+It's a report which comes through the API where much metrics are in, but it takes longer
+
+221
+00:26:55,600 --> 00:27:04,960
+to load, in the most cases, most metrics are also in some sub-reports.
+
+222
+00:27:04,960 --> 00:27:10,560
+Avoid transferring a big amount of result rows, so if you have a landing page list and
+
+223
+00:27:10,560 --> 00:27:18,800
+you want to report the top landing page and you have 5 million ULs, don't send them all
+
+224
+00:27:18,800 --> 00:27:27,280
+to the data visualization tool and then cut them in Matomo.
+
+225
+00:27:27,280 --> 00:27:37,880
+Just get the top 100 rows with a filter option and show them in the visualization tool.
+
+226
+00:27:37,880 --> 00:27:42,160
+One other thing is to use custom reports.
+
+227
+00:27:42,160 --> 00:27:51,920
+If you have a complex query with segments and landing page ULs containing and so on,
+
+228
+00:27:51,920 --> 00:27:58,480
+create a custom report so it's pre-filled and you can only access the data instead of
+
+229
+00:27:58,480 --> 00:28:07,080
+each data visualization request you need to segment and filter the reports by itself.
+
+230
+00:28:07,080 --> 00:28:13,920
+One other option is to reduce the number of elements loaded at one time, so not to show
+
+231
+00:28:13,920 --> 00:28:24,240
+500 charts on one page, reduce it to a good amount.
+
+232
+00:28:24,240 --> 00:28:37,400
+In Looker Studio there's an option which is named extract data, if you use that, it extracts
+
+233
+00:28:37,400 --> 00:28:48,160
+the data from the source, stores it somewhere in the Google Cloud and you do only the access
+
+234
+00:28:48,160 --> 00:29:01,200
+against this fast storage and it gets the updates each night and you have a fast report.
+
+235
+00:29:01,200 --> 00:29:06,320
+That could be a solution, especially if you want to show a page time range from three
+
+236
+00:29:06,320 --> 00:29:13,840
+years and filter down by, so that could be a solution.
+
+237
+00:29:13,840 --> 00:29:26,160
+So yes, that was a rough overview about the topic data visualization, how data can go
+
+238
+00:29:26,160 --> 00:29:39,520
+from a Tomo to a visualization solution and what options are there and how that works.
+
+239
+00:29:39,520 --> 00:29:47,400
+Any questions from the audience here at the moment?
+
+240
+00:29:47,400 --> 00:29:49,360
+Thank you very much, Marcel.
+
+241
+00:29:49,360 --> 00:29:54,760
+If questions, any questions, please drop them in the chat.
+
+242
+00:29:54,760 --> 00:29:59,840
+Just to also inform you about this, there's a 40-second delay between the stream and the
+
+243
+00:29:59,840 --> 00:30:05,080
+chat room, so that's also why the poll was a bit delayed, I think.
+
+244
+00:30:05,080 --> 00:30:12,480
+I mean, already in the chat there's still a few answers about the question what people
+
+245
+00:30:12,480 --> 00:30:22,120
+are using for connectors and also a few fan messages, I think.
+
+246
+00:30:22,120 --> 00:30:23,120
+Thanks.
+
+247
+00:30:23,120 --> 00:30:25,400
+I get it, right?
+
+248
+00:30:25,400 --> 00:30:35,960
+So I see some answers, I've seen someone also exporting data through the GUI to show
+
+249
+00:30:35,960 --> 00:30:38,920
+them visualization solutions.
+
+250
+00:30:38,920 --> 00:30:47,200
+I think the spreadsheet variant could be then something who helps there to reduce the amount
+
+251
+00:30:47,200 --> 00:30:59,480
+of work and Thomas has written that for superset he built an own connector with SQL, so that
+
+252
+00:30:59,480 --> 00:31:04,000
+could be interesting in the session from him later.
+
+253
+00:31:04,000 --> 00:31:08,520
+I see there are actually some questions now as well.
+
+254
+00:31:08,520 --> 00:31:13,320
+So there's a question that Diana Ferber wrote that they are working on moving away from
+
+255
+00:31:13,320 --> 00:31:18,800
+Google Analytics using the non-privacy-friendly point as one of the main reasons.
+
+256
+00:31:18,800 --> 00:31:25,520
+So that question is how privacy-friendly is it to move the data back to Google Data Studio?
+
+257
+00:31:25,520 --> 00:31:29,120
+Yes, good question.
+
+258
+00:31:29,120 --> 00:31:36,200
+I'm not a lawyer, so just my opinion at that point.
+
+259
+00:31:36,200 --> 00:31:49,440
+If you are using Data Matomo to get the data saved somewhere, it depends how your setup
+
+260
+00:31:49,440 --> 00:31:50,440
+is.
+
+261
+00:31:50,440 --> 00:32:01,240
+If you have no customer data in your instance and just working with aggregated data and
+
+262
+00:32:01,240 --> 00:32:12,160
+so on, there's no personal data in there, so the IP is blocked by Matomo and so on.
+
+263
+00:32:12,160 --> 00:32:20,880
+So in my opinion, if there's no personal data in Matomo, you can't transfer it to any service
+
+264
+00:32:20,880 --> 00:32:26,480
+without harming your DSP flow and so on.
+
+265
+00:32:26,480 --> 00:32:34,080
+Yes, that's the one thing, if you have customer data in there, like order ID or something
+
+266
+00:32:34,080 --> 00:32:50,160
+like this, if you do that, it depends how your tracking is set up there and if you have
+
+267
+00:32:50,160 --> 00:32:55,600
+a reason for having it in Matomo already and you have access to it and some people have
+
+268
+00:32:55,600 --> 00:33:04,720
+said yes, you can save it, you can also, you need to check your lawyer if you can transfer
+
+269
+00:33:04,720 --> 00:33:12,120
+such data to a data studio if you have a contract with them, but yes, that's something you need
+
+270
+00:33:12,120 --> 00:33:14,040
+to check out there.
+
+271
+00:33:14,040 --> 00:33:19,720
+But as long as you have no personal data in Matomo, you can transfer, in my opinion, to
+
+272
+00:33:19,720 --> 00:33:20,720
+any tool out there.
+
+273
+00:33:20,720 --> 00:33:29,080
+It's just statistical data.
+
+274
+00:33:29,080 --> 00:33:40,320
+Another question by Niklas Terenstedt is if you can show an example of a visualization.
+
+275
+00:33:40,320 --> 00:33:47,400
+So the question is what do you mean by an example of a visualization?
+
+276
+00:33:47,400 --> 00:34:04,200
+I can show you something if I, let me see if that works here.
+
+277
+00:34:04,200 --> 00:34:08,000
+That is Luka, our data studio, Luka Studio.
+
+278
+00:34:08,000 --> 00:34:14,400
+I've created here a data source with, in that case, our connector, but that has explained
+
+279
+00:34:14,400 --> 00:34:21,600
+that could also be a SQL connection or a spreadsheet workaround there.
+
+280
+00:34:21,600 --> 00:34:30,560
+And yes, you have then these data source and you have the different dimensions and metrics
+
+281
+00:34:30,560 --> 00:34:31,560
+in here.
+
+282
+00:34:31,560 --> 00:34:35,720
+That is the channel type report.
+
+283
+00:34:35,720 --> 00:34:42,080
+So I have the channel type and here I've chosen the channel type and the wizards and have
+
+284
+00:34:42,080 --> 00:34:48,400
+made a normal time series chart.
+
+285
+00:34:48,400 --> 00:34:55,960
+And you can then change it to, I don't want to filter here, change the metric as example
+
+286
+00:34:55,960 --> 00:35:02,680
+to the order revenue or something else, what is available from the API call.
+
+287
+00:35:02,680 --> 00:35:12,040
+You could also make other charts from the same data as this one is just aggregated scorecard.
+
+288
+00:35:12,040 --> 00:35:20,800
+And you could also do some by charts the same way or change the charts in different ways
+
+289
+00:35:20,800 --> 00:35:30,720
+to make your visualizations here and it shows the data you need.
+
+290
+00:35:30,720 --> 00:35:42,280
+So there are much guides for visualization data in data studio out there.
+
+291
+00:35:42,280 --> 00:35:50,000
+I think that's something which is covered there already, but yes, it's the same procedure.
+
+292
+00:35:50,000 --> 00:35:56,080
+You have a data source with one of the, from one of the reports in Matomo and you can use
+
+293
+00:35:56,080 --> 00:36:02,000
+it here to visualize the data the way you like.
+
+294
+00:36:02,000 --> 00:36:08,960
+So that doesn't make sense here, the source should be the channel type.
+
+295
+00:36:08,960 --> 00:36:15,320
+Yes, I hope that answers that question.
+
+296
+00:36:15,320 --> 00:36:16,320
+I hope so too.
+
+297
+00:36:16,320 --> 00:36:19,960
+I mean, the person who asked the question is now still typing in chat.
+
+298
+00:36:19,960 --> 00:36:32,400
+So maybe you just, we have to wait a few seconds for the delay to allow them to reply.
+
+299
+00:36:32,400 --> 00:36:46,400
+So yes, well, in the meantime, okay.
+
+300
+00:36:46,400 --> 00:36:55,880
+So if there are no other questions, I mean, the chat room will remain open for further
+
+301
+00:36:55,880 --> 00:36:58,480
+discussions anyways.
+
+302
+00:36:58,480 --> 00:37:04,000
+I would once again like to thank you very much for your talk, for your very insightful
+
+303
+00:37:04,000 --> 00:37:08,400
+talk and yes, thanks a lot.
+
+304
+00:37:08,400 --> 00:37:09,400
+Thank you.
+
+305
+00:37:09,400 --> 00:37:16,600
+Thank you very much for listening and if you have any questions later, you can contact
+
+306
+00:37:16,600 --> 00:37:21,400
+me on LinkedIn or via email.
+
+307
+00:37:21,400 --> 00:37:22,400
+Yes.
+
+308
+00:37:22,400 --> 00:37:23,400
+Yeah.
+
+309
+00:37:23,400 --> 00:37:24,400
+Thank you.
+
+310
+00:37:24,400 --> 00:37:25,400
+Thank you.
+
+311
+00:37:25,400 --> 00:37:40,400
+Thank you very much.
+

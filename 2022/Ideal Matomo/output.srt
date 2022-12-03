@@ -1,0 +1,884 @@
+1
+00:00:00,000 --> 00:00:20,040
+Hi, everyone. Glad to be here to talk about the topic for today, which is imagine an ideal
+
+2
+00:00:20,040 --> 00:00:32,680
+Matomo. So just before I start, I just want to say a few words about the context of this
+
+3
+00:00:32,680 --> 00:00:43,360
+presentation. Typically here, what I'm going to be talking about is providing a better experience
+
+4
+00:00:43,360 --> 00:00:51,840
+to marketing people, non-technical people, because a lot of what I'm going to be talking about can
+
+5
+00:00:51,840 --> 00:01:03,280
+be addressed using what I call some more technical strategies or resources. This is just my few ideas
+
+6
+00:01:03,280 --> 00:01:10,960
+and I really like that at the end of the presentation you can share your ideas also so we can build some
+
+7
+00:01:10,960 --> 00:01:19,600
+kind of list of our expectations regarding the tool in the future. So what we're going to be talking
+
+8
+00:01:19,600 --> 00:01:29,760
+about is Matomo itself, the Tag Manager, DataVis tool and Consent Management Platform. So let's dive
+
+9
+00:01:29,760 --> 00:01:36,160
+in directly. First of all, when we're talking about Matomo, there is something really annoying
+
+10
+00:01:36,160 --> 00:01:44,680
+that I have encountered many times is when you have a lot of websites and you want to find a
+
+11
+00:01:44,680 --> 00:01:52,360
+specific one. In this situation, you have to use the site's search field, but this site's search
+
+12
+00:01:52,360 --> 00:01:59,800
+field is located at the bottom of the page. So in my dreams, I would like to have the search site
+
+13
+00:01:59,800 --> 00:02:08,920
+panel right above so you can just type the name of the website and it's going to be right in front
+
+14
+00:02:08,920 --> 00:02:19,280
+of your house. This is the first thing, place search fields above. The second one is a bit more
+
+15
+00:02:19,280 --> 00:02:25,680
+annoying, I think, because when you're doing web analytics, you're talking about digital performance
+
+16
+00:02:25,680 --> 00:02:35,520
+and you're talking about metrics. And in some cases, those metrics are talking about specific
+
+17
+00:02:35,520 --> 00:02:44,080
+segments of audience. And unfortunately, for the moment, when you build your dashboard, you are
+
+18
+00:02:44,080 --> 00:02:55,440
+forced to segment your whole dashboard. You cannot segment just a metric within your dashboard. And
+
+19
+00:02:55,440 --> 00:03:03,920
+here, again, is some kind of footage that I made with my metric and the ability to have here the
+
+20
+00:03:03,920 --> 00:03:13,520
+segment directly based on this particular metric. Because otherwise, what we have to do is to take
+
+21
+00:03:13,520 --> 00:03:21,640
+the data out of Matomo and bring it to an external data visualization tool. It can be done, but for
+
+22
+00:03:21,640 --> 00:03:29,800
+some users, for some teams, I have encountered the situation where they just want to remain within
+
+23
+00:03:29,800 --> 00:03:39,120
+Matomo and not go outside of it. So this one is, I think, a really interesting one, because the
+
+24
+00:03:39,120 --> 00:03:49,000
+whole idea behind presentation is to have some kind of complete web analytics suite. And this
+
+25
+00:03:49,000 --> 00:04:00,240
+feature, I think, is quite valuable. Another example of stuff that are annoying in the
+
+26
+00:04:00,240 --> 00:04:09,640
+projects is the situation where you want to follow users cross-domain. So for instance, you have a
+
+27
+00:04:09,640 --> 00:04:17,640
+client who says, OK, I have three, four, five websites, and I want to see what people do on
+
+28
+00:04:17,640 --> 00:04:24,080
+these different websites. Is there some cross user journey through these websites? And for that,
+
+29
+00:04:24,080 --> 00:04:32,960
+you create a Matomo site ID, and you configure it so that the journeys are captured through the
+
+30
+00:04:32,960 --> 00:04:40,600
+different domains. But unfortunately, in this situation, and this is the example that I display
+
+31
+00:04:40,600 --> 00:04:49,920
+here, you just have in the report page URL. In fact, you just have the URI. I think you don't
+
+32
+00:04:49,920 --> 00:04:56,280
+have the domain, and it's quite annoying because you don't know what you're talking about. So this
+
+33
+00:04:56,280 --> 00:05:02,760
+is the reason why I just added here in my dreams what it would look like. So for instance, here,
+
+34
+00:05:02,760 --> 00:05:11,240
+mysitea.com, slash FRFR, mysiteb.com, slash, et cetera, et cetera. Again, you can do some work
+
+35
+00:05:11,240 --> 00:05:18,640
+around with the Tag Manager, for instance. But again, the idea of the presentation is I am not
+
+36
+00:05:18,640 --> 00:05:26,880
+a technical person, and I encounter this situation that made me unhappy and thinking that Matomo is
+
+37
+00:05:26,880 --> 00:05:41,720
+not that interesting as a tool. Situation number three is when you look at the events reports,
+
+38
+00:05:41,720 --> 00:05:50,040
+most of the time you have people that are used to using Google Analytics reports. And it's quite
+
+39
+00:05:50,040 --> 00:05:57,200
+surprising for them not to see the whole variables, the whole event variables. So you have event
+
+40
+00:05:57,200 --> 00:06:03,680
+category, event action, but where is my event action? And again, the way I present it here is
+
+41
+00:06:03,680 --> 00:06:11,920
+when you want to separate the variables, but by default it's not presented that way. So it's,
+
+42
+00:06:11,920 --> 00:06:19,960
+again, more annoying for most people. So the idea here is that we could have event category,
+
+43
+00:06:19,960 --> 00:06:31,760
+event action, event names, and of course, event value. So I don't think it's a big deal, but yes,
+
+44
+00:06:31,760 --> 00:06:38,480
+you have to navigate through the different event variables, and that can be a bit disappointing.
+
+45
+00:06:38,480 --> 00:06:45,600
+In the same logic, when we're navigating through the different event variables,
+
+46
+00:06:45,600 --> 00:06:53,280
+and you're using, for instance, a search field. So here, for instance, I typed conversion here,
+
+47
+00:06:53,280 --> 00:07:00,360
+and I am on the event category level. I have my conversion, so it's filtered the way I want it.
+
+48
+00:07:00,360 --> 00:07:09,920
+But if I want to go down to the event action level, then my conversion, what I had typed here,
+
+49
+00:07:09,920 --> 00:07:19,880
+is lost. So again, it would be great if I could keep what I have typed here in the browser,
+
+50
+00:07:19,880 --> 00:07:29,200
+and also if the search filter could be located right above here, because if you have hundreds
+
+51
+00:07:29,200 --> 00:07:33,320
+of lines, then you have to scroll down all the way, and it's not hiding.
+
+52
+00:07:33,320 --> 00:07:43,960
+Another really annoying situation when I'm talking with my clients is why is that not
+
+53
+00:07:43,960 --> 00:07:52,080
+possible to combine more than three dimensions in custom reports? What do I do when I want to
+
+54
+00:07:52,080 --> 00:07:58,560
+have event category, event action, event name, and another custom dimension? And again,
+
+55
+00:07:58,560 --> 00:08:08,240
+for just regular marketing people, it's some kind of situation where they want to reject the tool,
+
+56
+00:08:08,240 --> 00:08:16,520
+because they think that it's not normal that you cannot, by default, and simply combine more than
+
+57
+00:08:16,520 --> 00:08:24,720
+three dimension. And again, they always make the comparison with Google Analytics. And since now,
+
+58
+00:08:24,720 --> 00:08:32,160
+it's obvious that we will have a lot of people migrating from GA to Matomo. I think that we
+
+59
+00:08:32,160 --> 00:08:46,560
+should address this specific topic. In the same field, talking about the custom reports,
+
+60
+00:08:46,560 --> 00:09:00,400
+I was a bit surprised to see that not all metrics are available in the custom reports. So for
+
+61
+00:09:00,400 --> 00:09:08,680
+instance, I had clients wanting the average time on page in a custom report, and I discovered that
+
+62
+00:09:08,680 --> 00:09:17,880
+this metric is not available on the custom reports. So I think that at least there should be somewhere
+
+63
+00:09:17,880 --> 00:09:29,080
+where it is explained that this metric or this dimension will not be available by default so that
+
+64
+00:09:29,080 --> 00:09:35,200
+people can be prepared so that we can explain. And it's really disappointing because you have
+
+65
+00:09:35,200 --> 00:09:40,480
+something in mind, you're quite sure of what you're going to be doing, and you discover that
+
+66
+00:09:40,480 --> 00:09:49,240
+unfortunately, it's not possible. So what I suggest is that all metrics available in Matomo
+
+67
+00:09:49,240 --> 00:10:03,480
+should be available in custom reports. Another situation, and it's regarding the moments where
+
+68
+00:10:03,480 --> 00:10:12,840
+you have dozens of websites to configure. And the example that I have in mind is the custom
+
+69
+00:10:12,840 --> 00:10:25,120
+dimension. Yes, if you have maybe 20, 30 custom dimensions to configure for 20, 30 websites,
+
+70
+00:10:25,120 --> 00:10:32,080
+it can take a lot of time. And if you do that manually, then you can make mistakes. So I again
+
+71
+00:10:32,080 --> 00:10:43,840
+assume that it can be done using maybe different APIs or technical stuff. But for regular marketing
+
+72
+00:10:43,840 --> 00:10:52,200
+people, I think it could be a good thing to have some kind of copy configuration button in the
+
+73
+00:10:52,200 --> 00:11:01,000
+admin section. And in my mind, then you can decide that yes, I want to copy a custom dimensions.
+
+74
+00:11:01,000 --> 00:11:11,800
+For the customers also, you can decide that you want to duplicate them. For the segments,
+
+75
+00:11:11,800 --> 00:11:19,360
+it's a bit different because when you create them, you can decide that it's for one website
+
+76
+00:11:19,360 --> 00:11:27,000
+or all of them. But yes, the idea here is to not lose time in the configuration. And I'm reading
+
+77
+00:11:27,000 --> 00:11:34,760
+in the conversation, Thomas. Yes, regarding the other side, I've made a change request. Yes,
+
+78
+00:11:34,760 --> 00:11:46,320
+I think that obviously we should be a lot more indeed to ask these kind of changes. Because if
+
+79
+00:11:46,320 --> 00:11:57,480
+we are allowed to ask that, then it be prioritized, of course. Thank you, Thomas, for coming. Another
+
+80
+00:11:57,480 --> 00:12:08,720
+thing is about API testing. And again, this is in my ideal world, because I know that it's something
+
+81
+00:12:08,720 --> 00:12:18,400
+that may take a lot of time, resource tests and so on. But if we want to have a complete analytics
+
+82
+00:12:18,400 --> 00:12:26,480
+suite, then I think that we should have a with you. We get each other for any tests. That's what
+
+83
+00:12:26,480 --> 00:12:35,720
+Google did with the feature that was in the beginning in GA for the test. And then they
+
+84
+00:12:35,720 --> 00:12:45,560
+launched optimize. So again, you can use the testing feature in that is, I think, quite well
+
+85
+00:12:45,560 --> 00:12:53,560
+made when we are talking about building the tests. But when it's about, again, you are someone with
+
+86
+00:12:53,560 --> 00:13:04,040
+not a lot of resources and not able to build pages and have to ask for developers to build
+
+87
+00:13:04,040 --> 00:13:10,360
+pages to run your tests, it's a bit disappointing. And it would be a great advantage if we could have
+
+88
+00:13:10,920 --> 00:13:19,720
+everything in a box. And the editor, I think, is also something that might be really valuable for
+
+89
+00:13:19,720 --> 00:13:35,240
+the two as a global analytics suite. Something again, quite annoying is about the unique visitor
+
+90
+00:13:35,240 --> 00:13:45,480
+metric. It appears that by default, this metric is not available for custom periods in the reports.
+
+91
+00:13:45,480 --> 00:13:56,920
+It is documented. But you have to have a look in the documentation. Because what happens is that,
+
+92
+00:13:56,920 --> 00:14:05,880
+for instance, here I have this metric in a Google Data Studio. And at the first site, I'm thinking,
+
+93
+00:14:05,880 --> 00:14:12,600
+oh, something went wrong with my dashboard. Something is not working. And in fact, it's just
+
+94
+00:14:12,600 --> 00:14:20,760
+that unique visitors is not activated for custom dates and custom periods. So again, you have to
+
+95
+00:14:20,760 --> 00:14:31,800
+ask the people that handle the Matomo instance to make a change in some kind of technical file.
+
+96
+00:14:31,800 --> 00:14:40,040
+And then it's activated. And apparently, it's not activated by default because it costs a lot in
+
+97
+00:14:40,040 --> 00:14:46,600
+terms of resources on the servers. I'm not quite aware of that because, again, I'm not a technical
+
+98
+00:14:46,600 --> 00:14:52,680
+person. But this is something not acceptable for most people, for most marketing people. The unique
+
+99
+00:14:52,680 --> 00:14:58,680
+visitor metric is some kind of basic metric. And when you encounter the situation firstly,
+
+100
+00:14:58,680 --> 00:15:04,680
+and you explain to the customer that, oh, yes, in fact, the metric is not available by default,
+
+101
+00:15:04,680 --> 00:15:09,720
+they just don't get it. They just don't understand why can it be, how can it be possible that this
+
+102
+00:15:09,720 --> 00:15:18,120
+simple standard metric is not by default available on that tool. And this is the situation I
+
+103
+00:15:18,120 --> 00:15:24,760
+encountered a lot where people rejected it because they thought that, no, this is not possible. It's
+
+104
+00:15:24,760 --> 00:15:32,120
+not acceptable that this simple metric we cannot access simply. And we have to ask our IT department
+
+105
+00:15:32,120 --> 00:15:40,120
+to do some kind of stuff, or we have to ask the Matomo team to do something on the server so that
+
+106
+00:15:40,120 --> 00:15:51,000
+we can have a metric. So it's just a proposition. Yes, yes, yes, of course. Yes, in the config level,
+
+107
+00:15:51,000 --> 00:16:03,240
+but IMEI.php, clearly, it's something that can be done. But this is annoying when you have, let's
+
+108
+00:16:03,240 --> 00:16:12,280
+say, organizations where you have thousands, no, hundreds of people using a tool named Google
+
+109
+00:16:12,280 --> 00:16:18,120
+Analytics, and they migrate, and they are quite forced to migrate to another tool. And
+
+110
+00:16:18,120 --> 00:16:26,520
+they discover that this metric, this simple thing, you have to ask your IT department to do something
+
+111
+00:16:26,520 --> 00:16:36,040
+to access it. And yes, I think that there should be a simple button somewhere in the UI, in the
+
+112
+00:16:36,040 --> 00:16:42,280
+Matomo UI, saying, do you want the unique visitor? Or just a warning saying, OK, by default, it's not
+
+113
+00:16:42,280 --> 00:16:48,840
+activated, but you can choose to activate it. Again, it's a presentation that's really
+
+114
+00:16:48,840 --> 00:16:58,440
+orientated for non-technical people. And yes, this is something I encountered a lot of times.
+
+115
+00:16:58,440 --> 00:17:06,600
+And now I can warn my clients about that. But in the beginning, when it happened, it was a bit
+
+116
+00:17:06,600 --> 00:17:15,720
+disturbing. And thank you again, Thomas, for the comments about that.
+
+117
+00:17:19,800 --> 00:17:34,360
+Another thing that I think could be interesting is that—I'm sorry, I'm reading Thomas' comment,
+
+118
+00:17:34,360 --> 00:17:55,640
+but I think the stuff could be a little bit strange. OK, let's go on. OK, the other thing
+
+119
+00:17:55,640 --> 00:18:03,080
+is about generic segments, because by default, you don't have anything like that in the interface.
+
+120
+00:18:03,080 --> 00:18:12,680
+So I think that you should have, by default, some kind of generic segments that you have within
+
+121
+00:18:13,640 --> 00:18:29,320
+Google Analytics. So again, it's a marketing guy talking. Some tools like Adobe Analytics or other
+
+122
+00:18:29,320 --> 00:18:41,640
+don't even have those generic segments available. But again, for people that are used to something
+
+123
+00:18:41,640 --> 00:18:50,600
+and that are moving to a new tool, not having the basics is something that is a bit annoying.
+
+124
+00:18:50,600 --> 00:19:00,680
+So I think that at least there could be some kind of generic ones like the direct accesses,
+
+125
+00:19:00,680 --> 00:19:15,320
+new users, stuff like that. Another stuff that existed in Google Analytics and that people
+
+126
+00:19:15,320 --> 00:19:26,120
+don't find in Matomo and about what they're a bit disappointed is the value page metric.
+
+127
+00:19:28,920 --> 00:19:34,840
+This metric is interesting because it was a simple way to identify
+
+128
+00:19:37,400 --> 00:19:43,800
+what pages were contributing to performance to conversions. And I think it could be interesting
+
+129
+00:19:43,800 --> 00:19:54,440
+to have this data within Matomo. I'm reading the comments. Sorry for joking a bit.
+
+130
+00:19:54,440 --> 00:20:00,680
+It's a very complex tool and you just read that we can adopt it for different needs. However,
+
+131
+00:20:02,040 --> 00:20:12,440
+you should know these details. Of course, configure it with the setting above
+
+132
+00:20:13,880 --> 00:20:23,560
+enable as an example. Yes, I totally agree. It was the situation that I encountered in
+
+133
+00:20:23,560 --> 00:20:34,680
+the beginning when I started working with the tool. But yes, it's something that I know now.
+
+134
+00:20:35,320 --> 00:20:41,320
+But for people that are going to be using the tool in the future since there are going to be a lot of
+
+135
+00:20:42,120 --> 00:20:47,480
+adoption of the tool because of the legal situation in different countries, I think that
+
+136
+00:20:47,480 --> 00:20:58,120
+at least the tool should warn users that they have to do something about that. Because not anyone
+
+137
+00:20:59,480 --> 00:21:07,320
+has the immediate knowledge about this specific topic, the unique visitor topic.
+
+138
+00:21:07,320 --> 00:21:25,080
+The tag manager. Another thing that could be done is just to allow us to sort the different assets
+
+139
+00:21:25,080 --> 00:21:35,640
+by name types because here you have really few things, few tags. But when you have really big
+
+140
+00:21:35,640 --> 00:21:42,600
+containers, I think that if you could sort by name, by type, or even have a search field
+
+141
+00:21:42,600 --> 00:21:54,360
+somewhere could be a good thing as well. In the tag manager area, again, something
+
+142
+00:21:54,360 --> 00:22:00,520
+that I think could be interesting is just to have a way to duplicate, copy, paste some sets
+
+143
+00:22:00,520 --> 00:22:10,600
+because right now you can just edit or delete the assets. Something else that already exists in
+
+144
+00:22:10,600 --> 00:22:19,000
+Google Tag Manager is the folder feature. So maybe could be also a good thing to be able to have a
+
+145
+00:22:19,000 --> 00:22:31,000
+clean vision of what's inside your container. A way also to post tags, something you have quite
+
+146
+00:22:31,000 --> 00:22:36,760
+easily in Google Tag Manager that you don't have in Matomo. Of course, you can decide that you
+
+147
+00:22:37,640 --> 00:22:47,000
+put some kind of starting day and ending day of the tag file for a campaign, for instance. But
+
+148
+00:22:47,000 --> 00:22:58,040
+this is quite easy to use here to just post the tag. Number three is about data visualization.
+
+149
+00:23:00,040 --> 00:23:09,640
+Again, I'm talking only for me. I don't know an open source Google Data Studio alternative.
+
+150
+00:23:09,640 --> 00:23:16,840
+I think that there are some, so for instance, here, I think it's Grafana, and I think that there's a
+
+151
+00:23:17,400 --> 00:23:27,560
+talk soon about Apache superset. But again, you have to go outside of Matomo. So I think that if
+
+152
+00:23:27,560 --> 00:23:36,760
+we can have something that allows us to stay within Matomo, could be a good thing. If we can
+
+153
+00:23:36,760 --> 00:23:46,680
+do that, could be a good thing. Or another option is to enhance the existing dashboard
+
+154
+00:23:47,480 --> 00:24:00,840
+system and maybe make other connections possible because with the existing dashboard, you cannot
+
+155
+00:24:00,840 --> 00:24:10,520
+connect external data sources. So yes, just as the A-B testing feature, I think that it's a big
+
+156
+00:24:11,080 --> 00:24:20,680
+work to do, but to have something complete, I think it's important to have a complete data
+
+157
+00:24:20,680 --> 00:24:32,200
+visualization solution within Matomo. The last thing I wanted to talk about regarding my ideal
+
+158
+00:24:32,200 --> 00:24:40,280
+vision, it's not exhaustive, but just a few ideas I had in mind, is about the consent management
+
+159
+00:24:40,280 --> 00:24:50,360
+platform. So again, if you have the technical resources for that, you can address
+
+160
+00:24:50,360 --> 00:25:03,960
+this topic. But I think if we had something internal inside of Matomo that can allow us
+
+161
+00:25:03,960 --> 00:25:14,760
+to create the cookie consent banner and configure it easily, it would help to adopt the tool.
+
+162
+00:25:14,760 --> 00:25:21,720
+So there is a comment here, page metric about goal conversion is a new feature since two months.
+
+163
+00:25:24,040 --> 00:25:31,560
+Goal conversion. Thank you Udo for your comment.
+
+164
+00:25:31,560 --> 00:25:43,960
+Yes, and now it's your turn. Do you have any ideas about what could make Matomo even a better tool?
+
+165
+00:25:45,720 --> 00:25:51,480
+Just feel free and we'll take note of that and add it to the presentation. So
+
+166
+00:25:52,760 --> 00:25:57,720
+if you want to add something, just don't hesitate.
+
+167
+00:25:57,720 --> 00:26:03,160
+Regarding consent management, I would like that it would be nice
+
+168
+00:26:04,840 --> 00:26:13,720
+if it can be possible to process content to geo location with a full IP address.
+
+169
+00:26:15,800 --> 00:26:23,480
+Thank you Udo for your comment. Small improvements to the current dashboard solution
+
+170
+00:26:23,480 --> 00:26:31,880
+would help a lot. Building a completely new dashboard solution is a big test. Yes, totally agree.
+
+171
+00:26:34,200 --> 00:26:48,920
+Again, I'm just dreaming awake, but it's the name of the presentation. It's ideal. Imagine an ideal Matomo.
+
+172
+00:26:48,920 --> 00:27:03,160
+Michael Johnson is saying, would also like to have faster responses, but it is surely a technical thing.
+
+173
+00:27:05,960 --> 00:27:13,800
+Faster, also like to have faster. Yes, I think they were talking about
+
+174
+00:27:13,800 --> 00:27:28,120
+server responses on your Matomo UI. Typically, you can be helped by your IT team, and you can also
+
+175
+00:27:28,120 --> 00:27:42,600
+ask some people. In particular, I'm thinking about Peter, with whom I have already been working.
+
+176
+00:27:42,600 --> 00:27:55,960
+His work brought a lot of improvement to the time response. Peter is definitely
+
+177
+00:27:55,960 --> 00:28:06,280
+someone you can reach out to when you want to address these technical issues that can cause low response.
+
+178
+00:28:06,280 --> 00:28:12,040
+Udo is saying, I totally agree. Marketing clients in particular see like you that some of your
+
+179
+00:28:12,040 --> 00:28:20,520
+improvements would help a lot. Thank you for your comments. I think that it's also a matter of
+
+180
+00:28:20,520 --> 00:28:28,760
+internal communication within the tool, just to, again, like for the unique business stuff, just
+
+181
+00:28:28,760 --> 00:28:33,320
+some kind of pop-up saying, okay, for the moment, you don't have access to that metric, but if you want
+
+182
+00:28:33,320 --> 00:28:39,400
+to have it, because it's a must-have, then you just have to go to the config in the PHP and make that
+
+183
+00:28:39,400 --> 00:28:46,280
+change. I think it's like when there's a conversation between people, it's a matter of
+
+184
+00:28:46,280 --> 00:28:56,120
+anticipate what can happen and communicate in a clear way. Yes, thank you again, Udo, for your
+
+185
+00:28:56,120 --> 00:29:06,440
+comment. Thank you, Thomas, for your comment also. Indeed, it's like in most cases, there are some
+
+186
+00:29:06,440 --> 00:29:16,520
+limitations in the architecture for some features as well. Yes, of course, and just like Thomas said,
+
+187
+00:29:18,360 --> 00:29:25,080
+yes, it is a very complex tool, and I know that in my position, I don't have an overall vision of
+
+188
+00:29:25,080 --> 00:29:37,720
+all the involvements to make the tool work, but I had this discussion with Mathieu some weeks ago,
+
+189
+00:29:37,720 --> 00:29:47,320
+months ago. There are at least, I think, three audiences for the tool. You have end users for
+
+190
+00:29:47,320 --> 00:29:52,200
+marketing people in an organization that are going to be looking at their campaign performance, for
+
+191
+00:29:52,200 --> 00:29:58,040
+instance. You have IT people that are going to be installing and managing the infrastructure,
+
+192
+00:29:59,240 --> 00:30:07,720
+and you have consultants like me, people like me, and these are really three different types of
+
+193
+00:30:07,720 --> 00:30:17,800
+audiences with different expectations. When we're talking about Matomo consultants, and I take my
+
+194
+00:30:17,800 --> 00:30:26,920
+example, I am a Matomo consultant, but with not that technical orientation, I'm more a digital
+
+195
+00:30:26,920 --> 00:30:37,720
+efficiency strategist, so I think it's really important to have communications, distinct
+
+196
+00:30:37,720 --> 00:30:45,720
+communication for these three different types of audiences. And Udo is asking, Thomas, what are your
+
+197
+00:30:45,720 --> 00:30:54,920
+thoughts on the technical limitations, not specifically on the technical limitations,
+
+198
+00:30:54,920 --> 00:31:04,920
+but not specifically on the technical limitations?
+
+199
+00:31:04,920 --> 00:31:15,480
+Yes, but regarding the limitations, I have to admit that I'm not that aware of all the limitations,
+
+200
+00:31:15,480 --> 00:31:19,560
+and I think that there is a page on the documentation that explains all the
+
+201
+00:31:19,560 --> 00:31:27,560
+all the documentations, and my final thought about that is that the tool needs improvement,
+
+202
+00:31:27,560 --> 00:31:34,600
+yes, it's clear, but I think that communication around the tool needs improvement as well,
+
+203
+00:31:34,600 --> 00:31:43,800
+because I'm going to give a last example about that. The example I want to give is the
+
+204
+00:31:43,800 --> 00:31:48,520
+Tag Manager implementation of the e-commerce tracking, and I have to admit that I struggled
+
+205
+00:31:48,520 --> 00:31:55,480
+a bit with the official documentation, and the solution with that came from Ronan Hélot,
+
+206
+00:31:56,040 --> 00:32:03,160
+who wrote an article on his blog, and that definitely changed my life to enable the tracking
+
+207
+00:32:03,160 --> 00:32:11,080
+of the e-commerce with the Tag Manager. So yes, I think that improvement around the tool can
+
+208
+00:32:11,080 --> 00:32:19,240
+is necessary, and improvement around communication documentation is also necessary, because
+
+209
+00:32:21,240 --> 00:32:27,480
+today, customers are used to have a Tag Manager, because they can handle their campaigns
+
+210
+00:32:28,040 --> 00:32:34,200
+more easily, and they expect the tracking to be done with the Tag Manager, and I see that
+
+211
+00:32:34,200 --> 00:32:42,680
+and I see that these different situations of, okay, am I going to use the regular JavaScript
+
+212
+00:32:42,680 --> 00:32:50,040
+tracker, or am I going to use the Tag Manager, or am I going to use an SDK for an application,
+
+213
+00:32:50,040 --> 00:33:06,040
+but you don't have some kind of detailed approach, or maybe I haven't seen it, but yes. Finally,
+
+214
+00:33:06,040 --> 00:33:13,000
+what I think is that the communication around the tool can be improved also.
+
+215
+00:33:13,000 --> 00:33:19,160
+Improved also. The limitations are mostly about not a mobile user. In relation to database, this
+
+216
+00:33:19,160 --> 00:33:25,560
+works for small sites, but when data grows, the query gets heavier from a tech perspective.
+
+217
+00:33:25,560 --> 00:33:30,040
+In some cases, then the need for super skilled DBA skills is needed.
+
+218
+00:33:30,040 --> 00:33:50,760
+Okay, so thanks a lot for your comments, your suggestions. I'm really glad that we had this
+
+219
+00:33:50,760 --> 00:33:59,720
+discussion all together. I think that we are going to end the talk. Just like I said, I'm going to ask
+
+220
+00:34:00,440 --> 00:34:10,040
+some of the propositions you suggested in the chat, and thanks for your attention,
+
+221
+00:34:10,040 --> 00:34:21,320
+and we talk soon. See you very soon, I hope. Bye.
+

@@ -1,0 +1,1876 @@
+1
+00:00:00,000 --> 00:00:12,520
+Yeah, okay, so thank you again for this opportunity to talk about Matomo.
+
+2
+00:00:12,520 --> 00:00:13,520
+I love Matomo.
+
+3
+00:00:13,520 --> 00:00:15,640
+I love free software in general.
+
+4
+00:00:15,640 --> 00:00:20,880
+And this talk is about hardening Matomo in terms of security.
+
+5
+00:00:20,880 --> 00:00:24,880
+And this is not really oriented to super-experienced users.
+
+6
+00:00:24,880 --> 00:00:32,240
+This is more oriented from curious persons and to beginners.
+
+7
+00:00:32,240 --> 00:00:38,600
+But there are some things that can be discussed together with experienced people.
+
+8
+00:00:38,600 --> 00:00:47,840
+And some I'm here from the Italian Linux Society that is an association in Italy, a volunteer
+
+9
+00:00:47,840 --> 00:00:52,080
+association talking about free software and open-source software.
+
+10
+00:00:52,080 --> 00:00:59,520
+And in Italy, it's very interesting this period because everything, everywhere is talking
+
+11
+00:00:59,520 --> 00:01:02,680
+about Google Analytics and Matomo.
+
+12
+00:01:02,680 --> 00:01:05,320
+And I will talk later on the reasons.
+
+13
+00:01:05,320 --> 00:01:12,120
+And I'm also an ET consultant for Wikimedia Switzerland and a volunteer sysadmin for the
+
+14
+00:01:12,120 --> 00:01:15,280
+Italian chapter, the Wikimedia Italian chapter.
+
+15
+00:01:15,280 --> 00:01:21,200
+And let's say something that I'm not an investor in Matomo.
+
+16
+00:01:21,200 --> 00:01:25,480
+I'm not someone who trains users about Matomo.
+
+17
+00:01:25,480 --> 00:01:34,960
+I'm just a volunteer spreading Matomo everywhere because I like this tool, I like the problem
+
+18
+00:01:34,960 --> 00:01:43,680
+it fixes, and I like the ownership, and I like its free software and open-source software.
+
+19
+00:01:43,680 --> 00:01:52,080
+And so I'm here from Italy because some months ago, the Italian Data Protection Authority
+
+20
+00:01:52,080 --> 00:01:59,040
+said this interesting news that Google Analytics is now banned in the whole nation.
+
+21
+00:01:59,040 --> 00:02:06,080
+And this is really interesting because it really means what they say that it's not something
+
+22
+00:02:06,080 --> 00:02:09,560
+related only to public websites.
+
+23
+00:02:09,560 --> 00:02:19,360
+It's like public administrations, like schools, or et cetera, it's about also private websites.
+
+24
+00:02:19,360 --> 00:02:28,400
+And in fact, the whole story was about that even the EP address is considered an personal
+
+25
+00:02:28,400 --> 00:02:29,400
+data.
+
+26
+00:02:29,400 --> 00:02:36,000
+And so if you have a website with Google Analytics and the user visits the website and you send
+
+27
+00:02:36,000 --> 00:02:42,680
+the EP of your visitors to Google Analytics because you have embedded this tool, it's
+
+28
+00:02:42,680 --> 00:02:50,680
+not a very good idea because Google is capable of enriching this data and connect the EP
+
+29
+00:02:50,680 --> 00:02:54,280
+to their logged-in user.
+
+30
+00:02:54,280 --> 00:03:01,640
+And so this is really a violation of the GDPR in Italy and also in other nations.
+
+31
+00:03:01,640 --> 00:03:09,120
+And I'm telling this because it's also something related to security because you know that
+
+32
+00:03:09,120 --> 00:03:16,520
+in the United States, the intelligence agencies and the government, if they want to investigate
+
+33
+00:03:16,520 --> 00:03:20,760
+on a user, they can access the data.
+
+34
+00:03:20,760 --> 00:03:26,880
+And if you are an European visitor and if you don't live in the United States, it does
+
+35
+00:03:26,880 --> 00:03:27,880
+not matter.
+
+36
+00:03:27,880 --> 00:03:35,400
+So this is why there are not enough safeguards at the moment.
+
+37
+00:03:35,400 --> 00:03:38,320
+And so a lot of people in Italy is talking about Google Analytics.
+
+38
+00:03:38,320 --> 00:03:45,720
+This is just to talk about something I have seen with my eyes in the last months.
+
+39
+00:03:45,720 --> 00:03:51,360
+Yeah, good job, Google Analytics.
+
+40
+00:03:51,360 --> 00:03:56,760
+And so let's talk about security.
+
+41
+00:03:56,760 --> 00:04:07,180
+There are two ways, one moment, in this period, everyone in Italy is avoiding to embed anything.
+
+42
+00:04:07,180 --> 00:04:13,040
+So they are also closing YouTube videos and they are adopting a lot of open source and
+
+43
+00:04:13,040 --> 00:04:16,760
+they are also migrating to LibreJS.
+
+44
+00:04:16,760 --> 00:04:22,720
+I don't know if you know the LibreJS project, but it's something that says that every single
+
+45
+00:04:22,720 --> 00:04:28,160
+JavaScript alliance on your website should be open and Libre software.
+
+46
+00:04:28,160 --> 00:04:36,120
+And so I'm not saying that everybody in the world should adopt the LibreJS, but I'm saying
+
+47
+00:04:36,120 --> 00:04:45,120
+that this is the moment to talk about this opportunity because it's very hot this period.
+
+48
+00:04:45,120 --> 00:04:50,340
+So OK, we like Matomo.
+
+49
+00:04:50,340 --> 00:04:52,240
+We deploy Matomo on our servers.
+
+50
+00:04:52,240 --> 00:04:55,360
+We deploy Matomo on our Raspberry PIs.
+
+51
+00:04:55,360 --> 00:05:04,240
+We deploy Matomo using Docker, using cheap hosting services, using, I don't know, we
+
+52
+00:05:04,240 --> 00:05:06,960
+host Matomo in a lot of ways.
+
+53
+00:05:06,960 --> 00:05:12,760
+And it's very hard for some people, also for beginners, but also for intermediate people
+
+54
+00:05:12,760 --> 00:05:19,580
+to understand that there are only two ways to make a system safe.
+
+55
+00:05:19,580 --> 00:05:26,440
+And the first way is the Kirchhoff principle that is really, really, really OK for open
+
+56
+00:05:26,440 --> 00:05:33,320
+source software because if you have an open source software, you have to think about it.
+
+57
+00:05:33,320 --> 00:05:40,680
+Everyone in the world knows how your system is designed and you have to keep your password
+
+58
+00:05:40,680 --> 00:05:47,280
+secret and only the password is the stuff that you can have to keep secret.
+
+59
+00:05:47,280 --> 00:05:54,040
+And so the other principle is have everything simple and stupid because if you don't understand
+
+60
+00:05:54,040 --> 00:06:01,520
+how you are applying security measures to your system, you will never be able to have
+
+61
+00:06:01,520 --> 00:06:05,880
+a well-designed environment and a safe environment.
+
+62
+00:06:05,880 --> 00:06:13,040
+So I just suggest these two principles, the Kirchhoff and the KISS principles.
+
+63
+00:06:13,040 --> 00:06:22,600
+Let's start saying that the easiest way to keep a system safe is to apply a lot of mitigation,
+
+64
+00:06:22,600 --> 00:06:25,760
+a lot of mitigation to reduce the attack surface.
+
+65
+00:06:25,760 --> 00:06:31,280
+Because when you have a big environment like a media wiki, like a WordPress, like a Matomo,
+
+66
+00:06:31,280 --> 00:06:37,120
+there are a lot of lines of source code that you have to trust.
+
+67
+00:06:37,120 --> 00:06:42,280
+And I'm not saying that I don't trust Matomo, I'm just saying that it's a very big project
+
+68
+00:06:42,280 --> 00:06:44,840
+and that shit happens.
+
+69
+00:06:44,840 --> 00:06:50,280
+And so maybe a contributor has done something wrong in the very early phases.
+
+70
+00:06:50,280 --> 00:06:57,300
+Maybe what I mean is that there are a lot of possibilities that one line in this number
+
+71
+00:06:57,300 --> 00:07:03,240
+of PHP lines or one line in this number of JavaScript lines, that there are a lot of
+
+72
+00:07:03,240 --> 00:07:08,700
+lines of source code, maybe there is a vulnerability.
+
+73
+00:07:08,700 --> 00:07:16,720
+And so it's not a matter of if, it's a matter of when this problem will be discovered.
+
+74
+00:07:16,720 --> 00:07:21,880
+And this is not related to Matomo, this is related to whatever project we can design
+
+75
+00:07:21,880 --> 00:07:22,880
+in our life.
+
+76
+00:07:22,880 --> 00:07:30,720
+An interesting part of Matomo is that the plugin directory involves maybe the majority
+
+77
+00:07:30,720 --> 00:07:40,160
+of the line of codes, maybe because Matomo is very well decentralized in terms of its
+
+78
+00:07:40,160 --> 00:07:41,160
+design.
+
+79
+00:07:41,160 --> 00:07:43,760
+So each component has its own plugin.
+
+80
+00:07:43,760 --> 00:07:47,120
+And I really like this fact.
+
+81
+00:07:47,120 --> 00:07:54,560
+And so the first thing that we can suggest to reduce the attack surface of your Matomo
+
+82
+00:07:54,560 --> 00:07:56,880
+is just a reply to this question.
+
+83
+00:07:56,880 --> 00:08:00,800
+So how many plugins have you in your installation?
+
+84
+00:08:00,800 --> 00:08:08,440
+And if you have your Matomo, you know that you can go to the system menu and to the plugins
+
+85
+00:08:08,440 --> 00:08:16,120
+and see the active plugins that maybe, this is not a recent screenshot, this is my platform
+
+86
+00:08:16,120 --> 00:08:23,800
+some days ago, but I think that there are a lot of plugins that maybe you are not using
+
+87
+00:08:23,800 --> 00:08:25,400
+it just from the screenshot.
+
+88
+00:08:25,400 --> 00:08:34,600
+Maybe, I don't know if I can highlight the DBStats plugin that allows to do reports for
+
+89
+00:08:34,600 --> 00:08:36,100
+super users.
+
+90
+00:08:36,100 --> 00:08:40,720
+So it's not something delivered to users, it's something for super users.
+
+91
+00:08:40,720 --> 00:08:43,680
+A lot of people, honestly, I don't use this plugin.
+
+92
+00:08:43,680 --> 00:08:49,320
+So I am not saying to disable this plugin, to disable a plugin, by the way, you can click
+
+93
+00:08:49,320 --> 00:08:54,320
+on the link on the left and to activate the other link.
+
+94
+00:08:54,320 --> 00:09:02,160
+But I'm saying, if you are not using the e-commerce plugin, the example API plugin, if you are,
+
+95
+00:09:02,160 --> 00:09:07,400
+because maybe you have just a blog, maybe you don't need this to see examples.
+
+96
+00:09:07,400 --> 00:09:11,520
+Every plugin you disable, you are reducing the surface attack of your platform.
+
+97
+00:09:11,520 --> 00:09:18,960
+And this is really, really good because whenever you want, you can enable these plugins again.
+
+98
+00:09:18,960 --> 00:09:22,640
+So it's not a problem of destroying your platform.
+
+99
+00:09:22,640 --> 00:09:25,600
+You can, whenever you want, enable it again.
+
+100
+00:09:25,600 --> 00:09:32,280
+And so also the marketplace, the marketplace is maybe a very big plugin and we have connections
+
+101
+00:09:32,280 --> 00:09:33,400
+to the web.
+
+102
+00:09:33,400 --> 00:09:41,120
+And so there are a lot of code that needs sanitization, that needs filters, et cetera.
+
+103
+00:09:41,120 --> 00:09:48,360
+And so I suggest when you install something from the marketplace, to disable the marketplace,
+
+104
+00:09:48,360 --> 00:09:49,360
+why not?
+
+105
+00:09:49,360 --> 00:09:54,480
+Also, maybe not all the people have an SMS gateway on their Matomo.
+
+106
+00:09:54,480 --> 00:09:57,800
+So I just suggest to disable the SMS gateway.
+
+107
+00:09:57,800 --> 00:10:02,960
+So I think this is just an overview of something that you can do.
+
+108
+00:10:02,960 --> 00:10:10,400
+This is a list of a lot of plugins that I have not in production and I may recommend
+
+109
+00:10:10,400 --> 00:10:14,560
+to verify that you use them as well.
+
+110
+00:10:14,560 --> 00:10:19,520
+And also, let's talk about maybe the two-factor authentication.
+
+111
+00:10:19,520 --> 00:10:26,560
+The two-factor authentication is really, I really like the way it was implemented.
+
+112
+00:10:26,560 --> 00:10:33,800
+And I recommend enabling it if you need it, but if you are not using it, feel free to
+
+113
+00:10:33,800 --> 00:10:40,480
+disable it because, by the way, you can always enable it in the future.
+
+114
+00:10:40,480 --> 00:10:48,960
+But it's not strange to listen to someone saying that the two-factor authentication
+
+115
+00:10:48,960 --> 00:10:54,800
+may be disabled in this kind of talk.
+
+116
+00:10:54,800 --> 00:11:04,160
+I mean, sometimes it's not a very, very, very good idea to enforce this kind of tools.
+
+117
+00:11:04,160 --> 00:11:12,480
+Using tools like multi-factor authentication in whatever tool may be counterproductive,
+
+118
+00:11:12,480 --> 00:11:19,600
+maybe problematic because maybe not all your users are trained to handle the two-factor
+
+119
+00:11:19,600 --> 00:11:22,920
+authentication side effects.
+
+120
+00:11:22,920 --> 00:11:27,960
+For example, they need to have a mobile phone and their mobile phone, they have an application
+
+121
+00:11:27,960 --> 00:11:33,040
+and their application must not be malware.
+
+122
+00:11:33,040 --> 00:11:42,160
+And so there are a lot of components that a two-factor authentication can worsen, a
+
+123
+00:11:42,160 --> 00:11:47,560
+lot of facts that can be not improved, can not improve.
+
+124
+00:11:47,560 --> 00:11:53,880
+And so, for example, what about a lot of social media managers that don't know anything about
+
+125
+00:11:53,880 --> 00:11:55,760
+advanced security measures?
+
+126
+00:11:55,760 --> 00:12:03,480
+And so maybe they just need to have very strong password and without risking to expose their
+
+127
+00:12:03,480 --> 00:12:08,680
+mobile phone to additional vulnerabilities.
+
+128
+00:12:08,680 --> 00:12:12,120
+So do your evaluations.
+
+129
+00:12:12,120 --> 00:12:17,240
+Maybe don't try to enforce the tool to every user in the world.
+
+130
+00:12:17,240 --> 00:12:24,640
+Just try to have rigid password politics, very strong password, et cetera, and, again,
+
+131
+00:12:24,640 --> 00:12:25,640
+do your evaluations.
+
+132
+00:12:25,640 --> 00:12:33,560
+By the way, if you want to try the best, I think that for me it's the best, the best
+
+133
+00:12:33,560 --> 00:12:41,200
+one-time password application that I use with my Matome installation, I think I have a very
+
+134
+00:12:41,200 --> 00:12:45,000
+old Matome installation, but I think that it still works.
+
+135
+00:12:45,000 --> 00:12:48,000
+Just contact me if it's not.
+
+136
+00:12:48,000 --> 00:12:51,160
+The free OTP is an application from FDroid.
+
+137
+00:12:51,160 --> 00:12:57,280
+You know, FDroid, it's a repository for Android smartphone that only contains free software,
+
+138
+00:12:57,280 --> 00:12:59,640
+and it's very, very, very verified.
+
+139
+00:12:59,640 --> 00:13:06,440
+It's open source, and this application is easy to use, and so I recommend this software.
+
+140
+00:13:06,440 --> 00:13:14,040
+And if you have a lot of users and if you're enforcing them to use free OTP, I recommend
+
+141
+00:13:14,040 --> 00:13:23,400
+in doing it only if they have an Android and if they have not customized a lot the phone,
+
+142
+00:13:23,400 --> 00:13:31,640
+if they have maybe disabled the Play Store or this kind of stuff.
+
+143
+00:13:31,640 --> 00:13:36,720
+So a lot of people ask, what if my Matome is compromised?
+
+144
+00:13:36,720 --> 00:13:38,480
+This is not a good question.
+
+145
+00:13:38,480 --> 00:13:46,960
+This is a very terrible question, but I can think a very simple way you can mitigate the
+
+146
+00:13:46,960 --> 00:13:54,400
+risk after your Matome was compromised is to enable this option to anonymize as much
+
+147
+00:13:54,400 --> 00:14:02,240
+as possible all the IP addresses of your users, because when you activate this option, you
+
+148
+00:14:02,240 --> 00:14:09,600
+know that Matome does not save this information in the database, and this is awesome.
+
+149
+00:14:09,600 --> 00:14:15,240
+Matome does not save this information, and so if your database is hacked, it does not
+
+150
+00:14:15,240 --> 00:14:22,800
+contain this information, and there is less data to be disclosed to the entire universe.
+
+151
+00:14:22,800 --> 00:14:29,080
+So this may seem stupid, but this is not stupid.
+
+152
+00:14:29,080 --> 00:14:38,080
+So we are here to understand when we are downloading Matome on our server, we want to understand
+
+153
+00:14:38,080 --> 00:14:46,160
+what should be exposed, what should be maybe writeable, what should be maybe hidden, and
+
+154
+00:14:46,160 --> 00:14:55,520
+so I recommend in don't trusting this talk, but just reading the amazing official documentation
+
+155
+00:14:55,520 --> 00:14:56,520
+of Matome.
+
+156
+00:14:56,520 --> 00:15:04,400
+I think that one hour in reading the Matome documentation can save your company, so please
+
+157
+00:15:04,400 --> 00:15:06,040
+read the documentation.
+
+158
+00:15:06,040 --> 00:15:14,920
+But well, in short, we know that when we download Matome, whatever version, we know to understand
+
+159
+00:15:14,920 --> 00:15:25,040
+each file, what should be its user, what should be its permissions, who should see this file,
+
+160
+00:15:25,040 --> 00:15:26,840
+who should execute this file.
+
+161
+00:15:26,840 --> 00:15:32,400
+This is a very important question for a system administrator.
+
+162
+00:15:32,400 --> 00:15:38,160
+But before talking about permissions, we need to understand how we are using Matome.
+
+163
+00:15:38,160 --> 00:15:48,640
+A lot of people are adopting Matome through this method, the PHP FPM method, and a lot
+
+164
+00:15:48,640 --> 00:15:57,160
+of people without knowing about it is adopting Matome with this component, the mode PHP mode.
+
+165
+00:15:57,160 --> 00:16:04,480
+So we have two methods, we have two very different methods to adopt Matome.
+
+166
+00:16:04,480 --> 00:16:12,480
+We have also Docker machines, obviously, but these are probably the most adopted situations.
+
+167
+00:16:12,480 --> 00:16:19,400
+I have done an interview about it, a survey, and they are very widely known.
+
+168
+00:16:19,400 --> 00:16:27,320
+A word about the PHP FPM method, how to understand that you are using this method.
+
+169
+00:16:27,320 --> 00:16:34,600
+You can see that you are using this method if when you do one request to your web server,
+
+170
+00:16:34,600 --> 00:16:41,120
+these ports that are not Matome, but something else, and your Matome is under another web
+
+171
+00:16:41,120 --> 00:16:46,040
+server running on your machine, but on a different port.
+
+172
+00:16:46,040 --> 00:16:51,200
+Probably if you have this situation, you are under the PHP FPM configuration.
+
+173
+00:16:51,200 --> 00:17:01,040
+Instead, if you have just a web server and nothing else, probably you are under this
+
+174
+00:17:01,040 --> 00:17:03,680
+configuration, the mode PHP.
+
+175
+00:17:03,680 --> 00:17:13,620
+The mode PHP version is an interesting and historically very, very widely adopted configuration
+
+176
+00:17:13,620 --> 00:17:18,360
+because it's very, very simple to install on your Linux server.
+
+177
+00:17:18,360 --> 00:17:26,100
+You just run IPT install, Apache, PHP, and everything works.
+
+178
+00:17:26,100 --> 00:17:34,840
+So we have a very big process under your Unix machine, under your Linux.
+
+179
+00:17:34,840 --> 00:17:38,840
+Usually the Unix user is www.data.
+
+180
+00:17:38,840 --> 00:17:48,280
+This is the name of the Unix user because you know that in Linux, every system has its
+
+181
+00:17:48,280 --> 00:17:51,360
+own user dedicated to the system.
+
+182
+00:17:51,360 --> 00:17:58,000
+So you have a web server daemon with its user, you have a mail server daemon with its user,
+
+183
+00:17:58,000 --> 00:17:59,480
+and this is how it works.
+
+184
+00:17:59,480 --> 00:18:07,800
+You have one Unix user running the whole web server, listening on a port, maybe this port
+
+185
+00:18:07,800 --> 00:18:14,240
+or maybe the HTTP port, I don't know, but there is a very big process handling whatever
+
+186
+00:18:14,240 --> 00:18:16,600
+website you have in your single server.
+
+187
+00:18:16,600 --> 00:18:25,000
+So maybe you have one, two, three applications, two domains, server by the same server, and
+
+188
+00:18:25,000 --> 00:18:31,600
+only one Unix user handling every request.
+
+189
+00:18:31,600 --> 00:18:39,160
+And this is not optimal for most situations because if you have an application, then Matomo,
+
+190
+00:18:39,160 --> 00:18:49,040
+WordPress, over the same process, over the same Unix user, what if maybe this application
+
+191
+00:18:49,040 --> 00:18:51,080
+is compromised?
+
+192
+00:18:51,080 --> 00:18:59,160
+This is problematic because maybe this problematic application can go in the parent directory
+
+193
+00:18:59,160 --> 00:19:06,520
+and go up and inspect all the applications and so can expand and write other stuff in
+
+194
+00:19:06,520 --> 00:19:07,680
+other places.
+
+195
+00:19:07,680 --> 00:19:10,840
+And so it's not usually a good idea.
+
+196
+00:19:10,840 --> 00:19:19,360
+There are a lot of very cheap hosting services offering this as default, and users usually
+
+197
+00:19:19,360 --> 00:19:21,360
+don't know about it.
+
+198
+00:19:21,360 --> 00:19:29,680
+A lot of users adopting this system do this together with this directive.
+
+199
+00:19:29,680 --> 00:19:30,680
+What is this?
+
+200
+00:19:30,680 --> 00:19:33,000
+They open-paste this directive.
+
+201
+00:19:33,000 --> 00:19:46,600
+If you have PHP running on a domain server, you can say, okay, if you visit example.org,
+
+202
+00:19:46,600 --> 00:19:49,120
+you can only visit this place.
+
+203
+00:19:49,120 --> 00:19:54,560
+If you visit example.net, you can only visit this place.
+
+204
+00:19:54,560 --> 00:19:59,480
+And the process cannot go in the other places.
+
+205
+00:19:59,480 --> 00:20:11,240
+And this is possible thanks to this directive that can be set in PHP on each virtual host.
+
+206
+00:20:11,240 --> 00:20:17,480
+But the problem is that this directive is that if you use it, for example, if you declare,
+
+207
+00:20:17,480 --> 00:20:27,480
+okay, I declare open-based here is bar, home, Matomo, a place on your system, then you have
+
+208
+00:20:27,480 --> 00:20:32,840
+another web server, another virtual host, and you say another value.
+
+209
+00:20:32,840 --> 00:20:39,800
+So you can set a different value for each virtual host to try to isolate the process.
+
+210
+00:20:39,800 --> 00:20:44,680
+The problem is that PHP is isolating the process.
+
+211
+00:20:44,680 --> 00:20:48,400
+And in fact, this is an Apache configuration.
+
+212
+00:20:48,400 --> 00:20:50,900
+This is a very frequent configuration.
+
+213
+00:20:50,900 --> 00:20:59,360
+So you have a server name, and so all the people from this domain go to this place.
+
+214
+00:20:59,360 --> 00:21:05,480
+And then you say, you declare this directive to isolate the process, and so you know that
+
+215
+00:21:05,480 --> 00:21:09,080
+you cannot go out of this place.
+
+216
+00:21:09,080 --> 00:21:15,840
+And this is not really, really safe, because if you read the documentation, it's very,
+
+217
+00:21:15,840 --> 00:21:19,360
+very clear that open-based here, it's not a security measure.
+
+218
+00:21:19,360 --> 00:21:21,280
+It's an extra safety.
+
+219
+00:21:21,280 --> 00:21:29,320
+I don't know what an extra safety is, but the universe is adopting this as a security
+
+220
+00:21:29,320 --> 00:21:32,400
+measure, and they should stop.
+
+221
+00:21:32,400 --> 00:21:39,520
+So if you see a configuration like that, stop adopting this, because it's not really safe.
+
+222
+00:21:39,520 --> 00:21:44,560
+And so let's talk about the PHP, the FPM method.
+
+223
+00:21:44,560 --> 00:21:54,480
+This is a very, very frequent alternative to the mod PHP, so this is the old configuration.
+
+224
+00:21:54,480 --> 00:21:56,920
+This is the new configuration.
+
+225
+00:21:56,920 --> 00:22:05,640
+I invented to have isolated processes that work alongside a front-end web server.
+
+226
+00:22:05,640 --> 00:22:11,360
+So you really have a front-end web server serving maybe static files, and then you have
+
+227
+00:22:11,360 --> 00:22:22,400
+an underlying web server serving dynamic files with its own Unix user, and so it can be isolated,
+
+228
+00:22:22,400 --> 00:22:27,200
+and it runs on its dedicated port.
+
+229
+00:22:27,200 --> 00:22:30,640
+So it's completely separated.
+
+230
+00:22:30,640 --> 00:22:34,600
+Now, you can say, okay, I have a Docker.
+
+231
+00:22:34,600 --> 00:22:39,640
+My configuration is different, but it's not so different, because if you have Docker,
+
+232
+00:22:39,640 --> 00:22:46,720
+so with Docker, you have a front-end web server that usually is Nginx or Apache.
+
+233
+00:22:46,720 --> 00:22:53,120
+And then you have your Docker running on the random port, but what I'm saying is that usually
+
+234
+00:22:53,120 --> 00:22:55,480
+Docker is not in this position.
+
+235
+00:22:55,480 --> 00:23:06,000
+Usually Docker is not exposed to handle every request for HTTPS and every request for HTTP.
+
+236
+00:23:06,000 --> 00:23:15,520
+So you have a front-end web server also because it simplifies let's encrypt renewal, I don't
+
+237
+00:23:15,520 --> 00:23:24,400
+know, or it allows you to have a lot of websites in your server and mix it by the Apache web
+
+238
+00:23:24,400 --> 00:23:25,560
+server.
+
+239
+00:23:25,560 --> 00:23:34,320
+What I'm saying is that this is a very frequent situation, and how to secure this situation.
+
+240
+00:23:34,320 --> 00:23:36,200
+Let's talk about how it works.
+
+241
+00:23:36,200 --> 00:23:38,540
+So you have a front-end web server.
+
+242
+00:23:38,540 --> 00:23:43,600
+You do a request, and your front-end web server handles it.
+
+243
+00:23:43,600 --> 00:23:45,000
+What is your front-end web server?
+
+244
+00:23:45,000 --> 00:23:46,000
+We saved it.
+
+245
+00:23:46,000 --> 00:23:47,920
+It's Apache or Nginx.
+
+246
+00:23:47,920 --> 00:23:52,120
+It doesn't matter.
+
+247
+00:23:52,120 --> 00:23:53,120
+One or the other.
+
+248
+00:23:53,120 --> 00:23:55,760
+That's not better in this discourse.
+
+249
+00:23:55,760 --> 00:24:05,120
+What I'm saying, if you visit example.org, maybe example.org, your request goes directly
+
+250
+00:24:05,120 --> 00:24:11,260
+to the correct PHP, FPM web server.
+
+251
+00:24:11,260 --> 00:24:18,800
+Maybe if you want, so if you want Amatomo, you visit this back-end web server and the
+
+252
+00:24:18,800 --> 00:24:25,040
+reply goes to the user, and if you want your blog, maybe you have a blog, your request
+
+253
+00:24:25,040 --> 00:24:30,320
+goes to the other web server.
+
+254
+00:24:30,320 --> 00:24:38,480
+So every site has its dedicated port, and the user usually doesn't connect directly
+
+255
+00:24:38,480 --> 00:24:41,480
+to this port.
+
+256
+00:24:41,480 --> 00:24:45,320
+This is the situation.
+
+257
+00:24:45,320 --> 00:24:52,480
+Every application, of course, has its dedicated file system path name, and the interesting
+
+258
+00:24:52,480 --> 00:25:02,120
+part is that we are not in a situation where we have a big user with access to all these
+
+259
+00:25:02,120 --> 00:25:09,880
+file systems, but instead we have a dedicated user with access to that specific file system
+
+260
+00:25:09,880 --> 00:25:10,880
+place.
+
+261
+00:25:10,880 --> 00:25:16,480
+So we have another user with access to the other file system place, et cetera, et cetera.
+
+262
+00:25:16,480 --> 00:25:21,400
+And this allows a lot of isolation.
+
+263
+00:25:21,400 --> 00:25:23,760
+If you know how to do it.
+
+264
+00:25:23,760 --> 00:25:31,740
+And that's also, you still have a Unix user, and you still need to know that the user probably
+
+265
+00:25:31,740 --> 00:25:38,560
+needed to access this file system, but just for static files, for example, and then you
+
+266
+00:25:38,560 --> 00:25:46,340
+have another Unix user that must have access to this file system for the dynamic files.
+
+267
+00:25:46,340 --> 00:25:54,960
+So PHP files are executed by this user, and static file are provided by the www data user.
+
+268
+00:25:54,960 --> 00:25:57,000
+So this is how it works.
+
+269
+00:25:57,000 --> 00:26:02,280
+And this is a basic example on how to implement everything on your web server.
+
+270
+00:26:02,280 --> 00:26:08,360
+Maybe you have the front-end web server Apache configured in this way to say that there is
+
+271
+00:26:08,360 --> 00:26:12,120
+a document root somewhere.
+
+272
+00:26:12,120 --> 00:26:19,320
+And then I have not put it there, but you can imagine that in the next slides, we have
+
+273
+00:26:19,320 --> 00:26:26,240
+the proxy, proxying all the requests on the underlying web server.
+
+274
+00:26:26,240 --> 00:26:34,960
+And this is the most important part of our talk, how to have a PHP FPM safe, secure,
+
+275
+00:26:34,960 --> 00:26:35,960
+and hardened.
+
+276
+00:26:35,960 --> 00:26:42,960
+First of all, you have to create a dedicated user for your purpose, and be sure that only
+
+277
+00:26:42,960 --> 00:26:50,760
+that user can access critical places in that file system of your application.
+
+278
+00:26:50,760 --> 00:27:00,000
+So you can declare a PHP directive to say that the uploaded files must be in place,
+
+279
+00:27:00,000 --> 00:27:07,760
+and that only this user can be assigned to this place to access the temporary resources,
+
+280
+00:27:07,760 --> 00:27:10,200
+or I don't know.
+
+281
+00:27:10,200 --> 00:27:18,760
+But if you additionally want to set other strange directive to harden even more, why
+
+282
+00:27:18,760 --> 00:27:19,760
+not?
+
+283
+00:27:19,760 --> 00:27:24,760
+This is a good strategy to use open base there in a right way.
+
+284
+00:27:24,760 --> 00:27:33,600
+So using to give something more, so to have everything under a cage, an additional cage,
+
+285
+00:27:33,600 --> 00:27:36,960
+but this is not the only cage of your system.
+
+286
+00:27:36,960 --> 00:27:43,280
+This is the cage of your system, a dedicated user, and a dedicated file system path name
+
+287
+00:27:43,280 --> 00:27:45,540
+with correct permissions.
+
+288
+00:27:45,540 --> 00:27:54,720
+So for example, on your file system, you have your Matomo installed in this position, deployed
+
+289
+00:27:54,720 --> 00:27:59,760
+in this position, and you have the temporary directive that is this one.
+
+290
+00:27:59,760 --> 00:28:10,200
+And its permissions are its user, it's the one in your FPM web server, and its group,
+
+291
+00:28:10,200 --> 00:28:19,400
+it's the one assigned to the same process, and look about this permission field.
+
+292
+00:28:19,400 --> 00:28:27,280
+If you know how to read this field, it means that let's clear everything.
+
+293
+00:28:27,280 --> 00:28:35,080
+What I'm highlighting here is that this Apache Matomo is the user who can read, write, and
+
+294
+00:28:35,080 --> 00:28:37,240
+execute this in this file.
+
+295
+00:28:37,240 --> 00:28:42,040
+So execute in a directory context means that you can access this file.
+
+296
+00:28:42,040 --> 00:28:50,520
+And the user group as well can do the same things, but all the others cannot.
+
+297
+00:28:50,520 --> 00:28:57,840
+So you have hardened your installation, removing privileges on critical path names.
+
+298
+00:28:57,840 --> 00:28:59,720
+This is very, very important.
+
+299
+00:28:59,720 --> 00:29:09,640
+And so again, use your configuration to dedicate a user and have a path name and declare your
+
+300
+00:29:09,640 --> 00:29:17,960
+configurations in order to instruct the process to use your custom path names instead of just
+
+301
+00:29:17,960 --> 00:29:23,480
+TMP, that it's global.
+
+302
+00:29:23,480 --> 00:29:28,400
+And so this is simple but effective.
+
+303
+00:29:28,400 --> 00:29:38,240
+So if you are curious about how to put everything in a very, very robust cage, I suggest to
+
+304
+00:29:38,240 --> 00:29:44,320
+just assign everything to the root user and to the root group.
+
+305
+00:29:44,320 --> 00:29:46,920
+This is not scaring.
+
+306
+00:29:46,920 --> 00:29:53,360
+Sometimes we hear, oh my god, the root user should not execute this file.
+
+307
+00:29:53,360 --> 00:29:54,360
+Don't be confused.
+
+308
+00:29:54,360 --> 00:30:05,640
+If a file is owned by the root user, it means that only the root user can read, write, and
+
+309
+00:30:05,640 --> 00:30:06,640
+execute.
+
+310
+00:30:06,640 --> 00:30:14,960
+So if this file is owned by the root group, so you know the user group, it means that
+
+311
+00:30:14,960 --> 00:30:18,680
+only the group can read this file.
+
+312
+00:30:18,680 --> 00:30:25,680
+And all the others, well, all the others for this markdown file can read this file.
+
+313
+00:30:25,680 --> 00:30:26,680
+Why not?
+
+314
+00:30:26,680 --> 00:30:29,480
+But cannot write in any way.
+
+315
+00:30:29,480 --> 00:30:36,200
+Also an interesting part, take for example, the Matomo.js, the Matomo.js file needs write
+
+316
+00:30:36,200 --> 00:30:37,260
+access.
+
+317
+00:30:37,260 --> 00:30:43,800
+So you can assign it to the dedicated user and to the dedicated group and saying that
+
+318
+00:30:43,800 --> 00:30:52,560
+the dedicated user can read and write, but every other user in your system cannot touch
+
+319
+00:30:52,560 --> 00:30:54,080
+that file.
+
+320
+00:30:54,080 --> 00:30:55,080
+And this is very important.
+
+321
+00:30:55,080 --> 00:30:58,200
+This file is not secret.
+
+322
+00:30:58,200 --> 00:31:03,120
+There is no need to remove the read access, the last read access.
+
+323
+00:31:03,120 --> 00:31:12,960
+So it's evaluate, always evaluate the last column that it's the most important one declaring
+
+324
+00:31:12,960 --> 00:31:17,680
+what other users in your system can do with this file.
+
+325
+00:31:17,680 --> 00:31:26,400
+And so for example, I have removed the, you see that the temporary directive has nothing
+
+326
+00:31:26,400 --> 00:31:33,080
+in the, I have not highlighted it correctly, but has nothing in the last permissions.
+
+327
+00:31:33,080 --> 00:31:39,520
+So the temp directory can only be wrote by the Apache user and to the Apache group.
+
+328
+00:31:39,520 --> 00:31:47,320
+So this is what I'm saying, evaluate your application, understand what need read access.
+
+329
+00:31:47,320 --> 00:31:53,420
+So probably everything need read access, you know, what need write access.
+
+330
+00:31:53,420 --> 00:31:58,360
+So for this file, you assign the dedicated user.
+
+331
+00:31:58,360 --> 00:32:02,680
+What needed to be hided to everybody but your users.
+
+332
+00:32:02,680 --> 00:32:12,080
+And so you do the same, but without the other field, without allowing other users to read,
+
+333
+00:32:12,080 --> 00:32:15,960
+write, and execute.
+
+334
+00:32:15,960 --> 00:32:16,960
+Okay.
+
+335
+00:32:16,960 --> 00:32:23,440
+I don't know what I'm showing here.
+
+336
+00:32:23,440 --> 00:32:24,440
+Okay.
+
+337
+00:32:24,440 --> 00:32:30,960
+What I want to say is that this is not easy.
+
+338
+00:32:30,960 --> 00:32:31,960
+This is not easy.
+
+339
+00:32:31,960 --> 00:32:38,500
+You have to read the documentation, you have to understand that the config directory may
+
+340
+00:32:38,500 --> 00:32:45,600
+be public, but the files inside the config directory have to be private.
+
+341
+00:32:45,600 --> 00:32:53,320
+So inspect your application, read the official documentation, be, use the change modality
+
+342
+00:32:53,320 --> 00:32:59,560
+for the files and use the change owner for the files wisely.
+
+343
+00:32:59,560 --> 00:33:05,200
+So this is really how your application can be hardened in a great way.
+
+344
+00:33:05,200 --> 00:33:13,440
+Because the nice part about having some files on it by root is that it's like whatever other
+
+345
+00:33:13,440 --> 00:33:20,400
+service in your Linux system is designed, try to access other parts of your system.
+
+346
+00:33:20,400 --> 00:33:27,120
+If any other process, for example, if you install, I don't know, I really don't know,
+
+347
+00:33:27,120 --> 00:33:34,320
+Apache, for example, Apache, every file, the system file of Apache is owned by root.
+
+348
+00:33:34,320 --> 00:33:39,280
+And only the system, the super administrator can edit this file.
+
+349
+00:33:39,280 --> 00:33:41,400
+And this is the same for your Matomo installation.
+
+350
+00:33:41,400 --> 00:33:49,560
+So you should have a script to harden your installation when you want is freezed.
+
+351
+00:33:49,560 --> 00:34:01,160
+So you want is like in a not upgradable state and a script allowing to put everything under
+
+352
+00:34:01,160 --> 00:34:06,440
+the user of your web server to be able to upgrade your system.
+
+353
+00:34:06,440 --> 00:34:15,100
+So you should have two configurations, two scripts and one for everyday usage for production.
+
+354
+00:34:15,100 --> 00:34:19,280
+So you run the script and set your permissions in this way.
+
+355
+00:34:19,280 --> 00:34:25,920
+And another script that put your permissions like in whatever cheap hosting environment.
+
+356
+00:34:25,920 --> 00:34:31,720
+And so with every file assigned to the web server users.
+
+357
+00:34:31,720 --> 00:34:38,240
+But this is problematic because having every file under the same user means that if there
+
+358
+00:34:38,240 --> 00:34:45,920
+is a security issue in your application, this user can write in every file of your environment.
+
+359
+00:34:45,920 --> 00:34:49,160
+And this is not the desired situation.
+
+360
+00:34:49,160 --> 00:34:59,040
+So it can be a stupid, but trust me, if take care about your applications, Matomo included,
+
+361
+00:34:59,040 --> 00:35:12,760
+WordPress included, and if you want to have everything in a good state, I recommend having
+
+362
+00:35:12,760 --> 00:35:21,440
+a kind of hardened production configuration and upgrade the configuration.
+
+363
+00:35:21,440 --> 00:35:33,040
+So I'm ready for talking about other stuff, but I just recommend subscribing to CVE newsletters
+
+364
+00:35:33,040 --> 00:35:41,400
+because it's very important to be the first in the universe when something really bad
+
+365
+00:35:41,400 --> 00:35:44,760
+happens in the code base.
+
+366
+00:35:44,760 --> 00:35:51,400
+Maybe there is a problem affecting people without authentication and it does not require
+
+367
+00:35:51,400 --> 00:35:57,560
+many complexity to trigger the issue.
+
+368
+00:35:57,560 --> 00:36:01,240
+So I recommend to subscribe to CVE newsletters.
+
+369
+00:36:01,240 --> 00:36:09,320
+I say this because a lot of people don't do this and this is definitely a problem.
+
+370
+00:36:09,320 --> 00:36:16,200
+Another stupid tip is keep your platform up to date, but if you have the possibility,
+
+371
+00:36:16,200 --> 00:36:24,280
+use the LTS version of Matomo so you have not to update your software for whatever new
+
+372
+00:36:24,280 --> 00:36:26,680
+feature is introduced.
+
+373
+00:36:26,680 --> 00:36:32,280
+Maybe because you don't have time to test everything, but you want an environment in
+
+374
+00:36:32,280 --> 00:36:38,360
+a safe state where only security patches are applied regularly.
+
+375
+00:36:38,360 --> 00:36:41,680
+And please keep your users trained.
+
+376
+00:36:41,680 --> 00:36:49,320
+So it's not important to enforce two-factor authentication on your whole organic base
+
+377
+00:36:49,320 --> 00:36:56,000
+because if you don't know how to use it, you will just make bigger mistakes.
+
+378
+00:36:56,000 --> 00:36:58,960
+So train your users.
+
+379
+00:36:58,960 --> 00:37:08,480
+And please keep your devices without malware because the majority of the vulnerabilities
+
+380
+00:37:08,480 --> 00:37:13,080
+nowadays don't come from Matomo itself.
+
+381
+00:37:13,080 --> 00:37:17,280
+The majority of vulnerabilities come from you.
+
+382
+00:37:17,280 --> 00:37:23,640
+So you are you, the person who has maybe security issues on your mobile phone or security issues
+
+383
+00:37:23,640 --> 00:37:27,600
+on your Wi-Fi area, security issues on your laptop.
+
+384
+00:37:27,600 --> 00:37:33,520
+Maybe you installed a video game from a random website and now your computer is totally compromised.
+
+385
+00:37:33,520 --> 00:37:40,520
+So I'm not saying that it's really, really huge, useful to have a very, very hard-ended
+
+386
+00:37:40,520 --> 00:37:53,040
+installation if the administrators have not devices with a controlled state.
+
+387
+00:37:53,040 --> 00:37:57,760
+So try to use as much as possible open-source software.
+
+388
+00:37:57,760 --> 00:38:06,200
+If you have Android user systems, buy an Android dedicated for work, remove the Play Store,
+
+389
+00:38:06,200 --> 00:38:11,760
+remove everything, install Android, remove whatever proprietary app.
+
+390
+00:38:11,760 --> 00:38:18,480
+And then you can be safe to use stuff like the OTP applications.
+
+391
+00:38:18,480 --> 00:38:22,360
+And so use as much possible free software.
+
+392
+00:38:22,360 --> 00:38:33,520
+I really have to say, please don't think that you will be not owned because this is the
+
+393
+00:38:33,520 --> 00:38:35,600
+most problematic assumption.
+
+394
+00:38:35,600 --> 00:38:43,400
+So please assume that you will be owned in the future and invest in reading documentation.
+
+395
+00:38:43,400 --> 00:38:45,960
+Invest in exploring your tool.
+
+396
+00:38:45,960 --> 00:38:57,240
+Invest in trying to hack your system, try to use not-privileged users.
+
+397
+00:38:57,240 --> 00:39:06,640
+Try to create another Unix user on your system with low privileges and then try to do a privilege
+
+398
+00:39:06,640 --> 00:39:13,760
+escalation trying to inspect your web servers and your applications.
+
+399
+00:39:13,760 --> 00:39:23,640
+So these are just bad words to remember to try to be the one that can enter in your system
+
+400
+00:39:23,640 --> 00:39:30,680
+before someone else do this for you.
+
+401
+00:39:30,680 --> 00:39:32,240
+This is not good.
+
+402
+00:39:32,240 --> 00:39:33,240
+So thank you so much.
+
+403
+00:39:33,240 --> 00:39:36,120
+My presentation is under the Creative Commons attribution.
+
+404
+00:39:36,120 --> 00:39:37,120
+Share your like.
+
+405
+00:39:37,120 --> 00:39:41,480
+You can share it for whenever you want and for whatever purpose.
+
+406
+00:39:41,480 --> 00:39:42,480
+You can sell it.
+
+407
+00:39:42,480 --> 00:39:44,600
+You can do whatever you want.
+
+408
+00:39:44,600 --> 00:39:49,320
+Just please put a credit to at least my nickname.
+
+409
+00:39:49,320 --> 00:39:53,400
+So saying that this presentation is by Valerio.
+
+410
+00:39:53,400 --> 00:39:56,560
+Thank you so much for everything.
+
+411
+00:39:56,560 --> 00:40:06,000
+Can I thank again the Matomo organizers because Matomo Camp is realized with 100% open-source
+
+412
+00:40:06,000 --> 00:40:07,480
+software and deeper software.
+
+413
+00:40:07,480 --> 00:40:14,400
+And this is really amazing because, again, Matomo is open-source, Matomo Camp is open-source,
+
+414
+00:40:14,400 --> 00:40:21,360
+and this is really a really, really, really good way to engage technical communities that
+
+415
+00:40:21,360 --> 00:40:25,120
+care about the privacy and care about software freedom.
+
+416
+00:40:25,120 --> 00:40:26,920
+So thank you again.
+
+417
+00:40:26,920 --> 00:40:34,440
+Whatever question can be delivered to the Matrix chat, and I hope that we had a good
+
+418
+00:40:34,440 --> 00:40:35,440
+time together.
+
+419
+00:40:35,440 --> 00:40:41,400
+Valerio, thank you very much for your insightful talk.
+
+420
+00:40:41,400 --> 00:40:46,160
+And you highlighted a lot of important things to consider.
+
+421
+00:40:46,160 --> 00:40:52,400
+And this is also one of my favorite topics because it is mostly treated very poorly.
+
+422
+00:40:52,400 --> 00:40:57,360
+And even it is a topic which is neglected in many companies.
+
+423
+00:40:57,360 --> 00:41:00,320
+And also, you compressed the topic very well.
+
+424
+00:41:00,320 --> 00:41:03,960
+You talked about many, many details.
+
+425
+00:41:03,960 --> 00:41:10,480
+And also, there is so much more, but I think you mentioned very important things.
+
+426
+00:41:10,480 --> 00:41:17,000
+Perhaps we have some questions here that, if not right now, there are some questions
+
+427
+00:41:17,000 --> 00:41:23,760
+from my side also because you are a security expert.
+
+428
+00:41:23,760 --> 00:41:31,040
+So perhaps you can recommend the audience something like, is there something like automated
+
+429
+00:41:31,040 --> 00:41:32,040
+security audits?
+
+430
+00:41:32,040 --> 00:41:39,120
+Is there a software for that to check the software automatically for CVEs or something
+
+431
+00:41:39,120 --> 00:41:40,120
+like that?
+
+432
+00:41:40,120 --> 00:41:41,120
+Okay.
+
+433
+00:41:41,120 --> 00:41:49,400
+Honestly, I know the part related to WordPress more than the part related to Matomo.
+
+434
+00:41:49,400 --> 00:41:50,880
+There are a lot of tools.
+
+435
+00:41:50,880 --> 00:41:54,040
+I think you can search and there are a lot of tools.
+
+436
+00:41:54,040 --> 00:42:03,480
+I actually cannot recommend any of them because I recommend in being proactive and keeping
+
+437
+00:42:03,480 --> 00:42:10,880
+the platform up to date as soon as possible and without receiving any of these emails
+
+438
+00:42:10,880 --> 00:42:12,320
+or notifications.
+
+439
+00:42:12,320 --> 00:42:16,200
+And this is probably the best way to keep your system up to date.
+
+440
+00:42:16,200 --> 00:42:23,040
+Because usually, normal users, when they receive this kind of notification, it's too late because
+
+441
+00:42:23,040 --> 00:42:31,120
+maybe you are in Italy or you are from, I don't know, and we are decentralized against
+
+442
+00:42:31,120 --> 00:42:37,320
+the Matomo developers who can quickly handle the situation and release a security patch
+
+443
+00:42:37,320 --> 00:42:41,880
+and offer you an update quickly on your platform.
+
+444
+00:42:41,880 --> 00:42:48,240
+So I recommend you just update your platform and please feel free to share some automated
+
+445
+00:42:48,240 --> 00:42:56,360
+tools to inspect maybe not updated platform and this kind of stuff.
+
+446
+00:42:56,360 --> 00:42:57,920
+Thank you for the question.
+
+447
+00:42:57,920 --> 00:43:02,840
+I'm very curious and thank you for sharing to me if somebody knows.
+
+448
+00:43:02,840 --> 00:43:03,840
+Of course.
+
+449
+00:43:03,840 --> 00:43:08,680
+And as a quick comment on that, it's also for the audience a very important thing.
+
+450
+00:43:08,680 --> 00:43:15,840
+As soon as an update is out, we mark it if it has a security concern, we mark it with
+
+451
+00:43:15,840 --> 00:43:19,200
+a minor, major or critical attack.
+
+452
+00:43:19,200 --> 00:43:26,800
+So you know how important it is to make this update.
+
+453
+00:43:26,800 --> 00:43:28,240
+That's wonderful.
+
+454
+00:43:28,240 --> 00:43:33,360
+And are there more questions?
+
+455
+00:43:33,360 --> 00:43:38,360
+Because I'm really curious.
+
+456
+00:43:38,360 --> 00:43:40,360
+Do we have other questions right now?
+
+457
+00:43:40,360 --> 00:43:41,360
+Okay.
+
+458
+00:43:41,360 --> 00:43:48,520
+If not right now, then the chat will stay open and perhaps Valerio has some minutes
+
+459
+00:43:48,520 --> 00:43:52,560
+left to answer more questions if there are any.
+
+460
+00:43:52,560 --> 00:43:56,760
+But thank you very much for that very, very important topic.
+
+461
+00:43:56,760 --> 00:44:03,480
+And also this talk will be online as a video on the video platform.
+
+462
+00:44:03,480 --> 00:44:09,880
+And yeah, Valerio, thank you again a lot and greetings to Italy.
+
+463
+00:44:09,880 --> 00:44:11,920
+Thank you so much.
+
+464
+00:44:11,920 --> 00:44:16,640
+And again, go Matomo, go, thank you for doing that.
+
+465
+00:44:16,640 --> 00:44:17,640
+Thank you.
+
+466
+00:44:17,640 --> 00:44:18,640
+Goodbye.
+
+467
+00:44:18,640 --> 00:44:19,640
+Bye bye.
+
+468
+00:44:19,640 --> 00:44:20,640
+Ciao, pane pizza Matomo.
+
+469
+00:44:20,640 --> 00:44:40,840
+Ciao.
+

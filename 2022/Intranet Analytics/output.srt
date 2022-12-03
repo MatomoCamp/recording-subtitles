@@ -1,0 +1,1628 @@
+1
+00:00:00,000 --> 00:00:13,120
+Hello everyone, thank you for joining another session of MatomoCamp.
+
+2
+00:00:13,120 --> 00:00:21,320
+Today we will learn more on how to get started with intranet analytics in Matomo.
+
+3
+00:00:21,320 --> 00:00:28,360
+The host for this session is Marcus, who has been working with web since 1998 and with
+
+4
+00:00:28,360 --> 00:00:36,120
+Matomo for the last 12 years. His experience from a public sector includes roles such as
+
+5
+00:00:36,120 --> 00:00:44,320
+lead analyst, senior advisor in GDPR projects and product owner for Matomo and other analytics
+
+6
+00:00:44,320 --> 00:00:53,240
+products. This session is recorded but Marcus will be available in the chat room and you
+
+7
+00:00:53,240 --> 00:00:58,960
+can drop any questions there.
+
+8
+00:00:58,960 --> 00:01:07,400
+Hi, let's begin the session on how to get started with intranet analytics in Matomo.
+
+9
+00:01:07,400 --> 00:01:12,960
+This is the context, the things I will be talking about in this session. I think some
+
+10
+00:01:12,960 --> 00:01:19,040
+of you would agree with me that web analytics is a common bad conscience. In my experience
+
+11
+00:01:19,040 --> 00:01:25,520
+intranet analytics is even worse. I will be dealing with a couple of questions that is
+
+12
+00:01:25,520 --> 00:01:32,320
+good to know to do intranet analytics right. For instance, how to regard consent as the
+
+13
+00:01:32,320 --> 00:01:40,000
+legal basis to process employees' personal data. Why is Matomo a good choice for intranet
+
+14
+00:01:40,000 --> 00:01:46,280
+analytics? And then I will guide you through the process of analytics, giving suggestions
+
+15
+00:01:46,280 --> 00:01:52,600
+on how to make good use of Matomo. I will begin with introducing myself. I have been
+
+16
+00:01:52,600 --> 00:01:58,640
+working in the industry since 1998 in different roles. I have been a consultant a couple of
+
+17
+00:01:58,640 --> 00:02:05,000
+times and jumped the fence to work on the customer end as well in the Swedish public
+
+18
+00:02:05,000 --> 00:02:11,000
+sector mostly. I contributed to get rid of Google analytics in favor of Matomo or back
+
+19
+00:02:11,000 --> 00:02:18,320
+then peak before it was cool. In 2015, at Sweden's largest organization in the public
+
+20
+00:02:18,320 --> 00:02:24,840
+sector, I have been responsible for search analytics, product owner for Matomo and performing
+
+21
+00:02:24,840 --> 00:02:31,360
+a couple of advisor assignments such as implementing GDPR compliance and also curiously enough
+
+22
+00:02:31,360 --> 00:02:36,960
+artificial intelligence in life science. In my spare time, I have been writing a couple
+
+23
+00:02:36,960 --> 00:02:41,680
+of books on web strategy and web analytics. The latter is used as literature at some of
+
+24
+00:02:41,680 --> 00:02:47,640
+Sweden's universities. Enough about me. Let's talk intranets. So what is the definition
+
+25
+00:02:47,640 --> 00:02:53,080
+of an intranet in contrast to an extranet or a public website on the internet? Yeah,
+
+26
+00:02:53,080 --> 00:02:58,920
+this might be both quite tricky and simple, right? Some people include everything connected
+
+27
+00:02:58,920 --> 00:03:04,880
+in a form or another in the term internet. Some don't. I am one of those inclusive people.
+
+28
+00:03:04,880 --> 00:03:11,680
+In my world, the internet includes internet, extranets and etc. But when using internet
+
+29
+00:03:11,680 --> 00:03:18,880
+as a term, I think its main attribute is that it's an isolated network. Its users are the
+
+30
+00:03:18,880 --> 00:03:23,920
+organization's own employees. And ideally, the internet facilitates the work to be done
+
+31
+00:03:23,920 --> 00:03:29,600
+and making administrative tasks such as leave applications less of a burden compared to
+
+32
+00:03:29,600 --> 00:03:35,680
+its paper equivalent. Regarding an internet's attribute as being inaccessible to non-employees,
+
+33
+00:03:36,240 --> 00:03:42,720
+in Sweden, we also have a movement towards open internet when it comes to public sector
+
+34
+00:03:42,720 --> 00:03:48,240
+organizations. Making the definitions less logical sometimes and legal compliance for
+
+35
+00:03:48,240 --> 00:03:54,960
+analytics is not that straightforward. So what makes Matomo especially good at internet analytics?
+
+36
+00:03:54,960 --> 00:04:00,800
+I possibly could ramble over the feats of using Matomo for way too long. But that shows two main
+
+37
+00:04:00,800 --> 00:04:08,080
+points. First, to keep internal matters internal. With Matomo, you could actually gather personal
+
+38
+00:04:08,080 --> 00:04:12,640
+data that would be breach of contract with some of the other popular products on the market.
+
+39
+00:04:13,280 --> 00:04:19,040
+My second point is the more legal aspects of compliance, as in not sharing data with
+
+40
+00:04:19,040 --> 00:04:27,120
+unnecessary outsiders, especially those with ties to third country legislation, in essence,
+
+41
+00:04:27,120 --> 00:04:33,200
+United States. If you do, then you have exposed the data to actors you and your employees cannot
+
+42
+00:04:33,200 --> 00:04:39,200
+hold accountable on what happens with that data. It's irresponsible. Also, to gather
+
+43
+00:04:42,400 --> 00:04:47,360
+data on internet use has its own unique legal problems, as I will address shortly.
+
+44
+00:04:47,360 --> 00:04:53,760
+Thirdly, for a smaller organization, it's not that hard to get going. Even without an IT department,
+
+45
+00:04:53,760 --> 00:04:58,880
+you could make use of a web host, since many of them have one-click installers for Matomo.
+
+46
+00:04:59,920 --> 00:05:06,560
+Now I am going to dive into the details. There might be differences in terms of configuration
+
+47
+00:05:06,560 --> 00:05:12,000
+between Matomo internet tracking and Matomo for a public website. Technically, if you have
+
+48
+00:05:12,000 --> 00:05:16,480
+another Matomo setup for your internet, you don't really have to worry about the same type of
+
+49
+00:05:16,480 --> 00:05:22,320
+things as with a Matomo reachable from the public internet. The internet is not exposed in the same
+
+50
+00:05:22,320 --> 00:05:28,400
+way. On an internet property in Matomo, you get a more even load, for instance, since the things
+
+51
+00:05:28,400 --> 00:05:35,120
+being tracked is behind a firewall, it is not exposed to refer, spam, or denial of service attacks.
+
+52
+00:05:36,000 --> 00:05:42,560
+Perhaps the most important point is to own your data, being able to use and reuse the data when
+
+53
+00:05:42,560 --> 00:05:50,800
+you see fit. A Swedish term that might be lost in translation is rådighet. It translates to
+
+54
+00:05:50,800 --> 00:05:57,280
+resourcefulness, which is not bad, but it lacks, in my opinion, the comforting and trustworthiness
+
+55
+00:05:57,280 --> 00:06:04,160
+in its Swedish counterpart. Matomo as a product gives you control and sovereignty if you want to.
+
+56
+00:06:04,880 --> 00:06:10,160
+By the way, I am not advocating solely for self-hosting Matomo, but when you don't have
+
+57
+00:06:10,160 --> 00:06:16,160
+to make an effort to look at the processor and the eventual sub-processor of the data in question.
+
+58
+00:06:16,800 --> 00:06:22,880
+What are the rules in terms of privacy when it comes to an internet? The e-privacy regulation in
+
+59
+00:06:23,680 --> 00:06:30,640
+the European Union is not automatically applicable for internets, but if the user is not an employee,
+
+60
+00:06:30,640 --> 00:06:36,240
+then yes, because sometimes the user of an internet is a journalist, a member of the public,
+
+61
+00:06:36,240 --> 00:06:42,080
+or a non-employee. If you have never heard of European e-privacy regulation, you might have
+
+62
+00:06:42,080 --> 00:06:49,120
+heard of something on the lines of the cookie law. It was introduced in the early 2000s and recently
+
+63
+00:06:49,120 --> 00:06:57,200
+updated. In an EU perspective, all of us got the GDPR decade and the ifs, hows and whens of processing
+
+64
+00:06:57,200 --> 00:07:03,440
+personal data, and all form of handling of personal data is considered processing, such as the
+
+65
+00:07:03,440 --> 00:07:10,320
+collection, processing, sharing, etc. The only way we can process personal data is if we have at
+
+66
+00:07:10,320 --> 00:07:19,360
+least one of six of the conditions that apply. That is A to F in this slide. All other cases are not
+
+67
+00:07:19,360 --> 00:07:26,800
+lawful. I worked as a web analytics specialist in Sweden's largest region when we had the GDPR
+
+68
+00:07:26,800 --> 00:07:33,520
+project, and it was really obvious during talks with all our lawyers that consent is not great on
+
+69
+00:07:33,520 --> 00:07:39,680
+a public website, and consent is even less applicable on an internet, since the relation
+
+70
+00:07:39,680 --> 00:07:46,480
+between the employee and employer is not living up to the voluntary part of the consent requirements
+
+71
+00:07:46,480 --> 00:07:54,480
+stated in the GDPR. Consent is not lawful if it's not freely given, as in there is an option to turn
+
+72
+00:07:54,480 --> 00:08:01,680
+it down. So that dictates if we can ask for consent on an internet, and the other law, the e-privacy
+
+73
+00:08:01,680 --> 00:08:08,720
+regulation, makes asking for cookies look like a consent that might itself be illegal on the GDPR,
+
+74
+00:08:08,720 --> 00:08:16,720
+if on an internet, or employees at least. The way to process employees' data, such as IP addresses,
+
+75
+00:08:16,720 --> 00:08:22,960
+for an internet analytics, could possibly be lawful through B, the contract between the employees
+
+76
+00:08:22,960 --> 00:08:29,200
+and the employer. This is rather difficult, but worth having in mind when an organization makes
+
+77
+00:08:29,200 --> 00:08:35,360
+up their mind on the Matoma implementation for their internet. The easy way out is to use log
+
+78
+00:08:35,360 --> 00:08:41,760
+analytics, to at least not having to consider e-privacy. But data in logs still is regulated
+
+79
+00:08:41,760 --> 00:08:48,320
+by GDPR, and the default is that any personal data only belongs to the data subject, the person,
+
+80
+00:08:48,320 --> 00:08:54,160
+in question. So how to set up an internet analytics with Matomo by yourself, in order to have a
+
+81
+00:08:54,160 --> 00:09:00,960
+sandbox to test Matomo for your internet. I am myself playing with Matomo at a local webhost
+
+82
+00:09:00,960 --> 00:09:08,240
+when stakes are low. Think of it as playing in a sandbox. For anyone interested in a one-click
+
+83
+00:09:08,240 --> 00:09:14,720
+installer on Matomo, when having a webhost, the package is present in Softaculous, for instance.
+
+84
+00:09:14,720 --> 00:09:21,520
+This is of course not suitable for everyone. Well, the time when major design decisions were made
+
+85
+00:09:21,520 --> 00:09:27,680
+based on subjective measures, like someone's personal taste, ought to be behind us. Now you
+
+86
+00:09:27,680 --> 00:09:33,680
+can and should evaluate almost everything based on data. Previously performed tests and the
+
+87
+00:09:33,680 --> 00:09:38,960
+insights gained from working with analytics could be readily available to internet teams. Instead of
+
+88
+00:09:38,960 --> 00:09:45,120
+attending pointless meetings about what shade of blue you like, you can evaluate alternatives based
+
+89
+00:09:45,120 --> 00:09:51,520
+on real user of your internet. Users, through their clicks, provide signals on what works,
+
+90
+00:09:51,520 --> 00:09:57,200
+how to find things, and which routes they take. This talk is about how to get started with the
+
+91
+00:09:57,200 --> 00:10:03,840
+analytics in an initial review of an internet. Often no one knows the usefulness of most of the
+
+92
+00:10:03,840 --> 00:10:09,280
+internet content, and there is little effort toward measuring the impact of the internet
+
+93
+00:10:09,280 --> 00:10:16,720
+and the performance of the business, at least beyond noting the number of users. For many teams,
+
+94
+00:10:16,720 --> 00:10:22,400
+the reason is they do not have a training in basic analytics, and which all the statistics
+
+95
+00:10:22,400 --> 00:10:29,280
+to make use of. I hope you want to start evaluating your internet in a structured way and set tangible
+
+96
+00:10:29,280 --> 00:10:34,960
+business goals for measuring what success looks like on the internet. The internet is not just
+
+97
+00:10:34,960 --> 00:10:42,000
+a collection of pages, images, and documents. Rather, it's there to support employees in their
+
+98
+00:10:42,000 --> 00:10:48,800
+daily work, efficiently carrying out work tasks like reserving a place on the training course,
+
+99
+00:10:49,600 --> 00:10:55,680
+filing an application for leave, or finding the phone number of the person in the human resource
+
+100
+00:10:55,680 --> 00:11:03,280
+department. Working with web analytics for an internet is about improving or simplifying
+
+101
+00:11:03,280 --> 00:11:09,680
+activities like these, activities that the internet should support. Internet analytics is not
+
+102
+00:11:09,680 --> 00:11:15,520
+about accumulating vast amounts of data. It is about using the data to gain insights in the
+
+103
+00:11:15,520 --> 00:11:21,040
+user's experience of the internet, with the intent of improving that experience.
+
+104
+00:11:21,040 --> 00:11:28,400
+It is easy to focus on analyzing the collected traffic data. However, all kinds of tools can
+
+105
+00:11:28,400 --> 00:11:33,680
+contribute to getting an overview of your internet performance, and should be included in the concept
+
+106
+00:11:33,680 --> 00:11:40,400
+of internet analytics. Some of these tools are soulless premium plugins for Matomo, such as
+
+107
+00:11:40,400 --> 00:11:48,080
+session recording, but Matomo also evolves. I think it will be in version 4.1, which will be
+
+108
+00:11:48,080 --> 00:11:56,000
+evolved. I think it will be in version 4.0. The performance report will be introduced out of the
+
+109
+00:11:56,000 --> 00:12:03,120
+box. Problems such as not fulfilling accessibility requirements, using unnecessarily high resolution
+
+110
+00:12:03,120 --> 00:12:09,600
+images, and many more may be easy to identify without using statistics. But with Matomo,
+
+111
+00:12:09,600 --> 00:12:14,960
+you could develop a plugin to enhance the dashboard with that kind of data as well.
+
+112
+00:12:14,960 --> 00:12:20,240
+A key performance indicator, KPI, sometimes, sometimes for internet schemes, we call it the
+
+113
+00:12:20,240 --> 00:12:26,000
+metric. It's a measurable value that demonstrates how effectively business objectives are being
+
+114
+00:12:26,000 --> 00:12:34,320
+attained. Organizations use KPIs to evaluate their success as reaching their targets. There are two
+
+115
+00:12:34,320 --> 00:12:40,320
+fundamental categories of KPIs and metrics. We need them both to understand the big picture.
+
+116
+00:12:40,320 --> 00:12:47,840
+Quantitative measurements are figures on how the internet is performing, such as all the data
+
+117
+00:12:47,840 --> 00:12:54,000
+about the users as a group we find in Matomo, for instance. These measurements provide answers on
+
+118
+00:12:54,000 --> 00:13:02,240
+how, when, and what about users, what devices they use when they visit the internet, if they
+
+119
+00:13:02,240 --> 00:13:07,520
+have actively interacted with internet content in any way, where did they come from, and so on.
+
+120
+00:13:07,520 --> 00:13:15,920
+Simply put, behavioral data. Qualitative measures is about how users experience the internet. This
+
+121
+00:13:15,920 --> 00:13:23,280
+data is in the form of text or film rather than numbers. The methods may include an employee
+
+122
+00:13:23,280 --> 00:13:30,480
+survey, guerrilla testing, interviews, usability evaluations, user observation, or features on the
+
+123
+00:13:30,480 --> 00:13:36,960
+site where the user can report what they thought of their experience. In some cases, we hope to
+
+124
+00:13:36,960 --> 00:13:43,680
+serve the user so we can take the opportunity to ask follow-up questions if necessary. Your internet
+
+125
+00:13:43,680 --> 00:13:50,880
+should have a regular ongoing review process and major review should take place if you are considering
+
+126
+00:13:50,880 --> 00:13:58,880
+an upgrade or change of platform. Reviews are often called content audits, although their
+
+127
+00:13:58,880 --> 00:14:05,280
+conclusions are not restricted to the quality of content. When reviewing the current internet, both
+
+128
+00:14:05,280 --> 00:14:11,920
+quantitative and qualitative measures can be used to find out what is working and what needs to be
+
+129
+00:14:11,920 --> 00:14:19,040
+improved. The basic level of review should enable you to group content into useful pages that have
+
+130
+00:14:19,040 --> 00:14:26,320
+an obvious value to actual users and all the rest at the best dubious value. When looking through the
+
+131
+00:14:26,320 --> 00:14:31,600
+content, there are some things to consider when deciding which groups the content belongs to,
+
+132
+00:14:31,600 --> 00:14:37,520
+which parts of your internet support the important activities. This part needs to be analyzed to
+
+133
+00:14:37,520 --> 00:14:43,360
+identify improvement opportunities, optimal placement of buttons, understandable texts,
+
+134
+00:14:43,360 --> 00:14:50,240
+how easy it is to get there, etc. How easy it is to find your way between the different activities.
+
+135
+00:14:51,600 --> 00:14:57,360
+Then consider your navigation structure. Is it easy to find your way back to a starting point if
+
+136
+00:14:57,360 --> 00:15:04,880
+you got a direct link by email? Is it easy to switch between tasks? Is it easy to switch from
+
+137
+00:15:04,880 --> 00:15:12,160
+applying for vacation to the task to correct an improperly filed holiday application?
+
+138
+00:15:13,680 --> 00:15:20,960
+How easy is it for users to complete an activity? Just like a store survival is conditional on
+
+139
+00:15:20,960 --> 00:15:27,760
+customers' ability to pay for the goods, you need to make sure there are as few obstacles as possible
+
+140
+00:15:27,760 --> 00:15:35,920
+on your internet in order for users to complete an activity. What defines a successful session on
+
+141
+00:15:35,920 --> 00:15:41,680
+the internet? What activities must have occurred for you to be able to objectively refer to a
+
+142
+00:15:41,680 --> 00:15:48,480
+user's session on the internet as a successful visit? Is it enough that the user fills out their
+
+143
+00:15:48,480 --> 00:15:54,320
+timesheet or maybe that they land on home page, read some internal news and then disappear?
+
+144
+00:15:55,200 --> 00:16:01,840
+Think carefully about which behavior indicates a successful visit. Content that does not relate to
+
+145
+00:16:01,840 --> 00:16:07,120
+this point is often distracting and it should probably be removed or at least be hidden out
+
+146
+00:16:07,120 --> 00:16:13,280
+of sight and not indexed by your search engine. Please do define requirements for new pages to
+
+147
+00:16:13,280 --> 00:16:20,560
+include a clearly displayed call to action and having an explicit connection to the goals for
+
+148
+00:16:20,560 --> 00:16:30,320
+the internet. Talking about call to actions, I just mentioned it. This is the definition of the term.
+
+149
+00:16:30,320 --> 00:16:38,000
+Often a CTA is a button or any other interactive design element that is enabling the user to take
+
+150
+00:16:38,000 --> 00:16:45,280
+the next logical step towards a conversion on a goal. This process is what the rest of my talk
+
+151
+00:16:45,280 --> 00:16:51,840
+will discuss. For analytics to be meaningful, you need to first define what is good. Good content,
+
+152
+00:16:51,840 --> 00:16:57,840
+successful task accomplishment, good quality and what is good for business. These are the things
+
+153
+00:16:57,840 --> 00:17:04,800
+that are worth analyzing. Otherwise, the risk is that you are working to improve things that lack
+
+154
+00:17:04,800 --> 00:17:11,280
+the prospect of worthwhile improvement. The working process for internet analytics is as follows.
+
+155
+00:17:12,080 --> 00:17:18,240
+You start at the upper left of this never-ending loop. First, develop business goals or evaluate
+
+156
+00:17:18,240 --> 00:17:25,440
+existing business goals. Then you produce reports and develop methods for analyzing
+
+157
+00:17:25,440 --> 00:17:35,520
+KPIs and selecting metrics. Thirdly, you analyze and fourthly improve the internet based on any
+
+158
+00:17:35,520 --> 00:17:42,480
+findings in the analysis and then you iterate. This is not the project. Start by developing the
+
+159
+00:17:42,480 --> 00:17:48,400
+business goal and you're never done. Begin the second iteration with reflection of the measurability
+
+160
+00:17:48,400 --> 00:17:55,200
+of the business goals that can be improved on another iteration of the process. Now it's time
+
+161
+00:17:55,200 --> 00:18:00,320
+to go through each step in this working process and examine what is worth thinking about.
+
+162
+00:18:01,840 --> 00:18:10,240
+Last year, it's pretty mind-boggling that only 34% of internet managers, according to
+
+163
+00:18:10,240 --> 00:18:18,480
+web service awards, still had no clear objective for their internet. A clear majority also say
+
+164
+00:18:19,120 --> 00:18:23,040
+that they have no defined objectives for any of the internet's sub-pages.
+
+165
+00:18:23,040 --> 00:18:27,760
+Obviously, it's difficult to know how useful the internet is if you do not know what it's supposed
+
+166
+00:18:27,760 --> 00:18:33,840
+to achieve or how to measure it. The very first step of internet analytics is to set down a list
+
+167
+00:18:33,840 --> 00:18:43,200
+of goals. You should avoid vaguely worded wishes such as enable findability or keep employees
+
+168
+00:18:43,200 --> 00:18:50,320
+informed with news. Instead, try to stick with concrete activities and tasks employees need to
+
+169
+00:18:50,320 --> 00:18:56,320
+be able to do to get their job done and bring value to the business. Good examples of these include
+
+170
+00:18:56,960 --> 00:19:02,800
+reporting time at work, updating skills profile, or submitting requests for absence.
+
+171
+00:19:04,240 --> 00:19:12,960
+Management documents such as the organization's vision, plans, and the budget often provide
+
+172
+00:19:12,960 --> 00:19:20,320
+already defined objectives, KPIs, that can be reused or adapted as measures for your internet.
+
+173
+00:19:20,320 --> 00:19:25,120
+Break down each goal to something that can be isolated and measured as part of the user
+
+174
+00:19:25,120 --> 00:19:31,760
+experience of the internet. A challenge may be to align the measurable business objectives with
+
+175
+00:19:31,760 --> 00:19:37,520
+the long-term objectives. It is important to try to anticipate the long-term consequences of
+
+176
+00:19:37,520 --> 00:19:44,000
+the goals we define in order to avoid negative side effects. In addition to the business objectives,
+
+177
+00:19:44,000 --> 00:19:50,880
+it can be beneficial to review other metrics such as the number of page views per visit.
+
+178
+00:19:51,440 --> 00:19:58,080
+They may tell the backstory of why the objectives performed the way they did. However,
+
+179
+00:19:58,800 --> 00:20:05,920
+most generic metrics struggle to prove what value they indicate is the result unequivocally good
+
+180
+00:20:05,920 --> 00:20:14,240
+or bad. These are not where you should put most of your effort. Instead, they help you investigate
+
+181
+00:20:14,240 --> 00:20:21,600
+things afterwards and gather data helping you to tell the story of the users when you are reporting.
+
+182
+00:20:22,800 --> 00:20:29,520
+The amount of page views, unique users, sessions, and similar does not provide any evidence of
+
+183
+00:20:29,520 --> 00:20:35,680
+increased business performance. These may be nice anecdotes between internet geeks, but they provide
+
+184
+00:20:35,680 --> 00:20:41,680
+very little insight in which way the internet is successful. Instead, they make for personal
+
+185
+00:20:41,680 --> 00:20:48,960
+glorifications and a good gut feeling of not great business. Another term is segmentation. It is a
+
+186
+00:20:48,960 --> 00:20:53,840
+feature of Matuomo and you find it at the toolbar in the top of the user interface.
+
+187
+00:20:54,640 --> 00:21:01,040
+A segmentation is a group or a subset of users that have some attribute in common. It may be
+
+188
+00:21:01,040 --> 00:21:07,760
+that they all use a specific type of device. It can be the geographical location or whatever Matuomo
+
+189
+00:21:07,760 --> 00:21:13,920
+has gathered as common data points for them. Segments are often overlooked, so I will take
+
+190
+00:21:13,920 --> 00:21:22,400
+some time to pitch it to you. But before I go into even more segmentation, we have a fundamental
+
+191
+00:21:22,400 --> 00:21:30,560
+term to discuss, click-through rate or CTR for short. CTR is the share of users that do a specific
+
+192
+00:21:30,560 --> 00:21:37,840
+thing, such as that, for instance, 73% of users click on one of the featured articles on the front
+
+193
+00:21:37,840 --> 00:21:45,680
+page. If you have a low CTR, that indicates the need to improve the usability of the place
+
+194
+00:21:46,320 --> 00:21:53,360
+where many users disappear. Or perhaps they get cold feet because of some poor design decision
+
+195
+00:21:53,360 --> 00:21:59,760
+you need to improve. Think about the goal that at least 90% should succeed with submitting their
+
+196
+00:21:59,760 --> 00:22:06,160
+application of lead. If 25% of them drop out at the very first step in the process, then we have
+
+197
+00:22:06,160 --> 00:22:11,680
+to try to figure out what caused it or possibly set a more reasonable goal we are actually able
+
+198
+00:22:11,680 --> 00:22:19,200
+to achieve. It is particularly interesting to create a segment of users to find out when we
+
+199
+00:22:19,200 --> 00:22:25,280
+are failing the users. The segment, those who do not complete all the steps in the conversion funnel,
+
+200
+00:22:25,280 --> 00:22:32,480
+might reveal some interesting pattern. Sometimes you are able to alleviate. Are there any common
+
+201
+00:22:32,480 --> 00:22:40,160
+denominators where the users fail or flee? Where do they go? Is there possibly an indistinct call
+
+202
+00:22:40,160 --> 00:22:47,440
+to action that users do not understand, see or discover? The conversion funnel does not require
+
+203
+00:22:47,440 --> 00:22:54,160
+many steps to be suitable as a visualization. It might be obvious in itself presenting the results
+
+204
+00:22:54,160 --> 00:23:00,320
+to internal stakeholders. A simple use case for a conversion funnel can be to show the amount of
+
+205
+00:23:00,320 --> 00:23:06,320
+users of the search engine that actually click on any of the results. How many times they rephrase
+
+206
+00:23:06,320 --> 00:23:13,200
+the search terms and how big the drop-off is. It could be one of several means to evaluate whether
+
+207
+00:23:13,200 --> 00:23:19,440
+an enhanced relevance model for the search engine has been an improvement according to its users.
+
+208
+00:23:19,440 --> 00:23:25,280
+A conversion funnel is not limited to the internet. It could very well be the measure
+
+209
+00:23:25,280 --> 00:23:32,080
+of impact of a newsletter by email or even something in the real world. One thing is certain
+
+210
+00:23:32,080 --> 00:23:38,640
+though. Do not report data or specific numbers, so-called data puking. It ought to be the last
+
+211
+00:23:38,640 --> 00:23:45,760
+option to try out on stakeholders. Very few are interested in data alone. Even fewer actually
+
+212
+00:23:45,760 --> 00:23:52,400
+understand the data. You are supposed to tell them the story of the data and visualize the impact.
+
+213
+00:23:52,400 --> 00:23:59,600
+Conversion funnels are in a way the opposite of data puking since it's in a visual way telling
+
+214
+00:23:59,600 --> 00:24:08,160
+a story reminding you to explain where the users end up and your hypothesis on why. Back to segments.
+
+215
+00:24:08,160 --> 00:24:13,200
+Here I'll make some suggestions on segments in Matomo for internets for you to think about.
+
+216
+00:24:13,200 --> 00:24:18,480
+A feature of Matomo that, at least in my experience, many seem to overlook is to compare two
+
+217
+00:24:18,480 --> 00:24:25,760
+segments against each other. My first suggestion is such a comparison. Depending on the content of
+
+218
+00:24:25,760 --> 00:24:30,880
+your internet, there might be a use case for a segment singling out users with a management
+
+219
+00:24:30,880 --> 00:24:36,800
+position. This is something you can inform Matomo about using the internet as an example.
+
+220
+00:24:36,800 --> 00:24:42,320
+You can inform Matomo about using the custom dimension feature directly from the code of your
+
+221
+00:24:42,320 --> 00:24:49,440
+internet. So, what is the point? Well, if you have content on the internet aiming towards users
+
+222
+00:24:49,440 --> 00:24:55,120
+within management, the obvious question is if that content is used by its intended audience, right?
+
+223
+00:24:56,480 --> 00:25:03,040
+This is how you get to figure that out. Other suggestions on segments is the user's organizational
+
+224
+00:25:03,040 --> 00:25:09,760
+position, since it can be relevant as a context when looking at conversions on the internet.
+
+225
+00:25:09,760 --> 00:25:14,960
+For instance, if a part of the organization is unexpectedly underperforming on some of the
+
+226
+00:25:14,960 --> 00:25:22,000
+internet goals, you have a deviation to investigate further. Another suggestion is to segment on
+
+227
+00:25:22,000 --> 00:25:28,080
+different geographic locations or perhaps different office buildings in the same city or floors in the
+
+228
+00:25:28,080 --> 00:25:36,800
+same building. So, how exactly is custom segments done in Matomo? One way is to let the internet
+
+229
+00:25:36,800 --> 00:25:42,800
+feed the info to Matomo through the front-end code to end up in a custom dimension. An internet
+
+230
+00:25:42,800 --> 00:25:49,200
+usually has integration to the local directory of employees, who is logged on, the actual computer,
+
+231
+00:25:49,200 --> 00:25:55,440
+and where do they work in the organization. That might make the cut for a custom dimension,
+
+232
+00:25:55,440 --> 00:26:03,760
+since they ought not to be of temporary nature or triviality for a few involved. But there might
+
+233
+00:26:03,760 --> 00:26:09,920
+also be possibilities to track signals for segments using Matomo's event tracking. The upside with
+
+234
+00:26:09,920 --> 00:26:17,040
+the Matomo's way of having segments as inclusive filters is that if a user session consists of an
+
+235
+00:26:17,040 --> 00:26:25,600
+event signal of your choice, they are segment compatible. And you can see this slide as a
+
+236
+00:26:25,600 --> 00:26:32,560
+critique on the sometimes oversimplistic views on segments, personas, and other ways of describing
+
+237
+00:26:32,560 --> 00:26:39,520
+our users. Another difficulty is which potentially crucial details are hidden behind the persona or
+
+238
+00:26:39,520 --> 00:26:46,400
+target group we have. Here we have an illustrative example some of you may have seen previously.
+
+239
+00:26:46,400 --> 00:26:52,080
+It is the criticism of personas as a concept. That is, that you create a fictional person who
+
+240
+00:26:52,080 --> 00:27:00,240
+is named and assigned a number of characteristics. But criticism is useful in many contexts.
+
+241
+00:27:01,440 --> 00:27:08,240
+I have put together a persona I call Welfare William. He is rich, has children, is British,
+
+242
+00:27:08,240 --> 00:27:17,520
+homeowner, etc. The description fits both the, until recently, Prince Charles and Ossie Osborn,
+
+243
+00:27:17,520 --> 00:27:25,040
+two quite different people. One of them lived 70 years of his life as a literal prince. The other
+
+244
+00:27:25,040 --> 00:27:32,720
+one is a prince of sorts, the prince of darkness, perhaps. One had fried sparrows flying into his
+
+245
+00:27:32,720 --> 00:27:39,680
+mouth since birth. The other has literally bitten the necks of bats on concept stages, so the blood
+
+246
+00:27:39,680 --> 00:27:46,080
+spurted. One is the very definition of upper class, the other began his life in total social
+
+247
+00:27:46,080 --> 00:27:53,680
+vulnerability. What unites Ossie and the now King Charles may actually be irrelevant, but they have
+
+248
+00:27:53,680 --> 00:28:00,800
+very different life experiences. And if you were to design a communication campaign and are aware
+
+249
+00:28:00,800 --> 00:28:07,520
+that these two groups exist within your target group, yes, I suppose you will see the challenge
+
+250
+00:28:07,520 --> 00:28:14,080
+in how the appeal is, how flexible these two people are to act on your call to action.
+
+251
+00:28:15,760 --> 00:28:21,680
+There are two things you can take away from this discussion, though. One is that personas should
+
+252
+00:28:21,680 --> 00:28:29,120
+not be about demographic data, such as income, marital status, etc. Rather, it is the person's
+
+253
+00:28:29,120 --> 00:28:36,320
+problem to solve and their challenges, because that's where you become relevant
+
+254
+00:28:36,320 --> 00:28:43,440
+with whatever matching offer or service you have. The second one is to dig deeper, otherwise you
+
+255
+00:28:43,440 --> 00:28:51,120
+may miss details that are possibly relevant. So I leave it up to you and the internet managers to
+
+256
+00:28:51,120 --> 00:28:59,200
+figure out if management position is a relevant segment where you work, or if it's just another
+
+257
+00:28:59,200 --> 00:29:09,200
+wealthy William case. Segments help you not to get lost in all the averages and aggregates you
+
+258
+00:29:09,200 --> 00:29:17,360
+encounter in Matomo. A made-up illustration is now in this image, showing that the fact that the
+
+259
+00:29:17,360 --> 00:29:23,680
+average user, the grey circle in the middle, has 10 page views per visit might not be that insightful
+
+260
+00:29:23,680 --> 00:29:31,680
+if actual users typically split into two groups with either one page view or 20. Segmentation is
+
+261
+00:29:31,680 --> 00:29:37,760
+important because of the risks of looking at average values. Average values are sometimes not
+
+262
+00:29:37,760 --> 00:29:44,160
+representative for the majority of users, and average value is meaningful only if the data is
+
+263
+00:29:44,160 --> 00:29:51,120
+in a normal distribution, meaning that the average value has relatively few surprising deviations.
+
+264
+00:29:53,360 --> 00:30:00,320
+This is an illustration of a normal distribution. Most data is predictably similar to the average
+
+265
+00:30:00,320 --> 00:30:07,840
+value. Not all things we are interested in is distributed this way, just as the made-up example
+
+266
+00:30:07,840 --> 00:30:16,240
+of average value of 10 page views per visit is not that meaningful a value. Sometimes the average
+
+267
+00:30:16,240 --> 00:30:22,480
+does not describe the reality. More interesting is the observation that there are at least two
+
+268
+00:30:22,480 --> 00:30:28,080
+very different groups in this data. To get clarity around what groups you need to inspect,
+
+269
+00:30:28,080 --> 00:30:34,320
+you use segmentation to divide the data into different groups that can be explored separately.
+
+270
+00:30:34,320 --> 00:30:40,720
+The idea is to filter out a subset of the users, see how they perform, and if they stand out in
+
+271
+00:30:40,720 --> 00:30:48,720
+some way. Segmentation is done to be aware of differences, differences in how each segment
+
+272
+00:30:48,720 --> 00:30:54,320
+behaves, depending on where they are located, their profession, which sub-pages they visit,
+
+273
+00:30:54,320 --> 00:31:00,960
+and so forth. When reviewing your internet using analytics, it is a good idea to focus on
+
+274
+00:31:00,960 --> 00:31:08,800
+to focus on few segments per repetition of the analysis. One segment could be to filter out
+
+275
+00:31:08,800 --> 00:31:15,120
+users who only have a single page view and inspect where those user sessions are taking place.
+
+276
+00:31:16,240 --> 00:31:21,680
+Another segment could be to watch the behavior among those who use the internet on a daily basis,
+
+277
+00:31:22,320 --> 00:31:29,200
+what differentiates them from monthly users, for instance. Yet another segment may be to look at
+
+278
+00:31:29,200 --> 00:31:35,840
+those who repeatedly only make a single page view. Looking at these different usage patterns
+
+279
+00:31:35,840 --> 00:31:41,280
+could lead to some significant improvement actions. If, for example, you conclude that
+
+280
+00:31:41,280 --> 00:31:48,080
+from your analysis that the single page viewer segment have simply given up on the internet,
+
+281
+00:31:48,080 --> 00:31:53,920
+the targeted campaign could be implemented, aiming at figuring out a way of convincing them
+
+282
+00:31:53,920 --> 00:32:00,720
+to try out some new features. As mentioned previously, average values do not always provide
+
+283
+00:32:00,720 --> 00:32:07,840
+a particularly accurate picture of reality or actionable insights. The majority of users may have
+
+284
+00:32:07,840 --> 00:32:14,240
+few usability issues. The aim of segmentation is to reveal the portion of users within the whole
+
+285
+00:32:14,240 --> 00:32:21,120
+who have problems. With internet analytics, you can simultaneously manage several user groups
+
+286
+00:32:21,120 --> 00:32:29,120
+in a structured way. Examples of business and operational goals measurable on an internet.
+
+287
+00:32:29,120 --> 00:32:37,440
+Content published on the internet needs to align with business goals and the intentions we have
+
+288
+00:32:37,440 --> 00:32:44,000
+for the internet. It is not nearly enough to assert a public interest or to continue treating
+
+289
+00:32:44,000 --> 00:32:49,600
+the internet as an information dump just because some of us like to produce content.
+
+290
+00:32:49,600 --> 00:32:57,680
+I have set out some examples of business goals for the internet, such as that at least 90% of
+
+291
+00:32:57,680 --> 00:33:05,360
+those who begin the process to apply for BLEEM through the internet have to succeed. Otherwise,
+
+292
+00:33:05,360 --> 00:33:17,600
+they are wasting their time. Perhaps you could have efficiency metrics as well.
+
+293
+00:33:17,600 --> 00:33:23,760
+Metrics such as employees should easily find their contacts within the human resources
+
+294
+00:33:23,760 --> 00:33:30,320
+or finance department whenever needed. That is very much a task to be done
+
+295
+00:33:31,440 --> 00:33:38,080
+thing for the internet. As you notice, these examples of business goals are not limited by
+
+296
+00:33:38,080 --> 00:33:44,080
+what statistics are captured automatically in Matuomo. To measure real business goals,
+
+297
+00:33:44,080 --> 00:33:52,960
+you have to work both with quantitative metrics and qualitative metrics such as
+
+298
+00:33:52,960 --> 00:33:59,200
+users' subjective opinions. Depending on the business goal, you might also need to look at
+
+299
+00:33:59,200 --> 00:34:06,880
+other systems than Matuomo. Regarding accessibility and a measurable way to evaluate it,
+
+300
+00:34:06,880 --> 00:34:14,640
+the design should probably adhere to accessibility guidelines. One such guideline is
+
+301
+00:34:16,160 --> 00:34:26,480
+VCAG 2.2 at level AA, which in the European Union is a mandatory regulation since
+
+302
+00:34:27,360 --> 00:34:31,200
+two years ago, I think, at least for the public sector.
+
+303
+00:34:31,200 --> 00:34:40,560
+Step two out of four of the process, then. If you mention internet, you probably have access to some
+
+304
+00:34:40,560 --> 00:34:46,240
+standard reporting tools. I would also guess that tool might be Matuomo since you attend this
+
+305
+00:34:46,240 --> 00:34:53,600
+conference or that you are considering Matuomo in the future. In order to monitor how well the
+
+306
+00:34:53,600 --> 00:34:59,520
+internet delivers on goals and metrics, we need to gather appropriate data using these data.
+
+307
+00:34:59,520 --> 00:35:06,240
+It's almost certainly necessary to tune your reporting tool so that your
+
+308
+00:35:06,240 --> 00:35:13,040
+reports actually measure your business goals. When you need adjustments or variations of your
+
+309
+00:35:13,040 --> 00:35:18,960
+standard reports in Matuomo, you can consider premium plugin custom reports. In my experience,
+
+310
+00:35:18,960 --> 00:35:26,160
+that plugin is a lifesaver. It can give you customized reports, filter data, and answer
+
+311
+00:35:26,160 --> 00:35:32,080
+metric questions without the need to over and over again look at multiple other reports.
+
+312
+00:35:35,920 --> 00:35:41,840
+It is good to collect data that tells the story about the goal so that we learn why something
+
+313
+00:35:41,840 --> 00:35:49,280
+performed better, not only that it actually did. It may prove useful to work with a web developer
+
+314
+00:35:49,280 --> 00:35:54,480
+until you have gained some knowledge of the systems involved. A large part of the benefit
+
+315
+00:35:54,480 --> 00:36:00,400
+of working with the reports and methods is the learning process. Working with the system itself
+
+316
+00:36:00,400 --> 00:36:06,960
+to get to know the user's behaviors and needs is something that makes each iteration of this work
+
+317
+00:36:06,960 --> 00:36:14,640
+begin on a new and higher level. There are a number of widely used techniques, methods,
+
+318
+00:36:14,640 --> 00:36:20,640
+and templates we can use to improve how your reports are designed and I will go through some
+
+319
+00:36:20,640 --> 00:36:31,440
+of these now. First off is the conversion funnel, also premium plugin. This is funnel visualization.
+
+320
+00:36:32,560 --> 00:36:37,200
+It shows that no one followed the desired path from the landing page to one at the top.
+
+321
+00:36:37,840 --> 00:36:46,560
+This funnel has that first step as optional and we can see in the middle that users coming in
+
+322
+00:36:46,560 --> 00:36:54,400
+the funnel on that level converts at 25 percent rate towards the goal called signed up. A funnel
+
+323
+00:36:54,400 --> 00:36:59,680
+like this indicates room for improvement. Probably we are distracting the users with
+
+324
+00:36:59,680 --> 00:37:05,920
+more tempting content or in this case the landing page is not optimized as pushing users down the
+
+325
+00:37:05,920 --> 00:37:13,440
+funnel. The conversion is when a user action results in a measurable contribution towards
+
+326
+00:37:13,440 --> 00:37:21,360
+a business goal, for instance signing up for the corporate newsletter or being successful in some
+
+327
+00:37:21,360 --> 00:37:28,640
+self-service process at the internet. Probably the most common method to visualize a multi-step
+
+328
+00:37:28,640 --> 00:37:34,160
+process is to use the conversion funnel. It is particularly well suited to visualize where
+
+329
+00:37:34,160 --> 00:37:41,040
+users fail in a process with several stages. You define the starting point and then measure the
+
+330
+00:37:41,040 --> 00:37:47,840
+click-through rate on each part, that is how many users you lose on the road towards the goal.
+
+331
+00:37:49,440 --> 00:37:54,320
+All objectives cannot be measured by using the collected data, the already collected data in
+
+332
+00:37:54,320 --> 00:38:01,600
+Matomo, but some do depending on your implementation. It is not solely about users click and their
+
+333
+00:38:01,600 --> 00:38:08,480
+behavior. We need to evaluate other forms of quality indicators. This is a list of quality
+
+334
+00:38:08,480 --> 00:38:17,520
+indicators not drawn from statistics tools that a communications department can use to measure
+
+335
+00:38:17,520 --> 00:38:28,240
+quality. Things like to list heavy images that are slow to load especially from mobile users,
+
+336
+00:38:29,920 --> 00:38:31,360
+find duplicate content,
+
+337
+00:38:31,360 --> 00:38:38,720
+documents called something inappropriate such as new word document, has no title at all or other
+
+338
+00:38:38,720 --> 00:38:48,240
+common mistakes that make it difficult to find the content on the internet, or that content lacks
+
+339
+00:38:48,240 --> 00:38:55,440
+crucial metadata like page description or keywords to help them turn on search engine.
+
+340
+00:38:55,440 --> 00:39:01,200
+Talking about search, an easy test you can perform on your own internet is to search for what's not
+
+341
+00:39:01,200 --> 00:39:08,320
+supposed to give any results, as in the illustration here when I search for Microsoft Word which ends
+
+342
+00:39:08,320 --> 00:39:16,880
+up being the document title if a user is foundling. Where I used to work until recently we have about
+
+343
+00:39:16,880 --> 00:39:24,000
+one million pages and documents in our search index with the help of the search engine. You can
+
+344
+00:39:24,000 --> 00:39:29,360
+behind the scenes compile a lot of interesting statistics, at least if you consider the search
+
+345
+00:39:29,360 --> 00:39:36,800
+feature just as any other user interface to analyze. For instance we could see from search
+
+346
+00:39:36,800 --> 00:39:43,440
+robot statistics that 89 percent of the internet lacks keywords, but we could also see that
+
+347
+00:39:43,440 --> 00:39:49,840
+statistics that 89 percent of the internet lacks keywords, in other words nine out of ten
+
+348
+00:39:49,840 --> 00:39:55,600
+pages and documents are not really competing in the battle to reach the top of the internal search
+
+349
+00:39:55,600 --> 00:40:02,000
+engine. Then it's no wonder that the search engine has a hard time figuring out what is
+
+350
+00:40:02,000 --> 00:40:10,080
+the most relevant content to some search queries. Most internets do have some sort of search feature,
+
+351
+00:40:10,080 --> 00:40:16,640
+at the very least you ought to try to learn what keywords or phrases the users use. An extremely
+
+352
+00:40:16,640 --> 00:40:24,080
+actionable thing is if you also track searches that return no result, zero hits. If a search phrase is
+
+353
+00:40:24,080 --> 00:40:32,880
+reasonable then it should have a result. You might have issues with synonyms or that perhaps vital
+
+354
+00:40:32,880 --> 00:40:39,440
+content is lacking. You could also consider to track the click behavior in the search results
+
+355
+00:40:39,440 --> 00:40:45,600
+there is an expected distribution on how much clicks the first entry would get, the second
+
+356
+00:40:45,600 --> 00:40:53,360
+would get about half of that etc. And perhaps you would track clicks that are not the top three in
+
+357
+00:40:53,360 --> 00:41:00,320
+the results or that an entry got twice as much clicks than is expected for its ranking in the
+
+358
+00:41:00,320 --> 00:41:08,160
+results etc etc. And I highly recommend Louise Rosenfeld's book called Search Analytics for
+
+359
+00:41:08,160 --> 00:41:14,880
+Your Site if you are curious about a method to evaluate search features and ranking.
+
+360
+00:41:16,320 --> 00:41:21,680
+The next step is of course to look at, compare and analyze all the data you have gathered.
+
+361
+00:41:22,480 --> 00:41:27,920
+The objective of the analysis phase is to understand why users behave in a certain way or
+
+362
+00:41:27,920 --> 00:41:33,840
+think the way they do. This is where you identify the obstacles that prevent users from carrying out
+
+363
+00:41:33,840 --> 00:41:39,840
+activities and what you can do to remove the obstacles, improve efficiency, conversion and
+
+364
+00:41:39,840 --> 00:41:46,800
+usability. The first thing you need to consider in your analytics is whether you have enough data
+
+365
+00:41:46,800 --> 00:41:53,920
+to draw conclusions. Even if you find that you have too little data to draw large and far-reaching
+
+366
+00:41:53,920 --> 00:42:02,640
+conclusions your data can suggest how you can transition the test to a larger scale and please
+
+367
+00:42:02,640 --> 00:42:07,520
+don't get stuck in this phase. It's easy to find that you have spent more time analyzing than
+
+368
+00:42:07,520 --> 00:42:13,120
+actually improving the internet. And you should also be aware of any seasonal variations that
+
+369
+00:42:13,120 --> 00:42:19,360
+can affect the results of your review. There are peak times during the year for specific content
+
+370
+00:42:19,360 --> 00:42:26,400
+and support for used on internet. For example it's common for people to forget their passwords over
+
+371
+00:42:26,400 --> 00:42:32,960
+the summer holidays so demand for replacement passwords peaks when people return to work.
+
+372
+00:42:33,600 --> 00:42:39,280
+This is an example of how to use your internet analytics to support the priorities of the
+
+373
+00:42:39,280 --> 00:42:45,360
+editorial work on the internet. If people have extraordinary difficulties remembering their
+
+374
+00:42:45,360 --> 00:42:51,920
+passwords at the end of holiday season then it's probably efficient to introduce some well-placed
+
+375
+00:42:51,920 --> 00:43:01,680
+support information on how to act when one has forgotten one's password. And you should
+
+376
+00:43:02,560 --> 00:43:08,480
+I think document the analytic efforts and findings based on the data you collected, processed and
+
+377
+00:43:08,480 --> 00:43:16,000
+analyzed. You document the findings and lessons learned and you may choose to introduce your
+
+378
+00:43:16,000 --> 00:43:22,000
+conclusions by stating the level of confidence you have in the analytics. This is wise especially
+
+379
+00:43:22,000 --> 00:43:29,120
+if major decisions are likely to be taken on the basis of your analysis. Nothing wrong with
+
+380
+00:43:29,120 --> 00:43:36,320
+being humble. I think this is not an exact science after all. So keep a log for future reference
+
+381
+00:43:36,320 --> 00:43:47,360
+writing down which methods were used for each test etc. And also note what needs improvement
+
+382
+00:43:47,360 --> 00:43:53,840
+and require another iteration through the entire analysis process. It's not unusual that you cannot
+
+383
+00:43:53,840 --> 00:44:00,240
+find conclusive proof to make the case for one option or the other. And the last step in this
+
+384
+00:44:00,240 --> 00:44:07,840
+process is to make improvements based on the evaluated hypothesis and the conclusions drawn
+
+385
+00:44:07,840 --> 00:44:13,680
+from the analysis phase. You make a list of prioritized improvements. The improvements you
+
+386
+00:44:13,680 --> 00:44:20,080
+think will matter most. It is not always easy to make those judgments. Some efforts may have
+
+387
+00:44:20,080 --> 00:44:25,840
+minor impact while being an easy task and other tasks can be complex because they have external
+
+388
+00:44:25,840 --> 00:44:32,800
+dependencies. No matter what, now at least you have a list of things to do and stuff you know
+
+389
+00:44:32,800 --> 00:44:40,560
+is going to improve the user experience. An example of task in the improvement phase is to
+
+390
+00:44:40,560 --> 00:44:46,800
+rearrange the positions of buttons to enhance usability. Something perhaps only beneficial for
+
+391
+00:44:46,800 --> 00:44:54,640
+the user segment with smaller screens. And as I said before, you need to be able to
+
+392
+00:44:54,640 --> 00:45:00,560
+do that. And after making your improvements, it's time for another iteration of the process.
+
+393
+00:45:00,560 --> 00:45:06,960
+Internet analytics is not a project and it's never finished. The usefulness of each iteration of the
+
+394
+00:45:06,960 --> 00:45:12,560
+analysis is that you get the chance to look critically at objectives, goals, and metrics
+
+395
+00:45:13,440 --> 00:45:20,480
+to see if you think they still prove useful. Most likely over time you will revise, supplement,
+
+396
+00:45:20,480 --> 00:45:29,600
+and verify them. And that's it. Something's up. I hope you got some great takeaways from this talk
+
+397
+00:45:29,600 --> 00:45:38,640
+and to repeat the most important points I would like to pick these for. Try to set some measurable
+
+398
+00:45:38,640 --> 00:45:44,560
+goals with your internet. It makes using Matomo more self-explanatory since you have conversions
+
+399
+00:45:44,560 --> 00:45:52,160
+to indicate something of value inside of Matomo. Don't do internet statistics, do analytics.
+
+400
+00:45:53,360 --> 00:45:59,200
+And that entails looking for actionable insights. You should use both qualitative
+
+401
+00:45:59,200 --> 00:46:07,680
+and quantitative methods. They complement each other. Don't measure activity, focus on results.
+
+402
+00:46:07,680 --> 00:46:14,160
+Good luck. And the consoling thought is that most other organizations also seem to suck at
+
+403
+00:46:14,160 --> 00:46:24,480
+internet analytics. Let's do better. Any questions? Then you find me in the conference chatroom.
+
+404
+00:46:24,480 --> 00:46:38,080
+If you'd like, you could also email me. Thank you for your attention.
+
+405
+00:46:38,080 --> 00:46:45,120
+Thank you everyone for joining this session. As Markus mentioned, you can continue the conversation
+
+406
+00:46:45,120 --> 00:46:51,520
+in the chat if you have further questions. I also wanted to let you know that the next round of
+
+407
+00:46:51,520 --> 00:46:58,080
+sessions will start at 1 p.m. after the lunch break. So we hope to see you then.
+

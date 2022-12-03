@@ -1,0 +1,1352 @@
+1
+00:00:00,000 --> 00:00:16,000
+Hi, everybody. So the talk is now recorded, so I think that we can start this talk. So
+
+2
+00:00:16,000 --> 00:00:26,480
+my name is Romain Biard, and I'd like to introduce you to the development of plugins for Matomo.
+
+3
+00:00:26,480 --> 00:00:37,440
+And we will take the approach to have a technical introduction for plugin development, not only
+
+4
+00:00:37,440 --> 00:00:42,920
+what can we do with plugins, but also how do we do it from a technical standpoint. So
+
+5
+00:00:42,920 --> 00:00:50,200
+what will we talk about during this talk? So I present myself, and we will ask ourselves
+
+6
+00:00:50,200 --> 00:00:54,520
+what we can do with a plugin, which is the very start of plugin development. What's the
+
+7
+00:00:54,520 --> 00:01:05,280
+point of developing a plugin? Also, we will see how to be ready for plugin developments
+
+8
+00:01:05,280 --> 00:01:19,560
+for Matomo, and then we will dig deeper into the technical considerations of plugin development
+
+9
+00:01:19,560 --> 00:01:24,440
+for Matomo. So what are the basics of a plugin? How to add settings to Matomo if you need
+
+10
+00:01:24,440 --> 00:01:29,640
+specific settings for your plugin. How to store content in the database. How to use
+
+11
+00:01:29,640 --> 00:01:37,600
+an external API if you want to gather external data to cross with the data stored in Matomo.
+
+12
+00:01:37,600 --> 00:01:42,320
+Also how to localize your plugin, because obviously you will want to distribute it and
+
+13
+00:01:42,320 --> 00:01:51,960
+have users everywhere in the world. How to publish your plugin onto Matomo marketplace.
+
+14
+00:01:51,960 --> 00:01:57,000
+How to maintain it. And if you have any questions, we will have some room for discussion at the
+
+15
+00:01:57,000 --> 00:02:02,800
+end of the presentation, but also feel free to stop me during this presentation so I can
+
+16
+00:02:02,800 --> 00:02:12,480
+answer your questions along the way. So let's start with a short bio of myself. So my name
+
+17
+00:02:12,480 --> 00:02:19,940
+is Romain Biard. I'm the CTO for a company called Mascot, which is providing a learning
+
+18
+00:02:19,940 --> 00:02:26,080
+management software called Taktileo. I'm in charge of the product and development teams.
+
+19
+00:02:26,080 --> 00:02:33,920
+I've recently worked as a lead engineer in the DevOps company, and before that I had
+
+20
+00:02:33,920 --> 00:02:39,640
+a web development and digital strategy company for 10 years and also had experiences as sales
+
+21
+00:02:39,640 --> 00:02:47,020
+representative for US tech companies. I have a double degree, bachelor in computer sciences
+
+22
+00:02:47,020 --> 00:02:55,000
+and master in management. And from a more personal side, I have a personal attachment
+
+23
+00:02:55,000 --> 00:03:03,480
+for Chile where I lived for two years in the suburbs of Valparaiso. I like poetry, short
+
+24
+00:03:03,480 --> 00:03:09,720
+novels, and I am an occasional open source contributor. So here are a couple of projects
+
+25
+00:03:09,720 --> 00:03:17,760
+that I used to contribute to, obviously Matomo plugins, but also PHP FFmpeg, which is a package
+
+26
+00:03:17,760 --> 00:03:26,000
+to convert videos using FFmpeg. And if you look at my GitHub profile, you'll see that
+
+27
+00:03:26,000 --> 00:03:34,240
+it happened to me to contribute to other plugins, other open source projects on an occasional
+
+28
+00:03:34,240 --> 00:03:47,920
+basis. So a plugin for what? This may be a very trivial question, but I think it's absolutely
+
+29
+00:03:47,920 --> 00:03:57,680
+critical to ask it first to make sure that if you begin developing a plugin, you already
+
+30
+00:03:57,680 --> 00:04:05,840
+exactly know how to tackle the different aspects of the development in order to reach your
+
+31
+00:04:05,840 --> 00:04:13,000
+goal. So there are some important questions to answer first. So what is Matomo made for?
+
+32
+00:04:13,000 --> 00:04:24,560
+Matomo is made for collecting data on visitors of your website. So who is visiting your website?
+
+33
+00:04:24,560 --> 00:04:32,120
+How long do they stay on your website? Which pages are visited? Where do they come from?
+
+34
+00:04:32,120 --> 00:04:42,600
+Where are they clicking on your website? All this data is collected by Matomo. So this
+
+35
+00:04:42,600 --> 00:04:49,600
+is important to have that in mind in order to figure out what we can do with this data.
+
+36
+00:04:49,600 --> 00:04:54,720
+So you can ask yourself, are there additional data that could be useful for my business
+
+37
+00:04:54,720 --> 00:05:07,720
+or other businesses or other people? Like you may want to combine data from Matomo or from
+
+38
+00:05:07,720 --> 00:05:15,760
+external sources to make new information arise. So if you consider additional data, it could
+
+39
+00:05:15,760 --> 00:05:25,600
+be either data coming from external sources like APIs, or it could be also data that you
+
+40
+00:05:25,600 --> 00:05:37,360
+will collect by enriching the tracking API with your own tracking data. Also, ask yourself
+
+41
+00:05:37,360 --> 00:05:46,080
+who you are targeting because you very likely will not provide the same type of reports
+
+42
+00:05:46,080 --> 00:05:52,800
+and the same type of data if you're working with individuals or if you're working with
+
+43
+00:05:52,800 --> 00:06:01,360
+companies. There are specific information that each public, each type of people will
+
+44
+00:06:01,360 --> 00:06:08,440
+want to access, and depending on who is your target with this plugin, you will very likely
+
+45
+00:06:08,440 --> 00:06:16,480
+not provide the same type of data. Also, if this plugin is made for your company's need,
+
+46
+00:06:16,480 --> 00:06:22,600
+for instance, ask yourself who will use this plugin in your team. Is it the marketing?
+
+47
+00:06:22,600 --> 00:06:32,560
+Is it the sales team, the support team? How confident are they on data manipulation? What
+
+48
+00:06:32,560 --> 00:06:43,160
+is their ability to understand tables of numbers, understand charts, to understand very different
+
+49
+00:06:43,160 --> 00:06:49,200
+type of reports? And this will help you design the plugins that you want to develop. And
+
+50
+00:06:49,200 --> 00:06:55,280
+so, finally, do I need to gather data from additional sources to achieve my goal of developing
+
+51
+00:06:55,280 --> 00:07:03,040
+a plugin from Atomo? You will have to ask this to yourself as well. So, examples of
+
+52
+00:07:03,040 --> 00:07:08,400
+what could be done. You could, for instance, create a plugin that will generate a report
+
+53
+00:07:08,400 --> 00:07:14,000
+to display the weather in the city of your visitors. So, this could help you figure out
+
+54
+00:07:14,000 --> 00:07:19,760
+if the weather has an impact on your sales. You could compare political obedience of mayors
+
+55
+00:07:19,760 --> 00:07:24,840
+of the cities of your visitors to figure out if they are more likely to be in favor of
+
+56
+00:07:24,840 --> 00:07:31,360
+a political party or not. And it's very likely that these data are open data that you can
+
+57
+00:07:31,360 --> 00:07:37,200
+find on public sources on the internet. You could also create a report comparing the size
+
+58
+00:07:37,200 --> 00:07:42,880
+of the cities of your visitors if you want to figure out if your visitors or clients
+
+59
+00:07:42,880 --> 00:07:49,320
+are more urban or more from rurality. You could also create a report with a list of
+
+60
+00:07:49,320 --> 00:07:54,360
+countries from where your visitors are, the percentage of traffic that these countries
+
+61
+00:07:54,360 --> 00:08:01,280
+drive to your website, and how they rank in the PISA survey, which would answer the question,
+
+62
+00:08:01,280 --> 00:08:06,280
+what's the level of education of my clients or visitors? And these are just ideas that
+
+63
+00:08:06,280 --> 00:08:18,320
+I gathered for this talk, but there are a lot more ideas that you can come up with,
+
+64
+00:08:18,320 --> 00:08:28,520
+because all of these ideas are based on visitors' sources and does not work with, for instance,
+
+65
+00:08:28,520 --> 00:08:34,280
+the behavior of your visitors on your website, like which pages they visit, how long do they
+
+66
+00:08:34,280 --> 00:08:39,400
+stay on your website, et cetera, which are also important information that you could
+
+67
+00:08:39,400 --> 00:08:47,120
+cross with other information to make new intelligence arise.
+
+68
+00:08:47,120 --> 00:08:58,560
+So let's take the different types of reports that already exist in Matomo. You have already
+
+69
+00:08:58,560 --> 00:09:03,640
+in the application a lot of reports that you could generate. You can have charts, bar charts,
+
+70
+00:09:03,640 --> 00:09:10,560
+line charts, pie charts, et cetera. You can have tables of data. You can have maps. But
+
+71
+00:09:10,560 --> 00:09:18,480
+if you don't find the type of report that fits your need, you have the ability to create
+
+72
+00:09:18,480 --> 00:09:28,840
+your own one. The screenshot on the right is a report generated by a plugin called TreeMap,
+
+73
+00:09:28,840 --> 00:09:35,920
+which demonstrates that you can create any type of graphical representation that fits
+
+74
+00:09:35,920 --> 00:09:43,960
+your need with the development of a custom plugin. And this is particularly interesting
+
+75
+00:09:43,960 --> 00:09:51,560
+if you want to present your information in a specific way and not stay in what Matomo
+
+76
+00:09:51,560 --> 00:09:57,400
+offers to you.
+
+77
+00:09:57,400 --> 00:10:03,840
+So know that you've defined what you want to do. You need to ask yourself, what type
+
+78
+00:10:03,840 --> 00:10:11,400
+of data do I need to generate these reports? And where will I find this data, either in
+
+79
+00:10:11,400 --> 00:10:22,660
+Matomo database or externally? So to make this presentation simple, I'll base my demonstration
+
+80
+00:10:22,660 --> 00:10:29,040
+on the plugins that I developed, which is called IP2Company, and which is available
+
+81
+00:10:29,040 --> 00:10:37,320
+on Matomo Marketplace. And the point of this plugin is to try to get the name of the company
+
+82
+00:10:37,320 --> 00:10:47,040
+of your visitors for a sales development perspective. So if you know that visitors are from, I don't
+
+83
+00:10:47,040 --> 00:10:56,960
+know, AT&T or in Europe could be arranged, could be a bank, I don't know, Societe Generale,
+
+84
+00:10:56,960 --> 00:11:05,960
+whatever it is, you can have a prescription actions afterwards and try to call them if
+
+85
+00:11:05,960 --> 00:11:13,240
+it's not already a client or follow up with an estimate that you've sent to them because
+
+86
+00:11:13,240 --> 00:11:21,120
+you see that they come on your website after a specific action towards them.
+
+87
+00:11:21,120 --> 00:11:25,680
+So in order to develop a plugin, you need to prepare your development. So what do you
+
+88
+00:11:25,680 --> 00:11:33,960
+need to prepare your developments? You need an IDE, obviously. It sounds basic, but still
+
+89
+00:11:33,960 --> 00:11:38,920
+we're talking about development. You need a fresh setup of Matomo, a good knowledge
+
+90
+00:11:38,920 --> 00:11:46,560
+of PHP, ideally Docker, because it's easier to get a fresh setup of Matomo and deploy
+
+91
+00:11:46,560 --> 00:11:58,480
+your Matomo instance afterwards. And you need Git, which is something needed if you want
+
+92
+00:11:58,480 --> 00:12:08,120
+to publish your plugin on the marketplace. So why a fresh setup on Matomo? Why not working
+
+93
+00:12:08,120 --> 00:12:15,200
+on the instance of Matomo that you already have? Because it will help you to avoid conflicts
+
+94
+00:12:15,200 --> 00:12:24,880
+with other plugins when starting your developments. And I think it's very important to be sure
+
+95
+00:12:24,880 --> 00:12:33,400
+that your plugin is working as it should in the most simple environment that you can imagine.
+
+96
+00:12:33,400 --> 00:12:40,840
+So let's start from scratch when developing a new plugin to make sure that nothing is
+
+97
+00:12:40,840 --> 00:12:47,960
+interfering with our developments. Also, it will help you to generate random data to work
+
+98
+00:12:47,960 --> 00:12:57,520
+on. So Matomo has this neat feature, which allows you to get some dummy data in the database
+
+99
+00:12:57,520 --> 00:13:05,960
+when you set up the software to be able to test the software and test your developments.
+
+100
+00:13:05,960 --> 00:13:11,920
+Also make sure that you have enough data for your tests to be relevant. So when generating
+
+101
+00:13:11,920 --> 00:13:17,800
+new data, you can choose for how many days you want to generate data and share screen
+
+102
+00:13:17,800 --> 00:13:22,560
+with you afterwards. Be at least compatible with the latest version of Matomo. This is
+
+103
+00:13:22,560 --> 00:13:30,480
+really important and one of the reasons to have a fresh setup of Matomo because the latest
+
+104
+00:13:30,480 --> 00:13:37,840
+version of Matomo ensures that you're at the state of the art in terms of features, in
+
+105
+00:13:37,840 --> 00:13:43,520
+terms of security, and you need to be at least compatible with this version. If you're also
+
+106
+00:13:43,520 --> 00:13:49,600
+compatible with previous version, it's even better. But you should consider that this
+
+107
+00:13:49,600 --> 00:13:55,720
+is the very minimum requirement for your plugin.
+
+108
+00:13:55,720 --> 00:14:05,200
+So how do we do that? The easiest way is to use Docker and create a new instance of Matomo
+
+109
+00:14:05,200 --> 00:14:14,560
+using the already packaged Docker configuration files. Once you've done that, you can use
+
+110
+00:14:14,560 --> 00:14:21,280
+the CLI of your Docker instance to enable development. And to do that, you just have
+
+111
+00:14:21,280 --> 00:14:29,800
+to run this command at the root of the project. This will add a new tab in the administration
+
+112
+00:14:29,800 --> 00:14:38,400
+menu, which is called development. And this tab will allow you to generate dummy data
+
+113
+00:14:38,400 --> 00:14:44,080
+for your website. So here you can see that you can define how many days you want to compute
+
+114
+00:14:44,080 --> 00:14:52,800
+and to add to your database. Just be careful to not create too much data because it generates
+
+115
+00:14:52,800 --> 00:15:03,840
+really a lot of data and it can take quite some time to generate too much data.
+
+116
+00:15:03,840 --> 00:15:09,120
+So once you've done that, let's begin the development of our plugin. So what are the
+
+117
+00:15:09,120 --> 00:15:19,400
+basics of a plugin? The first thing to do is to understand how Matomo works in general.
+
+118
+00:15:19,400 --> 00:15:29,320
+So you need to know that Matomo is made entirely of plugins. The core of Matomo only contains
+
+119
+00:15:29,320 --> 00:15:36,740
+tools for those plugins, so a small collection of functions that are used by the plugins.
+
+120
+00:15:36,740 --> 00:15:43,880
+But everything in Matomo is made of plugins, even Matomo itself, even what you use when
+
+121
+00:15:43,880 --> 00:15:50,560
+you are having the basic setup of Matomo. So if you want to create your own plugin,
+
+122
+00:15:50,560 --> 00:15:57,400
+you just have to run this command again at the root of the project with the name of your
+
+123
+00:15:57,400 --> 00:16:05,360
+plugin. This will generate a new folder in the plugin directory using this name with
+
+124
+00:16:05,360 --> 00:16:14,680
+a couple of files in it, and eventually you will reach to a tree of files that looks to
+
+125
+00:16:14,680 --> 00:16:22,720
+something like this. This is more or less a standard tree of files for a Matomo plugin.
+
+126
+00:16:22,720 --> 00:16:31,720
+So the two key files that are generated during plugin creation are plugin.json, which is
+
+127
+00:16:31,720 --> 00:16:37,760
+a description of your plugin, which includes metadata for the marketplace, and this file,
+
+128
+00:16:37,760 --> 00:16:43,520
+this PHP file, which is a root file of your plugin. And this root file listens to events
+
+129
+00:16:43,520 --> 00:16:53,080
+and hooks such as install, such as activation or uninstallation. The rest is not needed,
+
+130
+00:16:53,080 --> 00:17:00,920
+but without the rest, your plugin won't do much. So you will very likely have a part
+
+131
+00:17:00,920 --> 00:17:06,000
+of the rest or almost everything in this list. So getting a no need for me to describe what
+
+132
+00:17:06,000 --> 00:17:13,840
+it does, a license to describe the type of license that applies to your work, a readme
+
+133
+00:17:13,840 --> 00:17:21,240
+also to describe your project, and then we reach to more interesting stuff. API.php is
+
+134
+00:17:21,240 --> 00:17:29,520
+almost at the core of your plugin because it defines API methods for your plugin that
+
+135
+00:17:29,520 --> 00:17:35,880
+will be reachable by other plugins if needed, but more than that, that will be reachable
+
+136
+00:17:35,880 --> 00:17:42,120
+by the components of your plugin, like the reports. And this is absolutely critical to
+
+137
+00:17:42,120 --> 00:17:48,680
+have this file at the root of the project because it will contain an important part
+
+138
+00:17:48,680 --> 00:17:54,680
+of the logic of your plugin. You can also have some config files to change the way Matomo
+
+139
+00:17:54,680 --> 00:18:00,840
+use the dependency injection, some documentation that will be used in the marketplace. You
+
+140
+00:18:00,840 --> 00:18:09,520
+can have localization with languages files in this long folder. Don't forget to include
+
+141
+00:18:09,520 --> 00:18:18,760
+screenshots when publishing your plugin into Matomo marketplace. If you want to have specific
+
+142
+00:18:18,760 --> 00:18:29,000
+styles that apply to the UI, you can have stylesheets here. And then these two are important.
+
+143
+00:18:29,000 --> 00:18:35,440
+So this folder will contain the reports that you will create for your plugin. So you have
+
+144
+00:18:35,440 --> 00:18:42,920
+one PHP file for each report you want to be generated by your plugin. And you will have
+
+145
+00:18:42,920 --> 00:18:49,760
+in the updates the files that will contain the migration that will be run by your plugin.
+
+146
+00:18:49,760 --> 00:18:55,160
+So if at some point you want to add new data to the database, you will need to create a
+
+147
+00:18:55,160 --> 00:19:03,680
+migration and it will come here in the updates folder.
+
+148
+00:19:03,680 --> 00:19:10,680
+So let's start with the basis. So two files are important. I mentioned that, plugin.json
+
+149
+00:19:10,680 --> 00:19:16,400
+and the root PHP file. So let's have a look at plugin.json. What do we have in it? We
+
+150
+00:19:16,400 --> 00:19:22,880
+have a basic description of what your plugin is. So you have here the name of your plugin,
+
+151
+00:19:22,880 --> 00:19:29,040
+you have the description of your plugin, the version, the actual version of your plugin.
+
+152
+00:19:29,040 --> 00:19:38,160
+You have the root stylesheet to use, the version of Matomo that your plugin supports. You have
+
+153
+00:19:38,160 --> 00:19:45,080
+a description of your source and everything needed to contact you. If there is an issue
+
+154
+00:19:45,080 --> 00:19:52,800
+with your plugin or if people want to contribute, you can describe everything in this section.
+
+155
+00:19:52,800 --> 00:19:59,080
+You can also provide a URL to the home page of your plugin if you have a public repo or
+
+156
+00:19:59,080 --> 00:20:04,960
+a specific website for your plugin. The type of license that you use and some keywords
+
+157
+00:20:04,960 --> 00:20:11,520
+that will allow people to look for your plugin in Matomo Marketplace. So you can see that
+
+158
+00:20:11,520 --> 00:20:19,920
+this plugin.json file is very basic and does not require any technical skills. You just
+
+159
+00:20:19,920 --> 00:20:27,040
+have to provide all the information that will properly describe your plugin.
+
+160
+00:20:27,040 --> 00:20:32,080
+The next one, the PHP file, which is at the root of the project, is more interesting.
+
+161
+00:20:32,080 --> 00:20:37,840
+So we've seen that this root file allows you to listen to different events that occur during
+
+162
+00:20:37,840 --> 00:20:43,560
+the life of your plugin, like what should we do when we install the plugin, when we
+
+163
+00:20:43,560 --> 00:20:51,080
+activate the plugin, or when we install the plugin. We can also listen to events and register
+
+164
+00:20:51,080 --> 00:20:58,120
+actions corresponding to each type of event. Let's have a closer look at the different
+
+165
+00:20:58,120 --> 00:21:03,040
+events and methods that we can define.
+
+166
+00:21:03,040 --> 00:21:09,600
+If you want, for instance, which is what I did for this IP2Company plugin, create a table
+
+167
+00:21:09,600 --> 00:21:18,760
+to store data in the database. You can use this install hook to actually create the table
+
+168
+00:21:18,760 --> 00:21:23,560
+that you need. This way, when people will install the plugin, it will automatically
+
+169
+00:21:23,560 --> 00:21:35,320
+create the required table inside the database. Or if you prefer, you can do it during activation.
+
+170
+00:21:35,320 --> 00:21:44,040
+That's your decision. You decide what fits best for you. But these functions, these hooks
+
+171
+00:21:44,040 --> 00:21:51,960
+are made for that. They are made to perform automatic actions at different stages of the
+
+172
+00:21:51,960 --> 00:21:55,560
+life of your plugin.
+
+173
+00:21:55,560 --> 00:22:02,280
+On the other side, when installing your plugin, it's a good practice to drop the tables that
+
+174
+00:22:02,280 --> 00:22:10,000
+you previously created to not overload the database of your users. You generally want
+
+175
+00:22:10,000 --> 00:22:22,760
+to keep a clean database. When removing the plugin, it's a nice behavior to also remove
+
+176
+00:22:22,760 --> 00:22:23,760
+your tables.
+
+177
+00:22:23,760 --> 00:22:35,240
+Well, now just send me a message asking if there is a hook for update actions. Yes, there
+
+178
+00:22:35,240 --> 00:22:44,440
+is one. If you look at the screen in the left, oh, good question. I have activate and install
+
+179
+00:22:44,440 --> 00:22:56,880
+and register. I do not mention update in my presentation. To be truly honest, I don't
+
+180
+00:22:56,880 --> 00:23:07,040
+know, but you can find this information in the documentation of the Matamor developer
+
+181
+00:23:07,040 --> 00:23:19,640
+section. I'll post the link here. If there is something that you want to know and I don't
+
+182
+00:23:19,640 --> 00:23:24,440
+have the answer for, you can always refer to this documentation, which is really, really
+
+183
+00:23:24,440 --> 00:23:30,960
+complete. I advise you to have a look at it because there are a lot of endpoints, a lot
+
+184
+00:23:30,960 --> 00:23:36,640
+of classes that you can discover and that will also help you define what your plugin
+
+185
+00:23:36,640 --> 00:23:47,480
+can do. I don't have an exhaustive knowledge of this documentation and of what Matamor
+
+186
+00:23:47,480 --> 00:23:55,440
+offers, but you should always refer to this documentation and to the ability of Matamor
+
+187
+00:23:55,440 --> 00:24:05,840
+to be sure that you exploit all the abilities offered by this software. Thanks for your
+
+188
+00:24:05,840 --> 00:24:10,840
+question.
+
+189
+00:24:10,840 --> 00:24:18,160
+We've got our new plugin, but what does it do actually? So far, nothing. We've just set
+
+190
+00:24:18,160 --> 00:24:26,480
+up the very basic files of our plugin. Let's add some logic to our plugin. What we very
+
+191
+00:24:26,480 --> 00:24:35,360
+likely want to do is to add a report to the plugin. Reports are at the core of Matamor
+
+192
+00:24:35,360 --> 00:24:43,400
+and this is something that comes with almost every plugin. You need to decide how you want
+
+193
+00:24:43,400 --> 00:24:50,000
+your data to be displayed and the type of report you want to generate. So to create
+
+194
+00:24:50,000 --> 00:24:57,560
+a new report, you just have to run this command at the root of the project again. The difference
+
+195
+00:24:57,560 --> 00:25:02,800
+with the previous commands is that this command is an interactive one. So you will be asked
+
+196
+00:25:02,800 --> 00:25:08,520
+for the name of your report and some other additional information that will allow Matamor
+
+197
+00:25:08,520 --> 00:25:15,320
+to generate these files. Let's have a look at them.
+
+198
+00:25:15,320 --> 00:25:24,680
+So the base.php is like a base class that will allow you to define how users will access
+
+199
+00:25:24,680 --> 00:25:39,920
+to your plugin. In my case, I decided to use the main visitors tab in the main menu and
+
+200
+00:25:39,920 --> 00:25:52,200
+to put my feature in the sub menu of the visitors item. So I just have to set the category ID
+
+201
+00:25:52,200 --> 00:25:58,480
+in which I want to integrate, which is provided by Matamor to never underscore visitors. And
+
+202
+00:25:58,480 --> 00:26:07,640
+then I can extend this class with new classes like this one, GetCompanies, which will allow
+
+203
+00:26:07,640 --> 00:26:16,520
+me to provide additional information. So what do we find in this GetCompanies class? We
+
+204
+00:26:16,520 --> 00:26:30,240
+can set the name of the report. We can set the description, the subcategory of the report,
+
+205
+00:26:30,240 --> 00:26:36,360
+the order in which it appears, and also the metrics that we need and the columns that
+
+206
+00:26:36,360 --> 00:26:42,720
+we want to display in the reports. This one is important and you will see that we will
+
+207
+00:26:42,720 --> 00:26:49,600
+come back to it in a moment because these elements that you find in the columns table
+
+208
+00:26:49,600 --> 00:27:00,240
+are also used by translation functions to display nice text to the users.
+
+209
+00:27:00,240 --> 00:27:09,040
+So let's follow up and have a closer look at this report. So GetCompanies. What are
+
+210
+00:27:09,040 --> 00:27:16,320
+the methods that we can find in this GetCompanies besides the construct? So we have an important
+
+211
+00:27:16,320 --> 00:27:21,260
+one, which is ConfigureView, and I'll give you a closer look to this method afterwards.
+
+212
+00:27:21,260 --> 00:27:28,800
+You can also have GetReacted reports to display other reports at the same time than yours.
+
+213
+00:27:28,800 --> 00:27:35,960
+I don't use it for my plugin, but you can. And you can also add specific configuration
+
+214
+00:27:35,960 --> 00:27:44,960
+for the widget if you want to create one. But the real logic will stand here in the
+
+215
+00:27:44,960 --> 00:27:51,520
+ConfigureView. So let's have a look at ConfigureView. Here you are with the ConfigureView, and it's
+
+216
+00:27:51,520 --> 00:28:01,000
+pretty straightforward. So let's have a look at the different parameters that are set there.
+
+217
+00:28:01,000 --> 00:28:06,480
+If we look at it, we can see that if there is a dimension set, we can define the translation
+
+218
+00:28:06,480 --> 00:28:14,520
+to use for the label. So remember what I've said before, no dimension is set in my case,
+
+219
+00:28:14,520 --> 00:28:22,900
+but still the logic is to handle this scenario. Then I define some configuration settings.
+
+220
+00:28:22,900 --> 00:28:30,120
+So yes, I want to have a search bar in my report. Yes, I want to have pagination to
+
+221
+00:28:30,120 --> 00:28:36,960
+be able to navigate through the different pages of results. Yes, I also want to have
+
+222
+00:28:36,960 --> 00:28:46,080
+a limit of results per page. I want to show periods of time, but I'm not using a bar chart
+
+223
+00:28:46,080 --> 00:28:56,080
+nor a pie chart or tag clue report. I want to have a basic table of data which will display
+
+224
+00:28:56,080 --> 00:29:05,600
+raw data to my users. This is a very simplest scenario that you can imagine, but these settings
+
+225
+00:29:05,600 --> 00:29:12,880
+will allow you to create very different scenarios and very different types of reports. And as
+
+226
+00:29:12,880 --> 00:29:20,520
+you can see, they are very simple to change. You can also add configuration like sorting,
+
+227
+00:29:20,520 --> 00:29:29,760
+etc. And then what do I do? I just take the keys that I defined just before, these keys,
+
+228
+00:29:29,760 --> 00:29:39,400
+my columns, to replace them with actual understandable text. And I use translations for that. So we'll
+
+229
+00:29:39,400 --> 00:29:45,400
+see afterwards how to translate your plugin, but think about using these translation functions
+
+230
+00:29:45,400 --> 00:29:54,040
+each time you need to display text because this will allow you to have a localized plugin.
+
+231
+00:29:54,040 --> 00:30:02,680
+And then one important thing is to enrich your API.php file because your report needs
+
+232
+00:30:02,680 --> 00:30:10,360
+to be supported by specific functions in the API.php. The command that you've run to create
+
+233
+00:30:10,360 --> 00:30:17,240
+the report automatically added a getCompanies function to this file, but you need to define
+
+234
+00:30:17,240 --> 00:30:25,920
+the logic of this function. And in this method, what do I do? First, I check for user rights
+
+235
+00:30:25,920 --> 00:30:34,840
+to make sure that he can access to the report. Then I collect data that I want to process
+
+236
+00:30:34,840 --> 00:30:43,160
+on some parameters like the ID of the site I'm actually visiting or a specific period
+
+237
+00:30:43,160 --> 00:30:48,560
+of time. And then I process the data and we'll see afterwards what I mean by processing the
+
+238
+00:30:48,560 --> 00:30:57,560
+data. And once the data is processed, I just return an array with the same keys than the
+
+239
+00:30:57,560 --> 00:31:10,040
+ones defined in my report file and the corresponding value. This is as simple as that.
+
+240
+00:31:10,040 --> 00:31:16,200
+So do we have a functional plugin now? Yes, we do. And you could stop there if you want,
+
+241
+00:31:16,200 --> 00:31:22,440
+but obviously you will want to do many more things. So let's move a bit forward and see
+
+242
+00:31:22,440 --> 00:31:30,320
+what we can do with Matomos plugin. One thing that you will want to do is configure your
+
+243
+00:31:30,320 --> 00:31:36,640
+plugin with some settings. I'll try to move a bit to talk a bit faster because I have
+
+244
+00:31:36,640 --> 00:31:41,760
+very little time and still a lot of things to say. So there are two different types of
+
+245
+00:31:41,760 --> 00:31:52,420
+settings that you can configure. System settings, which are global to your plugin and website.
+
+246
+00:31:52,420 --> 00:31:59,240
+And user settings that you can see here that are specific to each user. So if you look
+
+247
+00:31:59,240 --> 00:32:05,720
+at system settings, in my scenario, I've defined two settings that are important for me, like
+
+248
+00:32:05,720 --> 00:32:13,680
+an access token to an external API to be able to send requests to this API and the lifetime
+
+249
+00:32:13,680 --> 00:32:20,400
+of the cache that I created with the table that I created at the installation of the
+
+250
+00:32:20,400 --> 00:32:30,480
+plugin. So adding these settings are as easy as creating two methods that will define which
+
+251
+00:32:30,480 --> 00:32:41,280
+type of data you're collecting in the access token scenario. This is a text field. And
+
+252
+00:32:41,280 --> 00:32:54,080
+in this cache lifetime, this is also a text field. Same for the user settings. You can
+
+253
+00:32:54,080 --> 00:33:01,400
+define methods to create and get the values. And in this scenario, I want to see if my
+
+254
+00:33:01,400 --> 00:33:09,120
+users want to receive my report by email on a regular basis. And it's just a Boolean that
+
+255
+00:33:09,120 --> 00:33:15,440
+I will collect. So a checkbox is fine for that. And here is the logic to get the data
+
+256
+00:33:15,440 --> 00:33:25,840
+from the database. So now that I have collected these settings from my users, how do I use
+
+257
+00:33:25,840 --> 00:33:36,520
+them? So back to the logic of our plugin. What do we want to do? We want to compare
+
+258
+00:33:36,520 --> 00:33:41,520
+the visits that we received on our website with an external API to see if we can get
+
+259
+00:33:41,520 --> 00:33:49,480
+the name of the company to which our visitors belong. So we collect the visits. We loop
+
+260
+00:33:49,480 --> 00:33:57,080
+through them. And for each visit, we get the details of the IP address. And here is the
+
+261
+00:33:57,080 --> 00:34:04,760
+get IP details method. We check in the database if we have already collected information for
+
+262
+00:34:04,760 --> 00:34:10,640
+this IP. So we use the cache that we created. And if there is no result in the database,
+
+263
+00:34:10,640 --> 00:34:19,080
+we will send a request to the external API. So it has nothing to do with our settings.
+
+264
+00:34:19,080 --> 00:34:25,840
+That's correct. But we're going to it. To be able to communicate with the external
+
+265
+00:34:25,840 --> 00:34:31,240
+API, I created a specific class called IP info, which is the name of the external service
+
+266
+00:34:31,240 --> 00:34:38,720
+that I'm using, which will handle the relation with this API. And if you look at the construct
+
+267
+00:34:38,720 --> 00:34:50,120
+method of this class, I'm calling the system settings class that I created with a specific
+
+268
+00:34:50,120 --> 00:34:58,400
+method called get value, which will allow me to get the value of the access token that
+
+269
+00:34:58,400 --> 00:35:04,920
+has been set by the user. So afterwards, I can perform some tests on this value to make
+
+270
+00:35:04,920 --> 00:35:11,320
+sure that it's not empty, et cetera. But here is a way to get the value of the settings
+
+271
+00:35:11,320 --> 00:35:18,440
+and use them. It's pretty straightforward. Two lines.
+
+272
+00:35:18,440 --> 00:35:22,560
+So other things that might interest you in the development of a plugin is how to store
+
+273
+00:35:22,560 --> 00:35:30,080
+data in the database. So back again to the logic of our plugin. So here in this get IP
+
+274
+00:35:30,080 --> 00:35:35,960
+details method that we've just seen, remember that we're checking the database to see if
+
+275
+00:35:35,960 --> 00:35:44,080
+there is an entry for this IP. And if there is one, we update the details of the entry.
+
+276
+00:35:44,080 --> 00:35:49,720
+If not, we create a new one. So how do we exactly communicate with the database? Here
+
+277
+00:35:49,720 --> 00:35:57,720
+are methods that I created to have a more readable code. But if you look at it, get
+
+278
+00:35:57,720 --> 00:36:05,600
+stored companies, it's just a call using the DB class provided by Matomo with a specific
+
+279
+00:36:05,600 --> 00:36:15,560
+method called fetch hold. And then you can pass the SQL request that you want to be performed
+
+280
+00:36:15,560 --> 00:36:27,000
+on your database. Same with insert companies. It's just a DB method from the DB class that
+
+281
+00:36:27,000 --> 00:36:34,200
+will allow you to execute some SQL that you created. So you can perform any SQL request
+
+282
+00:36:34,200 --> 00:36:40,520
+that you want. Be careful with this SQL request to sanitize your content if you're using data
+
+283
+00:36:40,520 --> 00:36:50,680
+coming from the user. Same with update. It's a DB exec again. So manipulating data in the
+
+284
+00:36:50,680 --> 00:36:56,560
+database is pretty straightforward and simple. And Matomo provides all the classes that you
+
+285
+00:36:56,560 --> 00:37:04,800
+need to do that in an easy way. You can also use an external API. We've seen that before.
+
+286
+00:37:04,800 --> 00:37:11,720
+So here is my IP info class. And in this IP info class, I have other methods that actually
+
+287
+00:37:11,720 --> 00:37:22,840
+perform requests towards this IP info API. And what does this request look like? It's
+
+288
+00:37:22,840 --> 00:37:29,880
+described here with the get request details method. And as you can see, it's a very simple
+
+289
+00:37:29,880 --> 00:37:37,520
+curl request. So you can insert in your Matomo plugin any type of logic, the same ones that
+
+290
+00:37:37,520 --> 00:37:46,120
+you used to within your PHP applications. It's just a place for you to implement what
+
+291
+00:37:46,120 --> 00:37:54,880
+really interests you and compare data stored inside Matomo with any other type of data,
+
+292
+00:37:54,880 --> 00:38:01,000
+be it from Matomo again or from external sources. So yeah, coding an external API is just a
+
+293
+00:38:01,000 --> 00:38:09,720
+basic curl request as you would do within any PHP application. Localizing your plugin
+
+294
+00:38:09,720 --> 00:38:16,280
+is something important if you want to distribute it globally. Three things are needed. A list
+
+295
+00:38:16,280 --> 00:38:23,160
+of localized files that you will very likely get from Weblight, which is a website used
+
+296
+00:38:23,160 --> 00:38:32,520
+by Matomo's team to host translations, either from the core of Matomo or from the plugins.
+
+297
+00:38:32,520 --> 00:38:38,840
+And this method to translate content based on a key, the keys that you will find in your
+
+298
+00:38:38,840 --> 00:38:48,440
+languages files. So now that you have a functional plugin, you will want to publish it in Matomo
+
+299
+00:38:48,440 --> 00:38:53,440
+Marketplace. So make sure that you're done with the development of your plugin. You've
+
+300
+00:38:53,440 --> 00:39:01,000
+seriously tested it and you're ready to offer it to the rest of the world. Sometimes you
+
+301
+00:39:01,000 --> 00:39:08,120
+also want to keep this work for yourself. But if you're ready to distribute it, Matomo's
+
+302
+00:39:08,120 --> 00:39:16,640
+Marketplace is the right place to do it. Some things are important to check before publishing
+
+303
+00:39:16,640 --> 00:39:23,120
+the plugin. Make sure that it has a unique name and does not contain some protected keywords
+
+304
+00:39:23,120 --> 00:39:29,880
+like Matomo, Puwek Analytics, et cetera. Make sure that you have a readme markdown file
+
+305
+00:39:29,880 --> 00:39:36,480
+with a description of your plugin and a plugin.json file to describe your plugin. Verify that
+
+306
+00:39:36,480 --> 00:39:42,960
+the versions of Matomo and PHP that you declare in your plugin.json file are actually compatible
+
+307
+00:39:42,960 --> 00:39:48,720
+with your plugin. Make some screenshots of your plugin and put them in the corresponding
+
+308
+00:39:48,720 --> 00:39:54,760
+folder. Put your plugin on GitHub. This is mandatory. And add a webhook to your GitHub
+
+309
+00:39:54,760 --> 00:40:01,880
+repo because each time that you will create a new tag and push it to GitHub, this webhook
+
+310
+00:40:01,880 --> 00:40:08,200
+will be called and it will automatically publish the new version of your plugin onto Matomo's
+
+311
+00:40:08,200 --> 00:40:14,480
+Marketplace. This is a very handy, easy process that Matomo's team has set up. And you just
+
+312
+00:40:14,480 --> 00:40:21,560
+have to create a tag and push it to GitHub to deploy a new version of your plugin to
+
+313
+00:40:21,560 --> 00:40:28,800
+Matomo. And then the last thing to do is to maintain
+
+314
+00:40:28,800 --> 00:40:33,920
+your plugin. So stay updated with the latest developments of Matomo to make sure that your
+
+315
+00:40:33,920 --> 00:40:41,220
+plugin is still compatible with them. Test your plugin with new versions of Matomo. Also
+
+316
+00:40:41,220 --> 00:40:46,520
+maintain a change log at the root of your project to keep track of the different changes
+
+317
+00:40:46,520 --> 00:40:53,520
+that you perform on your plugin. So this way, other developers can easily have a look at
+
+318
+00:40:53,520 --> 00:41:00,200
+what has been done and if the changes are critical or not. Ideally, you would accept
+
+319
+00:41:00,200 --> 00:41:06,100
+contributions from other developers and answer to issues. And it's very human to say that
+
+320
+00:41:06,100 --> 00:41:12,640
+you don't have time enough to maintain your plugin, but try to say it so it's clear for
+
+321
+00:41:12,640 --> 00:41:21,240
+other people where you are with this plugin. And use it for your own purposes to make sure
+
+322
+00:41:21,240 --> 00:41:27,120
+that it still fits at least your needs and ideally others' needs as well.
+
+323
+00:41:27,120 --> 00:41:34,640
+Well, that's it for this presentation. Thank you very much for your attention. And I've
+
+324
+00:41:34,640 --> 00:41:48,680
+got an interesting question for Tasman about testing. So Matomo has this test management
+
+325
+00:41:48,680 --> 00:42:00,360
+lead in its core. So you can write PHP tests using PHP unit. And you can run these tests
+
+326
+00:42:00,360 --> 00:42:10,480
+pretty easily with some commands that you will execute at the root of your project.
+
+327
+00:42:10,480 --> 00:42:18,240
+So like the rest of the content in your plugin, you can use a command to generate new tests.
+
+328
+00:42:18,240 --> 00:42:24,360
+I paste it in the chat. So here is the basic command to generate a unit test. And then
+
+329
+00:42:24,360 --> 00:42:34,360
+you can also, this will create a class with tests in it. And then you can run this test
+
+330
+00:42:34,360 --> 00:42:42,080
+by also running a simple command. So here is an example in the chat again. And more
+
+331
+00:42:42,080 --> 00:42:47,920
+globally, if you want to have more details about testing your plugin, you can refer to
+
+332
+00:42:47,920 --> 00:42:53,680
+this documentation, which is pretty complete. Not sure if it answers your question, Tasman,
+
+333
+00:42:53,680 --> 00:43:15,800
+but that's the way to do it. Any other questions? Well, it looks like everything has been asked.
+
+334
+00:43:15,800 --> 00:43:22,240
+So thank you very much for your attention. If you have questions that arise after this
+
+335
+00:43:22,240 --> 00:43:31,440
+presentation, you can still ping me on the different networks. And I think that this
+
+336
+00:43:31,440 --> 00:43:40,000
+presentation will be available on Matomo's website or Matomo's website since it has been
+
+337
+00:43:40,000 --> 00:43:47,240
+recorded. So I hope it will be useful for other people afterwards. Thank you very much
+
+338
+00:43:47,240 --> 00:44:10,240
+for your time and attention. Bye-bye.
+

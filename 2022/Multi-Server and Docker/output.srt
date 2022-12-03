@@ -1,0 +1,1208 @@
+1
+00:00:00,000 --> 00:00:11,760
+Hello and welcome to the second Matomo camp, it's really great to have everyone here again.
+
+2
+00:00:11,760 --> 00:00:17,080
+My name is Richard Stark, I'm one of the support team members here with Matomo and today we're
+
+3
+00:00:17,080 --> 00:00:22,160
+going to be talking about multi-server setups for Matomo and we're going to have a little
+
+4
+00:00:22,160 --> 00:00:28,440
+practical walkthrough on setting up Matomo with a Docker image that we can use for multi-server
+
+5
+00:00:28,440 --> 00:00:30,840
+deployments.
+
+6
+00:00:30,840 --> 00:00:34,240
+So you might be asking yourself what exactly is a multi-server setup?
+
+7
+00:00:34,240 --> 00:00:39,160
+A multi-server setup Matomo is when we have multiple different application servers and
+
+8
+00:00:39,160 --> 00:00:45,400
+multiple web servers that are all working together to serve requests, to handle tracking
+
+9
+00:00:45,400 --> 00:00:52,160
+requests or UI requests, we can have dedicated servers to run core archive command for example.
+
+10
+00:00:52,160 --> 00:00:59,240
+The goal for that is basically to have many different servers working together to handle
+
+11
+00:00:59,240 --> 00:01:00,240
+all the requests.
+
+12
+00:01:00,240 --> 00:01:05,480
+The benefit of this of course is that we can scale up these multiple different servers
+
+13
+00:01:05,480 --> 00:01:10,840
+quite easily when we have high traffic and we can scale down again and have low amounts
+
+14
+00:01:10,840 --> 00:01:11,920
+of traffic.
+
+15
+00:01:11,920 --> 00:01:18,200
+It also gives us some really great redundancy so that if a specific server has an error
+
+16
+00:01:18,200 --> 00:01:22,920
+we can quickly remove that server from the pool of servers and continue on without losing
+
+17
+00:01:22,920 --> 00:01:25,960
+much or without losing any data at all.
+
+18
+00:01:25,960 --> 00:01:30,720
+So one of the most important things when we're talking about a multi-server deployment for
+
+19
+00:01:30,720 --> 00:01:36,800
+Matomo is that we need to have the same code base deployed across all of the different
+
+20
+00:01:36,800 --> 00:01:38,340
+servers.
+
+21
+00:01:38,340 --> 00:01:44,040
+So this would be the same version of Matomo, the same plugin files and that sort of information.
+
+22
+00:01:44,040 --> 00:01:47,960
+If we have for example one server that's out of date or we have one server that doesn't
+
+23
+00:01:47,960 --> 00:01:51,340
+have the same plugins that the rest of the servers are, it's going to be serving the
+
+24
+00:01:51,340 --> 00:01:54,440
+wrong version of the Matomo tracking code.
+
+25
+00:01:54,440 --> 00:01:58,440
+It might not be able to process all of the tracking requests that we send to that server
+
+26
+00:01:58,440 --> 00:02:01,740
+so it could cause some data loss as well.
+
+27
+00:02:01,740 --> 00:02:07,120
+So apart from the code base there are some other files that we also want to synchronize.
+
+28
+00:02:07,120 --> 00:02:12,480
+These are files such as our config files, it's something that we would expect to edit
+
+29
+00:02:12,480 --> 00:02:17,520
+from time to time so we wouldn't have to want to have to go through a redeployment
+
+30
+00:02:17,520 --> 00:02:21,720
+every time we change the config file so that's not something that we would want to bake into
+
+31
+00:02:21,720 --> 00:02:24,640
+our deployment image.
+
+32
+00:02:24,640 --> 00:02:29,440
+The other thing as well is custom user files so these are things like your favicon or your
+
+33
+00:02:29,440 --> 00:02:30,440
+logo.
+
+34
+00:02:30,440 --> 00:02:34,080
+If you change that through the UI obviously you want to make sure that that is synchronized
+
+35
+00:02:34,080 --> 00:02:37,720
+across all of the different servers.
+
+36
+00:02:37,720 --> 00:02:41,040
+There are some things that we also need to do in a multi-server environment in terms
+
+37
+00:02:41,040 --> 00:02:45,960
+of configuration so we'll have a look at those configuration settings further on when we're
+
+38
+00:02:45,960 --> 00:02:50,120
+busy with the setup.
+
+39
+00:02:50,120 --> 00:02:52,880
+We're going to be using a couple different tools today.
+
+40
+00:02:52,880 --> 00:02:54,720
+One of those tools obviously is Docker.
+
+41
+00:02:54,720 --> 00:03:00,840
+We need to have Docker installed server or device that we're going to be using this on.
+
+42
+00:03:00,840 --> 00:03:05,720
+The other thing that we're going to be using today is Portainer CE, Portainer Community
+
+43
+00:03:05,720 --> 00:03:07,720
+Edition.
+
+44
+00:03:07,720 --> 00:03:11,760
+It's a really nice graphical user interface that we can use to make our lives a little
+
+45
+00:03:11,760 --> 00:03:12,760
+bit easier.
+
+46
+00:03:12,760 --> 00:03:15,080
+It's also a little bit easier to do a video on.
+
+47
+00:03:15,080 --> 00:03:19,440
+Not many people want to spend 30 to 40 minutes staring at a terminal screen so we're going
+
+48
+00:03:19,440 --> 00:03:21,360
+to be using the graphical user interface.
+
+49
+00:03:21,360 --> 00:03:26,060
+The benefit of this as well is it's quite similar to a lot of other container or Docker
+
+50
+00:03:26,060 --> 00:03:32,920
+orchestration tools that you'll probably be familiar with in other systems as well.
+
+51
+00:03:32,920 --> 00:03:39,700
+So we'll start off by going to the containers and we'll create a new container.
+
+52
+00:03:39,700 --> 00:03:44,760
+So for the name we'll just give this Tomo for now and then for the Docker image we want
+
+53
+00:03:44,760 --> 00:03:50,200
+to set this to Tomo Latest Version.
+
+54
+00:03:50,200 --> 00:03:54,360
+We'll scroll down here to the bottom and we'll set up a bind mount.
+
+55
+00:03:54,360 --> 00:04:00,720
+Now this bind mount is specifically done so that we can synchronize our config file.
+
+56
+00:04:00,720 --> 00:04:06,040
+So for now what we'll do is we'll put the location of a folder beside the container
+
+57
+00:04:06,040 --> 00:04:08,600
+that we know is going to exist.
+
+58
+00:04:08,600 --> 00:04:13,400
+It's not going to be something that is deleted if we volume or something like that.
+
+59
+00:04:13,400 --> 00:04:18,240
+So that that file can exist so we can create a similar link for it later on in the process.
+
+60
+00:04:18,240 --> 00:04:24,200
+Then for the host portion this is going to be wherever you have your config file set
+
+61
+00:04:24,200 --> 00:04:25,920
+up on a network share.
+
+62
+00:04:25,920 --> 00:04:31,560
+So this could be for example an FF share, it could be some other type of shared network
+
+63
+00:04:31,560 --> 00:04:33,040
+location.
+
+64
+00:04:33,040 --> 00:04:35,840
+In the example today there is no config file present.
+
+65
+00:04:35,840 --> 00:04:40,800
+We're going to be creating that config file but if you already have a config file set
+
+66
+00:04:40,800 --> 00:04:47,480
+up for Tomo with your database and everything configured you can reuse that existing configuration
+
+67
+00:04:47,480 --> 00:04:48,480
+file.
+
+68
+00:04:48,480 --> 00:04:52,560
+And then to make life a little bit easier with the setup today we're just going to
+
+69
+00:04:52,560 --> 00:04:58,960
+change the network to host and click deploy container.
+
+70
+00:04:58,960 --> 00:05:04,720
+Once that is running we'll click on the little icon over here that looks like a console.
+
+71
+00:05:04,720 --> 00:05:09,400
+That's so that we can execute into the container so we can run a couple of mounts.
+
+72
+00:05:09,400 --> 00:05:13,960
+We'll leave everything as default here to connect as the root user.
+
+73
+00:05:13,960 --> 00:05:18,040
+And the first thing that we're going to do is we're going to run an apt update.
+
+74
+00:05:18,040 --> 00:05:21,400
+This is so that we can install a couple of other tools that we're going to be using
+
+75
+00:05:21,400 --> 00:05:27,320
+during the process today and those tools are cron, unzip and nano so that we can edit a
+
+76
+00:05:27,320 --> 00:05:28,520
+couple of files.
+
+77
+00:05:28,520 --> 00:05:34,040
+So we'll hit yes there when that asks us to and we'll give that a minute to shut
+
+78
+00:05:34,040 --> 00:05:39,880
+installing.
+
+79
+00:05:39,880 --> 00:05:43,920
+Next we're going to change the directory of where we are right now from the working
+
+80
+00:05:43,920 --> 00:05:49,460
+directory for the mitomo codebase to the source directory for the mitomo codebase.
+
+81
+00:05:49,460 --> 00:05:52,080
+And then we're going to download a script file.
+
+82
+00:05:52,080 --> 00:05:56,360
+This script file is specifically so that we can automate the process of downloading all
+
+83
+00:05:56,360 --> 00:05:58,640
+of the different plugins.
+
+84
+00:05:58,640 --> 00:06:03,800
+Once that is downloaded we'll do a chmod command to make that file executable.
+
+85
+00:06:03,800 --> 00:06:06,240
+And then we'll edit that file.
+
+86
+00:06:06,240 --> 00:06:11,160
+Alright, so what we want to do is we want to grab our license key.
+
+87
+00:06:11,160 --> 00:06:15,960
+In that third line where it shows license key is to just paste that into the file.
+
+88
+00:06:15,960 --> 00:06:22,320
+Hit control O to save and control X to exit.
+
+89
+00:06:22,320 --> 00:06:27,560
+Once that is done we have our file placed or our license key placed into the file.
+
+90
+00:06:27,560 --> 00:06:30,200
+We'll run the script file.
+
+91
+00:06:30,200 --> 00:06:35,160
+So the benefit of using the Docker image in this case is we have access to that environment
+
+92
+00:06:35,160 --> 00:06:39,720
+variable so we can make sure that when we run this command or if you eventually copy
+
+93
+00:06:39,720 --> 00:06:44,600
+paste this command into your Docker container you can be 100% certain that you're getting
+
+94
+00:06:44,600 --> 00:06:51,280
+the correct version of plugins for the version of mitomo that you are running.
+
+95
+00:06:51,280 --> 00:06:56,960
+The plugins that it's downloading here specifically are the premium bundle plugins as well as
+
+96
+00:06:56,960 --> 00:07:01,200
+a couple of the extra optional plugins that we recommend having installed.
+
+97
+00:07:01,200 --> 00:07:06,920
+If you do not have a premium bundle plugin license you will need to edit the script so
+
+98
+00:07:06,920 --> 00:07:08,760
+that you can move those files.
+
+99
+00:07:08,760 --> 00:07:12,960
+If you have some other optional files or optional plugins that you do want to install that are
+
+100
+00:07:12,960 --> 00:07:18,720
+not included in that script you can also edit those in and add them to the script file.
+
+101
+00:07:18,720 --> 00:07:23,840
+Next we're going to move all of the plugins that we've just downloaded into the correct
+
+102
+00:07:23,840 --> 00:07:29,680
+directory and we'll clean up behind ourselves and just remove some of those empty folders
+
+103
+00:07:29,680 --> 00:07:35,720
+and that script file because we're not going to need that script file anymore.
+
+104
+00:07:35,720 --> 00:07:41,280
+Next we're going to be setting up a crontab for the www data user.
+
+105
+00:07:41,280 --> 00:07:47,320
+The first crontab that we're going to set up is specifically for the custom js update
+
+106
+00:07:47,320 --> 00:07:48,520
+command.
+
+107
+00:07:48,520 --> 00:07:53,120
+So it might sound strange to say I don't have any custom js on my server.
+
+108
+00:07:53,120 --> 00:07:58,400
+What this command does is that every minute on the minute it runs this command to update
+
+109
+00:07:58,400 --> 00:08:04,920
+the Matomo.js file so that it has all of the correct tracking code for all of the plugins
+
+110
+00:08:04,920 --> 00:08:06,800
+that you have installed.
+
+111
+00:08:06,800 --> 00:08:10,760
+A lot of the plugins and especially some of the premium plugins are designed in a way
+
+112
+00:08:10,760 --> 00:08:15,760
+that if you're not using them, if you're not tracking any data for them, they're not
+
+113
+00:08:15,760 --> 00:08:22,280
+going to add their tracking code to the Matomo.js file just to keep that file as small as possible.
+
+114
+00:08:22,280 --> 00:08:27,840
+This is specifically the case for things like the eat maps or session recordings and we
+
+115
+00:08:27,840 --> 00:08:32,520
+also want to do a similar sort of crontab for the tag manager.
+
+116
+00:08:32,520 --> 00:08:38,600
+This is important because if you edit a tag manager container through the UI and you click
+
+117
+00:08:38,600 --> 00:08:43,920
+update or save or publish, that command is only going to be executed on the server that
+
+118
+00:08:43,920 --> 00:08:46,760
+you are directly connected to through the UI.
+
+119
+00:08:46,760 --> 00:08:51,040
+So this will make sure that those container files are updated across all of the different
+
+120
+00:08:51,040 --> 00:08:53,680
+servers continuously.
+
+121
+00:08:53,680 --> 00:08:58,920
+Once that's done, we'll hit control O to save and we'll hit control X.
+
+122
+00:08:58,920 --> 00:09:03,840
+Next, we want to download our geolocation database.
+
+123
+00:09:03,840 --> 00:09:07,400
+Again, we're going to make some use of some environment variables just to make our lives
+
+124
+00:09:07,400 --> 00:09:13,280
+a little bit easier when you copy pasting these commands and we'll download that.
+
+125
+00:09:13,280 --> 00:09:22,200
+Next, we're going to unzip that file and we will rename the file and move it to the correct
+
+126
+00:09:22,200 --> 00:09:24,400
+folder.
+
+127
+00:09:24,400 --> 00:09:32,360
+Now that that is done, we have a mostly working code base that we can use for Matomo.
+
+128
+00:09:32,360 --> 00:09:49,880
+And what we'll do is we'll connect directly to that Matomo server.
+
+129
+00:09:49,880 --> 00:09:52,560
+Looks like we're connected to HTTPS there.
+
+130
+00:09:52,560 --> 00:09:58,960
+All right, now we're going to be going through the database creation setup for Matomo.
+
+131
+00:09:58,960 --> 00:10:03,040
+So we'll go through our system check over here.
+
+132
+00:10:03,040 --> 00:10:05,800
+Everything looks good.
+
+133
+00:10:05,800 --> 00:10:10,680
+For the database, this is hosted on the same host as the Docker installation, so we'll
+
+134
+00:10:10,680 --> 00:10:12,480
+leave everything as default.
+
+135
+00:10:12,480 --> 00:10:17,960
+This is going to be different depending on how you have things set up.
+
+136
+00:10:17,960 --> 00:10:25,640
+Server, so we'll type our password in there, our database name, and then you can select
+
+137
+00:10:25,640 --> 00:10:34,240
+your data table prefix over here, click next, and have the database installation done in
+
+138
+00:10:34,240 --> 00:10:40,200
+just a couple of seconds.
+
+139
+00:10:40,200 --> 00:11:02,640
+It seems to be taking its time today.
+
+140
+00:11:02,640 --> 00:11:04,520
+There we go.
+
+141
+00:11:04,520 --> 00:11:07,360
+Oh, it's taking us back to the start of the thing.
+
+142
+00:11:07,360 --> 00:11:10,640
+I'm not sure what happened there.
+
+143
+00:11:10,640 --> 00:11:18,080
+We'll just go through that step again and see if we can get things working.
+
+144
+00:11:18,080 --> 00:11:32,440
+Let's see if we can get it going second time.
+
+145
+00:11:32,440 --> 00:11:49,520
+Type our password, select Matomo database, and today, let's give this a different table
+
+146
+00:11:49,520 --> 00:11:58,000
+prefix just in case something already triggered on the previous install, that just a second.
+
+147
+00:11:58,000 --> 00:11:59,760
+There we go.
+
+148
+00:11:59,760 --> 00:12:00,760
+Tables are created.
+
+149
+00:12:00,760 --> 00:12:05,400
+Now, we do need to go through the setup process because this is a new install of setting up
+
+150
+00:12:05,400 --> 00:12:08,400
+the superuser.
+
+151
+00:12:08,400 --> 00:12:25,120
+We can sign up to Newsletter if you want to, do that for this fake email address, and then
+
+152
+00:12:25,120 --> 00:12:32,960
+we will give our new website a name and time zone.
+
+153
+00:12:32,960 --> 00:12:40,240
+All right, now that this is set up, we just need to ask a couple of steps to make sure
+
+154
+00:12:40,240 --> 00:12:46,360
+that everything is working.
+
+155
+00:12:46,360 --> 00:12:54,760
+All right, so that is working, so we can go back to our retainer page over here, and what
+
+156
+00:12:54,760 --> 00:12:59,280
+we're going to do now is we're going to move the configuration file that has just been
+
+157
+00:12:59,280 --> 00:13:04,600
+created, the working directory for Matomo, into the source directory that we were talking
+
+158
+00:13:04,600 --> 00:13:05,600
+about here.
+
+159
+00:13:05,600 --> 00:13:14,280
+All right, once that is done, we're going to edit the entry script, entry point script
+
+160
+00:13:14,280 --> 00:13:17,440
+specifically for the Docker container.
+
+161
+00:13:17,440 --> 00:13:25,960
+This is so that we can run a symlink command specifically for when the Docker container
+
+162
+00:13:25,960 --> 00:13:28,160
+starts up.
+
+163
+00:13:28,160 --> 00:13:34,280
+So we'll copy that symlink command directly to the file, and then we'll hit Ctrl-O to
+
+164
+00:13:34,280 --> 00:13:37,360
+save, Ctrl-X to exit.
+
+165
+00:13:37,360 --> 00:13:43,760
+Next, we're going to edit the config file that we've just moved to the source location,
+
+166
+00:13:43,760 --> 00:13:50,320
+and we're going to install some of those, or going to set up some of those config options
+
+167
+00:13:50,320 --> 00:13:52,440
+that we were talking about earlier.
+
+168
+00:13:52,440 --> 00:13:56,800
+The first config option that we're going to do is to be able to tell Matomo that we're
+
+169
+00:13:56,800 --> 00:13:59,480
+working with a multi-server environment.
+
+170
+00:13:59,480 --> 00:14:04,440
+What this does is in a lot of the places where it would be enabled by default, it tries to
+
+171
+00:14:04,440 --> 00:14:09,080
+prevent Matomo from writing to the config file very often.
+
+172
+00:14:09,080 --> 00:14:14,040
+It also disables certain options that wouldn't normally work in a multi-server environment
+
+173
+00:14:14,040 --> 00:14:17,160
+just to prevent any sorts of issues.
+
+174
+00:14:17,160 --> 00:14:22,100
+The next thing that we also want to do is we want to disable the plugin administration
+
+175
+00:14:22,100 --> 00:14:23,760
+option.
+
+176
+00:14:23,760 --> 00:14:29,320
+Because we're running on a multi-server environment for Matomo, we cannot install or activate
+
+177
+00:14:29,320 --> 00:14:31,800
+or deactivate plugins through the UI.
+
+178
+00:14:31,800 --> 00:14:38,080
+We need to do that through the command line, because it also is going to require us to
+
+179
+00:14:38,080 --> 00:14:44,440
+edit our base image and to do a redeployment of the entire cluster.
+
+180
+00:14:44,440 --> 00:14:48,740
+The next one that we're also going to disable is we're going to disable the auto-update.
+
+181
+00:14:48,740 --> 00:14:51,240
+This is the same principle as the plugins.
+
+182
+00:14:51,240 --> 00:14:57,280
+We don't want to accidentally click the update button, and then we have one Docker container
+
+183
+00:14:57,280 --> 00:15:00,080
+that is updated, and the rest of them are outdated.
+
+184
+00:15:00,080 --> 00:15:02,040
+That can cause some serious issues.
+
+185
+00:15:02,040 --> 00:15:07,760
+The next one that we also want to disable is the general settings administration.
+
+186
+00:15:07,760 --> 00:15:12,040
+This is things where you'd set, for example, your trusted host names, things like that.
+
+187
+00:15:12,040 --> 00:15:15,800
+We don't want to be editing the config file through the UI.
+
+188
+00:15:15,800 --> 00:15:20,720
+Whenever we do that, we want to be editing the file that is set up in our shared network
+
+189
+00:15:20,720 --> 00:15:21,720
+location.
+
+190
+00:15:21,720 --> 00:15:28,080
+All right, now that that is done, we'll hit Control-O and enter to save, Control-X to
+
+191
+00:15:28,080 --> 00:15:30,400
+exit.
+
+192
+00:15:30,400 --> 00:15:33,600
+Once that is done, we're just going to change the owner of that file to make sure that we
+
+193
+00:15:33,600 --> 00:15:39,280
+don't run into any permissions issue further down the road.
+
+194
+00:15:39,280 --> 00:15:44,960
+Now that that is done, we're going to switch over to our terminal or to our SSH section,
+
+195
+00:15:44,960 --> 00:15:48,200
+and we're going to run a Docker commit command.
+
+196
+00:15:48,200 --> 00:15:54,080
+This is simply a Docker commit, Tomo.
+
+197
+00:15:54,080 --> 00:15:59,800
+This is the name of the container that is currently running, and then this is the name
+
+198
+00:15:59,800 --> 00:16:02,760
+of the Docker image that we're committing the changes to.
+
+199
+00:16:02,760 --> 00:16:05,800
+In this case, we'll just give it a name, something like Tomo Premium.
+
+200
+00:16:05,800 --> 00:16:09,000
+That should take just a second.
+
+201
+00:16:09,000 --> 00:16:15,800
+All right, now we have our Docker image configured and set up with all of the code base files
+
+202
+00:16:15,800 --> 00:16:20,760
+that we need, as well as our geolocation database for Tomo.
+
+203
+00:16:20,760 --> 00:16:30,000
+We will switch back to our Portainer, go to the containers, and we can now shut down this
+
+204
+00:16:30,000 --> 00:16:34,400
+running Tomo Docker container.
+
+205
+00:16:34,400 --> 00:16:38,640
+Now when we start up the new container, we'll be using the brand new container that we've
+
+206
+00:16:38,640 --> 00:16:40,920
+just made all the changes to.
+
+207
+00:16:40,920 --> 00:16:44,520
+So I went and skipped a bit of a step there, but if we go have a look at the images over
+
+208
+00:16:44,520 --> 00:16:49,480
+here, you'll see that we now have a new image named Tomo Premium.
+
+209
+00:16:49,480 --> 00:16:52,500
+So this is a locally stored image.
+
+210
+00:16:52,500 --> 00:16:56,240
+If you wanted to deploy this to different servers, what you'd need to do is you'd
+
+211
+00:16:56,240 --> 00:16:58,800
+need to copy that image file.
+
+212
+00:16:58,800 --> 00:17:02,640
+If you're using Portainer, you can select the box over here, and you can click Export,
+
+213
+00:17:02,640 --> 00:17:07,800
+and that will export that container image, and you can use that to copy onto your different
+
+214
+00:17:07,800 --> 00:17:10,540
+servers that are running Docker.
+
+215
+00:17:10,540 --> 00:17:15,360
+If you have a private Docker repository or Docker image repository, you can also upload
+
+216
+00:17:15,360 --> 00:17:21,160
+that there so that you can make it a little bit easier for your deployments.
+
+217
+00:17:21,160 --> 00:17:25,240
+So we'll go back to those containers over there, and we'll add a new container.
+
+218
+00:17:25,240 --> 00:17:29,200
+So we'll give it a name that's different to the one that's already running, so we'll
+
+219
+00:17:29,200 --> 00:17:32,800
+just keep it consistent and go for Tomo Premium.
+
+220
+00:17:32,800 --> 00:17:39,360
+Also change to advanced mode over here, because we're not using an image from a Docker repository,
+
+221
+00:17:39,360 --> 00:17:41,160
+we want to use the local image.
+
+222
+00:17:41,160 --> 00:17:48,840
+So we'll name that one Tomo Premium as well, add the tag there for latest.
+
+223
+00:17:48,840 --> 00:17:51,080
+Now we'll scroll down here to the bottom for the volumes.
+
+224
+00:17:51,080 --> 00:17:53,980
+Now we want to mount two different volumes.
+
+225
+00:17:53,980 --> 00:17:58,880
+One of those volumes is going to be our config file, so this is going to be exactly the same
+
+226
+00:17:58,880 --> 00:18:01,640
+way that we set it up previously.
+
+227
+00:18:01,640 --> 00:18:08,320
+This is the config file in the source folder, and this is the location of the config file
+
+228
+00:18:08,320 --> 00:18:10,960
+on the NFS share.
+
+229
+00:18:10,960 --> 00:18:15,920
+And the second file that we want to set up on the network share is the user folder.
+
+230
+00:18:15,920 --> 00:18:20,360
+This is the one that contains all of our user custom images and fabricants and things like
+
+231
+00:18:20,360 --> 00:18:23,160
+that.
+
+232
+00:18:23,160 --> 00:18:32,800
+And this example, we'll set it up on host and we'll hit deploy container.
+
+233
+00:18:32,800 --> 00:18:36,680
+Shouldn't take too long to deploy, so that's done.
+
+234
+00:18:36,680 --> 00:18:42,640
+We can hit refresh on our page over here just to see if the Tomo server is up and running.
+
+235
+00:18:42,640 --> 00:18:45,400
+Great, so that's all working perfectly.
+
+236
+00:18:45,400 --> 00:18:50,400
+So what we're going to do again is we're going to execute into the container, but this time
+
+237
+00:18:50,400 --> 00:18:52,720
+we're going to connect as a different user.
+
+238
+00:18:52,720 --> 00:18:56,560
+We want to connect as the www data user.
+
+239
+00:18:56,560 --> 00:19:02,200
+It's important that whenever we execute any commands on the Docker container or any Tomo
+
+240
+00:19:02,200 --> 00:19:06,880
+server in general, that if we're executing a console command or if we're changing files,
+
+241
+00:19:06,880 --> 00:19:13,320
+we need to do it as the correct user, otherwise we could face some pretty nasty permissions
+
+242
+00:19:13,320 --> 00:19:14,800
+issues.
+
+243
+00:19:14,800 --> 00:19:19,800
+So the first command that we're going to do is we're going to be setting our license key
+
+244
+00:19:19,800 --> 00:19:25,400
+for the Tomo marketplace so that we can activate all of our plugins.
+
+245
+00:19:25,400 --> 00:19:30,040
+So we'll run that one and right, great, that's all set up.
+
+246
+00:19:30,040 --> 00:19:36,760
+And now it comes to a fairly important part about a multi-server setup for Tomo and that
+
+247
+00:19:36,760 --> 00:19:41,440
+is how to activate a plugin in a multi-server environment.
+
+248
+00:19:41,440 --> 00:19:46,320
+As I mentioned earlier on, you can't just activate a plugin through the UI, so it has
+
+249
+00:19:46,320 --> 00:19:48,560
+to be done through the console command.
+
+250
+00:19:48,560 --> 00:19:52,760
+Now the benefit of going through all the steps that we've just gone through for setting up
+
+251
+00:19:52,760 --> 00:19:57,920
+the container, we make sure that all of our plugin files are consistent between all of
+
+252
+00:19:57,920 --> 00:20:00,000
+the different servers.
+
+253
+00:20:00,000 --> 00:20:04,680
+We have our config file synchronized, so when we have all of that ready and we want to activate
+
+254
+00:20:04,680 --> 00:20:10,920
+that new plugin, we can just run that console plugin activate command.
+
+255
+00:20:10,920 --> 00:20:16,820
+So this one specifically, it's a short little script that we're just going to execute directly
+
+256
+00:20:16,820 --> 00:20:19,640
+in the console.
+
+257
+00:20:19,640 --> 00:20:24,360
+So this is just going to go through that list of plugins that we had set up earlier that
+
+258
+00:20:24,360 --> 00:20:26,800
+was downloaded and activate them.
+
+259
+00:20:26,800 --> 00:20:30,840
+There's a couple of other plugins such as the Tag Manager plugin that we want to make
+
+260
+00:20:30,840 --> 00:20:38,400
+sure is active because it might not be activated by default in Tomo server.
+
+261
+00:20:38,400 --> 00:20:43,600
+Right, that's running now.
+
+262
+00:20:43,600 --> 00:20:49,160
+So this is a good point to really talk about how important it is to keep this synchronized.
+
+263
+00:20:49,160 --> 00:20:52,720
+That's kind of the most important thing that if you don't take anything else away from
+
+264
+00:20:52,720 --> 00:20:57,200
+this talk, the most important thing to understand for a multi-server environment is that we
+
+265
+00:20:57,200 --> 00:21:04,160
+need to have same code base synchronized across all of the different servers.
+
+266
+00:21:04,160 --> 00:21:10,080
+Because we're connecting to the same database in the backend, if we have servers that are
+
+267
+00:21:10,080 --> 00:21:13,640
+differently configured or they have different plugins and they try to activate them and
+
+268
+00:21:13,640 --> 00:21:17,600
+deactivate them, we can very quickly run into some major issues.
+
+269
+00:21:17,600 --> 00:21:22,160
+And the problem with those sorts of issues is they usually show themselves in the form
+
+270
+00:21:22,160 --> 00:21:29,040
+of lost data or serious issues when you try to connect or pull reports from your instance
+
+271
+00:21:29,040 --> 00:21:30,240
+or track some data.
+
+272
+00:21:30,240 --> 00:21:34,840
+Things are just not going to go right.
+
+273
+00:21:34,840 --> 00:21:50,640
+So we'll give it another minute over here to activate the plugins.
+
+274
+00:21:50,640 --> 00:21:56,680
+If you're doing this on an existing Tomo server, it can take quite a bit of time.
+
+275
+00:21:56,680 --> 00:22:00,640
+The larger the database is, the longer it's going to take to activate new plugins.
+
+276
+00:22:00,640 --> 00:22:05,000
+The reason for that is that it often has to make some schema changes to some of the existing
+
+277
+00:22:05,000 --> 00:22:10,440
+tables and it's also makes some links, some farm keys, primary keys, things like that.
+
+278
+00:22:10,440 --> 00:22:19,440
+That in a lot of cases, if you have a very large database, it just takes a lot of time.
+
+279
+00:22:19,440 --> 00:22:24,920
+Should be the last one there.
+
+280
+00:22:24,920 --> 00:22:29,080
+Great.
+
+281
+00:22:29,080 --> 00:22:30,360
+That is the last one in our list.
+
+282
+00:22:30,360 --> 00:22:35,760
+So we'll go back to the Tomo dashboard over here and we'll just make sure that everything
+
+283
+00:22:35,760 --> 00:22:36,760
+is working.
+
+284
+00:22:36,760 --> 00:22:40,520
+We don't have any issues.
+
+285
+00:22:40,520 --> 00:22:44,800
+Also go to our settings and have a look at all of the plugins or some of the plugins
+
+286
+00:22:44,800 --> 00:22:46,800
+that we've configured.
+
+287
+00:22:46,800 --> 00:22:50,560
+Are they set up correctly in the back end of Tomo?
+
+288
+00:22:50,560 --> 00:22:54,560
+All right, great.
+
+289
+00:22:54,560 --> 00:22:57,040
+So we've got our search performance over here.
+
+290
+00:22:57,040 --> 00:22:59,520
+We have some other options as well.
+
+291
+00:22:59,520 --> 00:23:00,800
+All right, great.
+
+292
+00:23:00,800 --> 00:23:05,960
+So this looks like everything is set up correctly.
+
+293
+00:23:05,960 --> 00:23:08,640
+Thank you so much for joining us today.
+
+294
+00:23:08,640 --> 00:23:10,960
+It's really great for you guys to have joined us.
+
+295
+00:23:10,960 --> 00:23:15,800
+I will be sticking around in the chat afterwards as well if you guys have any questions for
+
+296
+00:23:15,800 --> 00:23:16,800
+me.
+
+297
+00:23:16,800 --> 00:23:17,800
+You're more than welcome to ask.
+
+298
+00:23:17,800 --> 00:23:21,120
+You're also more than welcome to, if you're watching or recording this, send us an email
+
+299
+00:23:21,120 --> 00:23:27,040
+over to support at matomo.org and just mention that you'd like to chat to Richard and I'm
+
+300
+00:23:27,040 --> 00:23:30,320
+sure he'll be able to get to some of those emails at some point in the future.
+
+301
+00:23:30,320 --> 00:23:33,440
+Hope you guys have a great Mitsuama camp further.
+
+302
+00:23:33,440 --> 00:23:58,160
+Bye.
+

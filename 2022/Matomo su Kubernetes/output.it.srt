@@ -1,0 +1,1696 @@
+1
+00:00:00,000 --> 00:00:07,000
+Sì, ciao Massimo, mi senti?
+
+2
+00:00:07,000 --> 00:00:10,000
+Ah perfetto, grazie Ronan.
+
+3
+00:00:10,000 --> 00:00:18,200
+No, no, è solo che da parte nostra abbiamo capito che infatti facciamo, giochiamo la
+
+4
+00:00:18,200 --> 00:00:26,080
+video che hai mandato a noi e quindi facciamo il streaming e poi prendiamo infatti tutte
+
+5
+00:00:26,080 --> 00:00:33,080
+le domande che ricevamo sul chat. Volevi fare in un'altra maniera?
+
+6
+00:00:33,080 --> 00:00:36,080
+No, perfetto, grazie.
+
+7
+00:00:36,080 --> 00:00:47,080
+Ok, quindi non diciamo più nulla, dico solo a Lucas di giocare la video, non so se dice così, però...
+
+8
+00:00:47,080 --> 00:00:51,080
+Salute e ringraziamenti per aver accolto gli inviti a seguire questa sessione in italiano.
+
+9
+00:00:51,080 --> 00:00:58,080
+Mi chiamo Massimo Campone, mi occupo professionalmente di informatica dal 1990, dal 1996 sono focalizzato
+
+10
+00:00:58,080 --> 00:01:02,080
+su internet. In questi decenni ho accumulato esperienze molto diverse dallo sviluppo di
+
+11
+00:01:02,080 --> 00:01:07,080
+gestionali all'imprenditoria, alla gestione sistemistica in piccole e medie imprese.
+
+12
+00:01:07,080 --> 00:01:12,080
+Ho piacere di supportare la diffusione di software che rientra nella denominazione FOSS, Free
+
+13
+00:01:12,080 --> 00:01:18,080
+Open Source Software, con codice pubblico e manutenuto dalla comunità e senza costi di
+
+14
+00:01:18,080 --> 00:01:23,080
+licenza diretti. Tutta questa demo è stata registrata e montata con strumenti open source
+
+15
+00:01:23,080 --> 00:01:29,080
+gratuiti, quindi progetti come Matomo. Matomo offre la possibilità di fare tracking web
+
+16
+00:01:29,080 --> 00:01:34,080
+senza che i dati siano ceduti a terze parti. Inoltre le stesse dati possono risiedere in Europa
+
+17
+00:01:34,080 --> 00:01:40,080
+e quindi soddisfare i requisiti richiesti dalle normative di privacy e GDPR. Nella versione
+
+18
+00:01:40,080 --> 00:01:44,080
+on-premise che vediamo oggi ci si assicura che nessun altro soggetto possa avere accesso
+
+19
+00:01:44,080 --> 00:01:49,080
+ai nostri dati oltre che sia la capacità di anonymizzarli per garantire un'assenza di
+
+20
+00:01:49,080 --> 00:01:54,080
+profilazione al di fuori dell'uso statistico. Voglio sottolineare che ci sono molti modi
+
+21
+00:01:54,080 --> 00:01:58,080
+per arrivare al medesimo obiettivo di installazione, configurazione e manutenzione di una piattaforma
+
+22
+00:01:58,080 --> 00:02:03,080
+di servizio, che dipendono dalle dimensioni da affrontare e dalla logistica all'interno
+
+23
+00:02:03,080 --> 00:02:08,080
+dell'azienda, per esempio se esistono sviluppatori che utilizzano metodologie DevOps per la
+
+24
+00:02:08,080 --> 00:02:14,080
+gestione della catena CI-CD. È ovvio che un sistemista non ha bisogno di una demo come
+
+25
+00:02:14,080 --> 00:02:18,080
+questa per poter installare, fa sicuramente meglio di me. Esattamente la destinazione
+
+26
+00:02:18,080 --> 00:02:23,080
+di questo breve incontro che sottolineo non è un corso ma è un pretesto per suggerire
+
+27
+00:02:23,080 --> 00:02:28,080
+dare l'avvio all'uso di Matomo in una piattaforma di produzione, come quella di servizi managed
+
+28
+00:02:28,080 --> 00:02:33,080
+Kubernetes, ma che rimane scarabile e poter affrontare un livello di produzione. Vorrei
+
+29
+00:02:33,080 --> 00:02:38,080
+far avvicinare proprio quel pubblico di piccole e medie imprese che in Italia sono la percentuale
+
+30
+00:02:38,080 --> 00:02:43,080
+maggiore, quindi le agenzie e le aziende che vogliono tornare in possesso di una propria
+
+31
+00:02:43,080 --> 00:02:48,080
+autonomia sul tracking, oltre che per slegarsi dai grandi gruppi commerciali, e rintrarne
+
+32
+00:02:48,080 --> 00:02:53,080
+nei requisiti leggi richiesti per il tracking in Italia e le normative europee. Tutto questo
+
+33
+00:02:53,080 --> 00:02:57,080
+quindi per aumentare la diffusione capillare nell'adozione verso il basso di Matomo.
+
+34
+00:02:57,080 --> 00:03:03,080
+O quindi ho scelto un mix tra interfaccia grafica e a linea di comando per poter introdurre
+
+35
+00:03:03,080 --> 00:03:08,080
+le funzioni dei servizi o proprio dei cloud provider a livello didattico. Ovviamente
+
+36
+00:03:08,080 --> 00:03:13,080
+tutto scriptabile, così da costituire integrità delle immagini e delle correlazioni tra i
+
+37
+00:03:13,080 --> 00:03:18,080
+servizi. Probabilmente molti di voi hanno già provato la versione server o anche provato
+
+38
+00:03:18,080 --> 00:03:23,080
+a far girare le immagini per Docker Container e sono interessati al passo successivo, cioè
+
+39
+00:03:23,080 --> 00:03:28,080
+la distribuzione a partire da un orchestratore per necessità di rapporto prestazioni prezzo.
+
+40
+00:03:28,080 --> 00:03:33,080
+Gestire tanti siti chiede di poter affrontare scalabilità e Kubernetes e la soluzione.
+
+41
+00:03:33,080 --> 00:03:39,080
+Vedremo l'installazione quindi sui servizi managed della formula Platform Asset Services
+
+42
+00:03:39,080 --> 00:03:45,080
+per non caricarci nella gestione del servizio stesso di orchestratore. Il livello di accesso
+
+43
+00:03:45,080 --> 00:03:49,080
+per la comprensione è conoscere i principi di funzionamento della distribuzione di applicazioni
+
+44
+00:03:49,080 --> 00:04:05,080
+tramite immagini Container. Partiamo dal sito Matomo, al quale potete provare gratuitamente
+
+45
+00:04:05,080 --> 00:04:12,080
+il servizio cloud su server Europei e con costi irrisori. Si parte da 19 euro al mese
+
+46
+00:04:12,080 --> 00:04:20,080
+per 30 siti web su 50.000 hits che sono eventi SEO, quindi non HTTP per intenderci, che sono
+
+47
+00:04:20,080 --> 00:04:25,080
+invece gli oggetti che transitano per la costruzione delle pagine web. Quindi si tratta di link
+
+48
+00:04:25,080 --> 00:04:30,080
+pagine, link download, set search, questo tipo di eventi. 50.000 hits che corrispondono
+
+49
+00:04:30,080 --> 00:04:37,080
+grossomodo a 17.000 visitatori al mese su di 30 siti. Poi ovviamente ci sono pacchetti
+
+50
+00:04:37,080 --> 00:04:43,080
+diversi, al crescere degli hits la formula è economicamente sempre più vantaggiosa.
+
+51
+00:04:43,080 --> 00:04:49,080
+Mentre invece oggi vediamo una versione on-premise, cioè installabile gratuitamente ma con alcuni
+
+52
+00:04:49,080 --> 00:04:55,080
+plugin in Canon e compresi degli aggiornamenti stessi. C'è comunque una buona base totalmente
+
+53
+00:04:55,080 --> 00:05:01,080
+gratuita. Ricordo che oggi non vedremo il prodotto ma la sua capacità di essere distribuito
+
+54
+00:05:01,080 --> 00:05:08,080
+su cloud provider avvicinandoci esclusivamente alla fase di installazione esclusa, ripeto,
+
+55
+00:05:08,080 --> 00:05:13,080
+quindi i passi successivi di configurazione per la messa a punto non ci sarebbe stato
+
+56
+00:05:13,080 --> 00:05:18,080
+nemmeno il tempo a disposizione. Installazione su server, il prodotto ha un pannello di gestione
+
+57
+00:05:18,080 --> 00:05:25,080
+dei malfunzionamenti e delle grandezze da correggere per affrontare al meglio le performance.
+
+58
+00:05:25,080 --> 00:05:32,080
+Trovate guide, documentazioni, video, comunità e anche se non è menzionato un ultimo cercate
+
+59
+00:05:32,080 --> 00:05:37,080
+su github per trovare gli sviluppatori e tantissimi consigli e codice pronto.
+
+60
+00:05:44,080 --> 00:05:51,080
+Ci vediamo le due parti della demo, quindi la creazione di un cluster Kubernetes su due
+
+61
+00:05:51,080 --> 00:05:55,080
+cloud provider completamente differenti, li ho scelti proprio per il diverso taglio di
+
+62
+00:05:55,080 --> 00:06:00,080
+offerta, molto diversi da loro, ovviamente a costi completamente diversi di servizi
+
+63
+00:06:00,080 --> 00:06:06,080
+e potenzialità. Occhio anche alle formule di addebito che sono molto differenti, ad esempio
+
+64
+00:06:06,080 --> 00:06:16,080
+su Azure è possibile dialogare le risorse del cluster senza distruggerlo e questo non
+
+65
+00:06:16,080 --> 00:06:23,080
+comporterà addebiti mentre fermo, su DigitalOcean si deve distruggerlo per abolire gli addebiti.
+
+66
+00:06:30,080 --> 00:06:35,080
+DigitalOcean che oggi presenta una buona base di servizi cloud, ci sono server chiamati
+
+67
+00:06:35,080 --> 00:06:43,080
+goccioline, droplet, servizi di backup e snapshot, database e accesso tramite CLI, command line
+
+68
+00:06:43,080 --> 00:06:52,080
+interface proprietaria ai servizi e alle configurazioni. Function e app, metriche un po' su tutto,
+
+69
+00:06:52,080 --> 00:06:57,080
+un marketplace con integrazione di terze parti e anche le API.
+
+70
+00:06:59,080 --> 00:07:05,080
+Partiamo subito con il creare il cluster, scegliendo in quale region posizionare le macchine, ovviamente
+
+71
+00:07:05,080 --> 00:07:13,080
+scegliamo quelle europee per essere aderenti alle richieste GDPR, numero di nodi e dimensionamenti
+
+72
+00:07:13,080 --> 00:07:19,080
+poi sono ovviamente modificabili, c'è l'opzione auto scale per l'adeguamento orizzontale
+
+73
+00:07:19,080 --> 00:07:25,080
+automatico dalle richieste in produzione, consiglio questa, potendo allargare il numero massimo
+
+74
+00:07:25,080 --> 00:07:33,080
+di nodi a piacimento, l'opzione alta disponibilità per chiedere app time al 99,95% e al momento
+
+75
+00:07:33,080 --> 00:07:39,080
+di questa registrazione ancora in beta l'agent per il database.
+
+76
+00:07:40,080 --> 00:07:46,080
+Diamo un nome, posizioniamolo in un progetto per ritrovarlo e lanciamo il deploy.
+
+77
+00:07:46,080 --> 00:08:04,080
+Questa operazione dura alcuni minuti quindi interrompo la registrazione e riprendo appena si è conclusa.
+
+78
+00:08:06,080 --> 00:08:14,080
+Dopo un po' già sono visibili le risorse per il pool di nodi, chiudo consigli e raccomandazioni,
+
+79
+00:08:14,080 --> 00:08:20,080
+curiosiamo il marketplace riservato alle risorse terze per Kubernetes,
+
+80
+00:08:23,080 --> 00:08:29,080
+alcune impostazioni del cluster che ovviamente si consiglia di modificare solo via client
+
+81
+00:08:29,080 --> 00:08:36,080
+kube control, gli aggiornamenti all'engine che ovviamente è consigliato lasciare eseguire
+
+82
+00:08:36,080 --> 00:08:38,080
+automaticamente.
+
+83
+00:08:38,080 --> 00:08:42,080
+A cluster avviato possiamo scaricare il file di configurazione.
+
+84
+00:08:42,080 --> 00:08:48,080
+Prima operazione installiamo il client di controllo proprietario che si chiama docctl,
+
+85
+00:08:48,080 --> 00:08:54,080
+quindi Digital Ocean Control, disponibile su tutte le principali architetture di sistema operativo.
+
+86
+00:08:54,080 --> 00:09:03,080
+La documentazione è disponibile, ci consente di leggere tutta la sequenza delle operazioni necessarie.
+
+87
+00:09:03,080 --> 00:09:10,080
+Creiamo quindi l'api token, nome e durata e installiamo kube control aggiungendolo nella parte
+
+88
+00:09:10,080 --> 00:09:12,080
+di sistema del nostro client.
+
+89
+00:09:15,080 --> 00:09:21,080
+Fatte queste operazioni possiamo utilizzare la shell sul nostro client per accedere al cluster.
+
+90
+00:09:22,080 --> 00:09:30,080
+Per didattica scarico il file di configurazione, questo è il token, non mi sto preoccupando
+
+91
+00:09:30,080 --> 00:09:35,080
+di nascondere questi codici perché il cluster è stato già distrutto al termine di questa registrazione.
+
+92
+00:09:35,080 --> 00:09:39,080
+Ok, ci colleghiamo al cluster e questi sono i nodi.
+
+93
+00:09:43,080 --> 00:09:46,080
+Questa invece è la lista dei contesti del client Kubernetes.
+
+94
+00:09:46,080 --> 00:09:51,080
+Ci sono varie prove che ho effettuato in precedenza di cluster ormai già distrutti.
+
+95
+00:09:51,080 --> 00:09:54,080
+Potete sempre eliminare quello che non vi serve.
+
+96
+00:09:54,080 --> 00:09:58,080
+Ci assicuriamo che quello corrente sia quello giusto.
+
+97
+00:09:58,080 --> 00:10:05,080
+Errore nel response dell'interfaccia, ripeto per chiarezza.
+
+98
+00:10:07,080 --> 00:10:11,080
+Ora prima di procedere con l'installazione voglio presentarvi un application dashboard,
+
+99
+00:10:11,080 --> 00:10:16,080
+cioè un pannello per l'installazione di applicazioni Kubernetes che è kubeapp.
+
+100
+00:10:16,080 --> 00:10:21,080
+Altro software open source, questo è di WMware, la sossidiaria di Dell.
+
+101
+00:10:21,080 --> 00:10:28,080
+Potete installarlo su qualsiasi cluster per poter avere un'interfaccia di gestione web delle applicazioni.
+
+102
+00:10:28,080 --> 00:10:34,080
+Sia per poter installare kubeapp che altre applicazioni, ma in linea di comando utilizziamo Helm,
+
+103
+00:10:34,080 --> 00:10:42,080
+che è disponibile sia da package manager come cioccolatei, homebrew, snap o scaricando il binary,
+
+104
+00:10:42,080 --> 00:10:50,080
+come sigamo ora, saltando la sua risorsa sul github per poter curiosare sulle funzionalità degli ultimi aggiornamenti.
+
+105
+00:10:50,080 --> 00:11:00,080
+Fatto questo possiamo procedere nell'aggiungere i repository di bitnami sul quale poi torniamo con quello a installare kubeapp.
+
+106
+00:11:08,080 --> 00:11:14,080
+Giusto per curiosità ci spostiamo per un attimo su un altro cluster Kubernetes dove ho già l'installazione di kubeapp
+
+107
+00:11:14,080 --> 00:11:20,080
+e lancio il port forward per poter rinderizzare il servizio remoto su una mia porta locale.
+
+108
+00:11:20,080 --> 00:11:26,080
+Su quest'altro cluster ho già un matomo che sta girando oltre un controller Ingress NGX
+
+109
+00:11:26,080 --> 00:11:32,080
+e una piattaforma per il low code come Red basata su un Node.js.
+
+110
+00:11:32,080 --> 00:11:37,080
+Il repository bitnami è molto ampio e ci dà accesso ad immagini che sono aggiornate
+
+111
+00:11:37,080 --> 00:11:41,080
+in configurazioni che già implementano un buon livello di sicurezza.
+
+112
+00:11:41,080 --> 00:11:45,080
+Utilizzeremo proprio un matomo gestito da bitnami.
+
+113
+00:11:52,080 --> 00:11:57,080
+Visto che siamo in termini d'interfaccia web per la gestione per chi non lo conoscesse
+
+114
+00:11:57,080 --> 00:12:00,080
+consiglio portainer di cui sono entusiasta.
+
+115
+00:12:00,080 --> 00:12:05,080
+Molto comodo sia per immagini e container docker che siano locali che in remoto
+
+116
+00:12:05,080 --> 00:12:11,080
+che appunto per la gestione di cluster Kubernetes.
+
+117
+00:12:22,080 --> 00:12:26,080
+Sempre quest'altro cluster, ecco il kubeapp che abbiamo visto poco fa
+
+118
+00:12:26,080 --> 00:12:35,080
+è ovviamente il matomo immancabile.
+
+119
+00:12:40,080 --> 00:12:46,080
+Spero di avervi dato qualche informazione utile e torniamo alla nostra installazione.
+
+120
+00:12:46,080 --> 00:12:51,080
+Un bel update dei repository per assicurarci di avere gli ultimi aggiornamenti e procediamo.
+
+121
+00:12:51,080 --> 00:12:56,080
+Purtroppo non sono in una zona con alta copertura e segnale 4G e quindi
+
+122
+00:12:56,080 --> 00:13:01,080
+ecco l'errore possibile in timeout ma va bene lo stesso non ci riguarda
+
+123
+00:13:01,080 --> 00:13:05,080
+qualcosa che ci interesserà in questo momento.
+
+124
+00:13:10,080 --> 00:13:13,080
+Ok, elm install matomo.
+
+125
+00:13:13,080 --> 00:13:16,080
+Andiamo subito a lanciare il cruscotto di gestione del cluster
+
+126
+00:13:16,080 --> 00:13:21,080
+e verifichiamo il deploy in atto.
+
+127
+00:13:21,080 --> 00:13:24,080
+Ok.
+
+128
+00:13:43,080 --> 00:13:48,080
+Ufficialmente è finito ed impostoci un messaggio per gli operativi come me
+
+129
+00:13:48,080 --> 00:13:52,560
+che anche se tutto è stato lanciato non è detto che sia già terminato e quindi
+
+130
+00:13:52,560 --> 00:13:57,760
+bisogna un attimo attendere con pazienza. Ci viene intanto notificata la
+
+131
+00:13:57,760 --> 00:14:02,480
+username dell'applicazione e la password. Essendo la mia stazione in
+
+132
+00:14:02,480 --> 00:14:07,720
+Windows non ho l'utility base 64 quindi la rimuovo e intanto possiamo avere
+
+133
+00:14:07,720 --> 00:14:19,960
+accesso alla password decryptogravata. Quindi per didattica possiamo andare
+
+134
+00:14:19,960 --> 00:14:23,360
+anche a decryptare online.
+
+135
+00:14:27,360 --> 00:14:32,880
+Intanto è tutto in piedi. Sul cruscotto del cloud provider
+
+136
+00:14:32,880 --> 00:14:38,880
+verifichiamo. Ecco l'ultimo processo che si aggiorna e abbiamo finalmente il
+
+137
+00:14:38,880 --> 00:14:43,120
+load balancer che espone la risorsa su un IP pubblico.
+
+138
+00:14:43,120 --> 00:14:49,120
+Apriamo browser, password e finalmente entriamo.
+
+139
+00:14:56,400 --> 00:15:00,280
+A questo punto ci viene suggerito il codice da implementare per il tracking
+
+140
+00:15:00,280 --> 00:15:05,240
+ma notare che un IP è quello che indirittura al server e quindi dobbiamo
+
+141
+00:15:05,240 --> 00:15:09,720
+occuparci della risoluzione del nome.
+
+142
+00:15:13,400 --> 00:15:18,360
+Torniamo sul cruscotto di digitalocean dove sto gestendo i record DNS e andiamo
+
+143
+00:15:18,360 --> 00:15:21,480
+a aggiornare il record.
+
+144
+00:15:24,000 --> 00:15:27,960
+Comodamente viene offerta all'interfaccia la possibilità di selezionare tra le
+
+145
+00:15:27,960 --> 00:15:33,440
+risorse esposte disponibili. Solo ora che abbiamo il load balancer
+
+146
+00:15:33,440 --> 00:15:37,800
+puntato da un record possiamo occuparci di creare il certificato per
+
+147
+00:15:37,800 --> 00:15:43,080
+l'esposizione HTTPS. Anche qui ci sono molti modi per ottenere lo stesso
+
+148
+00:15:43,080 --> 00:15:48,040
+risultato. Vediamo quello più didattico anche se un po' vanilla. Quindi usiamo
+
+149
+00:15:48,040 --> 00:15:53,160
+comodissimo l'interfaccia digitalocean che ci permette di gestire la creazione
+
+150
+00:15:53,160 --> 00:15:59,040
+del certificato utilizzando la linea di comando. Ricordo sempre anche
+
+151
+00:15:59,040 --> 00:16:04,080
+disponibile l'assesso operazione via API e l'interfaccia web.
+
+152
+00:16:04,080 --> 00:16:07,480
+Ovviamente possiamo importare un certificato nostro acquistato da altri
+
+153
+00:16:07,480 --> 00:16:12,680
+canali con un livello di trassa superiore a quello creato da SNCrypt.
+
+154
+00:16:12,680 --> 00:16:18,800
+Chiediamo il certificato, pending, controlliamo che sia stata verificata la
+
+155
+00:16:18,800 --> 00:16:25,240
+risoluzione e catturiamo l'id. Andiamo sempre didatticamente manualmente a
+
+156
+00:16:25,240 --> 00:16:30,880
+modificare sul load balancer anche le altre annotation sotto sono necessarie.
+
+157
+00:16:30,880 --> 00:16:35,960
+Ovviamente questo è un approccio demo, quello corretto invece chiede un
+
+158
+00:16:35,960 --> 00:16:40,280
+servizio come chart manager che si occupi della richiesta e distribuzione
+
+159
+00:16:40,280 --> 00:16:44,840
+del cluster certificati richiesti dei vari issuer e load balancer che permette
+
+160
+00:16:44,840 --> 00:16:49,240
+di integrare tutto il castello di servizi e relazioni nel file YAML che ne
+
+161
+00:16:49,240 --> 00:16:52,280
+consente il deploy.
+
+162
+00:16:52,280 --> 00:16:55,280
+Sottotitoli creati dalla comunità Amara.org
+
+163
+00:17:12,280 --> 00:17:17,600
+A questo punto riceviamo una response bed request e il motivo è proprio che
+
+164
+00:17:17,600 --> 00:17:22,560
+stiamo lavorando senza un chart manager o un altro servizio assimilabile, quindi
+
+165
+00:17:22,560 --> 00:17:27,840
+manca un altro certificato al pod che sta girando con il web server.
+
+166
+00:17:27,840 --> 00:17:31,520
+Anche qui agiamo con un hack non consigliato in produzione.
+
+167
+00:17:31,520 --> 00:17:35,440
+Semplicemente andiamo a utilizzare HTTP per accedere alla porta e garantire che
+
+168
+00:17:35,440 --> 00:17:39,760
+una risposta torni al load balancer.
+
+169
+00:17:39,760 --> 00:17:48,080
+Questa volta la password la cerchiamo nei secrets, dove è in chiaro.
+
+170
+00:18:02,320 --> 00:18:06,160
+Ora possiamo procedere con un'azione banale di integrazione del codice
+
+171
+00:18:06,160 --> 00:18:11,160
+necessario al tracking in una pagina. Andiamo quindi a recuperare il codice
+
+172
+00:18:11,160 --> 00:18:15,360
+Javascript per il tracking, ora aggiornato con il nome del dominio e
+
+173
+00:18:15,360 --> 00:18:36,760
+aggiorniamo il sorgente della pagina web e ricarichiamo.
+
+174
+00:18:45,360 --> 00:19:00,760
+Eccoci nel pannello di controllo delle visite in tempo reale e verifichiamo il tracciamento.
+
+175
+00:19:00,760 --> 00:19:17,080
+Matomo offre un pannello di gestione molto utile a controllare la messa a
+
+176
+00:19:17,080 --> 00:19:23,560
+punto funzionale di performance. Nella demo appena installata sono presenti
+
+177
+00:19:23,560 --> 00:19:27,520
+già le raccomandazioni da risolvere, ma come detto la configurazione non è
+
+178
+00:19:27,520 --> 00:19:32,120
+oggetto di questa esposizione sommaria. Molto importante è il meccanismo di
+
+179
+00:19:32,120 --> 00:19:35,240
+costruzione dei saldi dei valori statistici che per un sito modesto
+
+180
+00:19:35,240 --> 00:19:39,320
+vengono eseguiti al momento che si interregola dashboard e si risolvono in
+
+181
+00:19:39,320 --> 00:19:43,720
+qualche secondo, ma per siti che hanno un alto traffico costringerebbero Matomo
+
+182
+00:19:43,720 --> 00:19:47,160
+una ricostruzione ad ogni apertura del pannello statistiche il che chiederebbe
+
+183
+00:19:47,160 --> 00:19:52,120
+molte risorse continuamente. Ma quindi è implementato un cron job che esegue a
+
+184
+00:19:52,120 --> 00:19:56,680
+intervalli regolari tipo ogni ora o meno a seconda della frequenza di
+
+185
+00:19:56,680 --> 00:20:00,200
+visualizzazione dei grafici e di importanza che siano aggiornati per il
+
+186
+00:20:00,200 --> 00:20:04,800
+social media manager che li sta utilizzando. Un altro strumento molto
+
+187
+00:20:04,800 --> 00:20:09,520
+interessante per gli amministratori è che sia Matomo che i plugin si aggiornano
+
+188
+00:20:09,520 --> 00:20:13,800
+molto facilmente in maniera semi-automatica, l'admin riceve quindi un
+
+189
+00:20:13,800 --> 00:20:17,160
+email con un link per eseguire l'aggiornamento, l'ho trovato molto
+
+190
+00:20:17,160 --> 00:20:22,720
+comodo anche quando si è in mobilità. C'è un bel assortimento di plugin già
+
+191
+00:20:22,720 --> 00:20:26,560
+compreso e gratuito mentre il marketplace si trovano ulteriori plugin
+
+192
+00:20:26,560 --> 00:20:30,320
+che però possono prevedere un canon annuale che in tal caso comprende i suoi
+
+193
+00:20:30,320 --> 00:20:35,400
+aggiornamenti, molti offrono anche il periodo di prova. Comodissime le API
+
+194
+00:20:35,400 --> 00:20:39,080
+Matomo che consentono un controllo dell'ambiente da un gestionale o eventi
+
+195
+00:20:39,080 --> 00:20:41,960
+esterni personalizzabili con qualsiasi linguaggio.
+
+196
+00:20:41,960 --> 00:20:45,760
+Qualche settimana fa per esempio ho pubblicato sul LinkedIn una demo di un
+
+197
+00:20:45,760 --> 00:20:49,600
+endpoint che consente di aggiungere la propria connessione ai filtri per non
+
+198
+00:20:49,600 --> 00:20:53,800
+inquinare le statistiche anche se si è in mobilità utilizzando il low code red
+
+199
+00:20:53,800 --> 00:20:58,400
+basato su Node.js. La demo si conclude qui, spero di aver dato
+
+200
+00:20:58,400 --> 00:21:02,160
+abbastanza elementi per poter creare interesse e stimolare l'adozione di
+
+201
+00:21:02,160 --> 00:21:06,400
+Kubernetes in ambiente di produzione per Matomo. Un orchestratore consente
+
+202
+00:21:06,400 --> 00:21:10,560
+infatti di poter scalare dinamicamente il numero di nodi sui quali distribuire
+
+203
+00:21:10,560 --> 00:21:15,360
+pod Matomo e poter assorbire picchi di traffico anche molto elevato sebbene
+
+204
+00:21:15,360 --> 00:21:18,680
+temporaneo e poter risparmiare quando i numeri da gestire sono tornati
+
+205
+00:21:18,680 --> 00:21:23,760
+inferiori. E una demo di introduzione, mancano molti elementi, non ci sarebbe
+
+206
+00:21:23,760 --> 00:21:27,280
+stato il tempo di poterli vedere tutti e la formazione non è nemmeno lo scopo di
+
+207
+00:21:27,280 --> 00:21:30,840
+questo video. Spero sia solo il punto iniziale con il quale una comunità in
+
+208
+00:21:30,840 --> 00:21:34,240
+lingua italiana possa avviarsi condividendo le proprie esperienze e i
+
+209
+00:21:34,240 --> 00:21:38,400
+file di configurazione completi anche per altri cloud provider con servini in
+
+210
+00:21:38,400 --> 00:21:44,000
+Europa e spingere affinché Matomo sia adottato nei vari template e marketplace.
+
+211
+00:21:44,000 --> 00:21:49,200
+Sarò felice di poter partecipare con le mie modeste esperienze. Chi vuole mi può
+
+212
+00:21:49,200 --> 00:21:53,600
+contattare all'email in sovraimpressione o collegarsi con me sul LinkedIn per
+
+213
+00:21:53,600 --> 00:21:57,280
+rimanere in contatto. Buon tracking in autonomia, ci vediamo in
+
+214
+00:21:57,280 --> 00:21:59,560
+rete.
+
+215
+00:22:05,560 --> 00:22:14,280
+Wow, grazie mille Massimo per questo momento storico direi, perché come l'ho
+
+216
+00:22:14,280 --> 00:22:21,200
+annunciato già sulla social network è la prima volta che abbiamo infatti una
+
+217
+00:22:21,200 --> 00:22:29,840
+conferenza nel cento per cento in italiano infatti l'anno scorso abbiamo
+
+218
+00:22:29,840 --> 00:22:39,960
+il piacere di ricevere infatti la squadra della regione migliorovania e il talk
+
+219
+00:22:39,960 --> 00:22:45,240
+era in inglese e questa volta è veramente la prima la prima che l'abbiamo
+
+220
+00:22:45,240 --> 00:22:54,400
+in diciamo nella quarta lingua di matomo campo e quindi l'italiano dopo
+
+221
+00:22:54,400 --> 00:23:00,360
+l'inglese il tedesco e il francese quindi non so se massimo mi senti sì sì
+
+222
+00:23:00,360 --> 00:23:09,920
+perfettamente ringrazio sì la ti ringrazio anche perché hai fatto lo so
+
+223
+00:23:09,920 --> 00:23:17,600
+tutto questo lavoro di registrare infatti la video per assicurare che la
+
+224
+00:23:17,600 --> 00:23:24,320
+conferenza sarà di qualità e che non ci sarà problemi nelle spiegazioni che
+
+225
+00:23:24,320 --> 00:23:32,600
+vai a dare quindi sfortunatamente come lo sai io non conosco molto cose sulla
+
+226
+00:23:32,600 --> 00:23:38,600
+configurazione dei server quindi la domanda che io ti faccio adesso che è
+
+227
+00:23:38,600 --> 00:23:47,160
+veramente di quello che che non conosce nulla tutto quello è quindi io conosco
+
+228
+00:23:47,160 --> 00:23:57,200
+docker e capisco l'utilizzo la necessità di utilizzare docker però non è non
+
+229
+00:23:57,200 --> 00:24:03,960
+sei la prima persona che direi che lavora in una maniera molto professionale
+
+230
+00:24:03,960 --> 00:24:10,160
+che infatti usa kubernetes e io non capisco la differenza tra utilizzare
+
+231
+00:24:10,160 --> 00:24:17,720
+docker e utilizzare kubernetes o forse non capisco nulla a che cosa è kubernetes
+
+232
+00:24:17,720 --> 00:24:24,400
+quindi scusa di chiederti questa domanda ma qual è il vantaggio utilizzare
+
+233
+00:24:24,400 --> 00:24:30,240
+kubernetes per infatti fare le installazioni di matomo si praticamente
+
+234
+00:24:30,240 --> 00:24:37,360
+hai sollevato diciamo la domanda penso più normale che si possa fare
+
+235
+00:24:37,360 --> 00:24:43,680
+soprattutto per chi debba installare gestire un servizio online come il web
+
+236
+00:24:43,680 --> 00:24:50,080
+tracking che è un servizio un po particolare perché ha la necessità di
+
+237
+00:24:50,080 --> 00:24:56,920
+adeguare tempestivamente quindi non in maniera programmata le risorse che sono
+
+238
+00:24:56,920 --> 00:25:02,600
+allocate per la distribuzione del servizio questo intendo perché se c'è
+
+239
+00:25:02,600 --> 00:25:08,240
+una campagna commerciale di web marketing e ovviamente c'è una fase in
+
+240
+00:25:08,240 --> 00:25:16,480
+cui improvvisamente anche magari a causa di un aspetto di tecnica di viral
+
+241
+00:25:16,480 --> 00:25:23,680
+marketing quindi come dire non facilmente prevedibile e quindi i siti
+
+242
+00:25:23,680 --> 00:25:28,800
+le vende in page improvvisamente chiedono altissime risorse
+
+243
+00:25:28,800 --> 00:25:34,560
+questo se non è stato organizzato prima con docker non sono state allocate le
+
+244
+00:25:34,560 --> 00:25:40,880
+risorse si può correre il rischio ovviamente di non riuscire come dire ad
+
+245
+00:25:40,880 --> 00:25:46,240
+avere un servizio all'altezza con le prestazioni un orchestratore consente di
+
+246
+00:25:46,240 --> 00:25:53,200
+far girare le immagini docker su più nodi non solo ma questi nodi possono
+
+247
+00:25:53,200 --> 00:26:00,400
+essere appunto come ho citato con l'opzione autoscale che da offre la
+
+248
+00:26:00,400 --> 00:26:07,560
+capacità di un adeguamento dinamico quindi al aumentare delle risorse
+
+249
+00:26:07,560 --> 00:26:13,080
+l'orchestratore si preoccupa di eseguire ipod che sono i container le immagini
+
+250
+00:26:13,080 --> 00:26:18,360
+che stanno girando su altri nodi e questo anche allocare altri nodi quindi vengono
+
+251
+00:26:18,360 --> 00:26:23,840
+allocati orizzontalmente più nodi e ipod quindi le esecuzioni vengono
+
+252
+00:26:23,840 --> 00:26:31,360
+distribuite così da riuscire a gestire il carico questo siccome dinamico questo
+
+253
+00:26:31,360 --> 00:26:35,120
+questa operazione consente anche di risparmiare perché io posso avere a
+
+254
+00:26:35,120 --> 00:26:40,880
+disposizione 3 4 5 nodi che sono macchine server
+
+255
+00:26:40,880 --> 00:26:45,600
+fin quando mi è necessario poi nel momento che i numeri vengono
+
+256
+00:26:45,600 --> 00:26:50,840
+ridimensionati anche l'architettura si ridimensiona e questo consente di
+
+257
+00:26:50,840 --> 00:26:57,640
+risparmiare perché le macchine hanno mediamente un addebito orario di costo
+
+258
+00:26:57,640 --> 00:27:05,400
+e questo diciamo il motivo per il quale viene preferito un orchestratore non so
+
+259
+00:27:05,400 --> 00:27:13,800
+se ho risposto ok non so infatti io ti faccio la mia diciamo la mia risposta
+
+260
+00:27:13,800 --> 00:27:21,800
+che infatti ho capito quindi con docker infatti il container è fisso e
+
+261
+00:27:21,800 --> 00:27:29,920
+kubernetes insomma ti permette di diciamo come lo dici tu di orchestratare
+
+262
+00:27:29,920 --> 00:27:38,560
+quindi di fare in modo che il container diventa dinamico o a meno che lo
+
+263
+00:27:38,560 --> 00:27:44,240
+puoi non lo so sostituire o da un altro container che ha più capacità per
+
+264
+00:27:44,240 --> 00:27:50,200
+permettere il tuo sistema di funzionare quindi docker in modo solo ti permette
+
+265
+00:27:50,200 --> 00:27:56,520
+solo infatti di prendere un sito che ha un traffico che è sempre lo stesso in
+
+266
+00:27:56,520 --> 00:28:04,600
+cui hai già pensato che ti può fare una centinaia di visite al giorno e
+
+267
+00:28:04,600 --> 00:28:09,600
+infatti il modo di kubernetes infatti una sicurezza per permettere come l'hai
+
+268
+00:28:09,600 --> 00:28:14,920
+detto tu che c'è una compagnia di web marketing che va a portarti non lo so 2
+
+269
+00:28:14,920 --> 00:28:20,360
+milioni di di visite in più e che quindi va a distruggere il tuo container e
+
+270
+00:28:20,360 --> 00:28:25,160
+quindi kubernetes permette in modo dinamico di dare più risorse al
+
+271
+00:28:25,160 --> 00:28:32,920
+container per permettere al sito di vivere con matomo e quello si inoltre
+
+272
+00:28:32,920 --> 00:28:38,000
+ovviamente garantisce una disponibilità continua il servizio perché tutte le
+
+273
+00:28:38,000 --> 00:28:44,440
+fasi di aggiornamento sia dell'host quindi dei vari nodi in questo caso che
+
+274
+00:28:44,440 --> 00:28:51,440
+del dei docker insomma delle esecuzioni è sempre garantita per
+
+275
+00:28:51,440 --> 00:28:56,360
+cui io posso avere un nodo che in un per un motivo qualunque che possa essere un
+
+276
+00:28:56,360 --> 00:29:05,120
+aggiornamento o una indisponibilità magari fisica quindi o logica comunque
+
+277
+00:29:05,120 --> 00:29:10,680
+tutto il servizio è in piedi ed è sempre al massimo delle prestazioni quindi le
+
+278
+00:29:10,680 --> 00:29:16,920
+prestazioni dinamiche abbiamo detto sono il punto principale per la messa
+
+279
+00:29:16,920 --> 00:29:24,680
+la necessità di utilizzare un orchestratore come come kubernetes per
+
+280
+00:29:24,680 --> 00:29:28,280
+questo perché ovviamente ce ne sono anche altri di orchestratori quindi la
+
+281
+00:29:28,280 --> 00:29:34,400
+scelta la mia scelta è stata quella del sistema più diffuso del sistema più
+
+282
+00:29:34,400 --> 00:29:40,280
+fruibile più accessibile anche per una piccola azienda questo perché molto
+
+283
+00:29:40,280 --> 00:29:45,840
+diffuso su tutti cloud è la cosa più semplice più economica e quello che
+
+284
+00:29:45,840 --> 00:29:50,440
+volevo dimostrare con questo con questa presentazione è stato proprio questo che
+
+285
+00:29:50,440 --> 00:29:55,760
+grazie alla distribuzione dell'immagine imatomo da parte di bitnami come
+
+286
+00:29:55,760 --> 00:30:01,480
+ovviamente i chart del digitalist che sono stati presenti ieri di cui sono
+
+287
+00:30:01,480 --> 00:30:05,320
+molto interessato insomma farò sicuramente qualche test
+
+288
+00:30:05,320 --> 00:30:11,560
+questo consente diciamo una capacità di poter installare facilmente questo
+
+289
+00:30:11,560 --> 00:30:19,120
+voglio dimostrare l'ambiente di produzione a un certo livello anche con
+
+290
+00:30:19,120 --> 00:30:24,880
+un'esperienza minima ecco ok quindi senza preoccuparsi di altro poi
+
+291
+00:30:24,880 --> 00:30:32,280
+ovviamente c'è sempre la possibilità di avviarsi e chiaramente mettere a
+
+292
+00:30:32,280 --> 00:30:36,400
+punto le metodologie fare l'esperienza necessaria
+
+293
+00:30:36,400 --> 00:30:42,360
+l'obiettivo della mia demo è in italiano è stata eseguita in italiano
+
+294
+00:30:42,360 --> 00:30:48,480
+proprio per aprire alla piccola e media impresa diciamo per a cercare di
+
+295
+00:30:48,480 --> 00:30:53,880
+aumentare la diffusione ok questo quanto grazie
+
+296
+00:30:53,880 --> 00:31:00,520
+ottimo anche alcune domande che non sono segrete perché sono sono nel chat ma
+
+297
+00:31:00,520 --> 00:31:05,240
+solo per le persone che vanno infatti a guardare questa questa video del futuro
+
+298
+00:31:05,240 --> 00:31:11,520
+è importante per me che io ti richieste quindi un'altra domanda sarebbe in
+
+299
+00:31:11,520 --> 00:31:16,560
+italia come lavorano infatti gli amministratori server infatti lavorano
+
+300
+00:31:16,560 --> 00:31:23,240
+con un'interfaccia in inglese o in italiano qual è infatti perché per dirti
+
+301
+00:31:23,240 --> 00:31:28,400
+la verità non lo conosciamo molto bene infatti il
+
+302
+00:31:28,400 --> 00:31:36,280
+mercato italiano quindi vuoi sapere se infatti c'è la lingua di lavoro per gli
+
+303
+00:31:36,280 --> 00:31:44,960
+amministratori server qual è sì purtroppo diciamo in 30 anni potrei
+
+304
+00:31:44,960 --> 00:31:51,800
+scrivere un libro sugli aneddoti delle delle cose anche spiacevoli che ho visto
+
+305
+00:31:51,800 --> 00:31:58,240
+anche in aziende di una certa dimensione parliamo di diverse centinaia di macchine
+
+306
+00:31:58,240 --> 00:32:06,760
+ok purtroppo diciamo trovo anche installazioni server in italiano questo
+
+307
+00:32:06,760 --> 00:32:13,520
+non è molto comodo perché ovviamente la capacità di fare debug sui messaggi di
+
+308
+00:32:13,520 --> 00:32:19,640
+sistema di errore dei log eccetera è abbastanza complicata perché traduzioni
+
+309
+00:32:19,640 --> 00:32:26,240
+ovviamente non sono perfettamente identiche io personalmente faccio
+
+310
+00:32:26,240 --> 00:32:33,840
+difficoltà anche a ritrovare in un server windows il nome del servizio
+
+311
+00:32:33,840 --> 00:32:41,120
+perché veramente una cosa che racconto sempre diciamo un esame che di
+
+312
+00:32:41,120 --> 00:32:47,200
+certificazione window che provai in italiano così ho detto sicuramente mi
+
+313
+00:32:47,200 --> 00:32:50,720
+trovo facilitaria niente ho dovuto ripetere in inglese e l'ho passato
+
+314
+00:32:50,720 --> 00:32:57,360
+subito ma se noi in italiano era veramente indecente purtroppo diciamo
+
+315
+00:32:57,360 --> 00:33:04,000
+l'assortimento è molto vario la lingua non è non ha un grado di penetrazione
+
+316
+00:33:04,000 --> 00:33:09,960
+sociale e così profonda come succede in altri paesi ho vissuto anche all'estero
+
+317
+00:33:09,960 --> 00:33:16,160
+e diciamo in italia l'inglese non si parla nemmeno in ambiente di lavoro
+
+318
+00:33:16,160 --> 00:33:21,240
+diciamo è raro è veramente raro per questo ho detto per cercare di
+
+319
+00:33:21,240 --> 00:33:29,080
+allargare ovviamente il tarp diciamo l'obiettivo è ho preferito provare a
+
+320
+00:33:29,080 --> 00:33:34,120
+fare una sessione in italiano così vedere se c'è maggiore curiosità e
+
+321
+00:33:34,120 --> 00:33:40,640
+attenzione ok un'altra domanda che non ho messo
+
+322
+00:33:40,640 --> 00:33:47,000
+nel chat pensi secondo te che non aveva una documentazione in italiano quello
+
+323
+00:33:47,000 --> 00:33:52,720
+parlo piuttosto sulla end user documentazione quindi oggi quando vai su
+
+324
+00:33:52,720 --> 00:34:01,120
+matomo.org quello che vedi una documentazione al 100% in inglese
+
+325
+00:34:01,120 --> 00:34:07,120
+hanno fatto delle traduzioni in francese ma so che per esempio per la
+
+326
+00:34:07,120 --> 00:34:12,720
+francia è davvero un freno per una parte della popolazione per andare su
+
+327
+00:34:12,720 --> 00:34:20,320
+matomo e vorrei sapere se secondo te è un po la stessa cosa in italia che c'è un
+
+328
+00:34:20,320 --> 00:34:25,920
+grande mercato ma che nella popolazione in italia tipico a veramente una
+
+329
+00:34:25,920 --> 00:34:32,040
+documentazione in inglese non si può fare e davvero c'è un mercato che è
+
+330
+00:34:32,040 --> 00:34:37,200
+perduto in questo momento e che matomo non può andare a prendere perché la
+
+331
+00:34:37,200 --> 00:34:43,040
+documentazione in inglese. Guarda a me è dispiaciuto perché ieri ero molto
+
+332
+00:34:43,040 --> 00:34:49,160
+combattuto perché c'è stata la tua presentazione sul sull'aspetto della
+
+333
+00:34:49,160 --> 00:34:54,960
+traduzione e quindi infatti guarda non vedo l'ora di poterla rivedere perché
+
+334
+00:34:54,960 --> 00:35:01,600
+mi interessa se c'è un ambito in cui posso collaborare e partecipare con le
+
+335
+00:35:01,600 --> 00:35:08,240
+traduzioni in italiano sono ben lieto. Sicuramente diciamo il mercato italiano
+
+336
+00:35:08,240 --> 00:35:11,760
+un po' particolare da questo punto di vista
+
+337
+00:35:11,760 --> 00:35:19,360
+insomma basta pensare che anche al cinema non c'è un cinema che viene in lingua
+
+338
+00:35:19,360 --> 00:35:25,600
+con i sottotitoli dove si ha la capacità di apprezzare come dire l'esecuzione
+
+339
+00:35:25,600 --> 00:35:35,400
+degli attori originale. Qui è tutto tradotto, è proprio una cosa tipica un
+
+340
+00:35:35,400 --> 00:35:39,520
+comportamento tipico un po' anomalo. Sicuramente avere un documento della
+
+341
+00:35:39,520 --> 00:35:45,520
+documentazione in Italia può agevolare questa penetrazione verso il basso e
+
+342
+00:35:45,520 --> 00:35:54,680
+questa diffusione orizzontale, magari si può aprire il progetto se ce n'è la
+
+343
+00:35:54,680 --> 00:35:59,160
+possibilità e chiedere ovviamente a una comunità di stringersi di ritrovarsi
+
+344
+00:35:59,160 --> 00:36:07,480
+poi è ovvio che a un certo livello come sta dicendo anche Tassimo in chat è ovvio che a un
+
+345
+00:36:07,480 --> 00:36:12,680
+certo livello noi si lavora tutto in inglese non voglio vedere nulla in
+
+346
+00:36:12,680 --> 00:36:20,080
+italiano sulle macchine eccetera se non è impossibile però magari può essere un
+
+347
+00:36:20,080 --> 00:36:25,280
+approccio un modo per poter aprire un po' più orizzontalmente aumentare un po'
+
+348
+00:36:25,280 --> 00:36:32,720
+più la diffusione. Nella tua presentazione abbiamo visto che utilizzi
+
+349
+00:36:32,720 --> 00:36:43,600
+Digital Ocean quindi volevo sapere se ci sono servizi in Italia che
+
+350
+00:36:43,600 --> 00:36:51,600
+utilizzate tipo noi in Francia c'è certo noi andiamo su Amazon
+
+351
+00:36:51,600 --> 00:36:58,440
+AWS c'è infatti tutti questi servizi americani che andiamo a usare però
+
+352
+00:36:58,440 --> 00:37:07,560
+abbiamo anche OVH abbiamo anche diciamo belle belle aziende volevo sapere se in
+
+353
+00:37:07,560 --> 00:37:17,720
+Italia c'è diciamo aziende italiane che diciamo hanno il potere diciamo di
+
+354
+00:37:17,720 --> 00:37:24,600
+affrontare di combattere tutto diciamo tutti gli Stati Uniti e volevo anche
+
+355
+00:37:24,600 --> 00:37:31,440
+sapere infatti dove sono i principali datacenter in Italia e se c'è dal
+
+356
+00:37:31,440 --> 00:37:38,400
+punto di vista della legge se ci sono obbligazioni di avere i dati dove c'è
+
+357
+00:37:38,400 --> 00:37:46,520
+l'hosting in Italia al 100 per cento. Guarda siccome ovviamente è tutto
+
+358
+00:37:46,520 --> 00:37:52,880
+abbastanza dinamico io non sono molto aggiornato ovviamente sull'aspetto legale
+
+359
+00:37:52,880 --> 00:37:59,240
+sono rimasto a che la necessità è quella che i server siano in Europa
+
+360
+00:37:59,240 --> 00:38:08,040
+perché noi seguiamo la normativa europea anzi per fortuna che c'è perché è anche
+
+361
+00:38:08,040 --> 00:38:13,960
+più veloce come dire di quella pachydermica italiana che notoriamente
+
+362
+00:38:13,960 --> 00:38:20,920
+molto lenta tantissime inerzia nelle reazioni quindi fortunatamente diciamo
+
+363
+00:38:20,920 --> 00:38:27,260
+la comunità europea ha una capacità di essere più veloce nell'adeguamento delle
+
+364
+00:38:27,260 --> 00:38:35,000
+richieste per le missioni delle normative e questo ci aiuta ci aiuta
+
+365
+00:38:35,000 --> 00:38:42,160
+molto insomma. L'Italia ha una geografia un po particolare e quindi ha questo
+
+366
+00:38:42,160 --> 00:38:50,760
+sviluppo verticale quindi il punto di contatto con il continente ovviamente è
+
+367
+00:38:50,760 --> 00:39:00,280
+Milano e da che io ricordi io lavoro dai primi anni 90 in rete quando non c'era
+
+368
+00:39:00,280 --> 00:39:05,040
+internet ma c'era Itapac x25 per chi se lo ricorda le prime rete di
+
+369
+00:39:05,040 --> 00:39:09,080
+accumulazione di pacchetto e i primi nodi sono sempre stati
+
+370
+00:39:09,080 --> 00:39:14,360
+geograficamente ovviamente a Milano dove c'è il mix dove convergono i principali
+
+371
+00:39:14,360 --> 00:39:24,320
+hub globali europei. Poi ovviamente il dorsale italiana negli anni è migliorata
+
+372
+00:39:24,320 --> 00:39:34,600
+e un altro hub importante è a Roma dove convergono delle connessioni
+
+373
+00:39:34,600 --> 00:39:39,720
+attraverso il Miserraneo. Le server farm sono state quindi sempre
+
+374
+00:39:39,720 --> 00:39:47,460
+storicamente prima a Milano e qualcuno a Roma poi c'è un paio di casi in centro
+
+375
+00:39:47,460 --> 00:39:55,920
+Italia, Marche, Umbria però niente di eclatante diciamo le risorse in Italia
+
+376
+00:39:55,920 --> 00:40:04,600
+sono soli per ragioni come dire geofisiche proprio di contatto con il
+
+377
+00:40:04,600 --> 00:40:16,280
+continente questo è quanto. Adesso sono le 9.42 quindi forse abbiamo
+
+378
+00:40:16,280 --> 00:40:22,560
+ancora il tempo per un'ultima domanda sto guardando nel chat se c'è
+
+379
+00:40:22,560 --> 00:40:31,480
+qualcosa se no la mia domanda sarebbe quella quindi l'uso di google analytics
+
+380
+00:40:31,480 --> 00:40:37,040
+è stato vietato direi ho detto illegale da quello che ho capito
+
+381
+00:40:37,040 --> 00:40:43,960
+guardando nei social network e volevo sapere se infatti in Italia tipo le
+
+382
+00:40:43,960 --> 00:40:51,760
+aziende lo prendono ancora come tipo uno scherzo quindi non quindi
+
+383
+00:40:51,760 --> 00:40:57,240
+continuamo a utilizzare google analytics perché la possibilità di avere una
+
+384
+00:40:57,240 --> 00:41:06,800
+multa è proprio circa circa zero o davvero è una preoccupazione delle
+
+385
+00:41:06,800 --> 00:41:12,160
+aziende e quindi vanno a fare direi fatica o vanno a fare la migrazione per
+
+386
+00:41:12,160 --> 00:41:18,440
+andare su Matomo o su un'altra soluzione o anche può essere interessante se ci
+
+387
+00:41:18,440 --> 00:41:26,240
+sono in Italia delle soluzioni analitica che noi non conosciamo direi in
+
+388
+00:41:26,240 --> 00:41:33,560
+Europa che sono al cento per cento italiano che c'è da conoscere
+
+389
+00:41:33,560 --> 00:41:43,280
+guarda hai detto una cosa giustissima e purtroppo come dire hai sollevato un
+
+390
+00:41:43,280 --> 00:41:50,720
+calderone non piacevole perché purtroppo anche io occupandomi in
+
+391
+00:41:50,720 --> 00:41:58,480
+collaborazioni con delle aziende che si occupano di privacy e gdpr devo
+
+392
+00:41:58,480 --> 00:42:03,480
+confessare che la situazione è drammatica a dir poco ovviamente c'è
+
+393
+00:42:03,480 --> 00:42:10,400
+pochissimo interesse pochissima adesione all'aspetto normativo ma c'è persino
+
+394
+00:42:10,400 --> 00:42:17,200
+nell'aspetto tecnico quindi la media delle realizzazioni è di così basso
+
+395
+00:42:17,200 --> 00:42:25,040
+livello che ci sarebbe tanto da lavorare vorrei dire proprio con
+
+396
+00:42:25,040 --> 00:42:32,280
+l'alfabetizzazione culturale necessaria non soltanto nella capacità come dire
+
+397
+00:42:32,280 --> 00:42:38,960
+della soluzione della tecnologia perché ovviamente è presa molto in
+
+398
+00:42:38,960 --> 00:42:46,480
+secondo piano quella della sicurezza quella della capacità anche di creare e
+
+399
+00:42:46,480 --> 00:42:54,280
+distribuire un prodotto tecnologicamente anche dal punto di vista della legge
+
+400
+00:42:54,280 --> 00:43:01,440
+adeguata purtroppo c'è la realtà è questa è inutile che ci nascondiamo
+
+401
+00:43:01,440 --> 00:43:08,480
+dietro il dito tant'e vero diciamo che c'è tanto di quel lavoro che si arriva
+
+402
+00:43:08,480 --> 00:43:14,280
+nel momento stesso in cui si trova un'azienda che invece inizia ad avere
+
+403
+00:43:14,280 --> 00:43:23,760
+un certo grado di visibilità e quindi l'esposizione ovviamente è allargata e
+
+404
+00:43:23,760 --> 00:43:32,160
+allora lì veramente si parla di incuria oltre che di incapacità perché suppongo
+
+405
+00:43:32,160 --> 00:43:40,200
+che spesso le aziende che non riescono e non sono al passo ma non
+
+406
+00:43:40,200 --> 00:43:44,520
+soltanto con la legge ma anche con la tecnologia e con una visione nella
+
+407
+00:43:44,520 --> 00:43:51,560
+capacità di creare distribuire servizi e insomma il problema è fondamentalmente
+
+408
+00:43:51,560 --> 00:44:00,120
+culturale io mi auguro insomma che ci sia intanto un'attenzione sempre maggiore
+
+409
+00:44:00,120 --> 00:44:08,960
+all'epoca sto parlando dei primi anni 2 avevo collaborato anche con l'associazione
+
+410
+00:44:08,960 --> 00:44:18,320
+dei webmaster italiana iua per quello che riguarda tutta la capacità di
+
+411
+00:44:18,320 --> 00:44:26,520
+creazione di contenuti web accessibili quindi e già fu una lotta non da poco ma
+
+412
+00:44:26,520 --> 00:44:33,880
+agli effetti se andiamo a ben vedere la media delle pubblicazioni eccetera è
+
+413
+00:44:33,880 --> 00:44:43,480
+comunque di basso livello c'è ancora improvvisati i grafici che scrivono in
+
+414
+00:44:43,480 --> 00:44:50,280
+giallo su bianco quindi diciamo c'è ancora tanto da lavorare
+
+415
+00:44:50,280 --> 00:45:00,800
+ok grazie mille sono le 9 47 ho guardato nel chat non ci sono altre domande
+
+416
+00:45:00,800 --> 00:45:05,840
+quindi una volta di più ti vorrei ringraziare per questo momento storico
+
+417
+00:45:05,840 --> 00:45:11,000
+che è quindi la prima conferenza in italiano
+
+418
+00:45:11,000 --> 00:45:21,160
+spero che ce ne sarà no altri nei prossime edizioni di di matamor camp
+
+419
+00:45:21,160 --> 00:45:27,200
+grazie mille massimo e per l'opportunità grazie anche a lucas che ci
+
+420
+00:45:27,200 --> 00:45:32,560
+ha seguito in backstage ovviamente che sono disponibilissima
+
+421
+00:45:32,560 --> 00:45:36,200
+apertissima tutte le collaborazioni e partecipazioni
+
+422
+00:45:36,200 --> 00:45:42,960
+insomma diamoci dentro perché qui c'è tanto da fare insomma anche per la
+
+423
+00:45:42,960 --> 00:45:47,720
+qualità del dei servizi erogati grazie grazie a tutti
+
+424
+00:45:47,720 --> 00:46:01,080
+ottimo grazie mille a poco ciao
+

@@ -1,0 +1,1168 @@
+1
+00:00:00,000 --> 00:00:12,160
+Hello everyone, thank you for joining us in this second day of Matomo Camp.
+
+2
+00:00:12,160 --> 00:00:19,440
+We will start the day with a very interesting presentation from Johan about Tag Manager
+
+3
+00:00:19,440 --> 00:00:21,440
+and Constant Solutions.
+
+4
+00:00:21,440 --> 00:00:29,160
+Johan is a developer and project lead on web and web analytics since 2012.
+
+5
+00:00:29,160 --> 00:00:35,880
+He is tech lead for Matomo on the Swedish digital agency Whitespace.
+
+6
+00:00:35,880 --> 00:00:42,240
+Today we will learn with him how to handle user consent with Matomo and Matomo Tag Manager.
+
+7
+00:00:42,240 --> 00:00:48,920
+Johan, I am leaving the floor to you.
+
+8
+00:00:48,920 --> 00:00:54,160
+Hello everybody, my name is Johan Westin and I've been working with the web for a very
+
+9
+00:00:54,160 --> 00:01:01,680
+long time and I actually started my professional career back in 2004.
+
+10
+00:01:01,680 --> 00:01:06,000
+For the last couple of years I've been working at Whitespace and I've been responsible for
+
+11
+00:01:06,000 --> 00:01:11,320
+making sure that tech is working as expected with Matomo.
+
+12
+00:01:11,320 --> 00:01:17,080
+I've always been focused on open source software and are trying to push what's possible with
+
+13
+00:01:17,080 --> 00:01:23,320
+a free and open platform such as Matomo, it's really, really exciting.
+
+14
+00:01:23,320 --> 00:01:28,320
+I've been working with both large and small clients and we always find that they have
+
+15
+00:01:28,320 --> 00:01:34,760
+the same questions in how to manage consent on the web pages and also how Matomo handles
+
+16
+00:01:34,760 --> 00:01:37,760
+cookies.
+
+17
+00:01:37,760 --> 00:01:41,840
+Let's get started.
+
+18
+00:01:41,840 --> 00:01:44,840
+What is a cookie?
+
+19
+00:01:44,840 --> 00:01:53,800
+The easiest way to think of it is it's a very, very small file or piece of data stored in
+
+20
+00:01:53,800 --> 00:02:02,240
+the browser on your computer and only the webpage you are on can actually access that
+
+21
+00:02:02,240 --> 00:02:09,920
+data so Google.com can never access cookies for Microsoft.com and vice versa.
+
+22
+00:02:09,920 --> 00:02:15,720
+And since a cookie is just a file or when we're talking computer language, a string,
+
+23
+00:02:15,720 --> 00:02:18,160
+it can contain almost anything.
+
+24
+00:02:18,160 --> 00:02:24,280
+A very common strategy is to use cookies to store unique identifiers that you can use
+
+25
+00:02:24,280 --> 00:02:36,160
+to remember if a user has logged in or if they have made a specific choice for instance
+
+26
+00:02:36,160 --> 00:02:43,800
+to actually allow the browsers to store cookies.
+
+27
+00:02:43,800 --> 00:02:49,640
+Data in the cookies are the only piece of information that can persist between visits
+
+28
+00:02:49,640 --> 00:02:54,880
+to a page.
+
+29
+00:02:54,880 --> 00:03:01,520
+And it's also important to remember that you can actually steal somebody else's cookie
+
+30
+00:03:01,520 --> 00:03:08,120
+if you have access to their network or if you have access to their computer.
+
+31
+00:03:08,120 --> 00:03:15,360
+And there was actually a program back in 2010 called Fire Sheep that did exactly that for
+
+32
+00:03:15,360 --> 00:03:20,000
+famous social media sites.
+
+33
+00:03:20,000 --> 00:03:26,120
+Anybody remembers it?
+
+34
+00:03:26,120 --> 00:03:31,640
+It's actually possible for almost anybody with a little bit of technical skills to look
+
+35
+00:03:31,640 --> 00:03:35,560
+in the cookie jar.
+
+36
+00:03:35,560 --> 00:03:42,300
+In most browsers today you can use something called a developer tool to actually look or
+
+37
+00:03:42,300 --> 00:03:47,760
+delete cookies or create new ones if you want.
+
+38
+00:03:47,760 --> 00:03:54,560
+Here we can see free cookies for whitespace.sc and it's a bit small maybe but I've created
+
+39
+00:03:54,560 --> 00:04:07,360
+my own one called Crunchy.
+
+40
+00:04:07,360 --> 00:04:13,720
+And this is how you create a cookie within the developer tools or with JavaScript code.
+
+41
+00:04:13,720 --> 00:04:16,000
+So it's only one line.
+
+42
+00:04:16,000 --> 00:04:22,040
+There is of course a lot of more options you can set when creating a cookie but this is
+
+43
+00:04:22,040 --> 00:04:39,760
+the most basic use case for creating a cookie that will persist within the browser.
+
+44
+00:04:39,760 --> 00:04:48,440
+The information within the cookie is actually sent back to the server on almost on most
+
+45
+00:04:48,440 --> 00:04:56,280
+requests, not all requests, we will learn a little bit more about what requests later.
+
+46
+00:04:56,280 --> 00:05:04,520
+But here we can see an example for how the cookie data is actually sent with the request.
+
+47
+00:05:04,520 --> 00:05:12,320
+It's called an HTTP header and all requests that you are doing to a web page has this
+
+48
+00:05:12,320 --> 00:05:13,680
+data with it.
+
+49
+00:05:13,680 --> 00:05:19,920
+And the server then can use the cookie information to know who is browsing, should they be logged
+
+50
+00:05:19,920 --> 00:05:42,920
+in, is it in an automa context, we are talking about a visitor ID.
+
+51
+00:05:42,920 --> 00:05:48,280
+So that was a very brief introduction to cookies, let's move on.
+
+52
+00:05:48,280 --> 00:05:50,800
+We also have consent.
+
+53
+00:05:50,800 --> 00:05:58,240
+Consent is quite simple but most people get it wrong anyway.
+
+54
+00:05:58,240 --> 00:06:06,360
+When asking for consent, the user needs to say yes, not saying anything means no and
+
+55
+00:06:06,360 --> 00:06:14,440
+the user should be able to change their mind.
+
+56
+00:06:14,440 --> 00:06:20,800
+There is a lot of legal requirements related to consent.
+
+57
+00:06:20,800 --> 00:06:26,520
+I have no interest in delving too deep into that topic right now, we've got a lot of other
+
+58
+00:06:26,520 --> 00:06:35,420
+things to cover but you can actually within Matomo get some very useful links and tips
+
+59
+00:06:35,420 --> 00:06:41,240
+for consent if you are interested in reading more about it.
+
+60
+00:06:41,240 --> 00:06:44,600
+You will find it under privacy and asking for consent.
+
+61
+00:06:44,600 --> 00:06:57,880
+There is even some links to the GDPR and so forth.
+
+62
+00:06:57,880 --> 00:07:01,480
+So what kind of cookies does Matomo store then?
+
+63
+00:07:01,480 --> 00:07:09,280
+Well, a bunch, you can say, depending on what plugins you have active, the list might vary.
+
+64
+00:07:09,280 --> 00:07:14,200
+But these are some of the basic ones that you will see on most sites, at least if you
+
+65
+00:07:14,200 --> 00:07:16,920
+are using Matomo tag manager.
+
+66
+00:07:16,920 --> 00:07:24,520
+MTM consent, it's the first one, it's a user preference cookie, it's remembering if the
+
+67
+00:07:24,520 --> 00:07:27,920
+user has consented to cookies or not.
+
+68
+00:07:27,920 --> 00:07:33,720
+Remember that storing data in the cookies is the only way to have persistent information
+
+69
+00:07:33,720 --> 00:07:36,320
+between visits.
+
+70
+00:07:36,320 --> 00:07:46,080
+And so we need to create a cookie for remembering if we are allowed to create cookies.
+
+71
+00:07:46,080 --> 00:07:52,200
+For some times you also need to create a cookie for when you are not allowed to create cookies.
+
+72
+00:07:52,200 --> 00:07:57,040
+That's a bit more...
+
+73
+00:07:57,040 --> 00:08:01,040
+And we also have the PKID cookie.
+
+74
+00:08:01,040 --> 00:08:02,760
+This is also a Matomo cookie.
+
+75
+00:08:02,760 --> 00:08:13,000
+It's the unique identifier for the visitor or the user when accessing the page.
+
+76
+00:08:13,000 --> 00:08:17,880
+We also have the PKSES cookie.
+
+77
+00:08:17,880 --> 00:08:26,040
+This cookie stores information about the current visit that the user is doing right now.
+
+78
+00:08:26,040 --> 00:08:29,240
+And as I said, there are a bunch of other cookies.
+
+79
+00:08:29,240 --> 00:08:35,040
+It's very easy to find information about this if you look at matomo.org or if you're using
+
+80
+00:08:35,040 --> 00:08:39,160
+any search engine and search for Matomo and cookies and you will get the more detailed
+
+81
+00:08:39,160 --> 00:08:54,680
+information about what they include.
+
+82
+00:08:54,680 --> 00:09:01,480
+After saying no to cookies are not enough, Matomo has the ability to let users completely
+
+83
+00:09:01,480 --> 00:09:05,200
+opt out from any tracking.
+
+84
+00:09:05,200 --> 00:09:15,480
+You can actually add this cookie called Matomo Ignore to keep your own traffic from getting
+
+85
+00:09:15,480 --> 00:09:18,260
+exposed in the platform.
+
+86
+00:09:18,260 --> 00:09:26,280
+One way to do that is to click on the administration, the small cog in the user interface and then
+
+87
+00:09:26,280 --> 00:09:32,880
+click personal and then settings and then you have a link saying exclude your visits
+
+88
+00:09:32,880 --> 00:09:33,880
+using a cookie.
+
+89
+00:09:33,880 --> 00:09:40,640
+That will actually help you set this cookie in your browser to ignore all requests coming
+
+90
+00:09:40,640 --> 00:09:41,640
+from your browser.
+
+91
+00:09:41,640 --> 00:09:46,280
+This is a good way to make sure that you as an administrator of the platform don't want
+
+92
+00:09:46,280 --> 00:09:55,720
+to mix up your traffic with all the real visits to the page.
+
+93
+00:09:55,720 --> 00:10:02,200
+It's also possible in Matomo to enable the do not track header that some browsers have
+
+94
+00:10:02,200 --> 00:10:05,720
+implemented and are using.
+
+95
+00:10:05,720 --> 00:10:12,000
+Here we can see a screenshot from Firefox where you can enable that header and say always
+
+96
+00:10:12,000 --> 00:10:29,440
+or only for sites that I have selected.
+
+97
+00:10:29,440 --> 00:10:36,000
+Another new feature is that you can create a custom opt out page.
+
+98
+00:10:36,000 --> 00:10:42,080
+You have had the opt out page in Matomo for a long time but they recently added the ability
+
+99
+00:10:42,080 --> 00:10:48,520
+to actually add your own styles to that page to make it look more in line with the brand
+
+100
+00:10:48,520 --> 00:10:55,080
+of the page you're visiting.
+
+101
+00:10:55,080 --> 00:11:04,120
+But this we're getting kind of sidetracked from let's focus back on the tag manager instead.
+
+102
+00:11:04,120 --> 00:11:06,440
+Now we can handle options.
+
+103
+00:11:06,440 --> 00:11:13,320
+So a brief introduction, Matomo tag manager, it's a plugin.
+
+104
+00:11:13,320 --> 00:11:28,380
+You actually need to activate the plugin if you're running your own installation of Matomo.
+
+105
+00:11:28,380 --> 00:11:34,320
+When you activate the plugin, you will see a new selection in the top menu called tag
+
+106
+00:11:34,320 --> 00:11:35,640
+manager.
+
+107
+00:11:35,640 --> 00:11:45,600
+Tag manager is a way to control custom JavaScript snippets for non-developers.
+
+108
+00:11:45,600 --> 00:11:52,800
+You still need some technical know how but you can actually create quite a lot of interesting
+
+109
+00:11:52,800 --> 00:11:59,200
+events and tracking without doing any custom JavaScript.
+
+110
+00:11:59,200 --> 00:12:08,800
+Each page or property, if you are talking Google Analytics terms, has one or more containers
+
+111
+00:12:08,800 --> 00:12:17,880
+and container is collection of tags and triggers and variables and a container has the ability
+
+112
+00:12:17,880 --> 00:12:27,940
+to publish many different versions to different environments and each site can actually have
+
+113
+00:12:27,940 --> 00:12:40,960
+a multiple of containers if you want them to.
+
+114
+00:12:40,960 --> 00:12:48,560
+When you click on the tag manager in the top menu, this is the primary scene that we greet
+
+115
+00:12:48,560 --> 00:12:50,800
+you.
+
+116
+00:12:50,800 --> 00:12:58,280
+Some of the parts here are on Swedish because this is from a Swedish site.
+
+117
+00:12:58,280 --> 00:13:03,280
+But you can see the triggers and the tags and different versions and the variables.
+
+118
+00:13:03,280 --> 00:13:28,280
+Today, we're going to focus more on the variable part and to be even more specific, we're going
+
+119
+00:13:28,280 --> 00:13:36,880
+to focus on a Matomo configuration on the variables.
+
+120
+00:13:36,880 --> 00:13:41,480
+When clicking on the configuration, a new page is loaded and you are granted access
+
+121
+00:13:41,480 --> 00:13:46,920
+to all the settings available for that configuration.
+
+122
+00:13:46,920 --> 00:13:52,640
+Scrolling down in this list, we will find the options or settings related to cookies
+
+123
+00:13:52,640 --> 00:14:00,760
+and to consent.
+
+124
+00:14:00,760 --> 00:14:14,280
+There are three main options we will be discussing today.
+
+125
+00:14:14,280 --> 00:14:28,960
+We have the disable cookies, require tracking consent and require cookie consent.
+
+126
+00:14:28,960 --> 00:14:33,760
+It can be a little bit confusing because when you are clicking one of them, for instance,
+
+127
+00:14:33,760 --> 00:14:40,200
+say that you are clicking disable cookies, require tracking consent and require cookie
+
+128
+00:14:40,200 --> 00:14:45,920
+consent will actually disappear from the options.
+
+129
+00:14:45,920 --> 00:14:53,000
+The same is true for selecting require tracking consent and require cookie consent.
+
+130
+00:14:53,000 --> 00:14:58,920
+If these options are not showing for you, you might already have selected one of them
+
+131
+00:14:58,920 --> 00:15:04,120
+and you need to unclick that option to get them all.
+
+132
+00:15:04,120 --> 00:15:24,080
+It actually works a little bit more like a radio button than a normal select form.
+
+133
+00:15:24,080 --> 00:15:27,880
+The first option, disable cookies.
+
+134
+00:15:27,880 --> 00:15:35,240
+This means that all cookies are completely disabled and Matomo doesn't need to store
+
+135
+00:15:35,240 --> 00:15:40,560
+anything to track the users.
+
+136
+00:15:40,560 --> 00:15:48,240
+It is possible to activate them again through JavaScript if you want to.
+
+137
+00:15:48,240 --> 00:15:54,800
+And when we don't use cookies, Matomo will still track the visit, but we won't be able
+
+138
+00:15:54,800 --> 00:16:03,880
+to capture additional details about the visit, such as if it's a returning visitor and information
+
+139
+00:16:03,880 --> 00:16:23,680
+such as that, because we have no idea or no way of knowing if they are returning or not.
+
+140
+00:16:23,680 --> 00:16:27,120
+Require tracking consent.
+
+141
+00:16:27,120 --> 00:16:35,160
+This means that Matomo won't do any tracking at all until the user has agreed to this.
+
+142
+00:16:35,160 --> 00:16:41,240
+When selecting this option, some additional JavaScript code needs to be executed and added
+
+143
+00:16:41,240 --> 00:16:52,120
+to the site for when and if a user actually agrees and consents to being tracked.
+
+144
+00:16:52,120 --> 00:16:59,120
+This will, of course, impact how many visits you get on a page because many users don't
+
+145
+00:16:59,120 --> 00:17:06,680
+want to, don't really care about the consent or consent options and some users don't even
+
+146
+00:17:06,680 --> 00:17:19,320
+want to be tracked.
+
+147
+00:17:19,320 --> 00:17:24,840
+The JavaScript code that needs to be executed is displayed here.
+
+148
+00:17:24,840 --> 00:17:28,240
+It's a small call to the PAQ object.
+
+149
+00:17:28,240 --> 00:17:37,160
+The PAQ object is created by the Matomo tracker JavaScript, and here we are pushing in a new
+
+150
+00:17:37,160 --> 00:17:47,480
+setting or event to that object and telling it to remember that the user has given consent.
+
+151
+00:17:47,480 --> 00:17:53,080
+There is also another option where we can say set consent given.
+
+152
+00:17:53,080 --> 00:17:58,760
+That means that for this page view, the user has given their consent.
+
+153
+00:17:58,760 --> 00:18:04,640
+But for that to work, you need to create your own method of remembering consent because
+
+154
+00:18:04,640 --> 00:18:11,280
+you don't want to disturb the user on every page load and ask for consent again, again,
+
+155
+00:18:11,280 --> 00:18:31,680
+again.
+
+156
+00:18:31,680 --> 00:18:37,840
+And then we have the next option, require cookie consent.
+
+157
+00:18:37,840 --> 00:18:44,080
+This means that we won't, we will still do the tracking, but we won't create and store
+
+158
+00:18:44,080 --> 00:18:55,400
+a cookie in the users' browsers without them actually approving and giving us their consent.
+
+159
+00:18:55,400 --> 00:19:02,680
+This is the most common solution, at least for us, when we want to record that the page
+
+160
+00:19:02,680 --> 00:19:11,160
+view is happening, but we want to also ask the user if it's okay to store the cookie
+
+161
+00:19:11,160 --> 00:19:17,880
+and when they say, yes, you can, you are allowed to create a cookie in my browser, then the
+
+162
+00:19:17,880 --> 00:19:29,160
+cookie gets created and then the cookie is stored for at least a couple of weeks or maybe
+
+163
+00:19:29,160 --> 00:19:48,400
+months or all the following page views and return visits to the page.
+
+164
+00:19:48,400 --> 00:19:51,820
+And that's with the remember consent.
+
+165
+00:19:51,820 --> 00:19:59,040
+We also have the, it's almost the same code that needs to be executed.
+
+166
+00:19:59,040 --> 00:20:05,840
+You need to execute remember cookie consent given, push that to the PRQ object.
+
+167
+00:20:05,840 --> 00:20:14,480
+There is also a set consent given if you don't want to store this information within a cookie
+
+168
+00:20:14,480 --> 00:20:23,200
+and you need, but then you need to call that set consent given on each page load.
+
+169
+00:20:23,200 --> 00:20:29,680
+It can be a good option if you have your own consent management solution in place or handling
+
+170
+00:20:29,680 --> 00:20:47,720
+consent in any other way.
+
+171
+00:20:47,720 --> 00:20:53,400
+Since the chat is lagging behind quite a bit, we learned yesterday, I'm going to answer
+
+172
+00:20:53,400 --> 00:20:57,120
+all the questions at the end of the session.
+
+173
+00:20:57,120 --> 00:21:15,440
+So please just enter them in the chat and I will try to answer all of them at the end.
+
+174
+00:21:15,440 --> 00:21:20,080
+So but that's not all, we have more options to go through.
+
+175
+00:21:20,080 --> 00:21:26,120
+We have, there are also some options related to how the cookie should be created and how
+
+176
+00:21:26,120 --> 00:21:29,080
+the cookie should be stored.
+
+177
+00:21:29,080 --> 00:21:38,640
+These options are not related to consent, but more related to security, maybe even performance.
+
+178
+00:21:38,640 --> 00:21:41,760
+Four options we're going to focus in on right now.
+
+179
+00:21:41,760 --> 00:21:45,600
+First up, we have the secure cookie option.
+
+180
+00:21:45,600 --> 00:21:48,880
+So what does this even mean?
+
+181
+00:21:48,880 --> 00:21:57,400
+Well, it means that if you're tracking data from sites that are using HTTPS, which you
+
+182
+00:21:57,400 --> 00:22:02,920
+definitely should, you should enable secure cookies.
+
+183
+00:22:02,920 --> 00:22:11,240
+This will, when a page isn't loaded over a secure channel such as HTTPS, the communication
+
+184
+00:22:11,240 --> 00:22:15,880
+between your user and the webpage aren't encrypted at all.
+
+185
+00:22:15,880 --> 00:22:26,520
+And doing a cookie hijack, that means that you have a malicious actor on the same network
+
+186
+00:22:26,520 --> 00:22:33,480
+as the user, then they can actually inspect the traffic flowing over the network and extract
+
+187
+00:22:33,480 --> 00:22:36,440
+the cookie information from that user.
+
+188
+00:22:36,440 --> 00:22:41,960
+Or in a Matomo context, that might not be the most important thing because they can
+
+189
+00:22:41,960 --> 00:22:43,920
+steal a visit ID.
+
+190
+00:22:43,920 --> 00:22:50,040
+But if you have the ability to log into a site and are sending cookies related to that,
+
+191
+00:22:50,040 --> 00:22:53,880
+it definitely can be quite bad.
+
+192
+00:22:53,880 --> 00:23:06,600
+So and setting the cookie as secure means that it limits the scope for the cookie.
+
+193
+00:23:06,600 --> 00:23:14,300
+And limiting the scope means that the said cookie will only be sent over an HTTPS call.
+
+194
+00:23:14,300 --> 00:23:21,360
+So even if the user are trying to access the webpage in a non-HTTPS context, the cookie
+
+195
+00:23:21,360 --> 00:23:24,200
+won't be sent.
+
+196
+00:23:24,200 --> 00:23:33,780
+This is usually a good idea.
+
+197
+00:23:33,780 --> 00:23:40,960
+We also have the cookie domain and the cookie path options.
+
+198
+00:23:40,960 --> 00:23:47,640
+For cookies to work, we need to specify what domain it should be created for.
+
+199
+00:23:47,640 --> 00:23:55,680
+For example, if your webpage uses both www and without World Wide Web in the beginning,
+
+200
+00:23:55,680 --> 00:24:05,080
+you can set the cookie to.widespace.se, for example, and it should work for both domains.
+
+201
+00:24:05,080 --> 00:24:11,240
+It's also possible to use a tag manager variable here such as page hostname.
+
+202
+00:24:11,240 --> 00:24:17,680
+This can be very useful for testing purposes when you are using the same tag manager on
+
+203
+00:24:17,680 --> 00:24:31,880
+a stage site and a production site and you want to make sure that everything works.
+
+204
+00:24:31,880 --> 00:24:40,040
+When setting the domain or using this variable, you need to remember that if it's possible
+
+205
+00:24:40,040 --> 00:24:47,200
+to access your website for different domains for some reason, this might create different
+
+206
+00:24:47,200 --> 00:24:54,600
+cookies and the user might get registered at different user IDs.
+
+207
+00:24:54,600 --> 00:24:57,200
+Something to keep in mind.
+
+208
+00:24:57,200 --> 00:25:03,880
+The cookie path option can be used if the site is installed in a subdirectory on the
+
+209
+00:25:03,880 --> 00:25:06,560
+server.
+
+210
+00:25:06,560 --> 00:25:12,440
+This will limit the amount of cookies created for that domain and restrict them to just
+
+211
+00:25:12,440 --> 00:25:19,440
+one subdirectory.
+
+212
+00:25:19,440 --> 00:25:44,680
+Then we have the same site cookie.
+
+213
+00:25:44,680 --> 00:25:54,520
+This is an option for when a cookie should be sent from the browser to the server.
+
+214
+00:25:54,520 --> 00:26:01,480
+This helps the browser to understand when the cookies should be sent to the server or
+
+215
+00:26:01,480 --> 00:26:02,480
+not.
+
+216
+00:26:02,480 --> 00:26:05,360
+There are three options to choose from here.
+
+217
+00:26:05,360 --> 00:26:13,760
+We have the lax, that means do not send a normal cross site sub request, for example,
+
+218
+00:26:13,760 --> 00:26:16,760
+when loading images or frames.
+
+219
+00:26:16,760 --> 00:26:24,080
+This is the default option in most browsers.
+
+220
+00:26:24,080 --> 00:26:29,360
+Then we have a more strict approach, that means that cookies will only be sent in the
+
+221
+00:26:29,360 --> 00:26:37,340
+first party context and will not be sent along with requests initiated by third party websites
+
+222
+00:26:37,340 --> 00:26:44,240
+or third party scripts.
+
+223
+00:26:44,240 --> 00:26:49,720
+And then we have none, this is a bit more like a wild west approach, cookies will be
+
+224
+00:26:49,720 --> 00:27:08,840
+sent on all requests, in all contexts, images and for cross site requests.
+
+225
+00:27:08,840 --> 00:27:15,880
+That was all the settings within tag manager to handle cookies.
+
+226
+00:27:15,880 --> 00:27:19,840
+But there's actually one more important thing, something that Matomo can't really help us
+
+227
+00:27:19,840 --> 00:27:25,480
+with, and that is removing consent.
+
+228
+00:27:25,480 --> 00:27:31,520
+The way we do it and the JavaScript code that we need to execute is almost the same as the
+
+229
+00:27:31,520 --> 00:27:40,400
+one we are using when remembering consent, but instead we use forget consent given, and
+
+230
+00:27:40,400 --> 00:27:43,440
+we use forget cookie consent given.
+
+231
+00:27:43,440 --> 00:27:52,480
+And this is for when the user actually decides by using the consent solution on the webpage
+
+232
+00:27:52,480 --> 00:28:01,840
+to remove the consent or click the checkbox and I don't want to be tracked anymore.
+
+233
+00:28:01,840 --> 00:28:23,120
+And as with most things related to Matomo, the documentation is really, really good.
+
+234
+00:28:23,120 --> 00:28:31,000
+And if you want to learn more about tracking consent and how the JavaScript part of it
+
+235
+00:28:31,000 --> 00:28:35,120
+works, you should definitely check out the documentation.
+
+236
+00:28:35,120 --> 00:28:41,600
+A big high five to the Matomo team that has created documentation.
+
+237
+00:28:41,600 --> 00:28:47,520
+It's an excellent documentation for all things, including creating your own plugins and so
+
+238
+00:28:47,520 --> 00:28:54,520
+forth.
+
+239
+00:28:54,520 --> 00:29:03,040
+And that was it.
+
+240
+00:29:03,040 --> 00:29:06,480
+That was all my slides.
+
+241
+00:29:06,480 --> 00:29:12,640
+I was hoping to have a short questions and answers section now for the last couple of
+
+242
+00:29:12,640 --> 00:29:18,800
+minutes of the talk until the next one.
+
+243
+00:29:18,800 --> 00:29:23,640
+And I will be monitoring the chat if you have any questions.
+
+244
+00:29:23,640 --> 00:29:27,800
+Douglas asked earlier, can I decide how long the cookies will be saved?
+
+245
+00:29:27,800 --> 00:29:31,760
+Of course you can decide how long to save the cookies.
+
+246
+00:29:31,760 --> 00:29:39,200
+As Udo has mentioned, there is options for setting the timeouts.
+
+247
+00:29:39,200 --> 00:29:48,800
+You can also when you implement your own solutions, you can store them when cookies are created
+
+248
+00:29:48,800 --> 00:29:52,800
+for selecting a good time.
+
+249
+00:29:52,800 --> 00:30:01,080
+I think that is dependent on the local jurisdictions, what kind of rules apply to the site that
+
+250
+00:30:01,080 --> 00:30:02,960
+you are using.
+
+251
+00:30:02,960 --> 00:30:08,720
+But maybe a month or two is a good starting point for most sites.
+
+252
+00:30:08,720 --> 00:30:16,560
+Yeah, Marcus is pointing out, we had a question earlier about third party consent tools and
+
+253
+00:30:16,560 --> 00:30:20,320
+consent manager.
+
+254
+00:30:20,320 --> 00:30:28,760
+You can also implement them and most consent manager, as Thomas mentioned, stores a cookie
+
+255
+00:30:28,760 --> 00:30:31,040
+for when the user gives consent.
+
+256
+00:30:31,040 --> 00:30:36,440
+And some of them have excellent support for Matomo and some you need to actually create
+
+257
+00:30:36,440 --> 00:30:40,800
+your own small JavaScript snippets for handling cookies.
+
+258
+00:30:40,800 --> 00:30:47,080
+That is in most cases always when managing cookies, it's always two parts, one in Matomo
+
+259
+00:30:47,080 --> 00:30:53,560
+and one is in the CMS or on the site that you are implementing, then all sites require
+
+260
+00:30:53,560 --> 00:30:59,640
+or need their own custom solutions always.
+
+261
+00:30:59,640 --> 00:31:11,440
+And it's very hard to actually get away from that.
+
+262
+00:31:11,440 --> 00:31:17,160
+Nicholas is also mentioning that he has created a patch to tag manager where he can set the
+
+263
+00:31:17,160 --> 00:31:22,200
+visitor cookie time directly in the configuration and that sounds awesome.
+
+264
+00:31:22,200 --> 00:31:35,800
+Hopefully that will make it into a future version of tag manager.
+
+265
+00:31:35,800 --> 00:31:45,600
+Thomas is asking if he's not using tag manager, what kind of options does he have then?
+
+266
+00:31:45,600 --> 00:31:50,840
+All of the JavaScript options that I have shown here today are available within Matomo
+
+267
+00:31:50,840 --> 00:32:00,280
+without tag manager, but you don't have the ability because those are tag manager options
+
+268
+00:32:00,280 --> 00:32:04,520
+that I have shown you here to set consent and so forth.
+
+269
+00:32:04,520 --> 00:32:08,720
+You need to create your own solution when doing that.
+
+270
+00:32:08,720 --> 00:32:16,960
+Normally, I would say that you can catch me in the corridor or outside, but since we are
+
+271
+00:32:16,960 --> 00:32:21,520
+having this digital conference, you have to write to me if you have any more questions
+
+272
+00:32:21,520 --> 00:32:30,560
+after we are finished here in the chat or you can drop me an email, joan.westheim.whitespace.se
+
+273
+00:32:30,560 --> 00:32:42,440
+or just talk to some of my colleagues.
+
+274
+00:32:42,440 --> 00:32:43,440
+We have another question.
+
+275
+00:32:43,440 --> 00:32:49,720
+If I remove my consent, is the previously stored data actually removed such as my ID
+
+276
+00:32:49,720 --> 00:32:53,080
+and my IP address?
+
+277
+00:32:53,080 --> 00:32:54,680
+It's Michael who's asking.
+
+278
+00:32:54,680 --> 00:33:00,080
+I'm guessing he means from Matomo and no, that would not happen.
+
+279
+00:33:00,080 --> 00:33:04,500
+The thing that gets removed is the actual cookie in your browser.
+
+280
+00:33:04,500 --> 00:33:13,920
+If you want to remove your ID and masked IP address from Matomo, you would need to mail,
+
+281
+00:33:13,920 --> 00:33:18,280
+I think, or create a support issue with the administrators of Matomo and they can use
+
+282
+00:33:18,280 --> 00:33:26,480
+the GDPR tools within Matomo to actually remove the ID and masked IP address and also what
+
+283
+00:33:26,480 --> 00:33:30,920
+pages that user accessed.
+
+284
+00:33:30,920 --> 00:33:35,840
+As I said earlier, I will stick around in this chat room called Tag Manager and Consent
+
+285
+00:33:35,840 --> 00:33:42,320
+Solutions probably for the rest of the day and if anybody has any questions, just type
+
+286
+00:33:42,320 --> 00:33:46,000
+them there if it's regarding Tag Manager or Consent.
+
+287
+00:33:46,000 --> 00:33:53,720
+It would also be possible to jump on a quick hangout or call with me if needed.
+
+288
+00:33:53,720 --> 00:33:59,920
+If you have any specific questions that you would like to ask in regards to this.
+
+289
+00:33:59,920 --> 00:34:02,480
+So thank you, everybody.
+
+290
+00:34:02,480 --> 00:34:11,440
+Talk to you later and hope you have a good conference this last day of the week.
+
+291
+00:34:11,440 --> 00:34:12,440
+And bye-bye.
+
+292
+00:34:12,440 --> 00:34:24,740
+Thank you.
+

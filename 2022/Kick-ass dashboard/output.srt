@@ -1,0 +1,760 @@
+1
+00:00:00,000 --> 00:00:14,180
+Hello everyone. Thank you for joining another session of MatomoCamp. In this one we have
+
+2
+00:00:14,180 --> 00:00:21,280
+Niklas who will tell us more about dashboards in Matomo. Niklas is a web analyst with a
+
+3
+00:00:21,280 --> 00:00:27,760
+background in digital marketing and communication. He has worked with Matomo for years supporting
+
+4
+00:00:27,760 --> 00:00:34,960
+governmental agencies and businesses in Sweden. Today we'll learn how to get insights and
+
+5
+00:00:34,960 --> 00:00:44,720
+how to adjust the dashboards in Matomo. Niklas I'm leaving the floor to you.
+
+6
+00:00:44,720 --> 00:00:54,880
+Thank you. Yes. So hi and welcome to my little talk about how to get a kick-ass dashboard
+
+7
+00:00:54,880 --> 00:01:02,560
+in Matomo. I think my talk is going to be a little bit more straightforward and hands-on
+
+8
+00:01:02,560 --> 00:01:11,960
+than other talks for example yesterday. And I'm not going to mention anything about code
+
+9
+00:01:11,960 --> 00:01:19,120
+or something like that. So you don't need to know anything about that to master how
+
+10
+00:01:19,120 --> 00:01:27,760
+to get a kick-ass dashboard in Matomo. You just need to master how to drag and drop basically
+
+11
+00:01:27,760 --> 00:01:40,760
+inside Matomo. Yes and yeah the chat is lagging so I think I'm going to answer questions at
+
+12
+00:01:40,760 --> 00:01:54,960
+the end of my talk. I think that's going to be the best way forward. So this is basically
+
+13
+00:01:54,960 --> 00:02:02,680
+what I'm going to talk about. Firstly just going to talk a little bit about what the
+
+14
+00:02:02,680 --> 00:02:12,160
+dashboard in Matomo is and why you should use it. And the main part of the talk is about
+
+15
+00:02:12,160 --> 00:02:22,520
+how to set up dashboards within Matomo. So I'm going to demo Matomo and I'm going to
+
+16
+00:02:22,520 --> 00:02:30,660
+go through how the dashboard works, the default dashboard like the first dashboard you see
+
+17
+00:02:30,660 --> 00:02:39,480
+when you log in to Matomo. And then I'm going to try to set up two dashboards for different
+
+18
+00:02:39,480 --> 00:02:50,200
+needs. One for basically for goals and conversions and one for how you can get a dashboard for
+
+19
+00:02:50,200 --> 00:03:06,400
+your or how to see how your campaigns perform. That's basically it I think. Just a short
+
+20
+00:03:06,400 --> 00:03:15,200
+notice about who I am. Niklas Tarnsett is my name as Silva mentioned. And I'm right
+
+21
+00:03:15,200 --> 00:03:23,120
+now a web analyst at the Swedish digital agency Whitespace. I think I have worked with Matomo
+
+22
+00:03:23,120 --> 00:03:33,680
+since 2016 and I have been a product owner for Matomo for the largest organization public
+
+23
+00:03:33,680 --> 00:03:44,600
+sector in Sweden. And yeah I have a background in digital advertising and marketing. And
+
+24
+00:03:44,600 --> 00:03:55,200
+I like to try to focus on what kind of actionable insights you can get with the right data so
+
+25
+00:03:55,200 --> 00:04:11,800
+you don't drown in all the data that is available for you. Yeah that's pretty much who I am.
+
+26
+00:04:11,800 --> 00:04:20,040
+So just to talk a little bit about what the dashboard in Matomo is. You can say that it's
+
+27
+00:04:20,040 --> 00:04:27,760
+like your home page in Matomo. It's the first thing you see when you log into Matomo. And
+
+28
+00:04:27,760 --> 00:04:36,560
+as I mentioned briefly before there is a default dashboard in Matomo that InnoCraft has set
+
+29
+00:04:36,560 --> 00:04:48,800
+up for you. That one you can change and adjust according to your different needs and so forth.
+
+30
+00:04:48,800 --> 00:04:55,320
+And I think it's around a hundred different widgets or reports you can choose between
+
+31
+00:04:55,320 --> 00:05:06,280
+when you set up or adjust a dashboard in Matomo. So the sky's the limit you can say. So the
+
+32
+00:05:06,280 --> 00:05:23,880
+thing to focus on is which widgets or reports you want to show in a dashboard. And you can
+
+33
+00:05:23,880 --> 00:05:30,040
+actually create I don't know I don't think it's a limit to how many you can create. Maybe
+
+34
+00:05:30,040 --> 00:05:35,440
+someone can correct me if I'm wrong there but basically you can create many different
+
+35
+00:05:35,440 --> 00:05:41,560
+dashboards for different needs and you can for example let your internal stakeholders
+
+36
+00:05:41,560 --> 00:05:49,600
+get one kind of report or dashboard so they can see maybe the overall performance of your
+
+37
+00:05:49,600 --> 00:05:57,440
+website and maybe your market department need one other kind of dashboard that is more detailed
+
+38
+00:05:57,440 --> 00:06:08,480
+about maybe goals and conversions for different campaigns or how your site perform regarding
+
+39
+00:06:08,480 --> 00:06:19,000
+SEO or something like that. So I think it's quite a neat tool to use and in my experience
+
+40
+00:06:19,000 --> 00:06:32,600
+I think it's not used so much that it should be I think. And the last point here is you
+
+41
+00:06:32,600 --> 00:06:44,320
+can get quite useful data so you can maybe get some more actionable insights regarding
+
+42
+00:06:44,320 --> 00:06:55,880
+how your website perform and maybe what you need to adjust or take action on regarding
+
+43
+00:06:55,880 --> 00:07:10,520
+maybe conversions or how your SEO performance is. So I think it's quite a nice thing to
+
+44
+00:07:10,520 --> 00:07:20,640
+use and definitely something you should look into if you don't have like work with the
+
+45
+00:07:20,640 --> 00:07:31,800
+different dashboards and adjust them to your different needs. That's it about the dashboard
+
+46
+00:07:31,800 --> 00:07:44,080
+in Matomo but the talk is not over yet. I'm gonna demo the dashboard and yeah this is
+
+47
+00:07:44,080 --> 00:07:58,680
+basically what I'm gonna demo I think. So shortly about how the dashboard works in Matomo
+
+48
+00:07:58,680 --> 00:08:08,280
+and the default dashboard that you get. And then these two examples how you can adjust
+
+49
+00:08:08,280 --> 00:08:19,280
+your dashboard for goals and conversions and one for how you can track the campaign performance
+
+50
+00:08:19,280 --> 00:08:27,720
+if you're running a lot of campaigns in other channels like social media or newsletter and
+
+51
+00:08:27,720 --> 00:08:39,600
+so forth. So I'm gonna jump over to Matomo I think. Let's see here. So I choose the right
+
+52
+00:08:39,600 --> 00:09:08,280
+window. Yes. So this is the dashboard in Matomo. I hope you can see my screen now. And yeah
+
+53
+00:09:08,280 --> 00:09:18,720
+this is the default dashboard when you log in to Matomo for the first time or if you
+
+54
+00:09:18,720 --> 00:09:26,240
+do it regularly and you haven't adjusted the dashboard or chosen which widgets you want
+
+55
+00:09:26,240 --> 00:09:35,840
+to see. And I should say this is the dashboard if you're a super user. So I have like some
+
+56
+00:09:35,840 --> 00:09:46,280
+kind of gamification attempt here from InnoCraft to like set up the Matomo. But yes this is
+
+57
+00:09:46,280 --> 00:09:57,200
+the default dashboard and you can actually remove a widget or report how you want to
+
+58
+00:09:57,200 --> 00:10:03,560
+like if I don't want to have the real time widget. And it's the same principle for every
+
+59
+00:10:03,560 --> 00:10:16,040
+widget that I can remove like this. So it's quite neat and quite adjustable how you can
+
+60
+00:10:16,040 --> 00:10:25,200
+change the visual representation of data in the dashboard. So maybe I don't want this
+
+61
+00:10:25,200 --> 00:10:35,640
+welcome message even it's a nice message to get. Yeah so it's quite long here. And here
+
+62
+00:10:35,640 --> 00:10:44,480
+is all the options you have for the dashboard. And as you can see it's a lot of options for
+
+63
+00:10:44,480 --> 00:10:56,240
+different things. So I'm going to show you how you can maybe create a better dashboard
+
+64
+00:10:56,240 --> 00:11:06,760
+for your needs. So maybe if I just remove all of these widgets. And basically these
+
+65
+00:11:06,760 --> 00:11:15,920
+widgets as they are called are reports that you can find in the left menu here. It's basically
+
+66
+00:11:15,920 --> 00:11:28,080
+the same reports but you can visualize them in the dashboard instead of clicking through
+
+67
+00:11:28,080 --> 00:11:41,120
+the left menu here. So I had a lot of widgets here. So now it's empty. And maybe you want
+
+68
+00:11:41,120 --> 00:11:54,800
+to have some kind of data about how your site is performing. So this KPI metric widget is
+
+69
+00:11:54,800 --> 00:12:08,560
+quite a good widget to use for different needs. And for this I want to show how you can use
+
+70
+00:12:08,560 --> 00:12:19,480
+it to see how much traffic you get to your site and from which sources. So you hover
+
+71
+00:12:19,480 --> 00:12:26,360
+over here to this little symbol and then you get a lot of options here. The default is
+
+72
+00:12:26,360 --> 00:12:42,540
+visits and as I said I want to show you traffic sources. So now we have four search engines
+
+73
+00:12:42,540 --> 00:12:50,040
+and to get another one you need to do this again. And go down and then I want to have
+
+74
+00:12:50,040 --> 00:13:04,320
+four visitors from social networks as well. And maybe four visitors from direct traffic
+
+75
+00:13:04,320 --> 00:13:15,600
+or direct entry. And here you can see like a spark line and how many visitors from direct
+
+76
+00:13:15,600 --> 00:13:22,420
+entry compared to the previous period. And now I have 3rd of November. Maybe I should
+
+77
+00:13:22,420 --> 00:13:38,760
+choose like one month instead, like October. Yes, now it looks better. Yes, so it's quite
+
+78
+00:13:38,760 --> 00:13:51,240
+quick to get like an overall view of how your site performs regarding, oh, sorry, regarding
+
+79
+00:13:51,240 --> 00:14:05,680
+your site. So I can get like, this is from, there, this is from websites and then maybe
+
+80
+00:14:05,680 --> 00:14:20,200
+this is from campaigns as well. Let's see here. There we have it, visitors from campaigns.
+
+81
+00:14:20,200 --> 00:14:33,880
+So, and now the dashboard is in three columns. I usually prefer to work with two columns.
+
+82
+00:14:33,880 --> 00:14:41,840
+So then you can scroll down here and change dashboard layout to, yes, you can see here
+
+83
+00:14:41,840 --> 00:14:50,320
+you can have just one, two or two, but the first column is wider than the other one.
+
+84
+00:14:50,320 --> 00:14:57,440
+So yeah, I prefer to work with two so the dashboard don't get cluttered with too much
+
+85
+00:14:57,440 --> 00:15:10,560
+data. Yes, so this is I think much better than the default dashboard that we saw earlier.
+
+86
+00:15:10,560 --> 00:15:21,920
+One more thing or two more things maybe for just this default dashboard. I really like
+
+87
+00:15:21,920 --> 00:15:37,880
+this one, insights and movers and shakers. You can say it's some kind of overall association
+
+88
+00:15:37,880 --> 00:15:46,760
+how or the biggest changes in October compared to September then, because I've chosen that
+
+89
+00:15:46,760 --> 00:15:57,720
+time period. We can see what kind of page titles or page URLs have had the biggest increase
+
+90
+00:15:57,720 --> 00:16:04,240
+or yeah, in this example, it's just increased, but it's also, sometimes it's maybe a big
+
+91
+00:16:04,240 --> 00:16:14,760
+decrease in traffic to some website, web page on your website. And then you get like, yeah,
+
+92
+00:16:14,760 --> 00:16:22,920
+the percentage here, but in red, if it's decreased then. So it gets like, yeah, from Facebook
+
+93
+00:16:22,920 --> 00:16:31,420
+it increased a lot. And I think it's because our client here had some kind of campaign
+
+94
+00:16:31,420 --> 00:16:43,320
+in social media about this one. This is in Swedish. It's about more collection, waste
+
+95
+00:16:43,320 --> 00:16:53,840
+collection in the municipality Höganästan. So then they can see that the campaign attracted
+
+96
+00:16:53,840 --> 00:17:17,960
+a lot of traffic from Facebook. And then we can also have, if they're using smartphone
+
+97
+00:17:17,960 --> 00:17:29,400
+or desktop or tablet or so. And then that one I want to have here on the right. And
+
+98
+00:17:29,400 --> 00:17:35,920
+then you can hover scroll. Now you can move your mouse down here and maybe change to pie
+
+99
+00:17:35,920 --> 00:17:46,920
+chart. So this is the device type. Oh, there I go. And then the screen resolution, maybe
+
+100
+00:17:46,920 --> 00:18:00,000
+it's a good thing to also have. And that one I also want to have as a pie chart. Then you
+
+101
+00:18:00,000 --> 00:18:12,480
+can see, yeah, the smartphone is like, yeah, around 65% for October month. And here we
+
+102
+00:18:12,480 --> 00:18:22,480
+can see which ones are the most common screen resolutions. And that's a quite, yeah, it's
+
+103
+00:18:22,480 --> 00:18:30,040
+not like so much insights you can get from that, but it's a nice thing to know, like
+
+104
+00:18:30,040 --> 00:18:37,200
+a hygiene factor for your website that the website performs as you want it to perform
+
+105
+00:18:37,200 --> 00:18:47,160
+in these screen resolutions and that it performs well on smartphone then. So like this page
+
+106
+00:18:47,160 --> 00:18:59,660
+should be very good in the mobile, especially as it was quite a big increase from last month.
+
+107
+00:18:59,660 --> 00:19:13,720
+And this is one way to adjust your dashboard so it gets, I think, more easier to interpret
+
+108
+00:19:13,720 --> 00:19:22,920
+and easier to digest the data and maybe get more relevant data. And the next thing, if
+
+109
+00:19:22,920 --> 00:19:31,240
+you want to have this as your default dashboard, you can actually go down here and pick this
+
+110
+00:19:31,240 --> 00:19:46,640
+one, set as default widget selection. And you can click yes there. And I forgot to mention
+
+111
+00:19:46,640 --> 00:19:58,560
+the dashboard is connected to the user, like the user account. So this is for me then when
+
+112
+00:19:58,560 --> 00:20:07,280
+I log into Matomo. But if you want your colleagues to have the same dashboard, you can actually
+
+113
+00:20:07,280 --> 00:20:17,640
+copy it, copy the dashboard to user and then select which user should have the dashboard.
+
+114
+00:20:17,640 --> 00:20:24,080
+But it's quite important to know that if you change your dashboard, you need to do a new
+
+115
+00:20:24,080 --> 00:20:36,920
+copy of the dashboard to your colleagues. Yeah, this is one way to adjust the default
+
+116
+00:20:36,920 --> 00:20:54,680
+dashboard. So I'm going to create a new one, create a new dashboard. And it goes, oh, goes
+
+117
+00:20:54,680 --> 00:21:06,840
+and conversions. And then you can choose if the dashboard should populate with a default
+
+118
+00:21:06,840 --> 00:21:14,200
+dashboard or just an empty dashboard. And I choose empty so I don't need to remove all
+
+119
+00:21:14,200 --> 00:21:25,600
+of the widgets. And then I click add a widget. And for this size, I'm going to again use
+
+120
+00:21:25,600 --> 00:21:47,960
+this KPI metric widget. I'm going to create a lot of KPI widget here. So yeah, this is
+
+121
+00:21:47,960 --> 00:21:59,960
+a start. And then I also want to change the layout, change dashboard layout. Something
+
+122
+00:21:59,960 --> 00:22:09,920
+like this. And now I want to visualize how my goals are performing on the website. So
+
+123
+00:22:09,920 --> 00:22:21,560
+for this is this is for our client NSR. So I want to have one that shows all the conversions
+
+124
+00:22:21,560 --> 00:22:35,840
+on the website. And then maybe one with conversion rate. See if I can find that one there. Conversion
+
+125
+00:22:35,840 --> 00:22:45,240
+rate. So this is kind of like the overall performance regarding all the conversions
+
+126
+00:22:45,240 --> 00:22:58,760
+on the website. And now I want to have for each of the goals. So I scroll down here.
+
+127
+00:22:58,760 --> 00:23:12,440
+This is one goal. The goal is in Swedish, but it says login to my pages. And I want
+
+128
+00:23:12,440 --> 00:23:30,320
+the same but for conversion rate as well. There you have that. And the next goal. Yeah,
+
+129
+00:23:30,320 --> 00:23:53,280
+now I need to create a new one. Yes. So now you have just a dashboard for how your goals
+
+130
+00:23:53,280 --> 00:24:02,800
+are performing or in this example how our client's goals are performing. This is the
+
+131
+00:24:02,800 --> 00:24:10,600
+overall for all conversions. And it has increased. But as you can see the conversion rate is
+
+132
+00:24:10,600 --> 00:24:20,960
+down but not as much. That can maybe one explanation is like the traffic to the site increased
+
+133
+00:24:20,960 --> 00:24:32,520
+a lot but maybe not the rate of how many converted on the website. And this is for login to my
+
+134
+00:24:32,520 --> 00:24:39,920
+pages and the conversion rate and here the conversions and the conversion rate for the
+
+135
+00:24:39,920 --> 00:24:54,200
+next goal. So I think it's a nice feature to use the dashboard to adjust it and show
+
+136
+00:24:54,200 --> 00:25:03,720
+it for your colleagues. Like this one I should think the market department is quite interested
+
+137
+00:25:03,720 --> 00:25:13,840
+in. So you can use it to yeah you can do like this as well and then use this link to send
+
+138
+00:25:13,840 --> 00:25:30,000
+it to your colleagues. Yes. And the last one I want to show is a dashboard for campaign
+
+139
+00:25:30,000 --> 00:25:49,280
+performers. So I'm going to create a new dashboard. Sample of campaign performance. I'm going
+
+140
+00:25:49,280 --> 00:26:00,760
+to choose to leave it empty. Then I'm going to add a widget. And again I'm going to use
+
+141
+00:26:00,760 --> 00:26:15,200
+KPI metric and some other widgets as well. But we start with KPI metric. And yes I forgot
+
+142
+00:26:15,200 --> 00:26:28,720
+this one I want to have just as one column. I think you're going to understand why shortly.
+
+143
+00:26:28,720 --> 00:26:47,480
+So we're going to create more KPI widgets here. Something like this. And I want to have
+
+144
+00:26:47,480 --> 00:27:00,600
+this one visitors from campaigns. And I also want to have the percentage from campaigns.
+
+145
+00:27:00,600 --> 00:27:12,280
+Presenter visitors from campaigns. And I also want to have data for SEO traffic. Because
+
+146
+00:27:12,280 --> 00:27:20,640
+campaigns often affect your SEO or traffic that comes from search engines. Because it's
+
+147
+00:27:20,640 --> 00:27:27,440
+not always the user clicks on the link on like social media directly. Maybe they Google
+
+148
+00:27:27,440 --> 00:27:41,040
+it later or something like that. So then I want to have visitors from search engines.
+
+149
+00:27:41,040 --> 00:27:57,120
+And also direct traffic. Like all other traffic that Motomo can't identify basically. And
+
+150
+00:27:57,120 --> 00:28:13,120
+I want to have let's see here. Yes this one under acquisition campaigns and then campaign
+
+151
+00:28:13,120 --> 00:28:29,160
+names. And I want to have that one in the bottom of the dashboard like this as well.
+
+152
+00:28:29,160 --> 00:28:42,320
+And I think a couple of releases of Motomo or some releases lately released the ability
+
+153
+00:28:42,320 --> 00:28:52,280
+to show the spare table with goals metrics. So I think I'm going to do that. So yeah this
+
+154
+00:28:52,280 --> 00:29:02,320
+is in October so they had just two campaigns. And if you regard conversions for goals that
+
+155
+00:29:02,320 --> 00:29:09,160
+I had set up it wasn't so successful. But I actually don't know what the campaigns were
+
+156
+00:29:09,160 --> 00:29:19,280
+about but here you can get a glimpse of how the campaigns perform regarding your goals
+
+157
+00:29:19,280 --> 00:29:33,000
+that you have set up in Motomo. And you also get how the traffic to the website from the
+
+158
+00:29:33,000 --> 00:29:42,880
+campaigns for October. And also how the traffic from search engines and direct entry was for
+
+159
+00:29:42,880 --> 00:29:59,120
+October month. And this one is quite easy to grasp I think. And again it's something
+
+160
+00:29:59,120 --> 00:30:12,120
+maybe the market department is interested in to look at how their campaigns have performed
+
+161
+00:30:12,120 --> 00:30:24,400
+for a given period and see if it gave theirs the effect that they wanted or if it was just
+
+162
+00:30:24,400 --> 00:30:36,160
+basically a waste of time. So now I've just chosen like campaign names but you can also
+
+163
+00:30:36,160 --> 00:30:44,480
+see if you want if you see how it performed based on which source the traffic came from
+
+164
+00:30:44,480 --> 00:30:52,040
+like if it was Facebook or a newsletter or something like that. And then you can also
+
+165
+00:30:52,040 --> 00:31:06,760
+add let's see here acquisition and campaigns. And then you can take campaign source medium.
+
+166
+00:31:06,760 --> 00:31:17,160
+And you can yeah I'll put it here. Yeah it was a newsletter they sent out. But here again
+
+167
+00:31:17,160 --> 00:31:29,880
+you can change to goals metrics. Yes and here you have the campaign names. So yeah for this
+
+168
+00:31:29,880 --> 00:31:39,920
+example it's maybe not so relevant but if you communicate in different channels I think
+
+169
+00:31:39,920 --> 00:31:48,880
+it's quite neat to have one widget for your source medium as well to see if it was Facebook
+
+170
+00:31:48,880 --> 00:32:00,440
+or Instagram or a newsletter as in this example that performed best. Not performed best like
+
+171
+00:32:00,440 --> 00:32:14,080
+in visits but in conversions if that was your intent with the campaign. Yes I think it was
+
+172
+00:32:14,080 --> 00:32:25,120
+all that I had to show I think. Let me see here. Yeah I'll leave it there. So I don't
+
+173
+00:32:25,120 --> 00:32:34,080
+know if someone. Yeah I got a question here from Marcus. Is there any frequently asked
+
+174
+00:32:34,080 --> 00:32:43,000
+question from users transitioning from Google Analytics? Yeah well one question is how they
+
+175
+00:32:43,000 --> 00:32:56,000
+can get like the easy dashboard or visualization of data in Google Analytics. How they can
+
+176
+00:32:56,000 --> 00:33:04,560
+have the same in Matomo. And my answer is this is the closest you can get to like Google
+
+177
+00:33:04,560 --> 00:33:11,440
+Analytics have some similar solution. Like when you see the numbers you see the sparkline
+
+178
+00:33:11,440 --> 00:33:21,080
+and you see the comparison from the previous period. That's one question they have. One
+
+179
+00:33:21,080 --> 00:33:29,640
+common one that I don't have any good solution on is like secondary dimension. Or you can
+
+180
+00:33:29,640 --> 00:33:37,800
+if it's possible to use that in Matomo. And I don't think it's possible without some customized
+
+181
+00:33:37,800 --> 00:33:52,840
+code if I'm correctly. Maybe someone else have a better answer that. Yeah and got another
+
+182
+00:33:52,840 --> 00:34:01,480
+question from Diana. Is it possible to embed the dashboard in an external website? Yes
+
+183
+00:34:01,480 --> 00:34:18,200
+that's possible. You can use. Yes the short answer is yes. You can do that. I think I
+
+184
+00:34:18,200 --> 00:34:27,320
+think like adjusted dashboard in Matomo is very good for people that have not have not
+
+185
+00:34:27,320 --> 00:34:38,000
+the analyst skills that most of you have. Like you don't need to have an external tool
+
+186
+00:34:38,000 --> 00:34:46,080
+to get like some kind of improvement of the visualization in Matomo. But this is for like
+
+187
+00:34:46,080 --> 00:34:59,760
+the basic the basic things I think. Yeah I don't I can't I can't see any more questions
+
+188
+00:34:59,760 --> 00:35:08,600
+in the chat room. But if you have any questions regarding this you can always email me if
+
+189
+00:35:08,600 --> 00:35:23,440
+you want to. I'll write my email in the chat here. Yeah I think I'm going to say goodbye
+
+190
+00:35:23,440 --> 00:35:39,240
+and thank you for your time. Bye.
+

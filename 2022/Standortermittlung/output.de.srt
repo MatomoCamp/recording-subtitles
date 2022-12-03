@@ -1,0 +1,1776 @@
+1
+00:00:00,000 --> 00:00:10,000
+Einen wunderschönen Nachmittag, wieder von der MatomoCamp-Konferenz.
+
+2
+00:00:10,000 --> 00:00:15,000
+Es ist mir jetzt eine große Freude, unseren nächsten Sprecher vorstellen zu dürfen,
+
+3
+00:00:15,000 --> 00:00:20,000
+Udo Trautmann. Udo Trautmann ist ein freiberuflicher IT-Gerater
+
+4
+00:00:20,000 --> 00:00:24,000
+und betreut Kunden bei der Einführung von portalen Content-Management-Systemen
+
+5
+00:00:24,000 --> 00:00:28,000
+und zunehmend auch beim Thema Web Analytics mit Matomo.
+
+6
+00:00:28,000 --> 00:00:32,000
+In diesem Zusammenhang wird auch heute über die Geolokalisierung von Besuchern
+
+7
+00:00:32,000 --> 00:00:36,000
+von Websites sprechen. Der Vortrag beleuchtet dabei die
+
+8
+00:00:36,000 --> 00:00:40,000
+verschiedenen Möglichkeiten und Datenquellen für die Standortermittlung
+
+9
+00:00:40,000 --> 00:00:45,000
+von Website-Besuchern und vergleicht dabei die Auflösungsqualität der Datenbanken.
+
+10
+00:00:45,000 --> 00:00:49,000
+Und ohne jetzt hier weiter hinaus zu zögern, übergebe ich das Wort an
+
+11
+00:00:49,000 --> 00:00:52,000
+Udo Trautmann und bitteschön.
+
+12
+00:00:52,000 --> 00:00:58,000
+Ja, vielen Dank für die Einführung. Dann kann ich mich an der Stelle gleich mal kurz fassen.
+
+13
+00:00:58,000 --> 00:01:02,000
+Hatte auch am Anfang gleich nochmal eine Folie zu mir.
+
+14
+00:01:02,000 --> 00:01:08,000
+Das meiste ist ja schon gesagt worden, ich bin seit über 20 Jahren in der Internetbranche,
+
+15
+00:01:08,000 --> 00:01:14,000
+seit neun Jahren dann schon selbstständig. Und ich blogge auch über Matomo auf meiner Webseite
+
+16
+00:01:14,000 --> 00:01:20,000
+und verschicke an meine Abonnenten auch dann jeweils Newsletter zu Matomothemen,
+
+17
+00:01:20,000 --> 00:01:26,000
+sodass ich, sag ich mal auch, durch das Bloggen ein gewisses Wissen über Matomo
+
+18
+00:01:26,000 --> 00:01:30,000
+mir angeeignet habe und nicht nur über die Kundenbeugel.
+
+19
+00:01:30,000 --> 00:01:33,000
+Ja, was wollen wir heute im Konkreten uns anschauen?
+
+20
+00:01:33,000 --> 00:01:38,000
+Zunächst gehe ich nochmal auf die verschiedenen Ansätze der Standortermittlung
+
+21
+00:01:38,000 --> 00:01:43,000
+in Matomo ein, beleuchtet die mehr. Was steckt eigentlich dahinter?
+
+22
+00:01:43,000 --> 00:01:49,000
+Wie muss man das Ganze einsetzen? Dann gehe ich auf das Thema der Einwilligung
+
+23
+00:01:49,000 --> 00:01:55,000
+in die Standortermittlung ein und schaue auch, ob die Anonymisierung der IP-Adressen
+
+24
+00:01:55,000 --> 00:02:00,000
+eine Alternative darstellen kann. Gehe auf die Möglichkeiten der Berücksichtigung
+
+25
+00:02:00,000 --> 00:02:06,000
+der Einwilligungen, also das User-Consent in die Standortermittlung ein.
+
+26
+00:02:06,000 --> 00:02:16,000
+Und dann schauen wir uns mal zusammen Tests und die Qualität von verschiedenen Geolocation-Anbietern an
+
+27
+00:02:16,000 --> 00:02:21,000
+und beleuchten die Schwierigkeiten und Herausforderungen, die diese Anbieter haben,
+
+28
+00:02:21,000 --> 00:02:29,000
+um Standortdaten zurückzugeben und benenne Lösungsansätze, die Anbieter dort wählen.
+
+29
+00:02:29,000 --> 00:02:34,000
+Und ganz am Ende schauen wir uns noch eine individuelle Lösung an im Tech Manager,
+
+30
+00:02:34,000 --> 00:02:42,000
+die mit benutzerdefinierten Dimensionen den Standort abspeichert.
+
+31
+00:02:42,000 --> 00:02:49,000
+Was ist überhaupt mit Standortermittlung gemeint? Die Definition ist ja an sich relativ breitgefasst.
+
+32
+00:02:49,000 --> 00:02:55,000
+Das ist die Ermittlung des Standortes eines Besuchers anhand von IP-Adresse, von GPS-Koordinaten,
+
+33
+00:02:55,000 --> 00:03:01,000
+mobilfunktuellen Angaben, WLAN-Informationen oder freiwilligen Angaben,
+
+34
+00:03:01,000 --> 00:03:07,000
+die User zu einem beliebigen Zeitpunkt auf der Webseite oder in einer App hinterlassen haben.
+
+35
+00:03:07,000 --> 00:03:16,000
+Freiwillige Angaben könnten zum Beispiel so sein, dass User in einem Kontaktformular ihren Standort angeben
+
+36
+00:03:16,000 --> 00:03:24,000
+oder bei Nutzung von einer Karte gefragt werden, wo befinden sie sich überhaupt.
+
+37
+00:03:24,000 --> 00:03:33,000
+Das sind alles zusätzliche Themen, bei denen ein Nutzer proaktiv bereit sein muss, diese Informationen preiszugeben.
+
+38
+00:03:33,000 --> 00:03:39,000
+Wir schauen heute auf das, was ich hier grün markiert habe, auf das Thema Standortermittlung mit der IP-Adresse.
+
+39
+00:03:39,000 --> 00:03:46,000
+Die IP-Adresse ist ja von den Dingen her das einzige, was der Nutzer immer von sich preisgibt,
+
+40
+00:03:46,000 --> 00:03:58,000
+weil es technischerweise vom Browser mitgesendet wird an den Matomo-Surfer, natürlich auch an den Webserver der Webseite.
+
+41
+00:03:58,000 --> 00:04:05,000
+Zunächst, wie gesagt, schauen wir uns mal an, was Matomo anbietet, out of the box, für die Standortermittlung.
+
+42
+00:04:05,000 --> 00:04:16,000
+Wir haben ja hier einen Screenshot hinterlegt aus dem Matomo Backend Provider-Auswahl im Event-Menü unter System-Standorterkennung,
+
+43
+00:04:16,000 --> 00:04:24,000
+bei denen man diverse Einstellungen vornehmen kann, die, wie ich in der Praxis erlebe, für die meisten Kunden
+
+44
+00:04:24,000 --> 00:04:34,000
+zunächst eher technisch so kompliziert sind, dass sie eigentlich eher die Finger davon lassen und vielleicht das wählen,
+
+45
+00:04:34,000 --> 00:04:37,000
+was hier zum Beispiel mit Standard angeboten wird.
+
+46
+00:04:37,000 --> 00:04:44,000
+Und hier habe ich diese verschiedenen Provider hier mal in einer Tabelle versucht, so kompakt wie möglich zusammenzufassen,
+
+47
+00:04:44,000 --> 00:04:49,000
+um zu erläutern, was diese verschiedenen Einstellungen eigentlich bedeuten.
+
+48
+00:04:49,000 --> 00:04:55,000
+Wir haben zum einen natürlich, okay, man kann sie erstmal deaktivieren, sodass überhaupt keine Informationen
+
+49
+00:04:55,000 --> 00:05:01,000
+über den Standort und das Land des Besuchers gespeichert werden im Besucherprofil.
+
+50
+00:05:01,000 --> 00:05:13,000
+Die Standard-Einstellung ist eine Ermittlung des Standortes anhand der Pausersprache, also noch nicht anhand der IP-Adresse.
+
+51
+00:05:13,000 --> 00:05:21,000
+Die Pauser haben ja, wenn man sie installiert, neben der Sprache der Benutzeroberfläche auch nochmal eine Sprachkennung,
+
+52
+00:05:21,000 --> 00:05:28,000
+die sie an die Webseiten mitschicken. Zum Beispiel für Österreich wird DE-AT gesendet, für Deutschland nur DE,
+
+53
+00:05:28,000 --> 00:05:39,000
+oder für die englische Sprache der Amerikaner, EN-US. Und mit dem Mechanismus ermittelt an der Stelle
+
+54
+00:05:39,000 --> 00:05:46,000
+die Einstellung des Standard-Providers Matomo das Land. Das ist aber in dem Sinne eigentlich noch keine Standortermittlung,
+
+55
+00:05:46,000 --> 00:05:55,000
+noch keine Geolokalisierung, was ich jetzt hier auch öfter in meinem Vortrag mal als Synonym wahrscheinlich verwenden werde.
+
+56
+00:05:55,000 --> 00:06:02,000
+Spannender oder beziehungsweise dann schon mehr in diese Richtung gehen, mit Standortermittlung anhand der IP-Adresse sind zwei Provider-Einstellungen,
+
+57
+00:06:02,000 --> 00:06:12,000
+die sich unter den für Einsteiger ihren kryptischen Namen DBIP slash GOIP2 verbergen. Das sind Provider,
+
+58
+00:06:12,000 --> 00:06:25,000
+die anhand von Datenbanken von den Anbietern DBIP oder von der Firma Maxmind mit ihrer GOIP2-Datenbank die IP-Adresse nachschlagen
+
+59
+00:06:25,000 --> 00:06:36,000
+und von der Datenbank dann Angaben über den Ort, die Region, das Land und den Kontinent dieser IP-Adresse erhalten
+
+60
+00:06:36,000 --> 00:06:47,000
+und die dann im Besucherprofil von Matomo abspeichern. Bei diesem Datenbankabfragen stehen zwei Optionen zur Verfügung,
+
+61
+00:06:47,000 --> 00:06:58,000
+einmal eine mit PHP und einmal eine mit Apache Engine X bezeichnet, also zwei Websurfern. Die PHP-Variante arbeitet so,
+
+62
+00:06:58,000 --> 00:07:07,000
+dass sie innerhalb von Matomo mit PHP, also Matomo ist dann PHP programmiert, die Datenbank abfragt.
+
+63
+00:07:07,000 --> 00:07:15,000
+Die Daten- oder die IP-Adresse verlässt in dem Fall nicht den Matomosurfer, sondern die Datenbank liegt auf dem Surfer,
+
+64
+00:07:15,000 --> 00:07:25,000
+auf dem auch Matomo installiert ist, sodass die Abfrage eben lokal stattfindet. Die Variante mit dem Websurfer,
+
+65
+00:07:25,000 --> 00:07:34,000
+mit den Websurfern, also Apache und Engine X, erfolgt innerhalb des Websurfers, in dem Matomo installiert ist,
+
+66
+00:07:34,000 --> 00:07:41,000
+durch eine Erweiterung, die in den Websurfer installiert und konfiguriert werden muss.
+
+67
+00:07:41,000 --> 00:07:50,000
+Auch dort, diese Websurfer-Erweiterung arbeitet auch dort mit der lokal hinterlegten Datenbank und übergibt dann
+
+68
+00:07:50,000 --> 00:07:57,000
+die ermittelten Standortinformationen per Surfervariante in Matomo. Es ist ein recht technischer Vorgang,
+
+69
+00:07:57,000 --> 00:08:07,000
+ich werde gleich auch noch mal näher darauf eingehen, wann sich eigentlich welcher dieser Provider im Field einzusetzen.
+
+70
+00:08:07,000 --> 00:08:15,000
+Vorweg genommen schon zum Thema Apache und Engine X. Hier braucht man auf jeden Fall jemanden aus einer IT-Abteilung,
+
+71
+00:08:15,000 --> 00:08:23,000
+jemanden, der den Websurfer betreut, administriert. Das ist im Gegensatz zu den Einstellungen mit PHP
+
+72
+00:08:23,000 --> 00:08:32,000
+oder auch der Standardeinstellungen nichts, was ein Matomo-Administrator oder ein Matomo-Betreuer von alleine
+
+73
+00:08:32,000 --> 00:08:39,000
+in Betrieb nehmen kann. Im Übrigen, ich habe hier auch mal ein Ständchen dran gemacht, PHP und MaxMind,
+
+74
+00:08:39,000 --> 00:08:50,000
+GeoIP2-Datenbank sind für diejenigen, die die Matomo Cloud verwenden, die Einstellungen oder der gewählte Provider,
+
+75
+00:08:50,000 --> 00:08:57,000
+den man meines Wissens dort auch nicht ändern kann. Also insofern, alles, was ich jetzt ausführe,
+
+76
+00:08:57,000 --> 00:09:04,000
+muss man noch immer im Kontext verstehen, habe ich jetzt die Cloud-Lösungen im Einsatz, was bedeutet das für mich,
+
+77
+00:09:04,000 --> 00:09:13,000
+wenn ich den GeoIP2-PAP-Provider verwende oder habe ich Matomo selber installiert?
+
+78
+00:09:13,000 --> 00:09:17,000
+Dann habe ich natürlich die ganze Flexibilität, diese Einstellungen vorzunehmen.
+
+79
+00:09:17,000 --> 00:09:23,000
+In Vollständigkeit halber möchte ich auch ein Plug-in erwähnen, was es im Marketplace kostenlos gibt.
+
+80
+00:09:23,000 --> 00:09:30,000
+Und zwar arbeitet das Plug-in zur Standortermittlung mit einem anderen Anbieter als den zuvor genannten,
+
+81
+00:09:30,000 --> 00:09:38,000
+hier wird auf den Anbieter IP2-Location zurückgegriffen und dort wird die IP-Adresse auch in einer Datenbank
+
+82
+00:09:38,000 --> 00:09:46,000
+entweder innerhalb von Matomo mit PAP abgefragt oder es gibt einen Webservice-Zugriff auf den Anbieter,
+
+83
+00:09:46,000 --> 00:09:53,000
+da ist auch eine Registrierung erforderlich, damit das Ganze funktioniert.
+
+84
+00:09:53,000 --> 00:10:00,000
+Wann sind jetzt diese Einstellungen sinnvoll? Wann bietet sich welcher dieser Provider an?
+
+85
+00:10:00,000 --> 00:10:08,000
+Also wir haben zum einen den beim Standard-Provider, wo eben auf die Sprachinformation des Klausers zurückgegriffen wird,
+
+86
+00:10:08,000 --> 00:10:19,000
+die Situation, dass es sinnvoll sein kann, wenn die zur Verfügung stehenden IP-Adressen anonymisiert worden sind,
+
+87
+00:10:19,000 --> 00:10:27,000
+entweder mit zwei oder drei Bytes und auf die Weise eigentlich gar nicht mehr sinnvoll im Standort ermittelt werden kann.
+
+88
+00:10:27,000 --> 00:10:35,000
+Hier macht es einfach Sinn, dass man sagt, okay, man greift dann nur noch auf die Sprachinformation des Klausers zurück
+
+89
+00:10:35,000 --> 00:10:43,000
+und ermittelt nur noch das Line. Es kann auch Konstellationen geben, es kommt selten vor, aber ich habe es,
+
+90
+00:10:43,000 --> 00:10:49,000
+ich sage mal 10% oder vielleicht 5% von Setups von Matomo-Installationen schon erlebt,
+
+91
+00:10:49,000 --> 00:10:57,000
+dass aus technischen Gründen die eigentliche IP-Adresse des Klausers gar nicht am Matomo-Surfer ankommt.
+
+92
+00:10:57,000 --> 00:11:06,000
+Das ist meistens dann der Fall, wenn Netzwerkinfrastrukturen vereinfacht gesagt so komplex sind,
+
+93
+00:11:06,000 --> 00:11:15,000
+dass sie durch Firewalls, durch Load Balancer, Proxy, Server, die nicht die original IP-Adresse des Users weitergeben,
+
+94
+00:11:15,000 --> 00:11:21,000
+sondern nur irgendwie die eigene weiter senden an Matomo, dass wir hier eine Konstellation haben,
+
+95
+00:11:21,000 --> 00:11:27,000
+dass Matomo unter Umständen diese IP-Adresse gar nicht hat.
+
+96
+00:11:27,000 --> 00:11:38,000
+Der db.ip2-geo.ip-Provider mit PHP, der ist dann sinnvoll, wenn wir die IP-Adressen des Users komplett
+
+97
+00:11:38,000 --> 00:11:46,000
+oder vielleicht nur mit einem anonymisierten Byte zur Verfügung stehen haben oder auch wenn wir gar nicht normal
+
+98
+00:11:46,000 --> 00:11:55,000
+mit Matomo tracken, also nicht mit dem JavaScript tracken, sondern mit Surfer-Logfile-Import arbeiten,
+
+99
+00:11:55,000 --> 00:12:01,000
+dann muss man eigentlich diesen Provider nehmen, wenn man überhaupt Standortermittlung machen möchte,
+
+100
+00:12:01,000 --> 00:12:09,000
+weil die anderen Provider in dem Fall beim Surfer-Logfile-Import gar nicht arbeiten können.
+
+101
+00:12:09,000 --> 00:12:18,000
+Diesen Provider muss man auch wählen, gezwungenermaßen im Grunde genommen, wenn man mit IP-Geo-Lokalisierungen
+
+102
+00:12:18,000 --> 00:12:23,000
+arbeiten möchte, wenn man das Matomo bei einem Shared-Hoster laufen lässt,
+
+103
+00:12:23,000 --> 00:12:35,000
+weil in der Regel man bei Shared-Hostern das Apache oder Nginx, an den Apache und an den Nginx gar nicht rankommt
+
+104
+00:12:35,000 --> 00:12:45,000
+und dort keine Konfiguration vornehmen kann. Deswegen ist dann diese PHP-Variante die einzigst sinnvolle
+
+105
+00:12:45,000 --> 00:12:53,000
+in der Praxis sehr häufig anzutreffen bei Installationen mit WordPress, wo man ja meistens sehr günstig
+
+106
+00:12:53,000 --> 00:12:59,000
+aus Kostenkunden sehr günstig bei Shared-Hostern seine Webseite betreiben kann.
+
+107
+00:12:59,000 --> 00:13:07,000
+Und dann kann man im Matomo letztlich eben auch nur diesen Provider einsetzen für die IP-Standortermittlung.
+
+108
+00:13:07,000 --> 00:13:15,000
+Der Provider für die Web-Surfer mit Apache und Nginx, der ist auch in dem Fall wieder nur wirklich sinnvoll,
+
+109
+00:13:15,000 --> 00:13:20,000
+wenn man die IP-Adressen vollständig oder mit einem anonymisierten Byte hat.
+
+110
+00:13:20,000 --> 00:13:27,000
+Oder wenn man diese vorhin von mir schon angeschnittene, netzwerktechnisch komplexere Situation hat,
+
+111
+00:13:27,000 --> 00:13:36,000
+dass die Client-IP-Adressen, also die IP-Adressen der Besucher, erst am Web-Surfer ermitteln muss
+
+112
+00:13:36,000 --> 00:13:45,000
+mittels Web-Surfer-Direktiven, wo man die Remote-IP-Adresse quasi sich geben lassen kann,
+
+113
+00:13:45,000 --> 00:13:50,000
+um dann mit der Adresse die Standortermittlung vornehmen zu können.
+
+114
+00:13:50,000 --> 00:13:57,000
+Oder wenn der Web-Surfer, in dem Matomo läuft, ohnehin schon Geolokalisierung macht,
+
+115
+00:13:57,000 --> 00:14:05,000
+weil er zum Beispiel auch von irgendwelchen Content-Delivery oder Content-Blocking-Maßnahmen
+
+116
+00:14:05,000 --> 00:14:11,000
+auf einer Webseite, auf einem großen Portal die IP-Adressen zunächst prüft, um zu entscheiden,
+
+117
+00:14:11,000 --> 00:14:16,000
+welchen Content er ausspielen möchte oder überhaupt darf.
+
+118
+00:14:16,000 --> 00:14:23,000
+Da kann man natürlich in dem Atemzug die dort ermittelten Informationen gleich mitverwenden,
+
+119
+00:14:23,000 --> 00:14:30,000
+um sie auch an Matomo zu übergeben und muss das dann nicht nochmal extra Matomo machen.
+
+120
+00:14:30,000 --> 00:14:38,000
+Der Provider kann auch sinnvoll sein, wenn man das ganze Einwilligungsthema individuell
+
+121
+00:14:38,000 --> 00:14:41,000
+für die Standortermittlung durchführen möchte.
+
+122
+00:14:41,000 --> 00:14:47,000
+Da werde ich gleich auch nochmal eingehen und das auch nochmal ein Beispiel zeigen,
+
+123
+00:14:47,000 --> 00:14:51,000
+wie man das im Engine X machen könnte.
+
+124
+00:14:51,000 --> 00:14:59,000
+Der Provider, hatte ich vorhin ja auch schon gesagt, ist eben nicht von einem Web-Server,
+
+125
+00:14:59,000 --> 00:15:04,000
+von einem Matomo-Administrator einfach mal so aktivierbar, sondern man braucht hier
+
+126
+00:15:04,000 --> 00:15:12,000
+einen Web-Server-Administrator, der eine Trittsoftware kombiniert, in den Web-Server installiert
+
+127
+00:15:12,000 --> 00:15:16,000
+und dann auch die entsprechende Konfiguration vornimmt.
+
+128
+00:15:16,000 --> 00:15:23,000
+Meines Wissens ist es nur mit der Lösung von NextMind möglich, wenn im Chat ein Experte von Matomo
+
+129
+00:15:23,000 --> 00:15:26,000
+dabei ist, können mich da auch gerne korrigieren.
+
+130
+00:15:26,000 --> 00:15:32,000
+Ich habe jetzt kein Setup gefunden, dass man was gefunden hat, wo man mit der DBIP-Datenbank
+
+131
+00:15:32,000 --> 00:15:35,000
+das im Web-Server machen kann.
+
+132
+00:15:35,000 --> 00:15:39,000
+Aber vielleicht arbeitet auch die Software von NextMind mit der Datenbank von DBIP.
+
+133
+00:15:39,000 --> 00:15:40,000
+Das weiß ich nicht.
+
+134
+00:15:40,000 --> 00:15:43,000
+Also dokumentiert habe ich es nicht gefunden.
+
+135
+00:15:43,000 --> 00:15:47,000
+Das wäre vielleicht auch nochmal ein interessantes Feedback an mich heute in der Runde,
+
+136
+00:15:47,000 --> 00:15:50,000
+ob das überhaupt möglich ist.
+
+137
+00:15:50,000 --> 00:15:55,000
+Dann schauen wir nochmal abschließend auf das Plugin von IP2 Location.
+
+138
+00:15:55,000 --> 00:15:58,000
+Ich greife mal hier schon ein bisschen vorweg.
+
+139
+00:15:58,000 --> 00:16:04,000
+Ich kann für das Plugin bzw. für die Qualität der ermittelten Standardergebnisse
+
+140
+00:16:04,000 --> 00:16:08,000
+leider keine Empfehlung aussprechen, denn bei einem Test, den ich gemacht habe,
+
+141
+00:16:08,000 --> 00:16:12,000
+ich werde auch noch die Testergebnisse im Einzelnen euch mal zeigen,
+
+142
+00:16:12,000 --> 00:16:17,000
+war eigentlich nur bei, selbst bei der vollen IP-Adresse, die Landesangabe korrekt,
+
+143
+00:16:17,000 --> 00:16:27,000
+aber wie der Bundesland, geschweige denn Ortsangaben, waren bei dem Geolocation-Anbieter korrekt gewesen,
+
+144
+00:16:27,000 --> 00:16:33,000
+sodass ich hier eigentlich im Moment keine direkte Empfehlung aussprechen kann.
+
+145
+00:16:36,000 --> 00:16:41,000
+Thema Einwilligungspflicht und Anonymisierung.
+
+146
+00:16:41,000 --> 00:16:47,000
+Ist die Anonymisierung eine Alternative für die Einwilligungspflicht in die Standortermittlung?
+
+147
+00:16:47,000 --> 00:16:49,000
+Ich hatte das ja schon teilweise angedeutet.
+
+148
+00:16:49,000 --> 00:16:54,000
+Und wir haben in Deutschland die rechtliche Situation,
+
+149
+00:16:54,000 --> 00:17:04,000
+dass eine Standortermittlung ohne Einwilligung des Besuchers mit Verwendung der IP-Adresse nicht erlaubt ist.
+
+150
+00:17:04,000 --> 00:17:07,000
+Hier geht es gar nicht mal um die Speicherung der IP-Adresse,
+
+151
+00:17:07,000 --> 00:17:12,000
+die bei Formatomo ohnehin dem Thema nicht gespeichert wird,
+
+152
+00:17:12,000 --> 00:17:17,000
+sondern es geht um die Verarbeitung, weil man verhindern muss,
+
+153
+00:17:17,000 --> 00:17:22,000
+dass eine Personenbeziehbarkeit hergestellt werden kann.
+
+154
+00:17:22,000 --> 00:17:29,000
+Das Ganze ist schon weit vor Zeiten der DSGVO festgelegt worden.
+
+155
+00:17:29,000 --> 00:17:37,000
+Es gab im November 2009 Beschlüsse der obersten Aufsichtsbehörden der Datenschutzkonferenz in Deutschland.
+
+156
+00:17:37,000 --> 00:17:41,000
+Ich habe hier zwei Links auch gepostet, wenn man das nachlesen kann.
+
+157
+00:17:41,000 --> 00:17:48,000
+Man sprach und spricht dort davon, dass eine Kürzung möglich ist der IP-Adresse.
+
+158
+00:17:48,000 --> 00:17:52,000
+Das ist sprich eine Anonymisierung um einzelne Bytes,
+
+159
+00:17:52,000 --> 00:17:57,000
+die dann eine Verarbeitung auch ohne Einwilligung erlauben.
+
+160
+00:17:57,000 --> 00:18:05,000
+In den damaligen Formulierungen ist nicht davon geredet, um wie viele Bytes man kürzen muss.
+
+161
+00:18:05,000 --> 00:18:11,000
+Vielleicht ist das auch nochmal ein Input, den hier vielleicht jemand auch in die Runde noch geben kann.
+
+162
+00:18:11,000 --> 00:18:20,000
+Ich habe das, um auch euch zu zeigen, was es bedeutet im Sinne der Auswirkungen der Qualität,
+
+163
+00:18:20,000 --> 00:18:25,000
+den Standort mit anonymisierter IP-Adresse zu ermitteln, ein paar Tests durchgeführt.
+
+164
+00:18:25,000 --> 00:18:35,000
+Die MaxMind Firma bietet ein Tool, ein Konsolentool, das man sich unterladen kann,
+
+165
+00:18:35,000 --> 00:18:42,000
+was man ausführen kann, um die Datenbank von MaxMind zu testen,
+
+166
+00:18:42,000 --> 00:18:47,000
+mit dem man einfach eine IP-Adresse reingibt und dann die Daten zurückbekommt.
+
+167
+00:18:47,000 --> 00:18:53,000
+Einfaches Tool, um dann aber für beliebigste IPs einfach mal zu testen.
+
+168
+00:18:53,000 --> 00:19:02,000
+Ich habe mal zufällige Test-IPs gewählt und hier mein Beispiel, die 188, 172 mit zwei Bytes anonymisiert.
+
+169
+00:19:02,000 --> 00:19:09,000
+Matomo ersetzt ja dann bei der Anonymisierung diese X durch zwei Einsen
+
+170
+00:19:09,000 --> 00:19:18,000
+und macht damit dann die Abfrage für alle User, bei denen die IP-Adresse mit den ersten beiden Bytes beginnen.
+
+171
+00:19:18,000 --> 00:19:25,000
+Wie wir sehen, haben wir hier eine IP-Adresse, wo dieser Range unglaublich groß gefasst ist.
+
+172
+00:19:25,000 --> 00:19:33,000
+Und hier bei dieser GeoIP2-Datenbank IP-Adressen nicht nur aus anderen europäischen Ländern,
+
+173
+00:19:33,000 --> 00:19:43,000
+sondern sogar aus Südamerika und Nordamerika und Asien enthalten sind.
+
+174
+00:19:43,000 --> 00:19:49,000
+Also insofern muss man hier deutlicher zur Erkenntnis kommen, dass wenn man hier mit zwei Bytes
+
+175
+00:19:49,000 --> 00:19:57,000
+Anonymisierung vornimmt, dass das Ergebnis der Standortermittlung nicht mehr unbedingt
+
+176
+00:19:57,000 --> 00:20:04,000
+dem entspricht, was richtig ist. Es kann durchaus, muss ich aber auch der Offenheit sagen,
+
+177
+00:20:04,000 --> 00:20:12,000
+IP-Ranges geben, wo man die ersten zwei Bytes durchaus vielleicht nur in zwei, drei Ländern findet.
+
+178
+00:20:12,000 --> 00:20:16,000
+Vielleicht auch mal sogar nur in einem Land, also ich glaube vor allem bei den USA,
+
+179
+00:20:16,000 --> 00:20:24,000
+wo die viele IP-Adressen zugeordnet sind, kann es durchaus auch sein, dass man bei einer Anonymisierung
+
+180
+00:20:24,000 --> 00:20:30,000
+mit zwei Bytes immerhin noch den Treffer nur für USA bekommt.
+
+181
+00:20:30,000 --> 00:20:35,000
+Ja, bei einer Anonymisierung mit einem Byte sieht es dann schon deutlich besser aus.
+
+182
+00:20:35,000 --> 00:20:45,000
+Bei meinen Tests war es so, dass gerade bei deutschen IP-Adressen das Bundesland eigentlich immer dann einheitlich war.
+
+183
+00:20:45,000 --> 00:20:50,000
+Und in den meisten Fällen auch der Ort, allenfalls sag ich mal in den ländlichen Gegenden,
+
+184
+00:20:50,000 --> 00:20:57,000
+konnte es passieren, dass dann vielleicht mal kleinere Ortschaften, kleinere Städte
+
+185
+00:20:57,000 --> 00:21:04,000
+innerhalb dieser 55, 255 Bytes sich dann befunden haben. Aber, und am Strich muss man sagen,
+
+186
+00:21:04,000 --> 00:21:11,000
+bei einer Anonymisierung mit einem Byte sind die Ergebnisse immer noch akzeptabel
+
+187
+00:21:11,000 --> 00:21:21,000
+und zu bezeichnen. Ja, welche Möglichkeiten hat man überhaupt, wenn der Gesetzgeber hier vorschreibt,
+
+188
+00:21:21,000 --> 00:21:25,000
+dass man eine Einwilligung für die Standortermittlung durchführen muss,
+
+189
+00:21:25,000 --> 00:21:32,000
+bei den Out-of-the-Box-Möglichkeiten von Matomo, also für die Dinge, über die wir bisher heute gesprochen haben.
+
+190
+00:21:32,000 --> 00:21:38,000
+Wenn wir eine Standortermittlung mit der vollen IP-Adresse machen wollen,
+
+191
+00:21:38,000 --> 00:21:47,000
+haben wir, ich sag mal so, wir haben es relativ schwer und wir müssen bei der Variante mit dem PHP-Provider
+
+192
+00:21:47,000 --> 00:21:53,000
+sogar das Ganze an die Einwilligung für das Tracking koppeln.
+
+193
+00:21:53,000 --> 00:22:00,000
+Denn der Matomo unterstützt keine individuelle Einwilligung in die Standortermittlung,
+
+194
+00:22:00,000 --> 00:22:08,000
+sondern das ganze Thema Consent Management in Matomo bezieht sich immer auf die Frage, will ich einen User überhaupt tracken?
+
+195
+00:22:08,000 --> 00:22:14,000
+Ja oder nein? Und in dem Fall müssen wir sozusagen, wenn wir das mit dem Provider machen,
+
+196
+00:22:14,000 --> 00:22:22,000
+den Einwilligungsbanner, den Cookie- oder Consent-Banner so gestalten, dass unsere Besucher,
+
+197
+00:22:22,000 --> 00:22:29,000
+wenn sie in das Tracking einwilligen, dann auch informiert werden, dass sie in das Standortermittlungsthema einwilligen.
+
+198
+00:22:29,000 --> 00:22:36,000
+Und wenn sie das ablehnen, dann dürfen sie auch nicht getrackt werden und dann wird natürlich auch kein Standort ermittelt.
+
+199
+00:22:36,000 --> 00:22:41,000
+Bei der Provider Variante mit den Websurfern können wir ein bisschen flexibler agieren.
+
+200
+00:22:41,000 --> 00:22:49,000
+Hier können wir im Websurfer, wenn uns dieser Cookie im Websurfer zur Verfügung steht,
+
+201
+00:22:49,000 --> 00:22:56,000
+den Cookie zum Consent auswerten und können dann im Matomo Websurfer
+
+202
+00:22:56,000 --> 00:23:03,000
+die Standortermittlung nur dann auch durchführen. Wenn der User abgelehnt hat oder der Cookie fehlt,
+
+203
+00:23:03,000 --> 00:23:11,000
+dann würden wir für den Standort irgendeinen Default-Wert an Matomo als Standort übergeben,
+
+204
+00:23:11,000 --> 00:23:16,000
+der uns dann später in Matomo sagt, der User hat hier nicht eingewilligt.
+
+205
+00:23:16,000 --> 00:23:23,000
+Hier könnte man den Content-Banner tatsächlich individuell gestalten, entweder fürs Tracking oder für die Standortermittlung
+
+206
+00:23:23,000 --> 00:23:32,000
+oder auch nur für die Standortermittlung, wenn man zum Beispiel fürs Tracking entschieden hat, keine Einwilligung einzuholen.
+
+207
+00:23:32,000 --> 00:23:38,000
+Das ist immer ein Beispiel für, wenn jemand darunter auch Websurfer administriert.
+
+208
+00:23:38,000 --> 00:23:47,000
+Also man kann hier im Nginx Websurfer, aber an Pechigi geht das auch, man kann die Cookies abfragen
+
+209
+00:23:47,000 --> 00:23:56,000
+und hier in dem Fall ein Cookie namens Claro, also diesen Framework der Content-Cookie-Name,
+
+210
+00:23:56,000 --> 00:24:05,000
+wenn der für Matomo oft zugesetzt ist, dann kann ich die diversen Informationen aus der Geo-Datenbank mir holen
+
+211
+00:24:05,000 --> 00:24:14,000
+für den Kontinent, fürs Land, auch die Geo-Koordinaten sogar und kann die dann hier in diese mit MM beginnenden Variablen
+
+212
+00:24:14,000 --> 00:24:26,000
+reinschreiben und die werden dann vom Nginx an Matomo übergeben und Matomo schreibt die dann ins Besucherprofil.
+
+213
+00:24:26,000 --> 00:24:32,000
+Ja, und für den Fall, dass der User diesen Content abgelehnt hat oder der Cookie gar nicht heißt,
+
+214
+00:24:32,000 --> 00:24:37,000
+setzt sich einfach ganz pauschales Land, die Landesinformation noch unbekannt.
+
+215
+00:24:37,000 --> 00:24:41,000
+Ich hätte hier auch reinschreiben können, abgelehnt oder irgendwas, also irgendeine Information,
+
+216
+00:24:41,000 --> 00:24:49,000
+die dann im Besucherprofil verarbeitet wird in Matomo und anhand der ich dann später auch erkenne,
+
+217
+00:24:49,000 --> 00:24:57,000
+okay, das sind jetzt Besucherdaten oder Besucher, die quasi die Standardinformationen nicht preisgegeben hat.
+
+218
+00:24:57,000 --> 00:25:09,000
+Okay, jetzt gehen wir mal ganz schnell oder machen einen ganz schnellen Seitenausflug weg von ganz konkreten Matomo-Themen
+
+219
+00:25:09,000 --> 00:25:16,000
+und schauen uns diverse Anbieter zum Thema Standortermittlung oder Geolokalisierung an
+
+220
+00:25:16,000 --> 00:25:24,000
+und schauen uns an, warum es eigentlich für die so schwer ist, gute, immer, in allen Fällen,
+
+221
+00:25:24,000 --> 00:25:30,000
+zumindest immer gute Daten, verlässliche Daten uns zur Verfügung zu stellen und mit welchen,
+
+222
+00:25:30,000 --> 00:25:37,000
+ich habe die jetzt mal intelligente Ansätze genannt, mit welchen Ansätzen diese Anbieter arbeiten,
+
+223
+00:25:37,000 --> 00:25:42,000
+um die Datenqualität und auch Aktualität zu erhöhen.
+
+224
+00:25:42,000 --> 00:25:49,000
+Denn an deren Probleme sind tatsächlich, wie ich eben gesagt habe, die Aktualität auf der einen Seite
+
+225
+00:25:49,000 --> 00:25:55,000
+und auf der anderen Seite die Genauigkeit, also die Exaktheit der ermittelten Standortdaten.
+
+226
+00:25:55,000 --> 00:26:01,000
+Ich habe hier, ich gehe darauf auch gleich näher ein, ich habe hier im Hintergrund eine Karte von Deutschland
+
+227
+00:26:01,000 --> 00:26:08,000
+mit lauer-gelben Punkten eingezeichnet. Das sind keine zufälligen Punkte, sondern das sind tatsächlich
+
+228
+00:26:08,000 --> 00:26:16,000
+Testergebnisse von Tests, die ich von meinem Standort hier in Berlin aus durchgeführt habe
+
+229
+00:26:16,000 --> 00:26:19,000
+mit verschiedensten IP-Adressen, die mir gehört haben.
+
+230
+00:26:19,000 --> 00:26:25,000
+Je größer der gelbe Kreis, desto mehr Treffer hat es an den Stellen gegeben, also man sieht schon,
+
+231
+00:26:25,000 --> 00:26:32,000
+es hat schon in Berlin gegeben, aber ich wurde auch ansonsten quer durch ganz Deutschland verteilt,
+
+232
+00:26:32,000 --> 00:26:40,000
+im Übrigen immer mit der kompletten vollen IP-Adresse, also im Kundabundesbild,
+
+233
+00:26:40,000 --> 00:26:43,000
+also man kann hier nicht mehr wirklich von Genauigkeit sprechen.
+
+234
+00:26:43,000 --> 00:26:51,000
+Ich muss aber gleich zur Beruhigung hinzufügen, dass diese Punkte, die Testergebnisse
+
+235
+00:26:51,000 --> 00:27:00,000
+von allen möglichen Anbietern sind und dass die besten Anbieter hier wesentlich konkretere
+
+236
+00:27:00,000 --> 00:27:08,000
+bzw. wesentlich exakterer Ergebnisse geliefert haben und mich viel häufiger nach Berlin verortet haben.
+
+237
+00:27:08,000 --> 00:27:16,000
+Bevor ich euch die Ergebnisse zeige, vielleicht noch kurz schriftlich das Testszenario.
+
+238
+00:27:16,000 --> 00:27:22,000
+Ich habe 14 Anbieterangebote mehr angesehen, habe das Ganze über drei Monate hinweg
+
+239
+00:27:22,000 --> 00:27:26,000
+mit dann noch immer wieder wechselnden IP-Adressen von Berlin aus getestet.
+
+240
+00:27:26,000 --> 00:27:33,000
+Zehn Tests fanden mit DSL statt, also mit DSL-Anschluss bei Vodafone
+
+241
+00:27:33,000 --> 00:27:39,000
+und zehn Tests mit einem Mobilfunkanschluss der Telekom LTE.
+
+242
+00:27:39,000 --> 00:27:46,000
+Die Tests habe ich mit den frei zugänglichen Angeboten der Anbieter auf der Webseite
+
+243
+00:27:46,000 --> 00:27:51,000
+oder mit den Datenbanken, die man in Matroom installieren konnte, durchgeführt.
+
+244
+00:27:51,000 --> 00:27:57,000
+Ja, rausgekommen ist Folgendes, Testergebnisse verschiedener Anbieter.
+
+245
+00:27:57,000 --> 00:28:07,000
+Max meinte, habe ich ja schon öfter mal erwähnt, hat hier neun von zehn Mal mich im Fall des DSL-Anschlusses
+
+246
+00:28:07,000 --> 00:28:15,000
+auch nach Berlin verorten können. In vier von zehn heißt im Bereich Mobilfunkanschluss,
+
+247
+00:28:15,000 --> 00:28:19,000
+wurde ich nur in vier von zehn Fällen nach Berlin verortet.
+
+248
+00:28:19,000 --> 00:28:24,000
+Ich will den Punkt jetzt gar nicht einzeln durchgehen, die Folie könnt ihr ja runterladen.
+
+249
+00:28:24,000 --> 00:28:31,000
+Der Link ist auch im Vortragsprofil enthalten. Man sieht hier, dass neben Max meint,
+
+250
+00:28:31,000 --> 00:28:37,000
+die sowohl eine kommerzielle als auch eine kostenlose Datenbank anbieten,
+
+251
+00:28:37,000 --> 00:28:44,000
+noch ipregistry.co und Big Data Cloud Ergebnisse erzielt haben,
+
+252
+00:28:44,000 --> 00:28:48,000
+die in diesem Qualitätsbereich sich befunden haben.
+
+253
+00:28:48,000 --> 00:28:54,000
+Danach haben wir aber schon Anbieter, die allenfalls nur noch mittelmäßig Ergebnisse gebracht haben.
+
+254
+00:28:54,000 --> 00:28:58,000
+Und dann haben wir hier unten eine ganze Menge von Angeboten,
+
+255
+00:28:58,000 --> 00:29:04,000
+die nur in ganz seltenen Fällen richtig waren oder teilweise gar nicht.
+
+256
+00:29:04,000 --> 00:29:09,000
+Hier habe ich auch DBIP, die eine kommerzielle und eine kostenlose Warenter haben,
+
+257
+00:29:09,000 --> 00:29:16,000
+und IP2 Location, die ja in Matomo zur Verfügung stehen, auch nochmal Fett markiert.
+
+258
+00:29:16,000 --> 00:29:24,000
+Deswegen ja auch vorhin mein Hinweis, dass ich hier eigentlich keine Empfehlung geben kann, die einzusetzen.
+
+259
+00:29:24,000 --> 00:29:28,000
+Was auch mit rausgekommen ist, da muss man auch wiederum einschränkend sagen,
+
+260
+00:29:28,000 --> 00:29:34,000
+was zu den sogenannten Testsiegern Max meint, IPregistry und Big Data Cloud,
+
+261
+00:29:34,000 --> 00:29:41,000
+wenn deren Ergebnisse falsch waren, dann war ich nicht hier irgendwie im Umland von Berlin verortet,
+
+262
+00:29:41,000 --> 00:29:44,000
+sondern die Ergebnisse waren dann richtig falsch.
+
+263
+00:29:44,000 --> 00:29:49,000
+Also dann wollte ich nach Baden-Württemberg, Hamburg, Niedersachsen und so weiter verortet,
+
+264
+00:29:49,000 --> 00:29:53,000
+also in Gebiete, die teils hunderte Kilometer weg waren von Berlin.
+
+265
+00:29:53,000 --> 00:29:57,000
+Und auch dann wiederum komplett falsch waren.
+
+266
+00:29:57,000 --> 00:30:05,000
+Teilweise war es den Anbietern auch nicht möglich, in die Orte in allen Fällen zurückzugeben.
+
+267
+00:30:05,000 --> 00:30:09,000
+Also wenn die Ergebnisse falsch waren, dann wurden auch nur noch Bundesländer zurückgegeben.
+
+268
+00:30:09,000 --> 00:30:12,000
+Also sowas ist auch vorgekommen.
+
+269
+00:30:12,000 --> 00:30:18,000
+Vor allem nach Baden-Württemberg bin ich dann ziemlich oft verortet worden.
+
+270
+00:30:18,000 --> 00:30:23,000
+Man muss aber sagen, dass bei Max meint und Big Data Cloud, die auf ihrer Webseite
+
+271
+00:30:23,000 --> 00:30:29,000
+ihren Kunden an Qualitätszusagen anbieten oder machen,
+
+272
+00:30:29,000 --> 00:30:34,000
+dass diese Qualitätszusagen auch in etwa zugetroffen sind bei meinen Tests.
+
+273
+00:30:34,000 --> 00:30:42,000
+Das heißt, bei DSL waren 80 bis 90 Prozent der Treffer im Toleranzumkreis von 50 Kilometern korrekt.
+
+274
+00:30:42,000 --> 00:30:51,000
+Und bei Mobilfunkgeräten oder Mobilfunknutzung war die Treffergenauigkeit eben ungefähr 50 Prozent.
+
+275
+00:30:51,000 --> 00:30:56,000
+Also das ist auch das, was die Anbieter von sich aus versprechen, zumindest für Deutschland.
+
+276
+00:30:56,000 --> 00:31:05,000
+Man kann bei beiden Anbietern nachschlagen, was sie auch für andere Länder für Qualitätszusagen machen.
+
+277
+00:31:05,000 --> 00:31:10,000
+Das kann durchaus auch variieren, also sowohl noch, dass die Ergebnisse noch besser sind,
+
+278
+00:31:10,000 --> 00:31:17,000
+als auch je kleiner die Länder sind, kann es auch sein, dass es eher schlechter wird.
+
+279
+00:31:17,000 --> 00:31:22,000
+Warum ist das so? Ganz kurz nochmal ein Überblick. Was haben die eigentlich für Schwierigkeiten?
+
+280
+00:31:22,000 --> 00:31:27,000
+Also ein großes Thema ist die Aktualität der Daten, mit denen die arbeiten können.
+
+281
+00:31:27,000 --> 00:31:32,000
+Denn die Internet Service Provider stellen natürlich die Daten, wo die IP-Appresse,
+
+282
+00:31:32,000 --> 00:31:37,000
+an welchen Kunden zugeordnet worden ist, niemals live denen zur Verfügung.
+
+283
+00:31:37,000 --> 00:31:42,000
+Also die können sich die Daten vielleicht alle paar Tage holen, aber greifen jetzt in dem Sinne
+
+284
+00:31:42,000 --> 00:31:48,000
+nicht auf alle Internet Service Provider der Welt live zu. Das ist natürlich ein Thema.
+
+285
+00:31:48,000 --> 00:31:55,000
+Das andere Thema ist, dass man generell, also das ist jetzt eher so aus der Kundensicht,
+
+286
+00:31:55,000 --> 00:32:00,000
+häufig falsche Erwartungen hat, weil man das Thema mit IP hat,
+
+287
+00:32:00,000 --> 00:32:05,000
+dass nur Standortdaten mit der Erwartungshaltung verknüpft, dass das Geokoordinaten wären.
+
+288
+00:32:05,000 --> 00:32:09,000
+Das ist aber eigentlich eine falsche Erwartung. Geokoordinaten sind es vielleicht
+
+289
+00:32:09,000 --> 00:32:15,000
+bei irgendwelchen fest installierten Boxy-Servern, aber zum Beispiel für Smartphones,
+
+290
+00:32:15,000 --> 00:32:19,000
+mit denen die Leute unterwegs sind, kann es niemals eine Geokoordinate sein,
+
+291
+00:32:19,000 --> 00:32:26,000
+die auf die Arzereko liefert wird. Dann ist die Rotation der IP-Adressen,
+
+292
+00:32:26,000 --> 00:32:31,000
+die dynamisch an die Kunden vergeben werden, ein liesendes Thema.
+
+293
+00:32:31,000 --> 00:32:36,000
+Wir haben ja, die meisten Leute haben im Privatumfeld IP-Adressen,
+
+294
+00:32:36,000 --> 00:32:41,000
+die dynamisch von den Service-Providern zugeordnet werden.
+
+295
+00:32:41,000 --> 00:32:45,000
+Das kann fast jeden Tag eine andere sein. Auch das ist natürlich eine Schwierigkeit,
+
+296
+00:32:45,000 --> 00:32:49,000
+mit denen die Dienstanbieter dann zu kämpfen haben.
+
+297
+00:32:49,000 --> 00:32:53,000
+Dann sind natürlich Nutzer von mobilen Handgeräten im örtlichen Sinne auch mobil.
+
+298
+00:32:53,000 --> 00:33:00,000
+Das heißt, die IP-Adressen von mobilen Handgeräten sind niemals an einem selben Standort,
+
+299
+00:33:00,000 --> 00:33:04,000
+denn man kann mit seinem Smartphone sich in Zug setzen und durchaus 100 Kilometer
+
+300
+00:33:04,000 --> 00:33:09,000
+erstmal fahren, vielleicht noch länger und die IP-Adresse ändert sich überhaupt nicht.
+
+301
+00:33:09,000 --> 00:33:15,000
+Auch das ist ein Thema, wo man verstehen muss, dass bei mobilen Handgeräten
+
+302
+00:33:15,000 --> 00:33:21,000
+der zurückgegebene Standort eben wirklich nicht so oft richtig sein kann.
+
+303
+00:33:21,000 --> 00:33:27,000
+Abschließend hat man noch das ganze Thema von Boxy-Servern im Unternehmen
+
+304
+00:33:27,000 --> 00:33:32,000
+und Mitarbeiter sitzen im Homeoffice, surfen aber über den Boxy-Server des Unternehmens
+
+305
+00:33:32,000 --> 00:33:37,000
+oder Menschen surfen über VPN-Netzwerke, über Anonymisierungsdienste,
+
+306
+00:33:37,000 --> 00:33:42,000
+wo die IP-Adresse ja niemals eigentlich oder beziehungsweise auch ganz bewusst
+
+307
+00:33:42,000 --> 00:33:47,000
+nicht dem aktuellen User-Standort entspricht.
+
+308
+00:33:47,000 --> 00:33:53,000
+Die Anbieter haben verschiedene Lösungsansätze, mit denen sie diese ganze Problematik
+
+309
+00:33:53,000 --> 00:33:58,000
+versuchen, in den Griff zu bekommen. Sie versuchen, die OZ-Daten,
+
+310
+00:33:58,000 --> 00:34:04,000
+die sie von den Service-Bereitern erhalten haben, anzureichern mit eigenen Informationen,
+
+311
+00:34:04,000 --> 00:34:10,000
+die sie mit eigenen Mechanismen noch zusätzlich sammeln, wo sie teilweise auf Algorithmen
+
+312
+00:34:10,000 --> 00:34:15,000
+zurückgreifen, die sie implementiert haben, wo sie auf Feedbacks von ihren Kunden
+
+313
+00:34:15,000 --> 00:34:21,000
+zurückgreifen. Das können Daten sein, die hier zusätzlich zur Verfügung stehen,
+
+314
+00:34:21,000 --> 00:34:26,000
+je nach Anbieter auch unterschiedlich oder auch nicht alle sind bei allen Anbietern vorhanden.
+
+315
+00:34:26,000 --> 00:34:30,000
+Zum Beispiel gibt es so etwas wie einen Vertrauenswert, also wie verlässlich man
+
+316
+00:34:30,000 --> 00:34:35,000
+diese OZ-Angabe überhaupt einschätzen darf, ob Low, Medium oder High.
+
+317
+00:34:35,000 --> 00:34:42,000
+Es gibt Umkreisangaben zum Radius der Genauigkeit der OZ-Angabe. Das sind zum Beispiel so
+
+318
+00:34:42,000 --> 00:34:48,000
+typische Ranges, die einzelne Anbieter uns mitteilen. MaxMind zum Beispiel kann
+
+319
+00:34:48,000 --> 00:34:54,000
+solche Informationen mitliefern. Dann muss ich aber gleich dazu sagen,
+
+320
+00:34:54,000 --> 00:35:01,000
+dass Matomo die nicht verarbeitet. Dann haben wir Angaben, ob es sich um
+
+321
+00:35:01,000 --> 00:35:08,000
+Mobilfunk-Netzanbieter mit der IP-Adresse handelt, ob es sich um VPN oder an Museumsdienste,
+
+322
+00:35:08,000 --> 00:35:13,000
+Cloud-Dienste handelt oder auch, ob die IP-Adresse in der Vergangenheit für
+
+323
+00:35:13,000 --> 00:35:19,000
+irgendwelche Betugsthematiken schon verwendet worden ist. Meistens muss man für solche
+
+324
+00:35:19,000 --> 00:35:27,000
+zusätzlichen Daten bezahlen. Also ich habe jetzt, abgesehen von der MaxMind-Datenbank,
+
+325
+00:35:27,000 --> 00:35:33,000
+wo das hier kostenlos noch mit für Deutschland zumindest mit drin steht und nur für die USA,
+
+326
+00:35:33,000 --> 00:35:39,000
+habe ich die anderen Informationen nur bei kostenpflichtigen Anbietern.
+
+327
+00:35:39,000 --> 00:35:43,000
+Ja, wenn man die nutzt, also wenn man sozusagen einen Abschluss oder einen Vertrag
+
+328
+00:35:43,000 --> 00:35:48,000
+mit so einem Anbieter abschließt, dann kann man natürlich dann selber entscheiden,
+
+329
+00:35:48,000 --> 00:35:54,000
+ob man diese Kriterien verarbeitet und ob man dann noch den Standortwert überhaupt verarbeitet.
+
+330
+00:35:54,000 --> 00:35:58,000
+Wenn man zum Beispiel feststellt, oh nee, das kommt aus einem Anonymisierungsdienst
+
+331
+00:35:58,000 --> 00:36:06,000
+oder einem VPN, dann ignoriere ich den Standort. Und das will ich euch abschließend
+
+332
+00:36:06,000 --> 00:36:12,000
+in einem individuellen Beispiel kurz zeigen, was in einem Projekt mit dem Tech-Manager
+
+333
+00:36:12,000 --> 00:36:21,000
+umgesetzt worden ist. Da ging es auch darum, die Einwilligung der Besucher der Website
+
+334
+00:36:21,000 --> 00:36:26,000
+zu berücksichtigen. Geo-Location-Anbieter, der dann über die Web-Service-Schnittstelle
+
+335
+00:36:26,000 --> 00:36:32,000
+angesprochen worden ist und bei dem wir die Thematik, ob es sich um Spam oder Cloud handelt,
+
+336
+00:36:32,000 --> 00:36:40,000
+ausgewertet haben und den Standort dann als benutzerdefinierte Dimension gespeichert haben.
+
+337
+00:36:40,000 --> 00:36:46,000
+Das war mit dem Anbieter ipregistry.co, der, glaube ich, in Frankreich sitzt
+
+338
+00:36:46,000 --> 00:36:52,000
+und der auch die Dayscape V.O. unterstützt. Und hier haben wir, wir sind hier unten links,
+
+339
+00:36:52,000 --> 00:36:58,000
+zwei Custom Dimensions im Atom angelegt fürs Land und für die Stadt. Und hier sehen wir
+
+340
+00:36:58,000 --> 00:37:04,000
+im Screenshot die gespeicherte Information der Stadt. In Klammern haben wir hier nochmal
+
+341
+00:37:04,000 --> 00:37:11,000
+die Landesinformationen mit abgespeichert. Ja, das ist ein Blick auf die, und ganz vereinfacht,
+
+342
+00:37:11,000 --> 00:37:16,000
+der Blick auf die JSON-Struktur, die ipregistry zurückliefert. Ich habe hier die Stadt,
+
+343
+00:37:16,000 --> 00:37:22,000
+die Ortsinformation und habe hier unten nochmal ein Set von, wie nennen wir das hier, Security
+
+344
+00:37:22,000 --> 00:37:29,000
+Parameter, auf die man prüfen kann. Es ist ein Spam, IP-Adresse, Cloud IP, Proxy, VPN
+
+345
+00:37:29,000 --> 00:37:35,000
+und so weiter. Und diese Information haben wir teilweise oder habe ich dann teilweise
+
+346
+00:37:35,000 --> 00:37:43,000
+ausgewertet in dem Skript, das im Atom Tech Manager ausgeführt worden ist, als Tag,
+
+347
+00:37:43,000 --> 00:37:50,000
+was nach einem Pageview-Trigger aufgerufen worden ist. Und wir sehen hier ganz kurz nur,
+
+348
+00:37:50,000 --> 00:37:57,000
+ich hole mir aus dem JSON-Struktur das Land, die Stadt die Spam-Information und Cloud-Information
+
+349
+00:37:57,000 --> 00:38:05,000
+und wenn es sich nicht um Spam und Cloud handelt, wird Land und Stadt dann in den Data-Layer
+
+350
+00:38:05,000 --> 00:38:15,000
+vom Tech Manager gepusht und dort dann als Data-Layer-Event verarbeitet. Und dann gibt
+
+351
+00:38:15,000 --> 00:38:23,000
+es hier noch ein Tracking Richtung Matomo, manuell implementiert, ein Tracking-Event
+
+352
+00:38:23,000 --> 00:38:31,000
+als Dimensionen. Das Ganze deswegen als nochmal mit dem Event hier getrackt und nicht mit
+
+353
+00:38:31,000 --> 00:38:38,000
+dem Seitenaufruf, weil die Standardermittlung asynchron stattfindet und in Umständen länger
+
+354
+00:38:38,000 --> 00:38:46,000
+dauern kann als der Pageview braucht. Daher das Ganze, sage ich mal, wird hier ein bisschen
+
+355
+00:38:46,000 --> 00:38:54,000
+getrackt als Event, aber dann eben auch mal als benutzerdefinierte Dimension. Und last
+
+356
+00:38:54,000 --> 00:39:00,000
+but not least nochmal ein Blick auf Big Data Cloud. Hier haben wir in der JSON-Struktur
+
+357
+00:39:00,000 --> 00:39:06,000
+diesen Confidence-Parameter, also der uns angibt, wie vertrauenswürdig ist diese IP-Adresse
+
+358
+00:39:06,000 --> 00:39:13,000
+überhaupt oder diese Standortangabe zu dieser IP-Adresse. Und hier rechts ist Cellular eine
+
+359
+00:39:13,000 --> 00:39:19,000
+Angabe, ob es sich um ein Mobilfunknetz handelt, wobei man dazu sagen muss, das ermitteln
+
+360
+00:39:19,000 --> 00:39:26,000
+die über Algorithmen. Das ist keine Angabe, die die Service-Provider zur Verfügung stellen.
+
+361
+00:39:26,000 --> 00:39:30,000
+Abschließend will ich das Ganze nochmal ganz schnell zusammenfassen. Ich habe verwiesen
+
+362
+00:39:30,000 --> 00:39:35,000
+die zwei Empfehlungen für euch. Bei Nutzung out of the box ganz klar die Empfehlung geht
+
+363
+00:39:35,000 --> 00:39:40,000
+weg von den Standard-Einstellungen, nutzt die MaxMind GOIP2-Datenbank, ihr müsst euch
+
+364
+00:39:40,000 --> 00:39:48,000
+registrieren. Ihr könnt die kostenlose Version allerdings verwenden, stellt das Ganze so
+
+365
+00:39:48,000 --> 00:39:55,000
+ein, dass ihr die Datenbank vom GOIP2 wöchentlich aktualisiert, weil MaxMind wöchentlich die
+
+366
+00:39:55,000 --> 00:40:02,000
+Datenbank neu zur Verfügung stellt. Habt aber immer im Hinterkopf, dass eine Anonymisierung
+
+367
+00:40:02,000 --> 00:40:09,000
+mit zweier mehr bereits keine sinnvollen Ergebnisse bringt. Habt im Hinterkopf, dass bei DSL-Anschlüssen
+
+368
+00:40:09,000 --> 00:40:17,000
+80 bis 90 Prozent der OZ-Ergebnisse für 50 Kilometer Umkreis richtig sind, bei Mobilfunkgeräten
+
+369
+00:40:17,000 --> 00:40:23,000
+allerdings nur höchstens die Hälfte. Hier ist es schwer von mir eine wirklich gute,
+
+370
+00:40:23,000 --> 00:40:29,000
+qualitativ gute Empfehlung abzugeben, wie man diese Mobilfunkstandorte herausfiltern
+
+371
+00:40:29,000 --> 00:40:34,000
+könnte. Ein grober Ansatz könnte sein, dass man sich ein Segment in Matomo baut, in dem
+
+372
+00:40:34,000 --> 00:40:40,000
+man ein paar mal pochal mobile Handgeräte herausfiltert, was natürlich nicht heißt,
+
+373
+00:40:40,000 --> 00:40:44,000
+dass mobile Handgeräte können natürlich auch über ein WLAN kommen, hätten dann wieder
+
+374
+00:40:44,000 --> 00:40:49,000
+einen DSL-Anschluss genutzt oder umgekehrt kann natürlich auch jemand mit einem Laptop
+
+375
+00:40:49,000 --> 00:40:56,000
+unterwegs sein und nutzt eine SIM-Karte und würde dann trotzdem hier dem Segmentergebnis
+
+376
+00:40:56,000 --> 00:41:02,000
+mit auftauchen. Aber es wäre ein Ansatz, um zumindest erst mal eine Probeübersicht
+
+377
+00:41:02,000 --> 00:41:08,000
+über die Standorte der Besucher auf meiner Webseite zu erhalten. Ja, und dann soll man
+
+378
+00:41:08,000 --> 00:41:16,000
+ohne Tracking-Einwilligung getrackt werden, das ist gut, wenn User ohne Tracking-Einwilligung
+
+379
+00:41:16,000 --> 00:41:22,000
+getrackt werden. Ach so, dann braucht ihr aber trotzdem für die Standortermittlung
+
+380
+00:41:22,000 --> 00:41:26,000
+irgendwie eine Einwilligung und ihr müsst das im Konsentbanner unterbringen und dann
+
+381
+00:41:26,000 --> 00:41:34,000
+geht es meines Wissens nur über die Variante mit dem Webserver. Bei fortgeschrittenen
+
+382
+00:41:34,000 --> 00:41:39,000
+Lösungen kann ich durchaus einfach empfehlen, eine eigene individuelle Lösung mit anderen
+
+383
+00:41:39,000 --> 00:41:45,000
+Providern über den Webservice API zu machen. Das Ganze als benutzerdefinierte Dimension
+
+384
+00:41:45,000 --> 00:41:50,000
+zu sprechen, so wie ich es euch gezeigt habe. Man kann natürlich auch ein eigenes Plugin
+
+385
+00:41:50,000 --> 00:41:55,000
+schreiben lassen, aber das ist natürlich wesentlich komplexer, ein Matomo Plugin zu schreiben.
+
+386
+00:41:55,000 --> 00:41:59,000
+In so einem Fall könnte man die normale Standortermittlung in Matomo deaktivieren
+
+387
+00:41:59,000 --> 00:42:05,000
+und kann auf Anbieter zurückgreifen, die mit ihren Webservices noch mehr Informationen
+
+388
+00:42:05,000 --> 00:42:10,000
+liefern, als es die Provider in Matomo tun und kann diese zusätzlichen Kriterien noch
+
+389
+00:42:10,000 --> 00:42:18,000
+auswählen und sehr detailliert oder beziehungsweise sehr präzise Daten dann sich in Matomo
+
+390
+00:42:18,000 --> 00:42:22,000
+abspeichern. Und das kann man eben auch nur machen, wenn man wirklich die Einwilligung
+
+391
+00:42:22,000 --> 00:42:29,000
+seiner User hat. So, damit bin ich jetzt im Schnelldurchlauf durch. Es waren jetzt viele
+
+392
+00:42:29,000 --> 00:42:37,000
+Detailinformationen. Jetzt die Frage an euch. Habt ihr Fragen? So weit erstmal alles klar.
+
+393
+00:42:37,000 --> 00:42:44,000
+Vielen Dank auf jeden Fall mal. Es gab tatsächlich im Chat zwei Fragen, wobei eine hat sich
+
+394
+00:42:44,000 --> 00:42:52,000
+im Laufe des Vortrags dann auch schon wieder beantwortet. Es gab auch Rückmeldungen zu
+
+395
+00:42:52,000 --> 00:42:57,000
+rechtlichen Fragen über die Anonymisierung, wo Joachim Nickel geschrieben hat, dass die
+
+396
+00:42:57,000 --> 00:43:05,000
+Anonymisierung auf ein Byte ausreichen sollte. Allerdings keine, vor allem bei einem deutschen
+
+397
+00:43:05,000 --> 00:43:10,000
+Mitbewerber von Matomo ist das auch TÜV-zertifiziert, wird das so gemacht, weil die DSGVO davon
+
+398
+00:43:10,000 --> 00:43:16,000
+ausgeht, dass ein Personenbezug ab einer Gruppengröße von 15 Personen nicht mehr möglich ist.
+
+399
+00:43:16,000 --> 00:43:23,000
+Allerdings schreibt auch dazu, dass es keine Rechtsberatung ist, sondern nicht ganz als
+
+400
+00:43:23,000 --> 00:43:25,000
+100%ige Wahrheit zu nehmen ist.
+
+401
+00:43:25,000 --> 00:43:34,000
+Es ist mir auch völlig klar, auch ich habe an der Stelle, sage ich mal, nicht den Handspruch
+
+402
+00:43:34,000 --> 00:43:40,000
+an eine Rechtsberatung machen zu wollen für dieses Thema. Für mich ist natürlich oder
+
+403
+00:43:40,000 --> 00:43:45,000
+beziehungsweise für die Situation mit Matomo ist es natürlich so, dass wir dadurch, dass
+
+404
+00:43:45,000 --> 00:43:50,000
+die Anonymisierung bei der Standortentwicklung, wenn ich die auf ein Byte einstellen möchte,
+
+405
+00:43:50,000 --> 00:43:56,000
+dann habe ich das natürlich auch im Besucherprofil mit einem Byte gespeichert. Jetzt haben wir
+
+406
+00:43:56,000 --> 00:44:02,000
+natürlich den Matomo-Backend immer drinstehen, dass die Anonymisierung im Besucherprofil
+
+407
+00:44:02,000 --> 00:44:08,000
+mit zwei Bytes empfohlen. Jetzt müssen wir mal kurz gucken, wo war das?
+
+408
+00:44:19,000 --> 00:44:27,000
+Naja, jedenfalls, dass man die Anonymisierung mit zwei Bytes im Besucherprofil machen kann
+
+409
+00:44:27,000 --> 00:44:33,000
+und dadurch natürlich viele Datenschützer von vornherein sagen, ich will aber im Besucherprofil
+
+410
+00:44:33,000 --> 00:44:37,000
+eine andere Anonymisierung mit zwei Bytes haben, dann kriege ich das natürlich in der
+
+411
+00:44:37,000 --> 00:44:39,000
+Standortentwicklung nicht anders.
+
+412
+00:44:39,000 --> 00:44:45,000
+Es gibt auch gleich zusätzlich die Frage, ob das Land nicht auch rechtskonform, auch
+
+413
+00:44:45,000 --> 00:44:48,000
+ohne Konsent nutzbar sein sollte, also ohne Einwilligung?
+
+414
+00:44:48,000 --> 00:44:54,000
+Ich denke schon, weil man ja, wenn man jetzt die Formulierung aus diesen Empfehlungen oder
+
+415
+00:44:54,000 --> 00:45:04,000
+diesen Vorgaben von 2009 liest, dass das damals ja eigentlich nur um diese Personenbeziehbarkeit
+
+416
+00:45:04,000 --> 00:45:11,000
+geht und ich meine, wenn man googelt, es gibt da auch Blocker oder andere Plattformen,
+
+417
+00:45:11,000 --> 00:45:16,000
+Agenturen, die da natürlich auch schreiben, was wird zu machen, wenn du deinen einzigen
+
+418
+00:45:16,000 --> 00:45:23,000
+Kunden im E-Commerce-Shop hast, der am Standort in Nordafrika sitzt und bei dir eine Bestellung
+
+419
+00:45:23,000 --> 00:45:32,000
+nimmt und dass dann selbst das Land immer noch ausreichend ist, um herauszufinden,
+
+420
+00:45:32,000 --> 00:45:36,000
+was hat er eigentlich hier vom Besucherprofil im Otomo.
+
+421
+00:45:36,000 --> 00:45:42,000
+Ja, es ist am Ende immer eine Sache, die ich finde in der Praxis mit den Datenschutzbauauftragten
+
+422
+00:45:42,000 --> 00:45:48,000
+der jeweiligen Appsider, des jeweiligen Kundens individuell geklärt werden muss.
+
+423
+00:45:48,000 --> 00:45:53,000
+Also meine Erfahrung ist auch, dass die in der Regel sehr unterschiedlich drauf sind
+
+424
+00:45:53,000 --> 00:46:00,000
+und nicht alle, sage ich mal, die Gesetzeslager auch gleich in der Petite.
+
+425
+00:46:00,000 --> 00:46:02,000
+Also Frage noch mal zurück an Joachim.
+
+426
+00:46:02,000 --> 00:46:03,000
+Empfehlung ist veraltet.
+
+427
+00:46:03,000 --> 00:46:11,000
+Du meinst jetzt die Empfehlung mit zwei Beiz anonymisieren im Besucherprofil?
+
+428
+00:46:11,000 --> 00:46:16,000
+Ja, als Erklärung, der Stream ist immer 40 Sekunden verzögert.
+
+429
+00:46:16,000 --> 00:46:23,000
+Das heißt, vermutlich dauert es kurz, bis die Antwort von ihm kommt auf die Frage.
+
+430
+00:46:23,000 --> 00:46:28,000
+In der Zwischenzeit vielleicht auch, es kam auch die Frage, ob du DSL mit einer dynamischen IP
+
+431
+00:46:28,000 --> 00:46:30,000
+oder einer festen IP?
+
+432
+00:46:30,000 --> 00:46:37,000
+Mit einer dynamischen und ich habe da nur einmal pro Woche oder manchmal auch nur nach 14 Tagen
+
+433
+00:46:37,000 --> 00:46:44,000
+getestet habe, hatte ich auch immer wieder eine neue IP-Adresse, hatte ich auch jedes Mal geprüft.
+
+434
+00:46:44,000 --> 00:46:51,000
+Jetzt hat auch Joachim geantwortet.
+
+435
+00:46:51,000 --> 00:46:56,000
+Wenn es sonst noch weitere Fragen gibt, dann am besten jetzt noch stellen.
+
+436
+00:46:56,000 --> 00:47:01,000
+Ansonsten bleibt der Chatraum auch weiterhin offen, falls es da noch zu weiteren Diskussionen,
+
+437
+00:47:01,000 --> 00:47:08,000
+weitere Diskussionen können da sehr gerne geführt werden.
+
+438
+00:47:08,000 --> 00:47:15,000
+Ansonsten bedanke ich mich vielmals für den Vortrag, der wirklich sehr interessant war.
+
+439
+00:47:15,000 --> 00:47:20,000
+Als nächstes ist noch Joachim Nickel, der im Chat auch schon sehr aktiv ist, selbst mit einem Vortrag
+
+440
+00:47:20,000 --> 00:47:22,000
+auch auf Deutsch dran.
+
+441
+00:47:22,000 --> 00:47:29,000
+Ich hoffe, es gibt noch viele weitere interessante Sprecher bei der Konferenz heute.
+
+442
+00:47:29,000 --> 00:47:32,000
+Nochmal vielen, vielen Dank Udo.
+
+443
+00:47:32,000 --> 00:47:36,000
+Alles klar. Bis nachher gleich.
+
+444
+00:47:36,000 --> 00:47:38,000
+Ciao.
+
