@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:11,480
-So, hello everyone, thank you for joining this second day of the MatomoCam.
+So, hello everyone, thank you for joining this second day of the MatomoCamp.
 
 2
 00:00:11,480 --> 00:00:20,440
@@ -112,7 +112,7 @@ So why are we here?
 
 29
 00:02:43,600 --> 00:02:47,760
-Well, why are we at the Matomo camp at all?
+Well, why are we at the MatomoCamp at all?
 
 30
 00:02:47,760 --> 00:02:55,800

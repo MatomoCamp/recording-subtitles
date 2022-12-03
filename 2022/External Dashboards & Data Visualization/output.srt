@@ -188,7 +188,7 @@ What are data visualization solutions or what visualization solutions out there 
 
 48
 00:06:10,680 --> 00:06:22,440
-Matomo is Lucas Studio or Google Data Studio, I think it's pretty known out there.
+Matomo is Lukas Studio or Google Data Studio, I think it's pretty known out there.
 
 49
 00:06:22,440 --> 00:06:30,440
@@ -204,7 +204,7 @@ So yes, it's something where data can be visualized.
 
 52
 00:06:57,040 --> 00:07:05,600
-Lucas Studio is for free and it's also a free host, SuperSet is also a free open source
+Lukas Studio is for free and it's also a free host, SuperSet is also a free open source
 
 53
 00:07:05,600 --> 00:07:13,040

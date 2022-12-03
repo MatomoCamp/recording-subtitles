@@ -956,7 +956,7 @@ l'ACNIL qu'il va falloir suivre pour mettre Matomo en conformité ça va être d
 
 240
 00:21:10,960 --> 00:21:15,880
-celui de l'autorité allemande d'où l'intérêt lors du Matomo Camp de venir échanger avec
+celui de l'autorité allemande d'où l'intérêt lors du MatomoCamp de venir échanger avec
 
 241
 00:21:15,880 --> 00:21:19,720
@@ -2356,7 +2356,7 @@ pas nécessairement savoir qui est la personne d'ailleurs de manière simple voi
 
 590
 00:50:20,240 --> 00:50:25,640
-aux tous les autres personnes qui seront présentes à Matomo Camp qui font des confs sur il n'y
+aux tous les autres personnes qui seront présentes à MatomoCamp qui font des confs sur il n'y
 
 591
 00:50:25,640 --> 00:50:28,840

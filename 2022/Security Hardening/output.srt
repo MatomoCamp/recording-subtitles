@@ -1640,7 +1640,7 @@ Thank you so much for everything.
 
 411
 00:39:56,560 --> 00:40:06,000
-Can I thank again the Matomo organizers because Matomo Camp is realized with 100% open-source
+Can I thank again the Matomo organizers because MatomoCamp is realized with 100% open-source
 
 412
 00:40:06,000 --> 00:40:07,480
@@ -1648,7 +1648,7 @@ software and deeper software.
 
 413
 00:40:07,480 --> 00:40:14,400
-And this is really amazing because, again, Matomo is open-source, Matomo Camp is open-source,
+And this is really amazing because, again, Matomo is open-source, MatomoCamp is open-source,
 
 414
 00:40:14,400 --> 00:40:21,360

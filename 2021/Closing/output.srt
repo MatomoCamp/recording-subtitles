@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:14,920
-Okay. So it's currently 5 p.m. and that's the end of the first in the history Matamua
+Okay. So it's currently 5 p.m. and that's the end of the first in the history Matomo
 
 2
 00:00:14,920 --> 00:00:24,400
@@ -432,7 +432,7 @@ others, as well, that I would like to thank, who, as I said, many organizers who
 
 109
 00:13:18,920 --> 00:13:25,320
-speakers during this Matomo camp and who have spent a lot of time and energy within this
+speakers during this MatomoCamp and who have spent a lot of time and energy within this
 
 110
 00:13:25,320 --> 00:13:32,720

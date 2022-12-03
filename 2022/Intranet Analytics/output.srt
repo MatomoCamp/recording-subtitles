@@ -304,7 +304,7 @@ and the employer. This is rather difficult, but worth having in mind when an org
 
 77
 00:08:29,200 --> 00:08:35,360
-up their mind on the Matoma implementation for their internet. The easy way out is to use log
+up their mind on the Matomo implementation for their internet. The easy way out is to use log
 
 78
 00:08:35,360 --> 00:08:41,760

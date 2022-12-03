@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:11,760
-Hello and welcome to the second Matomo camp, it's really great to have everyone here again.
+Hello and welcome to the second MatomoCamp, it's really great to have everyone here again.
 
 2
 00:00:11,760 --> 00:00:17,080
@@ -1200,7 +1200,7 @@ sure he'll be able to get to some of those emails at some point in the future.
 
 301
 00:23:30,320 --> 00:23:33,440
-Hope you guys have a great Mitsuama camp further.
+Hope you guys have a great MatomoCamp further.
 
 302
 00:23:33,440 --> 00:23:58,160

@@ -2260,7 +2260,7 @@ Apparently, there are no further questions in the chat.
 
 566
 00:36:31,920 --> 00:36:35,240
-So I'd like to thank you, Ronan, for joining Matomo Camp
+So I'd like to thank you, Ronan, for joining MatomoCamp
 
 567
 00:36:35,240 --> 00:36:38,200

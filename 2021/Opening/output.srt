@@ -4,7 +4,7 @@ Okay, so it's currently 9.00 CST time and we are ready to start this historical 
 
 2
 00:00:16,560 --> 00:00:24,640
-which is the first Matomo camp ever. Welcome to the Matomo camp opening ceremony. My name
+which is the first MatomoCamp ever. Welcome to the MatomoCamp opening ceremony. My name
 
 3
 00:00:24,640 --> 00:00:33,280
@@ -12,11 +12,11 @@ is Renan and I'm here with Lukas Winkler. Lukas, can you hear us? Yes, I can hea
 
 4
 00:00:33,280 --> 00:00:42,800
-and welcome to everyone here. So this Matomo camp opening ceremony will last about 30 minutes in
+and welcome to everyone here. So this MatomoCamp opening ceremony will last about 30 minutes in
 
 5
 00:00:42,800 --> 00:00:48,800
-which we will explain to you what this Matomo camp is about, how you can take part of it as well
+which we will explain to you what this MatomoCamp is about, how you can take part of it as well
 
 6
 00:00:48,800 --> 00:00:56,160
@@ -60,7 +60,7 @@ going to have here but it's just like people talking together and saying hey why
 
 16
 00:02:07,440 --> 00:02:17,200
-create a Matomo camp and here we are. So it's not about great ideas coming, it's just the fact that
+create a MatomoCamp and here we are. So it's not about great ideas coming, it's just the fact that
 
 17
 00:02:17,200 --> 00:02:23,840

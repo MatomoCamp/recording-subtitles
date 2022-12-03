@@ -8,7 +8,7 @@ we're going to go over how we can have our own Matomo instance. I'm sure we have
 
 3
 00:00:21,320 --> 00:00:29,260
-a lot of positive things about it during MatomoCam. And so I wanted to host a workshop on how
+a lot of positive things about it during MatomoCamp. And so I wanted to host a workshop on how
 
 4
 00:00:29,260 --> 00:00:36,960
@@ -1356,5 +1356,5 @@ all questions. So thank you again, everyone, for joining. And I hope you have fu
 
 340
 00:47:09,960 --> 00:47:15,520
-Matomo camp. And we'll see you around.
+MatomoCamp. And we'll see you around.
 

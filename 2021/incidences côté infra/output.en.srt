@@ -772,7 +772,7 @@ ask you two minutes. On the page to manage the infrastructure, it is also to kno
 
 194
 00:23:13,600 --> 00:23:18,400
-for the Matomo camp. So I can afford to offer you the possibility to see what I
+for the MatomoCamp. So I can afford to offer you the possibility to see what I
 
 195
 00:23:18,400 --> 00:23:23,120

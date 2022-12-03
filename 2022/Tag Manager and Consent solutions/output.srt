@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:12,160
-Hello everyone, thank you for joining us in this second day of Matomo Camp.
+Hello everyone, thank you for joining us in this second day of MatomoCamp.
 
 2
 00:00:12,160 --> 00:00:19,440

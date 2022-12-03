@@ -1,6 +1,6 @@
 1
 00:00:00,000 --> 00:00:12,240
-Willkommen zum ersten Talk vom Matomo Camp, genau gesagt der einen der beiden ersten Talks,
+Willkommen zum ersten Talk vom MatomoCamp, genau gesagt der einen der beiden ersten Talks,
 
 2
 00:00:12,240 --> 00:00:17,680
@@ -8,7 +8,7 @@ aber hier sind wir im deutschsprachigen Talk. Also der Moderator hier ist Joachi
 
 3
 00:00:17,680 --> 00:00:24,040
-nutzt Matomo und Biwik schon seit über zehn Jahren und engagiert sich auch in verschiedenen
+nutzt Matomo und Piwik schon seit über zehn Jahren und engagiert sich auch in verschiedenen
 
 4
 00:00:24,040 --> 00:00:28,240
@@ -1672,7 +1672,7 @@ wie man Matomo richtig für Search Engine Optimization nutzt. Das wären jetzt u
 
 419
 00:37:49,920 --> 00:37:55,080
-die zwei Möglichkeiten. Ansonsten, danke, Jachim, für den netten Vortrag.
+die zwei Möglichkeiten. Ansonsten, danke, Joachim, für den netten Vortrag.
 
 420
 00:37:55,080 --> 00:38:02,080

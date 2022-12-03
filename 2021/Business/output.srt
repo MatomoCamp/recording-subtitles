@@ -1444,7 +1444,7 @@ network, and then create your own network. That's as well one of the reasons why
 
 362
 00:40:52,560 --> 00:40:58,800
-interested in setting up this Matomo camp. That was about opening all the possibilities of connecting
+interested in setting up this MatomoCamp. That was about opening all the possibilities of connecting
 
 363
 00:40:58,800 --> 00:41:07,600
@@ -1480,5 +1480,5 @@ we don't have any questions for this talk. I hope everything was clear. Thank yo
 
 371
 00:41:53,200 --> 00:42:09,680
-once more, for choosing this conference, and hope you are all having a great Matomo camp. Thank you.
+once more, for choosing this conference, and hope you are all having a great MatomoCamp. Thank you.
 
