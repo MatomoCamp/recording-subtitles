@@ -32,7 +32,7 @@ And some I'm here from the Italian Linux Society that is an association in Italy
 
 9
 00:00:47,840 --> 00:00:52,080
-association talking about free software and open-source software.
+association talking about free software and Open Source software.
 
 10
 00:00:52,080 --> 00:00:59,520
@@ -48,7 +48,7 @@ And I will talk later on the reasons.
 
 13
 00:01:05,320 --> 00:01:12,120
-And I'm also an ET consultant for Wikimedia Switzerland and a volunteer sysadmin for the
+And I'm also an IT consultant for Wikimedia Switzerland and a volunteer sysadmin for the
 
 14
 00:01:12,120 --> 00:01:15,280
@@ -68,7 +68,7 @@ I'm just a volunteer spreading Matomo everywhere because I like this tool, I lik
 
 18
 00:01:34,960 --> 00:01:43,680
-it fixes, and I like the ownership, and I like its free software and open-source software.
+it fixes, and I like the ownership, and I like its Free software and Open Source software.
 
 19
 00:01:43,680 --> 00:01:52,080
@@ -80,7 +80,7 @@ said this interesting news that Google Analytics is now banned in the whole nati
 
 21
 00:01:59,040 --> 00:02:06,080
-And this is really interesting because it really means what they say that it's not something
+And this is really interesting because it really means what they said, that it's not something
 
 22
 00:02:06,080 --> 00:02:09,560
@@ -92,8 +92,8 @@ It's like public administrations, like schools, or et cetera, it's about also pr
 
 24
 00:02:19,360 --> 00:02:28,400
-And in fact, the whole story was about that even the EP address is considered an personal
-
+And in fact, the whole story was about that even the IP address is considered an personal
+ 
 25
 00:02:28,400 --> 00:02:29,400
 data.
@@ -104,11 +104,11 @@ And so if you have a website with Google Analytics and the user visits the websi
 
 27
 00:02:36,000 --> 00:02:42,680
-the EP of your visitors to Google Analytics because you have embedded this tool, it's
+the IP of your visitors to Google Analytics because you have embedded this tool, it's
 
 28
 00:02:42,680 --> 00:02:50,680
-not a very good idea because Google is capable of enriching this data and connect the EP
+not a very good idea because Google is capable of enriching this data and connect the IP
 
 29
 00:02:50,680 --> 00:02:54,280
@@ -152,7 +152,7 @@ This is just to talk about something I have seen with my eyes in the last months
 
 39
 00:03:45,720 --> 00:03:51,360
-Yeah, good job, Google Analytics.
+Yeah, good job, Google Analytics (*ironic*)
 
 40
 00:03:51,360 --> 00:03:56,760
@@ -160,7 +160,7 @@ And so let's talk about security.
 
 41
 00:03:56,760 --> 00:04:07,180
-There are two ways, one moment, in this period, everyone in Italy is avoiding to embed anything.
+There are two ways... OK one moment... in this period, everyone in Italy is avoiding to embed anything.
 
 42
 00:04:07,180 --> 00:04:13,040
@@ -176,7 +176,7 @@ I don't know if you know the LibreJS project, but it's something that says that 
 
 45
 00:04:22,720 --> 00:04:28,160
-JavaScript alliance on your website should be open and Libre software.
+JavaScript line on your website should be open and Libre software.
 
 46
 00:04:28,160 --> 00:04:36,120
@@ -196,15 +196,15 @@ We deploy Matomo on our servers.
 
 50
 00:04:52,240 --> 00:04:55,360
-We deploy Matomo on our Raspberry PIs.
+We deploy Matomo on our Raspberry PI(s).
 
 51
 00:04:55,360 --> 00:05:04,240
-We deploy Matomo using Docker, using cheap hosting services, using, I don't know, we
+We deploy Matomo using Docker, using cheap hosting services, using, I don't know,
 
 52
 00:05:04,240 --> 00:05:06,960
-host Matomo in a lot of ways.
+we host Matomo in a lot of ways.
 
 53
 00:05:06,960 --> 00:05:12,760
@@ -212,19 +212,19 @@ And it's very hard for some people, also for beginners, but also for intermediat
 
 54
 00:05:12,760 --> 00:05:19,580
-to understand that there are only two ways to make a system safe.
+to understand that there are mainly two ways to make a system safe.
 
 55
 00:05:19,580 --> 00:05:26,440
-And the first way is the Kirchhoff principle that is really, really, really OK for open
+And the first way is the Kirchhoff principle that is really, really, really OK for
 
 56
 00:05:26,440 --> 00:05:33,320
-source software because if you have an open source software, you have to think about it.
+open source software because, if you have an open source software, you have to think about it,
 
 57
 00:05:33,320 --> 00:05:40,680
-Everyone in the world knows how your system is designed and you have to keep your password
+because everyone in the world knows how your system is designed and you have to keep your password
 
 58
 00:05:40,680 --> 00:05:47,280
@@ -256,7 +256,7 @@ a lot of mitigation to reduce the attack surface.
 
 65
 00:06:25,760 --> 00:06:31,280
-Because when you have a big environment like a media wiki, like a WordPress, like a Matomo,
+Because when you have a big environment like a MediaWiki, like a WordPress, like a Matomo,
 
 66
 00:06:31,280 --> 00:06:37,120
@@ -268,7 +268,7 @@ And I'm not saying that I don't trust Matomo, I'm just saying that it's a very b
 
 68
 00:06:42,280 --> 00:06:44,840
-and that shit happens.
+and that shit happens!
 
 69
 00:06:44,840 --> 00:06:50,280
@@ -276,11 +276,11 @@ And so maybe a contributor has done something wrong in the very early phases.
 
 70
 00:06:50,280 --> 00:06:57,300
-Maybe what I mean is that there are a lot of possibilities that one line in this number
+Maybe, what I mean is that there are a lot of possibilities that one line in this number
 
 71
 00:06:57,300 --> 00:07:03,240
-of PHP lines or one line in this number of JavaScript lines, that there are a lot of
+of PHP lines or one line in this number of JavaScript lines, and there are a lot of
 
 72
 00:07:03,240 --> 00:07:08,700
@@ -304,7 +304,7 @@ An interesting part of Matomo is that the plugin directory involves maybe the ma
 
 77
 00:07:30,720 --> 00:07:40,160
-of the line of codes, maybe because Matomo is very well decentralized in terms of its
+of the lines of code, maybe because Matomo is very well decentralized in terms of its
 
 78
 00:07:40,160 --> 00:07:41,160
@@ -324,7 +324,7 @@ And so the first thing that we can suggest to reduce the attack surface of your 
 
 82
 00:07:54,560 --> 00:07:56,880
-is just a reply to this question.
+is just a reply to this question:
 
 83
 00:07:56,880 --> 00:08:00,800
@@ -348,11 +348,11 @@ it just from the screenshot.
 
 88
 00:08:25,400 --> 00:08:34,600
-Maybe, I don't know if I can highlight the DBStats plugin that allows to do reports for
+Maybe, I don't know if I can highlight the DBStats plugin that allows to do reports
 
 89
 00:08:34,600 --> 00:08:36,100
-super users.
+for super users.
 
 90
 00:08:36,100 --> 00:08:40,720
@@ -368,7 +368,7 @@ So I am not saying to disable this plugin, to disable a plugin, by the way, you 
 
 93
 00:08:49,320 --> 00:08:54,320
-on the link on the left and to activate the other link.
+on the link on the left, and to activate you use the other link.
 
 94
 00:08:54,320 --> 00:09:02,160
@@ -396,7 +396,7 @@ You can, whenever you want, enable it again.
 
 100
 00:09:25,600 --> 00:09:32,280
-And so also the marketplace, the marketplace is maybe a very big plugin and we have connections
+And so also the marketplace, the marketplace is maybe a very big plugin and with connections
 
 101
 00:09:32,280 --> 00:09:33,400
@@ -408,7 +408,7 @@ And so there are a lot of code that needs sanitization, that needs filters, et c
 
 103
 00:09:41,120 --> 00:09:48,360
-And so I suggest when you install something from the marketplace, to disable the marketplace,
+And so I suggest, when you install something from the marketplace, to disable the marketplace,
 
 104
 00:09:48,360 --> 00:09:49,360
@@ -464,7 +464,7 @@ I mean, sometimes it's not a very, very, very good idea to enforce this kind of 
 
 117
 00:11:04,160 --> 00:11:12,480
-Using tools like multi-factor authentication in whatever tool may be counterproductive,
+Enforcing this kind of tools like multi-factor authentication in whatever tool may be counterproductive,
 
 118
 00:11:12,480 --> 00:11:19,600
@@ -472,11 +472,11 @@ maybe problematic because maybe not all your users are trained to handle the two
 
 119
 00:11:19,600 --> 00:11:22,920
-authentication side effects.
+authentication side-effects.
 
 120
 00:11:22,920 --> 00:11:27,960
-For example, they need to have a mobile phone and their mobile phone, they have an application
+For example, they need to have a mobile phone and on their mobile phone, they have an application
 
 121
 00:11:27,960 --> 00:11:33,040
@@ -516,7 +516,7 @@ Maybe don't try to enforce the tool to every user in the world.
 
 130
 00:12:17,240 --> 00:12:24,640
-Just try to have rigid password politics, very strong password, et cetera, and, again,
+Just try to have rigid password politics, very strong passwords, et cetera, and, again,
 
 131
 00:12:24,640 --> 00:12:25,640
@@ -528,11 +528,11 @@ By the way, if you want to try the best, I think that for me it's the best, the 
 
 133
 00:12:33,560 --> 00:12:41,200
-one-time password application that I use with my Matome installation, I think I have a very
+one-time password application that I use with my Matomo installation, I think I have a very
 
 134
 00:12:41,200 --> 00:12:45,000
-old Matome installation, but I think that it still works.
+old Matomo installation, but I think that it still works.
 
 135
 00:12:45,000 --> 00:12:48,000
@@ -540,11 +540,11 @@ Just contact me if it's not.
 
 136
 00:12:48,000 --> 00:12:51,160
-The free OTP is an application from FDroid.
+The FreeOTP+ is an application from F-Droid.
 
 137
 00:12:51,160 --> 00:12:57,280
-You know, FDroid, it's a repository for Android smartphone that only contains free software,
+You know, F-Droid, it's a repository for Android smartphones that only contains Free software,
 
 138
 00:12:57,280 --> 00:12:59,640
@@ -556,7 +556,7 @@ It's open source, and this application is easy to use, and so I recommend this s
 
 140
 00:13:06,440 --> 00:13:14,040
-And if you have a lot of users and if you're enforcing them to use free OTP, I recommend
+And if you have a lot of users and if you're enforcing them to use FreeOTP+, I recommend
 
 141
 00:13:14,040 --> 00:13:23,400
@@ -564,11 +564,11 @@ in doing it only if they have an Android and if they have not customized a lot t
 
 142
 00:13:23,400 --> 00:13:31,640
-if they have maybe disabled the Play Store or this kind of stuff.
+(and better) if they have maybe disabled the Play Store or this kind of stuff.
 
 143
 00:13:31,640 --> 00:13:36,720
-So a lot of people ask, what if my Matome is compromised?
+So a lot of people ask, what if my Matomo is compromised?
 
 144
 00:13:36,720 --> 00:13:38,480
@@ -580,7 +580,7 @@ This is a very terrible question, but I can think a very simple way you can miti
 
 146
 00:13:46,960 --> 00:13:54,400
-risk after your Matome was compromised is to enable this option to anonymize as much
+risk before* your Matomo is compromised is to enable this option to anonymize as much
 
 147
 00:13:54,400 --> 00:14:02,240
@@ -588,11 +588,11 @@ as possible all the IP addresses of your users, because when you activate this o
 
 148
 00:14:02,240 --> 00:14:09,600
-know that Matome does not save this information in the database, and this is awesome.
+know that Matomo does not save this information in the database, and this is awesome.
 
 149
 00:14:09,600 --> 00:14:15,240
-Matome does not save this information, and so if your database is hacked, it does not
+Matomo does not save this information, and so if your database is hacked, it does not
 
 150
 00:14:15,240 --> 00:14:22,800
@@ -604,7 +604,7 @@ So this may seem stupid, but this is not stupid.
 
 152
 00:14:29,080 --> 00:14:38,080
-So we are here to understand when we are downloading Matome on our server, we want to understand
+So we are here to understand when we are downloading Matomo on our server, we want to understand
 
 153
 00:14:38,080 --> 00:14:46,160
@@ -616,11 +616,11 @@ so I recommend in don't trusting this talk, but just reading the amazing officia
 
 155
 00:14:55,520 --> 00:14:56,520
-of Matome.
+of Matomo.
 
 156
 00:14:56,520 --> 00:15:04,400
-I think that one hour in reading the Matome documentation can save your company, so please
+I think that one hour in reading the Matomo documentation can save your company, so please
 
 157
 00:15:04,400 --> 00:15:06,040
@@ -628,7 +628,7 @@ read the documentation.
 
 158
 00:15:06,040 --> 00:15:14,920
-But well, in short, we know that when we download Matome, whatever version, we know to understand
+But well, in short, we know that when we download Matomo, whatever version, we know to understand
 
 159
 00:15:14,920 --> 00:15:25,040
@@ -644,19 +644,19 @@ This is a very important question for a system administrator.
 
 162
 00:15:32,400 --> 00:15:38,160
-But before talking about permissions, we need to understand how we are using Matome.
+But before talking about permissions, we need to understand how we are using Matomo.
 
 163
 00:15:38,160 --> 00:15:48,640
-A lot of people are adopting Matome through this method, the PHP FPM method, and a lot
+A lot of people are adopting Matomo through this method, the PHP-FPM method, and a lot
 
 164
 00:15:48,640 --> 00:15:57,160
-of people without knowing about it is adopting Matome with this component, the mode PHP mode.
+of people without knowing about it is adopting Matomo with this component, the mod_PHP mode.
 
 165
 00:15:57,160 --> 00:16:04,480
-So we have two methods, we have two very different methods to adopt Matome.
+So we have two methods, we have two very different methods to adopt Matomo.
 
 166
 00:16:04,480 --> 00:16:12,480
@@ -668,7 +668,7 @@ I have done an interview about it, a survey, and they are very widely known.
 
 168
 00:16:19,400 --> 00:16:27,320
-A word about the PHP FPM method, how to understand that you are using this method.
+A word about the PHP-FPM method, how to understand that you are using this method.
 
 169
 00:16:27,320 --> 00:16:34,600
@@ -676,7 +676,7 @@ You can see that you are using this method if when you do one request to your we
 
 170
 00:16:34,600 --> 00:16:41,120
-these ports that are not Matome, but something else, and your Matome is under another web
+these ports that are not Matomo, but something else, and your Matomo is under another web
 
 171
 00:16:41,120 --> 00:16:46,040
@@ -684,7 +684,7 @@ server running on your machine, but on a different port.
 
 172
 00:16:46,040 --> 00:16:51,200
-Probably if you have this situation, you are under the PHP FPM configuration.
+Probably if you have this situation, you are under the PHP-FPM configuration.
 
 173
 00:16:51,200 --> 00:17:01,040
@@ -692,11 +692,11 @@ Instead, if you have just a web server and nothing else, probably you are under 
 
 174
 00:17:01,040 --> 00:17:03,680
-configuration, the mode PHP.
+configuration, the mod_PHP.
 
 175
 00:17:03,680 --> 00:17:13,620
-The mode PHP version is an interesting and historically very, very widely adopted configuration
+The mod_PHP version is an interesting and historically very, very widely adopted configuration
 
 176
 00:17:13,620 --> 00:17:18,360
@@ -704,7 +704,7 @@ because it's very, very simple to install on your Linux server.
 
 177
 00:17:18,360 --> 00:17:26,100
-You just run IPT install, Apache, PHP, and everything works.
+You just run "apt install apache2 php" and everything works.
 
 178
 00:17:26,100 --> 00:17:34,840
@@ -712,7 +712,7 @@ So we have a very big process under your Unix machine, under your Linux.
 
 179
 00:17:34,840 --> 00:17:38,840
-Usually the Unix user is www.data.
+Usually the Unix user is www-data.
 
 180
 00:17:38,840 --> 00:17:48,280
@@ -744,7 +744,7 @@ website you have in your single server.
 
 187
 00:18:16,600 --> 00:18:25,000
-So maybe you have one, two, three applications, two domains, server by the same server, and
+So maybe you have one, two, three applications, two domains, served by the same server, and
 
 188
 00:18:25,000 --> 00:18:31,600
@@ -796,11 +796,11 @@ What is this?
 
 200
 00:19:30,680 --> 00:19:33,000
-They open-paste this directive.
+They open_basedir this directive.
 
 201
 00:19:33,000 --> 00:19:46,600
-If you have PHP running on a domain server, you can say, okay, if you visit example.org,
+If you have PHP running on a domain, served on your server, you can say, okay, if you visit example.org,
 
 202
 00:19:46,600 --> 00:19:49,120
@@ -816,7 +816,7 @@ And the process cannot go in the other places.
 
 205
 00:19:59,480 --> 00:20:11,240
-And this is possible thanks to this directive that can be set in PHP on each virtual host.
+And this is possible thanks to this directive that can be set in PHP on each VirtualHost.
 
 206
 00:20:11,240 --> 00:20:17,480
@@ -824,15 +824,15 @@ But the problem is that this directive is that if you use it, for example, if yo
 
 207
 00:20:17,480 --> 00:20:27,480
-okay, I declare open-based here is bar, home, Matomo, a place on your system, then you have
+okay, I declare open_basedir here is bar, home, Matomo, a place on your system, then you have
 
 208
 00:20:27,480 --> 00:20:32,840
-another web server, another virtual host, and you say another value.
+another web server, another VirtualHost, and you say another value.
 
 209
 00:20:32,840 --> 00:20:39,800
-So you can set a different value for each virtual host to try to isolate the process.
+So you can set a different value for each VirtualHost to try to isolate the process.
 
 210
 00:20:39,800 --> 00:20:44,680
@@ -848,7 +848,7 @@ This is a very frequent configuration.
 
 213
 00:20:50,900 --> 00:20:59,360
-So you have a server name, and so all the people from this domain go to this place.
+So you have a ServerName, and so all the people from this domain go to this place.
 
 214
 00:20:59,360 --> 00:21:05,480
@@ -864,7 +864,7 @@ And this is not really, really safe, because if you read the documentation, it's
 
 217
 00:21:15,840 --> 00:21:19,360
-very clear that open-based here, it's not a security measure.
+very clear that open_basedir here, it's not a security measure.
 
 218
 00:21:19,360 --> 00:21:21,280
@@ -872,7 +872,7 @@ It's an extra safety.
 
 219
 00:21:21,280 --> 00:21:29,320
-I don't know what an extra safety is, but the universe is adopting this as a security
+I don't know what an "extra safety" is, but the universe is adopting this as a security
 
 220
 00:21:29,320 --> 00:21:32,400
@@ -888,15 +888,15 @@ And so let's talk about the PHP, the FPM method.
 
 223
 00:21:44,560 --> 00:21:54,480
-This is a very, very frequent alternative to the mod PHP, so this is the old configuration.
+This is a very, very frequent alternative to the mod_PHP (so this is the old configuration)
 
 224
 00:21:54,480 --> 00:21:56,920
-This is the new configuration.
+(This is the new configuration)
 
 225
 00:21:56,920 --> 00:22:05,640
-I invented to have isolated processes that work alongside a front-end web server.
+(PHP-FPM) was invented to have isolated processes that work alongside a front-end web server.
 
 226
 00:22:05,640 --> 00:22:11,360
@@ -944,7 +944,7 @@ So you have a front-end web server also because it simplifies let's encrypt rene
 
 237
 00:23:15,520 --> 00:23:24,400
-know, or it allows you to have a lot of websites in your server and mix it by the Apache web
+know, or it allows you to have a lot of websites in your server and mixed by the Apache web
 
 238
 00:23:24,400 --> 00:23:25,560
@@ -996,7 +996,7 @@ What I'm saying, if you visit example.org, maybe example.org, your request goes 
 
 250
 00:24:05,120 --> 00:24:11,260
-to the correct PHP, FPM web server.
+to the correct PHP-FPM web server.
 
 251
 00:24:11,260 --> 00:24:18,800
@@ -1064,7 +1064,7 @@ have another Unix user that must have access to this file system for the dynamic
 
 267
 00:25:46,340 --> 00:25:54,960
-So PHP files are executed by this user, and static file are provided by the www data user.
+So PHP files are executed by this user, and static file are provided by the www-data user.
 
 268
 00:25:54,960 --> 00:25:57,000
@@ -1080,7 +1080,7 @@ Maybe you have the front-end web server Apache configured in this way to say tha
 
 271
 00:26:08,360 --> 00:26:12,120
-a document root somewhere.
+a DocumentRoot somewhere.
 
 272
 00:26:12,120 --> 00:26:19,320
@@ -1088,11 +1088,11 @@ And then I have not put it there, but you can imagine that in the next slides, w
 
 273
 00:26:19,320 --> 00:26:26,240
-the proxy, proxying all the requests on the underlying web server.
+the proxy, proxying all the requests to the underlying web server.
 
 274
 00:26:26,240 --> 00:26:34,960
-And this is the most important part of our talk, how to have a PHP FPM safe, secure,
+And this is the most important part of our talk, how to have a PHP-FPM safe, secure,
 
 275
 00:26:34,960 --> 00:26:35,960
@@ -1108,7 +1108,7 @@ that user can access critical places in that file system of your application.
 
 278
 00:26:50,760 --> 00:27:00,000
-So you can declare a PHP directive to say that the uploaded files must be in place,
+So you can declare a PHP directive to say that the uploaded files must be in this place,
 
 279
 00:27:00,000 --> 00:27:07,760
@@ -1128,7 +1128,7 @@ not?
 
 283
 00:27:19,760 --> 00:27:24,760
-This is a good strategy to use open base there in a right way.
+This is a good strategy to use open_basedir there in a right way.
 
 284
 00:27:24,760 --> 00:27:33,600
@@ -1152,7 +1152,7 @@ So for example, on your file system, you have your Matomo installed in this posi
 
 289
 00:27:54,720 --> 00:27:59,760
-in this position, and you have the temporary directive that is this one.
+in this position, and you have the temporary directive (that is this one).
 
 290
 00:27:59,760 --> 00:28:10,200
@@ -1164,19 +1164,19 @@ it's the one assigned to the same process, and look about this permission field.
 
 292
 00:28:19,400 --> 00:28:27,280
-If you know how to read this field, it means that let's clear everything.
+If you know how to read this field (drwx rwx rwx), it means that (let's clear everything).
 
 293
 00:28:27,280 --> 00:28:35,080
-What I'm highlighting here is that this Apache Matomo is the user who can read, write, and
+What I'm highlighting here is that this Apache Matomo is the user who can read (r), write (w), and
 
 294
 00:28:35,080 --> 00:28:37,240
-execute this in this file.
+execute (x) this in this file.
 
 295
 00:28:37,240 --> 00:28:42,040
-So execute in a directory context means that you can access this file.
+So execute (x) in a directory context means that you can access this file.
 
 296
 00:28:42,040 --> 00:28:50,520
@@ -1200,7 +1200,7 @@ configurations in order to instruct the process to use your custom path names in
 
 301
 00:29:17,960 --> 00:29:23,480
-TMP, that it's global.
+/tmp that it's global.
 
 302
 00:29:23,480 --> 00:29:28,400
@@ -1220,7 +1220,7 @@ This is not scaring.
 
 306
 00:29:46,920 --> 00:29:53,360
-Sometimes we hear, oh my god, the root user should not execute this file.
+Sometimes we hear «oh my god, the root user should not execute this file».
 
 307
 00:29:53,360 --> 00:29:54,360
@@ -1288,7 +1288,7 @@ There is no need to remove the read access, the last read access.
 
 323
 00:31:03,120 --> 00:31:12,960
-So it's evaluate, always evaluate the last column that it's the most important one declaring
+So evaluate, always evaluate the last column that it's the most important one declaring
 
 324
 00:31:12,960 --> 00:31:17,680
@@ -1300,11 +1300,11 @@ And so for example, I have removed the, you see that the temporary directive has
 
 326
 00:31:26,400 --> 00:31:33,080
-in the, I have not highlighted it correctly, but has nothing in the last permissions.
+in the (I have not highlighted it correctly) but has nothing in the last permissions.
 
 327
 00:31:33,080 --> 00:31:39,520
-So the temp directory can only be wrote by the Apache user and to the Apache group.
+So the /tmp directory can only be wrote by the Apache user and to the Apache group.
 
 328
 00:31:39,520 --> 00:31:47,320
@@ -1324,7 +1324,7 @@ What needed to be hided to everybody but your users.
 
 332
 00:32:02,680 --> 00:32:12,080
-And so you do the same, but without the other field, without allowing other users to read,
+And so you do the same, but without the "other" (o) field, without allowing other users to read,
 
 333
 00:32:12,080 --> 00:32:15,960
@@ -1360,11 +1360,11 @@ be public, but the files inside the config directory have to be private.
 
 341
 00:32:45,600 --> 00:32:53,320
-So inspect your application, read the official documentation, be, use the change modality
+So inspect your application, read the official documentation, use the change modality (chmod)
 
 342
 00:32:53,320 --> 00:32:59,560
-for the files and use the change owner for the files wisely.
+for the files and use the change owner (chown) for the files wisely.
 
 343
 00:32:59,560 --> 00:33:05,200
@@ -1396,7 +1396,7 @@ And this is the same for your Matomo installation.
 
 350
 00:33:41,400 --> 00:33:49,560
-So you should have a script to harden your installation when you want is freezed.
+So you should have a script to harden your installation when you want it's freezed.
 
 351
 00:33:49,560 --> 00:34:01,160
@@ -1436,7 +1436,7 @@ And this is not the desired situation.
 
 360
 00:34:49,160 --> 00:34:59,040
-So it can be a stupid, but trust me, if take care about your applications, Matomo included,
+So it can be stupid, but trust me, if take care about your applications, Matomo included,
 
 361
 00:34:59,040 --> 00:35:12,760
@@ -1444,7 +1444,7 @@ WordPress included, and if you want to have everything in a good state, I recomm
 
 362
 00:35:12,760 --> 00:35:21,440
-a kind of hardened production configuration and upgrade the configuration.
+a kind of hardened production configuration and an upgrade-ready configuration.
 
 363
 00:35:21,440 --> 00:35:33,040
@@ -1504,7 +1504,7 @@ So it's not important to enforce two-factor authentication on your whole organic
 
 377
 00:36:49,320 --> 00:36:56,000
-because if you don't know how to use it, you will just make bigger mistakes.
+because if you don't know how to use it, you would just make bigger mistakes.
 
 378
 00:36:56,000 --> 00:36:58,960
@@ -1532,11 +1532,11 @@ on your Wi-Fi area, security issues on your laptop.
 
 384
 00:37:27,600 --> 00:37:33,520
-Maybe you installed a video game from a random website and now your computer is totally compromised.
+Maybe you installed a videogame from a random website and now your computer is totally compromised.
 
 385
 00:37:33,520 --> 00:37:40,520
-So I'm not saying that it's really, really huge, useful to have a very, very hard-ended
+So I'm not saying that it's really, really hugely useful to have a very, very hardended
 
 386
 00:37:40,520 --> 00:37:53,040
@@ -1544,7 +1544,7 @@ installation if the administrators have not devices with a controlled state.
 
 387
 00:37:53,040 --> 00:37:57,760
-So try to use as much as possible open-source software.
+So try to use as much as possible Open Source software.
 
 388
 00:37:57,760 --> 00:38:06,200
@@ -1560,11 +1560,11 @@ And then you can be safe to use stuff like the OTP applications.
 
 391
 00:38:18,480 --> 00:38:22,360
-And so use as much possible free software.
+And so use as much possible Free software.
 
 392
 00:38:22,360 --> 00:38:33,520
-I really have to say, please don't think that you will be not owned because this is the
+I really have to say, please don't think that you will be not owned, because this is the
 
 393
 00:38:33,520 --> 00:38:35,600
@@ -1580,7 +1580,7 @@ Invest in exploring your tool.
 
 396
 00:38:45,960 --> 00:38:57,240
-Invest in trying to hack your system, try to use not-privileged users.
+Invest in trying to overcome, hack your system, try to use not-privileged users.
 
 397
 00:38:57,240 --> 00:39:06,640
@@ -1592,7 +1592,7 @@ escalation trying to inspect your web servers and your applications.
 
 399
 00:39:13,760 --> 00:39:23,640
-So these are just bad words to remember to try to be the one that can enter in your system
+So these are just buzzwords to remember to try to be the one that can enter in your system
 
 400
 00:39:23,640 --> 00:39:30,680
@@ -1607,12 +1607,8 @@ This is not good.
 So thank you so much.
 
 403
-00:39:33,240 --> 00:39:36,120
-My presentation is under the Creative Commons attribution.
-
-404
-00:39:36,120 --> 00:39:37,120
-Share your like.
+00:39:33,240 --> 00:39:37
+My presentation is under the Creative Commons Attribution - ShareAlike.
 
 405
 00:39:37,120 --> 00:39:41,480
@@ -1640,15 +1636,15 @@ Thank you so much for everything.
 
 411
 00:39:56,560 --> 00:40:06,000
-Can I thank again the Matomo organizers because MatomoCamp is realized with 100% open-source
+Can I thank again the Matomo organizers because MatomoCamp is realized with 100% Open Source
 
 412
 00:40:06,000 --> 00:40:07,480
-software and deeper software.
+software and Libre software.
 
 413
 00:40:07,480 --> 00:40:14,400
-And this is really amazing because, again, Matomo is open-source, MatomoCamp is open-source,
+And this is really amazing because, again, Matomo is Open Source, MatomoCamp is Open Source,
 
 414
 00:40:14,400 --> 00:40:21,360
@@ -1872,5 +1868,4 @@ Ciao, pane pizza Matomo.
 
 469
 00:44:20,640 --> 00:44:40,840
-Ciao.
-
+Ciao!
