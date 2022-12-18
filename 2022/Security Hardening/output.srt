@@ -93,7 +93,7 @@ It's like public administrations, like schools, or et cetera, it's about also pr
 24
 00:02:19,360 --> 00:02:28,400
 And in fact, the whole story was about that even the IP address is considered an personal
- 
+
 25
 00:02:28,400 --> 00:02:29,400
 data.
@@ -1607,265 +1607,266 @@ This is not good.
 So thank you so much.
 
 403
-00:39:33,240 --> 00:39:37
+00:39:33,240 --> 00:39:37,000
 My presentation is under the Creative Commons Attribution - ShareAlike.
 
-405
+404
 00:39:37,120 --> 00:39:41,480
 You can share it for whenever you want and for whatever purpose.
 
-406
+405
 00:39:41,480 --> 00:39:42,480
 You can sell it.
 
-407
+406
 00:39:42,480 --> 00:39:44,600
 You can do whatever you want.
 
-408
+407
 00:39:44,600 --> 00:39:49,320
 Just please put a credit to at least my nickname.
 
-409
+408
 00:39:49,320 --> 00:39:53,400
 So saying that this presentation is by Valerio.
 
-410
+409
 00:39:53,400 --> 00:39:56,560
 Thank you so much for everything.
 
-411
+410
 00:39:56,560 --> 00:40:06,000
 Can I thank again the Matomo organizers because MatomoCamp is realized with 100% Open Source
 
-412
+411
 00:40:06,000 --> 00:40:07,480
 software and Libre software.
 
-413
+412
 00:40:07,480 --> 00:40:14,400
 And this is really amazing because, again, Matomo is Open Source, MatomoCamp is Open Source,
 
-414
+413
 00:40:14,400 --> 00:40:21,360
 and this is really a really, really, really good way to engage technical communities that
 
-415
+414
 00:40:21,360 --> 00:40:25,120
 care about the privacy and care about software freedom.
 
-416
+415
 00:40:25,120 --> 00:40:26,920
 So thank you again.
 
-417
+416
 00:40:26,920 --> 00:40:34,440
 Whatever question can be delivered to the Matrix chat, and I hope that we had a good
 
-418
+417
 00:40:34,440 --> 00:40:35,440
 time together.
 
-419
+418
 00:40:35,440 --> 00:40:41,400
 Valerio, thank you very much for your insightful talk.
 
-420
+419
 00:40:41,400 --> 00:40:46,160
 And you highlighted a lot of important things to consider.
 
-421
+420
 00:40:46,160 --> 00:40:52,400
 And this is also one of my favorite topics because it is mostly treated very poorly.
 
-422
+421
 00:40:52,400 --> 00:40:57,360
 And even it is a topic which is neglected in many companies.
 
-423
+422
 00:40:57,360 --> 00:41:00,320
 And also, you compressed the topic very well.
 
-424
+423
 00:41:00,320 --> 00:41:03,960
 You talked about many, many details.
 
-425
+424
 00:41:03,960 --> 00:41:10,480
 And also, there is so much more, but I think you mentioned very important things.
 
-426
+425
 00:41:10,480 --> 00:41:17,000
 Perhaps we have some questions here that, if not right now, there are some questions
 
-427
+426
 00:41:17,000 --> 00:41:23,760
 from my side also because you are a security expert.
 
-428
+427
 00:41:23,760 --> 00:41:31,040
 So perhaps you can recommend the audience something like, is there something like automated
 
-429
+428
 00:41:31,040 --> 00:41:32,040
 security audits?
 
-430
+429
 00:41:32,040 --> 00:41:39,120
 Is there a software for that to check the software automatically for CVEs or something
 
-431
+430
 00:41:39,120 --> 00:41:40,120
 like that?
 
-432
+431
 00:41:40,120 --> 00:41:41,120
 Okay.
 
-433
+432
 00:41:41,120 --> 00:41:49,400
 Honestly, I know the part related to WordPress more than the part related to Matomo.
 
-434
+433
 00:41:49,400 --> 00:41:50,880
 There are a lot of tools.
 
-435
+434
 00:41:50,880 --> 00:41:54,040
 I think you can search and there are a lot of tools.
 
-436
+435
 00:41:54,040 --> 00:42:03,480
 I actually cannot recommend any of them because I recommend in being proactive and keeping
 
-437
+436
 00:42:03,480 --> 00:42:10,880
 the platform up to date as soon as possible and without receiving any of these emails
 
-438
+437
 00:42:10,880 --> 00:42:12,320
 or notifications.
 
-439
+438
 00:42:12,320 --> 00:42:16,200
 And this is probably the best way to keep your system up to date.
 
-440
+439
 00:42:16,200 --> 00:42:23,040
 Because usually, normal users, when they receive this kind of notification, it's too late because
 
-441
+440
 00:42:23,040 --> 00:42:31,120
 maybe you are in Italy or you are from, I don't know, and we are decentralized against
 
-442
+441
 00:42:31,120 --> 00:42:37,320
 the Matomo developers who can quickly handle the situation and release a security patch
 
-443
+442
 00:42:37,320 --> 00:42:41,880
 and offer you an update quickly on your platform.
 
-444
+443
 00:42:41,880 --> 00:42:48,240
 So I recommend you just update your platform and please feel free to share some automated
 
-445
+444
 00:42:48,240 --> 00:42:56,360
 tools to inspect maybe not updated platform and this kind of stuff.
 
-446
+445
 00:42:56,360 --> 00:42:57,920
 Thank you for the question.
 
-447
+446
 00:42:57,920 --> 00:43:02,840
 I'm very curious and thank you for sharing to me if somebody knows.
 
-448
+447
 00:43:02,840 --> 00:43:03,840
 Of course.
 
-449
+448
 00:43:03,840 --> 00:43:08,680
 And as a quick comment on that, it's also for the audience a very important thing.
 
-450
+449
 00:43:08,680 --> 00:43:15,840
 As soon as an update is out, we mark it if it has a security concern, we mark it with
 
-451
+450
 00:43:15,840 --> 00:43:19,200
 a minor, major or critical attack.
 
-452
+451
 00:43:19,200 --> 00:43:26,800
 So you know how important it is to make this update.
 
-453
+452
 00:43:26,800 --> 00:43:28,240
 That's wonderful.
 
-454
+453
 00:43:28,240 --> 00:43:33,360
 And are there more questions?
 
-455
+454
 00:43:33,360 --> 00:43:38,360
 Because I'm really curious.
 
-456
+455
 00:43:38,360 --> 00:43:40,360
 Do we have other questions right now?
 
-457
+456
 00:43:40,360 --> 00:43:41,360
 Okay.
 
-458
+457
 00:43:41,360 --> 00:43:48,520
 If not right now, then the chat will stay open and perhaps Valerio has some minutes
 
-459
+458
 00:43:48,520 --> 00:43:52,560
 left to answer more questions if there are any.
 
-460
+459
 00:43:52,560 --> 00:43:56,760
 But thank you very much for that very, very important topic.
 
-461
+460
 00:43:56,760 --> 00:44:03,480
 And also this talk will be online as a video on the video platform.
 
-462
+461
 00:44:03,480 --> 00:44:09,880
 And yeah, Valerio, thank you again a lot and greetings to Italy.
 
-463
+462
 00:44:09,880 --> 00:44:11,920
 Thank you so much.
 
-464
+463
 00:44:11,920 --> 00:44:16,640
 And again, go Matomo, go, thank you for doing that.
 
-465
+464
 00:44:16,640 --> 00:44:17,640
 Thank you.
 
-466
+465
 00:44:17,640 --> 00:44:18,640
 Goodbye.
 
-467
+466
 00:44:18,640 --> 00:44:19,640
 Bye bye.
 
-468
+467
 00:44:19,640 --> 00:44:20,640
 Ciao, pane pizza Matomo.
 
-469
+468
 00:44:20,640 --> 00:44:40,840
 Ciao!
+
